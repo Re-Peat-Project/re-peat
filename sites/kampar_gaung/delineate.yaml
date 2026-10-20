@@ -1,0 +1,19 @@
+# Sungai Kampar - Sungai Gaung (KHG 71), step 2: delineate the sub-KHG.
+# Needs the clipped inputs from step 1 (README.md) and the environment variable
+#   REPEAT_DATA = the folder that holds "Peat depth and DTM" and "_converted".
+#   python -m repeat_delineation --config ../re-peat/sites/kampar_gaung/delineate.yaml
+khg: ${REPEAT_WORK}/kampar_gaung/khg.gpkg
+khg_id_field: khg_id
+cache_dir: ${REPEAT_WORK}/cache
+out: ${REPEAT_WORK}/out_delineate
+rasters:
+  dtm: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Sungai_Kampar_Sungai_Gaung.tif"
+vectors:
+  canals: ${REPEAT_WORK}/kampar_gaung/canals.gpkg
+  rivers: ${REPEAT_WORK}/kampar_gaung/rivers.gpkg
+units:
+  subkhg:
+    canal_class_field: KET_KANAL            # the BRGM canal file: Kanal Primer / Sekunder / Tersier
+    outlet_canal_classes: ["Kanal Primer"]  # only primary canals (and rivers) are outlets; all canals are burned into the DTM
+    min_area_km2: auto                      # smallest minimum area that gives at most target_count[1] = 30 units (runbook: the sweep)
+    merge: adjacent                         # small pieces join the neighbour they share the longest border with

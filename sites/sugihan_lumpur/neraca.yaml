@@ -1,0 +1,24 @@
+# Sungai Sugihan - Sungai Lumpur (KHG.16.02.01): inputs of the physical neraca air (repeat-neraca, package repeat_neraca). Run from the repeat-neraca checkout:
+#   python scripts/run_neraca.py --config ../re-peat/sites/sugihan_lumpur/neraca.yaml --tier 1 --classes primary,secondary,tertiary
+# Environment variables: REPEAT_WORK (derived data: clipped vectors, caches, outputs) and REPEAT_DATA (the REPEAT-LH _data folder).
+# The clipped vectors come from `python -m subkhg.prepare_inputs` (repeat-prioritisation); the sub-KHG polygons from repeat-delineation;
+# the station files in inputs_dir from `python -m repeat_neraca.bucket.export_inputs --config ../re-peat/sites/sugihan_lumpur/neraca_experiments.yaml --out <inputs_dir>`.
+# Rain and evaporation are read through repeat-common from the ERA5 cache (forcing_direct); `--forcing file` uses forcing_daily.csv in inputs_dir.
+name: sugihan_lumpur
+khg_id: "16.02.01"                                                    # the khg_id of the sub-KHG polygons (neraca_khg.csv)
+khg: ${REPEAT_WORK}/sugihan_lumpur/khg.gpkg
+dtm: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Sugihan_Sungai_Lumpur.tif"
+peat_depth: {path: "${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Sugihan_Sungai_Lumpur.img", scale: 0.01}   # cm to m
+canals:
+  path: ${REPEAT_WORK}/sugihan_lumpur/canals.gpkg
+  class_field: KET_KANAL
+  classes: {primary: [Kanal Primer], secondary: [Kanal Sekunder], tertiary: [Kanal Tersier]}
+units: ${REPEAT_WORK}/out_delineate_sl/subkhg_units.gpkg      # optional: sub-KHG statistics
+inputs_dir: ${REPEAT_WORK}/neraca_inputs/sugihan_lumpur                                        # forcing_daily.csv, stations.csv, stations_daily.csv
+forcing_window: calibration                                             # window of forcing_daily.csv to simulate
+evaporation: E_era5_mm                                                  # or E_wapor_mm
+forcing_direct:                                                         # read ERA5 through repeat-common (cache first); `run_neraca.py --forcing file` uses forcing_daily.csv instead
+  cache_dir: ${REPEAT_WORK}/cache/16.02.01/neraca
+  start: 2026-04-01                                                     # the calibration window of forcing_daily.csv
+  end: 2026-10-15
+  tz_hours: 7

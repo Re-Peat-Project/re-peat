@@ -1,0 +1,24 @@
+# Sungai Kampar - Sungai Gaung (KHG 71), step 3: neraca air for the sub-KHG (repeat-neraca repo: docs/bucket_experiments_README.md; pip install -e ../repeat-neraca[experiments]).
+# Environment variables: REPEAT_WORK (derived data, caches, outputs), REPEAT_DATA (see delineate.yaml) and SITMAT_PROCESSED = .../sitmat-extract/sitmat_out/processed
+#   python -m repeat_neraca.bucket.run --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml --forcing-only     # slow (ERA5), once
+#   python -m repeat_neraca.bucket.run --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml --calibrate-only   # skill on stations only
+#   python -m repeat_neraca.bucket.run --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml                    # indicators for every sub-KHG
+#   python -m repeat_neraca.bucket.covariates --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml             # what explains the station water tables
+#   python -m repeat_neraca.bucket.sentinel1 --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml              # does Sentinel-1 radar separate the stations
+khg: ${REPEAT_WORK}/kampar_gaung/khg.gpkg
+khg_id_field: khg_id
+units: {mode: vector, path: "${REPEAT_WORK}/out_delineate/subkhg_units.gpkg"}
+cache_dir: ${REPEAT_WORK}/cache
+out: ${REPEAT_WORK}/out_neraca
+rasters:
+  peat_depth: "${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Sungai_Kampar_Sungai_Guang.img"
+  dtm: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Sungai_Kampar_Sungai_Gaung.tif"   # only for repeat_neraca.bucket.covariates
+params:
+  peat_depth_scale: 0.01                    # the peat depth raster is in cm (confirmed by the data owner)
+  ipg_canal_class_field: KET_KANAL          # only for repeat_neraca.bucket.covariates (distance to primary canals)
+vectors:
+  canals: ${REPEAT_WORK}/kampar_gaung/canals.gpkg
+  rivers: ${REPEAT_WORK}/kampar_gaung/rivers.gpkg        # only for repeat_neraca.bucket.covariates
+tma: {path: "${SITMAT_PROCESSED}"}
+neraca:
+  years: [2019, 2020, 2021]                 # 2019 is an El Nino dry year; 2020 and 2021 are wetter
