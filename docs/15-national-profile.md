@@ -1,6 +1,6 @@
 # 15 National KHG profile and ranking
 
-Profiles all 865 KHG from the layers in `_data` and ranks them for rewetting attention, regardless of the 12 selected KHG ([13](13-selected-khg.md)). Code: `national/profile.py` and `national/report.py` in `repeat-prioritisation`; the registry parser and the hotspot download are in `re-peat/tools`. The result is one self-contained HTML report (`reports/national_profile/national_khg_profile.html` in this repository, with the CSV tables behind it).
+Profiles all 865 KHG from the layers in `_data` and ranks them for rewetting attention, regardless of the 12 selected KHG ([13](13-selected-khg.md)). Code: `national/profile.py`, `national/stage3.py` and `national/dashboard.py` in `repeat-prioritisation`; the registry parser and the data fetchers are in `re-peat/tools` and `repeat-common`. The result is one self-contained interactive page, `reports/national_profile/dashboard.html` in this repository, with the CSV tables behind it.
 
 The ranking (Stages 1-2) uses fire history, hotspots and canal density, with fire counted on peat. Stage 3 adds climate, land cover, surface water and the water table for the shortlisted KHG; those are shown on the profile pages and are not in the score. It is not the full level-1 run of [03](03-prioritisation.md).
 
@@ -11,7 +11,7 @@ The ranking (Stages 1-2) uses fire history, hotspots and canal density, with fir
 | `u_fire_freq` | burnt-area polygons | mean annual burned share of the KHG, baseline years; scored (weight 2) |
 | `u_burn_repeat` | same | share burned twice or more in the baseline; scored (1) |
 | `u_hotspot` | FIRMS VIIRS S-NPP 2012-2025 | vegetation-fire detections (type 0) of nominal or high confidence per km2 per year; scored (1) |
-| `u_canal_density` | OSM-derived canal layer | km per km2; scored (1). A KHG with no canal in the layer gets no value (not mapped), and the others carry its score |
+| `u_canal_primary`, `u_canal_secondary`, `u_canal_tertiary` | OSM-derived canal layer, class from `KODE_KANAL` (Kanal Primer, Sekunder, Tersier) | km of each class per km2 of KHG; scored with weights 0.5, 0.3, 0.2, which split the single canal weight used before (my default: the larger canals drain more; change it in the config or with the sliders). A KHG with no canal in the layer gets no value (not mapped), and its other parameters carry the score. `u_canal_density` (all classes together) is reported with weight 0 |
 | `u_hotspot_now` | KLH-curated hotspots of the current year (`_data_hotspot_Januari_September_2026.gpkg`, MODIS) | hotspots of medium or high confidence on peat per km2 of peat, year to date; scored with its **own weight** (config `indicators.u_hotspot_now`, 0 drops it) and also ranked alone, by density (`peringkat_now`) and by number of hotspots (`peringkat_now_n`): density favours KHG with little peat, the count favours large ones, and which answers "most severe this year" is the team's call. Left out of `--mode validate`, because the current year comes after the held-out years |
 | `u_burned_now` | burnt-area polygons, current-year flag (`BA_2026`) | burned share of the peat this year; reported, weight 0 |
 | `u_frp`, `frp_mean_mw` | same hotspots | fire radiative power: reported, weight 0 (correlation 0.99 with hotspot density). Severity proxy |
@@ -40,6 +40,21 @@ For the top N KHG the engine's fetcher (`python -m national.run --fetch-only`, c
 
 The KLH file has one layer per month and two attribute schemas: January, April, August and September carry a numeric confidence, a class (Rendah, Sedang, Tinggi), FRP and the acquisition date; February, March, May, June and July carry only Kepercayaan (Low, Medium, High), with no FRP and no date. `repeat-prioritisation` harmonises the confidence to low, medium and high across all nine months (month comes from the layer name), keeps medium and high, and counts hotspots, so FRP, which exists for four of nine months, is reported but never summed or scored. The record ends on the last acquisition date in the file (15 September 2026), so it is year to date. MODIS (1 km) counts are not comparable with the VIIRS archive; that is why this is a separate indicator with a separate weight and rank, not an extra year of the history. The file has 9 repeated coordinate pairs out of 167,718 (all in June and July), left in. The profile maps show the actual points of this year (filled = on peat, hollow = off peat, larger = high confidence), not cells.
 
+## The dashboard
+
+`dashboard.html` ranks the 865 KHG live in the browser. The sliders set the weight of eight parameters in three groups (fire history, this year, canals); the filters set the minimum peat area and the island; a switch says how to treat a KHG with no mapped canals (ignore the canal parameters, or give it the average value). The scoring in the page is the scaling of `common.scoring`: each parameter runs from 0 to 1 between the 5th and 95th percentile of the KHG that pass the filters, and the score is the weighted mean of the parameters a KHG has. At the default weights and filters the page reproduces the Python ranking; this is checked on load (`data-parity` on the body, for example `150:0` means 150 ranks compared, 0 differ).
+
+- **Ranking:** bars show how much each group adds to the score; the arrow is the change against the default weights. `Team KHG` lists the team's selected KHG whatever their rank.
+- **Rank shift:** default rank against rank at your weights, for the top 12 of each.
+- **Profile:** the KHG you click, with the 34 KHG that have one (the top 25 at default weights and the team's). Strip plots place the KHG among all ranked KHG for each parameter; the line charts show burned share, VIIRS hotspots, this year's hotspots by month, TerraClimate deficit and rain; the map has burn counts, canals by class and this year's hotspot points.
+- **Hover help:** the weight labels explain each parameter's source and method; the filters, KPI tiles, chart titles, legends and map layer chips have a short note. In the table, a header shows the unit and source, a cell shows the value with its unit, and the table can be searched, sorted by any column and extended to the KHG that are not ranked. In table mode the list spans the full width.
+- **Link state:** the address holds the weights, filters, view, theme, language (`l=id`) and selected KHG, so a view can be shared.
+- **Language:** English and Bahasa Indonesia, switched with the EN / ID buttons in the header; the first visit follows the browser language. Interface text, tooltips, table headers and map labels switch together, and numbers use the local format. The Indonesian strings are in `national/assets/i18n_id.js`, a dictionary keyed by the English text; a string missing from it shows in English, so a new label needs one added line. The page also has a table view with a CSV download.
+
+- **Basemap:** both maps use OpenFreeMap vector tiles (Positron style, OpenMapTiles data, OpenStreetMap contributors), drawn with MapLibre GL JS, muted so the data stays in front, with a dark variant for the dark theme. The tiles load from the internet; offline, the page still works and the maps show the KHG without a basemap. D3 and MapLibre are copied into `national/assets`, so nothing else is fetched.
+
+Ties at the top of a single parameter (many KHG at the 95th percentile cap) are ordered by the unclipped values.
+
 ## Two modes
 
 - `--mode validate`: indicators from the baseline (2015-2022), tested on 2023-2025 (AUC, share of later fire captured by the top 20%), next to the same measures for "where it burned before" alone.
@@ -67,11 +82,11 @@ python tools/catalog_data.py                  # re-peat: refresh the data catalo
 # Stage 3 needs the cloud stack: python -m venv _repeat-project/.venv; pip install -e repeat-common pyogrio pdfplumber matplotlib pysheds
 python -m national.profile --config configs/examples/national_profile.yaml --mode validate        # repeat-prioritisation, about 8 min
 python -m national.profile --config configs/examples/national_profile.yaml --mode operational
-python -m national.report  --config configs/examples/national_profile.yaml --top 25
+python -m national.dashboard --config configs/examples/national_profile.yaml --top 25   # the interactive page
 python -m national.stage3 select --config configs/examples/national_stage3.yaml            # top-N boundaries from the operational ranking
 python -m national.run --config configs/examples/national_stage3.yaml --fetch-only         # TerraClimate, WorldCover, JRC (about 10 min for 25 KHG)
 python -m national.stage3 summarize --config configs/examples/national_stage3.yaml
-python -m national.report  --config configs/examples/national_profile.yaml --top 25       # picks up the stage 3 tables
+python -m national.dashboard --config configs/examples/national_profile.yaml --top 25   # picks up the stage 3 tables; --reassemble reuses the last data
 python -m tests.test_national_profile
 ```
 

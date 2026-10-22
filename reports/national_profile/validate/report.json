@@ -9,7 +9,6 @@
     "u_spell14": 0.5,
     "u_fire_freq": 2.0,
     "u_hotspot": 1.0,
-    "u_canal_density": 1.0,
     "u_tma": 1.0,
     "u_tma_recession": 1.0,
     "u_ipg_gap": 1.5,
@@ -20,21 +19,26 @@
     "f_water_dist": 1.0,
     "f_lift": 1.0,
     "f_access": 0.5,
-    "u_burn_repeat": 1.0
+    "u_burn_repeat": 1.0,
+    "u_canal_primary": 0.5,
+    "u_canal_secondary": 0.3,
+    "u_canal_tertiary": 0.2
   },
   "ahp": {},
   "class_thresholds": {
     "risk": [
-      0.0007039722678272392,
-      0.1598046848335841
+      0.0007202011526540725,
+      0.14523118150603362
     ],
     "feasibility": []
   },
   "indicators_used": [
     "u_fire_freq",
     "u_hotspot",
-    "u_canal_density",
-    "u_burn_repeat"
+    "u_burn_repeat",
+    "u_canal_primary",
+    "u_canal_secondary",
+    "u_canal_tertiary"
   ],
   "class_counts": {
     "Fokus nasional: sedang": 159,
@@ -53,24 +57,24 @@
       "spearman": 0.841
     }
   ],
-  "_corr": "                   n_u_fire_freq  ...  n_u_burn_repeat\nn_u_fire_freq           1.000000  ...         0.840631\nn_u_hotspot             0.866807  ...         0.731232\nn_u_canal_density       0.102763  ...         0.038273\nn_u_burn_repeat         0.840631  ...         1.000000\n\n[4 rows x 4 columns]",
+  "_corr": "                     n_u_fire_freq  ...  n_u_canal_tertiary\nn_u_fire_freq             1.000000  ...            0.128596\nn_u_hotspot               0.866807  ...            0.091274\nn_u_burn_repeat           0.840631  ...            0.095220\nn_u_canal_primary         0.169152  ...            0.391307\nn_u_canal_secondary       0.018596  ...            0.641916\nn_u_canal_tertiary        0.128596  ...            1.000000\n\n[6 rows x 6 columns]",
   "validation": {
     "v_burned_frac": {
       "n_units": 476,
       "positive_units": 10,
       "skor_risiko": {
-        "auc": 0.9746781115879828,
-        "capture_top20pct": 0.8580539464115197,
-        "spearman": 0.7387760872422042
+        "auc": 0.9727467811158799,
+        "capture_top20pct": 0.8462291264163047,
+        "spearman": 0.7346822439997293
       },
       "skor_urgensi": {
-        "auc": 0.9746781115879828,
-        "capture_top20pct": 0.8580539464115197,
-        "spearman": 0.7387760872422042
+        "auc": 0.9727467811158799,
+        "capture_top20pct": 0.8462291264163047,
+        "spearman": 0.7346822439997293
       },
       "hanya_riwayat_kebakaran": {
         "auc": 0.9697424892703863,
-        "capture_top20pct": 0.8855535853773219,
+        "capture_top20pct": 0.8855535853773221,
         "spearman": 0.771495586976386
       },
       "random_capture_expected": 0.2
@@ -79,18 +83,18 @@
       "n_units": 476,
       "positive_units": 282,
       "skor_risiko": {
-        "auc": 0.9567339328800175,
-        "capture_top20pct": 0.7755911087866726,
-        "spearman": 0.8267865325822933
+        "auc": 0.956432331651678,
+        "capture_top20pct": 0.7710298087852415,
+        "spearman": 0.8289768109474454
       },
       "skor_urgensi": {
-        "auc": 0.9567339328800175,
-        "capture_top20pct": 0.7755911087866726,
-        "spearman": 0.8267865325822933
+        "auc": 0.956432331651678,
+        "capture_top20pct": 0.7710298087852415,
+        "spearman": 0.8289768109474454
       },
       "hanya_riwayat_kebakaran": {
         "auc": 0.8819551071141332,
-        "capture_top20pct": 0.814636319442366,
+        "capture_top20pct": 0.8146363194423661,
         "spearman": 0.783637339377783
       },
       "random_capture_expected": 0.2
@@ -98,8 +102,8 @@
   },
   "sensitivity": {
     "runs": 300,
-    "share_units_stable_class": 0.8970588235294118,
-    "median_rank_sd": 8.648847381916507
+    "share_units_stable_class": 0.8949579831932774,
+    "median_rank_sd": 12.014387502692973
   },
   "now": {
     "weight": 0.0,
@@ -156,7 +160,16 @@
         "weight": 0.0
       },
       "u_canal_density": {
-        "weight": 1.0
+        "weight": 0.0
+      },
+      "u_canal_primary": {
+        "weight": 0.5
+      },
+      "u_canal_secondary": {
+        "weight": 0.3
+      },
+      "u_canal_tertiary": {
+        "weight": 0.2
       },
       "i_peat_depth": {
         "weight": 0.0

@@ -9,3 +9,4 @@ reports/**/*.gpkg
 reports/**/cache/
 reports/**/*.log
 reports/*.bak
+reports/**/dashboard_data.json

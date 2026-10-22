@@ -58,7 +58,7 @@ Each site folder has a README (the runbook: steps with the repository each runs 
 
 ## National profile
 
-[docs/15-national-profile.md](docs/15-national-profile.md) profiles and ranks all 865 KHG from the local layers (fire history, hotspots, canals) and builds an HTML report; the registry of official KHG codes is [sites/khg_registry.csv](sites/khg_registry.csv). Tools: `tools/fetch_firms.py` and `tools/fetch_peat_extent.py` (wrappers: the code is `repeat_common.fetch_firms` and `repeat_common.fetch_peat_extent` in repeat-common), `tools/parse_kepmen_khg.py` (needs pdfplumber), `tools/catalog_data.py`.
+[docs/15-national-profile.md](docs/15-national-profile.md) profiles and ranks all 865 KHG from the local layers (fire history, hotspots, canals by class) and builds an interactive dashboard (`reports/national_profile/dashboard.html`) where the weights can be changed live; the registry of official KHG codes is [sites/khg_registry.csv](sites/khg_registry.csv). Tools: `tools/fetch_firms.py` and `tools/fetch_peat_extent.py` (wrappers: the code is `repeat_common.fetch_firms` and `repeat_common.fetch_peat_extent` in repeat-common), `tools/parse_kepmen_khg.py` (needs pdfplumber), `tools/catalog_data.py`.
 
 ## Documentation
 
