@@ -3,3 +3,9 @@ __pycache__/
 .pytest_cache/
 data/synthetic/
 _out/
+
+# regenerable GIS outputs of the reports (rebuild: python -m national.profile)
+reports/**/*.gpkg
+reports/**/cache/
+reports/**/*.log
+reports/*.bak

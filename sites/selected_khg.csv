@@ -1,0 +1,15 @@
+province,role,name_as_given,khg_name_in_gpkg,gpkg_row,area_ha,match_status
+Riau,main,Pulau Padang,KHG Pulau Padang,83,111286,confirmed
+Riau,main,Bengkalis,KHG Pulau Bengkalis,74,90686,confirmed
+Riau,reserve,Pulau Tebing Tinggi,KHG Pulau Tebing Tinggi,93,138061,confirmed
+Sumatera Selatan,main,Sugihan-Saleh,KHG Sungai Saleh - Sungai Sugihan,648,190230,confirmed
+Sumatera Selatan,main,cawang-lalang,,,,UNRESOLVED: no "cawang" in gpkg; nearest is KHG Air Banyuasin - Air Lalang (row 17; 60758 ha)
+Sumatera Selatan,reserve,sugihan-lumpur,KHG Sungai Sugihan - Sungai Lumpur,730,636828,confirmed (existing site sites/sugihan_lumpur)
+Jambi,main,Mendahara-Batanghari,KHG Sungai Mendahara - Sungai Batanghari,520,201383,confirmed
+Jambi,main,Air Hitam Laut-Buntukecil,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,106,183856,confirmed
+Kalimantan Barat,main,Peniti-Menpanwah,KHG Sungai Mempawah - Sungai Peniti,518,51045,confirmed (Menpanwah read as Mempawah)
+Kalimantan Barat,main,Punggurbesar-Kapuas,KHG Sungai Pungurbesar -  Sungai Kapuas,622,101269,confirmed (gpkg spells Pungurbesar; double space in name)
+Kalimantan Tengah,main,Kahayan-Sebangau,KHG Sungai Kahayan - Sungai Sebangau,327,451507,confirmed
+Kalimantan Tengah,main,kahayan-barito (corrected by team: Kapuas-Barito),KHG Sungai Kapuas - Sungai Barito,360,558168,confirmed (team: Kahayan-Barito is Kapuas-Barito)
+Kalimantan Selatan,main,Balangan - batangalai,KHG Sungai Balangan - Sungai Batangalai,145,30859,confirmed
+Papua Selatan,main,Buru Mappi-Buru Oba,KHG Sungai Buru Mappi - Sungai Buru Obaa,207,402643,confirmed (also exists: Buru Obaa - Buru Mappi row 214; 98805 ha)

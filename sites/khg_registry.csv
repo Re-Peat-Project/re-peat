@@ -1,0 +1,866 @@
+khg_code,island,no,page,name,province,kabupaten,area_ha_kepmen
+KHG.12.01.06,PULAU SUMATERA,1,9,KHG Aek Garoga - Batang Toru,Sumatera Utara,Tapanuli Tengah,2727
+KHG.13.01.02,PULAU SUMATERA,2,9,KHG Aek Lunang - Aek Sidang,Sumatera Barat,Pesisir Selatan,14099
+KHG.12.13.03,PULAU SUMATERA,3,9,KHG Aek Maraitgadang - Aek Sikapas,Sumatera Utara,Mandailing Natal,2360
+KHG.12.13.02,PULAU SUMATERA,4,9,KHG Aek Maraitgadang - Batang Maraitgodang,Sumatera Utara,Mandailing Natal,1500
+KHG.12.01.05,PULAU SUMATERA,5,9,KHG Aek Maros - Aek Pandan,Sumatera Utara,Tapanuli Tengah,4601
+KHG.16.07.05,PULAU SUMATERA,6,9,KHG Aek Musi - Sungai Upang,Sumatera Selatan,Banyuasin,26021
+KHG.12.03.01,PULAU SUMATERA,7,9,KHG Aek Na Birong - Aek Batang Toru,Sumatera Utara,Tapanuli Selatan,16768
+KHG.12.16.02,PULAU SUMATERA,8,9,KHG Aek Panggainsira - Aek Arong,Sumatera Utara,Humbang Hasundutan,3007
+KHG.16.07.04,PULAU SUMATERA,9,9,KHG Aek Sebatik - Aek Musi,Sumatera Selatan,Banyuasin,31801
+KHG.12.17.01,PULAU SUMATERA,10,9,KHG Aek Silang - Lae Renun,Sumatera Utara,Samosir,554
+KHG.13-17.01,PULAU SUMATERA,11,9,KHG Aek Silaut - Aek Menjuto,"Bengkulu, Sumatera Barat","Muko-muko, Pesisir Selatan",13085
+KHG.12.13.04,PULAU SUMATERA,12,9,KHG Aek Siriam - Batang Singkuang,Sumatera Utara,Mandailing Natal,4553
+KHG.12.01.04,PULAU SUMATERA,13,9,KHG Aek Sordang - Aek Kalang,Sumatera Utara,Tapanuli Tengah,2011
+KHG.12.16.01,PULAU SUMATERA,14,9,KHG Aek Sulpi - Aek Sibundong,Sumatera Utara,Humbang Hasundutan,6542
+KHG.13.01.01,PULAU SUMATERA,15,9,KHG Aek Tapan - Aek Silaut,Sumatera Barat,Pesisir Selatan,48508
+KHG.13.01.04,PULAU SUMATERA,16,9,KHG Aek Tapan - Aek Ubar,Sumatera Barat,Pesisir Selatan,7059
+KHG.13.01.03,PULAU SUMATERA,17,9,KHG Aek Ubar - Aek Lunang,Sumatera Barat,Pesisir Selatan,23274
+KHG.16.07.02,PULAU SUMATERA,18,9,KHG Air Banyuasin - Air Lalang,Sumatera Selatan,Banyuasin,60758
+KHG.16.07.03,PULAU SUMATERA,19,9,KHG Air Banyuasin - Sungai Musi,Sumatera Selatan,Banyuasin,39514
+KHG.11.01.02,PULAU SUMATERA,20,9,KHG Alue Baksukon - Alue Semerah,Aceh,Aceh Selatan,600
+KHG.11.12.01,PULAU SUMATERA,21,10,KHG Alue Getah - Krueng Le Mirah,Aceh,Aceh Barat Daya,8046
+KHG.11.01.03,PULAU SUMATERA,22,10,KHG Alue Semerah - Krueng Batee,Aceh,Aceh Selatan,1474
+KHG.13.06.01,PULAU SUMATERA,23,10,KHG Bah Antokan - Sungai Tiku,Sumatera Barat,Agam,3950
+KHG.13.12.01,PULAU SUMATERA,24,10,KHG Bah Btung - Sungai Tabat,Sumatera Barat,"Agam, Pasaman Barat",7608
+KHG.13.01.06,PULAU SUMATERA,25,10,KHG Bah Kambang - Batang Airlakitan,Sumatera Barat,Pesisir Selatan,3964
+KHG.13.12.02,PULAU SUMATERA,26,10,KHG Bah Mandiangin - Bah Btung,Sumatera Barat,Pasaman Barat,3097
+KHG.13.12.03,PULAU SUMATERA,27,10,KHG Batang Ampu - Bah Mandiangin,Sumatera Barat,Pasaman Barat,5476
+KHG.12.13.07,PULAU SUMATERA,28,10,KHG Batang Batahan - Batang Tamak,Sumatera Utara,Mandailing Natal,3731
+KHG.13.06.02,PULAU SUMATERA,29,10,KHG Batang Masangkiri - Bah Antokan,Sumatera Barat,Agam,3170
+KHG.15.02-03.02,PULAU SUMATERA,30,10,KHG Batang Merangin - Batang Tembesi,Jambi,"Merangin, Sarolangun",20397
+KHG.14.06-07.01,PULAU SUMATERA,31,10,KHG Batang Rokan Kiri - Batang Sosa,Riau,"Rokan Hilir, Rokan Hulu",58998
+KHG.12.13.05,PULAU SUMATERA,32,10,KHG Batang Singkuang - Nainjan Nu Godang,Sumatera Utara,Mandailing Natal,20382
+KHG.15.02-03.01,PULAU SUMATERA,33,10,KHG Batang Tembei - Sungai Merak,Jambi,"Merangin, Sarolangun",29596
+KHG.12.13.01,PULAU SUMATERA,34,10,KHG Batang Toru - Aek Maraitgadang,Sumatera Utara,Mandailing Natal,2042
+KHG.16.07.08,PULAU SUMATERA,35,10,KHG Delta Talang,Sumatera Selatan,Banyuasin,1576
+KHG.11.01.01,PULAU SUMATERA,36,10,KHG Krueng Baru - Krueng Aluetho,Aceh,Aceh Selatan,972
+KHG.11.01.04,PULAU SUMATERA,37,10,KHG Krueng Batee - Krueng Kluet,Aceh,Aceh Selatan,1084
+KHG.11.05.02,PULAU SUMATERA,38,10,KHG Krueng Gubon - Krueng Meureubo,Aceh,Aceh Barat,12505
+KHG.11.01.05,PULAU SUMATERA,39,10,KHG Krueng Kluet - Krueng Lembang,Aceh,Aceh Selatan,436
+KHG.11.01.06,PULAU SUMATERA,40,10,KHG Krueng Lembang - Krueng Bakongan,Aceh,Aceh Selatan,15745
+KHG.11.14.01,PULAU SUMATERA,41,10,KHG Krueng Ligan - Krueng Masem,Aceh,Aceh Jaya,3033
+KHG.11.12.05,PULAU SUMATERA,42,10,KHG Krueng Manggeng - Krueng Baru,Aceh,"Aceh Barat Daya, Aceh Selatan",1344
+KHG.11.14.02,PULAU SUMATERA,43,10,KHG Krueng Masem,Aceh,Aceh Jaya,2878
+KHG.11.15.01,PULAU SUMATERA,44,10,KHG Krueng Matee - Krueng Teumiyee,Aceh,Naganraya,4259
+KHG.11.05-15.01,PULAU SUMATERA,45,10,KHG Krueng Meureubo - Krueng Matee,Aceh,"Aceh Barat, Naganraya",5044
+KHG.11.01.08,PULAU SUMATERA,46,10,KHG Krueng Naca - Krueng Kapaksesak,Aceh,Aceh Selatan,2450
+KHG.11.14.05,PULAU SUMATERA,47,10,KHG Krueng On - Krueng Pneunom,Aceh,Aceh Jaya,6769
+KHG.11.14.04,PULAU SUMATERA,48,11,KHG Krueng Pango - Krueng On,Aceh,Aceh Jaya,7826
+KHG.11.14.03,PULAU SUMATERA,49,11,KHG Krueng Peungapet,Aceh,Aceh Jaya,4104
+KHG.11.05-14.01,PULAU SUMATERA,50,11,KHG Krueng Pneunom - Krueng Lambalik,Aceh,"Aceh Barat, Aceh Jaya",8315
+KHG.11.12.02,PULAU SUMATERA,51,11,KHG Krueng Surin - Krueng Batee,Aceh,Aceh Barat Daya,14278
+KHG.11.15.05,PULAU SUMATERA,52,11,KHG Krueng Surin - Krueng Muling,Aceh,Naganraya,22239
+KHG.11.12.04,PULAU SUMATERA,53,11,KHG Krueng Susoh,Aceh,Aceh Barat Daya,1694
+KHG.11.12.03,PULAU SUMATERA,54,11,KHG Krueng Susoh - Krueng Batee,Aceh,Aceh Barat Daya,484
+KHG.11.15.03,PULAU SUMATERA,55,11,KHG Krueng Tadu - Krueng Tripa,Aceh,Naganraya,14026
+KHG.11.15.02,PULAU SUMATERA,56,11,KHG Krueng Teumiyee - Krueng Tadu,Aceh,Naganraya,11977
+KHG.11.15.04,PULAU SUMATERA,57,11,KHG Krueng Tripa - Krueng Seuneuam,Aceh,Naganraya,16172
+KHG.11.01.07,PULAU SUMATERA,58,11,KHG Krueng Trumon,Aceh,Aceh Selatan,851
+KHG.11.01-10-23.01,PULAU SUMATERA,59,11,KHG Krueng Trumon - Lae Tarap,Aceh,"Aceh Selatan, Aceh Singkil, Kota Subulussalam",118136
+KHG.11.05.01,PULAU SUMATERA,60,11,KHG Krueng Wonki - Krueng Gubon,Aceh,Aceh Barat,10395
+KHG.11.23.03,PULAU SUMATERA,61,11,KHG Lae Kumbi,Aceh,Kota Subulussalam,1099
+KHG.11.23.01,PULAU SUMATERA,62,11,KHG Lae Puncu - Lae Tarap,Aceh,Kota Subulussalam,1831
+KHG.12.01.03,PULAU SUMATERA,63,11,KHG Lae Rapus - Aek Pardomuan,Sumatera Utara,Tapanuli Tengah,1400
+KHG.11.23.02,PULAU SUMATERA,64,11,KHG Lae Rih - Lae Puncu,Aceh,Kota Subulussalam,1586
+KHG.12.01.01,PULAU SUMATERA,65,11,KHG Lae Sibungkuang,Sumatera Utara,Tapanuli Tengah,8860
+KHG.12.01.02,PULAU SUMATERA,66,11,KHG Lae Sibungkuang - Aek Tarutungol,Sumatera Utara,Tapanuli Tengah,3269
+KHG.11-12.01,PULAU SUMATERA,67,11,KHG Lae Silabuhan - Lae Tambiski,"Aceh, Sumatera Utara","Aceh Singkil, Tapanuli Tengah",12835
+KHG.11.10.02,PULAU SUMATERA,68,11,KHG Lae Sulampi - Lae Gosong,Aceh,Aceh Singkil,17311
+KHG.11.10.01,PULAU SUMATERA,69,11,KHG Lae Sulampi - Lae Rimo,Aceh,Aceh Singkil,729
+KHG.11.23.04,PULAU SUMATERA,70,11,KHG Lae Tarap - Lae Kumbi,Aceh,Kota Subulussalam,2029
+KHG.11.10-23.01,PULAU SUMATERA,71,11,KHG Lae Tarap - Lae Sulampi,Aceh,"Aceh Singkil, Kota Subulussalam",4726
+KHG.13.01.05,PULAU SUMATERA,72,11,KHG Muara Sakai - Aek Bentayan,Sumatera Barat,Pesisir Selatan,4859
+KHG.14.03.02,PULAU SUMATERA,73,11,KHG Pulau Bengkalis,Riau,Bengkalis,90686
+KHG.21.02.01,PULAU SUMATERA,74,12,KHG Pulau Karimun,Kepulauan-riau,Karimun,641
+KHG.21.02.04,PULAU SUMATERA,75,12,KHG Pulau Kundur,Kepulauan-riau,Karimun,7919
+KHG.14.05.03,PULAU SUMATERA,76,12,KHG Pulau Labu,Riau,Pelalawan,590
+KHG.14.05.01,PULAU SUMATERA,77,12,KHG Pulau Mendol,Riau,Pelalawan,30995
+KHG.14.10.05,PULAU SUMATERA,78,12,KHG Pulau Menggung,Riau,Kepulauan Meranti,654
+KHG.14.10.02,PULAU SUMATERA,79,12,KHG Pulau Merbau,Riau,Kepulauan Meranti,21601
+KHG.14.05.04,PULAU SUMATERA,80,12,KHG Pulau Muda,Riau,Pelalawan,3420
+KHG.14.10.01,PULAU SUMATERA,81,12,KHG Pulau Padang,Riau,Kepulauan Meranti,111286
+KHG.21.02.03,PULAU SUMATERA,82,12,KHG Pulau Papan,Kepulauan-riau,Karimun,4492
+KHG.21.02.02,PULAU SUMATERA,83,12,KHG Pulau Parit,Kepulauan-riau,Karimun,760
+KHG.14.10.04,PULAU SUMATERA,84,12,KHG Pulau Rangsang,Riau,Kepulauan Meranti,88960
+KHG.14.03.01,PULAU SUMATERA,85,12,KHG Pulau Rupat,Riau,Bengkalis,118479
+KHG.14.05.02,PULAU SUMATERA,86,12,KHG Pulau Serapung,Riau,Pelalawan,2870
+KHG.14.10.03,PULAU SUMATERA,87,12,KHG Pulau Tebing Tinggi,Riau,Kepulauan Meranti,138061
+KHG.14.10.06,PULAU SUMATERA,88,12,KHG Pulau Topang,Riau,Kepulauan Meranti,2914
+KHG.21.02.05,PULAU SUMATERA,89,12,KHG Pulau Urgar,Kepulauan-riau,Karimun,2625
+KHG.16.06.02,PULAU SUMATERA,90,12,KHG Sei Lalan - Sungai Bentayan,Sumatera Selatan,Musibanyuasin,21118
+KHG.15-16.01,PULAU SUMATERA,91,12,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,"Jambi, Sumatera Selatan","Muarojambi, Tanjung Jabung Timur, Banyuasin",183856
+KHG.16.05.01,PULAU SUMATERA,92,12,KHG Sungai Alur - Sungai Lintang,Sumatera Selatan,Musirawas,5063
+KHG.12.09-23.01,PULAU SUMATERA,93,12,KHG Sungai Asahan - Sungai Leidong,Sumatera Utara,"Asahan, Labuhanbatu Utara",88666
+KHG.14.07.02,PULAU SUMATERA,94,12,KHG Sungai Bangko - Sungai Rokan,Riau,Rokan Hilir,45634
+KHG.14.07.03,PULAU SUMATERA,95,12,KHG Sungai Bangko - Sungai Rokan Kanan,Riau,Rokan Hilir,43367
+KHG.12-14.01,PULAU SUMATERA,96,12,KHG Sungai Barumun - Sungai Kubu,"Riau, Sumatera Utara","Rokan Hilir, Labuhan Batu, Labuhan Batu Selatan",251334
+KHG.12.22.01,PULAU SUMATERA,97,12,KHG Sungai Barumun - Sungai Mabar,Sumatera Utara,Labuhanbatu Selatan,5189
+KHG.14.02-04.03,PULAU SUMATERA,98,12,KHG Sungai Batang - Sungai Keritang 1,Riau,Indragiri Hilir,47440
+KHG.14.04.12,PULAU SUMATERA,99,13,KHG Sungai Batang - Sungai Keritang 2,Riau,Indragiri Hilir,15249
+KHG.14-15.01,PULAU SUMATERA,100,13,KHG Sungai Batang - Sungai Tungkal,"Jambi, Riau","Tanjungjabung Barat, Indragiri Hilir",84346
+KHG.15.05-07.01,PULAU SUMATERA,101,13,KHG Sungai Batanghari - Sungai Air Hitam Laut,Jambi,"Muaro Jambi, Tanjung Jabung Timur",189862
+KHG.15.05.01,PULAU SUMATERA,102,13,KHG Sungai Batanghari - Sungai Kampeh,Jambi,Muarojambi,59466
+KHG.15.10.01,PULAU SUMATERA,103,13,KHG Sungai Batanghari - Sungai Mandahara,Jambi,Kota Jambi,1134
+KHG.19.07.01,PULAU SUMATERA,104,13,KHG Sungai Baturusa,Bangka Belitung,Kota Pangkalpinang,4364
+KHG.15.06.02,PULAU SUMATERA,105,13,KHG Sungai Baung - Sungai Betara,Jambi,Tanjungjabung Barat,77859
+KHG.16.02.07,PULAU SUMATERA,106,13,KHG Sungai Beberi - Sungai Way Mesuji,Sumatera Selatan,Ogan Komering Ilir,8639
+KHG.19.04.02,PULAU SUMATERA,107,13,KHG Sungai Belikat - Sungai Lengko,Bangka Belitung,Bangka Tengah,6063
+KHG.14.08.01,PULAU SUMATERA,108,13,KHG Sungai Belutu - Sungai Leko,Riau,Siak,8475
+KHG.16.06-07.04,PULAU SUMATERA,109,13,KHG Sungai Bentayan - Sungai Penimpahan,Sumatera Selatan,"Banyuasin, Musi Banyuasin",42999
+KHG.15.06-07.01,PULAU SUMATERA,110,13,KHG Sungai Betara - Sungai Mendahara,Jambi,"Tanjung Jabung Barat, Tanjung Jabung Timur",84737
+KHG.14.04.06,PULAU SUMATERA,111,13,KHG Sungai Boang - Sungai Basira,Riau,Indragiri Hilir,8039
+KHG.14.03-08.02,PULAU SUMATERA,112,13,KHG Sungai Bunut - Sungai Umban,Riau,"Bengkalis, Siak",17426
+KHG.16.02.05,PULAU SUMATERA,113,13,KHG Sungai Burnai - Sungai Sibumbung,Sumatera Selatan,Ogan Komering Ilir,86679
+KHG.16.02.08,PULAU SUMATERA,114,13,KHG Sungai Burung - Sungai Way Mesuji,Sumatera Selatan,Ogan Komering Ilir,87496
+KHG.14.04.11,PULAU SUMATERA,115,13,KHG Sungai Enok - Sungai Batang,Riau,Indragiri Hilir,96169
+KHG.14.08.05,PULAU SUMATERA,116,13,KHG Sungai Gasip - Sungai Siak,Riau,Siak,7856
+KHG.14.02-04.01,PULAU SUMATERA,117,13,KHG Sungai Gaung - Sungai Batangtuaka,Riau,"Indragiri Hilir, Indragiri Hulu",315357
+KHG.14.05.07,PULAU SUMATERA,118,13,KHG Sungai Gongan - Sungai Nilo,Riau,Pelalawan,23740
+KHG.14.02.03,PULAU SUMATERA,119,13,KHG Sungai Indragiri,Riau,Indragiri Hulu,1935
+KHG.14.02-04.02,PULAU SUMATERA,120,13,KHG Sungai Indragiri - Sungai Batang,Riau,"Indragiri Hilir, Indragiri Hulu",82822
+KHG.14.02.01,PULAU SUMATERA,121,13,KHG Sungai Indragiri - Sungai Belilas,Riau,Indragiri Hulu,23869
+KHG.14.02.04,PULAU SUMATERA,122,13,KHG Sungai Indragiri - Sungai Cenaku,Riau,Indragiri Hulu,32627
+KHG.14.02.02,PULAU SUMATERA,123,13,KHG Sungai Indragiri - Sungai Ekok,Riau,Indragiri Hulu,4264
+KHG.14.04.08,PULAU SUMATERA,124,13,KHG Sungai Indragiri - Sungai Enok,Riau,Indragiri Hilir,56003
+KHG.14.04.09,PULAU SUMATERA,125,14,KHG Sungai Indragiri - Sungai Tuana,Riau,Indragiri Hilir,16257
+KHG.19.01.04,PULAU SUMATERA,126,14,KHG Sungai Jeruk - Selat Bangka,Bangka Belitung,Bangka,2044
+KHG.16.05.02,PULAU SUMATERA,127,14,KHG Sungai Kalumpang,Sumatera Selatan,Musirawas,7208
+KHG.14.02-04-05.01,PULAU SUMATERA,128,14,KHG Sungai Kampar - Sungai Gaung,Riau,"Indragiri Hilir, Indragiri Hulu, Pelalawan",710823
+KHG.14.01.01,PULAU SUMATERA,129,14,KHG Sungai Kampar Kiri - Sungai Lipai,Riau,Kampar,3977
+KHG.14.01-05.02,PULAU SUMATERA,130,14,KHG Sungai Kampar Kiri - Sungai Segati,Riau,"Kampar, Pelalawan",20210
+KHG.14.04.04,PULAU SUMATERA,131,14,KHG Sungai Kanan - Sungai Buluh,Riau,Indragiri Hilir,13002
+KHG.12.23.01,PULAU SUMATERA,132,14,KHG Sungai Kanopan - Sungai Kuala,Sumatera Utara,Labuhanbatu Utara,9196
+KHG.19.03.02,PULAU SUMATERA,133,14,KHG Sungai Ketiak - Sengai Bikang,Bangka Belitung,Bangka Selatan,14369
+KHG.14.01-05.01,PULAU SUMATERA,134,14,KHG Sungai Kiyap - Sungai Kampar Kiri,Riau,Kampar,72672
+KHG.14.01-05-11.01,PULAU SUMATERA,135,14,KHG Sungai Kiyap - Sungai Kerinci,Riau,"Kampar, Pelalawan, Siak",58477
+KHG.14.05.05,PULAU SUMATERA,136,14,KHG Sungai Kiyap - Sungai Kerumutan,Riau,Pelalawan,103162
+KHG.12.23.02,PULAU SUMATERA,137,14,KHG Sungai Kuala - Sungai Kuo,Sumatera Utara,Labuhan Batu Utara,20799
+KHG.12.10-22.01,PULAU SUMATERA,138,14,KHG Sungai Kualuh Bilah - Sungai Barumun,Sumatera Utara,"Labuhan Batu, Labuhan Batu Selatan",77619
+KHG.12.10-23.01,PULAU SUMATERA,139,14,KHG Sungai Kuo - Sungai Kualuh Bilah,Sumatera Utara,"Labuhan Batu, Labuhan Batu Utara",74601
+KHG.19.04.01,PULAU SUMATERA,140,14,KHG Sungai Kurau - Sungai Kepuh,Bangka-belitung,Bangka Tengah,4230
+KHG.15-16.02,PULAU SUMATERA,141,14,KHG Sungai Lalan - Sungai Merang,"Jambi, Sumatera Selatan","Muaro Jambi, Musi Banyuasin",84091
+KHG.12.09-23.02,PULAU SUMATERA,142,14,KHG Sungai Leidong - Sungai Kuala,Sumatera Utara,"Asahan, Labuhan Batu Utara",33199
+KHG.14.08.02,PULAU SUMATERA,143,14,KHG Sungai Leko - Sungai Minas,Riau,Siak,9793
+KHG.19.03.04,PULAU SUMATERA,144,14,KHG Sungai Lepar,Bangka Belitung,Bangka Selatan,1920
+KHG.14.01.02,PULAU SUMATERA,145,14,KHG Sungai Lipai - Sungai Bunut,Riau,Kampar,4624
+KHG.14.08.04,PULAU SUMATERA,146,14,KHG Sungai Mandiangin - Sungai Siak,Riau,Siak,17647
+KHG.12.10-23.02,PULAU SUMATERA,147,14,KHG Sungai Marbau - Sungai Kualuh Bilah,Sumatera Utara,"Labuhan Batu, Labuhan Batu Utara",11864
+KHG.16.06.01,PULAU SUMATERA,148,14,KHG Sungai Medak - Sungai Lalan,Sumatera Selatan,Musi Banyuasin,24589
+KHG.17.06.01,PULAU SUMATERA,149,14,KHG Sungai Mejunto - Aek Selangkanan,Bengkulu,Muko-Muko,6185
+KHG.19.05.04,PULAU SUMATERA,150,15,KHG Sungai Mencong 1,Bangka-belitung,Bangka Barat,13023
+KHG.15.05-07-10.01,PULAU SUMATERA,151,15,KHG Sungai Mendahara - Sungai Batanghari,Jambi,"Kota Jambi, Muaro Jambi, Tanjung Jabung Timur",201383
+KHG.14.08.06,PULAU SUMATERA,152,15,KHG Sungai Mendawai - Sungai Gasip,Riau,Siak,4681
+KHG.16.06-07.01,PULAU SUMATERA,153,15,KHG Sungai Merang - Sungai Ngirawan,Sumatera Selatan,"Banyuasin, Musi Banyuasin",82021
+KHG.14.04.03,PULAU SUMATERA,154,15,KHG Sungai Merusi - Sungai Belanak,Riau,Indragiri Hilir,5585
+KHG.15.03.01,PULAU SUMATERA,155,15,KHG Sungai Mesao - Aek Rawas,Jambi,Sarolangun,5182
+KHG.18.11.01,PULAU SUMATERA,156,15,KHG Sungai Mesuji - Sungai Kebumangah,Lampung,Mesuji,37046
+KHG.18.05-11.01,PULAU SUMATERA,157,15,KHG Sungai Mesuji - Sungai Tulangbawang,Lampung,"Mesuji, Tulang Bawang",53171
+KHG.14.08.03,PULAU SUMATERA,158,15,KHG Sungai Minas - Sungai Mandiangin,Riau,Siak,5117
+KHG.16.03.02,PULAU SUMATERA,159,15,KHG Sungai Musi - Sungai Aek Lematang,Sumatera Selatan,Muaraenim,25677
+KHG.16.03-07.01,PULAU SUMATERA,160,15,KHG Sungai Musi - Sungai Blidah,Sumatera Selatan,"Banyuasin, Muaraenim",31167
+KHG.16.05-06.02,PULAU SUMATERA,161,15,KHG Sungai Musi - Sungai Empasan,Sumatera Selatan,"Musibanyuasin, Musirawas",21934
+KHG.16.03-06.01,PULAU SUMATERA,162,15,KHG Sungai Musi - Sungai Penu,Sumatera Selatan,"Muaraenim, Musi Banyuasin",27814
+KHG.16.05-06.01,PULAU SUMATERA,163,15,KHG Sungai Musi - Sungai Rawas,Sumatera Selatan,"Musi Banyuasin, Musirawas",14356
+KHG.16.07.06,PULAU SUMATERA,164,15,KHG Sungai Musi - Sungai Saleh,Sumatera Selatan,Banyuasin,45027
+KHG.12.13.06,PULAU SUMATERA,165,15,KHG Sungai Nata - Sungai Sinunukan,Sumatera Utara,Mandailing Natal,2728
+KHG.16.06-07.02,PULAU SUMATERA,166,15,KHG Sungai Ngirawan - Sungai Sembilang,Sumatera Selatan,"Banyuasin, Musi Banyuasin",73475
+KHG.14.04.10,PULAU SUMATERA,167,15,KHG Sungai Nidir - Sungai Enok,Riau,Indragiri Hilir,18957
+KHG.14.05.06,PULAU SUMATERA,168,15,KHG Sungai Nilo - Sungai Napuh,Riau,Pelalawan,25341
+KHG.14.04.01,PULAU SUMATERA,169,15,KHG Sungai Pelanduk - Sungai Tumu,Riau,Indragiri Hilir,42853
+KHG.15.06.01,PULAU SUMATERA,170,15,KHG Sungai Pengabuan - Sungai Baung,Jambi,Tanjungjabung Barat,32001
+KHG.16.07.01,PULAU SUMATERA,171,15,KHG Sungai Penimpahan - Sungai Air Hitam,Sumatera Selatan,Banyuasin,14467
+KHG.16.03.01,PULAU SUMATERA,172,15,KHG Sungai Penu - Sungai Abah,Sumatera Selatan,Muaraenim,7710
+KHG.14.04.05,PULAU SUMATERA,173,15,KHG Sungai Pergam - Sungai Pucuk Besar,Riau,Indragiri Hilir,8992
+KHG.14.07.01,PULAU SUMATERA,174,15,KHG Sungai Rokan - Sungai Kubu,Riau,Rokan Hilir,142165
+KHG.14.03-07-12.01,PULAU SUMATERA,175,15,KHG Sungai Rokan - Sungai Siak Kecil,Riau,"Bengkalis, Kota Dumai, Rokan Hilir",832458
+KHG.14.01-03-06-08.01,PULAU SUMATERA,176,16,KHG Sungai Rokan Kiri - Sungai Mandau,Riau,"Bengkalis, Kampar, Rokan Hulu, Siak",222562
+KHG.14.04.07,PULAU SUMATERA,177,16,KHG Sungai Rotoh - Sungai Bang,Riau,Indragiri Hilir,5130
+KHG.16.05.03,PULAU SUMATERA,178,16,KHG Sungai Rumpit - Sungai Rawas,Sumatera Selatan,Musirawas,48298
+KHG.16.07.07,PULAU SUMATERA,179,16,KHG Sungai Saleh - Sungai Batanghari,Sumatera Selatan,Banyuasin,11760
+KHG.16.02-07.01,PULAU SUMATERA,180,16,KHG Sungai Saleh - Sungai Sugihan,Sumatera Selatan,"Banyuasin, Ogan Komering Ilir",190230
+KHG.13.01.07,PULAU SUMATERA,181,16,KHG Sungai Sangku - Bah Kambang,Sumatera Barat,Pesisir Selatan,4853
+KHG.19.01-04.01,PULAU SUMATERA,182,16,KHG Sungai Selan,Bangka Belitung,"Bangka, Bangka Tengah",16105
+KHG.19.03-04.01,PULAU SUMATERA,183,16,KHG Sungai Selan - Sungai Bangka,Bangka Belitung,"Bangka Selatan, Bangka Tengah",9695
+KHG.17.06.02,PULAU SUMATERA,184,16,KHG Sungai Selangkanan - Aek Bakal Kecil,Bengkulu,Muko-muko,2758
+KHG.16.06-07.03,PULAU SUMATERA,185,16,KHG Sungai Sembilang - Sungai Lalan,Sumatera Selatan,"Banyuasin, Musi Banyuasin",84670
+KHG.14.04.02,PULAU SUMATERA,186,16,KHG Sungai Senama Kecil - Sungai Rajaelok,Riau,Indragiri Hilir,12431
+KHG.19.03.03,PULAU SUMATERA,187,16,KHG Sungai Senua,Bangka-belitung,Bangka Selatan,7164
+KHG.14.05-08.01,PULAU SUMATERA,188,16,KHG Sungai Siak - Sungai Kampar,Riau,"Pelalawan, Siak",722929
+KHG.14.03-08.01,PULAU SUMATERA,189,16,KHG Sungai Siak Kecil - Sungai Siak,Riau,"Bengkalis, Siak",163787
+KHG.16.02.04,PULAU SUMATERA,190,16,KHG Sungai Sibumbung - Sungai Talangrimba,Sumatera Selatan,Ogan Komering Ilir,105308
+KHG.16.02.01,PULAU SUMATERA,191,16,KHG Sungai Sugihan - Sungai Lumpur,Sumatera Selatan,Ogan Komering Ilir,636828
+KHG.13.06-12.01,PULAU SUMATERA,192,16,KHG Sungai Tabat - Batang Masangkiri,Sumatera Barat,"Agam, Pasaman Barat",15354
+KHG.16.02.03,PULAU SUMATERA,193,16,KHG Sungai Talang - Sungai Ulakkedondong,Sumatera Selatan,Ogan Komering Ilir,10432
+KHG.16.02.06,PULAU SUMATERA,194,16,KHG Sungai Tandatuan - Sungai Beberi,Sumatera Selatan,Ogan Komering Ilir,8707
+KHG.19.05.01,PULAU SUMATERA,195,16,KHG Sungai Tanjung Kampak - Sungai Kampak,Bangka-belitung,Bangka Barat,2198
+KHG.19.05.02,PULAU SUMATERA,196,16,KHG Sungai Tanjung Mangkubung - Sungai Antan,Bangka-belitung,Bangka Barat,3990
+KHG.19.01.01,PULAU SUMATERA,197,16,KHG Sungai Tanjung Mangkubung - Sungai Gendir,Bangka-belitung,Bangka,839
+KHG.19.01.02,PULAU SUMATERA,198,16,KHG Sungai Tanjung Mangkubung - Sungai Kayu Anak,Bangka-belitung,Bangka,3602
+KHG.19.05.03,PULAU SUMATERA,199,16,KHG Sungai Tanjung Mangkubung - Sungai Sampul,Bangka-belitung,Bangka Barat,2381
+KHG.14.01-11.01,PULAU SUMATERA,200,16,KHG Sungai Tapung Kiri - Sungai Kiyap,Riau,"Kampar, Kota Pekanbaru",46863
+KHG.14.04.13,PULAU SUMATERA,201,16,KHG Sungai Tumu,Riau,Indragiri Hilir,946
+KHG.16.02.02,PULAU SUMATERA,202,16,KHG Sungai Ulakkedondong - Sungai Lumpur,Sumatera Selatan,Ogan Komering Ilir,71761
+KHG.19.03.01,PULAU SUMATERA,203,17,KHG Sungai Ulin - Sungai Kemis,Bangka-belitung,Bangka Selatan,5193
+KHG.19.01.03,PULAU SUMATERA,204,17,KHG Tanjung Raya - Sungai Songehitfun,Bangka-belitung,Bangka,1337
+KHG.18.02.01,PULAU SUMATERA,205,17,KHG Way Seputih,Lampung,Lampung Tengah,1738
+KHG.18.05.01,PULAU SUMATERA,206,17,KHG Way Terusan,Lampung,Tulangbawang,1047
+KHG.18.07.01,PULAU SUMATERA,207,17,KHG Way Wako - Way Kambas,Lampung,Lampung Timur,4784
+KHG.64.03.03,PULAU KALIMANTAN,1,17,KHG Pulau Tanbuayabuaya,Kalimantan Timur,Berau,223
+KHG.64.03.05,PULAU KALIMANTAN,2,17,KHG Pulau Tanjungbuaya-buaya,Kalimantan Timur,Berau,2882
+KHG.64.03.04,PULAU KALIMANTAN,3,17,KHG Sei Batu Putih,Kalimantan Timur,Berau,1984
+KHG.61.09.01,PULAU KALIMANTAN,4,17,KHG Sungai Akar,Kalimantan Barat,Sekadau,4078
+KHG.61.12.06,PULAU KALIMANTAN,5,17,KHG Sungai Ambawang - Sungai Kubu,Kalimantan Barat,Kuburaya,50939
+KHG.61.12-03.01,PULAU KALIMANTAN,6,17,KHG Sungai Ambawang - Sungai Landak,Kalimantan Barat,"Kuburaya, Sanggau",35281
+KHG.62.01.03,PULAU KALIMANTAN,7,17,KHG Sungai Arut,Kalimantan Tengah,Kotawaringin Barat,14428
+KHG.63.07-08-11.01,PULAU KALIMANTAN,8,17,KHG Sungai Balangan - Sungai Batangalai,Kalimantan Selatan,"Balangan, Hulusungai Tengah, Hulusungai Utara",30859
+KHG.65.04.06,PULAU KALIMANTAN,9,17,KHG Sungai Bangkudulisungai,Kalimantan Utara,Tanatidung,5905
+KHG.65.04.07,PULAU KALIMANTAN,10,17,KHG Sungai Bangkudulisungai - Sungai Umbus,Kalimantan Utara,Tanatidung,2106
+KHG.63.03-05.01,PULAU KALIMANTAN,11,17,KHG Sungai Barito - Sungai Alalak,Kalimantan Selatan,"Banjar, Tapin",47935
+KHG.62.04.01,PULAU KALIMANTAN,12,17,KHG Sungai Barito - Sungai Ayuh,Kalimantan Tengah,Barito Selatan,37259
+KHG.62.04.02,PULAU KALIMANTAN,13,17,KHG Sungai Barito - Sungai Napu,Kalimantan Tengah,Barito Selatan,9968
+KHG.63.04-05-06-08.01,PULAU KALIMANTAN,14,17,KHG Sungai Barito - Sungai Taping,Kalimantan Selatan,"Baritokuala, Hulusungai Selatan, Hulusungai Utara, Tapin",112227
+KHG.61.06.10,PULAU KALIMANTAN,15,17,KHG Sungai Batang Kalis - Sungai Maday,Kalimantan Barat,Kapuas Hulu,13874
+KHG.65.04.05,PULAU KALIMANTAN,16,17,KHG Sungai Belanyu - Sungai Balai,Kalimantan Utara,Tanatidung,3333
+KHG.65.04.04,PULAU KALIMANTAN,17,17,KHG Sungai Belanyu - Sungai Barang,Kalimantan Utara,Tanatidung,1640
+KHG.64.02-08.01,PULAU KALIMANTAN,18,17,KHG Sungai Belayan - Sungai Kelinjau,Kalimantan Timur,"Kutai Kartanegara, Kutai Timur",109804
+KHG.64.02.01,PULAU KALIMANTAN,19,18,KHG Sungai Belayan - Sungai Melintang,Kalimantan Timur,Kutai Kartanegara,46005
+KHG.61.10.03,PULAU KALIMANTAN,20,18,KHG Sungai Belimbing - Sungai Menunuh,Kalimantan Barat,Melawi,806
+KHG.61.06.01,PULAU KALIMANTAN,21,18,KHG Sungai Belitung - Sungai Kapuas,Kalimantan Barat,Kapuas Hulu,112133
+KHG.61.04.12,PULAU KALIMANTAN,22,18,KHG Sungai Berantai - Sungai Penyengat Besar,Kalimantan Barat,Ketapang,3374
+KHG.62.01-08.01,PULAU KALIMANTAN,23,18,KHG Sungai Bila - Sungai Rasaw,Kalimantan Tengah,"Kotawaringin Barat, Sukamara",24346
+KHG.61.05.15,PULAU KALIMANTAN,24,18,KHG Sungai Bulu - Sungai Mangkurat,Kalimantan Barat,Sintang,876
+KHG.62.01-07.02,PULAU KALIMANTAN,25,18,KHG Sungai Buluh Besar,Kalimantan Tengah,"Kotawaringin Barat, Seruyan",134782
+KHG.62.01-07.01,PULAU KALIMANTAN,26,18,KHG Sungai Buluh Besar - Sungai Seruyan,Kalimantan Tengah,"Kotawaringin Barat, Seruyan",342852
+KHG.61.06.08,PULAU KALIMANTAN,27,18,KHG Sungai Bunut - Sungai Kapuas,Kalimantan Barat,Kapuas Hulu,91960
+KHG.61.01.02,PULAU KALIMANTAN,28,18,KHG Sungai Dadau - Sungai Sikan,Kalimantan Barat,Sambas,14023
+KHG.61.07.02,PULAU KALIMANTAN,29,18,KHG Sungai Duri - Sungai Raya,Kalimantan Barat,Bengkayang,21241
+KHG.61.11-04.01,PULAU KALIMANTAN,30,18,KHG Sungai Durian - Sungai Kualan,Kalimantan Barat,"Kayong Utara, Ketapang",155106
+KHG.61.12.09,PULAU KALIMANTAN,31,18,KHG Sungai Durian - Sungai Labai,Kalimantan Barat,Kuburaya,44437
+KHG.61.06.02,PULAU KALIMANTAN,32,18,KHG Sungai Embalon - Sungai Palin,Kalimantan Barat,Kapuas Hulu,42755
+KHG.61.06.07,PULAU KALIMANTAN,33,18,KHG Sungai Embau - Sungai Kapuas,Kalimantan Barat,Kapuas Hulu,43358
+KHG.61.03-09.02,PULAU KALIMANTAN,34,18,KHG Sungai Inggis - Sungai Kapuas,Kalimantan Barat,"Sanggau, Sekadau",5766
+KHG.61-62.01,PULAU KALIMANTAN,35,18,KHG Sungai Jelai - Sungai Bila,"Kalimantan Barat, Kalimantan Tengah","Ketapang, Sukamara",31559
+KHG.64.07.02,PULAU KALIMANTAN,36,18,KHG Sungai Jempang - Sungai Kedangpahu,Kalimantan Timur,Kutai Barat,15624
+KHG.61.12.08,PULAU KALIMANTAN,37,18,KHG Sungai Jenu - Sungai Labai,Kalimantan Barat,Kuburaya,11188
+KHG.61.05.12,PULAU KALIMANTAN,38,18,KHG Sungai Jerora - Sungai Majau,Kalimantan Barat,Sintang,3746
+KHG.62.03-11.01,PULAU KALIMANTAN,39,18,KHG Sungai Kahayan - Sungai Kapuas,Kalimantan Tengah,"Kapuas, Pulangpisau",400320
+KHG.62.11-14.02,PULAU KALIMANTAN,40,18,KHG Sungai Kahayan - Sungai Sebangau,Kalimantan Tengah,"Katingan, Pulangpisau",451507
+KHG.61.12.03,PULAU KALIMANTAN,41,18,KHG Sungai Kapuas,Kalimantan Barat,Kuburaya,6627
+KHG.61.03.13,PULAU KALIMANTAN,42,18,KHG Sungai Kapuas - Sungai Menukung,Kalimantan Barat,Sanggau,4840
+KHG.61.71-12-03.01,PULAU KALIMANTAN,43,18,KHG Sungai Kapuas - Sungai Ambawang,Kalimantan Barat,"Kota Pontianak, Kuburaya, Sanggau",157992
+KHG.61.09.04,PULAU KALIMANTAN,44,18,KHG Sungai Kapuas - Sungai Asam,Kalimantan Barat,Sekadau,642
+KHG.61.09.02,PULAU KALIMANTAN,45,19,KHG Sungai Kapuas - Sungai Ayak,Kalimantan Barat,Sekadau,7391
+KHG.61.05.10,PULAU KALIMANTAN,46,19,KHG Sungai Kapuas - Sungai Baiangtuk,Kalimantan Barat,Sintang,26270
+KHG.62.03-04.01,PULAU KALIMANTAN,47,19,KHG Sungai Kapuas - Sungai Barito,Kalimantan Tengah,"Barito Selatan, Kapuas",558168
+KHG.61.06.13,PULAU KALIMANTAN,48,19,KHG Sungai Kapuas - Sungai Beran,Kalimantan Barat,Kapuas Hulu,2762
+KHG.61.03.01,PULAU KALIMANTAN,49,19,KHG Sungai Kapuas - Sungai Campedik,Kalimantan Barat,Sanggau,6050
+KHG.61.12.05,PULAU KALIMANTAN,50,19,KHG Sungai Kapuas - Sungai Dawak,Kalimantan Barat,Kuburaya,2363
+KHG.61.03.10,PULAU KALIMANTAN,51,19,KHG Sungai Kapuas - Sungai Dekan Besar,Kalimantan Barat,Sanggau,1162
+KHG.61.06.06,PULAU KALIMANTAN,52,19,KHG Sungai Kapuas - Sungai Embau,Kalimantan Barat,Kapuas Hulu,21597
+KHG.61.06-05.03,PULAU KALIMANTAN,53,19,KHG Sungai Kapuas - Sungai Jelawat Besar,Kalimantan Barat,"Kapuas Hulu, Sintang",3749
+KHG.61.06-05.01,PULAU KALIMANTAN,54,19,KHG Sungai Kapuas - Sungai Jentu,Kalimantan Barat,"Kapuas Hulu, Sintang",18472
+KHG.61.05.08,PULAU KALIMANTAN,55,19,KHG Sungai Kapuas - Sungai Ketungau,Kalimantan Barat,Sintang,36098
+KHG.61.09.03,PULAU KALIMANTAN,56,19,KHG Sungai Kapuas - Sungai Kubu,Kalimantan Barat,Sekadau,1796
+KHG.61.06.09,PULAU KALIMANTAN,57,19,KHG Sungai Kapuas - Sungai Maday,Kalimantan Barat,Kapuas Hulu,38543
+KHG.61.02-08-12-71.01,PULAU KALIMANTAN,58,19,KHG Sungai Kapuas - Sungai Mandor,Kalimantan Barat,"Kota Pontianak, Kuburaya, Sanggau, Landak, Pontianak",76506
+KHG.62.03.01,PULAU KALIMANTAN,59,19,KHG Sungai Kapuas - Sungai Mangkutup,Kalimantan Tengah,"Kapuas, Pulangpisau",77714
+KHG.61.05.09,PULAU KALIMANTAN,60,19,KHG Sungai Kapuas - Sungai Manyam,Kalimantan Barat,Sintang,688
+KHG.61.05.11,PULAU KALIMANTAN,61,19,KHG Sungai Kapuas - Sungai Melawi,Kalimantan Barat,Sintang,1524
+KHG.61.03.06,PULAU KALIMANTAN,62,19,KHG Sungai Kapuas - Sungai Mendawak,Kalimantan Barat,Sanggau,70292
+KHG.61.03.08,PULAU KALIMANTAN,63,19,KHG Sungai Kapuas - Sungai Muna,Kalimantan Barat,Sanggau,1809
+KHG.61.06.12,PULAU KALIMANTAN,64,19,KHG Sungai Kapuas - Sungai Muntik,Kalimantan Barat,Kapuas Hulu,398
+KHG.62.03.02,PULAU KALIMANTAN,65,19,KHG Sungai Kapuas - Sungai Murui,Kalimantan Tengah,Kapuas,68163
+KHG.61.03.11,PULAU KALIMANTAN,66,19,KHG Sungai Kapuas - Sungai Rusan,Kalimantan Barat,Sanggau,692
+KHG.61.09.05,PULAU KALIMANTAN,67,19,KHG Sungai Kapuas - Sungai Sebidau,Kalimantan Barat,Sekadau,1564
+KHG.61.03.07,PULAU KALIMANTAN,68,19,KHG Sungai Kapuas - Sungai Segelam,Kalimantan Barat,Sanggau,2614
+KHG.61.12.04,PULAU KALIMANTAN,69,19,KHG Sungai Kapuas - Sungai Separoh,Kalimantan Barat,Kuburaya,3866
+KHG.61.06.04,PULAU KALIMANTAN,70,19,KHG Sungai Kapuas - Sungai Sibau,Kalimantan Barat,Kapuas Hulu,73236
+KHG.61.03.05,PULAU KALIMANTAN,71,20,KHG Sungai Kapuas - Sungai Tayan,Kalimantan Barat,Sanggau,1413
+KHG.61.03.12,PULAU KALIMANTAN,72,20,KHG Sungai Kapuas - Sungai Tembaga,Kalimantan Barat,Sanggau,1358
+KHG.64.03.06,PULAU KALIMANTAN,73,20,KHG Sungai Kariabu,Kalimantan Timur,Berau,369
+KHG.62.06.02,PULAU KALIMANTAN,74,20,KHG Sungai Katingan - Sungai Klaru,Kalimantan Tengah,Katingan,28378
+KHG.62.02-06.01,PULAU KALIMANTAN,75,20,KHG Sungai Katingan - Sungai Mentaya,Kalimantan Tengah,"Katingan, Kotawaringin Timur",361296
+KHG.62.06-11-14.01,PULAU KALIMANTAN,76,20,KHG Sungai Katingan - Sungai Sebangau,Kalimantan Tengah,"Katingan, Kota Palangkaraya",823060
+KHG.64.02.02,PULAU KALIMANTAN,77,20,KHG Sungai Kedangyantau - Sungai Sabintulung,Kalimantan Timur,Kutai Kartanegara,37930
+KHG.61.03-09.01,PULAU KALIMANTAN,78,20,KHG Sungai Kedukul,Kalimantan Barat,"Sanggau, Sekadau",1649
+KHG.64.02-07.01,PULAU KALIMANTAN,79,20,KHG Sungai Kedupan - Sungai Layah,Kalimantan Timur,"Kutai Barat, Kutai Kartanegara",10542
+KHG.64.02-08.02,PULAU KALIMANTAN,80,20,KHG Sungai Kelinjau - Sungai Kedangyantau,Kalimantan Timur,"Kutai Kartanegara, Kutai Timur",31279
+KHG.61.05.06,PULAU KALIMANTAN,81,20,KHG Sungai Keludai - Sungai Merakai,Kalimantan Barat,Sintang,936
+KHG.61.04.09,PULAU KALIMANTAN,82,20,KHG Sungai Kepulu - Sungai Pesaguan,Kalimantan Barat,Ketapang,13570
+KHG.61.04.14,PULAU KALIMANTAN,83,20,KHG Sungai Keramat - Sungai Jelai,Kalimantan Barat,Ketapang,21641
+KHG.61.06-05.02,PULAU KALIMANTAN,84,20,KHG Sungai Ketungau - Sungai Berau,Kalimantan Barat,"Kapuas Hulu, Sintang",5888
+KHG.61.05.03,PULAU KALIMANTAN,85,20,KHG Sungai Ketungau - Sungai Mualang,Kalimantan Barat,Sintang,1376
+KHG.61.05.07,PULAU KALIMANTAN,86,20,KHG Sungai Ketungau - Sungai Segarau,Kalimantan Barat,Sintang,13220
+KHG.61.05.01,PULAU KALIMANTAN,87,20,KHG Sungai Ketungau - Sungai Sejelu,Kalimantan Barat,Sintang,682
+KHG.61.05.02,PULAU KALIMANTAN,88,20,KHG Sungai Ketungau - Sungai Serasau,Kalimantan Barat,Sintang,346
+KHG.61.04.05,PULAU KALIMANTAN,89,20,KHG Sungai Kualan - Sungai Lelayang,Kalimantan Barat,Ketapang,2017
+KHG.61.04.04,PULAU KALIMANTAN,90,20,KHG Sungai Kualan - Sungai Sekucing,Kalimantan Barat,Ketapang,10525
+KHG.61.12.02,PULAU KALIMANTAN,91,20,KHG Sungai Kubu - Sungai Pungurbesar,Kalimantan Barat,Kuburaya,23501
+KHG.62.01.05,PULAU KALIMANTAN,92,20,KHG Sungai Kumai - Sungai Sekonyer,Kalimantan Tengah,Kotawaringin Barat,14308
+KHG.61.01-07.02,PULAU KALIMANTAN,93,20,KHG Sungai Kumba - Sungai Setap,Kalimantan Barat,"Bengkayang, Sambas",32004
+KHG.61.05.04,PULAU KALIMANTAN,94,20,KHG Sungai Kungan - Sungai Ketungau,Kalimantan Barat,Sintang,1663
+KHG.61.04.01,PULAU KALIMANTAN,95,20,KHG Sungai Labai,Kalimantan Barat,Ketapang,11289
+KHG.61.03.14,PULAU KALIMANTAN,96,20,KHG Sungai Labai - Sungai Ambawang Besar,Kalimantan Barat,Sanggau,1786
+KHG.61.04.02,PULAU KALIMANTAN,97,20,KHG Sungai Labai - Sungai Bantilkecil,Kalimantan Barat,Ketapang,1345
+KHG.61.04.03,PULAU KALIMANTAN,98,21,KHG Sungai Labai - Sungai Kualan,Kalimantan Barat,Ketapang,40808
+KHG.62.01.02,PULAU KALIMANTAN,99,21,KHG Sungai Lamandau - Sungai Arut,Kalimantan Tengah,Kotawaringin Barat,44045
+KHG.62.01-08.02,PULAU KALIMANTAN,100,21,KHG Sungai Lamandau - Sungai Jelai,Kalimantan Tengah,"Kotawaringin Barat, Sukamara",216493
+KHG.62.01.04,PULAU KALIMANTAN,101,21,KHG Sungai Lamandau - Sungai Kumai,Kalimantan Tengah,Kotawaringin Barat,90583
+KHG.62.01-09.01,PULAU KALIMANTAN,102,21,KHG Sungai Lamandau - Sungai Sematu,Kalimantan Tengah,"Kotawaringin Barat, Lamandau",4160
+KHG.64.03.01,PULAU KALIMANTAN,103,21,KHG Sungai Lenggo,Kalimantan Timur,Berau,1736
+KHG.61.04.15,PULAU KALIMANTAN,104,21,KHG Sungai Mading - Sungai Jelai,Kalimantan Barat,Ketapang,18282
+KHG.64.07.01,PULAU KALIMANTAN,105,21,KHG Sungai Mahakam - Sungai Kedangpahu,Kalimantan Timur,"Kutai Barat, Kutai Kartanegara",20418
+KHG.64.02.03,PULAU KALIMANTAN,106,21,KHG Sungai Mahakam - Sungai Sabintulung,Kalimantan Timur,Kutai Kartanegara,12905
+KHG.61.08.02,PULAU KALIMANTAN,107,21,KHG Sungai Mandor - Sungai Landak,Kalimantan Barat,Landak,8320
+KHG.61.08-12.01,PULAU KALIMANTAN,108,21,KHG Sungai Mandor - Sungai Temila,Kalimantan Barat,"Kuburaya, Landak",20765
+KHG.61.01.01,PULAU KALIMANTAN,109,21,KHG Sungai Mange - Sungai Dadau,Kalimantan Barat,Sambas,29506
+KHG.62.03.03,PULAU KALIMANTAN,110,21,KHG Sungai Mangkatip - Sungai Barito 1,Kalimantan Tengah,Kapuas,33225
+KHG.62.04.03,PULAU KALIMANTAN,111,21,KHG Sungai Mangkatip - Sungai Barito 2,Kalimantan Tengah,Barito Selatan,18470
+KHG.61.11.02,PULAU KALIMANTAN,112,21,KHG Sungai Matan - Sungai Rantaupanjang,Kalimantan Barat,Kayong Utara,28253
+KHG.61.11-04.02,PULAU KALIMANTAN,113,21,KHG Sungai Matan -Sungai Semandang,Kalimantan Barat,"Kayong Utara, Ketapang",19419
+KHG.61.05.19,PULAU KALIMANTAN,114,21,KHG Sungai Melawi,Kalimantan Barat,Sintang,559
+KHG.61.05-10.01,PULAU KALIMANTAN,115,21,KHG Sungai Melawi - Sungai Batunanta,Kalimantan Barat,"Melawi, Sintang",13447
+KHG.61.10.01,PULAU KALIMANTAN,116,21,KHG Sungai Melawi - Sungai Belimbing,Kalimantan Barat,Melawi,1454
+KHG.61.05.18,PULAU KALIMANTAN,117,21,KHG Sungai Melawi - Sungai Sirai,Kalimantan Barat,Sintang,2997
+KHG.61.10.02,PULAU KALIMANTAN,118,21,KHG Sungai Melawi - Sungai Takelak,Kalimantan Barat,Melawi,1359
+KHG.64.02-07.02,PULAU KALIMANTAN,119,21,KHG Sungai Melintang - Sungai Layah,Kalimantan Timur,"Kutai Barat, Kutai Kartanegara",43563
+KHG.61.02.01,PULAU KALIMANTAN,120,21,KHG Sungai Mempawah - Sungai Duri,Kalimantan Barat,Bengkayang,39028
+KHG.61.02-08.01,PULAU KALIMANTAN,121,21,KHG Sungai Mempawah - Sungai Peniti,Kalimantan Barat,"Landak, Pontianak",51045
+KHG.61.06.05,PULAU KALIMANTAN,122,21,KHG Sungai Mendalam - Sungai Sambus,Kalimantan Barat,Kapuas Hulu,2215
+KHG.65.04.03,PULAU KALIMANTAN,123,21,KHG Sungai Mentarang - Sungai Belayu,Kalimantan Utara,Tanatidung,32745
+KHG.65.04.02,PULAU KALIMANTAN,124,21,KHG Sungai Mentarang - Sungai Siduyun,Kalimantan Utara,Tanatidung,3353
+KHG.65.02-03-04.01,PULAU KALIMANTAN,125,22,KHG Sungai Mentarang- Sungai Sembakung,Kalimantan Utara,"Malinau, Nunukan, Tanatidung",160471
+KHG.62.02.03,PULAU KALIMANTAN,126,22,KHG Sungai Mentaya - Sungai Cempaga,Kalimantan Tengah,Kotawaringin Timur,53383
+KHG.62.02.02,PULAU KALIMANTAN,127,22,KHG Sungai Mentaya - Sungai Seranau Kiri,Kalimantan Tengah,Kotawaringin Timur,22159
+KHG.62.02.01,PULAU KALIMANTAN,128,22,KHG Sungai Mentaya - Sungai Tualan,Kalimantan Tengah,Kotawaringin Timur,11350
+KHG.61.09.08,PULAU KALIMANTAN,129,22,KHG Sungai Menterap - Sungai Kerabat,Kalimantan Barat,Sekadau,1433
+KHG.61.03.04,PULAU KALIMANTAN,130,22,KHG Sungai Mias - Sungai Perogang,Kalimantan Barat,Sanggau,3046
+KHG.61.05.14,PULAU KALIMANTAN,131,22,KHG Sungai Munguk - Sungai Melawi,Kalimantan Barat,Sintang,1464
+KHG.61.08.06,PULAU KALIMANTAN,132,22,KHG Sungai Nahaya - Sungai Landak,Kalimantan Barat,Landak,4294
+KHG.61.06.03,PULAU KALIMANTAN,133,22,KHG Sungai Nyabau - Sungai Palin,Kalimantan Barat,Kapuas Hulu,4113
+KHG.64.01.01,PULAU KALIMANTAN,134,22,KHG Sungai Pasir - Sungai Kuaro,Kalimantan Timur,Paser,5827
+KHG.61.04.08,PULAU KALIMANTAN,135,22,KHG Sungai Pawan - Sungai Kepulu,Kalimantan Barat,Ketapang,64538
+KHG.61.04.07,PULAU KALIMANTAN,136,22,KHG Sungai Pawan - Sungai Tolak,Kalimantan Barat,Ketapang,113800
+KHG.61.12.10,PULAU KALIMANTAN,137,22,KHG Sungai Penyangkat - Sungai Selat Maya,Kalimantan Barat,Kuburaya,93020
+KHG.62.07.03,PULAU KALIMANTAN,138,22,KHG Sungai Pukun - Sungai Kelua Besar,Kalimantan Tengah,Seruyan,72655
+KHG.62.02-07.02,PULAU KALIMANTAN,139,22,KHG Sungai Pukun - Sungai Mentaya,Kalimantan Tengah,"Kotawaringin Timur, Seruyan",303798
+KHG.62.02-07.01,PULAU KALIMANTAN,140,22,KHG Sungai Pukun - Sungai Seruyan,Kalimantan Tengah,"Kotawaringin Timur, Seruyan",97455
+KHG.61.12.01,PULAU KALIMANTAN,141,22,KHG Sungai Punggurbesar - Sungai Ambawang,Kalimantan Barat,Kuburaya,55443
+KHG.61.12-71.01,PULAU KALIMANTAN,142,22,KHG Sungai Pungurbesar - Sungai Kapuas,Kalimantan Barat,"Kota Pontianak, Kuburaya",101269
+KHG.61.03.09,PULAU KALIMANTAN,143,22,KHG Sungai Rambai - Sungai Meliau,Kalimantan Barat,Sanggau,705
+KHG.62.01.01,PULAU KALIMANTAN,144,22,KHG Sungai Rasaw - Sungai Lamandau,Kalimantan Tengah,Kotawaringin Barat,38012
+KHG.61.72-7.01,PULAU KALIMANTAN,145,22,KHG Sungai Raya - Sungai Pangnilang,Kalimantan Barat,"Bengkayang, Kota Singkawang",13032
+KHG.62.11-14.01,PULAU KALIMANTAN,146,22,KHG Sungai Rungan - Sungai Kahayan,Kalimantan Tengah,"Kota Palangkaraya, Pulangpisau",111156
+KHG.61.07.03,PULAU KALIMANTAN,147,22,KHG Sungai Sabuak - Sungai Landak,Kalimantan Barat,Landak,6190
+KHG.61.01.06,PULAU KALIMANTAN,148,22,KHG Sungai Samabas Kecil - Sungai Teberau,Kalimantan Barat,Sambas,8908
+KHG.61.01.09,PULAU KALIMANTAN,149,22,KHG Sungai Sambas Besar - Sungai Kumba,Kalimantan Barat,Sambas,9365
+KHG.61.01.05,PULAU KALIMANTAN,150,22,KHG Sungai Sambas Besar - Sungai Seiyung,Kalimantan Barat,Sambas,68300
+KHG.61.01.04,PULAU KALIMANTAN,151,22,KHG Sungai Sambas Besar - Sungai Sijang,Kalimantan Barat,Sambas,20766
+KHG.61.01.08,PULAU KALIMANTAN,152,23,KHG Sungai Sambas Kecil - Sungai Sambas Besar,Kalimantan Barat,Sambas,7446
+KHG.61.08.03,PULAU KALIMANTAN,153,23,KHG Sungai Sambih,Kalimantan Barat,Landak,1960
+KHG.61.08.04,PULAU KALIMANTAN,154,23,KHG Sungai Sambih - Sungai Landak,Kalimantan Barat,Landak,19166
+KHG.62.06.01,PULAU KALIMANTAN,155,23,KHG Sungai Sampang - Sungai Kala,Kalimantan Tengah,Katingan,31278
+KHG.65.03.02,PULAU KALIMANTAN,156,23,KHG Sungai Sebuku,Kalimantan Utara,Nunukan,14523
+KHG.65.03.01,PULAU KALIMANTAN,157,23,KHG Sungai Sebuku - Sungai Sembakung,Kalimantan Utara,Nunukan,117981
+KHG.65.03.04,PULAU KALIMANTAN,158,23,KHG Sungai Sedaung - Sungai Itai,Kalimantan Utara,Nunukan,2153
+KHG.61.01.10,PULAU KALIMANTAN,159,23,KHG Sungai Sedawar - Sungai Sambas Besar,Kalimantan Barat,Sambas,827
+KHG.61.09.06,PULAU KALIMANTAN,160,23,KHG Sungai Sekadau - Sungai Kenawan,Kalimantan Barat,Sekadau,2030
+KHG.61.09.07,PULAU KALIMANTAN,161,23,KHG Sungai Sekadau - Sungai Menterap,Kalimantan Barat,Sekadau,3515
+KHG.61.05.05,PULAU KALIMANTAN,162,23,KHG Sungai Sekatau - Sungai Kebangak,Kalimantan Barat,Sintang,1009
+KHG.61.07.01,PULAU KALIMANTAN,163,23,KHG Sungai Selakau,Kalimantan Barat,Bengkayang,1442
+KHG.61.01.11,PULAU KALIMANTAN,164,23,KHG Sungai Selakau - Sungai Sebangkau,Kalimantan Barat,Sambas,13065
+KHG.61.11.01,PULAU KALIMANTAN,165,23,KHG Sungai Selat Maya - Sungai Aping,Kalimantan Barat,Kayong Utara,100232
+KHG.61.08.05,PULAU KALIMANTAN,166,23,KHG Sungai Sengah - Sungai Landak,Kalimantan Barat,Landak,8320
+KHG.61.01-07.01,PULAU KALIMANTAN,167,23,KHG Sungai Sentinok - Sungai Kumba,Kalimantan Barat,"Bengkayang, Sambas",15126
+KHG.65.04.01,PULAU KALIMANTAN,168,23,KHG Sungai Seputuk - Sungai Rian,Kalimantan Utara,Tanatidung,2134
+KHG.62.07.02,PULAU KALIMANTAN,169,23,KHG Sungai Seruyan - Sungai Kelua Besar,Kalimantan Tengah,Seruyan,57479
+KHG.62.07.01,PULAU KALIMANTAN,170,23,KHG Sungai Seruyan - Sungai Sembuluh,Kalimantan Tengah,Seruyan,42247
+KHG.61.11.03,PULAU KALIMANTAN,171,23,KHG Sungai Siduk - Sungai Rantaupanjang,Kalimantan Barat,Kayong Utara,28493
+KHG.61.01.03,PULAU KALIMANTAN,172,23,KHG Sungai Sijang - Sungai Bantanan,Kalimantan Barat,Sambas,7114
+KHG.65.03.03,PULAU KALIMANTAN,173,23,KHG Sungai Sumbal - Sungai Samadik,Kalimantan Utara,Nunukan,3767
+KHG.61.06.11,PULAU KALIMANTAN,174,23,KHG Sungai Suruk - Sungai Mentebah,Kalimantan Barat,Kapuas Hulu,5742
+KHG.61.05.13,PULAU KALIMANTAN,175,23,KHG Sungai Talungai - Sungai Emparayau,Kalimantan Barat,Sintang,5507
+KHG.64.03.02,PULAU KALIMANTAN,176,23,KHG Sungai Tanbuayabuaya - Sungai Domaring,Kalimantan Timur,Berau,1260
+KHG.61.04.10,PULAU KALIMANTAN,177,23,KHG Sungai Tapah - Sungai Pesaguan,Kalimantan Barat,Ketapang,19755
+KHG.61.03.02,PULAU KALIMANTAN,178,23,KHG Sungai Tayan,Kalimantan Barat,Sanggau,2654
+KHG.61.03.03,PULAU KALIMANTAN,179,24,KHG Sungai Tayan - Sungai Muna,Kalimantan Barat,Sanggau,3799
+KHG.61.01.07,PULAU KALIMANTAN,180,24,KHG Sungai Teberau - Sungai Sambas Kecil,Kalimantan Barat,Sambas,7538
+KHG.61.08.01,PULAU KALIMANTAN,181,24,KHG Sungai Temila - Sungai Mandor,Kalimantan Barat,Landak,13518
+KHG.61.05.16,PULAU KALIMANTAN,182,24,KHG Sungai Tempunak,Kalimantan Barat,Sintang,6334
+KHG.61.05.17,PULAU KALIMANTAN,183,24,KHG Sungai Tempunak - Sungai Penjernang,Kalimantan Barat,Sintang,5587
+KHG.61.04.11,PULAU KALIMANTAN,184,24,KHG Sungai Tengar - Sungai Tapah,Kalimantan Barat,Ketapang,39734
+KHG.61.12.07,PULAU KALIMANTAN,185,24,KHG Sungai Terentang - Sungai Kapuas,Kalimantan Barat,Kuburaya,186167
+KHG.65.04.08,PULAU KALIMANTAN,186,24,KHG Sungai Terusan teladan,Kalimantan Utara,Tanatidung,934
+KHG.62.03.04,PULAU KALIMANTAN,187,24,KHG Sungai Terusanraya - Sungai Kapuasmurung,Kalimantan Tengah,Kapuas,4248
+KHG.61.04.06,PULAU KALIMANTAN,188,24,KHG Sungai Tolak - Sungai Siduk,Kalimantan Barat,Ketapang,28008
+KHG.62-63.01,PULAU KALIMANTAN,189,24,KHG Sungai Utar - Sungai Serapat,"Kalimantan Selatan, Kalimantan Tengah","Hulusungai Utara, Tabalong, Barito Selatan, Barito Timur",107737
+KHG.61.08-12-3.1,PULAU KALIMANTAN,190,24,KHG Sungai Yebour - Sungai Landak,Kalimantan Barat,"Kuburaya, Landak, Sanggau",33779
+KHG.72.06.01,PULAU SULAWESI,1,24,KHG Sungai Laa - Sungai Petasia,Sulawesi Tengah,Morowali,12369
+KHG.72.10-76.01.002,PULAU SULAWESI,2,24,KHG Sungai Pasang Kayu - Sungai Bambalamotu,"Sulawesi Barat, Sulawesi Tengah","Mamuju Utara, Sigi",28534
+KHG.72.10-76.01.001,PULAU SULAWESI,3,24,KHG Sungai Salo Lariang - Sungai Pasang Kayu,"Sulawesi Barat, Sulawesi Tengah","Mamuju Utara, Sigi",19265
+KHG.91.25.04,PULAU PAPUA,1,24,KHG Danau Lere,Papua,Puncak,1426
+KHG.92.04.38,PULAU PAPUA,2,24,KHG Kla Sayal - Sungai Kla Kaibus,Papua Barat,Sorong Selatan,3104
+KHG.92.06.65,PULAU PAPUA,3,24,KHG Pulau Kora-Kora,Papua Barat,Telukbintuni,1487
+KHG.91.04.08,PULAU PAPUA,4,24,KHG Pulau Rutomo,Papua,Nabire,1594
+KHG.92.06.59,PULAU PAPUA,5,24,KHG Pulau Sungai Raahiba - Sungai Ubuara,Papua Barat,Telukbintuni,2475
+KHG.92.05.03,PULAU PAPUA,6,24,KHG Pulau Warir I,Papua Barat,Rajaampat,237
+KHG.92.05.02,PULAU PAPUA,7,24,KHG Pulau Warir II,Papua Barat,Rajaampat,115
+KHG.92.05.01,PULAU PAPUA,8,25,KHG Pulau Warir III,Papua Barat,Rajaampat,353
+KHG.91.09.32,PULAU PAPUA,9,25,KHG Sungai Aenomon Gong - Sungai Atimet Enta,Papua,Mimika,3479
+KHG.91.09.31,PULAU PAPUA,10,25,KHG Sungai Aenomon Gong - Sungai Olaronomon,Papua,Mimika,12233
+KHG.91.08.01,PULAU PAPUA,11,25,KHG Sungai Aga One - Sungai Koabeu One,Papua,Paniai,7701
+KHG.91.20.04,PULAU PAPUA,12,25,KHG Sungai Aidui - Sungai Orakeb,Papua,Mamberamoraya,3630
+KHG.91.09.19,PULAU PAPUA,13,25,KHG Sungai Aikwa - Sungai Minajerwi,Papua,Mimika,7359
+KHG.91.04.03,PULAU PAPUA,14,25,KHG Sungai Ajari - Sungai Kubai,Papua,Nabire,1494
+KHG.91.09.33,PULAU PAPUA,15,25,KHG Sungai Akimuga - Sungai Seruwinomon,Papua,Mimika,7156
+KHG.91.01.04,PULAU PAPUA,16,25,KHG Sungai Aleki Eli - Sungai Aleki Mafe,Papua,Merauke,2969
+KHG.91.01.06,PULAU PAPUA,17,25,KHG Sungai Aleki Male - Sungai Ifuleki Bian,Papua,Merauke,4011
+KHG.91.01.08,PULAU PAPUA,18,25,KHG Sungai Alekikos Bakian - Sungai Ifuleki Bian,Papua,Merauke,2133
+KHG.91.16.16,PULAU PAPUA,19,25,KHG Sungai Alekikos Kauh - Sungai Ifuleki Mati,Papua,Boven Digoel,17245
+KHG.91.16.08,PULAU PAPUA,20,25,KHG Sungai Alekikosi Digoel - Sungai Udi Lebah,Papua,Boven Digoel,54085
+KHG.91.16-01.01,PULAU PAPUA,21,25,KHG Sungai Alekikosi Digoel - Sungai Aleki Seme,Papua,"Boven Digoel, Merauke",25521
+KHG.91.16.14,PULAU PAPUA,22,25,KHG Sungai Alekikosi Digoel - Sungai Alekikosi Bagon,Papua,Boven Digoel,9271
+KHG.91.16.13,PULAU PAPUA,23,25,KHG Sungai Alekikosi Digoel - Sungai Alekikosi Kauh,Papua,Boven Digoel,72515
+KHG.91.16.12,PULAU PAPUA,24,25,KHG Sungai Alekikosi Kaswari - Sungai Alekikosi Digoel,Papua,Boven Digoel,2497
+KHG.91.16.09,PULAU PAPUA,25,25,KHG Sungai Alekikosi Sia - Sungai Alekikosi Digoel,Papua,Boven Digoel,19861
+KHG.91.01.05,PULAU PAPUA,26,25,KHG Sungai Alekikosi Soap - Sungai Alekikosi Seghab,Papua,Merauke,6374
+KHG.91.16.10,PULAU PAPUA,27,25,KHG Sungai Alekikosi Yang - Sungai Alekikosi Digoel,Papua,Boven Digoel,50608
+KHG.91.16.11,PULAU PAPUA,28,25,KHG Sungai Alekokosi Kaswari - Sungai Alekikosi Dawe,Papua,Boven Digoel,730
+KHG.91.01.01,PULAU PAPUA,29,25,KHG Sungai Aliki Alo - Sungai Aliki Mauwk Ere,Papua,Merauke,2513
+KHG.92.06.31,PULAU PAPUA,30,25,KHG Sungai Anakasi - Sungai Muaraanakasi,Papua Barat,Telukbintuni,5150
+KHG.91.20.16,PULAU PAPUA,31,25,KHG Sungai Andaiwaren - Sungai Motosi,Papua,Mamberamoraya,17010
+KHG.91.28.01,PULAU PAPUA,32,25,KHG Sungai Aparuka Enta - Sungai Dita One,Papua,Deiyai,4706
+KHG.91.10.02,PULAU PAPUA,33,25,KHG Sungai Apauwar - Sungai Tramuas,Papua,Sarmi,7896
+KHG.91.10.03,PULAU PAPUA,34,25,KHG Sungai Apauwar - Sungai Willy,Papua,Sarmi,3476
+KHG.92.02.01,PULAU PAPUA,35,26,KHG Sungai Api - Sungai Asiti,Papua Barat,Manokwari,3481
+KHG.92.06.43,PULAU PAPUA,36,26,KHG Sungai Armina - Sungai Wagura,Papua Barat,Telukbintuni,5770
+KHG.92.06.64,PULAU PAPUA,37,26,KHG Sungai Aroba - Sungai Roarifa,Papua Barat,Telukbintuni,4381
+KHG.91.09.30,PULAU PAPUA,38,26,KHG Sungai Atimet Enta - Sungai Amokono,Papua,Mimika,10002
+KHG.91.09.12,PULAU PAPUA,39,26,KHG Sungai Atuka - Sungai Kamora I,Papua,Mimika,4511
+KHG.91.15.03,PULAU PAPUA,40,26,KHG Sungai Auwewa - Sungai Owa,Papua,Waropen,5271
+KHG.92.06.18,PULAU PAPUA,41,26,KHG Sungai Awisio - Sungai Muturi,Papua Barat,Telukbintuni,4222
+KHG.92.08.29,PULAU PAPUA,42,26,KHG Sungai Badara - Sungai Aiyamada,Papua Barat,Kaimana,3338
+KHG.92.04.39,PULAU PAPUA,43,26,KHG Sungai Bakoi,Papua Barat,Sorong Selatan,468
+KHG.92.04.14,PULAU PAPUA,44,26,KHG Sungai Bakoi - Sungai Bakop,Papua Barat,Sorong Selatan,5282
+KHG.92.04.16,PULAU PAPUA,45,26,KHG Sungai Bakop - Sungai Keyen,Papua Barat,Sorong Selatan,1050
+KHG.92.08.21,PULAU PAPUA,46,26,KHG Sungai Barari - Sungai Gariyoga,Papua Barat,Kaimana,375
+KHG.92.08.22,PULAU PAPUA,47,26,KHG Sungai Barari - Sungai Kali Sihuna,Papua Barat,Kaimana,1321
+KHG.91.22-13.01,PULAU PAPUA,48,26,KHG Sungai Benewa - Sungai Mamberamo,Papua,"Yahukimo, Yalimo",18029
+KHG.92.06.39,PULAU PAPUA,49,26,KHG Sungai Berparar - Sungai Naramasa,Papua Barat,Telukbintuni,14723
+KHG.92.01.20,PULAU PAPUA,50,26,KHG Sungai Betur - Sungai Jari,Papua Barat,Sorong,4143
+KHG.92.08.18,PULAU PAPUA,51,26,KHG Sungai Bianoga - Sungai Watro,Papua Barat,Kaimana,10764
+KHG.92.06-08.01,PULAU PAPUA,52,26,KHG Sungai Bianoga - Sungai Wirfatn,Papua Barat,"Kaimana, Telukbintuni",3993
+KHG.91.20.33,PULAU PAPUA,53,26,KHG Sungai Biate - Sungai Dijai,Papua,Mamberamoraya,28604
+KHG.91.10.11,PULAU PAPUA,54,26,KHG Sungai Bier - Sungai Kwalitar,Papua,Sarmi,23794
+KHG.92.06.09,PULAU PAPUA,55,26,KHG Sungai Bintuni - Sungai Syakarer,Papua Barat,Telukbintuni,3071
+KHG.91.10.13,PULAU PAPUA,56,26,KHG Sungai Biri - Sungai Kali Berpa,Papua,Sarmi,14638
+KHG.91.20.26,PULAU PAPUA,57,26,KHG Sungai Biri - Sungai Rouffaer,Papua,Mamberamoraya,7384
+KHG.91.01.02,PULAU PAPUA,58,26,KHG Sungai Bob Buraka - Sungai Aleki Buraka,Papua,Merauke,2723
+KHG.91.01.03,PULAU PAPUA,59,26,KHG Sungai Bobburaka - Sungai Aliki Anaw,Papua,Merauke,5297
+KHG.92.04.22,PULAU PAPUA,60,26,KHG Sungai Bogoremo,Papua Barat,Sorong Selatan,253
+KHG.92.04.23,PULAU PAPUA,61,26,KHG Sungai Bogoremo - Sungai Sedai,Papua Barat,Sorong Selatan,2201
+KHG.92.03.04,PULAU PAPUA,62,27,KHG Sungai Bomberai,Papua Barat,Fak-fak,1050
+KHG.92.03.05,PULAU PAPUA,63,27,KHG Sungai Bomberai - Sungai Otoweri,Papua Barat,Fak-fak,11053
+KHG.92.03.03,PULAU PAPUA,64,27,KHG Sungai Budidi - Sungai Bomberai,Papua Barat,Fak-fak,35534
+KHG.91.04.06,PULAU PAPUA,65,27,KHG Sungai Bumi - Sungai Pepeya,Papua,Nabire,7872
+KHG.91.17-16.02,PULAU PAPUA,66,27,KHG Sungai Buru Bagaram,Papua,"Boven Digoel, Mappi",3009
+KHG.91.16.06,PULAU PAPUA,67,27,KHG Sungai Buru Bayeni - Sungai Buru Mappi,Papua,Boven Digoel,3523
+KHG.91.18-17.01,PULAU PAPUA,68,27,KHG Sungai Buru Mappi - Sungai Buru Obaa,Papua,"Asmat, Mappi",402643
+KHG.91.16.03,PULAU PAPUA,69,27,KHG Sungai Buru Mappi - Sungai Mangguno,Papua,Boven Digoel,3000
+KHG.91.17.06,PULAU PAPUA,70,27,KHG Sungai Buru Mappi - Sungai Siakha Homo,Papua,Mappi,11209
+KHG.91.16.05,PULAU PAPUA,71,27,KHG Sungai Buru Mappi - Sungai Udi Afu,Papua,Boven Digoel,5379
+KHG.91.17.07,PULAU PAPUA,72,27,KHG Sungai Buru Mappi I,Papua,Mappi,14526
+KHG.91.16.01,PULAU PAPUA,73,27,KHG Sungai Buru Mappi II,Papua,Boven Digoel,186
+KHG.91.17-16.03,PULAU PAPUA,74,27,KHG Sungai Buru Miyaman - Sungai Buru Mappi,Papua,"Boven Digoel, Mappi",28981
+KHG.91.17.04,PULAU PAPUA,75,27,KHG Sungai Buru Obaa - Sungai Buru Mappi,Papua,Mappi,98805
+KHG.92.08.08,PULAU PAPUA,76,27,KHG Sungai Buya - SUngai Furakara,Papua Barat,Kaimana,1797
+KHG.92.08.32,PULAU PAPUA,77,27,KHG Sungai Cabang Arafoi - Sungai Uniswala,Papua Barat,Kaimana,1478
+KHG.92.04.33,PULAU PAPUA,78,27,KHG Sungai Datur Sungai Metamani,Papua Barat,Sorong Selatan,1422
+KHG.91.15.02,PULAU PAPUA,79,27,KHG Sungai Dayewa - Sungai Owa,Papua,Waropen,1938
+KHG.91.26.02,PULAU PAPUA,80,27,KHG Sungai Degey One - Sungai Pege,Papua,Dogiyai,8237
+KHG.91.20-10.01,PULAU PAPUA,81,27,KHG Sungai Dijai - Sungai Jaro,Papua,"Mamberamoraya, Sarmi",88687
+KHG.91.25.03,PULAU PAPUA,82,27,KHG Sungai Dinu - Sungai Palu,Papua,Puncak,1243
+KHG.91.28.02,PULAU PAPUA,83,27,KHG Sungai Dita One - Kopai One,Papua,Deiyai,4105
+KHG.92.01.13,PULAU PAPUA,84,27,KHG Sungai Dug - Sungai Kla Mer,Papua Barat,Sorong,938
+KHG.92.01.44,PULAU PAPUA,85,27,KHG Sungai Duk - Sungai Sepa Klabra,Papua Barat,Sorong,1145
+KHG.91.20.11,PULAU PAPUA,86,27,KHG Sungai Efra - Sungai Karsid,Papua,Mamberamoraya,628
+KHG.91.08.02,PULAU PAPUA,87,27,KHG Sungai Eka One - Sungai Ega One,Papua,Paniai,3850
+KHG.91.08.03,PULAU PAPUA,88,27,KHG Sungai Enaro One - Sungai Aga One,Papua,Paniai,4244
+KHG.91.15.05,PULAU PAPUA,89,28,KHG Sungai Epawa - Sungai Binataboa,Papua,Waropen,4025
+KHG.92.08.01,PULAU PAPUA,90,28,KHG SUngai Ewas,Papua Barat,Kaimana,88
+KHG.91.20-07-14.01,PULAU PAPUA,91,28,KHG Sungai Fakuja - Sungai Foli,Papua,"Mamberamoraya, Puncak Jaya, Tolikara",116478
+KHG.91.20-14.01,PULAU PAPUA,92,28,KHG Sungai Fakujo - Sungai Mamberamo,Papua,"Mamberamoraya, Tolikara",84045
+KHG.92.08.03,PULAU PAPUA,93,28,KHG Sungai Feria - Sungai Noma,Papua Barat,Kaimana,1631
+KHG.92.08.02,PULAU PAPUA,94,28,KHG Sungai Feria - Sungai Yaga,Papua Barat,Kaimana,2455
+KHG.91.10.06,PULAU PAPUA,95,28,KHG Sungai Ferkame - Sunagi Orei,Papua,Sarmi,13241
+KHG.92.01.48,PULAU PAPUA,96,28,KHG Sungai Fesia,Papua Barat,Sorong,186
+KHG.92.01.47,PULAU PAPUA,97,28,KHG Sungai Fesia Kecil,Papua Barat,Sorong,169
+KHG.91.20.09,PULAU PAPUA,98,28,KHG Sungai Fira - Sungai Tirasu,Papua,Mamberamoraya,355
+KHG.91.10.09,PULAU PAPUA,99,28,KHG Sungai Foen - Sungai Tor,Papua,Sarmi,7137
+KHG.91.15.08,PULAU PAPUA,100,28,KHG Sungai Gaigar - Sungai Maranarauni,Papua,Waropen,2970
+KHG.92.08.10,PULAU PAPUA,101,28,KHG Sungai Garawa - Sungai Buruway,Papua Barat,Kaimana,6030
+KHG.92.08.28,PULAU PAPUA,102,28,KHG Sungai Gebiasi - Sungai Wermura,Papua Barat,Kaimana,4057
+KHG.92.01.07,PULAU PAPUA,103,28,KHG Sungai Geno - Sungai Fesia Kecil,Papua Barat,Sorong,7602
+KHG.91.20.07,PULAU PAPUA,104,28,KHG Sungai Gesa - Sungai Efra,Papua,Mamberamoraya,2777
+KHG.91.20.06,PULAU PAPUA,105,28,KHG Sungai Gesa - Sungai Inggodi,Papua,Mamberamoraya,5075
+KHG.91.20.14,PULAU PAPUA,106,28,KHG Sungai Gesa - Sungai Kirema,Papua,Mamberamoraya,4461
+KHG.91.20.23,PULAU PAPUA,107,28,KHG Sungai Gesa - Sungai Warawuri I,Papua,Mamberamoraya,3646
+KHG.91.20.22,PULAU PAPUA,108,28,KHG Sungai Gesa - Sungai Warawuri II,Papua,Mamberamoraya,2393
+KHG.92.08.11,PULAU PAPUA,109,28,KHG Sungai Gobo - Sungai Garawa,Papua Barat,Kaimana,28051
+KHG.92.08.12,PULAU PAPUA,110,28,KHG Sungai Gobo - Sungai Wegera,Papua Barat,Kaimana,2950
+KHG.91.03.01,PULAU PAPUA,111,28,KHG Sungai Grime - Sungai Nanggutu,Papua,Jayapura,1738
+KHG.91.22.02,PULAU PAPUA,112,28,KHG Sungai Hablisfura - Sungai Benewa,Papua,Yalimo,20809
+KHG.92.06.52,PULAU PAPUA,113,28,KHG Sungai Husori - Sungai Mumusi Satu,Papua Barat,Telukbintuni,1094
+KHG.91.01.07,PULAU PAPUA,114,28,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,Papua,Merauke,6950
+KHG.91.01.16,PULAU PAPUA,115,29,KHG Sungai Ifuleki Berapto - Sungai Ifuleki Obat,Papua,Merauke,1843
+KHG.91.01.09,PULAU PAPUA,116,29,KHG Sungai Ifuleki Bian - Sungai Dalik,Papua,Merauke,1421
+KHG.91.01.11,PULAU PAPUA,117,29,KHG Sungai Ifuleki Kumbe - Sungai Lekiage Ser,Papua,Merauke,2462
+KHG.91.01.12,PULAU PAPUA,118,29,KHG Sungai Ifuleki Kumbe - Sungai Lekiagi,Papua,Merauke,52698
+KHG.91.01.15,PULAU PAPUA,119,29,KHG Sungai Ifuleki Obathrow - Sungai Ifuleki Berapto,Papua,Merauke,3021
+KHG.91.01.13,PULAU PAPUA,120,29,KHG Sungai Ifuleki Onam - Sungai Fly,Papua,Merauke,11890
+KHG.91.01.14,PULAU PAPUA,121,29,KHG Sungai Ifuleki Onam - Sungai Lekiage Wagini,Papua,Merauke,268
+KHG.91.09.08,PULAU PAPUA,122,29,KHG Sungai Igwa - Sungai Kapare,Papua,Mimika,25067
+KHG.91.09.06,PULAU PAPUA,123,29,KHG Sungai Igwa Enta - Sungai Paripi Enta,Papua,Mimika,4240
+KHG.91.09.22,PULAU PAPUA,124,29,KHG Sungai Inabukwa - Sungai Otokwa,Papua,Mimika,23489
+KHG.91.20.05,PULAU PAPUA,125,29,KHG Sungai Inggodi - Sungai Pawai,Papua,Mamberamoraya,8334
+KHG.92.08.14,PULAU PAPUA,126,29,KHG Sungai Irimawa - Sungai Wawara,Papua Barat,Kaimana,2723
+KHG.92.01.38,PULAU PAPUA,127,29,KHG Sungai Isai - Sungai Beraur,Papua Barat,Sorong,2091
+KHG.91.16-01.02,PULAU PAPUA,128,29,KHG Sungai Ivo - Sungai Fly,Papua,"Boven Digoel, Merauke",5838
+KHG.91.03.03,PULAU PAPUA,129,29,KHG Sungai Jagua - Sungai Nakambi,Papua,Jayapura,37318
+KHG.91.17.08,PULAU PAPUA,130,29,KHG Sungai Jaman Kawarga - Sungai Samaleki Digul,Papua,Mappi,117827
+KHG.91.10.17,PULAU PAPUA,131,29,KHG Sungai Jaro - Sungai Jagua,Papua,Sarmi,96909
+KHG.91.17.02,PULAU PAPUA,132,29,KHG Sungai Jo Dairam,Papua,Mappi,39770
+KHG.91.18.31,PULAU PAPUA,133,29,KHG Sungai Jo Vriendschaps - Sungai Jo Siret,Papua,Asmat,134682
+KHG.91.18.32,PULAU PAPUA,134,29,KHG Sungai Ju Siret- Sungai Wade Assue,Papua,Asmat,37962
+KHG.91.18.23,PULAU PAPUA,135,29,KHG Sungai Juk Afe - Sungai Juk Aswet,Papua,Asmat,8024
+KHG.91.18.25,PULAU PAPUA,136,29,KHG Sungai Juk Asor - Juk Epas,Papua,Asmat,2716
+KHG.91.18.13,PULAU PAPUA,137,29,KHG Sungai Juk Bafut - Sungai Juk Yisun,Papua,Asmat,1687
+KHG.91.18.17,PULAU PAPUA,138,29,KHG Sungai Juk Binijau - Sungai Juk Ba,Papua,Asmat,9568
+KHG.91.18.10,PULAU PAPUA,139,29,KHG Sungai Juk Jats - Sungai Juk Bafut,Papua,Asmat,22700
+KHG.91.18.08,PULAU PAPUA,140,29,KHG Sungai Juk Jats - Sungai Juk Momats,Papua,Asmat,8879
+KHG.91.18.29,PULAU PAPUA,141,29,KHG Sungai Juk Katarina - Sungai Jo Vriendschaps,Papua,Asmat,33193
+KHG.91.18.24,PULAU PAPUA,142,30,KHG Sungai Juk Katarina - Sungai Juk Asor,Papua,Asmat,7357
+KHG.91.18.09,PULAU PAPUA,143,30,KHG Sungai Juk Mamats - Juk Jats,Papua,Asmat,21953
+KHG.91.18.12,PULAU PAPUA,144,30,KHG Sungai Juk Mawar - Sungai Juk Fai,Papua,Asmat,6053
+KHG.91.18.18,PULAU PAPUA,145,30,KHG Sungai Juk Pai - Sungai Juk Bininjai,Papua,Asmat,7578
+KHG.91.18.19,PULAU PAPUA,146,30,KHG Sungai Juk Pai - Sungai Juk Senajuh,Papua,Asmat,15290
+KHG.91.18.03,PULAU PAPUA,147,30,KHG Sungai Juk Patatmini,Papua,Asmat,224
+KHG.91.18.05,PULAU PAPUA,148,30,KHG Sungai Juk Patatmini - Sungai Juk Orotok,Papua,Asmat,812
+KHG.91.18.15,PULAU PAPUA,149,30,KHG Sungai Juk Pek - Sungai Juk Aswet,Papua,Asmat,4763
+KHG.91.18.07,PULAU PAPUA,150,30,KHG Sungai Juk Poet - Sungai Blumen,Papua,Asmat,7056
+KHG.91.18.06,PULAU PAPUA,151,30,KHG Sungai Juk Poet - Sungai Juk Jats,Papua,Asmat,12371
+KHG.91.18.16,PULAU PAPUA,152,30,KHG Sungai Juk Pomats - Sungai Juk Binijau,Papua,Asmat,3823
+KHG.91.18.27,PULAU PAPUA,153,30,KHG Sungai Juk Serep - Sungai Juk Semen,Papua,Asmat,22813
+KHG.91.18.30,PULAU PAPUA,154,30,KHG Sungai Juk Tere - Sungai Juk Katarina,Papua,Asmat,6357
+KHG.91.18.28,PULAU PAPUA,155,30,KHG Sungai Juk Tojoh - Sungai Jo Vriendschaps,Papua,Asmat,6148
+KHG.91.18.14,PULAU PAPUA,156,30,KHG Sungai Juk Unir - Sungai Juk Aswet,Papua,Asmat,2818
+KHG.91.18.20,PULAU PAPUA,157,30,KHG Sungai Juk Unir/Kali Wosak - Sungai Utumbuwe,Papua,Asmat,17049
+KHG.91.18.02,PULAU PAPUA,158,30,KHG Sungai Juk Wab - Sungai Jub Orotok,Papua,Asmat,4277
+KHG.91.18.04,PULAU PAPUA,159,30,KHG Sungai Juk Wab - Sungai Juk Patatmini,Papua,Asmat,396
+KHG.91.18.26,PULAU PAPUA,160,30,KHG Sungai Juk Yapi - Sungai Juk Katarina,Papua,Asmat,6674
+KHG.91.20.32,PULAU PAPUA,161,30,KHG Sungai Kabre Lama - Sungai Biate,Papua,"Mamberamoraya, Tolikara",37469
+KHG.91.20.08,PULAU PAPUA,162,30,KHG Sungai Kaferi - Sungai Fira,Papua,Mamberamoraya,366
+KHG.92.04.08,PULAU PAPUA,163,30,KHG Sungai Kaibus - Sungai Bariat,Papua Barat,Sorong Selatan,3605
+KHG.92.04.19,PULAU PAPUA,164,30,KHG Sungai Kaibus - Sungai Koper,Papua Barat,Sorong Selatan,21343
+KHG.92.04.13,PULAU PAPUA,165,30,KHG Sungai Kaibus - Sungai Semor,Papua Barat,Sorong Selatan,10674
+KHG.92.04.10,PULAU PAPUA,166,30,KHG Sungai Kaibus - Sungai Warongge,Papua Barat,Sorong Selatan,1707
+KHG.92.04.32,PULAU PAPUA,167,30,KHG Sungai Kais - Sungai Datur,Papua Barat,Sorong Selatan,2188
+KHG.92.04.34,PULAU PAPUA,168,30,KHG Sungai Kais - Sungai Metamani,Papua Barat,Sorong Selatan,58602
+KHG.92.06.46,PULAU PAPUA,169,31,KHG Sungai Kaitaro - Sungai Suga,Papua Barat,Telukbintuni,9781
+KHG.92.06.44,PULAU PAPUA,170,31,KHG Sungai Kaitaro - Sungai Wagura,Papua Barat,Telukbintuni,9054
+KHG.92.06.47,PULAU PAPUA,171,31,KHG Sungai Kaitera - Sungai Suga,Papua Barat,Telukbintuni,3296
+KHG.92.01.27,PULAU PAPUA,172,31,KHG Sungai Kalamulung- Sungai Sofok,Papua Barat,Sorong,3147
+KHG.91.10.14,PULAU PAPUA,173,31,KHG Sungai Kali Dormas - Sungai Wiruai,Papua,Sarmi,1878
+KHG.92.08.23,PULAU PAPUA,174,31,KHG Sungai Kali Waermura - Sungai Sawaruktu,Papua Barat,Kaimana,1892
+KHG.91.26.01,PULAU PAPUA,175,31,KHG Sungai Kaliten - Sungai Wangi One,Papua,Dogiyai,2936
+KHG.91.09.21,PULAU PAPUA,176,31,KHG Sungai Kamanita - Sungai Inabukwa,Papua,Mimika,8521
+KHG.91.22.01,PULAU PAPUA,177,31,KHG Sungai Kamika - Sungai Hablisfura,Papua,Yalimo,21012
+KHG.91.09.13,PULAU PAPUA,178,31,KHG Sungai Kamora - Sungai Murepiga,Papua,Mimika,16088
+KHG.92.04-06.02,PULAU PAPUA,179,31,KHG Sungai Kamundan - Sungai Weriagar,Papua Barat,"Sorong Selatan, Telukbintuni",97714
+KHG.91.09.11,PULAU PAPUA,180,31,KHG Sungai Kamura - Sungai Atuka,Papua,Mimika,41906
+KHG.91.16.17,PULAU PAPUA,181,31,KHG Sungai Kanggu - Sungai Fly,Papua,Boven Digoel,5882
+KHG.91.09.09,PULAU PAPUA,182,31,KHG Sungai Kapare - Sungai Mimika,Papua,Mimika,12010
+KHG.91.20.10,PULAU PAPUA,183,31,KHG Sungai Karsid - Sungai Efra,Papua,Mamberamoraya,490
+KHG.92.01.19,PULAU PAPUA,184,31,KHG Sungai Kaseremao - Sungai Kla Betur,Papua Barat,Sorong,1526
+KHG.92.06.57,PULAU PAPUA,185,31,KHG Sungai Kasira - Sungai Saka,Papua Barat,Telukbintuni,4798
+KHG.92.06.56,PULAU PAPUA,186,31,KHG Sungai Kasira - Sungai Tifa,Papua Barat,Telukbintuni,5478
+KHG.92.04.37,PULAU PAPUA,187,31,KHG Sungai Kasuwari - Sungai Kenaburi,Papua Barat,Sorong Selatan,9768
+KHG.91.09.16,PULAU PAPUA,188,31,KHG Sungai Kauga - Sungai Wania,Papua,Mimika,5547
+KHG.92.01.22,PULAU PAPUA,189,31,KHG Sungai Kawor Besar - Sungai Serumuk,Papua Barat,Sorong,2528
+KHG.91.17-16.01,PULAU PAPUA,190,31,KHG Sungai Keeme - Sungai Bayeni,Papua,"Boven Digoel, Mappi",27331
+KHG.91.11.05,PULAU PAPUA,191,31,KHG Sungai Ken - Sungai Mafi,Papua,Keerom,3119
+KHG.92.04.17,PULAU PAPUA,192,31,KHG Sungai Keyen - Sungai Waigo,Papua Barat,Sorong Selatan,6672
+KHG.92.04.15,PULAU PAPUA,193,31,KHG Sungai Keyen - Sungai Waren,Papua Barat,Sorong Selatan,4446
+KHG.92.06.26,PULAU PAPUA,194,31,KHG Sungai Kirasai - Sungai Samberi,Papua Barat,Telukbintuni,3052
+KHG.92.01.43,PULAU PAPUA,195,31,KHG Sungai Kla Bak - Sungai Kla Duk,Papua Barat,Sorong,5382
+KHG.92.01.30,PULAU PAPUA,196,32,KHG Sungai Kla Beraur - Sungai Kla Seremuk,Papua Barat,Sorong,1452
+KHG.92.01.34,PULAU PAPUA,197,32,KHG Sungai Kla Beraur - Sungai Kla Wan,Papua Barat,Sorong,8638
+KHG.92.01.31,PULAU PAPUA,198,32,KHG Sungai Kla Beraur - Sungai Sepa Beraur,Papua Barat,Sorong,3997
+KHG.92.01.21,PULAU PAPUA,199,32,KHG Sungai Kla Jarin - Kla Seremuk,Papua Barat,Sorong,1160
+KHG.92.01.23,PULAU PAPUA,200,32,KHG Sungai Kla Jarin - Sungai Kawor Besar,Papua Barat,Sorong,5397
+KHG.92.01.01,PULAU PAPUA,201,32,KHG Sungai Kla Kaibun,Papua Barat,Sorong,1060
+KHG.92.04.05,PULAU PAPUA,202,32,KHG Sungai Kla Makambar - Sungai Kla Serai,Papua Barat,Sorong Selatan,2398
+KHG.92.01.04,PULAU PAPUA,203,32,KHG Sungai Kla Marine - Sungai Kasol,Papua Barat,Sorong,2217
+KHG.92.01.03,PULAU PAPUA,204,32,KHG Sungai Kla Marine - Sungai Wasinsion,Papua Barat,Sorong,698
+KHG.92.01.15,PULAU PAPUA,205,32,KHG Sungai Kla Mer,Papua Barat,Sorong,414
+KHG.92.01.11,PULAU PAPUA,206,32,KHG Sungai Kla Mer - Sungai Buf I,Papua Barat,Sorong,5992
+KHG.92.01.09,PULAU PAPUA,207,32,KHG Sungai Kla Mer - Sungai Buf II,Papua Barat,Sorong,1912
+KHG.92.01.16,PULAU PAPUA,208,32,KHG Sungai Kla Mer - Sungai Kla Segun I,Papua Barat,Sorong,3085
+KHG.92.01.17,PULAU PAPUA,209,32,KHG Sungai Kla Mer - Sungai Kla Segun II,Papua Barat,Sorong,1422
+KHG.92.01.12,PULAU PAPUA,210,32,KHG Sungai Kla Mer - Sungai Sigit,Papua Barat,Sorong,392
+KHG.92.01.14,PULAU PAPUA,211,32,KHG Sungai Kla Mer - Sungai Sijeni,Papua Barat,Sorong,1681
+KHG.92.01.18,PULAU PAPUA,212,32,KHG Sungai Kla Segun - Sungai Kla Betur,Papua Barat,Sorong,5280
+KHG.92.01.42,PULAU PAPUA,213,32,KHG Sungai Kla Sepa - Sungai Kla Bak,Papua Barat,Sorong,2952
+KHG.92.04.12,PULAU PAPUA,214,32,KHG Sungai Kla Sepa - Sungai Kla Kaibus,Papua Barat,Sorong Selatan,1866
+KHG.92.04.01,PULAU PAPUA,215,32,KHG Sungai Kla Seremuk - Sungai Kanaya,Papua Barat,Sorong Selatan,4509
+KHG.92.04.02,PULAU PAPUA,216,32,KHG Sungai Kla Seremuk - Sungai Kla Makambar,Papua Barat,Sorong Selatan,1814
+KHG.92.04.03,PULAU PAPUA,217,32,KHG Sungai Kla Seremuk - Sungai Kla Sayal,Papua Barat,Sorong Selatan,9359
+KHG.92.01.24,PULAU PAPUA,218,32,KHG Sungai Kla Seremuk - Sungai Murnaim,Papua Barat,Sorong,1158
+KHG.92.01.40,PULAU PAPUA,219,32,KHG Sungai Kla Wan - Sungai Duk,Papua Barat,Sorong,7207
+KHG.92.01.41,PULAU PAPUA,220,32,KHG Sungai Kla Wan - Sungai Kla Bak,Papua Barat,Sorong,1786
+KHG.91.18-17.02,PULAU PAPUA,221,32,KHG Sungai Kuis - Sungai Bapai,Papua,"Asmat, Mappi",615729
+KHG.91.01.10,PULAU PAPUA,222,32,KHG Sungai Kumbe - Sungai Bian,Papua,Merauke,58253
+KHG.91.10.12,PULAU PAPUA,223,33,KHG Sungai Kwalitar - Sungai Biri,Papua,Sarmi,8213
+KHG.92.08.33,PULAU PAPUA,224,33,KHG Sungai Landenwala - Sungai I'wai,Papua Barat,Kaimana,1032
+KHG.91.04.07,PULAU PAPUA,225,33,KHG Sungai Legari - Sungai Tabai,Papua,Nabire,34454
+KHG.91.11.06,PULAU PAPUA,226,33,KHG Sungai Mafi - Sungai Pawasi,Papua,Keerom,4230
+KHG.91.04.15,PULAU PAPUA,227,33,KHG Sungai Mafirikamo - Sungai Buraromi,Papua,Nabire,326
+KHG.92.05.05,PULAU PAPUA,228,33,KHG Sungai Makpan - Sungai Kasim,Papua Barat,Rajaampat,9244
+KHG.91.10.01,PULAU PAPUA,229,33,KHG Sungai Mamberamo - Sungai Apauwar,Papua,Sarmi,102752
+KHG.91.20.29,PULAU PAPUA,230,33,KHG Sungai Mamberamo - Sungai Idenburg,Papua,Mamberamoraya,16569
+KHG.91.21-22.01,PULAU PAPUA,231,33,KHG Sungai Mamberamo - Sungai Kamika,Papua,"Membramo Tengah, Yalimo",35679
+KHG.91.14.01,PULAU PAPUA,232,33,KHG Sungai Mamberamo - Sungai Taria,Papua,Tolikara,46924
+KHG.92.06.16,PULAU PAPUA,233,33,KHG Sungai Manimeri,Papua Barat,Telukbintuni,416
+KHG.92.06.19,PULAU PAPUA,234,33,KHG Sungai Manimeri - Sungai Peresari I,Papua Barat,Telukbintuni,57
+KHG.92.06.20,PULAU PAPUA,235,33,KHG Sungai Manimeri - Sungai Peresari II,Papua Barat,Telukbintuni,1486
+KHG.92.06.17,PULAU PAPUA,236,33,KHG Sungai Manimeri - Sungai Potong,Papua Barat,Telukbintuni,810
+KHG.92.06.22,PULAU PAPUA,237,33,KHG Sungai Manimeri Dua - Sungai Uroroni,Papua Barat,Telukbintuni,1054
+KHG.92.06.15,PULAU PAPUA,238,33,KHG Sungai Manimeri II,Papua Barat,Telukbintuni,105
+KHG.92.06.25,PULAU PAPUA,239,33,KHG Sungai Manimeri Satu - Sungai Bui,Papua Barat,Telukbintuni,2372
+KHG.91.16.07,PULAU PAPUA,240,33,KHG Sungai Mappi - Sungai Edera,Papua,Boven Digoel,11949
+KHG.92.06.54,PULAU PAPUA,241,33,KHG Sungai Marafuara - Sungai Tifa,Papua Barat,Telukbintuni,1020
+KHG.91.20.18,PULAU PAPUA,242,33,KHG Sungai Mawana - Sungai Wakamba,Papua,Mamberamoraya,70935
+KHG.91.09.24,PULAU PAPUA,243,33,KHG Sungai Mawati - Sungai Otokwa,Papua,Mimika,4927
+KHG.91.25.01,PULAU PAPUA,244,33,KHG Sungai Mbiabu - Sungai Bayajali,Papua,Puncak,3891
+KHG.91.25.02,PULAU PAPUA,245,33,KHG Sungai Mbiabu - Sungai Sikuua,Papua,Puncak,1074
+KHG.91.15.11,PULAU PAPUA,246,33,KHG Sungai Mbiabu - Sungai Tariku Tiga,Papua,Waropen,3660
+KHG.91.20.31,PULAU PAPUA,247,33,KHG Sungai Memberamo - Sungai Kabre Lama,Papua,Mamberamoraya,69158
+KHG.91.20.30,PULAU PAPUA,248,33,KHG Sungai Memberamo - Sungai Origio,Papua,Mamberamoraya,3448
+KHG.92.04.35,PULAU PAPUA,249,33,KHG Sungai Metamani - Sungai Kasuweri,Papua Barat,Sorong Selatan,89981
+KHG.91.09.10,PULAU PAPUA,250,34,KHG Sungai Mimika Enta - Sungai Kamura Enta,Papua,Mimika,14051
+KHG.91.09.20,PULAU PAPUA,251,34,KHG Sungai Minarjewi - Sungai Kamanita,Papua,Mimika,39824
+KHG.91.20.15,PULAU PAPUA,252,34,KHG Sungai Minowari - Sungai Mabo,Papua,Mamberamoraya,523
+KHG.92.03.02,PULAU PAPUA,253,34,KHG Sungai Mintiber - Sungai Budidi,Papua Barat,Fak-fak,18115
+KHG.91.18.11,PULAU PAPUA,254,34,KHG Sungai Momatsi - Sungai Juk Fase,Papua,Asmat,24825
+KHG.91.20.21,PULAU PAPUA,255,34,KHG Sungai Motosi - Sungai Mamberamo,Papua,Mamberamoraya,1825
+KHG.92.08.36,PULAU PAPUA,256,34,KHG Sungai Muawa- Sungai Tiningga,Papua Barat,Kaimana,3302
+KHG.92.08.37,PULAU PAPUA,257,34,KHG Sungai Muera - Sungai Mematefare,Papua Barat,Kaimana,7111
+KHG.92.08.39,PULAU PAPUA,258,34,KHG Sungai Muera - Sungai Omba,Papua Barat,Kaimana,50480
+KHG.92.06.50,PULAU PAPUA,259,34,KHG Sungai Mumusi Satu - Sungai Kaitera,Papua Barat,Telukbintuni,11536
+KHG.92.06.10,PULAU PAPUA,260,34,KHG Sungai Murebi - Sungai Awisio I,Papua Barat,Telukbintuni,260
+KHG.92.06.11,PULAU PAPUA,261,34,KHG Sungai Murebi - Sungai Awisio II,Papua Barat,Telukbintuni,104
+KHG.91.09.14,PULAU PAPUA,262,34,KHG Sungai Murepiga - Sungai Kauga,Papua,Mimika,8592
+KHG.92.01.29,PULAU PAPUA,263,34,KHG Sungai Murnaim - Sungai Beraur I,Papua Barat,Sorong,1057
+KHG.92.01.35,PULAU PAPUA,264,34,KHG Sungai Murnaim - Sungai Beraur II,Papua Barat,Sorong,3642
+KHG.92.01.25,PULAU PAPUA,265,34,KHG Sungai Murnaim - Sungai Kla Beraur I,Papua Barat,Sorong,1560
+KHG.92.01.26,PULAU PAPUA,266,34,KHG Sungai Murnaim - Sungai Kla Beraur II,Papua Barat,Sorong,2157
+KHG.91.04.05,PULAU PAPUA,267,34,KHG Sungai Musaino - Sungai Makimi Tua,Papua,Nabire,5964
+KHG.92.06.23,PULAU PAPUA,268,34,KHG Sungai Muturi - Sungai Manimeri Dua,Papua Barat,Telukbintuni,1315
+KHG.92.06.21,PULAU PAPUA,269,34,KHG Sungai Muturi - Sungai Uroroni,Papua Barat,Telukbintuni,2899
+KHG.91.16.15,PULAU PAPUA,270,34,KHG Sungai Muyu,Papua,Boven Digoel,426
+KHG.91.04.01,PULAU PAPUA,271,34,KHG Sungai Naggobi - Sungai Nandira,Papua,Nabire,6249
+KHG.91.03.04,PULAU PAPUA,272,34,KHG Sungai Nakambi - Sungai Mamberamo,Papua,Jayapura,5786
+KHG.92.06.38,PULAU PAPUA,273,34,KHG Sungai Naramasa - Sungai Sobrawara,Papua Barat,Telukbintuni,7128
+KHG.92.06.36,PULAU PAPUA,274,34,KHG Sungai Naramasa - Sungai Tatowari,Papua Barat,Telukbintuni,27419
+KHG.91.03.02,PULAU PAPUA,275,34,KHG Sungai Nawa - Sungai Sutuy,Papua,Jayapura,10483
+KHG.91.15.04,PULAU PAPUA,276,34,KHG Sungai Nawo - Sungai Epawa,Papua,Waropen,1266
+KHG.91.10.18,PULAU PAPUA,277,35,KHG Sungai Niyo Aremi - Sungai Niyo Amok,Papua,Sarmi,6978
+KHG.91.20.25,PULAU PAPUA,278,35,KHG Sungai Niyo Fowoga - Sungai Biri,Papua,Mamberamoraya,5053
+KHG.91.15.14,PULAU PAPUA,279,35,KHG Sungai Niyo Rouffer - Sungai Tariku,Papua,Waropen,12985
+KHG.91.15.12,PULAU PAPUA,280,35,KHG Sungai Niyo Tariku Tiga - Sungai Niyo Muyabu,Papua,Waropen,7773
+KHG.91.07.01,PULAU PAPUA,281,35,KHG Sungai Niyo Vandaalen,Papua,Puncak Jaya,5833
+KHG.91.07-25.02,PULAU PAPUA,282,35,KHG Sungai Niyo Yambi - Sungai Niyo Gurage,Papua,"Puncak, Puncak Jaya",7333
+KHG.92.08.24,PULAU PAPUA,283,35,KHG Sungai Noani - Sungai Sekua,Papua Barat,Kaimana,2788
+KHG.92.08.04,PULAU PAPUA,284,35,KHG Sungai Noma,Papua Barat,Kaimana,287
+KHG.92.05.06,PULAU PAPUA,285,35,KHG Sungai Nukarie - Sungai Mabel,Papua Barat,Rajaampat,2256
+KHG.92.06.32,PULAU PAPUA,286,35,KHG Sungai Nusuamar - Sungai Muaraanakasi,Papua Barat,Telukbintuni,1451
+KHG.92.06.33,PULAU PAPUA,287,35,KHG Sungai Nusuamar - Sungai Pasomol,Papua Barat,Telukbintuni,1831
+KHG.92.06.35,PULAU PAPUA,288,35,KHG Sungai Nusuamar - Sungai Tatowari,Papua Barat,Telukbintuni,5292
+KHG.91.15-20.01,PULAU PAPUA,289,35,KHG Sungai Obuai - Sungai Usoa,Papua,"Mamberamoraya, Waropen",3463
+KHG.91.20.28,PULAU PAPUA,290,35,KHG Sungai Oi - Sungai Iri,Papua,Mamberamoraya,12849
+KHG.91.09.35,PULAU PAPUA,291,35,KHG Sungai Olaronomon - Sungai Torpedoboot Enta,Papua,Mimika,6837
+KHG.92.08.41,PULAU PAPUA,292,35,KHG Sungai Omba - Sungai Aria,"Papua, Papua Barat","Mimika, Kaimana",2572
+KHG.92.08.40,PULAU PAPUA,293,35,KHG Sungai Omba - Sungai Mairuna,Papua Barat,Kaimana,1547
+KHG.92.08.38,PULAU PAPUA,294,35,KHG Sungai Omba - Sungai Timbona,Papua Barat,Kaimana,6883
+KHG.92.08.42,PULAU PAPUA,295,35,KHG Sungai Omba - Sungai Urama,Papua Barat,Kaimana,11827
+KHG.91.20.12,PULAU PAPUA,296,35,KHG Sungai Orakeb - Sungai Mabo,Papua,Mamberamoraya,14402
+KHG.91.09.25,PULAU PAPUA,297,35,KHG Sungai Otakwa - Sungai Setakwa,Papua,Mimika,15988
+KHG.91.09.23,PULAU PAPUA,298,35,KHG Sungai Otokwa - Sungai Aingno Gong,Papua,Mimika,8338
+KHG.91.09.28,PULAU PAPUA,299,35,KHG Sungai Otokwa - Sungai Setakwa,Papua,Mimika,1552
+KHG.92.03-06.01,PULAU PAPUA,300,35,KHG Sungai Otoweri - Sungai Saengga,Papua Barat,"Fak-fak, Telukbintuni",56096
+KHG.91.11.02,PULAU PAPUA,301,35,KHG Sungai Pawasi - Sungai Merah,Papua,Keerom,11426
+KHG.91.11.04,PULAU PAPUA,302,35,KHG Sungai Pawasi - Sungai Sanggolo,Papua,Keerom,13289
+KHG.91.04.19,PULAU PAPUA,303,36,KHG Sungai Pegi - Sungai Seiwa,Papua,Nabire,18651
+KHG.91.04.16,PULAU PAPUA,304,36,KHG Sungai Pemawari - Sungai Pami,Papua,Nabire,1057
+KHG.91.04.20,PULAU PAPUA,305,36,KHG Sungai Poronai - Sungai Kali Pegi,Papua,Nabire,21517
+KHG.92.08.09,PULAU PAPUA,306,36,KHG Sungai Potong - Sungai Buruway,Papua Barat,Kaimana,4602
+KHG.92.06.61,PULAU PAPUA,307,36,KHG Sungai Raahiba - Sungai Kasira,Papua Barat,Telukbintuni,2081
+KHG.91.15.06,PULAU PAPUA,308,36,KHG Sungai Rasawa - Sungai Wutoa,Papua,Waropen,7562
+KHG.92.08.17,PULAU PAPUA,309,36,KHG Sungai Rerum - Sungai Rafa,Papua Barat,Kaimana,3356
+KHG.92.06.62,PULAU PAPUA,310,36,KHG Sungai Roarifa - Sungai Raahiba,Papua Barat,Telukbintuni,861
+KHG.91.20.13,PULAU PAPUA,311,36,KHG Sungai Rorai - Sungai Andaiwaren,Papua,Mamberamoraya,14700
+KHG.91.20.27,PULAU PAPUA,312,36,KHG Sungai Rouffaer - Sungai Van Der Wiligen,Papua,Mamberamoraya,3422
+KHG.91.07.02,PULAU PAPUA,313,36,KHG Sungai Rouffer - Sungai Foli,Papua,Puncak Jaya,43300
+KHG.91.07-25.01,PULAU PAPUA,314,36,KHG Sungai Rouffer - Sungai Van Daalen,Papua,"Puncak, Puncak Jaya",95911
+KHG.92.04.31,PULAU PAPUA,315,36,KHG Sungai Rur - Sungai Kais,Papua Barat,Sorong Selatan,2338
+KHG.91.15.07,PULAU PAPUA,316,36,KHG Sungai Rurawa - Sungai Botawa,Papua,Waropen,6370
+KHG.92.01.33,PULAU PAPUA,317,36,KHG Sungai Safet - Sungai Isai,Papua Barat,Sorong,2479
+KHG.92.01.28,PULAU PAPUA,318,36,KHG Sungai Safet - Sungai Kla Beraur,Papua Barat,Sorong,1071
+KHG.92.01.10,PULAU PAPUA,319,36,KHG Sungai Safet - Sungai Mer,Papua Barat,Sorong,757
+KHG.92.06.55,PULAU PAPUA,320,36,KHG Sungai Saka - Sungai Tifa,Papua Barat,Telukbintuni,2843
+KHG.91.10-03.02,PULAU PAPUA,321,36,KHG Sungai Samap - Sungai Segayao,Papua,"Jayapura, Sarmi",5522
+KHG.92.06.27,PULAU PAPUA,322,36,KHG Sungai Samberi - Sungai Tayamari I,Papua Barat,Telukbintuni,896
+KHG.92.06.28,PULAU PAPUA,323,36,KHG Sungai Samberi - Sungai Tayamari II,Papua Barat,Telukbintuni,69
+KHG.92.06.29,PULAU PAPUA,324,36,KHG Sungai Samberi - Sungai Tayamari III,Papua Barat,Telukbintuni,228
+KHG.92.06.48,PULAU PAPUA,325,36,KHG Sungai Sara - Sungai Besura,Papua Barat,Telukbintuni,1056
+KHG.91.10-03.04,PULAU PAPUA,326,36,KHG Sungai Sarmowai - Sungai Muaif,Papua,"Jayapura, Sarmi",2719
+KHG.92.06.02,PULAU PAPUA,327,36,KHG Sungai Sebyar - Sungai Tembuni,Papua Barat,Telukbintuni,103361
+KHG.91.10-03.03,PULAU PAPUA,328,36,KHG Sungai Segayao - Sungai Sarmowai,Papua,Sarmi,3438
+KHG.91.15-27.01,PULAU PAPUA,329,36,KHG Sungai Seiwa - Sungai Dayewa,Papua,"Intan Jaya, Waropen",5172
+KHG.92.04.20,PULAU PAPUA,330,37,KHG Sungai Sekak - Sungai Kais,Papua Barat,Sorong Selatan,43511
+KHG.92.08.25,PULAU PAPUA,331,37,KHG Sungai Sekua,Papua Barat,Kaimana,1979
+KHG.92.04.09,PULAU PAPUA,332,37,KHG Sungai Selasin - Sungai Kaibu,Papua Barat,Sorong Selatan,1627
+KHG.92.04.26,PULAU PAPUA,333,37,KHG Sungai Sepa,Papua Barat,Sorong Selatan,662
+KHG.92.04.30,PULAU PAPUA,334,37,KHG Sungai Sepa - Sungai Kais,Papua Barat,Sorong Selatan,22139
+KHG.92.04.28,PULAU PAPUA,335,37,KHG Sungai Sepa - Sungai Kamamur I,Papua Barat,Sorong Selatan,1537
+KHG.92.04.29,PULAU PAPUA,336,37,KHG Sungai Sepa - Sungai Kamamur II,Papua Barat,Sorong Selatan,999
+KHG.92.01.36,PULAU PAPUA,337,37,KHG Sungai Sepa Beraur - Sungai Kla Bak,Papua Barat,Sorong,8066
+KHG.92.01.46,PULAU PAPUA,338,37,KHG Sungai Sepa Klabra - Sungai Seremuk,Papua Barat,Sorong,13758
+KHG.92.04.06,PULAU PAPUA,339,37,KHG Sungai Serai- Sungai Kla Sayal,Papua Barat,Sorong Selatan,5297
+KHG.92.06.63,PULAU PAPUA,340,37,KHG Sungai Seringga - Sungai Wami,Papua Barat,Telukbintuni,47001
+KHG.92.04.36,PULAU PAPUA,341,37,KHG Sungai Serjin - Sungai Kais,Papua Barat,Sorong Selatan,4319
+KHG.92.04.07,PULAU PAPUA,342,37,KHG SUngai Serjin - Sungai Kamundan,Papua Barat,Sorong Selatan,3832
+KHG.92.01.37,PULAU PAPUA,343,37,KHG Sungai Sersebak - Sungai Duk,Papua Barat,Sorong,14000
+KHG.91.09.34,PULAU PAPUA,344,37,KHG Sungai Seruwinomon Gong - Sungai Olaronomon,Papua,Mimika,13043
+KHG.91.09.27,PULAU PAPUA,345,37,KHG Sungai Setakwa - Sungai Aenomon,Papua,Mimika,31414
+KHG.91.09.29,PULAU PAPUA,346,37,KHG Sungai Setakwa - Sungai Ipukwa,Papua,Mimika,8336
+KHG.91.09.26,PULAU PAPUA,347,37,KHG Sungai Setakwa - Sungai Mamoa,Papua,Mimika,9566
+KHG.91.11.01,PULAU PAPUA,348,37,KHG Sungai Sia-Sia - Sungai Merah,Papua,Keerom,1976
+KHG.91.10.08,PULAU PAPUA,349,37,KHG Sungai Sirim,Papua,Sarmi,1390
+KHG.91.10.07,PULAU PAPUA,350,37,KHG Sungai Sirim - Sungai Waskey,Papua,Sarmi,5369
+KHG.91.04.13,PULAU PAPUA,351,37,KHG Sungai Siriwo,Papua,Nabire,812
+KHG.91.04.10,PULAU PAPUA,352,37,KHG Sungai Siriwo - Sungai Kurere,Papua,Nabire,1849
+KHG.91.04.11,PULAU PAPUA,353,37,KHG Sungai Siriwo - Sungai Lemawa,Papua,Nabire,931
+KHG.91.04.14,PULAU PAPUA,354,37,KHG Sungai Siriwo - Sungai Poronai,Papua,Nabire,76044
+KHG.91.04.12,PULAU PAPUA,355,37,KHG Sungai Siriwo - Sungai Tobo,Papua,Nabire,10941
+KHG.92.08.30,PULAU PAPUA,356,38,KHG Sungai Sisir Satu - Sisir Dua,Papua Barat,Kaimana,885
+KHG.92.01.32,PULAU PAPUA,357,38,KHG Sungai Sofok - Sungai Safet,Papua Barat,Sorong,2485
+KHG.91.15.15,PULAU PAPUA,358,38,KHG Sungai Soimiangga - Sungai Epawa,Papua,Waropen,483
+KHG.92.01.45,PULAU PAPUA,359,38,KHG Sungai Songawat - Sungai Serumuk,Papua Barat,Sorong,979
+KHG.91.11.03,PULAU PAPUA,360,38,KHG Sungai Songgolo - Sungai Pai,Papua,Keerom,2795
+KHG.92.04.25,PULAU PAPUA,361,38,KHG Sungai Suaboor - Sungai Awoge,Papua Barat,Sorong Selatan,1128
+KHG.92.04.21,PULAU PAPUA,362,38,KHG Sungai Suaboor - Sungai Bogoremo,Papua Barat,Sorong Selatan,1598
+KHG.92.04.24,PULAU PAPUA,363,38,KHG Sungai Suaboor - Sungai Sedai,Papua Barat,Sorong Selatan,2178
+KHG.92.04.27,PULAU PAPUA,364,38,KHG Sungai Suaboor - Sungai Sepa,Papua Barat,Sorong Selatan,3638
+KHG.92.06.45,PULAU PAPUA,365,38,KHG Sungai Suga - Sungai Armina,Papua Barat,Telukbintuni,5492
+KHG.92.08.16,PULAU PAPUA,366,38,KHG Sungai Sunua,Papua Barat,Kaimana,156
+KHG.92.06.14,PULAU PAPUA,367,38,KHG Sungai Syakarer - Sungai Manimeri,Papua Barat,Telukbintuni,1547
+KHG.91.04.09,PULAU PAPUA,368,38,KHG Sungai Tabai - Siriwo,Papua,Nabire,21429
+KHG.92.08.26,PULAU PAPUA,369,38,KHG Sungai Tabutabu,Papua Barat,Kaimana,2285
+KHG.92.08.27,PULAU PAPUA,370,38,KHG Sungai Tabutabu - Sungai Karora,Papua Barat,Kaimana,2334
+KHG.91.10.16,PULAU PAPUA,371,38,KHG Sungai Tamar - Sungai Mawesday,Papua,Sarmi,2227
+KHG.92.06.49,PULAU PAPUA,372,38,KHG Sungai Tamaroma - Sungai Sara,Papua Barat,Telukbintuni,1681
+KHG.91.71.02,PULAU PAPUA,373,38,KHG Sungai Tami,Papua,Kota Jayapura,5060
+KHG.92.08.13,PULAU PAPUA,374,38,KHG Sungai Tanggiri - Sungai Binawa,Papua Barat,Kaimana,4703
+KHG.92.08.06,PULAU PAPUA,375,38,KHG Sungai Tanggiri - Sungai Fewan,Papua Barat,Kaimana,1699
+KHG.92.08.07,PULAU PAPUA,376,38,KHG Sungai Tanggiri - Sungai Kabasesi,Papua Barat,Kaimana,4041
+KHG.92.08.05,PULAU PAPUA,377,38,KHG Sungai Tanggiri - Sungai Wulmaset,Papua Barat,Kaimana,319
+KHG.91.14-21.01,PULAU PAPUA,378,38,KHG Sungai Taria - Sungai Memberamo,Papua,"Membramo Tengah, Tolikara",34148
+KHG.91.15.13,PULAU PAPUA,379,38,KHG Sungai Tariku Dua - Sungai Rouffaer,Papua,Waropen,1847
+KHG.91.20.24,PULAU PAPUA,380,38,KHG Sungai Tariku Satu - Sungai Rouffaer Satu,Papua,Mamberamoraya,5351
+KHG.92.06.34,PULAU PAPUA,381,38,KHG Sungai Tawari - Sungai Pasomol,Papua Barat,Telukbintuni,256
+KHG.92.06.30,PULAU PAPUA,382,38,KHG Sungai Tayamari - Sungai Anakasi,Papua Barat,Telukbintuni,2100
+KHG.92.06.03,PULAU PAPUA,383,39,KHG Sungai Tembuni - Sungai Bintuni,Papua Barat,Telukbintuni,11688
+KHG.92.06.04,PULAU PAPUA,384,39,KHG Sungai Tembuni - Sungai Retui I,Papua Barat,Telukbintuni,24482
+KHG.92.06.05,PULAU PAPUA,385,39,KHG Sungai Tembuni - Sungai Retui II,Papua Barat,Telukbintuni,9564
+KHG.92.06.13,PULAU PAPUA,386,39,KHG Sungai Tembuni - Sungai Tisai I,Papua Barat,Telukbintuni,170
+KHG.92.06.06,PULAU PAPUA,387,39,KHG Sungai Tembuni - Sungai Tisai II,Papua Barat,Telukbintuni,7868
+KHG.92.06.12,PULAU PAPUA,388,39,KHG Sungai Tembuni - Sungai Tisai III,Papua Barat,Telukbintuni,205
+KHG.92.06.53,PULAU PAPUA,389,39,KHG Sungai Tifa - Sungai Husori,Papua Barat,Telukbintuni,3759
+KHG.92.06.51,PULAU PAPUA,390,39,KHG Sungai Tifa - Sungai Kaitera,Papua Barat,Telukbintuni,10722
+KHG.91.09.07,PULAU PAPUA,391,39,KHG Sungai Tina Enta - Sungai Kapare Enta,Papua,Mimika,4808
+KHG.92.06.08,PULAU PAPUA,392,39,KHG Sungai Tisai - Sungai Murebi I,Papua Barat,Telukbintuni,992
+KHG.92.06.07,PULAU PAPUA,393,39,KHG Sungai Tisai - Sungai Murebi II,Papua Barat,Telukbintuni,415
+KHG.91.10-03.01,PULAU PAPUA,394,39,KHG Sungai Toarim - Sungai Samap,Papua,"Jayapura, Sarmi",8689
+KHG.92.06.42,PULAU PAPUA,395,39,KHG Sungai Tobi - Sungai Ennma,Papua Barat,Telukbintuni,3211
+KHG.91.10.10,PULAU PAPUA,396,39,KHG Sungai Tor - Sungai Bier,Papua,Sarmi,9200
+KHG.91.18.01,PULAU PAPUA,397,39,KHG Sungai Torpedoboot - Sungai Kasteel Timur,Papua,Asmat,5865
+KHG.91.04.18,PULAU PAPUA,398,39,KHG Sungai Totoberi - Sungai Kali Pegi,Papua,Nabire,12901
+KHG.91.20.17,PULAU PAPUA,399,39,KHG Sungai Trambo - Sungai Mawana,Papua,Mamberamoraya,6361
+KHG.91.10.04,PULAU PAPUA,400,39,KHG Sungai Tramuas - Sungai Waim,Papua,Sarmi,12817
+KHG.91.20-14.02,PULAU PAPUA,401,39,KHG Sungai Treu - Sungai Doorman,Papua,Mamberamoraya,32107
+KHG.92.06.60,PULAU PAPUA,402,39,KHG Sungai Ubuara - Sungai Kasira,Papua Barat,Telukbintuni,4716
+KHG.92.06.58,PULAU PAPUA,403,39,KHG Sungai Ubuara - Sungai Sianiri Besar,Papua Barat,Telukbintuni,2320
+KHG.91.16.02,PULAU PAPUA,404,39,KHG Sungai Udi Aifo - Sungai Buru Mappi,Papua,Boven Digoel,9267
+KHG.91.17-16.04,PULAU PAPUA,405,39,KHG Sungai Udi Edera - Sungai Samaleki Digul,Papua,"Boven Digoel, Mappi",197716
+KHG.92.04-06.01,PULAU PAPUA,406,39,KHG Sungai Udugaga - Sungai Kamundan,Papua Barat,"Sorong Selatan, Telukbintuni",50374
+KHG.91.09.01,PULAU PAPUA,407,39,KHG Sungai Umar - Sungai Amara,Papua,Mimika,947
+KHG.92.08.31,PULAU PAPUA,408,39,KHG Sungai Urere - Sungai Tambana,Papua Barat,Kaimana,633
+KHG.92.06.24,PULAU PAPUA,409,40,KHG Sungai Urononi - Sungai Kirasai,Papua Barat,Telukbintuni,4673
+KHG.91.09.03,PULAU PAPUA,410,40,KHG Sungai Urumuka Enta - Sungai Utanta Enta,Papua,Mimika,7205
+KHG.91.20.01,PULAU PAPUA,411,40,KHG Sungai Usoa - Sungai Eroina,Papua,Mamberamoraya,16322
+KHG.91.09.05,PULAU PAPUA,412,40,KHG Sungai Utanta - Sungai Kapare,Papua,Mimika,51895
+KHG.91.18.22,PULAU PAPUA,413,40,KHG Sungai Utumbuwe - Sungai Dumas,Papua,Asmat,3712
+KHG.91.18.21,PULAU PAPUA,414,40,KHG Sungai Utumbuwe - Sungai Sor,Papua,Asmat,28836
+KHG.91.09.04,PULAU PAPUA,415,40,KHG Sungai Utumuka - Sungai Kawar,Papua,Mimika,4970
+KHG.91.16.04,PULAU PAPUA,416,40,KHG Sungai Wade Kowo - Sungai Buru Bayeni,Papua,Boven Digoel,16911
+KHG.91.17.01,PULAU PAPUA,417,40,KHG Sungai Wade Nanu - Sungai Wade Assue,Papua,Mappi,58218
+KHG.91.17.05,PULAU PAPUA,418,40,KHG Sungai Wade Passue,Papua,Mappi,2953
+KHG.91.17.03,PULAU PAPUA,419,40,KHG Sungai Wade Passue - Sungai Jo Dairam,Papua,Mappi,108517
+KHG.92.03.01,PULAU PAPUA,420,40,KHG Sungai Wafun - Sungai Budidi,Papua Barat,Fak-fak,6492
+KHG.92.06.40,PULAU PAPUA,421,40,KHG Sungai Wagura - Sungai Beparar,Papua Barat,Telukbintuni,2468
+KHG.92.06.41,PULAU PAPUA,422,40,KHG Sungai Wagura - Sungai Tobi,Papua Barat,Telukbintuni,2758
+KHG.92.07.01,PULAU PAPUA,423,40,KHG Sungai Wai - Sungai Webi,Papua Barat,Telukwondama,15544
+KHG.92.05.04,PULAU PAPUA,424,40,KHG Sungai Wai Bo - Sungai Wai Mafu,Papua Barat,Rajaampat,542
+KHG.92.01.02,PULAU PAPUA,425,40,KHG Sungai Wai Sapran - Sungai Wai Liam,Papua Barat,Sorong,14743
+KHG.92.01.53,PULAU PAPUA,426,40,KHG Sungai Wai Tunun - Sungai Warmon I,Papua Barat,Sorong,72
+KHG.92.01.06,PULAU PAPUA,427,40,KHG Sungai Wai Tunun - Sungai Warmon II,Papua Barat,Sorong,103
+KHG.92.01.51,PULAU PAPUA,428,40,KHG Sungai Wai Tunun I,Papua Barat,Sorong,90
+KHG.92.01.52,PULAU PAPUA,429,40,KHG Sungai Wai Tunun II,Papua Barat,Sorong,74
+KHG.92.04.18,PULAU PAPUA,430,40,KHG Sungai Waigo,Papua Barat,Sorong Selatan,3255
+KHG.91.10.05,PULAU PAPUA,431,40,KHG Sungai Waim - Sunga Ferkame,Papua,Sarmi,20972
+KHG.91.20.19,PULAU PAPUA,432,40,KHG Sungai Wakamba - Sungai Warembori,Papua,Mamberamoraya,45612
+KHG.92.01.08,PULAU PAPUA,433,40,KHG Sungai Wakamuk - Sungai Kla Waimon,Papua Barat,Sorong,7575
+KHG.91.09.02,PULAU PAPUA,434,40,KHG Sungai Wakia - Sungai Utarena Enta,Papua,Mimika,3650
+KHG.92.01.49,PULAU PAPUA,435,40,KHG Sungai Walal,Papua Barat,Sorong,439
+KHG.91.04.04,PULAU PAPUA,436,41,KHG Sungai Wanggar - Sungai Bumi,Papua,Nabire,7289
+KHG.91.09.18,PULAU PAPUA,437,41,KHG Sungai Wania - Sungai Aikwa,Papua,Mimika,8942
+KHG.91.09.15,PULAU PAPUA,438,41,KHG Sungai Wania - Sungai Jaramaya,Papua,Mimika,10794
+KHG.91.09.17,PULAU PAPUA,439,41,KHG Sungai Wania Enta - Sungai Aikwa Enta,Papua,Mimika,1730
+KHG.91.04-15.01,PULAU PAPUA,440,41,KHG Sungai Wapoga - Sungai Amewa I,Papua,"Nabire, Waropen",30048
+KHG.91.04-15.02,PULAU PAPUA,441,41,KHG Sungai Wapoga - Sungai Amewa II,Papua,"Nabire, Waropen",17877
+KHG.91.15.01,PULAU PAPUA,442,41,KHG Sungai Wapoga - Sungai Dayewa,Papua,Waropen,8788
+KHG.92.01.50,PULAU PAPUA,443,41,KHG SUngai Waprak - Sungai Tunun,Papua Barat,Sorong,215
+KHG.91.20.02,PULAU PAPUA,444,41,KHG Sungai Warako - Sungai Wayandi,Papua,Mamberamoraya,1788
+KHG.92.08.35,PULAU PAPUA,445,41,KHG Sungai Waranggera,Papua Barat,Kaimana,458
+KHG.91.20.20,PULAU PAPUA,446,41,KHG Sungai Warembori - Sungai Mamberamo,Papua,Mamberamoraya,30661
+KHG.91.27.01,PULAU PAPUA,447,41,KHG Sungai Warena - Sungai Daewawa,Papua,Intan Jaya,2230
+KHG.92.12.01,PULAU PAPUA,448,41,KHG Sungai Warkesi - Sungai Irai,Papua Barat,Pegunungan Arfak,2547
+KHG.92.01.05,PULAU PAPUA,449,41,KHG Sungai Warmon - Sungai Klamalu I,Papua Barat,Sorong,40
+KHG.92.01.54,PULAU PAPUA,450,41,KHG Sungai Warmon - Sungai Klamalu II,Papua Barat,Sorong,311
+KHG.92.08.15,PULAU PAPUA,451,41,KHG Sungai Warsih - Sungai Sindu,Papua Barat,Kaimana,1367
+KHG.92.08.34,PULAU PAPUA,452,41,KHG Sungai Wawa - Sungai Kafa,Papua Barat,Kaimana,1622
+KHG.91.20.03,PULAU PAPUA,453,41,KHG Sungai Wayandi - Sungai Rorai,Papua,Mamberamoraya,558
+KHG.92.06.37,PULAU PAPUA,454,41,KHG Sungai Wembi - Sungai Natamasa,Papua Barat,Telukbintuni,7119
+KHG.92.06.01,PULAU PAPUA,455,41,KHG Sungai Weriagar - Sungai Sebyar,Papua Barat,Telukbintuni,49306
+KHG.92.01.39,PULAU PAPUA,456,41,KHG Sungai Wilis - Sungai Beraur,Papua Barat,Sorong,1324
+KHG.92.06.66,PULAU PAPUA,457,41,KHG Sungai Wimro - Sungai Aroba,Papua Barat,Telukbintuni,4156
+KHG.92.08.19,PULAU PAPUA,458,41,KHG Sungai Wirfatn - Sungai Repada,Papua Barat,Kaimana,5582
+KHG.91.10.15,PULAU PAPUA,459,41,KHG Sungai Wiruai - Sungai Gwin,Papua,Sarmi,2421
+KHG.91.15.09,PULAU PAPUA,460,41,KHG Sungai Wobari - Sungai Ghaiwando,Papua,Waropen,707
+KHG.91.15.10,PULAU PAPUA,461,41,KHG Sungai Wobari - Sungai Wonti,Papua,Waropen,1001
+KHG.91.04.02,PULAU PAPUA,462,42,KHG Sungai Wororomi - Sungai Aprege,Papua,Nabire,1939
+KHG.91.15.16,PULAU PAPUA,463,42,KHG Sungai Wutoa - Sungai Rurawa,Papua,Waropen,11185
+KHG.91.71.01,PULAU PAPUA,464,42,KHG Sungai Yaos Kanan - Sungai Tami,Papua,Kota Jayapura,6888
+KHG.91.04.17,PULAU PAPUA,465,42,KHG Sungai Yuswar - Sungai Pemawari,Papua,Nabire,758

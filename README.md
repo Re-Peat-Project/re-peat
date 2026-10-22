@@ -36,10 +36,12 @@ Environment variables used by the site configs (a missing one stops the run with
 | Variable | Points to |
 |---|---|
 | `REPEAT_DATA` | the REPEAT-LH `_data` folder: `Peat depth and DTM`, `_converted`, ... |
-| `REPEAT_WORK` | a folder outside the repositories for derived data: clipped vectors, caches, outputs. Today `khg-prioritisation-module/data_local`. |
+| `REPEAT_WORK` | a folder for derived data: clipped vectors, caches, outputs. For the national profile it is this repository's `reports/` folder, so the report is pushed with it (its `.gpkg` files are git-ignored; rebuild them with the profile run). Other modules still use `repeat-prioritisation/data_local`. |
 | `SITMAT_PROCESSED` | `sitmat-extract/sitmat_out/processed` |
 
 ## Sites
+
+The team selected 12 main KHG (plus reserves): see [docs/13-selected-khg.md](docs/13-selected-khg.md) and [sites/selected_khg.csv](sites/selected_khg.csv). One name (cawang-lalang) is still to be confirmed.
 
 [sites/](sites/) has one folder per KHG that has been run:
 
@@ -49,6 +51,14 @@ Environment variables used by the site configs (a missing one stops the run with
 | [sugihan_lumpur](sites/sugihan_lumpur/README.md) | 16.02.01 | Sungai Sugihan - Sungai Lumpur (South Sumatra), 6,348 km2 |
 
 Each site folder has a README (the runbook: steps with the repository each runs in, decisions and reasons, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for the physical model, `neraca_experiments.yaml`) and `reports/`. These are test runs of the whole chain, not validated rankings.
+
+## Data catalogue
+
+[docs/14-data-catalog.md](docs/14-data-catalog.md) lists every file in `_data` (format, CRS, resolution, features, remarks). It is generated: run `python tools/catalog_data.py` after adding data; new files are appended and hand-written remarks in [sites/data_catalog.csv](sites/data_catalog.csv) are kept.
+
+## National profile
+
+[docs/15-national-profile.md](docs/15-national-profile.md) profiles and ranks all 865 KHG from the local layers (fire history, hotspots, canals) and builds an HTML report; the registry of official KHG codes is [sites/khg_registry.csv](sites/khg_registry.csv). Tools: `tools/fetch_firms.py` and `tools/fetch_peat_extent.py` (wrappers: the code is `repeat_common.fetch_firms` and `repeat_common.fetch_peat_extent` in repeat-common), `tools/parse_kepmen_khg.py` (needs pdfplumber), `tools/catalog_data.py`.
 
 ## Documentation
 

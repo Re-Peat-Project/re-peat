@@ -73,3 +73,7 @@ Machine learning and the `peatfr` package / PFVI index are deliberately deferred
 - **Heights** are in the DEM's vertical datum (DEMNAS: check the metadata; commonly EGM2008). ICESat-2 and GEDI heights are ellipsoidal and are converted before use.
 - **Grids** are in the KHG's UTM zone. Units are SI: metres, cubic metres, days; rainfall and ET in mm.
 - **Indonesian terms** are kept where they are the working vocabulary (KHG, TMA, sekat kanal, pintu air, fungsi lindung). The [glossary](01-background.md#glossary) translates them.
+
+- [13 Selected KHG](13-selected-khg.md): the 12 main KHG chosen for the project, and reserves.
+- [14 Data catalogue](14-data-catalog.md): generated list of the files in `_data`.
+- [15 National KHG profile](15-national-profile.md): ranking of all 865 KHG from local data, and how to rerun it.
