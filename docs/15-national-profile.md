@@ -38,7 +38,7 @@ For the top N KHG the engine's fetcher (`python -m national.run --fetch-only`, c
 
 ## Land status overlays
 
-`python -m national.overlay --config configs/examples/national_stage3.yaml` crosses the profiled KHG (the stage 3 selection: top 25 and the team's) with four layers: forest area function (`KWSHUTAN_AR_250K_2023`), peat ecosystem function (`FEG__Indonesia__2017`), business licences (`ALL_Updade__IZIN_USAHA`, 2025) and the Bluebook target villages. Inputs are named under `inputs:` in the config, so an updated layer is a file swap.
+`python -m national.overlay --config configs/examples/national_stage3.yaml` crosses the profiled KHG (the stage 3 selection: top 25 and the team's) with four layers: forest area function (`KWSHUTAN_AR_250K_2023`), peat ecosystem function (`FEG__Indonesia__2017`), business licences (`ALL_Updade__IZIN_USAHA`, 2025) and the Bluebook target villages. Inputs are named under `inputs:` in the config, so an updated layer is a file swap. The four layers sit in `_data/landstatus/` (licences, FEG, forest area) and `_data/desa_target_pemulihan_ekosistem_gambut.gpkg`.
 
 - **Method:** a regular grid of points inside each KHG (100 m, or 200 m for the largest). Each point gets its peat flag (GFW extent), its class in each layer, whether it burned in 2015 to 2025, and its licences. Areas are point counts times the cell area, never `Shape_Area`.
 - **Licences overlap**, so licence areas are not summed: "any licence" counts a point once, and the per-type bars can add up to more than the peat. Forest area has 21 codes, grouped into conservation, protection forest, production forest (HP, HPT), convertible production (HPK), other land use (APL) and water or undefined.

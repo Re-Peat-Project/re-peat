@@ -6,8 +6,13 @@ Writes sites/data_catalog.csv (the table) and docs/14-data-catalog.md (the same,
 Rerunning refreshes the technical columns and keeps the hand-written ones
 (description, source, year, remarks), keyed on (path, layer). New files get empty
 hand-written cells; files that disappeared are kept and marked status=missing.
+Folders listed in sites/catalog_collapse.csv (columns prefix, depth) are summarised instead of listed file by file:
+one row per sub-folder (depth 1) or one row for the whole prefix (depth 0), per kind and format, with the file count,
+the CRS and resolutions found, the union of the extents and the file names. Use it for deliveries made of dozens of
+near-identical per-KHG files.
 Needs pyogrio, rasterio, pandas.
 """
+import contextlib
 import os
 import sys
 from datetime import date
@@ -26,8 +31,9 @@ AUTO = ["path", "layer", "kind", "format", "geometry", "features", "crs", "resol
         "extent_xmin_ymin_xmax_ymax", "fields", "size_mb", "modified", "status"]
 MANUAL = ["description", "source", "year", "remarks"]
 VECTOR_EXT = {".gpkg", ".shp", ".geojson", ".fgb", ".gdb", ".kml"}
-RASTER_EXT = {".tif", ".tiff", ".img", ".vrt", ".nc", ".asc"}
-SKIP_EXT = {".tfw", ".shx", ".dbf", ".prj", ".cpg", ".sbn", ".sbx", ".xml", ".ovr", ".aux", ".qix", ".done"}  # shapefile sidecars
+RASTER_EXT = {".tif", ".tiff", ".img", ".vrt", ".nc", ".asc", ".sdat"}
+COLLAPSE = HUB / "sites" / "catalog_collapse.csv"
+SKIP_EXT = {".lock", ".rrd", ".sprj", ".sgrd", ".mgrd", ".tfw", ".shx", ".dbf", ".prj", ".cpg", ".sbn", ".sbx", ".xml", ".ovr", ".aux", ".qix", ".done"}  # shapefile sidecars
 
 
 def crs_label(crs):
@@ -67,6 +73,46 @@ def raster_rows(f):
                  "extent_xmin_ymin_xmax_ymax": f"{b.left:.5g} {b.bottom:.5g} {b.right:.5g} {b.top:.5g}"}]
 
 
+@contextlib.contextmanager
+def opened(f):
+    """GDAL reads a path containing '!' as an archive separator; open such files from their own folder."""
+    if "!" in str(f):
+        cwd = os.getcwd()
+        os.chdir(f.parent)
+        try:
+            yield Path(f.name)
+        finally:
+            os.chdir(cwd)
+    else:
+        yield f
+
+
+def collapse(df, rules):
+    """Replace the per-file rows under each rule's prefix by summary rows (kind 'collection')."""
+    drop, out = pd.Series(False, index=df.index), []
+    for prefix, depth in rules:
+        pre = prefix.strip("/") + "/"
+        sel = df["path"].str.startswith(pre)
+        if not sel.any():
+            continue
+        sub = df[sel]
+        rel = sub["path"].str[len(pre):]
+        base = (pre + rel.str.split("/").str[0]) if depth >= 1 else pd.Series(pre.rstrip("/"), index=sub.index)
+        for (b, kind, fmt), g in sub.groupby([base, sub["kind"], sub["format"]]):
+            ext = [list(map(float, e.split())) for e in g["extent_xmin_ymin_xmax_ymax"] if isinstance(e, str) and len(e.split()) == 4]
+            u = lambda c: sorted({str(v) for v in g[c] if isinstance(v, str) and v})
+            res = u("resolution")
+            out.append({"path": f"{b}/*", "layer": f"[{kind}: {fmt}]", "kind": "collection", "format": fmt,
+                        "geometry": f"{len(g)} {kind} files", "features": len(g), "crs": ", ".join(u("crs")[:4]),
+                        "resolution": (res[0] if len(res) == 1 else f"{len(res)} values, e.g. " + "; ".join(res[:3])) if res else "",
+                        "bands_dtype": "; ".join(u("bands_dtype")[:3]),
+                        "extent_xmin_ymin_xmax_ymax": " ".join(f"{v:.5g}" for v in (min(e[0] for e in ext), min(e[1] for e in ext), max(e[2] for e in ext), max(e[3] for e in ext))) if ext else "",
+                        "fields": "files: " + "; ".join(Path(p).stem for p in g["path"])[:300],
+                        "size_mb": round(float(g["size_mb"].sum()), 1), "modified": g["modified"].max(), "status": "ok"})
+        drop |= sel
+    return pd.concat([df[~drop], pd.DataFrame(out)], ignore_index=True).reindex(columns=AUTO)
+
+
 def scan(data):
     out = []
     for f in sorted(p for p in data.rglob("*") if p.is_file()):
@@ -79,15 +125,21 @@ def scan(data):
                   "modified": date.fromtimestamp(st.st_mtime).isoformat(), "status": "ok"}
         try:
             if ext in VECTOR_EXT:
-                rows = vector_rows(f, data)
+                with opened(f) as g:
+                    rows = vector_rows(g, data)
             elif ext in RASTER_EXT:
-                rows = raster_rows(f)
+                with opened(f) as g:
+                    rows = raster_rows(g)
             else:
                 rows = [{"layer": "", "kind": "other", "format": ext.lstrip(".")}]
         except Exception as e:
             rows = [{"layer": "", "kind": "unreadable", "format": ext.lstrip("."), "geometry": str(e)[:100]}]
         out += [{**common, **r} for r in rows]
-    return pd.DataFrame(out).reindex(columns=AUTO)
+    df = pd.DataFrame(out).reindex(columns=AUTO)
+    if COLLAPSE.exists():
+        rules = [(r.prefix, int(r.depth)) for r in pd.read_csv(COLLAPSE).itertuples()]
+        df = collapse(df, rules)
+    return df
 
 
 def main():
@@ -99,6 +151,9 @@ def main():
         merged = new.merge(old[key + MANUAL], on=key, how="left").fillna("")
         gone = old.merge(new[key], on=key, how="left", indicator=True)
         gone = gone[gone["_merge"] == "left_only"].drop(columns="_merge")
+        pre = tuple(r.prefix.strip("/") + "/" for r in pd.read_csv(COLLAPSE).itertuples()) if COLLAPSE.exists() else ()
+        gone = gone[~gone["path"].str.startswith(pre) | gone["path"].str.endswith("/*")] if pre else gone
+        gone = gone[~gone["path"].str.lower().str.endswith(tuple(SKIP_EXT))]
         gone["status"] = np.where(gone["kind"].isin(["cloud", "external"]), gone["status"], "missing")   # cloud datasets are catalogued by hand and are not files in _data
         merged = pd.concat([merged, gone], ignore_index=True)
     else:
@@ -111,7 +166,7 @@ def main():
           f"Generated by `tools/catalog_data.py` from the `_data` folder ({date.today().isoformat()}). Do not edit this page; "
           "edit the hand-written columns (description, source, year, remarks) in [sites/data_catalog.csv](../sites/data_catalog.csv) "
           "and rerun the script. New files are added on rerun and existing remarks are kept. The CSV also has extent, fields, "
-          "band type and modification date.", "",
+          "band type and modification date. Folders listed in [sites/catalog_collapse.csv](../sites/catalog_collapse.csv) are summarised as `collection` rows (file count, CRS and resolutions found, file names) instead of file by file.", "",
           "| " + " | ".join(cols) + " |", "|" + "---|" * len(cols)]
     for _, r in merged.iterrows():
         md.append("| " + " | ".join(str(r[c]).replace("|", "/") for c in cols) + " |")
