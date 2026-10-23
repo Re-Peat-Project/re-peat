@@ -1,0 +1,421 @@
+khg_id,khg,layer,class,label,area_km2,share_khg,peat_km2,share_peat,burned_peat_km2,burned_share,hs_now,hs_now_peat,lindung_km2,forest_protected_km2
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,forest,hl,Protection forest,10.5975,0.0105,10.5975,0.0143,6.9975,0.6603,131,131,,
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,forest,apl,Other land use,1001.9025,0.9895,732.4425,0.9857,195.2775,0.2666,1755,1694,,
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,forest,none,Not mapped,0.0225,0.0,0.0225,0.0,0.0,0.0,0,0,,
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,feg,lindung,Protected function,382.8375,0.3781,382.8375,0.5152,177.0975,0.4626,1636,1636,,
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,feg,budidaya,Cultivation function,629.685,0.6219,360.225,0.4848,25.1775,0.0699,250,189,,
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,licence_sawit,in,Oil palm,216.9225,0.2142,177.9075,0.2394,63.9225,0.3593,396,372,127.305,0.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,licence_any,in,Any licence,216.9225,0.2142,177.9075,0.2394,63.9225,0.3593,396,372,127.305,0.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,village,in,Target village,843.2775,0.8328,639.585,0.8607,202.2075,0.3162,1879,1820,,
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,forest,cons,Conservation,64.42,0.9453,45.28,0.9371,26.41,0.5833,60,48,,
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,forest,prod,Production forest,3.34,0.049,2.66,0.055,0.0,0.0,1,1,,
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,forest,apl,Other land use,0.39,0.0057,0.38,0.0079,0.0,0.0,1,1,,
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,feg,lindung,Protected function,65.58,0.9623,46.43,0.9609,26.41,0.5688,61,49,,
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,feg,budidaya,Cultivation function,2.57,0.0377,1.89,0.0391,0.0,0.0,1,1,,
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,forest,hl,Protection forest,0.01,0.0001,0.0,0.0,0.0,,0,0,,
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,forest,prod,Production forest,40.53,0.3103,32.76,0.6278,13.64,0.4164,59,57,,
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,forest,apl,Other land use,90.06,0.6896,19.42,0.3722,0.29,0.0149,1,0,,
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,feg,lindung,Protected function,17.36,0.1329,17.35,0.3325,8.37,0.4824,37,37,,
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,feg,budidaya,Cultivation function,113.24,0.8671,34.83,0.6675,5.56,0.1596,23,20,,
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,village,in,Target village,61.18,0.4685,28.5,0.5462,9.36,0.3284,46,46,,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,forest,apl,Other land use,307.86,1.0,136.52,1.0,49.1,0.3597,126,70,,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,feg,lindung,Protected function,88.19,0.2865,88.19,0.646,35.75,0.4054,51,51,,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,feg,budidaya,Cultivation function,219.67,0.7135,48.33,0.354,13.35,0.2762,75,19,,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,village,in,Target village,230.0,0.7471,120.84,0.8851,45.1,0.3732,115,70,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,forest,prod,Production forest,95.535,0.0853,39.3975,0.054,26.145,0.6636,56,35,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,forest,hpk,Convertible production,286.0425,0.2555,228.15,0.3129,127.35,0.5582,142,124,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,forest,apl,Other land use,737.4375,0.6587,461.115,0.6324,143.5725,0.3114,224,104,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,forest,other,"Water, undefined",0.54,0.0005,0.4725,0.0006,0.0,0.0,0,0,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,feg,lindung,Protected function,383.5575,0.3426,383.5575,0.526,143.28,0.3736,144,144,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,feg,budidaya,Cultivation function,735.9975,0.6574,345.5775,0.474,153.7875,0.445,278,119,,
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,licence_sawit,in,Oil palm,221.49,0.1978,156.285,0.2143,33.39,0.2136,78,50,116.7525,0.0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,licence_any,in,Any licence,221.49,0.1978,156.285,0.2143,33.39,0.2136,78,50,116.7525,0.0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,village,in,Target village,517.2525,0.462,419.1975,0.5749,169.9875,0.4055,186,137,,
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,forest,apl,Other land use,134.54,1.0,62.21,1.0,18.55,0.2982,196,117,,
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,feg,lindung,Protected function,26.82,0.1993,26.82,0.4311,12.18,0.4541,69,69,,
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,feg,budidaya,Cultivation function,107.72,0.8007,35.39,0.5689,6.37,0.18,127,48,,
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,village,in,Target village,110.96,0.8247,51.04,0.8204,18.23,0.3572,192,117,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,cons,Conservation,653.5625,0.1452,548.8125,0.1389,322.0,0.5867,246,208,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,hl,Protection forest,1503.125,0.3339,1433.875,0.3628,823.5,0.5743,862,830,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,prod,Production forest,729.125,0.1619,648.125,0.164,416.6875,0.6429,628,594,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,hpk,Convertible production,10.125,0.0022,8.5,0.0022,5.375,0.6324,16,16,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,apl,Other land use,1595.8125,0.3544,1304.25,0.33,283.375,0.2173,920,888,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,other,"Water, undefined",8.3125,0.0018,6.875,0.0017,0.4375,0.0636,2,2,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,forest,none,Not mapped,2.1875,0.0005,1.6875,0.0004,0.0,0.0,0,0,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,feg,lindung,Protected function,2621.375,0.5822,2446.6875,0.6191,1367.1875,0.5588,1372,1302,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,feg,budidaya,Cultivation function,1880.875,0.4178,1505.4375,0.3809,484.1875,0.3216,1302,1236,,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,licence_sawit,in,Oil palm,7.6875,0.0017,7.6875,0.0019,6.8125,0.8862,11,11,5.875,0.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,licence_pbph,in,Forest concession (PBPH),101.8125,0.0226,100.4375,0.0254,89.625,0.8923,54,46,74.5,0.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,licence_pphkm,in,Community forest (PPHKM),12.8125,0.0028,12.8125,0.0032,12.1875,0.9512,11,11,9.4375,9.4375
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,licence_pphtr,in,Plantation forest (PPHTR),18.9375,0.0042,18.6875,0.0047,13.125,0.7023,30,30,3.125,0.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,licence_tambang,in,Mining,0.125,0.0,0.125,0.0,0.0625,0.5,0,0,0.0,0.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,licence_any,in,Any licence,141.375,0.0314,139.75,0.0354,121.8125,0.8716,106,98,92.9375,9.4375
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,village,in,Target village,4231.25,0.9398,3711.3125,0.9391,1796.4375,0.484,2608,2474,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,forest,prod,Production forest,0.1,0.0004,0.0,0.0,0.0,,0,0,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,forest,hpk,Convertible production,172.11,0.7404,151.62,0.8227,82.69,0.5454,472,452,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,forest,apl,Other land use,58.36,0.251,32.31,0.1753,8.09,0.2504,17,14,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,forest,other,"Water, undefined",1.9,0.0082,0.37,0.002,0.04,0.1081,0,0,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,feg,lindung,Protected function,114.63,0.4931,114.63,0.622,62.54,0.5456,307,307,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,feg,budidaya,Cultivation function,117.84,0.5069,69.67,0.378,28.28,0.4059,182,159,,
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,village,in,Target village,129.92,0.5589,100.41,0.5448,57.83,0.5759,182,173,,
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,forest,apl,Other land use,328.44,0.9906,173.65,0.9899,127.68,0.7353,149,69,,
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,forest,other,"Water, undefined",3.12,0.0094,1.78,0.0101,0.94,0.5281,2,1,,
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,feg,lindung,Protected function,58.72,0.1771,58.72,0.3347,44.56,0.7589,20,20,,
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,feg,budidaya,Cultivation function,272.84,0.8229,116.71,0.6653,84.06,0.7202,131,50,,
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,village,in,Target village,325.35,0.9813,171.76,0.9791,127.55,0.7426,149,69,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,forest,hl,Protection forest,1.61,0.0024,0.8,0.0016,0.0,0.0,0,0,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,forest,prod,Production forest,123.94,0.1816,123.4,0.2514,90.78,0.7357,93,93,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,forest,apl,Other land use,553.13,0.8103,364.02,0.7415,10.77,0.0296,31,27,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,forest,none,Not mapped,3.97,0.0058,2.72,0.0055,0.0,0.0,0,0,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,feg,lindung,Protected function,156.27,0.2289,155.46,0.3167,85.2,0.5481,81,81,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,feg,budidaya,Cultivation function,526.38,0.7711,335.48,0.6833,16.35,0.0487,43,39,,
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,licence_pphkm,in,Community forest (PPHKM),23.42,0.0343,23.42,0.0477,21.35,0.9116,17,17,21.18,0.0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,licence_any,in,Any licence,23.42,0.0343,23.42,0.0477,21.35,0.9116,17,17,21.18,0.0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,village,in,Target village,483.63,0.7085,386.49,0.7872,101.53,0.2627,120,116,,
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,forest,apl,Other land use,156.34,1.0,45.29,1.0,16.03,0.3539,102,32,,
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,feg,lindung,Protected function,54.04,0.3457,6.48,0.1431,3.6,0.5556,30,2,,
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,feg,budidaya,Cultivation function,102.3,0.6543,38.81,0.8569,12.43,0.3203,72,30,,
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,licence_sawit,in,Oil palm,143.68,0.919,41.48,0.9159,14.7,0.3544,100,30,48.25,0.0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,licence_any,in,Any licence,143.68,0.919,41.48,0.9159,14.7,0.3544,100,30,48.25,0.0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,village,in,Target village,140.16,0.8965,39.65,0.8755,15.85,0.3997,100,32,,
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,forest,hpk,Convertible production,8.19,0.0628,7.96,0.115,0.0,0.0,0,0,,
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,forest,apl,Other land use,122.01,0.9362,61.24,0.8848,11.38,0.1858,85,81,,
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,forest,none,Not mapped,0.13,0.001,0.01,0.0001,0.0,0.0,0,0,,
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,feg,lindung,Protected function,35.92,0.2756,35.92,0.519,6.99,0.1946,64,64,,
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,feg,budidaya,Cultivation function,94.41,0.7244,33.29,0.481,4.39,0.1319,21,17,,
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,licence_sawit,in,Oil palm,16.35,0.1255,15.62,0.2257,0.74,0.0474,7,7,10.68,0.0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,licence_any,in,Any licence,16.35,0.1255,15.62,0.2257,0.74,0.0474,7,7,10.68,0.0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,village,in,Target village,130.2,0.999,69.2,0.9999,11.38,0.1645,85,81,,
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,forest,apl,Other land use,277.34,1.0,193.82,1.0,62.89,0.3245,88,44,,
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,feg,lindung,Protected function,84.51,0.3047,84.51,0.436,48.53,0.5743,2,2,,
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,feg,budidaya,Cultivation function,192.83,0.6953,109.31,0.564,14.36,0.1314,86,42,,
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,licence_sawit,in,Oil palm,60.68,0.2188,51.52,0.2658,33.24,0.6452,6,3,30.39,0.0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,licence_any,in,Any licence,60.68,0.2188,51.52,0.2658,33.24,0.6452,6,3,30.39,0.0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,village,in,Target village,258.1,0.9306,181.4,0.9359,62.79,0.3461,78,36,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,forest,cons,Conservation,0.31,0.0011,0.0,0.0,0.0,,0,0,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,forest,prod,Production forest,4.46,0.0159,1.64,0.0107,0.28,0.1707,14,7,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,forest,hpk,Convertible production,41.08,0.1467,26.39,0.1714,13.06,0.4949,161,152,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,forest,apl,Other land use,234.1,0.836,125.85,0.8176,26.13,0.2076,520,445,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,forest,none,Not mapped,0.07,0.0002,0.05,0.0003,0.0,0.0,0,0,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,feg,lindung,Protected function,87.8,0.3135,87.49,0.5684,26.02,0.2974,478,478,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,feg,budidaya,Cultivation function,192.22,0.6865,66.44,0.4316,13.45,0.2024,217,126,,
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,licence_sawit,in,Oil palm,158.29,0.5653,89.92,0.5842,9.06,0.1008,328,298,60.85,0.0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,licence_pbph,in,Forest concession (PBPH),4.46,0.0159,1.64,0.0107,0.28,0.1707,14,7,0.0,0.0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,licence_tambang,in,Mining,2.32,0.0083,0.26,0.0017,0.0,0.0,0,0,0.0,0.0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,licence_any,in,Any licence,165.07,0.5895,91.82,0.5965,9.34,0.1017,342,305,60.85,0.0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,village,in,Target village,279.95,0.9998,153.88,0.9997,39.47,0.2565,695,604,,
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,forest,hpk,Convertible production,7.46,0.0521,3.53,0.0435,3.05,0.864,2,2,,
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,forest,apl,Other land use,135.81,0.9479,77.56,0.9565,44.02,0.5676,27,13,,
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,feg,lindung,Protected function,41.17,0.2874,41.17,0.5077,24.32,0.5907,10,10,,
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,feg,budidaya,Cultivation function,102.1,0.7126,39.92,0.4923,22.75,0.5699,19,5,,
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,licence_sawit,in,Oil palm,28.84,0.2013,6.53,0.0805,2.81,0.4303,7,1,0.0,0.0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,licence_any,in,Any licence,28.84,0.2013,6.53,0.0805,2.81,0.4303,7,1,0.0,0.0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,village,in,Target village,123.28,0.8605,76.95,0.9489,47.07,0.6117,25,15,,
+KHG.16.05.02,KHG Sungai Kalumpang,forest,apl,Other land use,71.95,1.0,47.82,1.0,27.99,0.5853,10,8,,
+KHG.16.05.02,KHG Sungai Kalumpang,feg,lindung,Protected function,28.37,0.3943,28.37,0.5933,15.59,0.5495,6,6,,
+KHG.16.05.02,KHG Sungai Kalumpang,feg,budidaya,Cultivation function,43.58,0.6057,19.45,0.4067,12.4,0.6375,4,2,,
+KHG.16.05.02,KHG Sungai Kalumpang,licence_sawit,in,Oil palm,60.12,0.8356,44.37,0.9279,27.2,0.613,8,8,28.37,0.0
+KHG.16.05.02,KHG Sungai Kalumpang,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05.02,KHG Sungai Kalumpang,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05.02,KHG Sungai Kalumpang,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.05.02,KHG Sungai Kalumpang,licence_tambang,in,Mining,1.33,0.0185,0.23,0.0048,0.0,0.0,0,0,0.0,0.0
+KHG.16.05.02,KHG Sungai Kalumpang,licence_any,in,Any licence,61.45,0.8541,44.6,0.9327,27.2,0.6099,8,8,28.37,0.0
+KHG.16.05.02,KHG Sungai Kalumpang,village,in,Target village,67.03,0.9316,44.57,0.932,26.53,0.5952,9,7,,
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,forest,apl,Other land use,295.7,1.0,148.2,1.0,63.89,0.4311,41,26,,
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,feg,lindung,Protected function,90.05,0.3045,90.05,0.6076,48.18,0.535,21,21,,
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,feg,budidaya,Cultivation function,205.65,0.6955,58.15,0.3924,15.71,0.2702,20,5,,
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,licence_sawit,in,Oil palm,169.49,0.5732,101.73,0.6864,57.41,0.5643,26,20,65.86,0.0
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,licence_any,in,Any licence,169.49,0.5732,101.73,0.6864,57.41,0.5643,26,20,65.86,0.0
+KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,village,in,Target village,198.95,0.6728,97.34,0.6568,35.05,0.3601,36,21,,
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,forest,prod,Production forest,23.75,0.0553,22.81,0.0648,17.03,0.7466,6,3,,
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,forest,hpk,Convertible production,11.39,0.0265,8.63,0.0245,3.08,0.3569,4,3,,
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,forest,apl,Other land use,393.97,0.9181,320.83,0.9108,74.89,0.2334,92,91,,
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,feg,lindung,Protected function,205.77,0.4795,205.77,0.5841,84.48,0.4106,74,74,,
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,feg,budidaya,Cultivation function,223.34,0.5205,146.5,0.4159,10.52,0.0718,28,23,,
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,licence_sawit,in,Oil palm,310.31,0.7231,266.31,0.756,67.38,0.253,89,88,174.33,0.0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,licence_tambang,in,Mining,5.94,0.0138,3.33,0.0095,0.88,0.2643,8,5,0.17,0.0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,licence_any,in,Any licence,316.25,0.737,269.64,0.7654,68.26,0.2532,97,93,174.5,0.0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,village,in,Target village,396.74,0.9246,329.17,0.9344,94.94,0.2884,102,97,,
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,forest,hpk,Convertible production,105.75,0.1008,105.2325,0.123,76.23,0.7244,3,2,,
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,forest,apl,Other land use,943.6275,0.8992,750.33,0.877,463.815,0.6181,202,179,,
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,feg,lindung,Protected function,604.26,0.5758,604.26,0.7063,378.9,0.627,83,83,,
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,feg,budidaya,Cultivation function,445.1175,0.4242,251.3025,0.2937,161.145,0.6412,122,98,,
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,licence_sawit,in,Oil palm,383.8275,0.3658,337.995,0.3951,207.045,0.6126,128,116,250.065,0.0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,licence_any,in,Any licence,383.8275,0.3658,337.995,0.3951,207.045,0.6126,128,116,250.065,0.0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,village,in,Target village,965.0475,0.9196,775.98,0.907,507.3075,0.6538,172,152,,
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,forest,prod,Production forest,600.3,0.8394,493.53,0.8902,303.49,0.6149,51,39,,
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,forest,hpk,Convertible production,0.01,0.0,0.0,0.0,0.0,,0,0,,
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,forest,apl,Other land use,114.83,0.1606,60.85,0.1098,33.17,0.5451,7,5,,
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,feg,lindung,Protected function,324.05,0.4531,324.05,0.5845,222.49,0.6866,16,16,,
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,feg,budidaya,Cultivation function,391.09,0.5469,230.33,0.4155,114.17,0.4957,42,28,,
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,licence_sawit,in,Oil palm,0.07,0.0001,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,licence_pbph,in,Forest concession (PBPH),551.77,0.7716,454.23,0.8193,275.6,0.6067,44,33,304.71,0.0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,licence_tambang,in,Mining,11.28,0.0158,10.24,0.0185,7.67,0.749,0,0,6.29,0.0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,licence_any,in,Any licence,563.12,0.7874,464.47,0.8378,283.27,0.6099,44,33,311.0,0.0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,village,in,Target village,227.34,0.3179,186.72,0.3368,80.67,0.432,7,4,,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,forest,prod,Production forest,108.34,0.2122,105.0,0.279,38.87,0.3702,544,542,,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,forest,apl,Other land use,401.64,0.7866,270.85,0.7197,22.05,0.0814,206,149,,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,forest,none,Not mapped,0.6,0.0012,0.47,0.0012,0.0,0.0,0,0,,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,feg,lindung,Protected function,169.57,0.3321,169.57,0.4506,47.67,0.2811,501,501,,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,feg,budidaya,Cultivation function,341.01,0.6679,206.75,0.5494,13.25,0.0641,249,190,,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,licence_tambang,in,Mining,4.53,0.0089,0.05,0.0001,0.0,0.0,0,0,0.0,0.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,licence_any,in,Any licence,4.53,0.0089,0.05,0.0001,0.0,0.0,0,0,0.0,0.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,village,in,Target village,465.46,0.9116,342.55,0.9103,60.92,0.1778,750,691,,
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,forest,apl,Other land use,82.64,0.9994,58.61,0.9991,12.97,0.2213,54,33,,
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,forest,other,"Water, undefined",0.05,0.0006,0.05,0.0009,0.0,0.0,0,0,,
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,feg,lindung,Protected function,39.93,0.4829,39.04,0.6655,11.72,0.3002,25,21,,
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,feg,budidaya,Cultivation function,42.76,0.5171,19.62,0.3345,1.25,0.0637,29,12,,
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,licence_sawit,in,Oil palm,4.18,0.0506,0.93,0.0159,0.32,0.3441,5,0,0.43,0.0
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,licence_any,in,Any licence,4.18,0.0506,0.93,0.0159,0.32,0.3441,5,0,0.43,0.0
+KHG.11.05-14.01,KHG Krueng Pneunom - Krueng Lambalik,village,in,Target village,80.22,0.9701,57.24,0.9758,12.13,0.2119,54,33,,
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,forest,hpk,Convertible production,0.82,0.0079,0.61,0.007,0.61,1.0,0,0,,
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,forest,apl,Other land use,103.07,0.9921,86.42,0.993,85.67,0.9913,9,8,,
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,feg,lindung,Protected function,49.68,0.4782,49.68,0.5708,49.59,0.9982,0,0,,
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,feg,budidaya,Cultivation function,54.21,0.5218,37.35,0.4292,36.69,0.9823,9,8,,
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,licence_sawit,in,Oil palm,102.1,0.9828,85.84,0.9863,85.23,0.9929,9,8,49.68,0.0
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,licence_any,in,Any licence,102.1,0.9828,85.84,0.9863,85.23,0.9929,9,8,49.68,0.0
+KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,village,in,Target village,0.16,0.0015,0.08,0.0009,0.08,1.0,0,0,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,forest,prod,Production forest,67.9,0.1054,55.46,0.1159,4.45,0.0802,122,112,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,forest,hpk,Convertible production,19.85,0.0308,16.3,0.0341,6.85,0.4202,73,68,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,forest,apl,Other land use,556.57,0.8636,406.7,0.8498,103.15,0.2536,1459,1385,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,forest,none,Not mapped,0.18,0.0003,0.11,0.0002,0.0,0.0,0,0,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,feg,lindung,Protected function,220.51,0.3421,220.51,0.4608,65.79,0.2984,850,850,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,feg,budidaya,Cultivation function,423.99,0.6579,258.06,0.5392,48.66,0.1886,804,715,,
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,licence_sawit,in,Oil palm,243.91,0.3784,197.17,0.412,36.29,0.1841,763,720,114.08,0.0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,licence_pphkm,in,Community forest (PPHKM),0.28,0.0004,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,licence_tambang,in,Mining,0.03,0.0,0.03,0.0001,0.0,0.0,0,0,0.0,0.0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,licence_any,in,Any licence,244.22,0.3789,197.2,0.4121,36.29,0.184,763,720,114.08,0.0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,village,in,Target village,511.25,0.7933,409.63,0.8559,113.53,0.2772,1645,1562,,
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,forest,prod,Production forest,100.49,0.1163,98.26,0.1298,18.99,0.1933,0,0,,
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,forest,apl,Other land use,763.51,0.8837,658.78,0.8702,194.82,0.2957,66,61,,
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,feg,lindung,Protected function,519.17,0.6009,519.17,0.6858,132.46,0.2551,27,27,,
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,feg,budidaya,Cultivation function,344.83,0.3991,237.87,0.3142,81.35,0.342,39,34,,
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,licence_sawit,in,Oil palm,381.02,0.441,362.3,0.4786,123.97,0.3422,22,21,279.33,0.0
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,licence_tambang,in,Mining,1.13,0.0013,0.12,0.0002,0.0,0.0,0,0,0.0,0.0
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,licence_any,in,Any licence,382.15,0.4423,362.42,0.4787,123.97,0.3421,22,21,279.33,0.0
+KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,village,in,Target village,794.56,0.9196,725.0,0.9577,203.61,0.2808,65,60,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,forest,cons,Conservation,880.04,0.4636,733.24,0.4571,668.24,0.9114,151,102,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,forest,hl,Protection forest,243.64,0.1284,200.28,0.1248,6.48,0.0324,0,0,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,forest,prod,Production forest,50.0,0.0263,41.88,0.0261,26.08,0.6227,8,6,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,forest,apl,Other land use,724.08,0.3815,628.8,0.392,67.32,0.1071,58,38,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,forest,none,Not mapped,0.32,0.0002,0.08,0.0,0.0,0.0,0,0,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,feg,lindung,Protected function,1664.16,0.8768,1472.4,0.9178,710.4,0.4825,176,128,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,feg,budidaya,Cultivation function,233.92,0.1232,131.88,0.0822,57.72,0.4377,41,18,,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,licence_sawit,in,Oil palm,21.16,0.0111,2.36,0.0015,2.08,0.8814,4,2,0.0,0.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,licence_pbph,in,Forest concession (PBPH),50.2,0.0264,42.08,0.0262,26.08,0.6198,8,6,14.76,0.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,licence_pphkm,in,Community forest (PPHKM),1.6,0.0008,1.32,0.0008,0.0,0.0,0,0,1.6,1.6
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,licence_any,in,Any licence,72.96,0.0384,45.76,0.0285,28.16,0.6154,12,8,16.36,1.6
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,village,in,Target village,1109.44,0.5845,919.56,0.5732,666.56,0.7249,176,111,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,forest,cons,Conservation,1.225,0.0002,0.6125,0.0001,0.49,0.8,0,0,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,forest,hl,Protection forest,638.225,0.1004,465.1325,0.0858,132.055,0.2839,0,0,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,forest,prod,Production forest,4692.24,0.7384,4155.8125,0.7665,1618.47,0.3894,11,8,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,forest,hpk,Convertible production,0.49,0.0001,0.49,0.0001,0.1225,0.25,0,0,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,forest,apl,Other land use,1018.5875,0.1603,797.3525,0.1471,247.45,0.3103,233,205,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,forest,none,Not mapped,4.0425,0.0006,2.45,0.0005,0.0,0.0,0,0,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,feg,lindung,Protected function,3813.5475,0.6001,3633.4725,0.6702,1237.1275,0.3405,26,26,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,feg,budidaya,Cultivation function,2541.2625,0.3999,1788.3775,0.3298,761.46,0.4258,218,187,,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,licence_sawit,in,Oil palm,269.99,0.0425,212.5375,0.0392,143.08,0.6732,204,185,30.9925,0.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,licence_pbph,in,Forest concession (PBPH),4625.4775,0.7279,4079.495,0.7524,1587.4775,0.3891,11,8,2802.1875,0.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,licence_pphkm,in,Community forest (PPHKM),21.56,0.0034,21.315,0.0039,17.5175,0.8218,0,0,21.56,1.47
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,licence_any,in,Any licence,4917.0275,0.7737,4313.3475,0.7955,1748.075,0.4053,215,193,2854.74,1.47
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,village,in,Target village,2957.5175,0.4654,2645.755,0.488,1115.485,0.4216,193,170,,
+KHG.14.03.02,KHG Pulau Bengkalis,forest,prod,Production forest,231.0,0.2549,224.86,0.2517,45.87,0.204,143,143,,
+KHG.14.03.02,KHG Pulau Bengkalis,forest,hpk,Convertible production,55.61,0.0614,55.61,0.0623,9.83,0.1768,189,189,,
+KHG.14.03.02,KHG Pulau Bengkalis,forest,apl,Other land use,613.17,0.6766,606.68,0.6792,28.41,0.0468,342,342,,
+KHG.14.03.02,KHG Pulau Bengkalis,forest,other,"Water, undefined",2.12,0.0023,2.08,0.0023,0.0,0.0,0,0,,
+KHG.14.03.02,KHG Pulau Bengkalis,forest,none,Not mapped,4.4,0.0049,4.05,0.0045,0.3,0.0741,0,0,,
+KHG.14.03.02,KHG Pulau Bengkalis,feg,lindung,Protected function,417.22,0.4604,417.22,0.4671,77.52,0.1858,565,565,,
+KHG.14.03.02,KHG Pulau Bengkalis,feg,budidaya,Cultivation function,489.08,0.5396,476.06,0.5329,6.89,0.0145,109,109,,
+KHG.14.03.02,KHG Pulau Bengkalis,licence_sawit,in,Oil palm,38.55,0.0425,38.55,0.0432,3.42,0.0887,84,84,22.74,0.0
+KHG.14.03.02,KHG Pulau Bengkalis,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.03.02,KHG Pulau Bengkalis,licence_pphkm,in,Community forest (PPHKM),6.51,0.0072,6.39,0.0072,0.0,0.0,0,0,0.0,0.0
+KHG.14.03.02,KHG Pulau Bengkalis,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.03.02,KHG Pulau Bengkalis,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.03.02,KHG Pulau Bengkalis,licence_any,in,Any licence,45.06,0.0497,44.94,0.0503,3.42,0.0761,84,84,22.74,0.0
+KHG.14.03.02,KHG Pulau Bengkalis,village,in,Target village,872.68,0.9629,861.17,0.9641,84.11,0.0977,673,673,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,forest,cons,Conservation,5.12,0.0025,3.6,0.0021,0.0,0.0,0,0,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,forest,hl,Protection forest,256.84,0.1276,256.4,0.1485,99.4,0.3877,17,17,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,forest,prod,Production forest,473.8,0.2353,407.64,0.2361,81.04,0.1988,4,4,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,forest,hpk,Convertible production,11.6,0.0058,1.96,0.0011,0.0,0.0,0,0,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,forest,apl,Other land use,1265.72,0.6287,1057.28,0.6122,97.76,0.0925,13,12,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,forest,none,Not mapped,0.12,0.0001,0.0,0.0,0.0,,0,0,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,feg,lindung,Protected function,1106.96,0.5499,1105.28,0.64,215.68,0.1951,25,25,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,feg,budidaya,Cultivation function,906.24,0.4501,621.6,0.36,62.52,0.1006,9,8,,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,licence_sawit,in,Oil palm,119.56,0.0594,106.8,0.0618,13.44,0.1258,1,1,70.0,0.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,licence_pbph,in,Forest concession (PBPH),326.36,0.1621,310.44,0.1798,42.36,0.1365,3,3,273.52,0.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,licence_pphkm,in,Community forest (PPHKM),138.96,0.069,137.72,0.0798,75.6,0.5489,2,2,133.68,49.08
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,licence_tambang,in,Mining,0.2,0.0001,0.16,0.0001,0.0,0.0,0,0,0.0,0.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,licence_any,in,Any licence,585.08,0.2906,555.12,0.3215,131.4,0.2367,6,6,477.2,49.08
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,village,in,Target village,1771.84,0.8801,1571.48,0.91,278.2,0.177,32,32,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,forest,cons,Conservation,1051.875,0.5726,720.4725,0.503,45.81,0.0636,143,92,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,forest,hl,Protection forest,166.2075,0.0905,165.9375,0.1158,1.1475,0.0069,0,0,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,forest,prod,Production forest,529.9425,0.2885,488.34,0.3409,120.825,0.2474,9,7,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,forest,apl,Other land use,87.48,0.0476,56.8575,0.0397,14.49,0.2548,5,4,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,forest,none,Not mapped,1.44,0.0008,0.7425,0.0005,0.0,0.0,0,0,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,feg,lindung,Protected function,1543.8825,0.8405,1207.4625,0.843,126.1125,0.1044,147,95,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,feg,budidaya,Cultivation function,293.0625,0.1595,224.8875,0.157,56.16,0.2497,10,8,,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,licence_pbph,in,Forest concession (PBPH),441.0,0.2401,411.0075,0.2869,78.5475,0.1911,0,0,291.51,10.17
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,licence_pphkm,in,Community forest (PPHKM),21.555,0.0117,20.4075,0.0142,8.82,0.4322,0,0,2.9025,0.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,licence_any,in,Any licence,462.555,0.2518,431.415,0.3012,87.3675,0.2025,0,0,294.4125,10.17
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,village,in,Target village,1253.79,0.6825,1005.75,0.7022,141.8175,0.141,18,11,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,forest,cons,Conservation,1513.53,0.2715,1295.91,0.2937,105.39,0.0813,282,196,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,forest,hl,Protection forest,2003.49,0.3594,1858.77,0.4213,261.45,0.1407,60,53,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,forest,prod,Production forest,411.57,0.0738,276.3,0.0626,3.06,0.0111,55,39,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,forest,hpk,Convertible production,125.55,0.0225,62.91,0.0143,6.39,0.1016,15,15,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,forest,apl,Other land use,1503.27,0.2697,906.39,0.2054,214.11,0.2362,155,112,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,forest,other,"Water, undefined",16.38,0.0029,11.61,0.0026,1.89,0.1628,3,3,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,feg,lindung,Protected function,3766.23,0.6757,3400.74,0.7708,384.66,0.1131,378,285,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,feg,budidaya,Cultivation function,1807.56,0.3243,1011.15,0.2292,207.63,0.2053,192,133,,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,licence_sawit,in,Oil palm,351.0,0.063,188.1,0.0426,58.5,0.311,64,53,42.93,40.59
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,licence_pbph,in,Forest concession (PBPH),349.38,0.0627,256.05,0.058,2.34,0.0091,44,32,138.33,0.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,licence_tambang,in,Mining,0.09,0.0,0.09,0.0,0.0,0.0,0,0,0.0,0.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,licence_any,in,Any licence,700.47,0.1257,444.24,0.1007,60.84,0.137,108,85,181.26,40.59
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,village,in,Target village,3047.94,0.5468,2528.91,0.5732,503.64,0.1992,423,338,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,forest,hl,Protection forest,345.0,0.0867,158.25,0.0934,18.0,0.1137,37,33,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,forest,prod,Production forest,1919.125,0.4823,1140.875,0.6731,89.125,0.0781,679,541,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,forest,hpk,Convertible production,1659.8125,0.4171,377.4375,0.2227,6.8125,0.018,597,317,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,forest,apl,Other land use,55.1875,0.0139,18.3125,0.0108,3.3125,0.1809,38,29,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,feg,lindung,Protected function,1582.625,0.3977,1394.5,0.8228,95.0,0.0681,655,650,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,feg,budidaya,Cultivation function,2396.5,0.6023,300.375,0.1772,22.25,0.0741,696,270,,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,licence_pbph,in,Forest concession (PBPH),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,licence_pphkm,in,Community forest (PPHKM),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,licence_any,in,Any licence,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.10.01,KHG Pulau Padang,forest,cons,Conservation,52.6725,0.0473,52.425,0.0476,0.3375,0.0064,0,0,,
+KHG.14.10.01,KHG Pulau Padang,forest,prod,Production forest,691.8525,0.6219,690.2325,0.6266,25.335,0.0367,9,9,,
+KHG.14.10.01,KHG Pulau Padang,forest,hpk,Convertible production,64.4625,0.0579,64.395,0.0585,6.03,0.0936,0,0,,
+KHG.14.10.01,KHG Pulau Padang,forest,apl,Other land use,297.1125,0.2671,289.08,0.2624,10.0575,0.0348,8,8,,
+KHG.14.10.01,KHG Pulau Padang,forest,other,"Water, undefined",1.9575,0.0018,1.935,0.0018,0.0,0.0,0,0,,
+KHG.14.10.01,KHG Pulau Padang,forest,none,Not mapped,4.455,0.004,3.465,0.0031,0.0,0.0,0,0,,
+KHG.14.10.01,KHG Pulau Padang,feg,lindung,Protected function,531.7425,0.478,531.5175,0.4825,26.3925,0.0497,15,15,,
+KHG.14.10.01,KHG Pulau Padang,feg,budidaya,Cultivation function,580.77,0.522,570.015,0.5175,15.3675,0.027,2,2,,
+KHG.14.10.01,KHG Pulau Padang,licence_sawit,in,Oil palm,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.10.01,KHG Pulau Padang,licence_pbph,in,Forest concession (PBPH),561.015,0.5043,560.9025,0.5092,18.0675,0.0322,2,2,345.2175,1.71
+KHG.14.10.01,KHG Pulau Padang,licence_pphkm,in,Community forest (PPHKM),13.4325,0.0121,13.4325,0.0122,0.045,0.0034,0,0,8.4825,0.0
+KHG.14.10.01,KHG Pulau Padang,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.10.01,KHG Pulau Padang,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.10.01,KHG Pulau Padang,licence_any,in,Any licence,574.4475,0.5164,574.335,0.5214,18.1125,0.0315,2,2,353.7,1.71
+KHG.14.10.01,KHG Pulau Padang,village,in,Target village,1107.9,0.9959,1097.91,0.9967,41.76,0.038,17,17,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,forest,hl,Protection forest,4.23,0.0031,4.23,0.0031,0.0,0.0,0,0,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,forest,prod,Production forest,740.205,0.5363,738.0225,0.5409,24.93,0.0338,0,0,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,forest,hpk,Convertible production,373.41,0.2706,371.6325,0.2724,16.6725,0.0449,1,1,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,forest,apl,Other land use,243.225,0.1762,237.8925,0.1744,3.8925,0.0164,1,0,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,forest,other,"Water, undefined",15.66,0.0113,9.5625,0.007,0.0,0.0,0,0,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,forest,none,Not mapped,3.3975,0.0025,3.015,0.0022,0.0,0.0,0,0,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,feg,lindung,Protected function,677.6775,0.491,677.6775,0.4967,20.0475,0.0296,0,0,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,feg,budidaya,Cultivation function,702.45,0.509,686.6775,0.5033,25.4475,0.0371,2,1,,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,licence_sawit,in,Oil palm,23.5125,0.017,23.5125,0.0172,2.6325,0.112,0,0,4.545,0.0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,licence_pbph,in,Forest concession (PBPH),248.0625,0.1797,248.04,0.1818,5.3325,0.0215,0,0,176.535,0.0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,licence_pphkm,in,Community forest (PPHKM),94.14,0.0682,92.9925,0.0682,5.1075,0.0549,0,0,30.8025,4.23
+KHG.14.10.03,KHG Pulau Tebing Tinggi,licence_pphtr,in,Plantation forest (PPHTR),0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,licence_tambang,in,Mining,0.0,0.0,0.0,0.0,0.0,,0,0,0.0,0.0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,licence_any,in,Any licence,365.715,0.265,364.545,0.2672,13.0725,0.0359,0,0,211.8825,4.23
+KHG.14.10.03,KHG Pulau Tebing Tinggi,village,in,Target village,1361.0475,0.9862,1347.48,0.9876,45.3375,0.0336,2,1,,

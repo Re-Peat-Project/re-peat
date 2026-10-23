@@ -36,6 +36,17 @@ For the top N KHG the engine's fetcher (`python -m national.run --fetch-only`, c
 - These layers are coarse (4 km climate, 250 m sampled land cover) and are shown, not scored.
 - A bug in `repeat_common.sources.static_cloud` is fixed here: it kept only the last STAC tile, so a KHG on a tile boundary got land cover or surface water for part of its area. Tiles are now mosaicked. The old caches under `repeat-prioritisation/data_local/cache` (Kampar-Gaung `71`, Sugihan-Lumpur `16.02.01`) were built before the fix; the Kampar-Gaung JRC water layer is 67% empty, so delete its `static/water_season.tif` and `static/worldcover.tif` and re-run to rebuild them.
 
+## Land status overlays
+
+`python -m national.overlay --config configs/examples/national_stage3.yaml` crosses the profiled KHG (the stage 3 selection: top 25 and the team's) with four layers: forest area function (`KWSHUTAN_AR_250K_2023`), peat ecosystem function (`FEG__Indonesia__2017`), business licences (`ALL_Updade__IZIN_USAHA`, 2025) and the Bluebook target villages. Inputs are named under `inputs:` in the config, so an updated layer is a file swap.
+
+- **Method:** a regular grid of points inside each KHG (100 m, or 200 m for the largest). Each point gets its peat flag (GFW extent), its class in each layer, whether it burned in 2015 to 2025, and its licences. Areas are point counts times the cell area, never `Shape_Area`.
+- **Licences overlap**, so licence areas are not summed: "any licence" counts a point once, and the per-type bars can add up to more than the peat. Forest area has 21 codes, grouped into conservation, protection forest, production forest (HP, HPT), convertible production (HPK), other land use (APL) and water or undefined.
+- **Hotspots** of this year are matched to the same polygons; the counts by class add back to the hotspots on peat of the profile (checked for all 34 KHG).
+- **Outputs** in `reports/national_profile/stage3/overlay/`: `overlay_summary.csv` (area, peat, burned peat and hotspots per KHG, layer and class; licence rows also show the area on protected peat function and on conservation or protection forest), `overlay_actors.csv` (licence holders per KHG: area, area on protected function, burned peat, hotspots), `overlay_map.json` (clipped polygons for the dashboard).
+- **Reading it:** the figures say where fire falls, not who set it. A licence layer dated 2025 is matched to hotspots of 2026 and burns of 2015 to 2025, so a holder may not have held the land in earlier years. Set `overlay: {company_names: false}` in the config to publish the page without holder names.
+- Not scored: the overlays do not enter the ranking.
+
 ## This year's hotspots
 
 The KLH file has one layer per month and two attribute schemas: January, April, August and September carry a numeric confidence, a class (Rendah, Sedang, Tinggi), FRP and the acquisition date; February, March, May, June and July carry only Kepercayaan (Low, Medium, High), with no FRP and no date. `repeat-prioritisation` harmonises the confidence to low, medium and high across all nine months (month comes from the layer name), keeps medium and high, and counts hotspots, so FRP, which exists for four of nine months, is reported but never summed or scored. The record ends on the last acquisition date in the file (15 September 2026), so it is year to date. MODIS (1 km) counts are not comparable with the VIIRS archive; that is why this is a separate indicator with a separate weight and rank, not an extra year of the history. The file has 9 repeated coordinate pairs out of 167,718 (all in June and July), left in. The profile maps show the actual points of this year (filled = on peat, hollow = off peat, larger = high confidence), not cells.
@@ -48,6 +59,7 @@ The KLH file has one layer per month and two attribute schemas: January, April, 
 - **Rank shift:** default rank against rank at your weights, for the top 12 of each.
 - **Profile:** the KHG you click, with the 34 KHG that have one (the top 25 at default weights and the team's). Strip plots place the KHG among all ranked KHG for each parameter; the line charts show burned share, VIIRS hotspots, this year's hotspots by month, TerraClimate deficit and rain; the map has burn counts, canals by class and this year's hotspot points.
 - **Hover help:** the weight labels explain each parameter's source and method; the filters, KPI tiles, chart titles, legends and map layer chips have a short note. In the table, a header shows the unit and source, a cell shows the value with its unit, and the table can be searched, sorted by any column and extended to the KHG that are not ranked. In table mode the list spans the full width.
+- **Land status:** on the profile map a switch shows forest area function, peat function or licences (hover gives the class or the holder) and a chip draws the target villages. Under the strip plots, stacked bars compare how the peat, the burned peat and this year's hotspots split over each layer, followed by the licence holders with the most hotspots in their area.
 - **Link state:** the address holds the weights, filters, view, theme, language (`l=id`) and selected KHG, so a view can be shared.
 - **Language:** English and Bahasa Indonesia, switched with the EN / ID buttons in the header; the first visit follows the browser language. Interface text, tooltips, table headers and map labels switch together, and numbers use the local format. The Indonesian strings are in `national/assets/i18n_id.js`, a dictionary keyed by the English text; a string missing from it shows in English, so a new label needs one added line. The page also has a table view with a CSV download.
 
@@ -86,6 +98,7 @@ python -m national.dashboard --config configs/examples/national_profile.yaml --t
 python -m national.stage3 select --config configs/examples/national_stage3.yaml            # top-N boundaries from the operational ranking
 python -m national.run --config configs/examples/national_stage3.yaml --fetch-only         # TerraClimate, WorldCover, JRC (about 10 min for 25 KHG)
 python -m national.stage3 summarize --config configs/examples/national_stage3.yaml
+python -m national.overlay --config configs/examples/national_stage3.yaml                  # land-status overlays for the same KHG
 python -m national.dashboard --config configs/examples/national_profile.yaml --top 25   # picks up the stage 3 tables; --reassemble reuses the last data
 python -m tests.test_national_profile
 ```

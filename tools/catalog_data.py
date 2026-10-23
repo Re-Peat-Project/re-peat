@@ -27,7 +27,7 @@ AUTO = ["path", "layer", "kind", "format", "geometry", "features", "crs", "resol
 MANUAL = ["description", "source", "year", "remarks"]
 VECTOR_EXT = {".gpkg", ".shp", ".geojson", ".fgb", ".gdb", ".kml"}
 RASTER_EXT = {".tif", ".tiff", ".img", ".vrt", ".nc", ".asc"}
-SKIP_EXT = {".shx", ".dbf", ".prj", ".cpg", ".sbn", ".sbx", ".xml", ".ovr", ".aux", ".qix", ".done"}  # shapefile sidecars
+SKIP_EXT = {".tfw", ".shx", ".dbf", ".prj", ".cpg", ".sbn", ".sbx", ".xml", ".ovr", ".aux", ".qix", ".done"}  # shapefile sidecars
 
 
 def crs_label(crs):
