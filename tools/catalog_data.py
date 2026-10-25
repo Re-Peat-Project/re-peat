@@ -31,7 +31,7 @@ AUTO = ["path", "layer", "kind", "format", "geometry", "features", "crs", "resol
         "extent_xmin_ymin_xmax_ymax", "fields", "size_mb", "modified", "status"]
 MANUAL = ["description", "source", "year", "remarks"]
 VECTOR_EXT = {".gpkg", ".shp", ".geojson", ".fgb", ".gdb", ".kml"}
-RASTER_EXT = {".tif", ".tiff", ".img", ".vrt", ".nc", ".asc", ".sdat"}
+RASTER_EXT = {".tif", ".tiff", ".img", ".vrt", ".nc", ".asc", ".sdat", ".jp2"}
 COLLAPSE = HUB / "sites" / "catalog_collapse.csv"
 SKIP_EXT = {".lock", ".rrd", ".sprj", ".sgrd", ".mgrd", ".tfw", ".shx", ".dbf", ".prj", ".cpg", ".sbn", ".sbx", ".xml", ".ovr", ".aux", ".qix", ".done"}  # shapefile sidecars
 

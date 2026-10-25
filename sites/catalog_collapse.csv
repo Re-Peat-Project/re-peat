@@ -4,3 +4,7 @@ Peat depth and DTM/DTM_Kalimantan,1,modelled DTM per KHG by province
 Peat depth and DTM/DTM_Sumatera-002,1,modelled DTM per KHG by province
 Peat depth and DTM/PeatDepth_Kalimantan,1,modelled peat depth per KHG by province
 Peat depth and DTM/PeatDepth_Sumatera,1,modelled peat depth per KHG by province
+sekat_kanal_bluebook_2026/demnas,1,BlueBook canal blocks from DEMNAS contours by province
+dem/demnas_tiles,0,DEMNAS sheets as delivered by BIG Tanahair
+dem/open,1,open global DEM tiles per product
+canopy/meta_chm_v1,0,Meta/WRI canopy height quadkey tiles

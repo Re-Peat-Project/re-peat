@@ -1,16 +1,16 @@
 # Sungai Sugihan - Sungai Lumpur (KHG.16.02.01), step 2: delineate the sub-KHG.
 # Needs the clipped inputs from step 1 (README.md) and the environment variable
-#   REPEAT_DATA = the folder that holds "Peat depth and DTM" and "_converted".
-#   python -m repeat_delineation --config ../re-peat/sites/sugihan_lumpur/delineate.yaml
-khg: ${REPEAT_WORK}/sugihan_lumpur/khg.gpkg
+#   REPEAT_DATA = the workspace _data folder; REPEAT_KHG = the workspace _khg folder (this KHG: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/).
+#   python -m repeat_delineation --config ../re-peat/sites/16.02.01_sugihan_lumpur/delineate.yaml
+khg: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/00_inputs/khg.gpkg
 khg_id_field: khg_id
-cache_dir: ${REPEAT_WORK}/cache
-out: ${REPEAT_WORK}/out_delineate_sl
+cache_dir: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/cache
+out: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/02_delineation
 rasters:
   dtm: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Sugihan_Sungai_Lumpur.tif"
 vectors:
-  canals: ${REPEAT_WORK}/sugihan_lumpur/canals.gpkg
-  rivers: ${REPEAT_WORK}/sugihan_lumpur/rivers.gpkg
+  canals: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/00_inputs/canals.gpkg
+  rivers: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/00_inputs/rivers.gpkg
 units:
   subkhg:
     canal_class_field: KET_KANAL            # the BRGM canal file: Kanal Primer / Sekunder / Tersier

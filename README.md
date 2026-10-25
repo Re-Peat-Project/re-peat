@@ -47,14 +47,16 @@ The team selected 12 main KHG (plus reserves): see [docs/13-selected-khg.md](doc
 
 | Site | KHG id | What is there |
 |---|---|---|
-| [kampar_gaung](sites/kampar_gaung/README.md) | 71 | Sungai Kampar - Sungai Gaung (Riau), 7,115 km2 |
-| [sugihan_lumpur](sites/sugihan_lumpur/README.md) | 16.02.01 | Sungai Sugihan - Sungai Lumpur (South Sumatra), 6,348 km2 |
+| [kampar_gaung](sites/14.02-04-05.01_kampar_gaung/README.md) | 71 | Sungai Kampar - Sungai Gaung (Riau), 7,115 km2 |
+| [16.02.01_sugihan_lumpur](sites/16.02.01_sugihan_lumpur/README.md) | 16.02.01 | Sungai Sugihan - Sungai Lumpur (South Sumatra), 6,348 km2 |
 
 Each site folder has a README (the runbook: steps with the repository each runs in, decisions and reasons, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for the physical model, `neraca_experiments.yaml`) and `reports/`. These are test runs of the whole chain, not validated rankings.
 
 ## Data catalogue
 
-[docs/14-data-catalog.md](docs/14-data-catalog.md) lists every file in `_data` (format, CRS, resolution, features, remarks). It is generated: run `python tools/catalog_data.py` after adding data; new files are appended and hand-written remarks in [sites/data_catalog.csv](sites/data_catalog.csv) are kept.
+[docs/14-data-catalog.md](docs/14-data-catalog.md) lists every file in `_data` (format, CRS, resolution, features, remarks). It is generated: run `python tools/catalog_data.py` after adding data; new files are appended and hand-written remarks in [sites/data_catalog.csv](sites/data_catalog.csv) are kept. [docs/16-khg-data-recap.md](docs/16-khg-data-recap.md) is the same per selected KHG (resolution, coverage, gaps per module): run `python tools/khg_data_recap.py`; the datasets it checks are listed in [sites/khg_recap_sources.csv](sites/khg_recap_sources.csv). `python tools/check_contour_source.py` tests which raster a contour set was traced from (default: the LiDAR contour sets; `--contour`, `--rasters` and `--zones` for others, per KHG; results in `reports/investigations/`); `python tools/contour_grid_spacing.py` detects the grid of contours whose source raster is not on disk.
+
+The DEM benchmark (five elevation sources against LiDAR at KHG Mendahara - Batanghari and Sugihan - Lumpur, and the pipeline test) is reported in [reports/dem_benchmark/report.md](reports/dem_benchmark/report.md), built by `python tools/dem_benchmark_report.py` from the outputs of `repeat-dem/script/dem_benchmark*.py`; the workflow diagram is `reports/dem_benchmark/dem_benchmark_workflow.drawio` (`python tools/dem_benchmark_diagram.py`).
 
 ## National profile
 

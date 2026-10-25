@@ -1,7 +1,7 @@
 # Runbook: Sungai Kampar - Sungai Gaung (KHG 71), first real-data test
 
 Run on 2026-10-16. Everything below is reproducible from the repo: each step is a command, each setting is in a tracked
-config in `sites/kampar_gaung/`, and the numbers are generated into `../re-peat/sites/kampar_gaung/reports/`. Nothing depends on files outside
+config in `sites/14.02-04-05.01_kampar_gaung/`, and the numbers are generated into `../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/`. Nothing depends on files outside
 the repo except your data folders (see "Setup").
 
 **What this run is:** a test of the whole chain (inputs, delineation, neraca air, ranking) on one large KHG (7,111 km2),
@@ -11,49 +11,49 @@ has agreed, and the neraca air module failed its own skill check (below).
 
 ## Setup
 
-All repositories are cloned side by side (`re-peat`, `repeat-common`, `repeat-delineation`, `repeat-neraca`, `repeat-prioritisation` = the `khg-prioritisation-module` checkout until it is renamed, ...). Each command runs from the repository named in the `Repo` column, and the configs here are referenced as `../re-peat/sites/kampar_gaung/...`.
+All repositories are cloned side by side (`re-peat`, `repeat-common`, `repeat-delineation`, `repeat-neraca`, `repeat-prioritisation` = the `khg-prioritisation-module` checkout until it is renamed, ...). Each command runs from the repository named in the `Repo` column, and the configs here are referenced as `../re-peat/sites/14.02-04-05.01_kampar_gaung/...`.
 
 ```bash
 pip install -e ../repeat-common ../repeat-delineation "../repeat-neraca[neraca,experiments]" -r requirements.txt   # once, in one environment
-export REPEAT_DATA="C:/.../REPEAT-LH/_data"                         # holds "Peat depth and DTM" and "_converted"
-export REPEAT_WORK="C:/.../khg-prioritisation-module/data_local"    # derived data: clipped vectors, caches, outputs (not tracked)
+export REPEAT_DATA="C:/.../_repeat-project/_data"                   # the workspace data folder
+export REPEAT_KHG="C:/.../_repeat-project/_khg"                     # per-KHG work folders: inputs, caches, outputs (not tracked)
 export SITMAT_PROCESSED="C:/.../sitmat-extract/sitmat_out/processed"
 python -m tests.test_ranksum                                        # in repeat-prioritisation
 ```
 
-The cache (`$REPEAT_WORK/cache/71/`) is keyed by file name, not by the settings that made a layer. If you change a setting that changes a
+The cache (`$REPEAT_KHG/14.02-04-05.01_kampar_gaung/cache/71/`) is keyed by file name, not by the settings that made a layer. If you change a setting that changes a
 layer (for example `sources.ndmi.res_m`), delete the old layer files first, or they are reused.
 
-Configs read `${REPEAT_WORK}`, `${REPEAT_DATA}` and `${SITMAT_PROCESSED}`; a missing variable stops with a message. Generated reports are in `reports/` next to this file.
+Configs read `${REPEAT_KHG}`, `${REPEAT_DATA}` and `${SITMAT_PROCESSED}`; a missing variable stops with a message. All inputs, caches and outputs of this KHG are in `$REPEAT_KHG/14.02-04-05.01_kampar_gaung/` (see its `README.md`). Generated reports are in `reports/` next to this file.
 
 ## Steps
 
 | # | Repo | What | Command | Time |
 |---|---|---|---|---|
-| 0 | repeat-prioritisation | Which DTM and peat depth rasters cover which KHG (names do not match) | `python scripts/index_repeat_data.py --root "$REPEAT_DATA/Peat depth and DTM" --out ../re-peat/sites/kampar_gaung/reports/repeat_data_index.csv` | 1 min |
+| 0 | repeat-prioritisation | Which DTM and peat depth rasters cover which KHG (names do not match) | `python scripts/index_repeat_data.py --root "$REPEAT_DATA/Peat depth and DTM" --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/repeat_data_index.csv` | 1 min |
 | 1 | repeat-prioritisation | Clip the national vectors to the KHG | see below | seconds |
-| 2 | repeat-prioritisation | Look at the inputs | `python -m subkhg.check_inputs --config ../re-peat/sites/kampar_gaung/subkhg.yaml --out ../re-peat/sites/kampar_gaung/reports/kampar_gaung_inputs.md` | 1 min |
-| 3 | repeat-delineation | Delineate sub-KHG | `python -m repeat_delineation --config ../re-peat/sites/kampar_gaung/delineate.yaml` | 1.5 min |
-| 4a | repeat-neraca | ERA5 forcing, every window (once) | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml --forcing-only` | 11-33 min per window, 4 windows |
-| 4b | repeat-neraca | Neraca air skill on SiTMAT stations | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml --calibrate-only` | 30 s |
-| 4c | repeat-neraca | Neraca air indicators per sub-KHG | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml` | 30 s |
-| 4d | repeat-neraca | What explains the station water tables | `python -m repeat_neraca.bucket.covariates --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml --ndvi-year 2019` | 1 min |
-| 4e | repeat-neraca | Sentinel-1 radar against the stations | `python -m repeat_neraca.bucket.sentinel1 --config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml` | 5 min |
-| 4f | repeat-neraca | Physical neraca air (the model that replaces the bucket) and the KHG deficit `neraca_khg.csv` | `python scripts/run_neraca.py --config ../re-peat/sites/kampar_gaung/neraca.yaml --tier 1 --classes primary,secondary,tertiary` | 1 min |
-| 5 | repeat-prioritisation | Cloud layers for the ranking (once) | `python -m subkhg.run --config ../re-peat/sites/kampar_gaung/subkhg.yaml --fetch-only` | 37 min |
-| 6 | repeat-prioritisation | Score and rank | `python -m subkhg.run --config ../re-peat/sites/kampar_gaung/subkhg.yaml --skip-fetch` | 3 min |
+| 2 | repeat-prioritisation | Look at the inputs | `python -m subkhg.check_inputs --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/kampar_gaung_inputs.md` | 1 min |
+| 3 | repeat-delineation | Delineate sub-KHG | `python -m repeat_delineation --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/delineate.yaml` | 1.5 min |
+| 4a | repeat-neraca | ERA5 forcing, every window (once) | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml --forcing-only` | 11-33 min per window, 4 windows |
+| 4b | repeat-neraca | Neraca air skill on SiTMAT stations | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml --calibrate-only` | 30 s |
+| 4c | repeat-neraca | Neraca air indicators per sub-KHG | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml` | 30 s |
+| 4d | repeat-neraca | What explains the station water tables | `python -m repeat_neraca.bucket.covariates --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml --ndvi-year 2019` | 1 min |
+| 4e | repeat-neraca | Sentinel-1 radar against the stations | `python -m repeat_neraca.bucket.sentinel1 --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml` | 5 min |
+| 4f | repeat-neraca | Physical neraca air (the model that replaces the bucket) and the KHG deficit `neraca_khg.csv` | `python scripts/run_neraca.py --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca.yaml --tier 1 --classes primary,secondary,tertiary` | 1 min |
+| 5 | repeat-prioritisation | Cloud layers for the ranking (once) | `python -m subkhg.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --fetch-only` | 37 min |
+| 6 | repeat-prioritisation | Score and rank | `python -m subkhg.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --skip-fetch` | 3 min |
 | 6b | repeat-prioritisation | `subkhg_priority.csv` for repeat-pump is written next to the ranking; to fill `deficit_mm`, set `priority_export.neraca_khg` in `subkhg.yaml` to the `neraca_khg.csv` of step 4f | (step 6 again) | seconds |
-| 7 | repeat-prioritisation | Report | `python -m subkhg.report --subkhg-config ../re-peat/sites/kampar_gaung/subkhg.yaml --neraca-config ../re-peat/sites/kampar_gaung/neraca_experiments.yaml --out ../re-peat/sites/kampar_gaung/reports/kampar_gaung.md` | seconds |
+| 7 | repeat-prioritisation | Report | `python -m subkhg.report --subkhg-config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --neraca-config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/kampar_gaung.md` | seconds |
 
 Step 1:
 
 ```bash
 python -m subkhg.prepare_inputs \
   --khg-shp "$REPEAT_DATA/Peat depth and DTM/BatasKHG/KHG_SungaiKampar-SungaiGaung/KHG_SungaiKampar-SungaiGaung.shp" \
-  --khg-id 71 --out $REPEAT_WORK/kampar_gaung \
-  --canals "$REPEAT_DATA/_converted/kanal_osgm_khg_existing_Indonesia.gpkg" \
-  --rivers "$REPEAT_DATA/_converted/RBI_sungai.gpkg" --lakes "$REPEAT_DATA/_converted/RBI_wadukdanau.gpkg" \
-  --blocks "$REPEAT_DATA/_converted/infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg" \
+  --khg-id 71 --out $REPEAT_KHG/14.02-04-05.01_kampar_gaung/00_inputs \
+  --canals "$REPEAT_DATA/kanal_osgm_khg_existing_Indonesia.gpkg" \
+  --rivers "$REPEAT_DATA/RBI_sungai.gpkg" --lakes "$REPEAT_DATA/RBI_wadukdanau.gpkg" \
+  --blocks "$REPEAT_DATA/infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg" \
   --blocks-where "Jenis == 'Sekat Kanal' and KETERANGAN == 'REALISASI'"
 ```
 
@@ -65,7 +65,7 @@ The lakes file is not used by the configs.
 | # | Decision | Reason and evidence | Set in |
 |---|---|---|---|
 | 1 | Only **primary** canals (plus rivers) are sub-KHG outlets; all canals are burned into the DTM | The canal file has three classes in `KET_KANAL` (primary 118, secondary 859, tertiary 10,756 segments in the clipped file). Tertiary canals are the plantation drainage grid; as outlets they would cut every block into its own unit (not run). The class names are compared in lower case, so the value is `Kanal Primer`. | `delineate.yaml` |
-| 2 | `min_area_km2: auto`, `merge: adjacent` | The catchments of the primary canals and rivers give **5,581 pieces** at 30 m. Small pieces are merged, smallest first, into the neighbour they share the longest divide with, so the count falls smoothly with the minimum area: 5 / 20 / 35 / 50 / 70 / 100 / 150 / 200 / 300 km2 give **247 / 129 / 107 / 73 / 42 / 35 / 21 / 13 / 9** sub-KHG. The earlier merge into the nearest unit collapsed it (186 / 99 / 79 / 42 / 5 / 2 / 2 / 1 / 1). `auto` steps the minimum up 10% from 5 km2 until at most `target_count[1]` = 30 units remain: **127.7 km2, 26 sub-KHG** (132-885 km2, median 202). Reproduce: `python -m repeat_delineation --config ../re-peat/sites/kampar_gaung/delineate.yaml --sweep 5,20,35,50,70,100,150,200,300` (writes `delineation_report.json` and `delineation_sweep.json`). | `delineate.yaml` |
+| 2 | `min_area_km2: auto`, `merge: adjacent` | The catchments of the primary canals and rivers give **5,581 pieces** at 30 m. Small pieces are merged, smallest first, into the neighbour they share the longest divide with, so the count falls smoothly with the minimum area: 5 / 20 / 35 / 50 / 70 / 100 / 150 / 200 / 300 km2 give **247 / 129 / 107 / 73 / 42 / 35 / 21 / 13 / 9** sub-KHG. The earlier merge into the nearest unit collapsed it (186 / 99 / 79 / 42 / 5 / 2 / 2 / 1 / 1). `auto` steps the minimum up 10% from 5 km2 until at most `target_count[1]` = 30 units remain: **127.7 km2, 26 sub-KHG** (132-885 km2, median 202). Reproduce: `python -m repeat_delineation --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/delineate.yaml --sweep 5,20,35,50,70,100,150,200,300` (writes `delineation_report.json` and `delineation_sweep.json`). | `delineate.yaml` |
 | 3 | `peat_depth_scale: 0.01` | The data owner confirmed the raster is in centimetres (values 35-1,393, median 193). | `neraca.yaml`, `subkhg.yaml` |
 | 4 | Canal blocks for metrik IPG: primary and secondary canals only | Tertiary canals are not part of the block-spacing rule in the Kahayan-Sebangau parameters used here. Assumption, not checked with the team. | `subkhg.yaml` |
 | 5 | Existing blocks = `Sekat Kanal` and `REALISASI` | The BRGM file also holds spillways, water gates and planned (`RENCANA`) blocks. Only built canal blocks count as existing. | step 1 |

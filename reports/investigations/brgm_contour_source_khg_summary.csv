@@ -1,0 +1,102 @@
+zone,khg_vertices,raster,vertices_inside,on_grid_pct,within_1cm_pct,median_abs_gap_m_upper,share_of_khg_vertices,class
+KHG Air Banyuasin - Air Lalang,121460,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Air_Banyusain_Air_Lalang.tif,121460.0,43.0,99.9,0.0001,100.0,A: traced from this DTM
+KHG Batang Rokan Kiri - Batang Sosa,245401,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Batang_Rokan_Kiri_Batang_Sosa.tif,245401.0,41.6,100.0,0.0001,100.0,A: traced from this DTM
+KHG Batang Tembei - Sungai Merak,759021,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Batang_Tembei_Sungai_Merak.tif,759020.0,42.6,99.9,0.0001,100.0,A: traced from this DTM
+KHG Pulau Bengkalis,1283074,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Pulau_Bengkalis.tif,1283074.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Pulau Padang,726408,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Pulau_Padang.tif,726408.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Pulau Rangsang,1526795,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Pulau_Rangsang.tif,1526788.0,42.6,99.9,0.0001,100.0,A: traced from this DTM
+KHG Pulau Rupat,985075,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Pulau_Rupat.tif,985075.0,42.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Pulau Tebing Tinggi,777732,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Tebing_Tinggi.tif,777732.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sei Lalan - Sungai Bentayan,259329,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sei_Lalan_Sungai_Bentayan.tif,259329.0,42.3,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,2157856,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Air_Hitam_Laut_Sungai_Buntu_Kecil.tif,2157855.0,23.4,21.8,0.0501,100.0,"B: same grid, values differ"
+KHG Sungai Ambawang - Sungai Kubu,459962,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Sungai_Ambawang_Sungai_Kubu.tif,459960.0,42.3,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Balangan - Sungai Batangalai,215140,Peat depth and DTM/DTM_Kalimantan/06_Kalimantan Selatan/06_Kalimantan Selatan/DTM_Model_KHG_Sungai_Balangan_Sungai_Batangalai.tif,215140.0,41.2,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Bangko - Sungai Rokan,2,,,,,,,C: no matching raster in _data
+KHG Sungai Bangko - Sungai Rokan Kanan,2123967,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Bangko_Sungai_Rokan_Kanan.tif,2123965.0,42.3,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Barito - Sungai Alalak,29053,Peat depth and DTM/DTM_Kalimantan/06_Kalimantan Selatan/06_Kalimantan Selatan/DTM_Sungai_Barito_Sungai_Alalak.tif,29053.0,42.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Barito - Sungai Taping,202282,Peat depth and DTM/DTM_Kalimantan/06_Kalimantan Selatan/06_Kalimantan Selatan/DTM_Model_KHG_Sungai_Barito_Sungai_Taping.tif,202282.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Barumun - Sungai Kubu,1478252,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Barumun_Sungai_Kubu.tif,1478252.0,42.2,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Batang - Sungai Tungkal,291334,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Batang_Sungai_Tungkal.tif,291334.0,41.6,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Batanghari - Sungai Air Hitam Laut,2565041,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Batanghari_Sungai_Air_Hitam_Laut.tif,2565041.0,42.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Batanghari - Sungai Kampeh,214745,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Batanghari_Sungai_Kampeh.tif,214745.0,40.0,99.3,0.0001,100.0,A: traced from this DTM
+KHG Sungai Baung - Sungai Betara,555498,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Baung_Sungai_Betara.tif,555498.0,42.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Beberi - Sungai Way Mesuji,22600,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Beberi_Sungai_Way_Mesuji.tif,22600.0,43.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Bentayan - Sungai Penimpahan,48379,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Bentayan_Sungai_Penimpahan.tif,48379.0,43.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Betara - Sungai Mendahara,2162761,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Betara_Sungai_Mendahara.tif,2162758.0,42.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Buluh Besar,116263,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Buluh_Besar.tif,116263.0,58.7,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Buluh Besar - Sungai Seruyan,570567,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Buluh_Besar_Sungai_Seruyan.tif,570567.0,59.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Burnai - Sungai Sibumbung,1123352,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Burnai_Sungai_Sibumbung.tif,1123352.0,42.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Burung - Sungai Way Mesuji,269500,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_COR_KHG_Sungai_Burung_Sungai_Way_Mesuji.tif,269500.0,42.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Durian - Sungai Kualan,608762,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Durian_Sungai_Kualan.tif,608762.0,42.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Durian - Sungai Labai,105029,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Durian_Sungai_Labai.tif,105029.0,42.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Enok - Sungai Batang,203036,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Enok_Sungai_Batang.tif,203036.0,42.2,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Gaung - Sungai Batangtuaka,200708,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Sungai_Gaung_Sungai_Batangtuaka.tif,200708.0,44.9,79.4,0.0001,100.0,"B: same grid, values differ"
+KHG Sungai Gongan - Sungai Nilo,388047,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Gongan_Sungai_Nilo.tif,388047.0,43.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Indragiri - Sungai Cenaku,448741,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Indragiri_Sungai_Cenaku.tif,448740.0,42.5,99.7,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kahayan - Sungai Kapuas,5933550,,,,,,,C: no matching raster in _data
+KHG Sungai Kahayan - Sungai Sebangau,1387312,,,,,,,C: no matching raster in _data
+KHG Sungai Kalumpang,100096,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Kalumpang.tif,100094.0,41.5,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kampar - Sungai Gaung,383942,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Sungai_Kampar_Sungai_Gaung.tif,383940.0,50.3,83.0,0.0001,100.0,"B: same grid, values differ"
+KHG Sungai Kapuas - Sungai Ambawang,480154,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Kapuas_Sungai_Ambawang.tif,480153.0,41.9,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kapuas - Sungai Barito,3761974,,,,,,,C: no matching raster in _data
+KHG Sungai Kapuas - Sungai Mandor,308337,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Kapuas_Sungai_Mandor.tif,308337.0,41.2,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kapuas - Sungai Mangkutup,2,,,,,,,C: no matching raster in _data
+KHG Sungai Katingan - Sungai Mentaya,579940,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Katingan_Sungai_Mentaya.tif,579940.0,59.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Katingan - Sungai Sebangau,6098003,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Sungai_Katingan_Sungai_Sebangau.tif,6098003.0,42.0,99.8,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kepulu - Sungai Pesaguan,7859,,,,,,,C: no matching raster in _data
+KHG Sungai Keramat - Sungai Jelai,52152,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Keramat_Sungai_Jelai.tif,52152.0,59.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kiyap - Sungai Kerinci,1865747,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Kiyap_Sungai_Kerinci.tif,1865745.0,42.7,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Kiyap - Sungai Kerumutan,2498972,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_COR_KHG_Sungai_Kiyap_Sungai_Kerumutan.tif,2498972.0,42.5,99.8,0.0001,100.0,A: traced from this DTM
+KHG Sungai Lalan - Sungai Merang,1569931,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Lalan_Sungai_Merang.tif,1569931.0,42.3,92.5,0.0001,100.0,A: traced from this DTM
+KHG Sungai Lamandau - Sungai Arut,45338,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Lamandau_Sungai_Arut.tif,45338.0,59.7,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Lamandau - Sungai Jelai,495945,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Lamandau_Sungai_Jelai.tif,495945.0,59.7,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Lamandau - Sungai Kumai,250423,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Lamandau_Sungai_Kumai.tif,250423.0,58.6,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Mading - Sungai Jelai,9282,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Mading_Sungai_Jelai.tif,9282.0,59.7,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Mandiangin - Sungai Siak,151734,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Mandiangin_Sungai_Siak.tif,151734.0,42.7,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Mandor - Sungai Landak,4,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Kapuas_Sungai_Mandor.tif,4.0,25.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Mange - Sungai Dadau,2867,,,,,,,C: no matching raster in _data
+KHG Sungai Mangkatip - Sungai Barito 1,56909,,,,,,,C: no matching raster in _data
+KHG Sungai Mangkatip - Sungai Barito 2,27367,,,,,,,C: no matching raster in _data
+KHG Sungai Matan - Sungai Rantaupanjang,167517,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Matan_Sungai_Rantaupanjang.tif,167517.0,43.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Medak - Sungai Lalan,1264487,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Medak_Sungai_Lalan.tif,1264487.0,42.7,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Melawi - Sungai Batunanta,1383213,,,,,,,C: no matching raster in _data
+KHG Sungai Mempawah - Sungai Peniti,3146538,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Sungai_Mempawah_Sungai_Peniti.tif,3146535.0,42.5,98.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Mendahara - Sungai Batanghari,1672853,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/DTM_Sungai_Mendahara_Sungai_Batanghari.tif,1672850.0,42.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Mentaya - Sungai Seranau Kiri,52687,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Mentaya_Sungai_Seranau_Kiri.tif,52687.0,59.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Merang - Sungai Ngirawan,2399507,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Merang_Sungai_Ngirawan.tif,2399503.0,42.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Musi - Sungai Aek Lematang,296180,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Musi_Sungai_Aek_Lematang.tif,296180.0,42.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Musi - Sungai Blidah,295937,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Musi_Sungai_Blidah.tif,295937.0,42.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Musi - Sungai Penu,195176,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Musi_Sungai_Penu.tif,195176.0,42.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Musi - Sungai Rawas,392518,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Musi_Sungai_Rawas.tif,392518.0,42.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Ngirawan - Sungai Sembilang,874513,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Ngirawan_Sungai_Sembilang.tif,874513.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Nilo - Sungai Napuh,700806,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Nilo_Sungai_Napuh.tif,700806.0,42.7,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Pawan - Sungai Kepulu,23749,,,,,,,C: no matching raster in _data
+KHG Sungai Pawan - Sungai Tolak,986063,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Pawan_Sungai_Tolak.tif,986063.0,41.2,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Pengabuan - Sungai Baung,120798,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Pengabuan_Sungai_Baung.tif,120798.0,42.0,0.0,1000.0,100.0,"B: same grid, values differ"
+KHG Sungai Penimpahan - Sungai Air Hitam,30054,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Penimpahan_Sungai_Air_Hitam.tif,30054.0,41.9,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Penyangkat - Sungai Selat Maya,375007,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Penyangkat_Sungai_Selat_Maya.tif,375007.0,41.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Pukun - Sungai Kelua Besar,133430,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Pukun_Sungai_Kelua_Besar.tif,133430.0,58.5,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Pukun - Sungai Mentaya,583722,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Pukun_Sungai_Mentaya.tif,583722.0,59.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Pukun - Sungai Seruyan,154194,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Pukun_Sungai_Seruyan.tif,154194.0,60.0,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Punggurbesar - Sungai Ambawang,133411,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Punggurbesar_Sungai_Ambawang.tif,133411.0,41.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Pungurbesar -  Sungai Kapuas,250430,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Pungurbesar_Sungai_Kapuas.tif,250430.0,41.9,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Rokan - Sungai Kubu,2840889,,,,,,,C: no matching raster in _data
+KHG Sungai Rokan - Sungai Siak Kecil,11894425,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_COR_KHG_Sungai_Rokan_Sungai_Siak_Kecil.tif,11894425.0,42.6,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Rokan Kiri - Sungai Mandau,2984230,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_KHG_Sungai_Rokan_Kiri_Sungai_Mandau.tif,2984230.0,42.7,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Rumpit - Sungai Rawas,1395031,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Rumpit_Sungai_Rawas.tif,1395027.0,42.5,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Saleh - Sungai Sugihan,449752,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Saleh_Sungai_Sugihan.tif,449752.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Samabas Kecil - Sungai Teberau,21460,,,,,,,C: no matching raster in _data
+KHG Sungai Sambas Besar - Sungai Seiyung,552445,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Sambas_Besar_Sungai_Seiyung.tif,552445.0,42.1,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Selat Maya - Sungai Aping,460294,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Selat_Maya_Sungai_Aping.tif,460294.0,41.3,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Sembilang - Sungai Lalan,273149,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Sembilang_Sungai_Lalan.tif,273149.0,40.7,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Seruyan - Sungai Kelua Besar,114468,Peat depth and DTM/DTM_Kalimantan/05_Kalimantan Tengah/DTM_Model_KHG_Sungai_Seruyan_Sungai_Kelua_Besar.tif,114468.0,58.8,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Siak - Sungai Kampar,8255994,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_COR_KHG_Sungai_Siak_Sungai_Kampar.tif,8255994.0,42.4,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Siak Kecil - Sungai Siak,6704618,Peat depth and DTM/DTM_Sumatera-002/RIAU/WDTM_COR_KHG_Sungai_Siak_Kecil_Sungai_Siak.tif,6704618.0,42.6,99.7,0.0001,100.0,A: traced from this DTM
+KHG Sungai Sibumbung - Sungai Talangrimba,1848849,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Sibumbung_Sungai_Talangrimba.tif,1848849.0,42.6,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Sugihan - Sungai Lumpur,3808928,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Sugihan_Sungai_Lumpur.tif,3808927.0,42.6,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Talang - Sungai Ulakkedondong,38547,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Talang_Sungai_Ulakkedondong.tif,38547.0,42.6,100.0,0.0001,100.0,A: traced from this DTM
+KHG Sungai Tapung Kiri - Sungai Kiyap,2425429,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Sungai_Tapung_Kiri_Sungai_Kiyap.tif,2425423.0,42.3,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Terentang - Sungai Kapuas,3335301,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Sungai_Terentang_Sungai_Kapuas.tif,3335299.0,42.3,99.6,0.0001,100.0,A: traced from this DTM
+KHG Sungai Terusanraya - Sungai Kapuasmurung,4410560,,,,,,,C: no matching raster in _data
+KHG Sungai Ulakkedondong - Sungai Lumpur,599765,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Sungai_Ulakkedondong_Sungai_Lumpur.tif,599765.0,42.2,99.9,0.0001,100.0,A: traced from this DTM
+KHG Sungai Utar - Sungai Serapat,266002,Peat depth and DTM/DTM_Kalimantan/06_Kalimantan Selatan/06_Kalimantan Selatan/DTM_Sungai_Utar_Sungai_Serapat.tif,266002.0,42.0,100.0,0.0001,100.0,A: traced from this DTM

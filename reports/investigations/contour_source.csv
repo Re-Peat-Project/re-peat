@@ -1,0 +1,59 @@
+contour,contour_vertices,raster,res_m,vertices_inside,on_grid_pct,median_abs_gap_m_upper,within_1cm_pct
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,4584668,43.1,0.0001,100.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,3916074,42.8,0.0001,99.4
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/dem_25m/DEM25M/RIAU25m.tif,25.0,11528925,42.3,0.0001,100.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,1382803,41.4,0.0001,100.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,208626,3.2,0.7943,0.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,4754746,3.1,0.0562,23.1
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,4754746,3.1,0.0562,23.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m.tif,20.0,208589,3.1,0.7943,0.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR_Sugihan_Saleh.tif,25.0,208355,3.1,0.7943,0.0
+lidar_klhk/dem_25m/LIDAR_Kontur_25cm__RIAU_JAMBI_SUMSEL.shp,21331574,lidar_klhk/dem_25m/DEM_Jambi_50m.tif,50.0,1382768,3.0,0.0071,57.1
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,2598248,44.0,0.0001,100.0
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,2553599,43.0,0.0001,99.7
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/dem_25m/DEM25M/RIAU25m.tif,25.0,6140586,42.2,0.0001,100.0
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,767642,41.4,0.0001,100.0
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,140025,3.2,0.8913,0.0
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m.tif,20.0,139996,3.1,1.0,0.0
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR_Sugihan_Saleh.tif,25.0,139864,3.1,1.0,0.0
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,2687584,3.0,0.0355,32.3
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,lidar_klhk/dem_25m/DEM_Jambi_50m.tif,50.0,767629,3.0,0.0018,79.2
+lidar_klhk/dem_25m/LIDAR_Kontur_50cm__RIAU_JAMBI_SUMSEL.shp,12015002,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,2687584,3.0,0.0355,32.2
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,11970622,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,11970620,46.9,0.0001,99.7
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,11970622,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m.tif,20.0,11970615,3.2,0.02,29.8
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,11970622,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,4471703,3.1,0.7079,2.1
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,11970622,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR_Sugihan_Saleh.tif,25.0,11970600,3.1,0.1259,5.2
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_50cm.shp,5992093,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,5992093,46.9,0.0001,99.9
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_50cm.shp,5992093,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m.tif,20.0,5992090,3.2,0.02,30.0
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_50cm.shp,5992093,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,2238736,3.1,0.5012,4.4
+lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_50cm.shp,5992093,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR_Sugihan_Saleh.tif,25.0,5992082,3.1,0.1259,5.3
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_25cm.shp,1362392,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,1362392,41.9,0.0001,100.0
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_25cm.shp,1362392,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,60485,3.2,,
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_25cm.shp,1362392,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,230563,3.2,,
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_25cm.shp,1362392,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,230563,3.2,,
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_25cm.shp,1362392,lidar_klhk/dem_25m/DEM_Jambi_50m.tif,50.0,1362392,3.0,0.0071,57.1
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_50cm.shp,756591,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,756591,41.9,0.0001,100.0
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_50cm.shp,756591,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,34022,3.3,,
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_50cm.shp,756591,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,123358,3.2,,
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_50cm.shp,756591,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,123358,3.2,,
+lidar_klhk/dem_25m/lidar__kontur_jambi__ic_50cm.shp,756591,lidar_klhk/dem_25m/DEM_Jambi_50m.tif,50.0,756591,3.0,0.0018,79.2
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_25cm.shp,4524183,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,4524183,43.6,0.0001,100.0
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_25cm.shp,4524183,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,4524183,3.1,0.0562,23.1
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_25cm.shp,4524183,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,4524183,3.1,0.0562,23.0
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_25cm.shp,4524183,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,20411,2.8,,
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_25cm.shp,4524183,lidar_klhk/dem_25m/DEM_Jambi_50m.tif,50.0,20376,2.6,,
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_50cm.shp,2564264,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,2564264,44.5,0.0001,100.0
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_50cm.shp,2564264,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,2564264,3.0,0.0355,32.3
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_50cm.shp,2564264,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,2564264,3.0,0.0355,32.2
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_50cm.shp,2564264,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,11051,2.7,,
+lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_50cm.shp,2564264,lidar_klhk/dem_25m/DEM_Jambi_50m.tif,50.0,11038,2.1,,
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_25cm.shp,3916074,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,3916074,42.8,0.0001,99.4
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_25cm.shp,3916074,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,208626,3.2,0.7943,0.0
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_25cm.shp,3916074,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m.tif,20.0,208589,3.1,0.7943,0.0
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_25cm.shp,3916074,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR_Sugihan_Saleh.tif,25.0,208355,3.1,0.7943,0.0
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_50cm.shp,2553654,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,2553654,43.0,0.0001,99.7
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_50cm.shp,2553654,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,140027,3.2,0.8913,0.0
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_50cm.shp,2553654,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m.tif,20.0,139998,3.1,1.0,0.0
+lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_50cm.shp,2553654,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR_Sugihan_Saleh.tif,25.0,139866,3.1,1.0,0.0
+lidar_klhk/dem_25m/lidar__kontur_riau__ic_25cm.shp,11528931,lidar_klhk/dem_25m/DEM25M/RIAU25m.tif,25.0,11528931,42.3,0.0001,100.0
+lidar_klhk/dem_25m/lidar__kontur_riau__ic_50cm.shp,6140586,lidar_klhk/dem_25m/DEM25M/RIAU25m.tif,25.0,6140586,42.2,0.0001,100.0

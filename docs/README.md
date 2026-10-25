@@ -77,3 +77,4 @@ Machine learning and the `peatfr` package / PFVI index are deliberately deferred
 - [13 Selected KHG](13-selected-khg.md): the 12 main KHG chosen for the project, and reserves.
 - [14 Data catalogue](14-data-catalog.md): generated list of the files in `_data`.
 - [15 National KHG profile](15-national-profile.md): ranking of all 865 KHG from local data, and how to rerun it.
+- [16 Per-KHG data recap](16-khg-data-recap.md): generated; what data each selected KHG has, at what resolution and coverage, and the gaps per module.

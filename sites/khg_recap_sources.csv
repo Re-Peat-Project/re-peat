@@ -1,0 +1,25 @@
+theme,tag,pattern,layer,exclude,summary_field,note
+lidar_dtm,LiDAR,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,,,,LiDAR DTM (KLHK)
+lidar_dtm,LiDAR,lidar_klhk/dem_25m/**/*.tif,,DEM_Jambi_50m,,LiDAR DEM (KLHK / Deltares)
+lidar_dtm,LiDAR,lidar_pulau_padang_2016/DTM_2mFloat.tif,,,,"LiDAR DTM, flown Nov 2016"
+modelled_dtm,model,Peat depth and DTM/DTM_*/**/*.tif,,DEMNAS|test-clip|coba,,"modelled DTM, DEMNAS-based"
+modelled_dtm,DEMNAS-refined,Peat depth and DTM/BatasKHG/**/*.tif,,,,"refined DEMNAS clip, sinks removed"
+demnas,DEMNAS,dem/Mosaic_DEMNAS__KHG_Pulau_Kalimantan.tif,,,,"DEMNAS (DSM, whole metres)"
+demnas,DEMNAS,Peat depth and DTM/DTM_Kalimantan/**/DEMNAS/*clip*.tif,,test-clip,,DEMNAS clip
+peat_depth,model,Peat depth and DTM/PeatDepth_*/**/*.img,,,,modelled peat depth
+peat_depth,field-interp,lidar_klhk/sugihan_saleh_2020/peat_thickness/CON__TopoToR_PEAT__KHG_Sugihan_Saleh__UTM_48S.tif,,,,peat thickness from field points
+peat_depth,field pts,lidar_klhk/sugihan_saleh_2020/peat_thickness/PEAT_THICK__KHG_Saleh_Sugihan__UTM_48S.shp,,,P_DEPTH_CM,field peat-depth points (cm)
+peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,,KETEBALAN,"BBSDLP peat depth classes, 1:50,000"
+peat_depth,FEG,klhk_khg_feg_50k.gpkg,feg_50k,,peat_thick,"KLHK FEG 1:50,000 peat thickness class"
+contour,LiDAR 25 cm,lidar_klhk/dem_25m/lidar__kontur_*_25cm.shp,,,CONTOUR,LiDAR contours 25 cm interval
+contour,LiDAR 25 cm,lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,,,CONTOUR,LiDAR contours 25 cm interval
+contour,BRGM,kontur_108khg_BRGM.gpkg,,,Contour,BRGM contours (interval to check)
+canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,KODE_KANAL,canals (OSM / BRGM bluebook)
+canals,KLHK,lidar_klhk/sugihan_saleh_2020/peat_thickness/Kanal_Drainase__KHG_Saleh_Sugihan__GEO.shp,,,KODE_KANAL,canals (KLHK LiDAR study)
+rivers,RBI,RBI_sungai.gpkg,,,,RBI rivers
+infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,Kegiatan,BRGM hydrological infrastructure
+demnas,DEMNAS,dem/DEMNAS_*.tif,,,,"DEMNAS clip, float"
+demnas,DEMNAS-jp2,dem/demnas_sumatera/*.jp2,,,,"DEMNAS Sumatra, re-hosted int16 lossy"
+canal_blocks,LiDAR,sekat_kanal_bluebook_2026/lidar/*.shp,,,KET_KANAL,BlueBook proposed canal blocks (LiDAR contours)
+canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/*.shp,,,,BlueBook proposed canal blocks (BRGM contours)
+canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/**/*.shp,,,,BlueBook proposed canal blocks (DEMNAS contours)

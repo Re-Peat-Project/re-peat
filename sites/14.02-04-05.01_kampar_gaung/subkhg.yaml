@@ -1,13 +1,13 @@
 # Sungai Kampar - Sungai Gaung (KHG 71), step 4: the sub-KHG ranking, baseline 2019-2021.
 # A test run: Sentinel-2 at 60 m. Needs steps 1-3 first. Environment variables: REPEAT_DATA, SITMAT_PROCESSED.
-#   python -m subkhg.run --config ../re-peat/sites/kampar_gaung/subkhg.yaml --fetch-only    # cloud layers, once
-#   python -m subkhg.run --config ../re-peat/sites/kampar_gaung/subkhg.yaml --skip-fetch    # score
-khg: ${REPEAT_WORK}/kampar_gaung/khg.gpkg
+#   python -m subkhg.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --fetch-only    # cloud layers, once
+#   python -m subkhg.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --skip-fetch    # score
+khg: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/khg.gpkg
 khg_id_field: khg_id
-units: {mode: vector, path: "${REPEAT_WORK}/out_delineate/subkhg_units.gpkg"}
+units: {mode: vector, path: "${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/02_delineation/subkhg_units.gpkg"}
 years: {baseline: [2019, 2021], validation: [], elnino: [2019]}   # baseline is a range: 2019, 2020, 2021
-cache_dir: ${REPEAT_WORK}/cache
-out: ${REPEAT_WORK}/out_subkhg
+cache_dir: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/cache
+out: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/04_prioritisation
 rasters:
   dtm: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Sungai_Kampar_Sungai_Gaung.tif"
   peat_depth: "${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Sungai_Kampar_Sungai_Guang.img"
@@ -16,12 +16,12 @@ params:
   ipg_canal_class_field: KET_KANAL
   ipg_canal_classes: ["Kanal Primer", "Kanal Sekunder"]   # canals that need blocks (metrik IPG)
 vectors:
-  canals: ${REPEAT_WORK}/kampar_gaung/canals.gpkg
-  rivers: ${REPEAT_WORK}/kampar_gaung/rivers.gpkg
-  blocks: ${REPEAT_WORK}/kampar_gaung/blocks.gpkg             # existing canal blocks only (REALISASI)
+  canals: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/canals.gpkg
+  rivers: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/rivers.gpkg
+  blocks: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/blocks.gpkg             # existing canal blocks only (REALISASI)
 tma: {path: "${SITMAT_PROCESSED}", period: ["2026-04-01", "2026-10-15"]}   # the current water-table state
 sources: {ndmi: {res_m: 60}}                # coarse on purpose, to keep the test cheap
-extra_indicators: ["${REPEAT_WORK}/out_neraca/neraca_unit.csv"]    # neraca air outputs; scored only if given a weight
+extra_indicators: ["${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/03_neraca/runs/baseline_era5/neraca_unit.csv"]    # neraca air outputs; scored only if given a weight
 scoring: {ranksum_columns: {u_deficit_months: u_deficit_months_dry}}
 # for repeat-pump (subkhg_priority.csv in the output folder): the KHG deficit from repeat-neraca and the delivery period in days
 # priority_export: {neraca_khg: <repeat-neraca>/_out/kampar_gaung/neraca_khg.csv, design_period_days: null}

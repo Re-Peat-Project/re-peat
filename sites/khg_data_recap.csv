@@ -1,0 +1,156 @@
+khg,theme,tag,dataset,res_m,coverage_pct,features,length_km,crs,summary,note
+KHG Pulau Padang,lidar_dtm,LiDAR,lidar_pulau_padang_2016/DTM_2mFloat.tif,2.0,100.0,,,EPSG:32648,p2-p98 -0.2..9.0,"LiDAR DTM, flown Nov 2016"
+KHG Pulau Padang,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Pulau_Padang.tif,12.4,100.0,,,EPSG:4326,p2-p98 2.1..13.1,"modelled DTM, DEMNAS-based"
+KHG Pulau Padang,demnas,DEMNAS,dem/DEMNAS_bengkalis.tif,8.3,100.0,,,EPSG:4326,p2-p98 1.4..19.1,"DEMNAS clip, float"
+KHG Pulau Padang,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 1.0..19.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Pulau Padang,contour,BRGM,kontur_108khg_BRGM.gpkg,,,892.0,2942.5,EPSG:4326,Contour 4..13.2,BRGM contours (interval to check)
+KHG Pulau Padang,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Pulau_Padang.img,10.0,81.1,,,EPSG:4326,p2-p98 52.1..1090.9,modelled peat depth
+KHG Pulau Padang,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,89.8,4.0,,EPSG:4326,Dalam 2; Sangat Dalam 1; Sangat Dalam Sekali 1,"BBSDLP peat depth classes, 1:50,000"
+KHG Pulau Padang,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,1422.0,1168.6,EPSG:4326,3 1142; 2 168; 1 112,canals (OSM / BRGM bluebook)
+KHG Pulau Padang,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,292.0,,EPSG:4326,  156; R1.2 KSE 136,BRGM hydrological infrastructure
+KHG Pulau Padang,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Riau.shp,,,1556.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Pulau Padang,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/3. Riau/Sekat_Demnas_Riau6.shp,,,194.0,,EPSG:32647,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Pulau Padang,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,6.0,,,"community 3; concession 3; 5 with water level, 523 station-days, 2026-06-17..2026-10-22",SiTMAT water-table stations
+KHG Pulau Bengkalis,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Pulau_Bengkalis.tif,12.4,100.0,,,EPSG:4326,p2-p98 1.0..10.4,"modelled DTM, DEMNAS-based"
+KHG Pulau Bengkalis,demnas,DEMNAS,dem/DEMNAS_bengkalis.tif,8.3,100.0,,,EPSG:4326,p2-p98 0.2..14.4,"DEMNAS clip, float"
+KHG Pulau Bengkalis,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 0.0..14.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Pulau Bengkalis,contour,BRGM,kontur_108khg_BRGM.gpkg,,,2745.0,5282.0,EPSG:4326,Contour -0.4..10.4,BRGM contours (interval to check)
+KHG Pulau Bengkalis,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Pulau_Bengkalis.img,10.0,72.6,,,EPSG:4326,p2-p98 58.8..1091.7,modelled peat depth
+KHG Pulau Bengkalis,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,71.1,11.0,,EPSG:4326,Sangat Dalam Sekali 3; Dangkal 3; Dalam 2; Sangat Dalam 2; +1 more,"BBSDLP peat depth classes, 1:50,000"
+KHG Pulau Bengkalis,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,3059.0,1867.1,EPSG:4326,3 2293; 2 492; 1 274,canals (OSM / BRGM bluebook)
+KHG Pulau Bengkalis,rivers,RBI,RBI_sungai.gpkg,,,1.0,21.9,EPSG:4326,,RBI rivers
+KHG Pulau Bengkalis,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,205.0,,EPSG:4326,R1.2 KSE 159;   46,BRGM hydrological infrastructure
+KHG Pulau Bengkalis,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Riau.shp,,,5189.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Pulau Bengkalis,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,4.0,,,"community 2; concession 2; 4 with water level, 543 station-days, 2026-04-01..2026-10-22",SiTMAT water-table stations
+KHG Pulau Tebing Tinggi,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/RIAU/DTM_Tebing_Tinggi.tif,12.4,100.0,,,EPSG:4326,p2-p98 2.1..10.4,"modelled DTM, DEMNAS-based"
+KHG Pulau Tebing Tinggi,demnas,DEMNAS,dem/DEMNAS_bengkalis.tif,8.3,100.0,,,EPSG:4326,p2-p98 -2.1..17.5,"DEMNAS clip, float"
+KHG Pulau Tebing Tinggi,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 -2.0..18.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Pulau Tebing Tinggi,contour,BRGM,kontur_108khg_BRGM.gpkg,,,1100.0,3148.2,EPSG:4326,Contour 3.2..10.4,BRGM contours (interval to check)
+KHG Pulau Tebing Tinggi,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Pulau_Tebing_Tinggi.img,10.0,79.3,,,EPSG:4326,p2-p98 50.0..909.3,modelled peat depth
+KHG Pulau Tebing Tinggi,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,83.3,11.0,,EPSG:4326,Sedang 4; Dangkal 3; Sangat Dalam 2; Dalam 1; +1 more,"BBSDLP peat depth classes, 1:50,000"
+KHG Pulau Tebing Tinggi,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,1376.0,1341.2,EPSG:4326,3 971; 2 346; 1 59,canals (OSM / BRGM bluebook)
+KHG Pulau Tebing Tinggi,rivers,RBI,RBI_sungai.gpkg,,,3.0,82.8,EPSG:4326,,RBI rivers
+KHG Pulau Tebing Tinggi,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,382.0,,EPSG:4326,R1.2 KSE 214;   168,BRGM hydrological infrastructure
+KHG Pulau Tebing Tinggi,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Riau.shp,,,1688.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Pulau Tebing Tinggi,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/3. Riau/Sekat_Demnas_Riau6.shp,,,521.0,,EPSG:32647,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Pulau Tebing Tinggi,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,9.0,,,"concession 6; community 3; 8 with water level, 1194 station-days, 2026-04-01..2026-10-22",SiTMAT water-table stations
+KHG Sungai Saleh - Sungai Sugihan,lidar_dtm,LiDAR,lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif,20.0,61.9,,,EPSG:32748,p2-p98 0.4..7.2,LiDAR DTM (KLHK)
+KHG Sungai Saleh - Sungai Sugihan,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Saleh_Sungai_Sugihan.tif,12.4,100.0,,,EPSG:4326,p2-p98 1.0..7.2,"modelled DTM, DEMNAS-based"
+KHG Sungai Saleh - Sungai Sugihan,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 -2.0..18.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Sungai Saleh - Sungai Sugihan,contour,LiDAR 25 cm,lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,,,515801.0,70539.7,EPSG:32748,CONTOUR 0..54.5,LiDAR contours 25 cm interval
+KHG Sungai Saleh - Sungai Sugihan,contour,BRGM,kontur_108khg_BRGM.gpkg,,,1502.0,1872.0,EPSG:4326,Contour 0..14.4,BRGM contours (interval to check)
+KHG Sungai Saleh - Sungai Sugihan,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Saleh_Sungai_Sugihan.img,10.0,69.4,,,EPSG:4326,p2-p98 50.0..350.5,modelled peat depth
+KHG Sungai Saleh - Sungai Sugihan,peat_depth,field-interp,lidar_klhk/sugihan_saleh_2020/peat_thickness/CON__TopoToR_PEAT__KHG_Sugihan_Saleh__UTM_48S.tif,20.0,100.0,,,EPSG:32748,p2-p98 0.0..71.4,peat thickness from field points
+KHG Sungai Saleh - Sungai Sugihan,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,32.6,23.0,,EPSG:4326,Sedang 14; Dangkal 9,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Saleh - Sungai Sugihan,peat_depth,field pts,lidar_klhk/sugihan_saleh_2020/peat_thickness/PEAT_THICK__KHG_Saleh_Sugihan__UTM_48S.shp,,,208.0,,EPSG:32748,P_DEPTH_CM 0..80,field peat-depth points (cm)
+KHG Sungai Saleh - Sungai Sugihan,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,4913.0,3645.4,EPSG:4326,3 2456; 2 2172; 1 285,canals (OSM / BRGM bluebook)
+KHG Sungai Saleh - Sungai Sugihan,canals,KLHK,lidar_klhk/sugihan_saleh_2020/peat_thickness/Kanal_Drainase__KHG_Saleh_Sugihan__GEO.shp,,,3974.0,3207.2,EPSG:4326,2 2060; 3 1671; 1 243,canals (KLHK LiDAR study)
+KHG Sungai Saleh - Sungai Sugihan,rivers,RBI,RBI_sungai.gpkg,,,4.0,31.8,EPSG:4326,,RBI rivers
+KHG Sungai Saleh - Sungai Sugihan,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,192.0,,EPSG:4326,R1.2 KSE 104; R1.3 KTI 63;   25,BRGM hydrological infrastructure
+KHG Sungai Saleh - Sungai Sugihan,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Jambi_Sumsel.shp,,,1285.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Saleh - Sungai Sugihan,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/5. Sumatera Selatan/Sekat Demnas_Sumsel.shp,,,1.0,,EPSG:32748,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Sugihan - Sungai Lumpur,lidar_dtm,LiDAR,lidar_klhk/dem_25m/DEM25M/OKI25.tif,25.0,100.0,,,EPSG:32748,p2-p98 0.2..7.2,LiDAR DEM (KLHK / Deltares)
+KHG Sungai Sugihan - Sungai Lumpur,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Sugihan_Sungai_Lumpur.tif,12.4,100.0,,,EPSG:4326,p2-p98 0.5..9.2,"modelled DTM, DEMNAS-based"
+KHG Sungai Sugihan - Sungai Lumpur,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 -2.0..20.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Sungai Sugihan - Sungai Lumpur,contour,LiDAR 25 cm,lidar_klhk/dem_25m/lidar__kontur_oki_sumsel__ic_25cm.shp,,,13555.0,23861.3,EPSG:32748,CONTOUR 0..23,LiDAR contours 25 cm interval
+KHG Sungai Sugihan - Sungai Lumpur,contour,LiDAR 25 cm,lidar_klhk/dem_25m/LIDAR__Kontur_Sugihan_Saleh_SUMSEL__IC_25cm.shp,,,2859.0,311.2,EPSG:32748,CONTOUR 0..10.5,LiDAR contours 25 cm interval
+KHG Sungai Sugihan - Sungai Lumpur,contour,BRGM,kontur_108khg_BRGM.gpkg,,,14664.0,15703.2,EPSG:4326,Contour -5.6..21.6,BRGM contours (interval to check)
+KHG Sungai Sugihan - Sungai Lumpur,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Sugihan_Sungai_Lumpur.img,10.0,74.7,,,EPSG:4326,p2-p98 50.0..515.8,modelled peat depth
+KHG Sungai Sugihan - Sungai Lumpur,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,52.6,11.0,,EPSG:4326,Sangat Dalam 5; Sedang 4; Dangkal 1; Dalam 1,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Sugihan - Sungai Lumpur,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,14156.0,14228.9,EPSG:4326,3 10113; 2 3494; 1 549,canals (OSM / BRGM bluebook)
+KHG Sungai Sugihan - Sungai Lumpur,canals,KLHK,lidar_klhk/sugihan_saleh_2020/peat_thickness/Kanal_Drainase__KHG_Saleh_Sugihan__GEO.shp,,,10.0,0.0,EPSG:4326,3 4; 1 4; 2 2,canals (KLHK LiDAR study)
+KHG Sungai Sugihan - Sungai Lumpur,rivers,RBI,RBI_sungai.gpkg,,,2.0,9.5,EPSG:4326,,RBI rivers
+KHG Sungai Sugihan - Sungai Lumpur,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,2972.0,,EPSG:4326,  2847; R1.2 KSE 124; R1.3 KTI 1,BRGM hydrological infrastructure
+KHG Sungai Sugihan - Sungai Lumpur,canal_blocks,LiDAR,sekat_kanal_bluebook_2026/lidar/Sekat Kanal LIDAR_Riau Jambi Sumsel.shp,,,11105.0,,EPSG:4326,Kanal Tersier 8611; Kanal Sekunder 1886; Kanal Primer 608,BlueBook proposed canal blocks (LiDAR contours)
+KHG Sungai Sugihan - Sungai Lumpur,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Jambi_Sumsel.shp,,,7912.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Sugihan - Sungai Lumpur,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,54.0,,,"concession 54; 54 with water level, 10510 station-days, 2026-04-01..2026-10-21",SiTMAT water-table stations
+KHG Sungai Mendahara - Sungai Batanghari,lidar_dtm,LiDAR,lidar_klhk/dem_25m/DEM25M/Jambi25m.tif,25.0,100.0,,,EPSG:32748,p2-p98 0.6..8.3,LiDAR DEM (KLHK / Deltares)
+KHG Sungai Mendahara - Sungai Batanghari,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/DTM_Sungai_Mendahara_Sungai_Batanghari.tif,12.4,100.0,,,EPSG:4326,p2-p98 1.7..8.1,"modelled DTM, DEMNAS-based"
+KHG Sungai Mendahara - Sungai Batanghari,demnas,DEMNAS,dem/DEMNAS_mendahara.tif,8.3,100.0,,,EPSG:4326,p2-p98 -0.0..13.1,"DEMNAS clip, float"
+KHG Sungai Mendahara - Sungai Batanghari,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 0.0..13.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Sungai Mendahara - Sungai Batanghari,contour,LiDAR 25 cm,lidar_klhk/dem_25m/lidar__kontur_jambi__ic_25cm.shp,,,392.0,4592.8,EPSG:32748,CONTOUR 0..9.5,LiDAR contours 25 cm interval
+KHG Sungai Mendahara - Sungai Batanghari,contour,BRGM,kontur_108khg_BRGM.gpkg,,,6120.0,6834.4,EPSG:4326,Contour 0..31.2,BRGM contours (interval to check)
+KHG Sungai Mendahara - Sungai Batanghari,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/02_Jambi/Peat_depth_model_KHG_Sungai_Mendahara_Sungai_Batanghari.img,10.0,62.6,,,EPSG:4326,p2-p98 31.6..645.1,modelled peat depth
+KHG Sungai Mendahara - Sungai Batanghari,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,49.7,19.0,,EPSG:4326,Sedang 8; Dalam 6; Dangkal 3; Sangat Dalam 2,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Mendahara - Sungai Batanghari,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,3709.0,4588.6,EPSG:4326,3 2368; 2 838; 1 503,canals (OSM / BRGM bluebook)
+KHG Sungai Mendahara - Sungai Batanghari,rivers,RBI,RBI_sungai.gpkg,,,4.0,101.1,EPSG:4326,,RBI rivers
+KHG Sungai Mendahara - Sungai Batanghari,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,700.0,,EPSG:4326,  417; R1.2 KSE 283,BRGM hydrological infrastructure
+KHG Sungai Mendahara - Sungai Batanghari,canal_blocks,LiDAR,sekat_kanal_bluebook_2026/lidar/Sekat Kanal LIDAR_Riau Jambi Sumsel.shp,,,3319.0,,EPSG:4326,Kanal Tersier 1959; Kanal Sekunder 904; Kanal Primer 456,BlueBook proposed canal blocks (LiDAR contours)
+KHG Sungai Mendahara - Sungai Batanghari,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Jambi_Sumsel.shp,,,6999.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Mendahara - Sungai Batanghari,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/4. Jambi/Sekat_Demnas_Jambi_Mudung Darat.shp,,,82.0,,EPSG:4326,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Mendahara - Sungai Batanghari,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,27.0,,,"concession 15; community 12; 27 with water level, 2730 station-days, 2026-04-01..2026-10-22",SiTMAT water-table stations
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,lidar_dtm,LiDAR,lidar_klhk/dem_25m/DEM25M/Muba25.tif,25.0,100.0,,,EPSG:32748,p2-p98 1.5..14.0,LiDAR DEM (KLHK / Deltares)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,lidar_dtm,LiDAR,lidar_klhk/dem_25m/DEM_25m_MUBA.tif,25.0,97.0,,,EPSG:32748,p2-p98 1.5..13.4,LiDAR DEM (KLHK / Deltares)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,lidar_dtm,LiDAR,"lidar_klhk/dem_25m/LiDAR_DTM_25.0m_BerbakMuba_UTM48S_FINAL (Deltares, 16 Feb 2018)1.tif",25.0,97.0,,,EPSG:32748,p2-p98 1.5..13.4,LiDAR DEM (KLHK / Deltares)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/02_Jambi/WDTM_KHG_Sungai_Air_Hitam_Laut_Sungai_Buntu_Kecil.tif,12.4,100.0,,,EPSG:4326,p2-p98 0.0..18.3,"modelled DTM, DEMNAS-based"
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 3.0..23.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,contour,LiDAR 25 cm,lidar_klhk/dem_25m/lidar__kontur_muba_sumsel__ic_25cm.shp,,,3547.0,12234.9,EPSG:32748,CONTOUR 0..35.25,LiDAR contours 25 cm interval
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,contour,BRGM,kontur_108khg_BRGM.gpkg,,,16134.0,8641.5,EPSG:4326,Contour 0..40.4,BRGM contours (interval to check)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/02_Jambi/Peat_depth_clip_Sungai_Air_Hitam_Laut_Sungai_Buntu_Kecil.img,10.1,95.7,,,EPSG:32748,p2-p98 74.8..1012.5,modelled peat depth
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,70.8,43.0,,EPSG:4326,Sangat Dalam 15; Sedang 11; Ekstrem Sangat Dalam 9; Sangat Dalam Sekali 4; +2 more,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,933.0,873.3,EPSG:4326,3 667; 2 216; 1 50,canals (OSM / BRGM bluebook)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,238.0,,EPSG:4326,  201; R1.2 KSE 37,BRGM hydrological infrastructure
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,canal_blocks,LiDAR,sekat_kanal_bluebook_2026/lidar/Sekat Kanal LIDAR_Riau Jambi Sumsel.shp,,,2400.0,,EPSG:4326,Kanal Tersier 1113; Kanal Sekunder 823; Kanal Primer 464,BlueBook proposed canal blocks (LiDAR contours)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Jambi_Sumsel.shp,,,2244.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,10.0,,,"concession 9; community 1; 10 with water level, 1519 station-days, 2026-04-01..2026-10-22",SiTMAT water-table stations
+KHG Sungai Mempawah - Sungai Peniti,modelled_dtm,model,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Sungai_Mempawah_Sungai_Peniti.tif,12.4,100.0,,,EPSG:4326,p2-p98 1.4..17.4,"modelled DTM, DEMNAS-based"
+KHG Sungai Mempawah - Sungai Peniti,demnas,DEMNAS,dem/Mosaic_DEMNAS__KHG_Pulau_Kalimantan.tif,8.3,100.0,,,EPSG:4326,p2-p98 1.0..57.0,"DEMNAS (DSM, whole metres)"
+KHG Sungai Mempawah - Sungai Peniti,contour,BRGM,kontur_108khg_BRGM.gpkg,,,8978.0,12671.6,EPSG:4326,Contour 0..181.2,BRGM contours (interval to check)
+KHG Sungai Mempawah - Sungai Peniti,peat_depth,model,Peat depth and DTM/PeatDepth_Kalimantan/04_Kalimantan Barat/Peat_depth_model_KHG_Sungai_Mempawah_Sungai_Peniti.img,10.0,54.3,,,EPSG:4326,p2-p98 50.5..773.3,modelled peat depth
+KHG Sungai Mempawah - Sungai Peniti,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,43.2,6.0,,EPSG:4326,Sedang 5; Dalam 1,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Mempawah - Sungai Peniti,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,19809.0,4919.1,EPSG:4326,3 15178; 2 4333; 1 298,canals (OSM / BRGM bluebook)
+KHG Sungai Mempawah - Sungai Peniti,rivers,RBI,RBI_sungai.gpkg,,,4.0,50.5,EPSG:4326,,RBI rivers
+KHG Sungai Mempawah - Sungai Peniti,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,264.0,,EPSG:4326,R1.2 KSE 264,BRGM hydrological infrastructure
+KHG Sungai Mempawah - Sungai Peniti,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Kalbar.shp,,,22335.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Mempawah - Sungai Peniti,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/11. Kalimantan Barat/Sekat_Demnas_Kalbar/Sekat_Demnas_Kalbar3.shp,,,10.0,,EPSG:4326,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Mempawah - Sungai Peniti,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/11. Kalimantan Barat/Sekat_Demnas_Kalbar/Sekat_Demnas_Kalbar4.shp,,,1635.0,,EPSG:4326,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Pungurbesar -  Sungai Kapuas,modelled_dtm,model,Peat depth and DTM/DTM_Kalimantan/04_Kalimantan Barat/DTM_Model_KHG_Sungai_Pungurbesar_Sungai_Kapuas.tif,10.0,100.0,,,EPSG:32649,p2-p98 1.5..5.7,"modelled DTM, DEMNAS-based"
+KHG Sungai Pungurbesar -  Sungai Kapuas,demnas,DEMNAS,dem/Mosaic_DEMNAS__KHG_Pulau_Kalimantan.tif,8.3,100.0,,,EPSG:4326,p2-p98 0.0..16.0,"DEMNAS (DSM, whole metres)"
+KHG Sungai Pungurbesar -  Sungai Kapuas,contour,BRGM,kontur_108khg_BRGM.gpkg,,,51.0,819.2,EPSG:4326,Contour 0.8..6.4,BRGM contours (interval to check)
+KHG Sungai Pungurbesar -  Sungai Kapuas,peat_depth,model,Peat depth and DTM/PeatDepth_Kalimantan/04_Kalimantan Barat/Peat_depth_clip_Sungai_Pungurbesar_Sungai_Kapuas.img,10.0,54.1,,,EPSG:32749,p2-p98 58.0..409.2,modelled peat depth
+KHG Sungai Pungurbesar -  Sungai Kapuas,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,52.2,25.0,,EPSG:4326,Sangat Dalam 12; Dangkal 7; Sedang 5; Dalam 1,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Pungurbesar -  Sungai Kapuas,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,19552.0,4785.7,EPSG:4326,2 12552; 3 5779; 1 1221,canals (OSM / BRGM bluebook)
+KHG Sungai Pungurbesar -  Sungai Kapuas,rivers,RBI,RBI_sungai.gpkg,,,5.0,95.6,EPSG:4326,,RBI rivers
+KHG Sungai Pungurbesar -  Sungai Kapuas,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,521.0,,EPSG:4326,  395; R1.2 KSE 126,BRGM hydrological infrastructure
+KHG Sungai Pungurbesar -  Sungai Kapuas,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Kalbar.shp,,,2611.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Pungurbesar -  Sungai Kapuas,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/11. Kalimantan Barat/Sekat_Demnas_KubuRaya_6desa/Sekat_Demnas_KubuRaya_6desa.shp,,,285.0,,EPSG:4326,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Pungurbesar -  Sungai Kapuas,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,5.0,,,"concession 5; 5 with water level, 665 station-days, 2026-04-01..2026-10-21",SiTMAT water-table stations
+KHG Sungai Kahayan - Sungai Sebangau,demnas,DEMNAS,dem/Mosaic_DEMNAS__KHG_Pulau_Kalimantan.tif,8.3,100.0,,,EPSG:4326,p2-p98 0.0..16.0,"DEMNAS (DSM, whole metres)"
+KHG Sungai Kahayan - Sungai Sebangau,demnas,DEMNAS,dem/DEMNAS_sebangau.tif,8.3,100.0,,,EPSG:4326,p2-p98 -0.8..16.4,"DEMNAS clip, float"
+KHG Sungai Kahayan - Sungai Sebangau,contour,BRGM,kontur_108khg_BRGM.gpkg,,,4748.0,5580.1,EPSG:4326,Contour 0.8..10.8,BRGM contours (interval to check)
+KHG Sungai Kahayan - Sungai Sebangau,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,12283.0,9589.1,EPSG:4326,3 8344; 1 3742; 2 197,canals (OSM / BRGM bluebook)
+KHG Sungai Kahayan - Sungai Sebangau,rivers,RBI,RBI_sungai.gpkg,,,2.0,168.7,EPSG:4326,,RBI rivers
+KHG Sungai Kahayan - Sungai Sebangau,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,1333.0,,EPSG:4326,R1.2 KSE 1333,BRGM hydrological infrastructure
+KHG Sungai Kahayan - Sungai Sebangau,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Kalteng.shp,,,26828.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Kahayan - Sungai Sebangau,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/12. Kalimantan Tengah/Sekat Demnas_Pulang Pisau_1.shp,,,55.0,,EPSG:4326,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Kahayan - Sungai Sebangau,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/12. Kalimantan Tengah/Sekat Demnas_Pulang Pisau_2.shp,,,32167.0,,EPSG:4326,,BlueBook proposed canal blocks (DEMNAS contours)
+KHG Sungai Kahayan - Sungai Sebangau,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,2.0,,,"concession 2; 2 with water level, 127 station-days, 2026-06-17..2026-10-21",SiTMAT water-table stations
+KHG Sungai Kapuas - Sungai Barito,demnas,DEMNAS,dem/Mosaic_DEMNAS__KHG_Pulau_Kalimantan.tif,8.3,100.0,,,EPSG:4326,p2-p98 0.0..50.0,"DEMNAS (DSM, whole metres)"
+KHG Sungai Kapuas - Sungai Barito,contour,BRGM,kontur_108khg_BRGM.gpkg,,,402.0,12527.3,EPSG:4326,Contour 0.4..36.8,BRGM contours (interval to check)
+KHG Sungai Kapuas - Sungai Barito,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,7731.0,5824.7,EPSG:4326,3 6197; 1 1421; 2 113,canals (OSM / BRGM bluebook)
+KHG Sungai Kapuas - Sungai Barito,rivers,RBI,RBI_sungai.gpkg,,,3.0,287.9,EPSG:4326,,RBI rivers
+KHG Sungai Kapuas - Sungai Barito,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,254.0,,EPSG:4326,R1.3 KTI 115; R1.2 KSE 86;   53,BRGM hydrological infrastructure
+KHG Sungai Kapuas - Sungai Barito,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Kalteng.shp,,,3568.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Kapuas - Sungai Barito,tmat,,SiTMAT stations_geo.csv + daily_long.csv,,,12.0,,,"concession 12; 12 with water level, 840 station-days, 2026-04-21..2026-09-17",SiTMAT water-table stations
+KHG Sungai Balangan - Sungai Batangalai,modelled_dtm,model,Peat depth and DTM/DTM_Kalimantan/06_Kalimantan Selatan/06_Kalimantan Selatan/DTM_Model_KHG_Sungai_Balangan_Sungai_Batangalai.tif,10.0,100.0,,,EPSG:32649,p2-p98 2.5..12.5,"modelled DTM, DEMNAS-based"
+KHG Sungai Balangan - Sungai Batangalai,demnas,DEMNAS,dem/Mosaic_DEMNAS__KHG_Pulau_Kalimantan.tif,8.3,100.0,,,EPSG:4326,p2-p98 0.0..16.0,"DEMNAS (DSM, whole metres)"
+KHG Sungai Balangan - Sungai Batangalai,contour,BRGM,kontur_108khg_BRGM.gpkg,,,68.0,700.9,EPSG:4326,Contour 2.4..23.6,BRGM contours (interval to check)
+KHG Sungai Balangan - Sungai Batangalai,peat_depth,model,Peat depth and DTM/PeatDepth_Kalimantan/06_Kalimantan Selatan/Peat_depth_clip_Sungai_Balangan_Sungai_Batangalai.img,10.0,53.4,,,EPSG:32750,p2-p98 59.8..313.9,modelled peat depth
+KHG Sungai Balangan - Sungai Batangalai,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,46.3,50.0,,EPSG:4326,Dalam 15; Sangat Dalam 13; Sedang 11; Dangkal 11,"BBSDLP peat depth classes, 1:50,000"
+KHG Sungai Balangan - Sungai Batangalai,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,5862.0,1380.6,EPSG:4326,3 3444; 2 2135; 1 283,canals (OSM / BRGM bluebook)
+KHG Sungai Balangan - Sungai Batangalai,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,112.0,,EPSG:4326,R1.2 KSE 112,BRGM hydrological infrastructure
+KHG Sungai Balangan - Sungai Batangalai,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/Sekat Kanal_BRGM_PPEG_Kalsel.shp,,,1450.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Balangan - Sungai Batangalai,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Kalteng.shp,,,1441.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Sungai Buru Mappi - Sungai Buru Obaa,contour,BRGM,kontur_108khg_BRGM.gpkg,,,85.0,3427.9,EPSG:4326,Contour 2.4..11.2,BRGM contours (interval to check)
+KHG Sungai Buru Mappi - Sungai Buru Obaa,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,39.0,30.6,EPSG:4326,2 19; 3 12; 1 8,canals (OSM / BRGM bluebook)
+KHG Sungai Buru Mappi - Sungai Buru Obaa,rivers,RBI,RBI_sungai.gpkg,,,5.0,153.0,EPSG:4326,,RBI rivers
+KHG Air Banyuasin - Air Lalang,modelled_dtm,model,Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/WDTM_KHG_Air_Banyusain_Air_Lalang.tif,12.4,100.0,,,EPSG:4326,p2-p98 1.2..3.5,"modelled DTM, DEMNAS-based"
+KHG Air Banyuasin - Air Lalang,demnas,DEMNAS-jp2,dem/demnas_sumatera/dem_sumatera_a_1.jp2,8.3,100.0,,,EPSG:4326,p2-p98 -2.0..13.0,"DEMNAS Sumatra, re-hosted int16 lossy"
+KHG Air Banyuasin - Air Lalang,contour,BRGM,kontur_108khg_BRGM.gpkg,,,36.0,510.8,EPSG:4326,Contour 0..3.2,BRGM contours (interval to check)
+KHG Air Banyuasin - Air Lalang,peat_depth,model,Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_clip_Air_Banyuasin_Air_Lalang.img,10.1,86.4,,,EPSG:32748,p2-p98 55.3..75.5,modelled peat depth
+KHG Air Banyuasin - Air Lalang,peat_depth,BBSDLP,kedalaman_gambut_bbsdlp.gpkg,,39.8,2.0,,EPSG:4326,Sedang 2,"BBSDLP peat depth classes, 1:50,000"
+KHG Air Banyuasin - Air Lalang,canals,OSM/BRGM,kanal_osgm_khg_existing_Indonesia.gpkg,,,2219.0,1977.2,EPSG:4326,3 1046; 2 992; 1 181,canals (OSM / BRGM bluebook)
+KHG Air Banyuasin - Air Lalang,rivers,RBI,RBI_sungai.gpkg,,,2.0,29.2,EPSG:4326,,RBI rivers
+KHG Air Banyuasin - Air Lalang,infrastructure,BRGM,infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg,,,60.0,,EPSG:4326,R1.2 KSE 60,BRGM hydrological infrastructure
+KHG Air Banyuasin - Air Lalang,canal_blocks,BRGM,sekat_kanal_bluebook_2026/brgm/SekatKanal_BRGM_PPEG_Jambi_Sumsel.shp,,,1434.0,,EPSG:4326,,BlueBook proposed canal blocks (BRGM contours)
+KHG Air Banyuasin - Air Lalang,canal_blocks,DEMNAS,sekat_kanal_bluebook_2026/demnas/5. Sumatera Selatan/Sekat Demnas_Sumsel.shp,,,703.0,,EPSG:32748,,BlueBook proposed canal blocks (DEMNAS contours)
