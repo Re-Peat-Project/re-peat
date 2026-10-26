@@ -2,7 +2,7 @@
 #   python scripts/run_neraca.py --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca.yaml --tier 1 --classes primary,secondary,tertiary
 # Environment variables: REPEAT_KHG (the workspace _khg folder: inputs, caches, outputs of this KHG) and REPEAT_DATA (the workspace _data folder).
 # The clipped vectors come from `python -m subkhg.prepare_inputs` (repeat-prioritisation); the sub-KHG polygons from repeat-delineation;
-# the station files in inputs_dir from `python -m repeat_neraca.bucket.export_inputs --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca_experiments.yaml --out <inputs_dir>`.
+# the station files in inputs_dir from `python -m repeat_neraca.stations --config <this file>` (block `stations:`, needs SITMAT_PROCESSED).
 # Rain and evaporation are read through repeat-common from the ERA5 cache (forcing_direct); `--forcing file` uses forcing_daily.csv in inputs_dir.
 name: kampar_gaung
 khg_id: "71"                                                    # the khg_id of the sub-KHG polygons (neraca_khg.csv)
@@ -22,3 +22,7 @@ forcing_direct:                                                         # read E
   start: 2026-04-01                                                     # the calibration window of forcing_daily.csv
   end: 2026-10-15
   tz_hours: 7
+stations:                                                               # SiTMAT stations inside the KHG: python -m repeat_neraca.stations --config <this file>
+  tma: {path: "${SITMAT_PROCESSED}"}                                    # repeat-sitmat/sitmat_out/processed
+  start: 2026-04-01                                                     # window; a station needs readings on 50% of its days
+  end: 2026-10-15

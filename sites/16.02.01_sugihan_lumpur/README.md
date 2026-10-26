@@ -16,16 +16,14 @@ Setup (installs): see [Kampar-Gaung](../14.02-04-05.01_kampar_gaung/README.md#se
 | 1 | repeat-prioritisation | Clip the national vectors | below | seconds |
 | 2 | repeat-prioritisation | Look at the inputs | `python -m subkhg.check_inputs --config ../re-peat/sites/16.02.01_sugihan_lumpur/subkhg.yaml --out ../re-peat/sites/16.02.01_sugihan_lumpur/reports/sugihan_lumpur_inputs.md` | 1 min |
 | 3 | repeat-delineation | Delineate sub-KHG, with the sweep | `python -m repeat_delineation --config ../re-peat/sites/16.02.01_sugihan_lumpur/delineate.yaml --sweep 5,20,35,50,70,100,150,200,300` | 3 min |
-| 4a | repeat-neraca | ERA5 forcing, every window (once) | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca_experiments.yaml --forcing-only` | 10 min for 2026, 12-18 min for each of 2019-2021 |
-| 4b | repeat-neraca | Neraca air skill on stations | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca_experiments.yaml --calibrate-only` | 30 s |
-| 4c | repeat-neraca | Neraca air indicators | `python -m repeat_neraca.bucket.run --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca_experiments.yaml` | 30 s |
-| 4d | repeat-neraca | What explains the station water tables | `python -m repeat_neraca.bucket.covariates --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca_experiments.yaml --ndvi-year 2019` | 1 min |
-| 4e | repeat-neraca | Sentinel-1 radar against the stations | `python -m repeat_neraca.bucket.sentinel1 --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca_experiments.yaml` | 4 min |
-| 4f | repeat-neraca | Physical neraca air (the model that replaces the bucket) and the KHG deficit `neraca_khg.csv` | `python scripts/run_neraca.py --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca.yaml --tier 1 --classes primary,secondary,tertiary` | 1 min |
+| 4a | repeat-common | Rain (CHIRPS) and evapotranspiration (WaPOR v3, MOD16) per sub-KHG per dekad from Earth Engine, and WorldCover shares | `python -m repeat_common.fetch_gee_balance --khg 16.02.01 --products chirps,wapor,mod16 --start 2018-01-01 --end 2026-10-01` (needs `EE_PROJECT`; `--workers 9` for parallel years) | about 15 min with 4 workers for 30 sub-KHG (measured, Sugihan-Lumpur); years are cached, a rerun takes about a minute |
+| 4b | repeat-neraca | Climatic balance per sub-KHG: `u_wb_mean`, `u_deficit_months`, stability check | `python -m repeat_neraca.balance --inputs $REPEAT_KHG/16.02.01_sugihan_lumpur/03_neraca/inputs --out $REPEAT_KHG/16.02.01_sugihan_lumpur/03_neraca/runs/balance` | seconds |
+| 4c | repeat-neraca | SiTMAT station files for the deficit | `python -m repeat_neraca.stations --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca.yaml` | 1 min |
+| 4d | repeat-neraca | KHG deficit `neraca_khg.csv` and the physical model (diagnostic) | `python scripts/run_neraca.py --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca.yaml --tier 1 --classes primary,secondary,tertiary` | 1 min |
 | 5 | repeat-prioritisation | Cloud layers for the ranking (once) | `python -m subkhg.run --config ../re-peat/sites/16.02.01_sugihan_lumpur/subkhg.yaml --fetch-only` | 15 min |
 | 6 | repeat-prioritisation | Score and rank | `python -m subkhg.run --config ../re-peat/sites/16.02.01_sugihan_lumpur/subkhg.yaml --skip-fetch` | 3 min |
-| 6b | repeat-prioritisation | `subkhg_priority.csv` for repeat-pump is written next to the ranking; to fill `deficit_mm`, set `priority_export.neraca_khg` in `subkhg.yaml` to the `neraca_khg.csv` of step 4f | (step 6 again) | seconds |
-| 7 | repeat-neraca | Report and pages | `python -m subkhg.report ...`, `python -m subkhg.dashboard ...`, `python -m repeat_neraca.bucket.dashboard ...` (arguments as in the Kampar-Gaung runbook, with `sugihan_lumpur` configs; outputs `../re-peat/sites/16.02.01_sugihan_lumpur/reports/sugihan_lumpur.md`, `docs/sugihan_lumpur_subkhg_process.html`, `docs/sugihan_lumpur_neraca_air_process.html`) | seconds |
+| 6b | repeat-prioritisation | `subkhg_priority.csv` for repeat-pump is written next to the ranking; to fill `deficit_mm`, set `priority_export.neraca_khg` in `subkhg.yaml` to the `neraca_khg.csv` of step 4d | (step 6 again) | seconds |
+| 7 | repeat-neraca | Report and pages | `python -m subkhg.report ...`, `python -m subkhg.dashboard ...` (arguments as in the Kampar-Gaung runbook, with `sugihan_lumpur` configs; outputs `../re-peat/sites/16.02.01_sugihan_lumpur/reports/sugihan_lumpur.md`, `docs/sugihan_lumpur_subkhg_process.html`) | seconds |
 
 Step 1:
 

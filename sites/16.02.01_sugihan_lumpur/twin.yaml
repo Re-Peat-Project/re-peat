@@ -1,0 +1,96 @@
+# Sungai Sugihan - Sungai Lumpur (KHG.16.02.01): data for the repeat-vis digital twin ("gambut bernapas").
+#   python repeat-vis/tools/build_twin_data.py --config re-peat/sites/16.02.01_sugihan_lumpur/twin.yaml
+# Writes repeat-vis/data/16.02.01.js. Paths take ${REPEAT_DATA} (workspace _data) and ${KHG} (this KHG's _khg folder).
+khg: "16.02.01"
+proposal: repeat-dem/research-proposal.md       # factor table (groups A to E) is parsed from here
+
+dtm: ${KHG}/01_dem/inputs/lidar_oki25.tif        # terrain of the twin
+display_cells: 320                               # long side of the browser heightmap (display only; the native DTM is kept)
+season: {start: "2026-04-01", end: "2026-10-15"} # daily clock: SiTMAT, Sentinel-1, ERA5/WaPOR and KLH 2026 hotspots overlap here
+neraca_run: ${KHG}/03_neraca/runs/baseline_era5  # the run subkhg.yaml reads
+forcing: ${KHG}/03_neraca/inputs/forcing_daily.csv
+stations: ${KHG}/03_neraca/inputs/stations.csv
+stations_daily: ${KHG}/03_neraca/inputs/stations_daily.csv
+units: ${KHG}/02_delineation/subkhg_units.gpkg
+ranking: ${KHG}/04_prioritisation/unit_prioritas.csv
+boundary: ${KHG}/00_inputs/khg.gpkg
+canals: ${KHG}/00_inputs/canals.gpkg
+rivers: ${KHG}/00_inputs/rivers.gpkg
+blocks: ${KHG}/00_inputs/blocks.gpkg
+peat_depth: "${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Sugihan_Sungai_Lumpur.img"
+peat_depth_scale: 0.01                           # raster in cm (neraca.yaml)
+peat_extent: ${REPEAT_DATA}/peat_extent_gfw_v20230315_z11.tif
+burnt: ${REPEAT_DATA}/burnt_area_2015_2026_Indonesia.gpkg
+hotspots_years: ${REPEAT_DATA}/hotspot_viirs_snpp_2012_2025.gpkg
+hotspots_now: ${REPEAT_DATA}/_data_hotspot_Januari_September_2026.gpkg
+hotspots: {confidence: ["n", "h"], types: [0], levels_now: ["medium", "high"]}   # same filters as national.profile
+icesat2: ${REPEAT_DATA}/icesat2/atl08_Sugihan_Lumpur_2019-2025.gpkg
+gedi: ${REPEAT_DATA}/gedi/gedi_l2a_Sugihan_Lumpur.gpkg
+track_points: 6000                               # ICESat-2 / GEDI points kept for display (every n-th point)
+
+# Factor (parameter name exactly as in the proposal table) -> datasets for this KHG and the twin layer that shows it.
+# kind: observed | modelled. Status is computed: observed if an observed file exists (and overlaps the KHG), else
+# modelled if a modelled file exists, else none. recap: theme in re-peat/sites/khg_data_recap.csv for the coverage.
+factors:
+  Canopy height:
+    data: [{path: "${REPEAT_DATA}/canopy/meta_chm_v1/*.tif", kind: observed, label: Meta/WRI canopy height 1 m}]
+  Acquisition epoch:
+    note: survey date of the OKI 25 m LiDAR is not recorded in the DEM manifest
+  Resolution and interpolation:
+    layer: terrain
+    data: [{path: "${KHG}/01_dem/inputs/lidar_oki25.tif", kind: observed, label: LiDAR DTM 25 m (KLHK), recap: lidar_dtm}]
+  Water surfaces and canals:
+    layer: canals
+    data: [{path: "${KHG}/00_inputs/canals.gpkg", kind: observed, label: canals (OSM / BRGM), recap: canals}]
+  Peat thickness:
+    layer: peat
+    data:
+      - {path: "${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Sugihan_Sungai_Lumpur.img", kind: modelled, label: peat depth model 10 m, recap: peat_depth}
+      - {path: "${REPEAT_DATA}/kedalaman_gambut_bbsdlp.gpkg", kind: observed, label: BBSDLP peat depth classes 1:50k, recap: peat_depth}
+  Net rainfall (P − ET) and regime:
+    layer: rain
+    data:
+      - {path: "${KHG}/03_neraca/inputs/forcing_daily.csv", kind: modelled, label: ERA5 rain and ET, WaPOR ET}
+  Hydraulic conductivity K:
+    note: the neraca air bucket fits k, a drainage coefficient in mm/day, which is not K
+  Specific yield Sy:
+    fit: sy                                      # the build writes the fitted value, its grid and the gate verdict into the note
+    data: [{path: "${KHG}/03_neraca/runs/baseline_era5/neraca_report.json", kind: modelled, label: neraca air calibration}]
+  Water-table depth:
+    layer: wells
+    data:
+      - {path: "${KHG}/03_neraca/inputs/stations_daily.csv", kind: observed, label: SiTMAT wells, recap: tmat}
+      - {path: "${KHG}/03_neraca/runs/baseline_era5/neraca_s1_series.csv", kind: observed, label: Sentinel-1 VV at the wells (wetness within a well)}
+      - {path: "${KHG}/03_neraca/runs/baseline_era5/neraca_series.csv", kind: modelled, label: neraca air simulation}
+  Distance to canal or river:
+    layer: canals
+    data: [{path: "${KHG}/00_inputs/canals.gpkg", kind: observed, label: canals and RBI rivers}]
+  Canal water level and blocks:
+    layer: blocks
+    data: [{path: "${KHG}/00_inputs/blocks.gpkg", kind: observed, label: existing hydrological structures (BRGM)}]
+    note: canal water level is not measured
+  Inundation frequency:
+    note: JRC Global Surface Water is catalogued as a cloud source (national stage 3) and not fetched for this KHG; Sentinel-1 at the wells is listed under water-table depth
+  Fire and burn depth:
+    layer: fire
+    data:
+      - {path: "${REPEAT_DATA}/burnt_area_2015_2026_Indonesia.gpkg", kind: observed, label: burnt area 2015-2026}
+      - {path: "${REPEAT_DATA}/hotspot_viirs_snpp_2012_2025.gpkg", kind: observed, label: VIIRS hotspots 2012-2025}
+      - {path: "${REPEAT_DATA}/_data_hotspot_Januari_September_2026.gpkg", kind: observed, label: KLH hotspots 2026}
+    note: burn depth is not measured
+  Land cover and drainage age:
+    data: [{path: "${REPEAT_DATA}/dem/open/worldcover/*.tif", kind: observed, label: ESA WorldCover 2021 10 m}]
+    note: land cover only; drainage age is not available
+  Airborne LiDAR DTM:
+    layer: terrain
+    data:
+      - {path: "${KHG}/01_dem/inputs/lidar_oki25.tif", kind: observed, label: LiDAR DTM 25 m (KLHK)}
+      - {path: "${KHG}/01_dem/inputs/lidar_sugihan_saleh_2020_20m.tif", kind: observed, label: LiDAR Sugihan-Saleh 2020}
+  ICESat-2 / GEDI ground points:
+    layer: tracks
+    data:
+      - {path: "${REPEAT_DATA}/icesat2/atl08_Sugihan_Lumpur_2019-2025.gpkg", kind: observed, label: ICESat-2 ATL08 2019-2025}
+      - {path: "${REPEAT_DATA}/gedi/gedi_l2a_Sugihan_Lumpur.gpkg", kind: observed, label: GEDI L2A}
+  SIPALAGA water-table data:
+    layer: wells
+    data: [{path: "${KHG}/03_neraca/inputs/stations_daily.csv", kind: observed, label: SiTMAT wells (KLH)}]

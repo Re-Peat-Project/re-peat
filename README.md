@@ -16,7 +16,7 @@ Each module is its own repository. They exchange files, never imports; the files
 | `repeat-common` | Library: open-data readers (Sentinel, ERA5, CHIRPS, WaPOR, ...), grid helpers, SiTMAT reader, config helpers | `repeat-common` |
 | `repeat-dem` | DEMNAS correction and smoothing to a ground surface; the open-DEM investigation | `demnas-corrections` |
 | `repeat-delineation` | Sub-KHG delineation from a DTM, rivers and canals | `repeat-delineation` |
-| `repeat-neraca` | Neraca air (water balance): physical model, KHG deficit, earlier bucket experiments | `repeat-neraca` |
+| `repeat-neraca` | Neraca air (water balance): climatic balance per sub-KHG, KHG deficit, physical model | `repeat-neraca` |
 | `repeat-prioritisation` | National (which KHG) and sub-KHG (which area inside a KHG) prioritisation | `khg-prioritisation-module` |
 | `repeat-pump` | Rewetting with pompanisasi: canal blocks, water sources, routes, pump sizing; QGIS plugin | `rewetting-algorithm` |
 
@@ -50,7 +50,7 @@ The team selected 12 main KHG (plus reserves): see [docs/13-selected-khg.md](doc
 | [kampar_gaung](sites/14.02-04-05.01_kampar_gaung/README.md) | 71 | Sungai Kampar - Sungai Gaung (Riau), 7,115 km2 |
 | [16.02.01_sugihan_lumpur](sites/16.02.01_sugihan_lumpur/README.md) | 16.02.01 | Sungai Sugihan - Sungai Lumpur (South Sumatra), 6,348 km2 |
 
-Each site folder has a README (the runbook: steps with the repository each runs in, decisions and reasons, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for the physical model, `neraca_experiments.yaml`) and `reports/`. These are test runs of the whole chain, not validated rankings.
+Each site folder has a README (the runbook: steps with the repository each runs in, decisions and reasons, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for neraca air) and `reports/`. These are test runs of the whole chain, not validated rankings.
 
 ## Data catalogue
 

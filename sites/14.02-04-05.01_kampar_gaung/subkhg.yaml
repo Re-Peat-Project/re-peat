@@ -21,7 +21,7 @@ vectors:
   blocks: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/blocks.gpkg             # existing canal blocks only (REALISASI)
 tma: {path: "${SITMAT_PROCESSED}", period: ["2026-04-01", "2026-10-15"]}   # the current water-table state
 sources: {ndmi: {res_m: 60}}                # coarse on purpose, to keep the test cheap
-extra_indicators: ["${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/03_neraca/runs/baseline_era5/neraca_unit.csv"]    # neraca air outputs; scored only if given a weight
-scoring: {ranksum_columns: {u_deficit_months: u_deficit_months_dry}}
+extra_indicators: ["${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/03_neraca/runs/balance/neraca_balance_unit.csv"]    # repeat_neraca.balance: u_wb_mean, u_deficit_months replace the TerraClimate columns; left empty where balance_stable_ok = 0; need-score weight 0 unless set
+scoring: {ranksum_columns: {u_wb_daily_mean: u_wb_mean}}     # the slide's water-balance indicator is the monthly balance of repeat_neraca.balance (rank only, so the unit does not matter)
 # for repeat-pump (subkhg_priority.csv in the output folder): the KHG deficit from repeat-neraca and the delivery period in days
 # priority_export: {neraca_khg: <repeat-neraca>/_out/kampar_gaung/neraca_khg.csv, design_period_days: null}

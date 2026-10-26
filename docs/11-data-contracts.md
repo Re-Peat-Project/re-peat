@@ -59,7 +59,9 @@ The sidecar is **new**: today the RMSE and datum are only in the run report. Con
 
 ## C4. Rain and evaporation forcing (`repeat-common` to `repeat-neraca`)
 
-Two routes, same table. **Direct (default, D2):** `repeat-neraca` reads ERA5 and WaPOR through `repeat_common.forcing` (`khg_table`), using the cache folder of the window first (`forcing_direct:` block in the site config, `run_neraca.py --forcing direct`). **File (offline fallback):** `repeat_neraca.bucket.export_inputs` writes `forcing_daily.csv` and `run_neraca.py --forcing file` reads it. Both give identical numbers (checked byte for byte on both sites). The station files are still written by `export_inputs` only.
+Two routes, same table. **Direct (default, D2):** `repeat-neraca` reads ERA5 and WaPOR through `repeat_common.forcing` (`khg_table`), using the cache folder of the window first (`forcing_direct:` block in the site config, `run_neraca.py --forcing direct`). **File (offline fallback):** `run_neraca.py --forcing file` reads `forcing_daily.csv`, written by the bucket experiments before they were retired (2026-10-26); the files on disk still serve. Both gave identical numbers (checked byte for byte on both sites). The station files (`stations.csv`, `stations_daily.csv`) are written by `python -m repeat_neraca.stations` from the SiTMAT extract (checked byte-identical to the earlier files on both sites, 2026-10-26).
+
+Per sub-KHG rain and evapotranspiration for the climatic balance come from Earth Engine through `python -m repeat_common.fetch_gee_balance` (CHIRPS daily, WaPOR v3 AETI dekadal, MOD16A2GF; reduced on each product's own grid): `03_neraca/inputs/balance_<product>_dekad.csv` with `unit_id, start, end, days, mm, n_px, time_cov`, and `units_landcover.csv` (ESA WorldCover v200 class shares).
 
 | File | Columns |
 |---|---|
@@ -73,9 +75,10 @@ Two outputs with different spatial meaning, and the contract must not blur them.
 | File | Level | Columns |
 |---|---|---|
 | `neraca_khg.csv` | KHG, one row | `khg_id`, `period_start`, `period_end`, `n_days`, `valid_day_share`, `n_stations`, `area_km2`, `sy`, `net_balance_mm`, `obs_depth_start_cm`, `obs_depth_end_cm`, `obs_change_cm`, `storage_change_mm`, `deficit_mm`, `deficit_mm_low`, `deficit_mm_high`, `deficit_m3`, `deficit_months` (months of the window with negative P - E; a partial last month counts), `evaporation_source`, `e_wapor_covers_period`, `method` |
-| `neraca_unit.csv` | sub-KHG | `unit_id`, `u_wt_mean_cm`, `u_wt_peak_cm`, `u_wt_days_gt40`, `neraca_skill_ok` |
+| `neraca_balance_unit.csv` (`03_neraca/runs/balance/`) | sub-KHG | `unit_id`, `u_wb_mean` (mm/month), `u_deficit_months` (per year), `wb_year_sd_mm`, `p_minus_et_mean_mm`, `interception_share`, `n_px_<product>`, `wb_mean_<et>`, `deficit_months_<et>`, `n_years`, `balance_stable_ok` |
+| `neraca_unit.csv` (physical model, tier 2) | sub-KHG | `unit_id`, `u_wt_mean_cm`, `u_wt_peak_cm`, `u_wt_days_gt40`, `neraca_skill_ok` |
 
-Neraca's own report (doc 10) finds that with canals as passive drains the per-sub-KHG water table is the same everywhere, so `neraca_unit.csv` carries no ranking information yet. The prioritisation reads it only where `neraca_skill_ok` is 1 (the name `subkhg.report` and `subkhg.dashboard` already check). The KHG-level `deficit_mm` is the useful number: it sizes the water the system must supply, and is what the pump module needs. It is a mass balance over a dry-season window with a constant Sy of 0.15 (band 0.10 to 0.20) and ERA5 evaporation as the central value (`deficit_mm_low` and `deficit_mm_high` give the band); the definition and the agreed choices are in `repeat-neraca/docs/neraca-air.md`. There is no skill flag in `neraca_khg.csv`: `n_stations`, `valid_day_share` and `e_wapor_covers_period` are the evidence.
+The sub-KHG output is the climatic balance of `repeat_neraca.balance` (method: `repeat-neraca/docs/neraca-air-method.md`). The prioritisation merges `neraca_balance_unit.csv` through `extra_indicators`: `u_wb_mean` and `u_deficit_months` replace its own TerraClimate columns and fill the water-balance slots of the rank-sum (`ranksum_columns: {u_wb_daily_mean: u_wb_mean}`). `common.pipeline.gate_balance` leaves them empty where `balance_stable_ok` is 0 (the order of sub-KHG changes between years or between ET sources). In the need score they keep weight 0 until the team sets one. The physical model's `neraca_unit.csv` carries no ranking information (every sub-KHG follows the same curve) and is not merged. The KHG-level `deficit_mm` is the useful number: it sizes the water the system must supply, and is what the pump module needs. It is a mass balance over a dry-season window with a constant Sy of 0.15 (band 0.10 to 0.20) and ERA5 evaporation as the central value (`deficit_mm_low` and `deficit_mm_high` give the band); the definition and the agreed choices are in `repeat-neraca/docs/neraca-air.md`. There is no skill flag in `neraca_khg.csv`: `n_stations`, `valid_day_share` and `e_wapor_covers_period` are the evidence.
 
 ## C6. Prioritisation results (`repeat-prioritisation` to pump and the dashboard)
 
@@ -93,7 +96,7 @@ Not produced by any module here: canals with `canal_class` (and optional `depth_
 
 ## Per-site registry
 
-Each study KHG has a folder in the hub, `sites/<khg_slug>/`: a README (runbook, decisions, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for the physical model, `neraca_experiments.yaml`) and `reports/`. The configs name every path through three environment variables: `REPEAT_WORK` (derived data: clipped vectors, caches, outputs), `REPEAT_DATA` (the raw REPEAT-LH data) and `SITMAT_PROCESSED`. The module repositories keep only an example config. Done 2026-10-20 for Kampar-Gaung and Sugihan-Lumpur; the outputs were checked to be identical to those of the configs before the move.
+Each study KHG has a folder in the hub, `sites/<khg_slug>/`: a README (runbook, decisions, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for neraca air) and `reports/`. The configs name every path through three environment variables: `REPEAT_WORK` (derived data: clipped vectors, caches, outputs), `REPEAT_DATA` (the raw REPEAT-LH data) and `SITMAT_PROCESSED`. The module repositories keep only an example config. Done 2026-10-20 for Kampar-Gaung and Sugihan-Lumpur; the outputs were checked to be identical to those of the configs before the move.
 
 ## Decisions to settle before code moves
 

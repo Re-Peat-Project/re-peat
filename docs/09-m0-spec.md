@@ -9,7 +9,7 @@ Status 2026-10-12. This is the agreed scope of milestone M0 in [08](08-build-pla
 ```
 re-peat/
   pyproject.toml
-  config/parameters.yaml        # the registry (single source of numbers)
+  repeat-neraca/src/repeat_neraca/parameters.yaml        # the registry (single source of numbers)
   src/watershare/
     params.py                   # load, validate, override, snapshot, sample
     # later in M0:
@@ -24,7 +24,7 @@ The module names from the methodology (`network`, `compartments`, `hydrology`, .
 
 ## 2. Parameter registry
 
-- One `config/parameters.yaml`. Each entry has `default`, `range` (plausible), optional `outer_range` (used only as the outer Monte Carlo bound), `unit`, `scope`, `sampling` (`fixed`, `uniform` or `log-uniform`), `source`, `confidence` and an optional `note`.
+- One `repeat-neraca/src/repeat_neraca/parameters.yaml`. Each entry has `default`, `range` (plausible), optional `outer_range` (used only as the outer Monte Carlo bound), `unit`, `scope`, `sampling` (`fixed`, `uniform` or `log-uniform`), `source`, `confidence` and an optional `note`.
 - Convention: water table depth is negative below the surface, so thresholds are negative (target −0.4 m, hazard bounds −0.4 / −0.6 / −0.85).
 - Validation (pydantic): the default lies within the range; the range lies within the outer range; log-uniform needs a positive range; the scope is from a fixed list.
 - Overrides are range-checked. `snapshot()` returns the effective values and a SHA-256 hash, saved with every run so a run reproduces exactly.

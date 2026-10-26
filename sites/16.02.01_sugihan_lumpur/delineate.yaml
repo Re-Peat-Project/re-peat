@@ -7,13 +7,13 @@ khg_id_field: khg_id
 cache_dir: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/cache
 out: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/02_delineation
 rasters:
-  dtm: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Sugihan_Sungai_Lumpur.tif"
+  dtm: ${REPEAT_DATA}/lidar_klhk/dem_25m/DEM25M/OKI25.tif   # KLHK LiDAR 25 m, covers the whole KHG (01_dem/inputs/manifest.csv); was the KLHK modelled DTM until 2026-10-26
 vectors:
   canals: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/00_inputs/canals.gpkg
   rivers: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/00_inputs/rivers.gpkg
 units:
   subkhg:
     canal_class_field: KET_KANAL            # the BRGM canal file: Kanal Primer / Sekunder / Tersier
-    outlet_canal_classes: ["Kanal Primer"]  # only primary canals (and rivers) are outlets; all canals are burned into the DTM
+    outlet_canal_classes: ["Kanal Primer", "Kanal Sekunder"]  # rivers, primary and secondary canals are outlets; all canals are burned into the DTM. Secondary added 2026-10-26: units agree better across DTMs and DTM noise (02_delineation/stability/, ARI 0.47 -> 0.63)
     min_area_km2: auto                      # smallest minimum area that gives at most target_count[1] = 30 units (runbook: the sweep)
     merge: adjacent                         # small pieces join the neighbour they share the longest border with

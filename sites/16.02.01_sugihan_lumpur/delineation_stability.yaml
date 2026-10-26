@@ -1,0 +1,26 @@
+# Sungai Sugihan - Sungai Lumpur (KHG.16.02.01): how stable are the sub-KHG units, and do secondary canals as outlets help?
+#   python -m repeat_delineation.stability --config ../re-peat/sites/16.02.01_sugihan_lumpur/delineation_stability.yaml
+# Needs REPEAT_DATA and REPEAT_KHG. Written 2026-10-26 before any run.
+base: delineate.yaml                       # this folder; every member is this config with only the DTM and the settings below changed
+out: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/02_delineation/stability
+reference: lidar                           # member the others are compared with (best-match IoU)
+dtms:                                      # name: DTM path
+  lidar: ${REPEAT_DATA}/lidar_klhk/dem_25m/DEM25M/OKI25.tif
+  lidar_smoothed: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/01_dem/benchmark/02_error_maps/lidar_smoothed.tif
+  deltadtm_m300_g150: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/01_dem/benchmark/05_demnas_ground_filter/deltadtm_base_m300_g150.tif
+  deltadtm_m1200_g600: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/01_dem/benchmark/05_demnas_ground_filter/deltadtm_base_m1200_g600.tif
+  demnas_processed: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/01_dem/benchmark/04_processed/demnas/dtm_smooth.tif
+  klhk_modelled_processed: ${REPEAT_KHG}/16.02.01_sugihan_lumpur/01_dem/benchmark/04_processed/klhk_modelled/dtm_smooth.tif
+  klhk_modelled_raw: "${REPEAT_DATA}/Peat depth and DTM/DTM_Sumatera-002/03_Sumatera Selatan/DTM_Sungai_Sugihan_Sungai_Lumpur.tif"
+  flat: flat                               # constant surface: only the mapped channels shape the units
+noise:                                     # the reference DTM plus spatially correlated gaussian noise, on the delineation grid
+  members: 5
+  sigma_m: 0.25                            # about the LiDAR's own 1 km height difference here (0.38 m), below the open DEMs' error
+  corr_length_m: 500
+  seed: 1
+settings:                                  # name: overrides of units.subkhg; each runs with every DTM and noise member
+  primary: {outlet_canal_classes: ["Kanal Primer"]}
+  primary_secondary: {outlet_canal_classes: ["Kanal Primer", "Kanal Sekunder"]}
+  # added 2026-10-26 after the first two settings ran, before this one ran: the flow merge (a small piece prefers the divide
+  # neighbour that drains to the same channel line)
+  primary_secondary_flow: {outlet_canal_classes: ["Kanal Primer", "Kanal Sekunder"], merge: flow}

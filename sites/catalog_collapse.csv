@@ -8,3 +8,5 @@ sekat_kanal_bluebook_2026/demnas,1,BlueBook canal blocks from DEMNAS contours by
 dem/demnas_tiles,0,DEMNAS sheets as delivered by BIG Tanahair
 dem/open,1,open global DEM tiles per product
 canopy/meta_chm_v1,0,Meta/WRI canopy height quadkey tiles
+gedi,0,GEDI L2A shots per KHG (raster cells and points)
+dpg/atlas_brg,0,"BRG Atlas Desa Peduli Gambut: PDF per province, cover and index JPG"

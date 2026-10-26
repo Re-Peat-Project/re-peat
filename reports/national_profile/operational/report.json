@@ -167,7 +167,7 @@
       "top_n": 25
     },
     "tma": {
-      "path": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/../repeat-sitmat/sitmat_out/processed",
+      "path": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-sitmat/sitmat_out/processed",
       "kinds": [
         "concession"
       ],
@@ -179,20 +179,21 @@
       "min_days": 30
     },
     "peat": {
-      "extent": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/../_data/peat_extent_gfw_v20230315_z11.tif",
-      "global": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/../_data/peat_extent_gpm2022_1km.tif",
+      "extent": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gfw_v20230315_z11.tif",
+      "global": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gpm2022_1km.tif",
       "basis": "peat",
       "min_peat_km2": 25
     }
   },
   "inputs": {
-    "khg": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\batas_khg_indonesia.gpkg",
-    "burned": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\burnt_area_2015_2026_Indonesia.gpkg",
-    "hotspots": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\hotspot_viirs_snpp_2012_2025.gpkg",
-    "canals": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\kanal_osgm_khg_existing_Indonesia.gpkg",
-    "blocks": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg",
-    "villages": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\desa_target_pemulihan_ekosistem.gpkg",
-    "peat_depth": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\kedalaman_gambut_bbsdlp.gpkg",
-    "hotspots_now": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\_data_hotspot_Januari_September_2026.gpkg"
+    "khg": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\batas_khg_indonesia.gpkg",
+    "burned": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\burnt_area_2015_2026_Indonesia.gpkg",
+    "hotspots": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\hotspot_viirs_snpp_2012_2025.gpkg",
+    "canals": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\kanal_osgm_khg_existing_Indonesia.gpkg",
+    "blocks": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg",
+    "villages": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\desa_target_pemulihan_ekosistem_gambut.gpkg",
+    "dmpg": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\dpg\\dpg_atlas_villages.csv",
+    "peat_depth": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\kedalaman_gambut_bbsdlp.gpkg",
+    "hotspots_now": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\_data_hotspot_Januari_September_2026.gpkg"
   }
 }
