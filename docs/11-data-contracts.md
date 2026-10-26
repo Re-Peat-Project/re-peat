@@ -94,6 +94,33 @@ The sub-KHG output is the climatic balance of `repeat_neraca.balance` (method: `
 
 Not produced by any module here: canals with `canal_class` (and optional `depth_m`, `width_m`), existing structures (`sekat_id`, `has_gate`), rivers, burnt area, peat depth, moisture rasters. Their schema is in `repeat-pump`'s README and is not repeated here. Where the same layer (canals, peat depth) is also used by delineation, neraca or prioritisation, all of them read the same file; the per-site registry (below) holds the path once.
 
+## C8. Pump inputs as they are on the project KHG (checked 2026-10-25/26)
+
+Checked read-only on five KHG (Kahayan-Sebangau, Mendahara-Batanghari, Air Hitam Laut-Buntu Kecil, Pungurbesar-Kapuas with BRGM DTM and with DEMNAS) against the national sources and the pump runs of 24-25 Oct. Changes proposed in `repeat-pump` are named by their pull request there (#2 to #7, open on 2026-10-26).
+
+| Layer | What the modules get | Status |
+|---|---|---|
+| Canal class | National OSM canals, column `KET_KANAL` (code `KODE_KANAL`), exactly three values: `Kanal Primer` (43,217), `Kanal Sekunder` (199,757), `Kanal Tersier` (414,647). The engine expects `canal_class` = `primer` / `sekunder` / `tersier`; the project scripts translate the values, the QGIS plugin does not yet | **D6** |
+| Canal size | No canal layer has measured `depth_m` or `width_m`. The pump runs use `width_m` per class (primer 25 m, sekunder 6 m, Kahayan-Sebangau survey, doc 05) and one `depth_m` (2.0 m, Panduan 4.1) | assumption |
+| Peat depth | One source in two forms: the `PEAT_THICK` polygons of `ALL_Analysis` (text classes such as "0,5 - 1,0 meter"), and `peat_depth_m.tif`, a 100 m raster of their class midpoints that neraca and prioritisation read. The BRGM peat depth models (`Peat_depth_*.img`, 10 m, **centimetres**, one Jambi clip with -8888 cells) exist for all five KHG | **D7** |
+| Existing blocks | BRGM `Infrastruktur_Hidrologis_PPEG_BRGM_Indonesia`, filtered per site (the layer mixes two schemas: `Kegiatan == 'R1.2 KSE'`, or `Jenis` "SEKAT KANAL" with `KETERANGAN == 'REALISASI'`) into `blocks.gpkg` for prioritisation. No `sekat_id`, `has_gate` or `crest_elev_m`. Not passed to the pump runs | **D8** |
+| Rivers (pump) | RBI `SUNGAI_AR_50K` polygons. Every river gets `perennial = 1` and one `dry_season_wl_m` per site | **D9** |
+| DTM | BRGM DTM (Kahayan-Sebangau, Pungurbesar), LiDAR KLHK 25 m (Jambi), DEMNAS (Pungurbesar). No file carries a vertical datum; RMSE 2.46 m measured for DEMNAS, 0.3 m assumed elsewhere | see D4 |
+| CRS | Mixed inside one site: EPSG:4326 hand-over vectors, UTM rasters and pump layers (32748/32749), RBI polygons in WGS 84 + EGM2008 (EPSG:9518). `run.auto_reproject` is `false` by default, so the vectors are reprojected before the pump runs | |
+| Attribute `fid` | Shapefiles saved from a GeoPackage, and merged layers, carry an attribute `fid` that clashes with the GeoPackage row id. The pump keeps it as `src_fid` (PR #3) | done in PR |
+
+### What "IPG" means in each module
+
+Both compute *existing blocks ÷ blocks needed*, from different inputs:
+
+- **Prioritisation** (`u_ipg_gap`, doc 03): existing blocks from `blocks.gpkg` (the filtered BRGM points).
+- **Pump** (`IPG per canal` in `run_report.md`): existing blocks from `inputs.sekat_existing`. That input is empty in every project run so far, so `n_existing` is 0 on every canal and the pump IPG is 0. Until D8 is settled, report it as "no existing blocks given", not as a measured gap.
+
+### Peat depth and sekat in the pump (PR #4, #5)
+
+- **Peat depth (D7):** `inputs.peat_depth` takes the class polygons or a depth raster with `units: m | cm` (never guessed) and optional extra `nodata` values. For a raster, Stage 6 uses the median within one cell of each segment for the score and the minimum for the KLH 3 m / 1 m rule. On Air Hitam Laut-Buntu Kecil the class-midpoint raster selects 58 segments, all among the 64 the polygons select; the BRGM model, much deeper (median 4.8 m against 0.75 m along the canals), selects 103. Which source a reported run uses is the open part of D7.
+- **Sekat scope (D10):** Stage 7 places sekat on every kept canal by the head rule. Once the routes are known, Stage 9 labels each proposed sekat `target` (on a selected canal), `route` (on a pump route) or `other`, in `sekat_scope`; `pumping.sekat_scope: all | selected` picks the plan. On the five KHG the `selected` plan keeps 7 to 37 % of the proposed sekat (Kahayan-Sebangau 83 of 222). Many targets get no sekat of their own because their selected canals rise less than `dA_m` (Kahayan-Sebangau 84 of 111 targets); the report warns about them.
+
 ## Per-site registry
 
 Each study KHG has a folder in the hub, `sites/<khg_slug>/`: a README (runbook, decisions, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for neraca air) and `reports/`. The configs name every path through three environment variables: `REPEAT_WORK` (derived data: clipped vectors, caches, outputs), `REPEAT_DATA` (the raw REPEAT-LH data) and `SITMAT_PROCESSED`. The module repositories keep only an example config. Done 2026-10-20 for Kampar-Gaung and Sugihan-Lumpur; the outputs were checked to be identical to those of the configs before the move.
@@ -107,3 +134,8 @@ Each study KHG has a folder in the hub, `sites/<khg_slug>/`: a README (runbook, 
 | D3 | Who writes `subkhg_priority.csv` | **Settled and done:** `repeat-prioritisation` (`subkhg/priority_export.py`, config `priority_export:`), reading `neraca_khg.csv` |
 | D4 | `dtm_smooth.json` sidecar | add it in `repeat-dem`; consumers warn when RMSE is missing |
 | D5 | Where the contract checks live | `repeat-common.contracts`: one `validate_<file>()` per section above, called by the reader of that file |
+| D6 | Which canal classes take part, and how the source values are read | `primer` and `sekunder` (Panduan 1.2), already in the project pump configs (`topology.canal_classes`). Open: read the source values (`Kanal Primer` …) directly in the plugin, so a KLH user does not have to recode them |
+| D7 | One peat depth input for all modules | **Settled 2026-10-26, proposed in `repeat-pump` PR #5:** the pump takes polygons or a raster (units stated; median for the score, minimum for the KLH rule). Open: which raster (class midpoints or the BRGM model) a reported run uses |
+| D8 | Existing blocks in the pump | Pass the filtered BRGM points as `sekat_existing` (`sekat_id` = row id, `has_gate` false, `crest_elev_m` empty), or state in every report that the pump runs without existing blocks |
+| D9 | River water level | Keep `perennial = 1` and one dry-season level per site as a stated assumption until a river level source exists |
+| D10 | Sekat on every canal or on the chosen area | **Settled 2026-10-26, proposed in `repeat-pump` PR #4:** `pumping.sekat_scope: selected` keeps the sekat on the selected canals and on the pump routes. The route sekat stay in the plan with either setting, as gates holding the pumped water; a selected area without sekat is a report warning |
