@@ -28,7 +28,7 @@ Other peat sources checked on 2026-10-22: BIG's RBI REST services (geoservices.b
 
 ## Stage 3: layers for the shortlisted KHG
 
-For the top N KHG the engine's fetcher (`python -m national.run --fetch-only`, config `configs/examples/national_stage3.yaml`) and `python -m national.stage3` add: the TerraClimate dry-season water deficit and monthly rain (2015-2021; the dataset ends in 2021), ESA WorldCover land-cover shares and the share of permanent open water (both sampled at 250 m), the peat extent, and SiTMAT. Results: `reports/national_profile/stage3/stage3_profile.csv` (one row per KHG) and `stage3_yearly.csv`.
+For the top N KHG the engine's fetcher (`repeat-national-run --fetch-only`, config `configs/examples/national_stage3.yaml`) and `repeat-national-stage3` add: the TerraClimate dry-season water deficit and monthly rain (2015-2021; the dataset ends in 2021), ESA WorldCover land-cover shares and the share of permanent open water (both sampled at 250 m), the peat extent, and SiTMAT. Results: `reports/national_profile/stage3/stage3_profile.csv` (one row per KHG) and `stage3_yearly.csv`.
 
 - **JRC** is the European Commission's Joint Research Centre. Its Global Surface Water dataset maps, from Landsat, how many months per year each 30 m cell holds water; "permanent water" here is the share of cells with water in 10 or more months. It is shown, not scored.
 - **ERA5 dry spells are not used.** The hourly store costs about 70 s per month per KHG to read, and 25 km cannot tell neighbouring KHG apart. The reader is still in `repeat_common` for other uses.
@@ -38,7 +38,7 @@ For the top N KHG the engine's fetcher (`python -m national.run --fetch-only`, c
 
 ## Land status overlays
 
-`python -m national.overlay --config configs/examples/national_stage3.yaml` crosses the profiled KHG (the stage 3 selection: top 25 and the team's) with four layers: forest area function (`KWSHUTAN_AR_250K_2023`), peat ecosystem function (`FEG__Indonesia__2017`), business licences (`ALL_Updade__IZIN_USAHA`, 2025) and the Bluebook target villages. Inputs are named under `inputs:` in the config, so an updated layer is a file swap. The four layers sit in `_data/landstatus/` (licences, FEG, forest area) and `_data/desa_target_pemulihan_ekosistem_gambut.gpkg`.
+`repeat-national-overlay --config configs/examples/national_stage3.yaml` crosses the profiled KHG (the stage 3 selection: top 25 and the team's) with four layers: forest area function (`KWSHUTAN_AR_250K_2023`), peat ecosystem function (`FEG__Indonesia__2017`), business licences (`ALL_Updade__IZIN_USAHA`, 2025) and the Bluebook target villages. Inputs are named under `inputs:` in the config, so an updated layer is a file swap. The four layers sit in `_data/landstatus/` (licences, FEG, forest area) and `_data/desa_target_pemulihan_ekosistem_gambut.gpkg`.
 
 - **Method:** a regular grid of points inside each KHG (100 m, or 200 m for the largest). Each point gets its peat flag (GFW extent), its class in each layer, whether it burned in 2015 to 2025, and its licences. Areas are point counts times the cell area, never `Shape_Area`.
 - **Licences overlap**, so licence areas are not summed: "any licence" counts a point once, and the per-type bars can add up to more than the peat. Forest area has 21 codes, grouped into conservation, protection forest, production forest (HP, HPT), convertible production (HPK), other land use (APL) and water or undefined.
@@ -96,14 +96,14 @@ python tools/fetch_peat_extent.py             # wrapper of repeat_common.fetch_p
 python tools/parse_kepmen_khg.py              # re-peat: official KHG table -> sites/khg_registry.csv (needs pdfplumber)
 python tools/catalog_data.py                  # re-peat: refresh the data catalogue
 # Stage 3 needs the cloud stack: python -m venv _repeat-project/.venv; pip install -e repeat-common pyogrio pdfplumber matplotlib pysheds
-python -m national.profile --config configs/examples/national_profile.yaml --mode validate        # repeat-prioritisation, about 8 min
-python -m national.profile --config configs/examples/national_profile.yaml --mode operational
-python -m national.dashboard --config configs/examples/national_profile.yaml --top 25   # the interactive page
-python -m national.stage3 select --config configs/examples/national_stage3.yaml            # top-N boundaries from the operational ranking
-python -m national.run --config configs/examples/national_stage3.yaml --fetch-only         # TerraClimate, WorldCover, JRC (about 10 min for 25 KHG)
-python -m national.stage3 summarize --config configs/examples/national_stage3.yaml
-python -m national.overlay --config configs/examples/national_stage3.yaml                  # land-status overlays for the same KHG
-python -m national.dashboard --config configs/examples/national_profile.yaml --top 25   # picks up the stage 3 tables; --reassemble reuses the last data
+repeat-national-profile --config configs/examples/national_profile.yaml --mode validate        # repeat-prioritisation, about 8 min
+repeat-national-profile --config configs/examples/national_profile.yaml --mode operational
+repeat-national-dashboard --config configs/examples/national_profile.yaml --top 25   # the interactive page
+repeat-national-stage3 select --config configs/examples/national_stage3.yaml            # top-N boundaries from the operational ranking
+repeat-national-run --config configs/examples/national_stage3.yaml --fetch-only         # TerraClimate, WorldCover, JRC (about 10 min for 25 KHG)
+repeat-national-stage3 summarize --config configs/examples/national_stage3.yaml
+repeat-national-overlay --config configs/examples/national_stage3.yaml                  # land-status overlays for the same KHG
+repeat-national-dashboard --config configs/examples/national_profile.yaml --top 25   # picks up the stage 3 tables; --reassemble reuses the last data
 python -m tests.test_national_profile
 ```
 

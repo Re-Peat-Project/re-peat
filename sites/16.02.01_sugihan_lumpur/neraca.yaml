@@ -1,7 +1,7 @@
 # Sungai Sugihan - Sungai Lumpur (KHG.16.02.01): inputs of the physical neraca air (repeat-neraca, package repeat_neraca). Run from the repeat-neraca checkout:
 #   python scripts/run_neraca.py --config ../re-peat/sites/16.02.01_sugihan_lumpur/neraca.yaml --tier 1 --classes primary,secondary,tertiary
 # Environment variables: REPEAT_KHG (the workspace _khg folder: inputs, caches, outputs of this KHG) and REPEAT_DATA (the workspace _data folder).
-# The clipped vectors come from `python -m subkhg.prepare_inputs` (repeat-prioritisation); the sub-KHG polygons from repeat-delineation;
+# The clipped vectors come from `repeat-subkhg-prepare` (repeat-prioritisation); the sub-KHG polygons from repeat-delineation;
 # the station files in inputs_dir from `python -m repeat_neraca.stations --config <this file>` (block `stations:`, needs SITMAT_PROCESSED).
 # Rain and evaporation are read through repeat-common from the ERA5 cache (forcing_direct); `--forcing file` uses forcing_daily.csv in inputs_dir.
 name: sugihan_lumpur

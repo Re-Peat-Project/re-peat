@@ -32,21 +32,21 @@ Configs read `${REPEAT_KHG}`, `${REPEAT_DATA}` and `${SITMAT_PROCESSED}`; a miss
 |---|---|---|---|---|
 | 0 | repeat-prioritisation | Which DTM and peat depth rasters cover which KHG (names do not match) | `python scripts/index_repeat_data.py --root "$REPEAT_DATA/Peat depth and DTM" --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/repeat_data_index.csv` | 1 min |
 | 1 | repeat-prioritisation | Clip the national vectors to the KHG | see below | seconds |
-| 2 | repeat-prioritisation | Look at the inputs | `python -m subkhg.check_inputs --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/kampar_gaung_inputs.md` | 1 min |
+| 2 | repeat-prioritisation | Look at the inputs | `repeat-subkhg-check --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/kampar_gaung_inputs.md` | 1 min |
 | 3 | repeat-delineation | Delineate sub-KHG | `python -m repeat_delineation --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/delineate.yaml` | 1.5 min |
 | 4a | repeat-common | Rain (CHIRPS) and evapotranspiration (WaPOR v3, MOD16) per sub-KHG per dekad from Earth Engine, and WorldCover shares | `python -m repeat_common.fetch_gee_balance --khg 14.02-04-05.01 --products chirps,wapor,mod16 --start 2018-01-01 --end 2026-10-01` (needs `EE_PROJECT`; `--workers 9` for parallel years) | about 15 min with 4 workers for 30 sub-KHG (measured, Sugihan-Lumpur); years are cached, a rerun takes about a minute |
 | 4b | repeat-neraca | Climatic balance per sub-KHG: `u_wb_mean`, `u_deficit_months`, stability check | `python -m repeat_neraca.balance --inputs $REPEAT_KHG/14.02-04-05.01_kampar_gaung/03_neraca/inputs --out $REPEAT_KHG/14.02-04-05.01_kampar_gaung/03_neraca/runs/balance` | seconds |
 | 4c | repeat-neraca | SiTMAT station files for the deficit | `python -m repeat_neraca.stations --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca.yaml` | 1 min |
 | 4d | repeat-neraca | KHG deficit `neraca_khg.csv` and the physical model (diagnostic) | `python scripts/run_neraca.py --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/neraca.yaml --tier 1 --classes primary,secondary,tertiary` | 1 min |
-| 5 | repeat-prioritisation | Cloud layers for the ranking (once) | `python -m subkhg.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --fetch-only` | 37 min |
-| 6 | repeat-prioritisation | Score and rank | `python -m subkhg.run --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --skip-fetch` | 3 min |
+| 5 | repeat-prioritisation | Cloud layers for the ranking (once) | `repeat-subkhg --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --fetch-only` | 37 min |
+| 6 | repeat-prioritisation | Score and rank | `repeat-subkhg --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --skip-fetch` | 3 min |
 | 6b | repeat-prioritisation | `subkhg_priority.csv` for repeat-pump is written next to the ranking; to fill `deficit_mm`, set `priority_export.neraca_khg` in `subkhg.yaml` to the `neraca_khg.csv` of step 4d | (step 6 again) | seconds |
-| 7 | repeat-prioritisation | Report | `python -m subkhg.report --subkhg-config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --neraca-dir $REPEAT_KHG/14.02-04-05.01_kampar_gaung/03_neraca --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/kampar_gaung.md` | seconds |
+| 7 | repeat-prioritisation | Report | `repeat-subkhg-report --subkhg-config ../re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml --neraca-dir $REPEAT_KHG/14.02-04-05.01_kampar_gaung/03_neraca --out ../re-peat/sites/14.02-04-05.01_kampar_gaung/reports/kampar_gaung.md` | seconds |
 
 Step 1:
 
 ```bash
-python -m subkhg.prepare_inputs \
+repeat-subkhg-prepare \
   --khg-shp "$REPEAT_DATA/Peat depth and DTM/BatasKHG/KHG_SungaiKampar-SungaiGaung/KHG_SungaiKampar-SungaiGaung.shp" \
   --khg-id 71 --out $REPEAT_KHG/14.02-04-05.01_kampar_gaung/00_inputs \
   --canals "$REPEAT_DATA/kanal_osgm_khg_existing_Indonesia.gpkg" \
