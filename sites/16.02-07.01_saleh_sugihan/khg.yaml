@@ -1,0 +1,47 @@
+# KHG Sungai Saleh - Sungai Sugihan (KHG.16.02-07.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 16.02-07.01
+  name: KHG Sungai Saleh - Sungai Sugihan
+  folder: 16.02-07.01_saleh_sugihan
+  province: Sumatera Selatan
+  role: main
+dems:
+  lidar:
+    product: lidar_sugihan_saleh_2020_20m
+    clip: ${REPEAT_KHG}/16.02-07.01_saleh_sugihan/01_dem/inputs/lidar_sugihan_saleh_2020_20m.tif
+    cover_pct: 98.3
+    sources:
+    - ${REPEAT_DATA}/lidar_klhk/sugihan_saleh_2020/lidar_dtm/LIDAR__KHG_Sugihan_Saleh__20m__UTM_48S.tif
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/16.02-07.01_saleh_sugihan/01_dem/inputs/deltadtm.tif
+    cover_pct: 98.8
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Saleh_Sugihan.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/16.02-07.01_saleh_sugihan/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1012-64_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1112-43_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1112-44_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-11_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-12_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-13_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-14_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-41_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-42_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-51_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Saleh_Sungai_Sugihan.img
+  scale: 0.01
+  valid_share: 0.694
+canals:
+  class_field: KET_KANAL
+overrides: {}

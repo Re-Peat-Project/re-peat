@@ -1,0 +1,38 @@
+# KHG Pulau Padang (KHG.14.10.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 14.10.01
+  name: KHG Pulau Padang
+  folder: 14.10.01_pulau_padang
+  province: Riau
+  role: main
+dems:
+  lidar:
+    skip: the LiDAR is a 2 m DTM; left out by decision 2026-10-27
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/14.10.01_pulau_padang/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.3
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Pulau_Padang.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/14.10.01_pulau_padang/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-44_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-11_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-12_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-13_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-14_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Pulau_Padang.img
+  scale: 0.01
+  valid_share: 0.81
+canals:
+  class_field: KET_KANAL
+overrides: {}

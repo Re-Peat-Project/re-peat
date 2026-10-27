@@ -1,0 +1,46 @@
+# KHG Sungai Kahayan - Sungai Sebangau (KHG.62.11-14.02): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 62.11-14.02
+  name: KHG Sungai Kahayan - Sungai Sebangau
+  folder: 62.11-14.02_kahayan_sebangau
+  province: Kalimantan Tengah
+  role: main
+dems:
+  lidar:
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/62.11-14.02_kahayan_sebangau/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.8
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Kahayan_Sebangau.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/62.11-14.02_kahayan_sebangau/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1612-61_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1612-62_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1612-63_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1612-64_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1613-32_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1613-34_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1613-62_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1613-64_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1712-41_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1712-43_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1713-11_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1713-12_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1713-13_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1713-14_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1713-41_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1713-43_v1.0.tif
+peat_depth: null
+canals:
+  class_field: KET_KANAL
+overrides: {}

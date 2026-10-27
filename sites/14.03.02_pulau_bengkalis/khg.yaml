@@ -1,0 +1,41 @@
+# KHG Pulau Bengkalis (KHG.14.03.02): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 14.03.02
+  name: KHG Pulau Bengkalis
+  folder: 14.03.02_pulau_bengkalis
+  province: Riau
+  role: main
+dems:
+  lidar:
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/14.03.02_pulau_bengkalis/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.3
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Pulau_Bengkalis.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/14.03.02_pulau_bengkalis/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0817-62_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-12_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-13_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-14_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-21_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-23_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-41_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-42_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Pulau_Bengkalis.img
+  scale: 0.01
+  valid_share: 0.726
+canals:
+  class_field: KET_KANAL
+overrides: {}

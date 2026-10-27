@@ -1,0 +1,41 @@
+# KHG Pulau Tebing Tinggi (KHG.14.10.03): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 14.10.03
+  name: KHG Pulau Tebing Tinggi
+  folder: 14.10.03_pulau_tebing_tinggi
+  province: Riau
+  role: reserve
+dems:
+  lidar:
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/14.10.03_pulau_tebing_tinggi/01_dem/inputs/deltadtm.tif
+    cover_pct: 98.5
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Pulau_Tebing_Tinggi.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/14.10.03_pulau_tebing_tinggi/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-44_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-52_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-53_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-54_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-61_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0916-63_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-21_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0917-22_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Pulau_Tebing_Tinggi.img
+  scale: 0.01
+  valid_share: 0.793
+canals:
+  class_field: KET_KANAL
+overrides: {}

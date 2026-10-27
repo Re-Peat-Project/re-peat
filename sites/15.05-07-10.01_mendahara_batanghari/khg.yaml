@@ -1,0 +1,48 @@
+# KHG Sungai Mendahara - Sungai Batanghari (KHG.15.05-07-10.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 15.05-07-10.01
+  name: KHG Sungai Mendahara - Sungai Batanghari
+  folder: 15.05-07-10.01_mendahara_batanghari
+  province: Jambi
+  role: main
+dems:
+  lidar:
+    product: lidar_jambi25m
+    clip: ${REPEAT_KHG}/15.05-07-10.01_mendahara_batanghari/01_dem/inputs/lidar_jambi25m.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/lidar_klhk/dem_25m/DEM25M/Jambi25m.tif
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/15.05-07-10.01_mendahara_batanghari/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.5
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Mendahara_Batanghari.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/15.05-07-10.01_mendahara_batanghari/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0914-34_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_0914-62_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-13_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-41_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-42_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-43_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-44_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-51_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-53_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1015-11_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1015-12_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/02_Jambi/Peat_depth_model_KHG_Sungai_Mendahara_Sungai_Batanghari.img
+  scale: 0.01
+  valid_share: 0.62
+canals:
+  class_field: KET_KANAL
+overrides: {}

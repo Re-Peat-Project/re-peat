@@ -2,7 +2,60 @@
 
 Peatland rewetting toolkit of the RE-PEAT project (World Bank, KLH), GIS workstream, Departemen Teknik Geodesi UGM. GitHub organisation: Re-Peat-Project.
 
-This repository is the hub. It holds no pipeline code. It holds what ties the modules together: the documentation, the data contracts between modules, and the per-site configs, runbooks and reports of the KHG we have run.
+This repository is the hub. It holds no analysis code; that lives in the modules. It holds what ties them together: the runner of the full chain, the documentation, the data contracts between modules, and the per-KHG configs, runbooks and reports.
+
+## Run the chain
+
+```bash
+python tools/khg_pipeline.py setup     # repositories, interpreters, folders
+python tools/khg_pipeline.py init      # sites/<folder>/khg.yaml per KHG
+python tools/khg_pipeline.py status    # what is done and what can run, per KHG and DEM
+python tools/khg_pipeline.py run --khg 15.05-07-10.01
+```
+
+Shared settings in [pipeline.yaml](pipeline.yaml) (machine overrides in an untracked `pipeline.local.yaml`), one `sites/<folder>/khg.yaml` per KHG. Setup on another machine, steps and outputs: [docs/19-running-the-pipeline.md](docs/19-running-the-pipeline.md); the plan for the selected KHG: [docs/18-full-run-plan.md](docs/18-full-run-plan.md).
+
+### Setting up Google Earth Engine
+
+Neraca air (rain and evapotranspiration per sub-KHG) and DeltaDTM are read from Google Earth Engine. Each person needs their own
+Earth Engine access through a Google Cloud project; the steps below follow the official pages
+([Earth Engine access](https://developers.google.com/earth-engine/cloud/earthengine_cloud_project_setup),
+[Python installation](https://developers.google.com/earth-engine/guides/python_install),
+[Authentication](https://developers.google.com/earth-engine/guides/auth)), read on 2026-10-27.
+
+1. **Register a Cloud project for Earth Engine.** Open the registration page, https://console.cloud.google.com/earth-engine, and
+   create a new project or register an existing one. Choose **noncommercial** use for research and education: no billing account
+   is needed, but you fill in the eligibility questionnaire in the Cloud console
+   (https://console.cloud.google.com/earth-engine/configuration). Access starts as soon as the project is registered.
+   Noncommercial projects must reverify periodically.
+   - The manual route does the same: create a project (https://console.cloud.google.com/projectcreate), enable the Earth Engine
+     API (https://console.cloud.google.com/apis/library/earthengine.googleapis.com), then register it at
+     `https://code.earthengine.google.com/register?project=<your-project-id>`.
+2. **Install the client** in the `main` environment (it is in `env/main.lock.txt`): `pip install earthengine-api`.
+3. **Authenticate** once per machine, in a terminal: `earthengine authenticate` (or `python -c "import ee; ee.Authenticate()"`).
+   The credentials go to `~/.config/earthengine/credentials` (on Windows under your user folder). If they stop working:
+   `earthengine authenticate --force`.
+4. **Tell the pipeline your project.** Put it in `pipeline.local.yaml` (not tracked), so it overrides the project of
+   `pipeline.yaml`:
+
+   ```yaml
+   environment:
+     EE_PROJECT: <your-project-id>
+   ```
+
+   Optionally also `earthengine set_project <your-project-id>`, the default of the `earthengine` command and of `ee.Initialize()`.
+5. **Check:**
+
+   ```bash
+   python -c "import ee; ee.Initialize(project='<your-project-id>'); print(ee.String('Hello from the Earth Engine servers!').getInfo())"
+   ```
+
+   The error "Earth Engine API has not been used in project ... or it is disabled" means the project is not registered or the API
+   is not enabled for it (step 1).
+
+Noncommercial projects use the Community quota tier by default
+([noncommercial tiers](https://developers.google.com/earth-engine/guides/noncommercial_tiers)). The runner sends at most
+`neraca.workers` requests at a time (8 in `pipeline.yaml`); lower it in `pipeline.local.yaml` if requests are refused.
 
 ![Workflow](docs/img/workflow.png)
 

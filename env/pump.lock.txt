@@ -1,0 +1,42 @@
+# installed packages of the 'pump' environment (tools/khg_pipeline.py setup --lock), 2026-10-27
+# install from the workspace folder: python -m venv <env>; <env>/python -m pip install -r re-peat/env/pump.lock.txt
+-e ./repeat-pump
+affine==3.0.1
+annotated-types==0.8.0
+attrs==26.1.0
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.5.2
+click==8.5.0
+colorama==0.4.6
+cryptography==50.0.2
+geopandas==1.2.0
+iniconfig==2.3.1
+networkx==3.7
+numpy==2.5.4
+packaging==26.3
+pandas==3.0.6
+pdfminer.six==20260107
+pdfplumber==0.11.10
+pillow==13.0.0
+pip==26.2.1
+pluggy==1.7.0
+pycparser==3.11
+pydantic==2.14.1
+pydantic_core==2.50.1
+Pygments==2.21.0
+pyogrio==0.13.0
+pyparsing==3.3.3
+pypdfium2==5.14.0
+pyproj==3.8.0
+pytest==9.1.1
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+rasterio==1.5.2
+scipy==1.18.1
+shapely==2.2.0
+six==1.17.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+tzdata==2026.5
+whitebox==2.3.6

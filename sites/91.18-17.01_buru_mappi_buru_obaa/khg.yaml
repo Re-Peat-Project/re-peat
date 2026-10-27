@@ -1,0 +1,47 @@
+# KHG Sungai Buru Mappi - Sungai Buru Obaa (KHG.91.18-17.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 91.18-17.01
+  name: KHG Sungai Buru Mappi - Sungai Buru Obaa
+  folder: 91.18-17.01_buru_mappi_buru_obaa
+  province: Papua Selatan
+  role: main
+dems:
+  lidar:
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/91.18-17.01_buru_mappi_buru_obaa/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.4
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Buru_Mappi_Buru_Obaa.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/91.18-17.01_buru_mappi_buru_obaa/01_dem/inputs/demnas.tif
+    cover_pct: 99.4
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-31_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-32_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-33_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-34_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-61_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-62_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-63_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3309-64_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3310-22_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3310-24_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3310-31_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3310-32_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3310-33_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3310-34_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3409-13_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3409-41_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_3409-43_v1.0.tif
+peat_depth: null
+canals:
+  class_field: KET_KANAL
+overrides: {}

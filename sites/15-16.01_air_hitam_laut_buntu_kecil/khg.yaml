@@ -1,0 +1,44 @@
+# KHG Sungai Air Hitam Laut - Sungai Buntu Kecil (KHG.15-16.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 15-16.01
+  name: KHG Sungai Air Hitam Laut - Sungai Buntu Kecil
+  folder: 15-16.01_air_hitam_laut_buntu_kecil
+  province: Jambi
+  role: main
+dems:
+  lidar:
+    product: lidar_muba25
+    clip: ${REPEAT_KHG}/15-16.01_air_hitam_laut_buntu_kecil/01_dem/inputs/lidar_muba25.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/lidar_klhk/dem_25m/DEM25M/Muba25.tif
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/15-16.01_air_hitam_laut_buntu_kecil/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.9
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Air_Hitam_Laut_Buntu_Kecil.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/15-16.01_air_hitam_laut_buntu_kecil/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-14_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-21_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-22_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-23_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-24_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-51_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1014-52_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/02_Jambi/Peat_depth_clip_Sungai_Air_Hitam_Laut_Sungai_Buntu_Kecil.img
+  scale: 0.01
+  valid_share: 0.957
+canals:
+  class_field: KET_KANAL
+overrides: {}

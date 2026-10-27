@@ -1,0 +1,87 @@
+# RE-PEAT full chain: the settings shared by every KHG. Per-KHG settings: sites/<folder>/khg.yaml (python tools/khg_pipeline.py init).
+# Run from re-peat:  python tools/khg_pipeline.py status | plan | run   (docs/19-running-the-pipeline.md)
+#
+# Paths may use ${REPEAT_DATA} (the shared data folder), ${REPEAT_KHG} (the per-KHG work folders) and ${WORKSPACE} (the folder that
+# holds re-peat and the module repositories). Machine-specific values (interpreters, other folders) go in pipeline.local.yaml next
+# to this file, which is not tracked and overrides any key here.
+
+workspace: ..                       # relative to re-peat
+data: ${WORKSPACE}/_data            # REPEAT_DATA when that variable is set
+khg_root: ${WORKSPACE}/_khg         # REPEAT_KHG when that variable is set
+
+repos:                              # module repositories, side by side in the workspace (tools/khg_pipeline.py setup clones the missing ones)
+  repeat-common: https://github.com/Re-Peat-Project/repeat-common.git
+  repeat-dem: https://github.com/Re-Peat-Project/repeat-dem.git
+  repeat-delineation: https://github.com/Re-Peat-Project/repeat-delineation.git
+  repeat-neraca: https://github.com/Re-Peat-Project/repeat-neraca.git
+  repeat-prioritisation: https://github.com/Re-Peat-Project/repeat-prioritisation.git
+  repeat-pump: https://github.com/Re-Peat-Project/repeat-pump.git
+
+python:                             # interpreter per environment (Windows layout; on Linux/macOS use .venv/bin/python in pipeline.local.yaml)
+  main: ${WORKSPACE}/.venv/Scripts/python.exe                         # repeat-common, repeat-neraca, repeat-prioritisation, earthengine-api
+  dem: ${WORKSPACE}/repeat-dem/.venv/Scripts/python.exe
+  delineation: ${WORKSPACE}/repeat-delineation/.venv/Scripts/python.exe
+  pump: ${WORKSPACE}/repeat-pump/.venv/Scripts/python.exe
+  qgis: ""                          # python-qgis.bat of OSGeo4W for the print layouts; empty: layouts are skipped
+
+environment:                        # passed to every step
+  EE_PROJECT: ee-danylaksono        # Earth Engine cloud project of the reference machine; set your own in pipeline.local.yaml (README)
+  SITMAT_PROCESSED: ${WORKSPACE}/repeat-sitmat/sitmat_out/processed
+  REPEAT_WORK: ${WORKSPACE}/re-peat/reports        # the national profile's outputs (read by the prioritisation's national_layers)
+khg_list: sites/selected_khg.csv    # used by `init` without --khg: rows with match_status confirmed..., plus extra_khg
+extra_khg: ["14.02-04-05.01"]       # Kampar-Gaung, the earlier test site
+
+national:                           # national files in the data folder
+  boundary: {path: batas_khg_indonesia.gpkg}                          # KHG polygons (SK.129/MENLHK/2017), matched by registry code
+  canals: {path: kanal_osgm_khg_existing_Indonesia.gpkg}
+  rivers: {path: RBI_sungai.gpkg}
+  lakes: {path: RBI_wadukdanau.gpkg}
+  blocks: {path: infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg, where: "Jenis == 'Sekat Kanal' and KETERANGAN == 'REALISASI'"}
+  burnt_area: {path: burnt_area_2015_2026_Indonesia.gpkg}
+  protected: {path: landstatus/FEG__Indonesia__2017__Rev_Tipologi.gpkg, field: FEG_KGHLTR, values: ["Indikatif Fungsi Lindung E.G."]}
+  peat_depth_dirs: ["Peat depth and DTM/PeatDepth_Sumatera", "Peat depth and DTM/PeatDepth_Kalimantan"]   # one raster per KHG, found by overlap
+  lidar_dirs: ["lidar_klhk"]
+
+dems:
+  variants: [lidar, deltadtm, demnas]   # the whole chain runs once per DEM (decided 2026-10-27)
+  min_cover_pct: 90                 # a variant runs when its DEM covers this share of the KHG (the pump's stage 1 threshold)
+
+steps:                              # in order; `run --steps` picks some
+  - inputs                          # once per KHG: 00_inputs from the national files
+  - dem_inputs                      # once per KHG: LiDAR, DeltaDTM, DEMNAS clipped to the KHG (repeat-dem prepare_khg_dem.py)
+  - icesat2                         # once per KHG: ground points for the DEM correction (SlideRule)
+  - local_inputs                    # once per KHG: every nationwide input clipped into 00_inputs (the folder then runs without the data folder)
+  - dem_correction                  # per DEM (deltadtm, demnas): 01_dem/processed/<dem>/dtm_smooth.tif
+  - delineation                     # per DEM: 02_delineation/<dem>/subkhg_units.gpkg
+  - deficit                         # once per KHG: SiTMAT stations and ERA5 (does not use the DEM; set up on the first variant's units)
+  - neraca                          # per DEM: Earth Engine balance on the variant's units, balance, neraca map (with the KHG deficit)
+  - prioritisation                  # per DEM: 04_prioritisation/<dem>/
+  - pump                            # per DEM: 05_pump/<dem>/ stages 1-12 and the HTML report
+  - layouts                         # per DEM: KLH print layouts (needs python.qgis)
+
+dem_correction:                     # repeat-dem script/tiled_dtm.py with the benchmark parameters of each product:
+  templates: tools/pipeline/templates/dem_correction_{dem}.yaml   # DeltaDTM 30 m, no canopy factor; DEMNAS 8 m, canopy factors by land cover
+  icesat2_period: ["2019-01-01", "2025-12-31"]
+
+delineation:                        # repeat-delineation; as re-peat/sites/16.02.01_sugihan_lumpur/delineate.yaml (2026-10-26)
+  outlet_canal_classes: ["Kanal Primer", "Kanal Sekunder"]
+  min_area_km2: auto
+  merge: adjacent
+
+neraca:                             # repeat-neraca batch per variant
+  rain: chirps
+  et: [mod16, wapor]
+  start: "2018-01-01"
+  end: "2026-10-01"                 # exclusive; the first day after the last complete dekad of every product (as the 2026-10 runs)
+  workers: 8                        # parallel Earth Engine requests (years); output identical to 4
+  window: ["2026-04-01", "2026-10-15"]   # the KHG deficit: SiTMAT window
+
+prioritisation:                     # repeat-prioritisation subkhg; as re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml
+  years: {baseline: [2015, 2022], validation: [2023], elnino: [2015, 2019]}
+  ndmi_res_m: 20
+  ipg_canal_classes: ["Kanal Primer", "Kanal Sekunder"]
+  national_profile: ${WORKSPACE}/repeat-prioritisation/configs/examples/national_profile.yaml
+
+pump:                               # repeat-pump; run config from the KHG folder (scripts/khg_run_config.py), proposed defaults attached
+  tertiary: false
+  layouts: {papers: [A3, A0], orient: [landscape]}

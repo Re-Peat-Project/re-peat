@@ -1,0 +1,38 @@
+# KHG Sungai Mempawah - Sungai Peniti (KHG.61.02-08.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
+# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
+#   dems.<dem>.skip      the variant does not run, with the reason
+#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
+#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+khg:
+  code: 61.02-08.01
+  name: KHG Sungai Mempawah - Sungai Peniti
+  folder: 61.02-08.01_mempawah_peniti
+  province: Kalimantan Barat
+  role: main
+dems:
+  lidar:
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/61.02-08.01_mempawah_peniti/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.7
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Mempawah_Peniti.tif
+  demnas:
+    product: demnas
+    clip: ${REPEAT_KHG}/61.02-08.01_mempawah_peniti/01_dem/inputs/demnas.tif
+    cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1316-24_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1316-31_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1316-32_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1316-33_v1.0.tif
+    - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1316-34_v1.0.tif
+peat_depth:
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Kalimantan/04_Kalimantan Barat/Peat_depth_model_KHG_Sungai_Mempawah_Sungai_Peniti.img
+  scale: 0.01
+  valid_share: 0.542
+canals:
+  class_field: KET_KANAL
+overrides: {}
