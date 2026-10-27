@@ -1,0 +1,29 @@
+# Sungai Kampar - Sungai Gaung (KHG.14.02-04-05.01): which sekat layout holds back the most of the neraca air deficit per block.
+#   python scripts/sekat_variants.py --config ../re-peat/sites/14.02-04-05.01_kampar_gaung/sekat_variants.yaml      (from repeat-pump)
+# Base: the run config written by scripts/khg_run_config.py. Each variant runs stages 1-7 into out/<name>/.
+title: Kampar-Gaung, top 3 sub-KHG
+base: ../../../_khg/14.02-04-05.01_kampar_gaung/05_pump/run_config.yaml
+out: ../../../_khg/14.02-04-05.01_kampar_gaung/05_pump/variants
+rule: |
+  Written on 2026-10-27, before any variant was run. The best layout is the one that suits the neraca air: it holds back the most
+  water per block against the dry-season deficit, scored on one reference network (LiDAR 25 m, all canal classes, flow direction
+  from flow accumulation where the slope and the rivers do not tell). Order of the tests:
+  1. Spacing: no new sekat closer than 200 m along a canal to another sekat (new or existing). Layouts that break it are flagged.
+  2. Retained water per block (m3): canal rise x specific yield 0.15 (the neraca value) x a 600 m lateral reach [Urzainki2023].
+  3. Share of the neraca deficit of the selected sub-KHG it closes, and how many blocks give 80 / 90 % of it.
+  4. Stability: a layout from a processed open DTM is usable when its rise on the reference is close to the LiDAR layout's.
+  BlueBook 2026 sekat are not a reference (not validated; owner, 2026-10-27).
+reference: lidar_all_flowacc
+variants:
+  lidar_ps_forward:   {topology.canal_classes: [primer, sekunder], profiles.direction_fallback: forward}
+  lidar_ps_flowacc:   {topology.canal_classes: [primer, sekunder], profiles.direction_fallback: flow_acc}
+  lidar_all_flowacc:  {topology.canal_classes: [primer, sekunder, tersier], profiles.direction_fallback: flow_acc}
+  # the 200 m spacing rule enforced while placing (new to new and new to existing)
+  lidar_ps_flowacc_s200:  {topology.canal_classes: [primer, sekunder], sekat.min_new_spacing_m: 200, sekat.min_spacing_m: 200}
+  lidar_all_flowacc_s200: {topology.canal_classes: [primer, sekunder, tersier], sekat.min_new_spacing_m: 200, sekat.min_spacing_m: 200}
+scoring:
+  snap_m: 30
+  balance_shares: [0.8, 0.9]
+  specific_yield: 0.15
+  lateral_reach_m: [600, 300]
+  drawdown_m: [1.0, 0.8, 1.2]

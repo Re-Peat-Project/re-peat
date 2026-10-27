@@ -1,0 +1,44 @@
+# Sungai Sugihan - Sungai Lumpur (KHG.16.02.01), step 5: canal blocks (sekat) and pumping for the top sub-KHG of the ranking.
+# Needs steps 1-4 first (00_inputs, 01_dem, 02_delineation, 04_prioritisation). Paths are relative to this file.
+#   repeat-pump check --config ../re-peat/sites/16.02.01_sugihan_lumpur/pump.yaml
+#   repeat-pump run   --config ../re-peat/sites/16.02.01_sugihan_lumpur/pump.yaml --stop-after 6
+# Engineering and policy values come from the preset (proposed defaults, not team decisions); every one is listed in run_report.md.
+preset: ../../../repeat-pump/configs/proposed_defaults.yaml
+run:
+  name: sugihan_lumpur
+  output_gpkg: ../../../_khg/16.02.01_sugihan_lumpur/05_pump/sugihan_lumpur.gpkg
+  crs: EPSG:32748                 # UTM 48S, the CRS of the LiDAR DTM
+  auto_reproject: true            # vectors are EPSG:4326, the peat raster too
+  vertical_datum: null            # not stated in the KLHK LiDAR delivery
+  subkhg_selection: {mode: top_n, n: 3}
+inputs:
+  dtm:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/01_dem/inputs/lidar_oki25.tif   # KLHK LiDAR DEM 25 m (OKI25), 100 % cover
+    surface_type: DTM
+    source: lidar                 # the error comes from the preset suggestion for LiDAR (0.3 m) until the delivery states one
+  subkhg:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/02_delineation/subkhg_units.gpkg
+  subkhg_priority:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/04_prioritisation/national_layers/subkhg_priority.csv
+  canals:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/00_inputs/canals.gpkg
+    columns: {canal_class: KET_KANAL}   # Kanal Primer, Kanal Sekunder, Kanal Tersier
+  sekat_existing:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/00_inputs/blocks.gpkg
+    columns: {sekat_id: OBJECTID_1}
+  rivers:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/00_inputs/rivers.gpkg
+  burn_area:
+    path: ../../../_data/burnt_area_2015_2026_Indonesia.gpkg   # KLHK burnt area 2015-2026, BURN_FREQ
+  peat_depth:
+    path: "../../../_data/Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Sugihan_Sungai_Lumpur.img"
+    units: cm                     # BRGM peat depth model
+  moisture:
+    paths: [../../../_khg/16.02.01_sugihan_lumpur/cache/16.02.01/annual/ndmi_2023.tif]   # Sentinel-2 NDMI, Aug-Oct 2023 (repeat-prioritisation)
+    higher_is_wetter: true
+  subkhg_indicators:
+    path: ../../../_khg/16.02.01_sugihan_lumpur/04_prioritisation/national_layers/unit_prioritas.gpkg   # sub-KHG prioritisation: the interventions in stage 11
+topology:
+  canal_classes: [Kanal Primer, Kanal Sekunder]   # Panduan Teknis GIS step 1.2
+pumping:
+  enabled: false                  # sekat only: the only rivers in rivers.gpkg (Sugihan, Lumpur) lie on the KHG boundary, 15-47 km from the top 3 sub-KHG, and carry no perennial flag or dry-season level
