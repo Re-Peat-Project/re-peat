@@ -34,7 +34,7 @@ NATIONAL = {   # key of national.profile DEFAULTS["inputs"] -> file in the data 
     "villages": "desa_target_pemulihan_ekosistem_gambut.gpkg",
     "peat_depth": "kedalaman_gambut_bbsdlp.gpkg",
 }
-NATIONAL_COPY = {"dmpg": "dpg/dpg_atlas_villages.csv"}               # small tables, copied whole
+NATIONAL_COPY = {"dmpg": "dpg/dpg_villages_boundaries.gpkg"}          # small tables, copied whole
 NATIONAL_RASTERS = {"extent": "peat_extent_gfw_v20230315_z11.tif", "global": "peat_extent_gpm2022_1km.tif"}
 FEG = "landstatus/FEG__Indonesia__2017__Rev_Tipologi.gpkg"
 

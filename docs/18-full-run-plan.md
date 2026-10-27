@@ -25,7 +25,7 @@ and 05_pump; `<dem>` is `lidar`, `deltadtm` or `demnas`. Corrected DEMs go to `0
 | 14.02-04-05.01 Kampar-Gaung | RIAU25m (99.8 %) | yes | yes | yes |
 | 14.03.02 Pulau Bengkalis | none | yes | yes | yes |
 | 14.10.01 Pulau Padang | left out (2 m) | yes | yes | yes |
-| 14.10.03 Pulau Tebing Tinggi | none | yes | yes | to check (Siak-Kampar raster by footprint) |
+| 14.10.03 Pulau Tebing Tinggi | none | yes | yes | yes (modelled; disagrees with the 2015 field survey `Tebingtinggi.csv`, see data catalogue) |
 | 15-16.01 Air Hitam Laut-Buntu Kecil | Muba25 (100 %) | yes | yes | yes |
 | 15.05-07-10.01 Mendahara-Batanghari | Jambi25m (100 %) | yes (processed) | yes (processed) | yes |
 | 16.02-07.01 Saleh-Sugihan | Sugihan-Saleh 20 m, UTM 48S copy (98.3 %) | yes | yes | yes |
