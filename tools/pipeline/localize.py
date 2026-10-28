@@ -154,6 +154,10 @@ def localize(data: Path, kf: Path, peat_depth: str | None, icesat2: Path | None,
         src = str(icesat2.relative_to(data)).replace("\\", "/") if icesat2.is_relative_to(data) else "00_inputs (earlier copy)"
         note(inp / "icesat2_atl08.gpkg", src, "ICESat-2 ATL08 ground points")
     out = inp / "local_manifest.csv"
+    if out.exists():                    # keep rows other tools added (e.g. field_wtd.csv of repeat_neraca.groundwater.fieldobs) while their file is there
+        with open(out, newline="", encoding="utf-8") as fh:
+            mine = {r["file"] for r in rows}
+            rows += [r for r in csv.DictReader(fh) if r["file"] not in mine and (inp / r["file"]).exists()]
     with open(out, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=["file", "source", "what", "count", "bytes", "sha256"])
         w.writeheader()
