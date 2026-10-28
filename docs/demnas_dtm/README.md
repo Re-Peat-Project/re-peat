@@ -4,7 +4,7 @@
 
 Turns DEMNAS into a ground estimate, calibrates the correction against ICESat-2 (and optionally GEDI) ground heights, and smooths the result to a dome-scale surface for canal block siting. One command runs everything.
 
-DEMNAS is a radar DSM (IFSAR, TerraSAR-X, ALOS PALSAR) blended toward stereo-plotted mass points, so how much canopy it still contains is unknown and varies by area. In three test sites the fitted canopy factor was far below the 0.8 prior and the offset to lidar ground differed by site. Published accuracy is RMSE 2.2 to 5.0 m at open-ground control points; our smoothed results are 1.2 to 2.8 m. See [`../07-demnas-literature.md`](../07-demnas-literature.md). This copy may lag the `demnas-corrections` repository, which is the current version.
+DEMNAS is a radar DSM (IFSAR, TerraSAR-X, ALOS PALSAR) blended toward stereo-plotted mass points, so how much canopy it still contains is unknown and varies by area. In three test sites the fitted canopy factor was far below the 0.8 prior and the offset to lidar ground differed by site. Published accuracy is RMSE 2.2 to 5.0 m at open-ground control points; our smoothed results are 1.2 to 2.8 m. See [`../07-demnas-literature.md`](../07-demnas-literature.md). This copy may lag the `repeat-dem` repository, which is the current version.
 
 ```
 DEMNAS tiles ─► mosaic, clip to KHG, reproject to UTM

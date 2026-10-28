@@ -11,7 +11,7 @@ has agreed, and the neraca air module failed its own skill check (below).
 
 ## Setup
 
-All repositories are cloned side by side (`re-peat`, `repeat-common`, `repeat-delineation`, `repeat-neraca`, `repeat-prioritisation` = the `khg-prioritisation-module` checkout until it is renamed, ...). Each command runs from the repository named in the `Repo` column, and the configs here are referenced as `../re-peat/sites/14.02-04-05.01_kampar_gaung/...`.
+All repositories are cloned side by side (`re-peat`, `repeat-common`, `repeat-delineation`, `repeat-neraca`, `repeat-prioritisation`, ...). Each command runs from the repository named in the `Repo` column, and the configs here are referenced as `../re-peat/sites/14.02-04-05.01_kampar_gaung/...`.
 
 ```bash
 pip install -e ../repeat-common ../repeat-delineation "../repeat-neraca[neraca,experiments]" -r requirements.txt   # once, in one environment

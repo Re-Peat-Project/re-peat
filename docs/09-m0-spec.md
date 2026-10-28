@@ -45,7 +45,7 @@ A generator that, from a seed, writes a complete synthetic KHG in the input-file
 
 ## 4. Provisional DTM error presets
 
-Measured with `demnas-corrections/script/relative_error.py` on the smoothed DTM against ICESat-2 (and GEDI) points. The values are the RMS of the height-difference error between points a given distance apart, after removing the site median. They mix DEM error with ground-height error, so they are upper bounds, and the shortest lag bounds the point noise.
+Measured with `repeat-dem/script/relative_error.py` on the smoothed DTM against ICESat-2 (and GEDI) points. The values are the RMS of the height-difference error between points a given distance apart, after removing the site median. They mix DEM error with ground-height error, so they are upper bounds, and the shortest lag bounds the point noise.
 
 | Preset | Basis | 0–150 m | 300–600 m | 1–2 km | 4–8 km |
 |---|---|---|---|---|---|

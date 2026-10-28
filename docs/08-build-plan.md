@@ -33,7 +33,7 @@ The weak point is terrain. Published DEMNAS accuracy is RMSE 2.2 to 5.0 m and ou
 
 ### 2.3 The terrain contract
 
-The model reads terrain only through this interface, so any DEM work can be swapped in later. It is the same list as in the `demnas-corrections` repository's `AGENTS.md`.
+The model reads terrain only through this interface, so any DEM work can be swapped in later. It is the same list as in the `repeat-dem` repository's `AGENTS.md`.
 
 | Input | Content |
 |---|---|
@@ -106,7 +106,7 @@ One package (working name `watershare`, as in the methodology's layout) replaces
 
 | Stage | Today | Next |
 |---|---|---|
-| Terrain (`demnas_dtm`) | coded, 3 real sites, accuracy-limited | paused for LiDAR; see `demnas-corrections/AGENTS.md` |
+| Terrain (`demnas_dtm`) | coded, 3 real sites, accuracy-limited | LiDAR benchmark done (`reports/dem_benchmark/report.md`); the chain runs once per DEM; see `repeat-dem/AGENTS.md` |
 | Prioritisation level 1 and 2, delineation | coded, synthetic tests only | breach instead of fill; re-use indicators at compartment scale |
 | **Canal network and structures** | **missing; keystone** | clean topology, directed graph with direction confidence, structure inventory with decay, water-source nodes |
 | Compartments and block candidates | spec / QGIS steps | code on the synthetic testbed, then a real canal layer |

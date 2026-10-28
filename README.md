@@ -7,13 +7,16 @@ This repository is the hub. It holds no analysis code; that lives in the modules
 ## Run the chain
 
 ```bash
-python tools/khg_pipeline.py setup     # repositories, interpreters, folders
+python tools/khg_pipeline.py setup     # repositories, interpreters, folders, lock files (--clone, --lock)
+python tools/khg_pipeline.py data      # data folder against sites/data_manifest.csv (--write: make it)
 python tools/khg_pipeline.py init      # sites/<folder>/khg.yaml per KHG
 python tools/khg_pipeline.py status    # what is done and what can run, per KHG and DEM
-python tools/khg_pipeline.py run --khg 15.05-07-10.01
+python tools/khg_pipeline.py plan --khg 15.05-07-10.01    # the commands `run` would execute
+python tools/khg_pipeline.py run --khg 15.05-07-10.01     # --steps, --dem, --force
+python tools/khg_pipeline.py compare   # every KHG and DEM side by side -> $REPEAT_KHG/pipeline_compare.csv
 ```
 
-Shared settings in [pipeline.yaml](pipeline.yaml) (machine overrides in an untracked `pipeline.local.yaml`), one `sites/<folder>/khg.yaml` per KHG. Setup on another machine, steps and outputs: [docs/19-running-the-pipeline.md](docs/19-running-the-pipeline.md); the plan for the selected KHG: [docs/18-full-run-plan.md](docs/18-full-run-plan.md).
+Shared settings in [pipeline.yaml](pipeline.yaml) (machine overrides in an untracked `pipeline.local.yaml`), one `sites/<folder>/khg.yaml` per KHG. The chain runs once per DEM (`dems.variants`: `lidar`, `deltadtm`, `demnas`); since 2026-10-27 each variant writes to `<step>/<dem>/` in the KHG work folder (`$REPEAT_KHG/<code>_<name>/`). `python tools/khg_workspace.py` creates the work folders and writes their READMEs; `python tools/khg_migrate_paths.py` rewrites old absolute paths in run records after work was moved. Setup on another machine, steps and outputs: [docs/19-running-the-pipeline.md](docs/19-running-the-pipeline.md); the plan for the selected KHG: [docs/18-full-run-plan.md](docs/18-full-run-plan.md).
 
 ### Setting up Google Earth Engine
 
@@ -61,59 +64,63 @@ Noncommercial projects use the Community quota tier by default
 
 ## The modules
 
-Each module is its own repository. They exchange files, never imports; the files are defined in [docs/11-data-contracts.md](docs/11-data-contracts.md).
+Each module is its own repository, in a folder of the same name next to this one. They exchange files, defined in [docs/11-data-contracts.md](docs/11-data-contracts.md). The only imports between them: `repeat-common` (the shared library), repeat-pump uses the groundwater solver of `repeat-neraca` (pinned to the GitHub archive of tag v0.2.0), and repeat-vis reads the national profile code of `repeat-prioritisation`.
 
-| Module | Does | Folder today |
-|---|---|---|
-| `repeat-sitmat` | Downloads water-table (TMA) data from SiTMAT; dashboard | `apps/sitmat-extract` |
-| `repeat-common` | Library: open-data readers (Sentinel, ERA5, CHIRPS, WaPOR, ...), grid helpers, SiTMAT reader, config helpers | `repeat-common` |
-| `repeat-dem` | DEMNAS correction and smoothing to a ground surface; the open-DEM investigation | `demnas-corrections` |
-| `repeat-delineation` | Sub-KHG delineation from a DTM, rivers and canals | `repeat-delineation` |
-| `repeat-neraca` | Neraca air (water balance): climatic balance per sub-KHG, KHG deficit, physical model | `repeat-neraca` |
-| `repeat-prioritisation` | National (which KHG) and sub-KHG (which area inside a KHG) prioritisation | `khg-prioritisation-module` |
-| `repeat-pump` | Rewetting with pompanisasi: canal blocks, water sources, routes, pump sizing; QGIS plugin | `rewetting-algorithm` |
-
-The folder names of four modules still differ from the repository names; they are renamed when the repositories are created in the organisation.
+| Module | Does |
+|---|---|
+| `repeat-sitmat` | Downloads water-table (TMA) data from SiTMAT; dashboard |
+| `repeat-common` | Library: open-data readers (Sentinel, ERA5, CHIRPS, WaPOR, ...), data fetchers (FIRMS, peat extent, DEMs, ICESat-2, GEDI, Earth Engine rain and ET per sub-KHG), grid helpers, per-KHG work folders, SiTMAT reader, config helpers |
+| `repeat-dem` | DTM correction (DEMNAS, DeltaDTM) and smoothing to a ground surface; LiDAR benchmark of the open DEMs |
+| `repeat-delineation` | Sub-KHG delineation from a DTM, rivers and canals |
+| `repeat-neraca` | Neraca air (water balance): climatic balance per sub-KHG, KHG deficit, groundwater model (in development, `repeat-neraca-model`) |
+| `repeat-prioritisation` | National (which KHG) and sub-KHG (which area inside a KHG) prioritisation |
+| `repeat-pump` | Rewetting with pompanisasi: canal blocks, water sources, routes, pump sizing; QGIS plugin |
+| `repeat-vis` | "Gambut bernapas", the digital twin of one KHG (browser page) |
 
 ## Set up a workstation
 
-Clone every repository next to this one. Then, in one Python 3.11+ environment:
+Clone every repository next to this one (`python tools/khg_pipeline.py setup --clone` does it, at the commits in `env/repos.lock.txt`). Python 3.11+, four environments as named in `pipeline.yaml` under `python:`:
 
 ```bash
-pip install -e ../repeat-common ../repeat-delineation "../repeat-neraca[neraca,experiments]"
-pip install -r ../khg-prioritisation-module/requirements.txt
+# main (<workspace>/.venv): repeat-common, repeat-neraca, repeat-prioritisation, earthengine-api, sliderule
+python -m venv .venv
+.venv/Scripts/python -m pip install -r re-peat/env/main.lock.txt     # from the workspace folder
 ```
+
+`dem` (`repeat-dem/.venv`), `delineation` (`repeat-delineation/.venv`) and `pump` (`repeat-pump/.venv`: `pip install -e repeat-pump`, then `pip install -e repeat-neraca` to use the workspace copy of the solver) have their own lock files in `env/`. Details: [docs/19-running-the-pipeline.md](docs/19-running-the-pipeline.md).
 
 Environment variables used by the site configs (a missing one stops the run with a message):
 
 | Variable | Points to |
 |---|---|
-| `REPEAT_DATA` | the REPEAT-LH `_data` folder: `Peat depth and DTM`, `_converted`, ... |
-| `REPEAT_WORK` | a folder for derived data: clipped vectors, caches, outputs. For the national profile it is this repository's `reports/` folder, so the report is pushed with it (its `.gpkg` files are git-ignored; rebuild them with the profile run). Other modules still use `repeat-prioritisation/data_local`. |
-| `SITMAT_PROCESSED` | `sitmat-extract/sitmat_out/processed` |
+| `REPEAT_DATA` | the `_data` folder (the runner defaults to `<workspace>/_data`, `data:` in `pipeline.yaml`). The older site configs were written for the REPEAT-LH `_data` layout (`Peat depth and DTM`, `_converted`, ...). |
+| `REPEAT_KHG` | the per-KHG work folders, default `<workspace>/_khg` (`khg_root:` in `pipeline.yaml`) |
+| `REPEAT_HUB` | this repository; `repeat_common.khg` reads the KHG registry from `$REPEAT_HUB/sites/` |
+| `REPEAT_WORK` | for the national profile, this repository's `reports/` folder, so the report is pushed with it (its `.gpkg` files are git-ignored; rebuild them with the profile run) |
+| `SITMAT_PROCESSED` | `repeat-sitmat/sitmat_out/processed` |
 
 ## Sites
 
 The team selected 12 main KHG (plus reserves): see [docs/13-selected-khg.md](docs/13-selected-khg.md) and [sites/selected_khg.csv](sites/selected_khg.csv). One name (cawang-lalang) is still to be confirmed.
 
-[sites/](sites/) has one folder per KHG that has been run:
+[sites/](sites/) has one folder per selected KHG with its `khg.yaml` (written by `khg_pipeline.py init`). Two also hold the runbook of the earlier test runs:
 
 | Site | KHG id | What is there |
 |---|---|---|
-| [kampar_gaung](sites/14.02-04-05.01_kampar_gaung/README.md) | 71 | Sungai Kampar - Sungai Gaung (Riau), 7,115 km2 |
-| [16.02.01_sugihan_lumpur](sites/16.02.01_sugihan_lumpur/README.md) | 16.02.01 | Sungai Sugihan - Sungai Lumpur (South Sumatra), 6,348 km2 |
+| [14.02-04-05.01_kampar_gaung](sites/14.02-04-05.01_kampar_gaung/README.md) | 14.02-04-05.01 | Sungai Kampar - Sungai Gaung (Riau), 7,111 km2 |
+| [16.02.01_sugihan_lumpur](sites/16.02.01_sugihan_lumpur/README.md) | 16.02.01 | Sungai Sugihan - Sungai Lumpur (South Sumatra), 6,347 km2 |
 
-Each site folder has a README (the runbook: steps with the repository each runs in, decisions and reasons, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for neraca air) and `reports/`. These are test runs of the whole chain, not validated rankings.
+These two have a README (the runbook: steps with the repository each runs in, decisions and reasons, results), one config per module (`delineate.yaml`, `subkhg.yaml`, `neraca.yaml` for neraca air) and `reports/`. These are test runs of the whole chain, not validated rankings.
 
 ## Data catalogue
 
 [docs/14-data-catalog.md](docs/14-data-catalog.md) lists every file in `_data` (format, CRS, resolution, features, remarks). It is generated: run `python tools/catalog_data.py` after adding data; new files are appended and hand-written remarks in [sites/data_catalog.csv](sites/data_catalog.csv) are kept. [docs/16-khg-data-recap.md](docs/16-khg-data-recap.md) is the same per selected KHG (resolution, coverage, gaps per module): run `python tools/khg_data_recap.py`; the datasets it checks are listed in [sites/khg_recap_sources.csv](sites/khg_recap_sources.csv). `python tools/check_contour_source.py` tests which raster a contour set was traced from (default: the LiDAR contour sets; `--contour`, `--rasters` and `--zones` for others, per KHG; results in `reports/investigations/`); `python tools/contour_grid_spacing.py` detects the grid of contours whose source raster is not on disk.
 
-The DEM benchmark (five elevation sources against LiDAR at KHG Mendahara - Batanghari and Sugihan - Lumpur, and the pipeline test) is reported in [reports/dem_benchmark/report.md](reports/dem_benchmark/report.md), built by `python tools/dem_benchmark_report.py` from the outputs of `repeat-dem/script/dem_benchmark*.py`; the workflow diagram is `reports/dem_benchmark/dem_benchmark_workflow.drawio` (`python tools/dem_benchmark_diagram.py`).
+The DEM benchmark (five elevation sources against LiDAR at KHG Mendahara - Batanghari and Sugihan - Lumpur, and the pipeline test) is reported in [reports/dem_benchmark/report.md](reports/dem_benchmark/report.md) (HTML copy `report.html`), built by `python tools/dem_benchmark_report.py` from the outputs of `repeat-dem/script/dem_benchmark*.py`; the workflow diagram is `reports/dem_benchmark/dem_benchmark_workflow.drawio` (`python tools/dem_benchmark_diagram.py`).
 
 ## National profile
 
-[docs/15-national-profile.md](docs/15-national-profile.md) profiles and ranks all 865 KHG from the local layers (fire history, hotspots, canals by class) and builds an interactive dashboard (`reports/national_profile/dashboard.html`) where the weights can be changed live; the registry of official KHG codes is [sites/khg_registry.csv](sites/khg_registry.csv). Tools: `tools/fetch_firms.py` and `tools/fetch_peat_extent.py` (wrappers: the code is `repeat_common.fetch_firms` and `repeat_common.fetch_peat_extent` in repeat-common), `tools/parse_kepmen_khg.py` (needs pdfplumber), `tools/catalog_data.py`.
+[docs/15-national-profile.md](docs/15-national-profile.md) profiles and ranks all 865 KHG from the local layers (fire history, hotspots, canals by class) and builds an interactive dashboard (`reports/national_profile/dashboard.html`) where the weights can be changed live; the registry of official KHG codes is [sites/khg_registry.csv](sites/khg_registry.csv). Tools: `tools/fetch_firms.py`, `tools/fetch_peat_extent.py`, `tools/fetch_demnas.py`, `tools/fetch_open_dem.py` and `tools/fetch_dpg_atlas.py` (wrappers: the code is the module of the same name in `repeat_common`), `tools/parse_kepmen_khg.py` (needs pdfplumber), `tools/catalog_data.py`.
 
 ## Documentation
 

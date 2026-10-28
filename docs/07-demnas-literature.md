@@ -1,6 +1,6 @@
 # 07 DEMNAS: what the literature says, and what it means for this tool
 
-Date: 2026-10-12. Three papers were read in full (the PDFs of the Julzarika and Susetyo 2023 papers are in the `demnas-corrections` repository, `docs/`). This page is a copy of `demnas-literature.md` there, which is the current version. Other sources were seen only as search excerpts and are marked with a dagger (†); check them before citing.
+Date: 2026-10-12. Three papers were read in full (the PDFs of the Julzarika and Susetyo 2023 papers are in the `repeat-dem` repository, `docs/`). This page is a copy of `demnas-literature.md` there, which is the current version. Other sources were seen only as search excerpts and are marked with a dagger (†); check them before citing.
 
 ## How DEMNAS is built
 
@@ -26,7 +26,7 @@ Two readings follow from this, both inferences and neither tested here:
 | UGM thesis † | not seen | not seen | 6.124 m (DEMNAS), 8.175 m (TerraSAR-X), 8.735 m (SRTM) |
 | Julzarika & Harintaka 2019 | S. Kalimantan (LiDAR), C. Java (IFSAR) | profile comparison, about 20 points | no RMSE; "dominated by DSM" in Kalimantan, "neither DSM nor DTM" in Java |
 
-**The 8.17 m figure is LE90, not RMSE.** LE90 = 1.645 × RMSE, so Susetyo 2023 gives an RMSE of 4.97 m. The 8.17 m quoted in `test-run-sebangau.md` (`demnas-corrections`) before this review is that LE90 value. Use 4.97 m (RMSE) or 8.17 m (LE90) and say which.
+**The 8.17 m figure is LE90, not RMSE.** LE90 = 1.645 × RMSE, so Susetyo 2023 gives an RMSE of 4.97 m. The 8.17 m quoted in `test-run-sebangau.md` (`repeat-dem`) before this review is that LE90 value. Use 4.97 m (RMSE) or 8.17 m (LE90) and say which.
 
 Points to keep in mind when comparing with our results:
 1. **Every reference is on open, accessible ground.** GCPs and aerial-photo pre-marks sit in cleared spots. They say little about forest, which is where our ICESat-2 and GEDI points sit. Published figures are therefore a best case for peat forest.
@@ -37,7 +37,7 @@ Points to keep in mind when comparing with our results:
 
 ## Why this matches what we saw
 
-| Our finding (`test-run-sebangau.md` in `demnas-corrections`) | Consistent with |
+| Our finding (`test-run-sebangau.md` in `repeat-dem`) | Consistent with |
 |---|---|
 | Fitted tree-cover k of 0.04–0.21 at all three sites, against a prior of 0.8 | DEMNAS has been partly pulled to ground by mass points, so little canopy remains to subtract |
 | Offset differs by site (−3.4, about 0, +2.2 m) and by class | Different source sensors and mass-point density per sheet |

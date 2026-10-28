@@ -1,6 +1,6 @@
 # 02 DEMNAS to DTM (`demnas_dtm`)
 
-> **Status after the split (2026-10-20).** Written for the single-folder layout. `demnas_dtm` now lives in the `demnas-corrections` repository (`repeat-dem`); read this page for the method, and that repository's README for commands. Its `--peat-depth` option (mineral surface elevation, peat volume) was merged there from the prioritisation repository.
+> **Status after the split (2026-10-20).** Written for the single-folder layout. `demnas_dtm` now lives in the `repeat-dem` repository; read this page for the method, and that repository's README for commands. Its `--peat-depth` option (mineral surface elevation, peat volume) was merged there from the prioritisation repository.
 
 ## Why this step exists
 

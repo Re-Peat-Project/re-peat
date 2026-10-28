@@ -29,7 +29,4 @@ Things we decided not to do yet, or found and left. Started 2026-10-20 during th
 | Logger names `prioritas.*` | Cosmetic | `repeat-prioritisation`, `repeat-neraca` experiments |
 | Two files called `neraca_unit.csv` (physical model: water table per sub-KHG with `neraca_skill_ok`; experiments: bucket indicators, in their own output folder) | The folder tells which; a rename would break `extra_indicators` paths of the site configs | `repeat-neraca` |
 | `Registry` finds `repeat-neraca/src/repeat_neraca/parameters.yaml` through the source tree, so only an editable install works | Fine while everyone installs with `pip install -e` | `repeat-neraca` packaging |
-| Some doc tables in this folder (`README.md` status table, `03-prioritisation.md`) still use pre-split names | Cosmetic; the banners at the top say where the code lives now | `re-peat/docs` |
 | `--peat-depth` (mineral surface elevation, peat volume) exists in `demnas_dtm.py` but not in the QGIS plugin port | Plugin is a separate port | `repeat-dem/qgis_plugin` |
-| Folder names `khg-prioritisation-module`, `rewetting-algorithm`, `demnas-corrections`, `apps/sitmat-extract` differ from the repository names | Renamed when the repositories are created in the organisation | each |
-| Sugihan-Lumpur delineation and sub-KHG scoring were not re-run from the hub configs (Kampar-Gaung and the neraca runs were) | Cost; configs are parsed and use the same paths as before | `sites/sugihan_lumpur` |
