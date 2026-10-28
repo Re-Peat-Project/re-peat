@@ -31,7 +31,9 @@ files work on any machine.
      `sliderule` (for ICESat-2).
    - `dem`: `repeat-dem/.venv` (its `requirements.txt`).
    - `delineation`: `repeat-delineation/.venv` (`pip install -e repeat-delineation repeat-common`).
-   - `pump`: `repeat-pump/.venv` (`pip install -e repeat-pump`).
+   - `pump`: `repeat-pump/.venv` (`pip install -e repeat-pump`, then `pip install -e repeat-neraca`: repeat-pump takes the
+     groundwater solver from repeat-neraca, pinned to a GitHub archive; the second command swaps in the workspace copy and must
+     come after the first, since pip refuses both in one command).
    - `qgis` (optional, print layouts): OSGeo4W's `python-qgis.bat`.
 
    On Linux or macOS, set the paths in `pipeline.local.yaml` (`.venv/bin/python`).
