@@ -146,8 +146,8 @@ def cmd_plan(a) -> None:
             continue
         try:
             cmds = STEPS[st].commands(c)
-        except SystemExit as e:
-            print(f"# {code} {st} {dem or ''}: blocked: {e}")
+        except (SystemExit, TypeError) as e:     # TypeError: an earlier step's output (a DEM surface) does not exist yet
+            print(f"# {code} {st} {dem or ''}: blocked: {e if isinstance(e, SystemExit) else 'needs the output of an earlier step'}")
             continue
         for env, argv, cwd in cmds:
             print(f"# {code} {st} {dem or ''}\ncd {cwd} && {S.python(env)} {' '.join(argv)}")

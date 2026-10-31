@@ -18,7 +18,7 @@ cache_dir: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/cache
 out: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/04_prioritisation/lidar
 rasters:
   dtm: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/01_dem/inputs/lidar_riau25m.tif
-  peat_depth: C:\Users\danyl\Documents\Github\_repeat-project\_data/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_model_KHG_Sungai_Kampar_Sungai_Guang.img
+  peat_depth: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/peat_depth.tif
 params:
   peat_depth_scale: 0.01
   ipg_canal_class_field: KET_KANAL
@@ -30,12 +30,12 @@ vectors:
   rivers: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/rivers.gpkg
   blocks: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/blocks.gpkg
   protected:
-    path: ${REPEAT_DATA}/landstatus/FEG__Indonesia__2017__Rev_Tipologi.gpkg
+    path: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/feg_protected.gpkg
     field: FEG_KGHLTR
     values:
     - Indikatif Fungsi Lindung E.G.
 tma:
-  path: ${SITMAT_PROCESSED}
+  path: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/00_inputs/sitmat
   period:
   - '2026-04-01'
   - '2026-10-15'
@@ -59,4 +59,4 @@ priority_export:
   neraca_khg: ${REPEAT_KHG}/14.02-04-05.01_kampar_gaung/03_neraca/runs/deficit/neraca_khg.csv
   design_period_days: null
 national_layers:
-  config: C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/configs/examples/national_profile.yaml
+  config: ${REPEAT_HUB}/sites/14.02-04-05.01_kampar_gaung/national_layers.yaml

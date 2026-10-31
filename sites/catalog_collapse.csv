@@ -11,3 +11,6 @@ canopy/meta_chm_v1,0,Meta/WRI canopy height quadkey tiles
 gedi,0,GEDI L2A shots per KHG (raster cells and points)
 dpg/atlas_brg,0,"BRG Atlas Desa Peduli Gambut: PDF per province, cover and index JPG"
 dpg/cache/big_desa,0,"cached BIG village boundary service responses for fetch_dpg_boundaries"
+sipalaga/crawler_2019,1,SIPALAGA crawler CSVs and URL lists per province
+sipalaga/mendeley,1,"Mendeley Data sets of Taufik et al. 2023, one folder per dataset"
+sipalaga/raw,0,full text kept for provenance

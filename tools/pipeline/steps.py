@@ -347,7 +347,10 @@ class Pump(Step):
 
     def commands(self, c):
         cfg = c.sd("05_pump") / "run_config.yaml"
-        gen = ["scripts/khg_run_config.py", str(c.kf), "--dem", c.dem, "--dtm", str(c.surface())] + (["--tertiary"] if c.st["pump"].get("tertiary") else [])
+        # --overwrite: the step runs only when forced or unfinished, and then the config (and its copy of the preset) must
+        # come from the current settings; a kept config would rerun with the defaults of its first run
+        gen = ["scripts/khg_run_config.py", str(c.kf), "--dem", c.dem, "--dtm", str(c.surface()), "--overwrite"] + \
+              (["--tertiary"] if c.st["pump"].get("tertiary") else [])
         run = ["-m", "repeat_pump.cli", "run", "--config", str(cfg), "--accept", "2", "--accept", "6", "--accept", "9"]
         return [("pump", gen, c.s.ws / "repeat-pump"), ("pump", run, c.s.ws / "repeat-pump"),
                 ("pump", ["-m", "repeat_pump.cli", "report-html", "--config", str(cfg)], c.s.ws / "repeat-pump")]

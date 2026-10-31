@@ -1,0 +1,99 @@
+code,station_id,kind,evidence,n_kinds,sitmat_name,company_code,sitmat_lon,sitmat_lat,location,apers_site,district,province,khg,coord_source,km,grade
+BRG5,MTI-EFRJJS64J08L,community,name (partial); place (village),2,TMA - Desa Gedong,,104.03,-1.38,GEDONG_KARYA,Gedong Karya,MUARO_JAMBI,JAMBI,KHG Sungai Batanghari - Sungai Air Hitam Laut,apers2022,0.5,likely
+BRG_150706_01,MTI-GAFOS2MB0AFM,community,name; place (village),2,AWS-Catur Rahayu 03,,103.86497,-1.29755,CATUR_RAHAYU,,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,village,3.2,likely
+BRG_150706_01,MTI-PRA21WW1DJ1W,community,name; place (village),2,AWS - Catur Rahayu 01,,103.91198,-1.2679,CATUR_RAHAYU,,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,village,2.8,likely
+BRG_150706_01,MTI-PXQSI2UWZ5DP,community,name; place (village),2,AWS - Catur Rahayu 02,,103.88475,-1.28741,CATUR_RAHAYU,,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,village,0.9,likely
+BRG10,47_SPM:TP-HMSC0385,concession,place (village),1,TP-HMSC0385,47_SPM,102.006831061,1.3197689145,DOMPAS,,BENGKALIS,RIAU,KHG Sungai Rokan - Sungai Siak Kecil,village,4.4,candidate
+BRG2,MTI-CF0Z88I8MAHV,community,place (village),1,TMA - Desa Muara Merang,,104.06,-1.82,PULAI_GADING,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Merang - Sungai Ngirawan,village,14.7,candidate
+BRG2,MTI-JWXDFURHQH13,community,place (village),1,TMA - Desa Muara Medak I,,104.1,-1.76,PULAI_GADING,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Merang - Sungai Ngirawan,village,22.9,candidate
+BRG2,42_RHMS:RH-TP-TMAT-105,concession,place (village),1,RH-TP-TMAT-105,42_RHMS,103.965659,-2.026249,PULAI_GADING,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Merang - Sungai Ngirawan,village,14.1,candidate
+BRG2,42_RHMS:RH-TP-TMAT-11,concession,place (village),1,RH-TP-TMAT-11,42_RHMS,104.007391,-1.957988,PULAI_GADING,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Merang - Sungai Ngirawan,village,4.9,candidate
+BRG2,42_RHMS:RH-TP-TMAT-121,concession,place (village),1,RH-TP-TMAT-121,42_RHMS,103.965481,-2.06624,PULAI_GADING,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Merang - Sungai Ngirawan,village,18.5,candidate
+BRG2,42_RHMS:RH-TP-TMAT-6,concession,place (village),1,RH-TP-TMAT-6,42_RHMS,104.05721,-2.002342,PULAI_GADING,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Merang - Sungai Ngirawan,village,8.6,candidate
+BRG5,327_JBP:TP-C37,concession,place (village),1,TP-C37,327_JBP,104.013848153,-1.38856466972,GEDONG_KARYA,Gedong Karya,MUARO_JAMBI,JAMBI,KHG Sungai Batanghari - Sungai Air Hitam Laut,apers2022,1.4,candidate
+BRG6,321_PDIW:TP_PIW_27,concession,place (village),1,TP_PIW_27,321_PDIW,104.077035696,-1.54293191218,SEPONJEN,,MUARO_JAMBI,JAMBI,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,village,4.1,candidate
+BRG8,413_RAPP_TSKB:TP-I-07,concession,place (village),1,TP-I-07,413_RAPP_TSKB,102.447458,0.714584,PENYENGAT,,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,village,3.1,candidate
+BRG_140313_01,MTI-LWS4ECLCIAA3,community,name (partial),1,TMA - Desa Tasik Serai,,101.4997,1.23206,TASIK_SERAI_BARAT,,BENGKALIS,RIAU,KHG Sungai Rokan - Sungai Siak Kecil,village,9.4,candidate
+BRG_140405_01,451_SRLBVI:SRL6_148,concession,place (village),1,SRL6_148,451_SRLBVI,102.817177922,-0.396364593151,TELUK_KIAMBANG,,INDRAGIRI_HILIR,RIAU,KHG Sungai Gaung - Sungai Batangtuaka,village,0.5,candidate
+BRG_140509_02,109_THIP:73-02,concession,place (village),1,73-02,109_THIP,102.9255,0.211699999655,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,22.9,candidate
+BRG_140509_02,17_SPA:TP-SKNB0166,concession,place (village),1,TP-SKNB0166,17_SPA,102.819708,0.15307799965,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,30.1,candidate
+BRG_140509_02,25_AAI:TP-MRWA0137,concession,place (village),1,TP-MRWA0137,25_AAI,102.81203,0.208160000084,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,23.3,candidate
+BRG_140509_02,25_AAI:TP-MRWA0182,concession,place (village),1,TP-MRWA0182,25_AAI,102.802962,0.171918999762,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,28.0,candidate
+BRG_140509_02,25_AAI:TP-MRWA029A,concession,place (village),1,TP-MRWA029A,25_AAI,102.858724,0.215805000101,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,21.7,candidate
+BRG_140509_02,38_MHJ:TP-SRPE0231,concession,place (village),1,TP-SRPE0231,38_MHJ,102.899897414,0.349103547091,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,5.6,candidate
+BRG_140509_02,412_RAPP_SKPR:SKM/XII-01a,concession,place (village),1,SKM/XII-01a,412_RAPP_SKPR,102.780486,0.342094,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,10.1,candidate
+BRG_140509_02,54_PTR:PRT_052,concession,place (village),1,PRT_052,54_PTR,102.865684388,0.540635817189,PULAU_MUDA_1,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,19.7,candidate
+BRG_140509_03,109_THIP:73-02,concession,place (village),1,73-02,109_THIP,102.9255,0.211699999655,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,22.9,candidate
+BRG_140509_03,17_SPA:TP-SKNB0166,concession,place (village),1,TP-SKNB0166,17_SPA,102.819708,0.15307799965,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,30.1,candidate
+BRG_140509_03,25_AAI:TP-MRWA0137,concession,place (village),1,TP-MRWA0137,25_AAI,102.81203,0.208160000084,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,23.3,candidate
+BRG_140509_03,25_AAI:TP-MRWA0182,concession,place (village),1,TP-MRWA0182,25_AAI,102.802962,0.171918999762,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,28.0,candidate
+BRG_140509_03,25_AAI:TP-MRWA029A,concession,place (village),1,TP-MRWA029A,25_AAI,102.858724,0.215805000101,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,21.7,candidate
+BRG_140509_03,38_MHJ:TP-SRPE0231,concession,place (village),1,TP-SRPE0231,38_MHJ,102.899897414,0.349103547091,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,5.6,candidate
+BRG_140509_03,412_RAPP_SKPR:SKM/XII-01a,concession,place (village),1,SKM/XII-01a,412_RAPP_SKPR,102.780486,0.342094,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,10.1,candidate
+BRG_140509_03,54_PTR:PRT_052,concession,place (village),1,PRT_052,54_PTR,102.865684388,0.540635817189,PULAU_MUDA_2,,PELALAWAN,RIAU,KHG Sungai Siak - Sungai Kampar,village,19.7,candidate
+BRG_140613_01,04_BDB:TP-BDBA0003,concession,place (village),1,TP-BDBA0003,04_BDB,100.862073,1.18972200037,SONTANG_1,,ROKAN_HULU,RIAU,,village,8.8,candidate
+BRG_140613_01,61_GSI:C11,concession,place (village),1,C11,61_GSI,100.758551,1.17750800009,SONTANG_1,,ROKAN_HULU,RIAU,,village,6.2,candidate
+BRG_140613_01,61_GSI:E22,concession,place (village),1,E22,61_GSI,100.778382,1.20944799993,SONTANG_1,,ROKAN_HULU,RIAU,,village,9.1,candidate
+BRG_140613_02,04_BDB:TP-BDBA0003,concession,place (village),1,TP-BDBA0003,04_BDB,100.862073,1.18972200037,SONTANG_2,,ROKAN_HULU,RIAU,KHG Sungai Rokan Kiri - Sungai Mandau,taufik2023,21.8,candidate
+BRG_140613_02,61_GSI:C11,concession,place (village),1,C11,61_GSI,100.758551,1.17750800009,SONTANG_2,,ROKAN_HULU,RIAU,KHG Sungai Rokan Kiri - Sungai Mandau,taufik2023,21.6,candidate
+BRG_140613_02,61_GSI:E22,concession,place (village),1,E22,61_GSI,100.778382,1.20944799993,SONTANG_2,,ROKAN_HULU,RIAU,KHG Sungai Rokan Kiri - Sungai Mandau,taufik2023,24.9,candidate
+BRG_140802_01,413_RAPP_TSKB:TP-I-07,concession,place (village),1,TP-I-07,413_RAPP_TSKB,102.447458,0.714584,PENYENGAT_1,,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,village,3.1,candidate
+BRG_140802_02,413_RAPP_TSKB:TP-I-07,concession,place (village),1,TP-I-07,413_RAPP_TSKB,102.447458,0.714584,PENYENGAT_2,Penyengat,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,apers2022,17.4,candidate
+BRG_140802_03,25_AAI:TP-BBRE0321,concession,place (village),1,TP-BBRE0321,25_AAI,102.256445,0.760780000197,SUNGAI_RAWA,,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,village,8.3,candidate
+BRG_140802_03,25_AAI:TP-BBRE0356,concession,place (village),1,TP-BBRE0356,25_AAI,102.282784,0.759913999831,SUNGAI_RAWA,,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,village,7.9,candidate
+BRG_140802_03,25_AAI:TP-PSKB0009,concession,place (village),1,TP-PSKB0009,25_AAI,102.268104,0.886287999991,SUNGAI_RAWA,,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,village,8.5,candidate
+BRG_140802_03,25_AAI:TP-PSKB0143,concession,place (village),1,TP-PSKB0143,25_AAI,102.286909,0.836904999766,SUNGAI_RAWA,,SIAK,RIAU,KHG Sungai Siak - Sungai Kampar,village,2.0,candidate
+BRG_140806_01,MTI-YJCQQ37ZMYQF,community,name,1,TMA - Desa Dayun,,102.04,0.66,Dayun,Dayun,,RIAU,KHG Sungai Siak - Sungai Kampar,apers2022,2.2,candidate
+BRG_150611_01,24_WKS:WKD1001,concession,place (village),1,WKD1001,24_WKS,103.214304449,-1.04093512386,BRAM_ITAM_KANAN,Bram Itam Kanan,TANJUNG_JABUNG_BARAT,JAMBI,KHG Sungai Baung - Sungai Betara,apers2022,19.8,candidate
+BRG_150611_01,24_WKS:WKD1002,concession,place (village),1,WKD1002,24_WKS,103.250459559,-1.03397429927,BRAM_ITAM_KANAN,Bram Itam Kanan,TANJUNG_JABUNG_BARAT,JAMBI,KHG Sungai Baung - Sungai Betara,apers2022,17.5,candidate
+BRG_150611_01,24_WKS:WKD1011,concession,place (village),1,WKD1011,24_WKS,103.225743164,-1.05288732069,BRAM_ITAM_KANAN,Bram Itam Kanan,TANJUNG_JABUNG_BARAT,JAMBI,KHG Sungai Baung - Sungai Betara,apers2022,20.6,candidate
+BRG_150611_02,24_WKS:WKD1014,concession,place (village),1,WKD1014,24_WKS,103.272620992,-1.0706112621,BRAM_ITAM_RAYA,Bram Itam Kanan,TANJUNG_JABUNG_BARAT,JAMBI,KHG Sungai Baung - Sungai Betara,apers2022,20.6,candidate
+BRG_150706_01,293_KUL:TP-58,concession,place (village),1,TP-58,293_KUL,103.884729315,-1.28173804753,CATUR_RAHAYU,,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,village,1.0,candidate
+BRG_150709_01,24_WKS:WKD2043,concession,place (village),1,WKD2043,24_WKS,103.483290733,-1.12988086751,SUNGAI_BERAS,,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,village,10.9,candidate
+BRG_150709_01,335_EWFSM:TMAT-02,concession,place (village),1,TMAT-02,335_EWFSM,103.586145079,-1.11504401793,SUNGAI_BERAS,,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,village,3.6,candidate
+BRG_150710_01,293_KUL:TP-126,concession,place (village),1,TP-126,293_KUL,103.668186326,-1.2716595029,PANDAN_LAGAN,Sungai Beras,TANJUNG_JABUNG_TIMUR,JAMBI,KHG Sungai Mendahara - Sungai Batanghari,apers2022,5.2,candidate
+BRG_160205_02,LPA-C2913122025-M0017,community,place (village),1,Ds Tanjung Serang,,104.88797,-3.409012,KEDATON,,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,village,2.0,candidate
+BRG_160214_01,323_BHP:TP-C10a,concession,place (< 1.5 km of article point),1,TP-C10a,323_BHP,105.219225775,-3.1047914725,PADANG_SUGIHAN_1_(SM),,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Sugihan - Sungai Lumpur,taufik2023,0.7,candidate
+BRG_160224_01,LPA-M0215052025-P0128,community,place (village),1,AWS-Sampoerna Agro,,104.95568,-3.52944,CINTA_JAYA_1,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,17.6,candidate
+BRG_160224_01,140_KLS:KS2-C16,concession,place (village),1,KS2-C16,140_KLS,104.949673764,-3.47633953208,CINTA_JAYA_1,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,11.1,candidate
+BRG_160224_01,140_KLS:KS2-D43,concession,place (village),1,KS2-D43,140_KLS,104.960020723,-3.41419054544,CINTA_JAYA_1,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,3.3,candidate
+BRG_160224_01,140_KLS:KS2-M56,concession,place (village),1,KS2-M56,140_KLS,105.045018823,-3.3820296001,CINTA_JAYA_1,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,6.7,candidate
+BRG_160224_01,437_RAJ:RAJ_32,concession,place (village),1,RAJ_32,437_RAJ,104.887166655,-3.468366817,CINTA_JAYA_1,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,13.0,candidate
+BRG_160224_01,462_SA:TP_SA_3,concession,place (village),1,TP_SA_3,462_SA,104.955762963,-3.52941894762,CINTA_JAYA_1,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,17.6,candidate
+BRG_160224_02,LPA-M0215052025-P0128,community,place (village),1,AWS-Sampoerna Agro,,104.95568,-3.52944,CINTA_JAYA_2,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,6.5,candidate
+BRG_160224_02,140_KLS:KS2-C16,concession,place (village),1,KS2-C16,140_KLS,104.949673764,-3.47633953208,CINTA_JAYA_2,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,1.5,candidate
+BRG_160224_02,140_KLS:KS2-D43,concession,place (village),1,KS2-D43,140_KLS,104.960020723,-3.41419054544,CINTA_JAYA_2,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,8.3,candidate
+BRG_160224_02,140_KLS:KS2-M56,concession,place (village),1,KS2-M56,140_KLS,105.045018823,-3.3820296001,CINTA_JAYA_2,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,14.6,candidate
+BRG_160224_02,437_RAJ:RAJ_32,concession,place (village),1,RAJ_32,437_RAJ,104.887166655,-3.468366817,CINTA_JAYA_2,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,7.6,candidate
+BRG_160224_02,462_SA:TP_SA_3,concession,place (village),1,TP_SA_3,462_SA,104.955762963,-3.52941894762,CINTA_JAYA_2,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,6.5,candidate
+BRG_160224_03,LPA-M0215052025-P0128,community,place (village),1,AWS-Sampoerna Agro,,104.95568,-3.52944,CINTA_JAYA_3,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,12.4,candidate
+BRG_160224_03,140_KLS:KS2-C16,concession,place (village),1,KS2-C16,140_KLS,104.949673764,-3.47633953208,CINTA_JAYA_3,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,5.8,candidate
+BRG_160224_03,140_KLS:KS2-D43,concession,place (village),1,KS2-D43,140_KLS,104.960020723,-3.41419054544,CINTA_JAYA_3,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,2.3,candidate
+BRG_160224_03,140_KLS:KS2-M56,concession,place (village),1,KS2-M56,140_KLS,105.045018823,-3.3820296001,CINTA_JAYA_3,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,10.0,candidate
+BRG_160224_03,437_RAJ:RAJ_32,concession,place (village),1,RAJ_32,437_RAJ,104.887166655,-3.468366817,CINTA_JAYA_3,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,8.8,candidate
+BRG_160224_03,462_SA:TP_SA_3,concession,place (village),1,TP_SA_3,462_SA,104.955762963,-3.52941894762,CINTA_JAYA_3,Cinta Jaya,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Burnai - Sungai Sibumbung,apers2022,12.4,candidate
+BRG_160609_01,MTI-04J1V6MUVG3N,community,name,1,TMA - Desa Muara Medak II,,103.96,-1.85,MUARA_MEDAK_1,Muara Medak,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Lalan - Sungai Merang,apers2022,7.6,candidate
+BRG_160609_02,MTI-04J1V6MUVG3N,community,name,1,TMA - Desa Muara Medak II,,103.96,-1.85,MUARA_MEDAK_2,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Medak - Sungai Lalan,village,24.6,candidate
+BRG_160611_01,22_SCK:B17,concession,place (village),1,B17,22_SCK,104.373584772,-2.34736389523,KARANG_AGUNG,Karang Agung,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Sembilang - Sungai Lalan,apers2022,9.1,candidate
+BRG_160611_01,22_SCK:B23,concession,place (village),1,B23,22_SCK,104.373570872,-2.36416319238,KARANG_AGUNG,Karang Agung,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Sembilang - Sungai Lalan,apers2022,11.1,candidate
+BRG_160611_01,22_SCK:D29,concession,place (village),1,D29,22_SCK,104.391458095,-2.38077788659,KARANG_AGUNG,Karang Agung,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Sembilang - Sungai Lalan,apers2022,12.7,candidate
+BRG_160611_01,22_SCK:G31,concession,place (village),1,G31,22_SCK,104.418799059,-2.38659128506,KARANG_AGUNG,Karang Agung,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Sembilang - Sungai Lalan,apers2022,13.4,candidate
+BRG_160611_01,58_BKI:G55,concession,place (village),1,G55,58_BKI,104.279058632,-2.31366431426,KARANG_AGUNG,Karang Agung,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Sembilang - Sungai Lalan,apers2022,13.4,candidate
+BRG_160611_01,58_BKI:N62,concession,place (village),1,N62,58_BKI,104.342841045,-2.33378169697,KARANG_AGUNG,Karang Agung,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Sembilang - Sungai Lalan,apers2022,9.3,candidate
+BRG_611201_01,312_NJP:F42,concession,place (village),1,F42,312_NJP,109.468849182,-0.11826708968,MADUSARI,,KUBU_RAYA,KALIMANTAN BARAT,KHG Sungai Kapuas - Sungai Ambawang,village,1.7,candidate
+LUMPUR1,323_BHP:TP-C10a,concession,place (village),1,TP-C10a,323_BHP,105.219225775,-3.1047914725,AS1R-RIDING,,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Sugihan - Sungai Lumpur,village,15.7,candidate
+LUMPUR1,33_BMH:SBM1620,concession,place (village),1,SBM1620,33_BMH,105.415574,-2.9631256,AS1R-RIDING,,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Sugihan - Sungai Lumpur,village,11.1,candidate
+LUMPUR1,33_BMH:SPG2090,concession,place (village),1,SPG2090,33_BMH,105.296681,-3.0437632,AS1R-RIDING,,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Sugihan - Sungai Lumpur,village,5.2,candidate
+LUMPUR1,33_BMH:SPG7190,concession,place (village),1,SPG7190,33_BMH,105.346311,-3.0431241,AS1R-RIDING,,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Sugihan - Sungai Lumpur,village,5.7,candidate
+LUMPUR1,33_BMH:SPI5140,concession,place (village),1,SPI5140,33_BMH,105.28152,-3.0914538,AS1R-RIDING,,OGAN_KOMERING_ILIR,SUMATERA SELATAN,KHG Sungai Sugihan - Sungai Lumpur,village,11.4,candidate
+MUBA2,161_WLMS:WLM.D504,concession,place (village),1,WLM.D504,161_WLMS,104.263203786,-2.12315710537,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,5.8,candidate
+MUBA2,161_WLMS:WLM.D605a,concession,place (village),1,WLM.D605a,161_WLMS,104.275440196,-2.13758974881,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,6.7,candidate
+MUBA2,48_SHP:SH-TP-TMAT-82,concession,place (village),1,SH-TP-TMAT-82,48_SHP,104.368999,-2.127662,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,7.9,candidate
+MUBA2,48_SHP:SH-TP-TMAT-91,concession,place (village),1,SH-TP-TMAT-91,48_SHP,104.365543,-2.090542,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,5.9,candidate
+MUBA2,58_BKI:B43,concession,place (village),1,B43,58_BKI,104.237559756,-2.28071370128,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,25.2,candidate
+MUBA2,58_BKI:I37,concession,place (village),1,I37,58_BKI,104.297879155,-2.26395268737,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,22.2,candidate
+MUBA2,58_BKI:P20,concession,place (village),1,P20,58_BKI,104.358655258,-2.21603022841,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,16.9,candidate
+MUBA2,65_MSA:C13A,concession,place (village),1,C13A,65_MSA,104.308655647,-2.23044851199,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,17.9,candidate
+MUBA2,65_MSA:C15,concession,place (village),1,C15,65_MSA,104.302881395,-2.22985348455,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,17.9,candidate
+MUBA2,65_MSA:D51,concession,place (village),1,D51,65_MSA,104.244435098,-2.15676290009,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,10.3,candidate
+MUBA2,65_MSA:H06,concession,place (village),1,H06,65_MSA,104.327870887,-2.18563338337,KEPAYANG,,MUSI_BANYUASIN,SUMATERA SELATAN,KHG Sungai Ngirawan - Sungai Sembilang,village,12.4,candidate

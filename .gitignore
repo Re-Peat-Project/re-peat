@@ -13,3 +13,7 @@ reports/**/dashboard_data.json
 
 # machine-specific overrides of pipeline.yaml
 pipeline.local.yaml
+
+# tile sources of the dashboard map layers (rebuild: repeat-national-dashboard)
+reports/**/tiles/src/
+reports/**/*.pmtiles-journal
