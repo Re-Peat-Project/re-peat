@@ -1,0 +1,81 @@
+<mxfile host="drawio">
+  <diagram id="dem_benchmark_workflow_report_b" name="DEM benchmark: terrain benchmark">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="902" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane4" value="4. Terrain benchmark" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="740" height="746" as="geometry" />
+        </mxCell>
+        <mxCell id="n56" value="&lt;b&gt;Benchmark plan per site&lt;/b&gt;&lt;br&gt;candidates, reference, metrics, pass criterion; written &lt;i&gt;before&lt;/i&gt; any result" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="40" width="410" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="n57" value="&lt;b&gt;Steps 0-1: inputs&lt;/b&gt;&lt;br&gt;checksum of every input&lt;br&gt;each candidate read as delivered: no copy, no resampling" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="138" width="410" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="cand" value="&lt;b&gt;Candidates&lt;/b&gt;&lt;br&gt;DEMNAS, GLO-30, FABDEM, DeltaDTM, KLHK modelled DTMs" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="138" width="210" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="n58" value="&lt;b&gt;Step 2&lt;/b&gt;&lt;br&gt;candidate minus LiDAR at every LiDAR cell inside the KHG" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="272" width="410" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="ref" value="KLHK LiDAR DEMs, 25 m (Jambi, OKI)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="210" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="n61" value="&lt;b&gt;Step 3: metrics&lt;/b&gt;&lt;br&gt;NMAD, error of height differences over 0.5, 1 and 2 km, variogram, land cover, tiers" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="370" width="410" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="n62" value="&lt;b&gt;Re-score&lt;/b&gt; processed surfaces against the LiDAR and the LiDAR smoothed the same way" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="468" width="410" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="aux" value="Land cover · canopy height · ICESat-2 points" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="370" width="210" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="n59" value="&lt;b&gt;Step 4: processing&lt;/b&gt;, per candidate at native resolution&lt;br&gt;land cover and canopy onto the grid&lt;br&gt;fit canopy factor and offset per class to ICESat-2&lt;br&gt;correct, despike, smooth, strip by strip" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="468" width="210" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="pp" value="Pulau Padang LiDAR" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="658" width="210" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="n60" value="&lt;b&gt;Side checks&lt;/b&gt;&lt;br&gt;reference resolution (2 m against 24 m blocks), contour source and spacing, tiling, load alignment" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="658" width="410" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="n94" value="&lt;b&gt;Found along the way&lt;/b&gt;&lt;br&gt;• The earlier DEM loader shifted the surface by part of a cell: 0.25 m NMAD against exact interpolation, 0.01 m after the fix. Earlier DEM correction runs used the old loader.&lt;br&gt;• A strip-by-strip run equals the single-pass run to 0.000000 m.&lt;br&gt;• Memory: DEMNAS 8 m over Sugihan-Lumpur runs in strips with at least 2 km overlap, never coarsened.&lt;br&gt;• The 25 cm KLHK contours were traced from the 20/25 m LiDAR; the BRGM contours from the modelled DTMs.&lt;br&gt;• The LiDAR is held out: it never enters a fit." style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="766" width="740" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="n73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n56" target="n57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n57" target="n58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n58" target="n61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n61" target="n62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cand" target="n57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n68" value="reference" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ref" target="n58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aux" target="n59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pp" target="n60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.8077;entryDx=0;entryDy=0;" edge="1" parent="1" source="n59" target="n62">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="548" />
+              <mxPoint x="270" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

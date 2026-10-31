@@ -1,0 +1,79 @@
+<mxfile host="drawio">
+  <diagram id="pump_method_report_b" name="RE-PEAT Interventions: stages 6-11">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="862" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c35" value="B. Where the canal blocks go (stages 6-7)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="740" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="c48" value="C. Pumping (stages 8-10; off when no river is perennial or has a dry-season level)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="506" width="740" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="c74" value="D. Optional (stage 11)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="710" width="740" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="&lt;b&gt;4-5. Segments and profiles&lt;/b&gt;" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="360" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" value="&lt;b&gt;6. Prioritise&lt;/b&gt;: need score per segment (dryness in a ring around the canal, upstream flow, burn, peat depth), min-max scaled, direct or AHP weights, sensitivity; or the KLH 1-3 scoring" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=3;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="102" width="360" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c40" value="Canal segments with need score and rank; sensitivity check" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="102" width="300" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" value="&lt;b&gt;7. Canal blocks&lt;/b&gt;: head rule, a block where the land rises dA = 0.40 m (PP 57/2016); new blocks at least 500 m apart along a canal; a proposal within 100 m of an existing block is merged; reinforced type from 5 % slope" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="224" width="360" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="c39" value="&lt;b&gt;Parameters&lt;/b&gt;: dA 0.40 m · new blocks at least 500 m apart · merge distance 100 m · reported spacing capped at 500 m · kept share 90 % (policy) · dry canal level 1.0 m · reinforced from 5 % slope" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#5F6B70;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="224" width="300" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" value="&lt;b&gt;Balance&lt;/b&gt; (canal-rise objective, Urzainki et al. 2020): rank blocks by the extra canal water each adds, from a dry level 1.0 m below the land, capped at the surface; keep the fewest giving &lt;b&gt;90 %&lt;/b&gt; (or a budget cap on the number of blocks)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="362" width="360" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" value="&lt;b&gt;Proposed blocks&lt;/b&gt; (kept, with benefit rank, share, spacing, type) · &lt;b&gt;low-benefit blocks&lt;/b&gt; · existing blocks assessed · &lt;b&gt;block reaches&lt;/b&gt;: the canal stretch each kept block holds, drawn upstream (rise, depth, burned share)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="362" width="300" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="c49" value="&lt;b&gt;8. Network&lt;/b&gt; of canals, rivers and blocks · &lt;b&gt;9. Routing&lt;/b&gt; (review stop): head-aware least cost from river intakes to the highest node of each target cluster; gates where routes cross blocks · &lt;b&gt;10. Pumps&lt;/b&gt;: demand from deficit and specific yield, units per station" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="546" width="360" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="c50" value="Network, intakes, targets, &lt;b&gt;pump routes&lt;/b&gt; (intake to target), pump stations, gates required" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="546" width="300" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="c75" value="&lt;b&gt;11. Optimise&lt;/b&gt;: choose n of the kept blocks by genetic algorithm, simulated annealing or greedy search; scored by canal rise or the 2D groundwater model, with three peat tables; re-scored as a range" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="750" width="360" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c76" value="Optimised blocks; optimisation check (benefit per method, against random, per peat table)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="750" width="300" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c16" target="c36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c36" target="c37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c37" target="c38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c39" target="c37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c36" target="c40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c38" target="c41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c49" target="c50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c75" target="c76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.9;exitY=1;exitDx=0;exitDy=0;entryX=0.9;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c38" target="c49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

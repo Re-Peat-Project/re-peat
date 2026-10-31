@@ -1,0 +1,98 @@
+<mxfile host="drawio">
+  <diagram id="subkhg_method_report_a" name="Sub-KHG prioritisation: indicators and score">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="734" pageHeight="946" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="h4" value="Inputs" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="300" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="h5" value="Processing" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="0" width="380" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="&lt;b&gt;National layers&lt;/b&gt; (as the national profile)&lt;br&gt;• burnt-area polygons 2015-2026&lt;br&gt;• VIIRS hotspots 2012-2025 (nominal, high confidence)&lt;br&gt;• KLH hotspots 2026 (medium, high)&lt;br&gt;• canals by class · GFW peat extent" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="40" width="300" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="&lt;b&gt;Sub-KHG units&lt;/b&gt; from the delineation" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="178" width="300" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="&lt;b&gt;1. Fire and canals per unit&lt;/b&gt; (same method as the national profile)&lt;br&gt;burned share per year and repeat burns, hotspots, this year's hotspots, canal km per km² by class; rates per km² of peat; held-out fire targets" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="380" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="&lt;b&gt;KHG vectors&lt;/b&gt; (clipped to the KHG)&lt;br&gt;canals, rivers, existing canal blocks&lt;br&gt;peat ecosystem function 2017 (protected)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="224" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="&lt;b&gt;Rasters&lt;/b&gt; DTM (slope, lift) · peat depth model" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="306" width="300" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="&lt;b&gt;Satellite&lt;/b&gt;&lt;br&gt;Sentinel-2 NDMI and NDVI, August-October median, 20 m&lt;br&gt;ESA WorldCover (forest) · JRC water seasonality" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="352" width="300" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="&lt;b&gt;SiTMAT&lt;/b&gt; stations 2026 (days deeper than 0.4 m, recession)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="470" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="&lt;b&gt;2. Indicators on a 30 m grid&lt;/b&gt;&lt;br&gt;• NDMI, NDVI: median of August-October composites, mean over the years&lt;br&gt;• reach: share within 200 m of a canal (60 m on burned land)&lt;br&gt;• missing blocks: 1 − existing ÷ needed; spacing 0.4 m ÷ canal slope&lt;br&gt;• distance to dry-season water, lift above it (DTM)&lt;br&gt;• peat depth, forest share, protected share, SiTMAT" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="202" width="380" height="324" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="&lt;b&gt;Neraca air&lt;/b&gt;&lt;br&gt;P − ET per unit, with its order-test result&lt;br&gt;KHG deficit" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="556" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" value="&lt;b&gt;3. Merge neraca air&lt;/b&gt;: P − ET fills the rank-sum water slot; empty where the order test fails" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="556" width="380" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="&lt;b&gt;Weights&lt;/b&gt; (default, for agreement with KLH and the World Bank)&lt;br&gt;Need U: burned share 2 · repeat burns 1 · hotspots 1 · hotspots this year 1 · NDMI 1 · canals primary 0.5, secondary 0.3, tertiary 0.2 · missing blocks 1.5 · reach 1.5 · distance to water 1 · forest share 1 (less forest, more need) · SiTMAT 1 + 1 (only with enough stations)&lt;br&gt;Stakes S: peat depth 2 · protected function 1&lt;br&gt;Weight 0: NDVI, neraca air balance, single canal density (replaced by classes)&lt;br&gt;Reported only: lift, rates per area&lt;br&gt;An indicator is scored when at least half the units, and between 3 and 20 units, have a value" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#5F6B70;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="658" width="300" height="288" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="&lt;b&gt;4. Score&lt;/b&gt;&lt;br&gt;• each indicator scaled 0-1 between its 5th and 95th percentile within the KHG, direction applied&lt;br&gt;• need part U and stakes part S: weighted means of the available indicators&lt;br&gt;• &lt;b&gt;need = 0.8 U + 0.2 S&lt;/b&gt;; feasibility reported, not ranked&lt;br&gt;• classes: tertiles of need (high, medium, low)&lt;br&gt;• rank-sum (earlier method) computed alongside" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="658" width="380" height="288" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.98;entryDx=0;entryDy=0;" edge="1" parent="1" source="c9" target="c16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.0093;entryDx=0;entryDy=0;" edge="1" parent="1" source="c9" target="c17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4267;entryDx=0;entryDy=0;" edge="1" parent="1" source="c10" target="c16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.179;entryDx=0;entryDy=0;" edge="1" parent="1" source="c11" target="c17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3765;entryDx=0;entryDy=0;" edge="1" parent="1" source="c12" target="c17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.6296;entryDx=0;entryDy=0;" edge="1" parent="1" source="c13" target="c17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.9136;entryDx=0;entryDy=0;" edge="1" parent="1" source="c14" target="c17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c15" target="c18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c18" target="c19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c21" target="c19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.0833;entryDx=0;entryDy=0;" edge="1" parent="1" source="c16" target="c19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="734" y="115" />
+              <mxPoint x="734" y="682" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.0833;entryDx=0;entryDy=0;" edge="1" parent="1" source="c17" target="c19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="734" y="364" />
+              <mxPoint x="734" y="682" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

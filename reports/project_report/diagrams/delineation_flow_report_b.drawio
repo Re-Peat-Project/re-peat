@@ -1,0 +1,86 @@
+<mxfile host="drawio">
+  <diagram id="delineation_flow_report_b" name="Sub-KHG delineation: units">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="946" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hc" value="Outputs" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="hb" value="Processing" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="0" width="440" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="d8" value="&lt;b&gt;5. Condition and route&lt;/b&gt;&lt;br&gt;D8 flow direction; flow accumulation" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="440" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="so" value="&lt;b&gt;6. DEM streams&lt;/b&gt;&lt;br&gt;from 2 km² of contributing area; Strahler order" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="122" width="440" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ord" value="&lt;b&gt;Stream order&lt;/b&gt; grid" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="122" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="os" value="&lt;b&gt;7. Choose the outlet set&lt;/b&gt;&lt;br&gt;mapped outlets alone first; if the unit count is outside 6-30, add DEM streams from the highest order down" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="204" width="440" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pc" value="&lt;b&gt;8. Pieces&lt;/b&gt;&lt;br&gt;outlet network cut into reaches at junctions; every cell traced downstream to its first outlet cell = the catchment of that reach, split by bank. Flow leaving the KHG without an outlet: coastal catchments, cut into pieces of about 50 km²" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="302" width="440" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="mg" value="&lt;b&gt;9. Merge small pieces&lt;/b&gt;&lt;br&gt;pieces under the minimum area join, smallest first, the neighbour with the longest shared &lt;i&gt;divide&lt;/i&gt; (a border across an outlet channel only if there is no divide neighbour). Minimum area starts at 5 km² and rises 10 % at a time until at most 30 units remain" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="436" width="440" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="fn" value="&lt;b&gt;10. Units&lt;/b&gt;&lt;br&gt;channel cells go to the nearest unit; clipped to the KHG; polygons numbered north to south" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="570" width="440" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="un" value="&lt;b&gt;Sub-KHG units&lt;/b&gt;&lt;br&gt;polygons" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="674" width="210" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="rp" value="&lt;b&gt;Delineation report&lt;/b&gt;&lt;br&gt;settings, inputs, pieces, units, areas" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=cylinder3;boundedLbl=1;size=8;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="530" y="674" width="210" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nr" value="&lt;b&gt;Neraca air&lt;/b&gt;&lt;br&gt;water balance per unit" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="674" width="260" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="pr" value="&lt;b&gt;Sub-KHG prioritisation&lt;/b&gt;&lt;br&gt;ranking and map page" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="776" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;b&gt;Stability at Sugihan-Lumpur&lt;/b&gt; (adjusted Rand index against the LiDAR run; 1 = identical, 0 = chance)&lt;br&gt;Primary outlets: noisy LiDAR copies 0.471 · other DTMs 0.48 · flat surface 0.348 · 24-30 units&lt;br&gt;Primary and secondary: 0.633 · 0.629 · 0.601 · 26-30 units&lt;br&gt;Primary and secondary, merged by flow line: 0.603 · 0.606 · 0.569 · 26-30 units" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="858" width="740" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="e35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8" target="so">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="so" target="ord">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="so" target="os">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="os" target="pc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pc" target="mg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mg" target="fn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.2386;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fn" target="un">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.7614;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fn" target="rp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="un" target="nr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="un" target="pr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="363" y="802" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

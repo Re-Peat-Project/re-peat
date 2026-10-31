@@ -1,0 +1,65 @@
+<mxfile host="drawio">
+  <diagram id="neraca_model_boundaries" name="Groundwater model boundaries">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="732" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="scen" value="Scenario inputs from RE-PEAT Interventions" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=bottom;align=left;spacingLeft=10;spacingBottom=6;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="436" width="740" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="pb" value="&lt;b&gt;Peat base&lt;/b&gt; (run option): no ET from a cell whose water table is below the peat base" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="0" width="300" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="rain" value="Rain (CHIRPS) and ET (MOD16)&lt;br&gt;KHG mean per dekad" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="360" y="0" width="360" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="edge" value="&lt;b&gt;KHG edge&lt;/b&gt;&lt;br&gt;held 0.3 m below the surface" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="92" width="300" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="canal" value="&lt;b&gt;Canals by class&lt;/b&gt;&lt;br&gt;primary, secondary, tertiary; each held at a set depth (1.2 m in the base runs)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="164" width="300" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="man" value="&lt;b&gt;Managed land in plantation licences&lt;/b&gt; (run setting)&lt;br&gt;canals and cells held at the 0.4 m target (PP 57/2016); water used = water-management supply" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="252" width="300" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="free" value="&lt;b&gt;Free peat cells&lt;/b&gt;&lt;br&gt;2D Boussinesq&lt;br&gt;rain minus ET in, lateral flow between cells" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="360" y="92" width="360" height="304" as="geometry" />
+        </mxCell>
+        <mxCell id="blk" value="&lt;b&gt;Block reaches&lt;/b&gt;&lt;br&gt;canal cells of each reach fixed at the reach water depth; the higher of block and managed level kept" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="456" width="300" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="sup" value="&lt;b&gt;Land marked for water supply&lt;/b&gt;&lt;br&gt;held at 0.4 m; water used = pumping need" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="400" y="456" width="320" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="out" value="&lt;b&gt;Outputs&lt;/b&gt;&lt;br&gt;• daily KHG series: mean depth, share deeper than 40 cm, supply&lt;br&gt;• season maps: days deeper than 40 cm, mean depth, supply&lt;br&gt;• table per sub-KHG&lt;br&gt;• scores against stations" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="20" y="624" width="700" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rain" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rain" target="free">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_edge" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;startArrow=block;startFill=1;startSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.0855;entryDx=0;entryDy=0;" edge="1" parent="1" source="edge" target="free">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_canal" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;startArrow=block;startFill=1;startSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3487;entryDx=0;entryDy=0;" edge="1" parent="1" source="canal" target="free">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_man" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;startArrow=block;startFill=1;startSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.6974;entryDx=0;entryDy=0;" edge="1" parent="1" source="man" target="free">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_blk" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.9507;entryDx=0;entryDy=0;" edge="1" parent="1" source="blk" target="free">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="381" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sup" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;startArrow=block;startFill=1;startSize=7;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5556;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="sup" target="free">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_out" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.0556;exitY=1;exitDx=0;exitDy=0;entryX=0.5143;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="free" target="out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

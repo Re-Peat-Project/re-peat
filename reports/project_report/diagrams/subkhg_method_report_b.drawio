@@ -1,0 +1,75 @@
+<mxfile host="drawio">
+  <diagram id="subkhg_method_report_b" name="Sub-KHG prioritisation: checks and outputs">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="h5" value="Processing" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="300" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="h6" value="Outputs" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="0" width="380" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="&lt;b&gt;4. Score&lt;/b&gt;&lt;br&gt;need score, classes, rank-sum" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="40" width="300" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="&lt;b&gt;Ranking per unit&lt;/b&gt;: every indicator, scaled values, need, stakes and need score, class, rank; rank-sum and its rank; share of weight draws in the high class&lt;br&gt;&lt;b&gt;Run summary&lt;/b&gt;: weights, coverage, correlations, sensitivity, validation" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="380" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="&lt;b&gt;5. Checks&lt;/b&gt;&lt;br&gt;• indicator pairs with Spearman above 0.8 flagged&lt;br&gt;• weight sensitivity: 300 random weight sets around the defaults&lt;br&gt;• held-out validation: indicators 2015-2018 → fire 2019; 2015-2022 → fire 2023; Spearman with bootstrap interval, against fire history alone" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="178" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="&lt;b&gt;Priority list&lt;/b&gt;: unit, rank, KHG deficit, design period" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="178" width="380" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" value="&lt;b&gt;RE-PEAT Interventions&lt;/b&gt;: canal blocks and pumping, in rank order" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="234" width="380" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" value="&lt;b&gt;Reports&lt;/b&gt;: run report, map page, validation report" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="388" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" value="&lt;b&gt;Decision makers&lt;/b&gt;: choice of sub-KHG, weights (AHP session)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#C2632E;fontSize=15;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="388" width="380" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" value="&lt;b&gt;Validation on an earlier unit set&lt;/b&gt; (Spearman with burned share in the test year, 26-30 units)&lt;br&gt;Kampar-Gaung 2019 / 2023: need 0.61 / 0.29 · fire history alone 0.38 / 0.22&lt;br&gt;Sugihan-Lumpur 2019 / 2023: need 0.37 / 0.17 · fire history alone 0.64 / 0.36&lt;br&gt;Intervals overlap: no score clearly better. Stakes lower the fire prediction by design; drainage indicators cannot be tested against fire. Weights need expert judgement (AHP), with this as a check." style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="474" width="740" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c46" value="What changed from the earlier method (Kahayan-Sebangau 2021)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;spacingLeft=0;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="608" width="740" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c47" value="&lt;b&gt;Earlier method (kept as the rank-sum)&lt;/b&gt;&lt;br&gt;• 8 indicators ranked, ranks summed, equal weights&lt;br&gt;• NDMI, NDVI, peat depth, water decline, water balance, deficit months, dry days, hotspot count&lt;br&gt;• climate indicators at 4-25 km, nearly constant inside a KHG&lt;br&gt;• no check against later fire" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="648" width="740" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c48" value="&lt;b&gt;Now&lt;/b&gt;&lt;br&gt;• Need score: values scaled within the KHG, explicit weights, need and stakes separate, feasibility reported&lt;br&gt;• Fire and canals from the same national layers and method as the national profile, per km² of peat; repeat burns and this year's hotspots added; canals by class&lt;br&gt;• Drainage: canal reach and missing blocks (IPG) from the canal layer, DTM and existing blocks&lt;br&gt;• Climate: dry days and TerraClimate dropped (cannot separate sub-KHG); water balance from the neraca air, used only where its order is trustworthy&lt;br&gt;• NDMI at Sentinel-2's native 20 m; protected peat function in the stakes&lt;br&gt;• Held-out validation on two El Niño years, compared with fire history alone" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=14;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="0" y="788" width="740" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.2407;entryDx=0;entryDy=0;" edge="1" parent="1" source="c19" target="c22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="c19" target="c23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="76.4" />
+              <mxPoint x="320" y="188.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c19" target="c20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c20" target="c24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c23" target="c25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c24" target="c26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c49" value="extended" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c47" target="c48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

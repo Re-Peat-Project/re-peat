@@ -1,0 +1,124 @@
+<mxfile host="drawio">
+  <diagram id="neraca_method_report" name="Neraca air method">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="1054" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="laneA" value="A. Sub-KHG level: climatic water balance" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="740" height="654" as="geometry" />
+        </mxCell>
+        <mxCell id="laneB" value="B. KHG level: supply deficit" style="fontFamily=Source Sans 3;fontColor=#1F2A30;lane=1;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;strokeWidth=1.25;fillColor=none;strokeColor=#B8C4C2;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="0" y="674" width="740" height="244" as="geometry" />
+        </mxCell>
+        <mxCell id="units" value="Sub-KHG units&lt;br&gt;(whole KHG as one unit where none)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="40" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="chirps" value="CHIRPS daily rain" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="98" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="mod16" value="MOD16 evapotranspiration (central)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="156" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="wapor" value="WaPOR evapotranspiration (second source)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="214" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="wc" value="ESA WorldCover land cover" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="fetch" value="&lt;b&gt;Rain and ET per unit per dekad&lt;/b&gt;&lt;br&gt;each product on its own grid&lt;br&gt;land-cover shares per unit" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="340" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="bal" value="&lt;b&gt;Monthly balance&lt;/b&gt;&lt;br&gt;WB = P (1 − I)(1 − C) − ET&lt;br&gt;P: KHG-mean rain&lt;br&gt;C = 0.12, I from land cover&lt;br&gt;complete years 2018-2025" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="380" y="356" width="340" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="perunit" value="&lt;b&gt;Per sub-KHG&lt;/b&gt;&lt;br&gt;mean monthly balance&lt;br&gt;deficit months per year&lt;br&gt;P − ET" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="356" width="320" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="test" value="&lt;b&gt;Order test&lt;/b&gt;" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rhombus;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="380" y="496" width="180" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="crit" value="ET products agree; order holds between years (p &amp;lt; 0.01 against a random order)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="570" y="496" width="150" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="pass" value="&lt;b&gt;Usable for ranking&lt;/b&gt;&lt;br&gt;rank-sum water slot reads P − ET" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="516" width="320" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="fail" value="Values left empty in the ranking" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="586" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="def" value="&lt;b&gt;KHG deficit = max(0, −Σ(P − E) − Sy × Δz)&lt;/b&gt;&lt;br&gt;Δz: change in station-mean depth&lt;br&gt;1 June to last forcing day · Sy 0.15 (0.10-0.20)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#E3EDEC;strokeColor=#0B5D5B;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="714" width="420" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sitmat" value="SiTMAT station depths&lt;br&gt;(readings on at least 50 % of days)" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="714" width="250" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="era5" value="ERA5 daily rain and evaporation" style="fontFamily=Source Sans 3;fontColor=#1F2A30;shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=12;whiteSpace=wrap;html=1;spacing=6;spacingLeft=10;spacingRight=10;strokeWidth=1.25;fillColor=#FFFFFF;strokeColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="792" width="250" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="defout" value="Deficit in mm and million m³ · deficit months" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="854" width="420" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="map" value="&lt;b&gt;Neraca map&lt;/b&gt;: sub-KHG balance, monthly climatology, dry-season mean (July-October), KHG deficit, stations" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F6E9E0;strokeColor=#C2632E;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="958" width="720" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="phys" value="&lt;b&gt;C. Diagnostic only&lt;/b&gt;: physical model, tiers 1 and 2, not on the ranking path" style="fontFamily=Source Sans 3;fontColor=#1F2A30;rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=1;spacing=6;strokeWidth=1.25;fillColor=#F4F6F6;strokeColor=#B8C4C2;dashed=1;fontColor=#5F6B70;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1010" width="720" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="e_units" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.0857;entryDx=0;entryDy=0;" edge="1" parent="1" source="units" target="fetch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_chirps" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.2929;entryDx=0;entryDy=0;" edge="1" parent="1" source="chirps" target="fetch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mod16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mod16" target="fetch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_wapor" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7071;entryDx=0;entryDy=0;" edge="1" parent="1" source="wapor" target="fetch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_wc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.9143;entryDx=0;entryDy=0;" edge="1" parent="1" source="wc" target="fetch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fetch" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fetch" target="bal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_o" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bal" target="perunit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_test" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.2647;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bal" target="test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pass" value="pass" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="test" target="pass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fail" value="fail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="test" target="fail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sitmat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3091;entryDx=0;entryDy=0;" edge="1" parent="1" source="sitmat" target="def">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_era5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.8545;entryDx=0;entryDy=0;" edge="1" parent="1" source="era5" target="def">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_def" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="def" target="defout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_map1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6806;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="defout" target="map">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_map2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.25;strokeColor=#5F6B70;endArrow=block;endFill=1;endSize=7;fontFamily=Source Sans 3;fontSize=14;fontColor=#1F2A30;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="perunit" target="map">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6" y="408" />
+              <mxPoint x="6" y="974" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
