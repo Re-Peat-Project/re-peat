@@ -906,8 +906,9 @@ def interventions_rows(code: str, dem: str) -> dict | None:
     pumping = (r["config"].get("pumping") or {}).get("enabled")
     pumps = sum(int(x.get("units_needed") or 0) for x in (r.get("pumps") or []))
     need, ada = blocks_needed(code, dem)
-    by = bg.get("by_class") or {}
-    reveg = by.get("revegetate_fire")
+    items = bg.get("by_item") or {}
+    reveg = (items.get("revegetation_ha") or {}).get("cost_idr")                  # outside the cost standard (Perdirjen P.16/2022)
+    closure_km = (items.get("canal_closure_km") or {}).get("quantity")            # reported as length, not priced
     return {
         "Selected sub-KHG (top 3 by priority)": ", ".join(sub_id(s) for s in r["validation"].get("selected_subkhg", [])),
         "Blocks needed by the slope rule of the ranking, whole KHG (n)": F.fmt(need),
@@ -919,13 +920,14 @@ def interventions_rows(code: str, dem: str) -> dict | None:
         "Water held by kept blocks (million m³)": F.fmt(F.scaled(iv.get("held_m3_selected"), 1e6), 2),
         "Deficit of the selected units (million m³)": F.fmt(F.scaled(iv.get("deficit_m3_selected"), 1e6), 1),
         "Budget, low / central / high (billion Rp)": " / ".join(F.fmt(F.scaled(bg.get(x), 1e9)) for x in ("total_low_idr", "total_idr", "total_high_idr")),
-        "of which revegetation of burned land, central (billion Rp)": F.fmt(F.scaled(reveg, 1e9)) if reveg is not None else "-",
+        "of which revegetation of burned land, outside the cost standard, central (billion Rp)": F.fmt(F.scaled(reveg, 1e9)) if reveg is not None else "-",
+        "Canal closure, length not priced (km)": F.fmt(closure_km, 0) if closure_km is not None else "-",
     }
 
 
 def khg_interventions(code: str) -> pd.DataFrame:
     """05_pump/<dem>/run_report.json (validation.selected_subkhg, sekat_balance, counts['7'], pumps, config.pumping.enabled,
-    interventions held/deficit, budget totals and by_class.revegetate_fire); 04_prioritisation/<dem>/kebutuhan_sekat.csv."""
+    interventions held/deficit, budget totals, by_item.revegetation_ha and by_item.canal_closure_km); 04_prioritisation/<dem>/kebutuhan_sekat.csv."""
     have = done(code, "interventions")
     if not have:
         raise NotAvailable("canal blocks and pumping")
