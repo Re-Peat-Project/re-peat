@@ -4,17 +4,22 @@ Table: Terms and abbreviations used in this report. Source: RE-PEAT background d
 | Term | Meaning |
 |---|---|
 | AUC | Area under the receiver operating curve: how well a score separates units with a later event from units without (0.5 is chance, 1 is perfect) |
+| Boussinesq equation | The groundwater equation for the water table of a layer much wider than it is deep: the water table changes with rain, evapotranspiration and sideways flow, divided by the specific yield |
 | BRG, BRGM | Badan Restorasi Gambut (dan Mangrove), the peat (and mangrove) restoration agency; its mandate ended on 31 December 2024 |
+| CHIRPS | Climate Hazards Group InfraRed Precipitation with Stations: daily rain at 0.05° from satellite estimates and station records |
 | DEM, DSM, DTM | Digital elevation model; digital surface model, which includes trees and buildings; digital terrain model, the bare ground |
 | DEMNAS | Indonesia's national elevation model from BIG, a radar surface model blended with stereo mass points |
 | Dekad | Ten-day period: days 1-10, 11-20 and 21 to the end of a month |
 | DPG, DMPG | Desa Peduli Gambut, peat-care village; renamed Desa Mandiri Peduli Gambut in 2020 |
+| ET, evapotranspiration | Water that returns to the air from soil, open water and plants, including transpiration and evaporation of rain held on leaves |
 | Gambut | Peat |
+| Interception | Rain held on leaves and stems that evaporates without reaching the ground |
 | IoU | Intersection over union: the overlap of two areas divided by their union |
 | KHG | Kesatuan Hidrologis Gambut, peat hydrological unit: a peat area bounded by rivers or the sea that behaves as one water system; 865 in SK.129/MENLHK/2017 |
 | KLH, BPLH | Kementerian Lingkungan Hidup, Ministry of Environment; Badan Pengendalian Lingkungan Hidup, Environmental Control Agency |
 | Kubah gambut | Peat dome, the high central part of a KHG from which water flows outward |
 | LiDAR | Airborne laser scanning; here the bare-earth terrain models derived from it |
+| MOD16 | NASA evapotranspiration product from the MODIS sensor: 500 m pixels, 8-day totals |
 | NMAD | Normalised median absolute deviation, a robust measure of spread |
 | Neraca air | Water balance: rain minus evapotranspiration, runoff and drainage |
 | Pintu air | Water gate: a canal block whose opening can be adjusted |
@@ -25,4 +30,6 @@ Table: Terms and abbreviations used in this report. Source: RE-PEAT background d
 | Sub-KHG | Part of a KHG that drains to one stretch of outlet channel; the analysis unit inside a KHG |
 | TMA, TMAT | Tinggi muka air (tanah): the water table in the peat, reported here as depth below the surface |
 | Titik penaatan | Compliance point where the water table is measured against the 0.4 m standard |
+| Transmissivity (T) | How much water the saturated peat carries sideways for a given slope of the water table, in m²/day; it falls with depth |
+| WaPOR | FAO water productivity portal; its AETI layer is actual evapotranspiration and interception, 300 m, dekadal |
 | Water sharing | Moving water held in one part of a KHG to parts in deficit, through gates or pumps |

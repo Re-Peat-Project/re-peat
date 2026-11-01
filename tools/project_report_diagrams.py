@@ -876,6 +876,33 @@ def neraca_model_boundaries() -> Path:
     return d.write()
 
 
+def boussinesq_cell() -> Path:
+    """One model cell and the terms of the Boussinesq equation, in plain words (chapter 8b, background)."""
+    d = Diagram("boussinesq_cell", "Boussinesq equation, one cell")
+    lx, lw, cx, cw, rx, rw = 20, 190, 280, 180, 530, 190
+    d.box("rain", "<b>Rain</b><br>added to the water table", 150, 0, 200, None, "data")
+    d.box("et", "<b>Evapotranspiration</b><br>removed from it", 390, 0, 200, d.geo["rain"][3], "data")
+    y = d.geo["rain"][3] + 50
+    d.box("left", "<b>Neighbouring cell</b><br>higher water table", lx, y, lw, None, "input")
+    d.box("cell", "<b>This cell</b><br>water table height", cx, y, cw, None)
+    d.box("right", "<b>Neighbouring cell or canal</b><br>lower water table; a canal level is held", rx, y, rw, None, "input")
+    _reheight(d, "left", "cell", "right")
+    d.edge("e_rain", "rain", "cell")
+    d.edge("e_et", "cell", "et")
+    d.edge("e_left", "left", "cell", "flow")
+    d.edge("e_right", "cell", "right", "flow")
+    y = d.bottom("cell") + 50
+    d.box("out", "<b>Change of the water table in one day</b> = (rain - evapotranspiration + inflow from neighbours - "
+                 "outflow to neighbours) divided by the specific yield", lx, y, W - 2 * lx, None, "out", left=True)
+    d.edge("e_out", "cell", "out")
+    y = d.bottom("out") + GAP
+    d.box("terms", "<b>Specific yield</b>: the share of the peat volume that drains for each metre the water table "
+                   "falls. <b>Transmissivity</b>: how much water the saturated peat carries sideways. Flow between two "
+                   "cells is the transmissivity times the slope of the water table between them.",
+          lx, y, W - 2 * lx, None, "note", SMALL, left=True)
+    return d.write()
+
+
 def _reheight(d: Diagram, *cids, h=None):
     """Write the geometry in d.geo back into the cell list (after a height change)."""
     for cid in cids:
@@ -1099,7 +1126,7 @@ def check(path: Path) -> list[str]:
 
 BUILDERS = {f.__name__: f for f in (toolkit_chain, dem_benchmark_workflow_report, delineation_flow_report, national_flow,
                                      subkhg_method_report, pump_method_report,
-                                     neraca_method_report, neraca_model_boundaries)}
+                                     neraca_method_report, neraca_model_boundaries, boussinesq_cell)}
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)

@@ -4,9 +4,15 @@ Amal, N. (2022). *Dampak perubahan iklim terhadap kondisi neraca air pada lahan 
 
 Amal, N., Sujono, J., Jayadi, R., & Ohgushi, K. (2021). Variability of water table elevation and flow response of tropical peatland case study at Pulau Padang, Riau Province of Indonesia. *Lowland Technology International, 22*(4). https://cot.unhas.ac.id/journals/index.php/ialt_lti/article/view/674
 
+Apers, S., Cobb, A. R., De Lannoy, G. J. M., & Bechtold, M. (2025). Characterising tropical peatland hydrological response with satellite-based rainfall: A case study in Brunei. *Hydrological Processes, 39*(8), e70209. https://doi.org/10.1002/hyp.70209
+
 Apers, S., De Lannoy, G. J. M., Baird, A. J., Cobb, A. R., Dargie, G. C., del Aguila Pasquel, J., Gruber, A., Hastie, A., Hidayat, H., Hirano, T., Hoyt, A. M., Jovani-Sancho, A. J., Katimon, A., Kurnain, A., Koster, R. D., Lampela, M., Mahanama, S. P. P., Melling, L., Page, S. E., . . . Bechtold, M. (2022). Tropical peatland hydrology simulated with a global land surface model. *Journal of Advances in Modeling Earth Systems, 14*(3), e2021MS002784. https://doi.org/10.1029/2021MS002784
 
+Bastiaanssen, W. G. M., Cheema, M. J. M., Immerzeel, W. W., Miltenburg, I. J., & Pelgrum, H. (2012). Surface energy balance and actual evapotranspiration of the transboundary Indus Basin estimated from satellite measurements and the ETLook model. *Water Resources Research, 48*, 2011WR010482. https://doi.org/10.1029/2011WR010482
+
 Cahyono, B. K., Aditya, T., & Istarno. (2022). The determination of priority areas for the restoration of degraded tropical peatland using hydrological, topographical, and remote sensing approaches. *Land, 11*(7), 1094. https://doi.org/10.3390/land11071094
+
+Chen, H., Gnanamoorthy, P., Chen, Y., Mansaray, L. R., Song, Q., Liao, K., Shi, A., Feng, G., & Sun, C. (2022). Assessment and inter-comparison of multi-source high spatial resolution evapotranspiration products over Lancang-Mekong River Basin, Southeast Asia. *Remote Sensing, 14*(3), 479. https://doi.org/10.3390/rs14030479
 
 Chow, V. T. (1959). *Open-channel hydraulics*. McGraw-Hill.
 
@@ -16,6 +22,10 @@ Cobb, A. R., Hoyt, A. M., Gandois, L., Eri, J., Dommain, R., Abu Salim, K., Kai,
 
 Evans, C. D., Williamson, J. M., Kacaribu, F., Irawan, D., Suardiwerianto, Y., Hidayat, M. F., Laurén, A., & Page, S. E. (2019). Rates and spatial variability of peat subsidence in Acacia plantation and forest landscapes in Sumatra, Indonesia. *Geoderma, 338*, 410-421. https://doi.org/10.1016/j.geoderma.2018.12.028
 
+Faisol, A., Indarto, Novita, E., & Budiyono. (2020). An evaluation of MODIS global evapotranspiration product (MOD16A2) as terrestrial evapotranspiration in East Java - Indonesia. *IOP Conference Series: Earth and Environmental Science, 485*(1), 012002. https://doi.org/10.1088/1755-1315/485/1/012002
+
+Funk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., Husak, G., Rowland, J., Harrison, L., Hoell, A., & Michaelsen, J. (2015). The climate hazards infrared precipitation with stations: a new environmental record for monitoring extremes. *Scientific Data, 2*, 150066. https://doi.org/10.1038/sdata.2015.66
+
 Gumbricht, T., Roman-Cuesta, R. M., Verchot, L., Herold, M., Wittmann, F., Householder, E., Herold, N., & Murdiyarso, D. (2017). An expert system model for mapping tropical wetlands and peatlands reveals South America as the largest contributor. *Global Change Biology, 23*(9), 3581-3599. https://doi.org/10.1111/gcb.13689
 
 Haman, D. Z. (2017). *Pumps for Florida irrigation and drainage systems* (Circular CIR832). UF/IFAS Extension. https://edis.ifas.ufl.edu/publication/WI001/pdf (Original work published 1989)
@@ -24,9 +34,13 @@ Hawker, L., Uhe, P., Paulo, L., Sosa, J., Savage, J., Sampson, C., & Neal, J. (2
 
 Hirano, T., Kusin, K., Limin, S., & Osaki, M. (2015). Evapotranspiration of tropical peat swamp forests. *Global Change Biology, 21*(5), 1914-1927. https://doi.org/10.1111/gcb.12653
 
+Hooijer, A., & Vernimmen, R. (2026). Modelling water table depth variation in Southeast Asia forested peatlands using satellite rainfall data. *Scientific Reports, 16*(1), 26515. https://doi.org/10.1038/s41598-026-64641-2
+
 Hoyt, A. M., Chaussard, E., Seppalainen, S. S., & Harvey, C. F. (2020). Widespread subsidence and carbon emissions across Southeast Asian peatlands. *Nature Geoscience, 13*(6), 435-440. https://doi.org/10.1038/s41561-020-0575-4
 
 Imanudin, M. S., Wildayana, E., & Armanto, M. E. (2018). Option for land and water management to prevent fire in peat land areas of Sumatera, Indonesia. *Journal of Wetlands Environmental Management, 6*(1), 12-26. https://www.tropicalpeatlands.org/knowledge/publication/11463-19717
+
+Ingram, H. A. P. (1982). Size and shape in raised mire ecosystems: a geophysical model. *Nature, 297*(5864), 300-303. https://doi.org/10.1038/297300a0
 
 Ismail, I., Haghighi, A. T., Marttila, H., Kurniawan, U., Karyanto, O., & Kløve, B. (2021). Water table variations on different land use units in a drained tropical peatland island of Indonesia. *Hydrology Research, 52*(6), 1372-1388. https://doi.org/10.2166/nh.2021.062
 
@@ -47,6 +61,8 @@ Mahdiyasa, A. W., Large, D. J., Icardi, M., & Muljadi, B. P. (2024). MPeat2D - a
 Mezbahuddin, S., Nikonovas, T., Spessa, A., Grant, R. F., Imron, M. A., Doerr, S. H., & Clay, G. D. (2023). Accuracy of tropical peat and non-peat fire forecasts enhanced by simulating hydrology. *Scientific Reports, 13*, 619. https://doi.org/10.1038/s41598-022-27075-0
 
 Miettinen, J., Shi, C., & Liew, S. C. (2016). Land cover distribution in the peatlands of Peninsular Malaysia, Sumatra and Borneo in 2015 with changes since 1990. *Global Ecology and Conservation, 6*, 67-78. https://doi.org/10.1016/j.gecco.2016.02.004
+
+Mu, Q., Zhao, M., & Running, S. W. (2011). Improvements to a MODIS global terrestrial evapotranspiration algorithm. *Remote Sensing of Environment, 115*(8), 1781-1800. https://doi.org/10.1016/j.rse.2011.02.019
 
 Pronk, M., Hooijer, A., Eilander, D., Haag, A., de Jong, T., Vousdoukas, M., Vernimmen, R., Ledoux, H., & Eleveld, M. (2024). DeltaDTM: A global coastal digital terrain model. *Scientific Data, 11*, 273. https://doi.org/10.1038/s41597-024-03091-9
 
@@ -78,17 +94,31 @@ Urzainki, I., Laurén, A., Palviainen, M., Haahti, K., Budiman, A., Basuki, I., 
 
 Urzainki, I., Palviainen, M., Hökkä, H., Persch, S., Chatellier, J., Wang, O., Mahardhitama, P., Yudhista, R., & Laurén, A. (2023). A process-based model for quantifying the effects of canal blocking on water table and CO2 emissions in tropical peatlands. *Biogeosciences, 20*(11), 2099-2116. https://doi.org/10.5194/bg-20-2099-2023
 
+Wang, Y., Li, R., Hu, J., Wang, X., Kabeja, C., Min, Q., & Wang, Y. (2021). Evaluations of MODIS and microwave based satellite evapotranspiration products under varied cloud conditions over East Asia forests. *Remote Sensing of Environment, 264*, 112606. https://doi.org/10.1016/j.rse.2021.112606
+
 Widodo, J., Sulaiman, A., Awaluddin, A., Riyadi, A., Nasucha, M., Perissin, D., & Sri Sumantyo, J. T. (2019). Application of SAR interferometry using ALOS-2 PALSAR-2 data as precise method to identify degraded peatland areas related to forest fire. *Geosciences, 9*(11), 484. https://doi.org/10.3390/geosciences9110484
 
 Yananto, A., Sartohadi, J., Marhaento, H., & Awaluddin. (2021). Groundwater level estimation model on peatlands using SAR Sentinel-1 data in part of Riau, Indonesia. *International Journal of Remote Sensing and Earth Sciences, 18*(2), 203-216. https://ejournal.brin.go.id/ijreses/article/view/13780
 
+Yondriadi, & Sutikno, S. (2026). Evaluation of Global Precipitation Measurement (GPM) satellite rainfall accuracy in tropical peatlands of Riau Province. *IOP Conference Series: Earth and Environmental Science, 1632*(1), 012013. https://doi.org/10.1088/1755-1315/1632/1/012013
+
 ## Regulations and official documents
 
+FAO. (2025). *WaPOR version 3 now available in GEE* [News item, 6 June 2025]. WaPOR, remote sensing for water productivity. Food and Agriculture Organization of the United Nations. https://www.fao.org/in-action/remote-sensing-for-water-productivity/news-and-events/news/news-detail/wapor-v3-data-now-available-on-the-google-earth-engine-data-catalogue/en
+
+FAO. (n.d.). *WaPOR data*. WaPOR, remote sensing for water productivity. Food and Agriculture Organization of the United Nations. https://www.fao.org/in-action/remote-sensing-for-water-productivity/wapor-data/en
+
 Keputusan Menteri Lingkungan Hidup dan Kehutanan Nomor SK.129/MENLHK/SETJEN/PKL.0/2/2017 tentang Penetapan Peta Kesatuan Hidrologis Gambut Nasional. (2017).
+
+Klaasse, A., Pelgrum, H., Wonink, S., & Zalite, K. (2023). *WaPOR v3: ETLook evapotranspiration from field to global scale* [Conference presentation]. International Workshop on High-Resolution Thermal EO, European Space Agency. https://thermal2023.esa.int/iframe-agenda/files/presentation-163.pdf
 
 KLH/BPLH (Kementerian Lingkungan Hidup/Badan Pengendalian Lingkungan Hidup). (2026). *TOR - Focus Group Discussion (FGD): Penguatan kolaborasi para pihak dalam pencegahan kebakaran hutan dan lahan gambut berbasis tata kelola air dalam Kesatuan Hidrologis Gambut (KHG)*, attached to invitation letter B.70/E/PKL.4.5/10/2026 of 26 October 2026, Deputi Tata Lingkungan dan Sumber Daya Alam Berkelanjutan. Document held by the team.
 
 Laporan Akhir KHG Kahayan-Sebangau. (2021). *Laporan akhir: Penyusunan neraca air di KHG Sungai Kahayan - Sungai Sebangau* (Kontrak SPK.168/PPK-2/REN/9/2021). Lembaga Kajian LKFT, Fakultas Teknik, Universitas Gadjah Mada.
+
+NASA LP DAAC. (2021). *MOD16 user guide, collection 6.1* (version 1.0, 11 March 2021) [User guide]. NASA Land Processes Distributed Active Archive Center. https://lpdaac.usgs.gov/documents/931/MOD16_User_Guide_V61.pdf
+
+NASA LP DAAC. (n.d.). *MOD16A2GF.061: Terra net evapotranspiration gap-filled 8-day global 500 m* [Data set]. Earth Engine Data Catalog, Google. Dataset DOI 10.5067/MODIS/MOD16A2GF.061. https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD16A2GF
 
 Panduan Teknis GIS Rewetting KLH. (n.d.). *Panduan teknis analisis GIS: Pemilihan kanal dan penempatan sekat kanal untuk rewetting lahan gambut bekas terbakar*. Departemen Teknik Geodesi, Universitas Gadjah Mada, with Kementerian Lingkungan Hidup. Training document held by the team.
 
@@ -97,3 +127,5 @@ Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor P.15/M
 Peraturan Pemerintah Republik Indonesia Nomor 57 Tahun 2016 tentang Perubahan atas Peraturan Pemerintah Nomor 71 Tahun 2014 tentang Perlindungan dan Pengelolaan Ekosistem Gambut. (2016). Lembaran Negara Republik Indonesia Tahun 2016 Nomor 260. https://peraturan.go.id/files/pp57-2016bt.pdf
 
 Peraturan Pemerintah Republik Indonesia Nomor 71 Tahun 2014 tentang Perlindungan dan Pengelolaan Ekosistem Gambut. (2014). Lembaran Negara Republik Indonesia Tahun 2014 Nomor 209. https://peraturan.bpk.go.id/Details/5513/pp-no-71-tahun-2014
+
+UN FAO. (n.d.). *Actual evapotranspiration and interception* [WaPOR data components and methodology]. WaPOR ETLook wiki, un-fao/wapor-et-look. https://github.com/un-fao/wapor-et-look/wiki/Actual%20Evapotranspiration%20and%20Interception

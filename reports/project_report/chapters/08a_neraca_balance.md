@@ -110,6 +110,42 @@ Table: Inputs of the adopted neraca air method. Source: neraca air method report
 
 SiTMAT is the only daily water-table series used by the adopted method. Its stations do not report rain, and no rain-gauge record was available to the project.
 
+### Where the rain and evapotranspiration data come from
+
+Rain and evapotranspiration (ET) are not measured at each peat unit, so the balance uses satellite-based estimates. A satellite sees cloud, vegetation and surface temperature, and a model turns those into millimetres of water. The errors of these products enter every balance value, so the table and notes below say what each product is.
+
+Table: Rain and evapotranspiration products behind the balance. Source: Funk et al. (2015); Mu et al. (2011); NASA LP DAAC (2021); FAO; UN FAO; Klaasse et al. (2023).
+
+| Product | Producer | Quantity | How it is made | Grid and time step | Use in the balance |
+|---|---|---|---|---|---|
+| CHIRPS | Climate Hazards Group | Rain | Rainfall climatology and infrared cold-cloud estimates, blended with station records | 0.05° (about 5.6 km), daily | Rain for every unit |
+| MOD16A2GF v061 | NASA, from the MODIS sensor on the Terra satellite | Evapotranspiration | Penman-Monteith for soil evaporation, wet canopy evaporation and transpiration, with daily weather reanalysis and MODIS leaf area, FPAR, albedo and land cover; gap filled after the end of the year | 500 m, 8-day totals | Central ET to December 2025 |
+| MOD16A2 v061 | NASA, as above | Evapotranspiration | The same, without gap filling | 500 m, 8-day totals | ET for 2026 |
+| WaPOR v3 AETI | FAO; model by eLEAF | Evapotranspiration and interception | ETLook model: two Penman-Monteith equations (soil, canopy) plus an interception term; thermal imagery from the VIIRS sensor sharpened to a finer grid; soil moisture stress | 326 m (global level, nominally 300 m), dekadal | Second source for the agreement test |
+
+CHIRPS was developed for the USAID Famine Early Warning Systems Network (Funk et al. 2015). It starts from a 0.05° rainfall climatology, adds rain estimates from how long clouds stay cold in infrared satellite images, and blends in station records. It covers 50°S to 50°N, which includes Indonesia, and its final version appears about three weeks after the period. Against IMERG, a merged satellite and gauge product, CHIRPS totals were 16 % higher at Sugihan-Lumpur and 8 % higher at Kampar-Gaung over 2018 to September 2025, with a monthly correlation of 0.89 at both.
+
+MOD16 comes from NASA and the MODIS sensors; Mu et al. (2011) describe the algorithm. For each 500 m pixel it adds three parts: evaporation from the soil, evaporation of rain held on the wet canopy, and transpiration by plants through the dry canopy (NASA LP DAAC 2021). Each part follows the Penman-Monteith equation, which estimates evaporation from the energy available at the surface, the dryness of the air and the resistance of vegetation and soil to water loss. The inputs are land cover, leaf area index, the fraction of absorbed light (FPAR), albedo, and air pressure, temperature, humidity and radiation from a daily meteorological reanalysis (NASA LP DAAC 2021). Leaf area and FPAR come as 8-day composites, so the ET value in a pixel is the sum over the eight days.
+
+The gap-filled version replaces leaf area and FPAR values that failed the quality screening by linear interpolation between the previous and the next period, and is produced after the end of each year. The user guide states that gap filling generally raises 8-day ET. Over 2021 to 2025 at Sugihan-Lumpur, the version without gap filling, which the 2026 balance uses, was 2.2 % above the gap-filled version (1,472 against 1,440 mm/yr, correlation 0.93 over 180 dekads). Against 46 eddy-covariance towers worldwide, the algorithm had a mean absolute error of 0.31 mm/day with reanalysis weather, 24 % of the tower ET and within the 10 to 30 % uncertainty of tower measurements (Mu et al. 2011). Each pixel also carries a quality flag that records cloud and whether a back-up algorithm was used.
+
+WaPOR is the FAO portal for water productivity from open remote sensing data. It was built to monitor agricultural water productivity, and its global level covers the whole globe at 300 m (FAO n.d.). Its AETI layer is the sum of soil evaporation, canopy transpiration and interception, delivered as the average daily rate of each dekad in mm/day, with monthly and annual sums. The method is ETLook (Bastiaanssen et al. 2012), which solves two Penman-Monteith equations in parallel, one for soil evaporation and one for canopy transpiration. Transpiration is coupled to the moisture of the root zone and evaporation to the moisture of the topsoil. The canopy resistance depends on leaf area, a minimum stomatal resistance, and reduction factors for soil moisture, solar radiation, temperature and humidity. Interception is computed from vegetation cover, leaf area and rain: the share intercepted is large for small rain and falls quickly as rain increases, and the energy it uses is not available for transpiration (UN FAO n.d.). Version 3 takes land surface temperature from the VIIRS sensor and sharpens it to a finer grid, builds smoother vegetation and albedo series, and uses a relative soil moisture estimated from surface temperature to reduce ET in dry soil (Klaasse et al. 2023). Dekadal values appear a few days after each dekad in a near-real-time version, and a final version replaces them later (FAO n.d.).
+
+The two ET products share four properties that matter for the balance.
+
+- Both are model estimates. Over 2018 to September 2025, WaPOR totals were 19 % below MOD16 at Sugihan-Lumpur and 21 % below at Kampar-Gaung, with monthly correlations of 0.61 and 0.44. The balance takes MOD16 as the central product because its annual level lies within eddy-covariance measurements on peat (see the balance step below), and keeps WaPOR as a second source.
+- Both include evaporation of rain that the canopy intercepted: MOD16 as wet canopy evaporation, WaPOR as its interception term (NASA LP DAAC 2021; UN FAO n.d.). The interception term of the balance removes that share of the rain a second time, so the results also give P - ET, rain minus ET without the runoff and interception terms.
+- Both depend on optical or thermal images, which cloud interrupts. MOD16 interpolates leaf area and FPAR across failed periods. WaPOR smooths and gap-fills its vegetation and albedo series, and its developers note that persistent cloud makes good data hard to produce in some areas (Klaasse et al. 2023).
+- Neither was built for peat swamp forest. MOD16 is a global product and WaPOR was designed for agricultural water productivity. The comparison with eddy-covariance sites on peat is the check on the level of ET.
+
+### What the peat literature uses
+
+None of the three products is validated over Indonesian peat in the sources reviewed for this report. For rain, the peat studies found use IMERG or GPM. Hooijer and Vernimmen (2026) built a 25-year daily water table record for forested peatlands in Southeast Asia from IMERG, and Apers et al. (2025) used IMERG for peat hydraulic parameters in Brunei, noting that gridded satellite rain is coarse and misses cloud-scale rain. Yondriadi and Sutikno (2026) compared GPM with three BMKG stations in Riau over 2015 to 2024: monthly R² was 0.86 to 0.94, GPM was too high in the wet season and too low in the dry season, and the authors recommend a local correction. IMERG is the cross-check on CHIRPS in this report.
+
+For evapotranspiration, the studies found test MOD16 outside peat. In East Java, MOD16A2 overestimated against climate-station estimates, with a mean absolute error of 0.92 mm/day and a correlation of 0.25 (Faisol et al. 2020). At 16 forest sites in East Asia, MOD16 bias exceeded 30 % under some cloud conditions, largest at tropical coastal forests, and was linked to overestimated MODIS leaf area (Wang et al. 2021). In the Lancang-Mekong basin, MOD16 had a higher error against eddy covariance than three other products (Chen et al. 2022). These sites are not peat, so they show the risk and do not measure the error here. At Sugihan-Lumpur and Kampar-Gaung the two ET products differ by 19 to 21 % in total, so the choice of product moves every balance value.
+
+The 2021 Kahayan-Sebangau study used TerraClimate (section 8.2), a model product with 4.6 km pixels and a monthly step that ends in December 2024. MOD16 and WaPOR have finer pixels and steps of eight or ten days, which suits sub-KHG units and a dekadal balance.
+
 ### The climatic balance per sub-KHG
 
 The balance is computed per dekad and summarised per month and per year. A dekad is days 1-10, 11-20, or 21 to the end of the month.
@@ -119,6 +155,8 @@ Step 1 retrieves rain and evapotranspiration per unit and per dekad from Earth E
 Step 2 forms the monthly balance:
 
 WB(u, month) = P_KHG × (1 - I_u) × (1 - C) - ET_u
+
+The two reductions act in sequence: interception removes its share of the rain first, and the runoff coefficient applies to the rain that reaches the ground.
 
 - P_KHG is the area-weighted KHG mean of the month's rain, the same for every unit. CHIRPS and IMERG order the sub-KHG differently by mean rain (Spearman -0.34 over 30 units at Sugihan-Lumpur, -0.06 over 26 at Kampar-Gaung), so rain cannot separate units.
 - ET_u is MOD16 for the unit. Its annual level, 1,385 to 1,441 mm/yr at the two test KHG over 2018-2025, lies within eddy-covariance measurements over Central Kalimantan peat of 1,636, 1,553 and 1,374 mm/yr at undrained, drained and drained-burnt sites (Hirano et al. 2015). WaPOR (1,101 to 1,180 mm/yr) lies below the lowest site, so it serves as a second source only.

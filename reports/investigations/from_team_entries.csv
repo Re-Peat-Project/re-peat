@@ -1,0 +1,89 @@
+delivery,archive,entry,size_mb
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/BACA_DULU.md,0.0
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/build_web_bmo.py,0.01
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/laporan_buru_mappi_obaa_brgm_vs_demnas.pdf,2.29
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/_daftar_isi.csv,0.0
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/_fakta.json,0.0
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/_layer_kosong.csv,0.0
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/raster/dtm_brgm_25m.tif,12.31
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/raster/dtm_brgm_8m_s29.tif,3.59
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/raster/moisture_s2_s29.tif,12.91
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/raster/peat_depth_kelas_100m.tif,0.16
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/batas_khg.gpkg,0.26
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/batas_subkhg.gpkg,0.87
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/burnt_area.gpkg,0.89
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/dmpg.gpkg,0.59
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/gambut.gpkg,0.77
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/hotspot.gpkg,0.99
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/kanal.gpkg,0.12
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/neraca_khg.csv,0.0
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/neraca_p_e_bulanan.csv,0.0
+Buru Mappi - buru obaa,buru-mappi-obaa.zip,buru-mappi-obaa/vektor/sungai_danau.gpkg,5.96
+KHG Sugihan Lumpur WorldDEM 12m,DMPG Sugihan Lumpur.zip,dpmg_.prj,0.0
+KHG Sugihan Lumpur WorldDEM 12m,DMPG Sugihan Lumpur.zip,dpmg_.shp,0.38
+KHG Sugihan Lumpur WorldDEM 12m,DMPG Sugihan Lumpur.zip,dpmg_.shx,0.0
+KHG Sugihan Lumpur WorldDEM 12m,DMPG Sugihan Lumpur.zip,dpmg_.cpg,0.0
+KHG Sugihan Lumpur WorldDEM 12m,DMPG Sugihan Lumpur.zip,dpmg_.dbf,0.01
+KHG Sugihan Saleh,analysis_desa_ss.zip,analysis_desa_ss.cpg,0.0
+KHG Sugihan Saleh,analysis_desa_ss.zip,analysis_desa_ss.dbf,9.92
+KHG Sugihan Saleh,analysis_desa_ss.zip,analysis_desa_ss.prj,0.0
+KHG Sugihan Saleh,analysis_desa_ss.zip,analysis_desa_ss.shp,5.33
+KHG Sugihan Saleh,analysis_desa_ss.zip,analysis_desa_ss.shx,0.02
+KHG Sugihan Saleh,dmpg_ss.zip,dmpg_ss.cpg,0.0
+KHG Sugihan Saleh,dmpg_ss.zip,dmpg_ss.dbf,0.01
+KHG Sugihan Saleh,dmpg_ss.zip,dmpg_ss.prj,0.0
+KHG Sugihan Saleh,dmpg_ss.zip,dmpg_ss.shp,0.2
+KHG Sugihan Saleh,dmpg_ss.zip,dmpg_ss.shx,0.0
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/BACA_DULU.md,0.01
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/build_web.py,0.02
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/_daftar_isi.csv,0.0
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/dem_lidar_klh2020_20m.tif,13.16
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/dem_worlddem_12m.tif,50.63
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/peat_depth_kelas_100m.tif,0.01
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/peat_depth_survei_klh2020_20m.tif,0.15
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/prioritas_dampak.tif,0.48
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/prioritas_kelayakan.tif,0.48
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/raster/prioritas_urgensi.tif,0.48
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/batas_khg.gpkg,0.16
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/batas_subkhg.gpkg,0.16
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/burnt_area.gpkg,4.63
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/data_kajian_2016.gpkg,0.64
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/dmpg.gpkg,0.68
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/hotspot.gpkg,0.53
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/kanal.gpkg,2.57
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/konsesi.gpkg,0.18
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/pompa.gpkg,1.04
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/sekat.gpkg,0.33
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/sungai_danau.gpkg,1.78
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/tma.gpkg,0.22
+KHG Sugihan Saleh,web_sungai-saleh-sungai-sugihan.zip,web_sungai-saleh-sungai-sugihan/vektor/tma_harian.csv,0.03
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/BACA_DULU.md,0.01
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/build_web_pp.py,0.02
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/_daftar_isi.csv,0.0
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/_fakta.json,0.0
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/_layer_kosong.csv,0.0
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/dem_demnas_dtmsmooth_25m.tif,5.83
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/dem_lidar_25m.tif,6.39
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/moisture_s2_10m.tif,66.93
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/peat_depth_kelas_100m.tif,0.15
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/peat_depth_ugm_125m.tif,0.22
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/prioritas_dampak.tif,0.25
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/prioritas_kelayakan.tif,0.27
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/raster/prioritas_urgensi.tif,0.26
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/batas_khg.gpkg,0.11
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/batas_subkhg.gpkg,0.19
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/burnt_area.gpkg,0.16
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/dmpg.gpkg,0.57
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/gambut.gpkg,1.45
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/hotspot.gpkg,0.96
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/kanal.gpkg,0.61
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/konsesi.gpkg,0.26
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/neraca_khg.csv,0.0
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/neraca_p_e_bulanan.csv,0.0
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/pompa.gpkg,0.16
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/sekat.gpkg,0.47
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/sekat_perbandingan.gpkg,1.88
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/sungai_danau.gpkg,19.42
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/titik_bm.gpkg,0.09
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/tma.gpkg,0.16
+P Padang LiDAR,pulau-padang for web.zip,pulau-padang/vektor/tma_harian.csv,0.02

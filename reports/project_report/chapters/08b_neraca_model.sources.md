@@ -187,3 +187,19 @@ References added:
 - Evans, C. D., Williamson, J. M., Kacaribu, F., et al. (2019). Rates and spatial variability of peat subsidence in Acacia plantation and forest landscapes in Sumatra, Indonesia. Geoderma, 338, 410-421. https://doi.org/10.1016/j.geoderma.2018.12.028 (CANAL, *full text*). Used for: Acacia water table 70 ± 17 cm.
 - Hooijer, A., Page, S., Jauhiainen, J., et al. (2012). Subsidence and carbon loss in drained tropical peatlands. Biogeosciences, 9, 1053-1071. https://doi.org/10.5194/bg-9-1053-2012 (CANAL, *full text*). Used for: plantation water tables 0.70-0.73 m.
 - Vernimmen, R., and Hooijer, A. (2026). Satellite LiDAR reveals patterns in water table depth and flood risk in SE Asia coastal lowland and peatland plantations. Frontiers in Environmental Science, 14, 1869652. https://doi.org/10.3389/fenvs.2026.1869652 (CANAL, *full text*). Used for: canal water about -0.6 m (oil palm) and -0.85 m (Acacia) at 5-9 m elevation.
+
+## 8.6 Background: how water moves in peat (added 2026-10-31)
+
+- Example of Sy: 10 mm / 0.6 = 16.7 mm (about 17 mm); 10 mm / 0.1 = 100 mm. Sy values 0.6 (intact forest) and 0.1 (drained, at 1.5 m): section 8.8, "Peat hydraulic properties".
+- T falls with depth, in m2/day: section 8.8, "Peat hydraulic properties".
+- Boussinesq equation as a groundwater equation, much cheaper than the full three-dimensional problem, standard for domains much wider than thick; 931 km2 drained peatland in Sumatra; blocks compared by simulation: Urzainki et al. (2020), article page and abstract fetched 2026-10-31 (the page cites Bear 1979, Connorton 1985, Skaggs 1980, Koivusalo et al. 2000, Cobb et al. 2017 for the equation; none of these were read).
+- 137 km2 of peat at Balangan-Batangalai: `chapters/10_khg_results.md` line 36. Deepest depth class taken as 8 m: section 8.8, "Peat hydraulic properties".
+- Ingram (1982): abstract on the Nature article page, fetched 2026-10-31 (impeded drainage in better accord than matric forces; elliptical profile of one mire agrees with the model). The sentences on why a canal matters are a physical explanation without a separate source; the 150 m, 26 days, 122-day season and 1 km figures are from section 8.14, "How far does a canal block reach?".
+- Ponded water removed each day, saturation-excess runoff: section 8.8, "Equation and grid" (Katimon et al. 2013). Boundaries (canals, KHG edge, managed land at 0.4 m): section 8.8, "Boundaries".
+- Diagram `boussinesq_cell`: drawn by `re-peat/tools/project_report_diagrams.py` (builder `boussinesq_cell`); its text restates the equation of section 8.8.
+
+References added: Ingram 1982 (full entry in `build_references.py` and `chapters/12_references.md`).
+
+Added 2026-10-31 (second pass, primary text read):
+- Cobb et al. (2017), PNAS page read in full 2026-10-31: "Boussinesq's equation for essentially horizontal groundwater flow", Sy dH/dt = qn + div(T grad H); "a standard groundwater modeling equation for flow domains like peatlands that are much wider than they are thick"; "requires only that lateral flow is proportional to the head gradient"; stable surface Laplacian = minus mean net precipitation divided by mean transmissivity (their equation 7, Brunei, 6 years of data); assumptions: uniform transmissivity, negligible deep flow, and the sentence on deep flow flattening the dome centre and steepening the margin.
+- Diagram `peat_dome_section`: drawn by `re-peat/tools/project_report_dome_section.py` as an editable draw.io file; a schematic without scale. Its elements restate the equation terms of section 8.8, the canal and block behaviour of section 8.14 and Cobb et al. (2017) for a dome bounded by canals.

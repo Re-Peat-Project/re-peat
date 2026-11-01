@@ -6,6 +6,26 @@ The climatic balance has no stored water, no canal level and no blocks, so an in
 
 The groundwater model described in this chapter is in development. It can be applied to any KHG from its code, takes its climate forcing from satellite products and scores itself against field data. It has passed the supply check where that check can be made. It has not passed the checks on water-table level and dynamics outside managed land, and its scenario results are first results for one KHG.
 
+### Background: how water moves in peat
+
+The groundwater model rests on three ideas: how much water the peat stores, how fast water moves through it, and a daily balance that links the two.
+
+The water table is the level below which the pores of the peat are full. When it falls by one metre, only part of the peat volume drains. That share is the specific yield (Sy). A small Sy means a small loss of water lowers the water table a long way: a net loss of 10 mm of water lowers it by about 17 mm where Sy is 0.6, and by 100 mm where Sy is 0.1. Section 8.8 gives the values used.
+
+Water moves sideways from where the water table is high to where it is low. The flow grows with the slope of the water table and with the transmissivity (T) of the peat, the amount of water the saturated peat carries sideways, in m²/day. T falls with depth, so a water table that sinks into deeper peat conducts much less.
+
+Over one day, the water table in a cell changes by rain, minus evapotranspiration, plus the net inflow from neighbouring cells, divided by Sy. Written for a grid of cells, these three ideas make the Boussinesq equation, given in full in section 8.8. It follows the water table across the landscape and has no flow up and down inside the peat. Cobb et al. (2017) use it as Boussinesq's equation for essentially horizontal groundwater flow, which needs only that sideways flow is proportional to the slope of the water table, and call it standard for domains much wider than thick. Urzainki et al. (2020) add that it is much cheaper to solve than the full three-dimensional problem. A KHG is wide compared with the depth of its peat: Balangan-Batangalai has 137 km² of peat, and the deepest depth class used here is taken as 8 m.
+
+{{diagram: boussinesq_cell | The terms of the Boussinesq equation for one model cell | see diagrams/boussinesq_cell.drawio}}
+
+Peat forms domes because water drains slowly through it. Ingram (1982) argued that waterlogging in raised mires is better explained by impeded drainage than by the water-holding force of the peat itself (matric forces), and found that the elliptical profile of the surface of one mire agreed with his model. Cobb et al. (2017) put numbers on this for a pristine peat dome in Brunei: once a dome has reached a stable shape, the curvature of its surface equals minus the mean net rainfall divided by the mean transmissivity, so more water arriving, or peat that carries less of it away, gives a more strongly curved dome. The result assumes the same transmissivity everywhere and negligible flow through deep peat, which the authors say would flatten the dome centre and steepen its margin. The same slow drainage explains why a canal matters. A canal gives the water an outlet below the water table. The water table next to it falls until the slope towards the canal can carry the water that arrives, and the effect fades with distance. In the Mendahara-Batanghari scenario, cells within 150 m of a block reach were deeper than 40 cm on 26 fewer days of the 122-day dry season, and beyond 1 km nothing changed (section 8.14).
+
+{{diagram: peat_dome_section | Cross-section of a peat dome between two canals: an open canal on the left and a canal held higher by a block on the right (schematic) | see diagrams/peat_dome_section.drawio}}
+
+The equation has been used to place canal blocks in drained tropical peat. Urzainki et al. (2020) used it to compare block positions over a 931 km² drained peatland in Sumatra. Section 8.7 lists the models that solve it.
+
+The equation has limits. It describes the water table only, with no flow over the surface; the model removes ponded water each day, since runoff in tropical peat is saturation-excess (section 8.8). It needs the water level at its boundaries. In RE-PEAT these are canals, the KHG edge and managed land held at the 0.4 m target (section 8.8). Canals narrower than a cell and the scenario inputs are covered in sections 8.11 and 8.12.
+
 ## 8.7 Review of existing models
 
 The review looked for models that have simulated canal blocks or water-table management on tropical *gambut* (peat), and asked what each would need to run on an Indonesian KHG. Its main result for the project is that the choice of equation matters less than two inputs: the transmissivity of tropical peat and a canal level that responds to blocks. The table summarises the review. "Not stated" means the review did not record the item.
