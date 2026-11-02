@@ -24,7 +24,7 @@ Table: Questions of the KLH/BPLH focus group discussion and the toolkit outputs 
 | Current condition and fire risk of the priority KHG | National ranking of 865 KHG on burned peat, hotspots 2012-2025, this year's KLH hotspots and canals by class; profile and map per KHG; SiTMAT water-table summary per KHG (chapters 3 and 6) | Climate projections; the list of 337 priority KHG, which was not available to the project |
 | Factors that make peat vulnerable | Canal density by class, missing canal blocks, distance to water, water balance and dry months, station water tables, land status overlays (licences, peat function, forest area) per KHG and sub-KHG (chapters 6 to 8) | Institutional and governance factors |
 | Roles of ministries and agencies | Blocks are placed on primary and secondary canals, the canals the discussion links to the Ministry of Public Works; overlays separate forest area, licence areas and land outside them (chapters 6 and 9) | Assignment of roles itself |
-| A KHG-based action plan: locations, interventions, timing, funding | Ranked sub-KHG, proposed canal blocks per sub-KHG with the water they hold, water need from the deficit, budget range with price sources, dry-season months per KHG, print layouts in the KLH style (chapters 7 to 9) | Prices are unverified; canal closure has no price; pumping has not yet been applied to a real KHG |
+| A KHG-based action plan: locations, interventions, timing, funding | Ranked sub-KHG, proposed canal blocks per sub-KHG with the water they hold, water need from the deficit, budget range with price sources, dry-season months per KHG, print layouts in the KLH style (chapters 7 to 9) | Revegetation is priced outside the cost standard from unverified news prices; canal closure has no price; gates, pumps and maintenance are not in the budget; pumping has not yet been applied to a real KHG |
 
 Water sharing between licence holders and the communities around them, which the discussion names, needs two kinds of data the project does not have: canal water levels in concessions and water-table records in land outside licences. Section 11.5 lists them.
 
@@ -35,7 +35,7 @@ Water sharing between licence holders and the communities around them, which the
 - SiTMAT covers one season, April to October 2026, mostly in concessions. Four of the 14 KHG (Saleh-Sugihan, Mempawah-Peniti, Balangan-Batangalai, Buru Mappi-Buru Obaa) have no station inside them, so no station-based deficit can be computed for them. The deficit of Kahayan-Sebangau rests on one station, that of Pungurbesar-Kapuas on three and that of Kapuas-Barito on six.
 - Peat depth covers part of most KHG, and where it can be checked it agrees poorly with field cores (correlation 0.10 at Pulau Tebing Tinggi). Kahayan-Sebangau, Kapuas-Barito and Buru Mappi-Buru Obaa have no modelled peat-depth layer, so peat depth is not scored in their sub-KHG ranking.
 - LiDAR is used at five KHG, all in Sumatra. At Saleh-Sugihan it covers about 62 % of the KHG, and the LiDAR results there describe only that part. The other nine KHG rest on corrected DeltaDTM and DEMNAS, so their block counts are ranges between the two results, not design figures. Pulau Padang has a 2 m LiDAR that the analysis leaves out.
-- Interventions budgets use proposed unit prices that are still to be verified; the KLH cost standard for rewetting works was not available to the project.
+- Interventions budgets price blocks and wells at the KLH cost standard (Perdirjen PPKL P.16/2022), each from one reference type because canal width is not mapped. Revegetation, which the standard does not cover, is priced from news reports that are still to be verified. Canal closure is reported as length and not priced, because the stretches to be backfilled are not defined. Gates, pumps at the price of the KLH peat directorate, canal normalisation and maintenance are not in the budget.
 - Pumping was not assessed in any of the 33 analyses.
 - The groundwater model is in development; its scenario maps are indicative.
 
@@ -46,7 +46,7 @@ Water sharing between licence holders and the communities around them, which the
 3. Confirmation of the twelfth KHG, Cawang-Lalang, whose name does not match the official boundary file (nearest match KHG Air Banyuasin - Air Lalang).
 4. Whether FABDEM, under its non-commercial licence, may be used in a KLH deliverable (chapter 4).
 5. How the groundwater model represents water management in concessions (a target water table, or a supply sized from the station deficit), and what field evidence it is checked against (chapter 8).
-6. Whether the KLH cost standard can replace the price register and treatment thresholds of RE-PEAT Interventions (chapter 9).
+6. Which canal stretches are to be backfilled, so that canal closure can be priced from the segment prices of the cost standard; which price KLH uses for revegetation of burned land, which the standard does not cover; and whether KLH treatment thresholds can replace those of RE-PEAT Interventions (chapter 9).
 
 ## 11.5 Data needed
 

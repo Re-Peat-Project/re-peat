@@ -18,7 +18,7 @@ Chapter 11 summarises chapters 2 to 9; every number is taken from those chapters
 - Pumping not assessed in any of the 33 analyses: stated by the project lead, 30 October 2026.
 - Peat depth correlation 0.10 at Tebing Tinggi: chapter 3, section 3.2.
 - LiDAR used at five KHG, Sumatra only (Pulau Padang's 2 m LiDAR left out: chapter 3, section 3.7); Saleh-Sugihan about 62 %; coverage measured inside the clipped window: chapter 3, section 3.7; chapter 4, section 4.9.
-- Prices unverified, canal closure unpriced, pumping not run: chapter 9, section 9.14.
+- Blocks and wells at the cost standard, revegetation outside it and unverified, canal closure unpriced, gates, pumps and maintenance not in the budget, pumping not run: chapter 9, sections 9.8 and 9.14.
 - Peat depth weight decision: chapter 7, section 7.8. FABDEM licence: chapter 4, section 4.9. Groundwater model decisions: chapter 8, section 8.13.
 - Air Hitam Laut-Buntu Kecil has LiDAR (100 %) and 9 stations: chapter 10 readiness table (re-peat/sites/khg_data_recap.csv; national profile n_tma_stations).
 - Highest national ranks among the selected KHG (Pungurbesar-Kapuas 1, Balangan-Batangalai 4, Kahayan-Sebangau 7): chapter 6, section 6.6.

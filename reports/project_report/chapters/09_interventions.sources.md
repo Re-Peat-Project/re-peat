@@ -65,10 +65,16 @@ Abbreviations: PM = repeat-pump/docs/pump-method.md; PD = repeat-pump/docs/propo
 
 ## Budget
 
-- Items and quantity rules: code budget.py lines 1-17 and quantities() lines 62-93 (reinforced = sekat_type not standard; IPG estimate from sekat_tambahan; canal density primary+secondary x area x peat fraction; burnt ha; wells burnt ha / pi r^2; pumps and fuel = kW x hours x period x L/kWh).
-- Prices: PY lines 87-98; PD lines 50-61. Search date 2026-10-27, not inflation-adjusted, not verified, P.4/2019 not found: PD line 46; PM line 149. Sources kinds (news, ULM journal, Tokopedia, solardistro diesel): PD lines 52-59.
-- Register 19 rows, statuses 15 to verify, 2 unconfirmed, 1 assumption, 1 obtain from KLH: repeat-pump/repeat_pump/data/budget_sources.csv, column status (counted with pandas).
-- Canal closure unpriced: PY line 91; SL run_report.md "Not priced".
+- Items and quantity rules: code budget.py (docstring and quantities()): reinforced = sekat_type not standard; tertiary = kept block on a canal of class tersier; IPG estimate from sekat_tambahan; canal density primary+secondary x area x peat fraction; burnt ha (blank burnt fraction with fire frequency 0 = 0 ha); wells burnt ha / pi r^2; pumps and fuel = kW x hours x period x L/kWh.
+- Cost standard: re-peat/docs/reference/Buku Perdirjen P.16 Tahun 2022 (Daftar Isi) 2.pdf (P.16/PPKL/PKEG/PKL.0/10/2022, signed 6 Oct 2022; Pasal 11 revokes P.4/PPKL/SET/PKL.0/7/2021; Pasal 9: figures are estimates that local market prices may exceed). Tables read by re-peat/tools/extract_perdirjen_p16.py into re-peat/docs/reference/perdirjen_p16_2022_unit_costs.csv (50 sekat, 12 penimbunan, 24 sumur bor codes).
+- Block prices: KSE-3L-P2 swakelola 76,495,000 and kontraktual 86,714,000 (canal 9-11 m); KSE-2L-P-4 41,844,000 and 46,692,000 (5-7 m); KSE-PK-P-1L 27,140,000 and 34,531,000 (up to 3 m); KSE-2L-P-1 14,428,000 and 16,557,000; KSE-2L-P-2 21,075,000 and 23,838,000: perdirjen_p16_2022_unit_costs.csv columns biaya_swakelola_idr, biaya_kontraktual_idr. Central = midpoint: repeat-pump/configs/proposed_defaults.yaml block budget (sekat_standard_idr, sekat_tertiary_idr, sekat_reinforced_idr).
+- Well price: SBO-20-1 swakelola 3,189,000 and kontraktual 3,944,000: same csv; preset well_idr. Well area 12.6 ha: preset well_radius_m 200.
+- Reference decks of the KLH peat directorate (re-peat/docs/reference): Pelalawan-Riau, May 2026, slides 4 and 21: sekat secondary 86,714,000 and tertiary 46,694,000 per unit, primary priced 0; Kuburaya-Kalbar slide 4 and UK (1).pptx slides 4-6 (2018 programme) used as cross-checks only; UK (1).pptx slide 10: 143 fill points ("JUMLAH 143"), no cost.
+- Backfilling: perdirjen_p16_2022_unit_costs.csv codes KTI-50-1 to KTI-300-3 (70,882,000 to 918,107,000 per segment, contractual only; Pasal 1 and 5 text in the PDF). Not priced: preset canal_closure_idr_per_km null; length from run_report.json budget.by_item.canal_closure_km.
+- Prices outside the standard (revegetation 8 / 12.1 / 15 million per ha; pump; diesel): preset and repeat-pump/repeat_pump/data/budget_sources.csv rows with status to verify. Search date 2026-10-27, not inflation-adjusted.
+- Register 27 rows by status: 5 standard, 3 document, 15 to verify, 2 unconfirmed, 1 assumption, 1 obtained: budget_sources.csv column status (counted with pandas).
+- Totals split into cost standard and outside it: run_report.json budget.by_basis.standard and outside_standard (code budget.py by_basis; STANDARD_ITEMS).
+- Not in the budget: pintu air 200,000,000 per unit, pump 91,575,000 per unit and normalisasi kanal about 40 million per km (Pelalawan slides 4 and 5; Kuburaya slide 4: 83.64 km for 3.345 billion); maintenance honorarium 2,000,000 per month per 25 sekat or 50 wells (UK (1).pptx slides 8-9).
 
 ## Outputs, layouts, plugin
 
@@ -99,7 +105,7 @@ Abbreviations: PM = repeat-pump/docs/pump-method.md; PD = repeat-pump/docs/propo
 - Water held / deficit: interventions.held_m3_selected and deficit_m3_selected (2,193,873 / 196,886,024; 5,063,346 / 175,921,233; 5,015,239 / 227,084,736). Shares per unit: interventions.held_share_selected.
 - KHG deficit 290 mm: interventions.csv column deficit_mm = 290.238.
 - Interventions counts: interventions.counts; units: interventions.units (29, 29, 27).
-- Budget: run_report.json budget.by_item and totals; run_report.md budget table; cost per m3: budget.idr_per_m3_held (352.8, 138.6, 222.5). Revegetation share 564.81 / 619.79 = 91 %.
+- Budget: run_report.json budget.by_item (low, central, high per item), budget.by_basis (standard subtotal 48.04 / 52.17 / 56.31, 142.75 / 153.12 / 163.50 and 579.98 / 619.48 / 658.98 billion Rp; outside the standard 373.43 / 564.81 / 700.17, 221.13 / 334.45 / 414.61 and 65.38 / 98.89 / 122.59), totals 421.46 / 616.98 / 756.48, 363.88 / 487.58 / 578.11 and 645.36 / 718.37 / 781.57; cost per m3: budget.idr_per_m3_held (1,599, 629, 1,009). Shares of the central total: revegetation 564.81 / 616.98 = 92 % (LiDAR), 334.45 / 487.58 = 69 % and IPG estimate 131.79 / 487.58 = 27 % (DeltaDTM), IPG estimate 597.92 / 718.37 = 83 % (DEMNAS). Kept blocks 3.51, 3.18, 5.06 billion Rp: budget.by_item.sekat_standard.cost_idr.
 
 ## Discrepancies (docs vs code; code taken as right) and contradictions
 

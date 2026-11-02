@@ -19,7 +19,7 @@ Table: Inputs of RE-PEAT Interventions. Source: interventions module method repo
 | Burnt area, peat depth | national layers clipped to the KHG (optional) | criteria of the segment need score |
 | Sub-KHG indicators | sub-KHG prioritisation | protected peat share, NDMI, burnt share, canal reach, distance to water, canal density |
 | Water balance map | neraca air | KHG deficit, monthly balance and SiTMAT stations for the report |
-| Unit prices | proposed defaults, with a register of sources | the budget |
+| Unit prices | the KLH cost standard (Perdirjen PPKL P.16/2022) and a register of sources | the budget |
 
 The data inputs are assembled automatically for each KHG. Every parameter that is a policy choice (weights, spacing, pump specifications, prices) starts empty, and no stage runs until its required values are set, either by the user or from a set of proposed defaults. Each value taken from the proposed defaults is listed in the plan's report, so a reviewer can see which choices still need agreement.
 
@@ -112,20 +112,25 @@ The water the kept blocks hold in a unit is the canal rise times a specific yiel
 
 ## 9.8 Budget and its sources
 
-The budget prices the quantities of each sub-KHG at low, central and high unit prices. All prices are proposed unit prices, to be verified, and should be replaced by the KLH cost standard for rewetting infrastructure once KLH provides it.
+The budget prices the quantities of each sub-KHG at low, central and high unit prices. Canal blocks and wells follow the KLH cost standard for wetting infrastructure (Perdirjen PPKL P.16/PPKL/PKEG/PKL.0/10/2022). For each item the low price is the self-managed (swakelola) price of the standard, the high price is the contractual price and the central price is their midpoint. The canal layer carries no width or depth, so each item takes one reference type from the standard. Revegetation of burnt land is not in the standard. Its price comes from published news and a village cost study, and its cost is reported as an additional estimate outside the cost standard, separately from the standard total. Canal closure is reported as canal length and is not priced.
 
-Table: Budget items, quantities and proposed unit prices. Source: interventions module code, proposed defaults and price register.
+Table: Budget items, quantities and unit prices. Source: KLH cost standard (Perdirjen PPKL P.16/2022), interventions module code, price register.
 
-| Item | Quantity | Unit price, low / central / high (Rp) |
-|---|---|---|
-| Standard block | kept blocks of stage 7 in the analysed sub-KHG; elsewhere, for a block treatment, the KLH IPG estimate of missing blocks from the sub-KHG prioritisation | 12 / 18 / 18 million per block |
-| Reinforced block | kept blocks on a slope of 5 % or more | 70 million per block |
-| Canal closure | canal density (primary and secondary) × peat area, for close-canal units | not priced |
-| Revegetation | area ever burnt, revegetation units | 8 / 12.1 / 15 million per ha |
-| Deep wells | area ever burnt ÷ area of one well (π × (200 m)², about 12.6 ha), revegetation and block-with-wells units | 3 / 8.5 / 9 million per well |
-| Pumps and fuel | pump units of stage 10; power × 12 h/day × design period × 0.3 L/kWh | 15.5 million per pump; diesel 23,554 to 24,886 per L |
+| Item | Quantity | Unit price, low / central / high (Rp) | Basis |
+|---|---|---|---|
+| Block, primary and secondary canals | kept blocks of stage 7 in the analysed sub-KHG; elsewhere, for a block treatment, the KLH IPG estimate of missing blocks from the sub-KHG prioritisation | 76.5 / 81.6 / 86.7 million per block | cost standard, three-layer wooden block with spillway, canals 9 to 11 m wide |
+| Block, tertiary canals | kept blocks on tertiary canals | 41.8 / 44.3 / 46.7 million per block | cost standard, two-layer wooden block with spillway, canals 5 to 7 m wide |
+| Reinforced block | kept blocks on a slope of 5 % or more | 27.1 / 30.8 / 34.5 million per block | cost standard, small concrete block with spillway, canals up to 3 m wide |
+| Deep wells | area ever burnt ÷ area of one well (π × (200 m)², about 12.6 ha), revegetation and block-with-wells units | 3.2 / 3.6 / 3.9 million per well | cost standard, simple PVC well of 20 m |
+| Canal closure | canal density (primary and secondary) × peat area, for close-canal units | not priced | length reported in km |
+| Revegetation | area ever burnt, revegetation units | 8 / 12.1 / 15 million per ha | outside the cost standard: news reports and a village cost study |
+| Pumps and fuel | pump units of stage 10; power × 12 h/day × design period × 0.3 L/kWh | 15.5 million per pump; diesel 23,554 to 24,886 per L | outside the cost standard: marketplace listing and the October 2026 industrial diesel reference |
 
-The prices come from news reports, a journal article, a marketplace listing and the October 2026 industrial diesel reference, found by web search on 27 October 2026. They are not adjusted for inflation. Each price is recorded in a price register with its source, link, date accessed and status. Of its 19 entries, 15 are marked to verify, 2 unconfirmed, 1 an assumption and 1 to obtain from KLH; none has yet been checked against its source page. No published price per km of canal backfilling was found, so canal closure is reported as length only.
+The standard prices a block by the width of the canal: a two-layer wooden block costs 14.4 to 16.6 million rupiah on canals up to 2.5 m wide, 21.1 to 23.8 million on canals of 2.5 to 3.5 m, and 41.8 to 46.7 million on canals of 5 to 7 m. The reference type for primary and secondary canals is the three-layer block for canals of 9 to 11 m. No source gives a price for a block on a primary canal, so the secondary-canal price is a lower bound there. The 2026 designs of the KLH peat directorate for Pelalawan use the contractual values: 86.7 million rupiah per block on secondary canals and 46.7 million on tertiary canals. The prices exclude the equipment sets, the construction safety plan and mobilisation that the standard lists separately. Its figures are estimates that local market prices may exceed.
+
+The prices outside the standard come from news reports, a journal article, a marketplace listing and the October 2026 industrial diesel reference, found by web search on 27 October 2026. All prices are in rupiah of their own year and are not adjusted for inflation. Each price is recorded in a price register with its source, link, date accessed and status. The register has 27 entries: 5 are figures read from the cost standard, 3 are programme documents of the KLH peat directorate used as cross-checks, 15 are news or listing prices marked to verify (none checked against its source page), 2 are unconfirmed, 1 is an assumption (litres of diesel per kWh) and 1 records the standard itself.
+
+The standard prices canal backfilling per fill segment of 50 to 300 m, from 70.9 million rupiah for a canal up to 10 m wide to 918 million for a canal up to 35 m wide, in protected and conservation areas. The analysis does not define the stretches to fill: the closure quantity is the length of every primary and secondary canal in a close-canal sub-KHG, so a price per km would treat all of it as one continuous fill. The length is therefore reported without a cost. The programme record of the peat directorate lists 143 fill points in 2017 and 2018, and its 2026 designs for Pelalawan and Kuburaya contain no backfilling.
 
 ## 9.9 Outputs
 
@@ -182,7 +187,7 @@ The guide places blocks only along the routes from river mouths to priority segm
 
 ## 9.12 Results at Sugihan-Lumpur by DEM
 
-At Sugihan-Lumpur (KHG 16.02.01) the plan keeps 39 to 62 blocks in the three selected sub-KHG, depending on the DTM, at a cost below 1.2 billion rupiah. These blocks hold under 7 % of the dry-season deficit, so most of the budget goes to other treatments, chiefly revegetation of burnt land.
+At Sugihan-Lumpur (KHG 16.02.01) the plan keeps 39 to 62 blocks in the three selected sub-KHG, depending on the DTM, at a cost of 3.2 to 5.1 billion rupiah. These blocks hold under 7 % of the dry-season deficit, so most of the budget lies outside them: revegetation of burnt land, an additional estimate outside the cost standard, and, on DEMNAS, the KLH estimate of missing blocks elsewhere in the KHG.
 
 Plans were made with each of the three DTM variants, using primary and secondary canals and the proposed defaults, including the 500 m minimum distance and the 100 m merge distance. All three are block-only because no river feature lies inside the analysis extent. The LiDAR variant at this KHG is the KLHK 25 m LiDAR DEM. DeltaDTM (30 m) and DEMNAS (8 m) are the smoothed, corrected surfaces from the DEM correction.
 
@@ -222,19 +227,20 @@ Table: Treatments per sub-KHG at Sugihan-Lumpur by DTM (proposed thresholds). So
 | Maintain and monitor | 0 | 0 | 1 |
 | Total sub-KHG | 29 | 29 | 27 |
 
-Table: Budget estimate at Sugihan-Lumpur by DTM, billion rupiah at proposed 2026 prices (low / central / high). Source: run reports and budget tables of the three plans.
+Table: Budget estimate at Sugihan-Lumpur by DTM, billion rupiah at 2026 prices (low / central / high). Source: run reports and budget tables of the three plans.
 
 | Item | LiDAR | DeltaDTM | DEMNAS |
 |---|---|---|---|
-| Kept blocks (number; cost) | 43; 0.52 / 0.77 / 0.77 | 39; 0.47 / 0.70 / 0.70 | 62; 0.74 / 1.12 / 1.12 |
-| KLH IPG estimate of blocks elsewhere (number; cost) | 350; 4.20 / 6.30 / 6.30 | 1,615; 19.38 / 29.07 / 29.07 | 7,327; 87.92 / 131.89 / 131.89 |
-| Revegetation (ha; cost) | 46,678; 373.4 / 564.8 / 700.2 | 27,641; 221.1 / 334.5 / 414.6 | 8,173; 65.4 / 98.9 / 122.6 |
-| Deep wells (number; cost) | 5,636; 16.9 / 47.9 / 50.7 | 5,089; 15.3 / 43.3 / 45.8 | 4,627; 13.9 / 39.3 / 41.6 |
+| Kept blocks (number; cost) | 43; 3.29 / 3.51 / 3.73 | 39; 2.98 / 3.18 / 3.38 | 62; 4.74 / 5.06 / 5.38 |
+| KLH IPG estimate of blocks elsewhere (number; cost) | 350; 26.77 / 28.56 / 30.35 | 1,615; 123.54 / 131.79 / 140.04 | 7,327; 560.48 / 597.92 / 635.35 |
+| Deep wells (number; cost) | 5,636; 17.97 / 20.10 / 22.23 | 5,089; 16.23 / 18.15 / 20.07 | 4,627; 14.76 / 16.50 / 18.25 |
+| Subtotal, cost standard | 48.04 / 52.17 / 56.31 | 142.75 / 153.12 / 163.50 | 579.98 / 619.48 / 658.98 |
+| Revegetation, outside the cost standard (ha; cost) | 46,678; 373.43 / 564.81 / 700.17 | 27,641; 221.13 / 334.45 / 414.61 | 8,173; 65.38 / 98.89 / 122.59 |
+| Total | 421.46 / 616.98 / 756.48 | 363.88 / 487.58 / 578.11 | 645.36 / 718.37 / 781.57 |
 | Canal closure (km, not priced) | 2,124.7 | 1,607.9 | 1,595.9 |
-| Total | 395.1 / 619.8 / 758.0 | 256.2 / 407.5 / 490.2 | 167.9 / 271.2 / 297.2 |
-| Kept-block cost per m³ held (Rp) | 353 | 139 | 223 |
+| Kept-block cost per m³ held (Rp) | 1,599 | 629 | 1,009 |
 
-The total depends mostly on which treatment the sub-KHG receive, and that in turn follows the DEM through the delineation. On LiDAR, revegetation of burnt land is 91 % of the central total. On DEMNAS the KLH IPG estimate of missing blocks outside the analysed sub-KHG is the largest item, at 131.89 billion rupiah for 7,327 blocks. Kept blocks themselves cost under 1.2 billion rupiah on every variant. The budget leaves out canal closure, which has no price, and every price is still to be verified.
+The total depends mostly on which treatment the sub-KHG receive, and that in turn follows the DEM through the delineation. On LiDAR, revegetation of burnt land, which lies outside the cost standard, is 92 % of the central total. On DeltaDTM it is 69 % and the KLH IPG estimate of missing blocks 27 %. On DEMNAS the KLH IPG estimate of missing blocks outside the analysed sub-KHG is the largest item, at 597.92 billion rupiah for 7,327 blocks, 83 % of the central total. Kept blocks themselves cost 3.2 to 5.1 billion rupiah on every variant. The budget leaves out canal closure, which is reported as length only, and pumps, gates, canal normalisation and maintenance.
 
 ## 9.13 Results across the first four KHG
 
@@ -251,6 +257,6 @@ The table covers the four KHG on which the method was developed; chapter 10 give
 - Specific yield 0.15, reach 600 m and the 1.0 m unblocked canal level set the volumes held, not the order of the blocks. The spread of held water toward burnt land is a fixed 600 m band, not modelled.
 - Many canals at Sugihan-Lumpur have no clear slope and no river connection (302 unresolved on LiDAR). Their flow direction is estimated by the fallback rule and may be wrong.
 - Pumping has not been applied to a real KHG. The pump values are engineering proposals.
-- Budget prices are proposed unit prices from web sources, to be verified. Canal closure has no price, and the KLH cost standard was not available.
+- Block and well prices follow the KLH cost standard, each from one reference type because canal width and depth are not in the data; a block on a wider canal costs more. Revegetation is priced from news reports and a village cost study, outside the standard, and has not been checked against its sources. Canal closure is reported as length and has no price. Gates (200 million rupiah each in the KLH peat directorate's 2026 designs), pumps at the directorate's price of 91.6 million rupiah, canal normalisation (about 40 million rupiah per km) and maintenance are not in the budget.
 - The selected sub-KHG come from a ranking with default weights proposed for agreement with KLH and the World Bank. The treatment thresholds are proposed policy values.
 - Block optimisation and the groundwater model (in development) depend on peat properties not measured at these KHG and were not used in the reported plans.
