@@ -1,0 +1,181 @@
+khg_code,khg,source,month,burned_ha,n
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,mcd64a1,2026-04,21.4,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,mcd64a1,2026-06,21.4,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,mcd64a1,2026-08,2771.0,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,vnp64a1,2026-08,2166.2,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,klhk_ba,2026,0.0,
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,viirs_hotspots,2026-06,,1.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,viirs_hotspots,2026-08,,102.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,viirs_hotspots,2026-09,,1153.0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,viirs_hotspots,2026-10,,1523.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,mcd64a1,2026-08,2094.5,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,vnp64a1,2026-07,64.1,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,vnp64a1,2026-08,2650.1,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,klhk_ba,2026,29.7,
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-03,,1.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-04,,2.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-06,,2.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-07,,18.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-08,,281.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-09,,371.0
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,viirs_hotspots,2026-10,,25.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,mcd64a1,2026-06,182.4,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,mcd64a1,2026-07,1368.0,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,mcd64a1,2026-08,2724.3,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,vnp64a1,2026-07,9815.8,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,vnp64a1,2026-08,6765.8,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,klhk_ba,2026,88.4,
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-01,,23.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-02,,6.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-03,,5.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-04,,1.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-06,,30.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-07,,395.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-08,,946.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-09,,475.0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,viirs_hotspots,2026-10,,467.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,mcd64a1,2026-07,1199.3,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,mcd64a1,2026-08,13696.4,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,vnp64a1,2026-07,1429.4,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,vnp64a1,2026-08,12631.1,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,klhk_ba,2026,0.6,
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-01,,1.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-03,,3.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-04,,2.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-06,,5.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-07,,277.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-08,,3086.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-09,,13182.0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,viirs_hotspots,2026-10,,7868.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,mcd64a1,2026-01,149.6,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,mcd64a1,2026-02,538.7,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,mcd64a1,2026-03,454.2,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,mcd64a1,2026-04,830.7,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,mcd64a1,2026-05,128.3,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,mcd64a1,2026-08,41.8,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,vnp64a1,2026-02,277.8,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,vnp64a1,2026-03,192.3,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,vnp64a1,2026-04,235.2,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,vnp64a1,2026-08,156.5,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,klhk_ba,2026,2037.0,
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-01,,75.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-02,,120.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-03,,216.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-04,,12.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-05,,5.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-06,,2.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-07,,6.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-08,,217.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-09,,80.0
+KHG.14.02-04-05.01,KHG Sungai Kampar - Sungai Gaung,viirs_hotspots,2026-10,,3.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,mcd64a1,2026-06,21.4,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,mcd64a1,2026-07,0.1,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,mcd64a1,2026-08,1303.4,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,vnp64a1,2026-07,21.4,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,vnp64a1,2026-08,1284.8,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,klhk_ba,2026,52.4,
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-01,,5.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-04,,2.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-06,,4.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-07,,19.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-08,,896.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-09,,2382.0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,viirs_hotspots,2026-10,,4021.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,mcd64a1,2026-02,406.2,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,mcd64a1,2026-03,1432.2,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,mcd64a1,2026-04,250.5,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,vnp64a1,2026-01,21.4,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,vnp64a1,2026-02,513.0,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,vnp64a1,2026-03,470.3,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,klhk_ba,2026,2560.9,
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-01,,24.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-02,,81.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-03,,256.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-04,,1.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-06,,3.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-07,,13.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-08,,117.0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,viirs_hotspots,2026-09,,35.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,mcd64a1,2026-02,85.5,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,klhk_ba,2026,0.0,
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-02,,1.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-03,,1.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-04,,1.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-07,,3.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-08,,43.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-09,,80.0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,viirs_hotspots,2026-10,,3.0
+KHG.14.03.02,KHG Pulau Bengkalis,mcd64a1,2026-01,21.4,
+KHG.14.03.02,KHG Pulau Bengkalis,mcd64a1,2026-02,1169.8,
+KHG.14.03.02,KHG Pulau Bengkalis,mcd64a1,2026-03,1989.9,
+KHG.14.03.02,KHG Pulau Bengkalis,mcd64a1,2026-04,2503.3,
+KHG.14.03.02,KHG Pulau Bengkalis,mcd64a1,2026-08,21.4,
+KHG.14.03.02,KHG Pulau Bengkalis,vnp64a1,2026-02,1279.4,
+KHG.14.03.02,KHG Pulau Bengkalis,vnp64a1,2026-03,1604.8,
+KHG.14.03.02,KHG Pulau Bengkalis,vnp64a1,2026-04,941.4,
+KHG.14.03.02,KHG Pulau Bengkalis,klhk_ba,2026,5385.7,
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-02,,138.0
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-03,,141.0
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-04,,324.0
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-06,,1.0
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-08,,1.0
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-09,,6.0
+KHG.14.03.02,KHG Pulau Bengkalis,viirs_hotspots,2026-10,,1.0
+KHG.14.10.01,KHG Pulau Padang,mcd64a1,2026-01,21.4,
+KHG.14.10.01,KHG Pulau Padang,mcd64a1,2026-02,42.8,
+KHG.14.10.01,KHG Pulau Padang,mcd64a1,2026-04,85.6,
+KHG.14.10.01,KHG Pulau Padang,vnp64a1,2026-03,42.8,
+KHG.14.10.01,KHG Pulau Padang,klhk_ba,2026,69.9,
+KHG.14.10.01,KHG Pulau Padang,viirs_hotspots,2026-02,,5.0
+KHG.14.10.01,KHG Pulau Padang,viirs_hotspots,2026-09,,19.0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,vnp64a1,2026-08,13.5,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,klhk_ba,2026,45.4,
+KHG.14.10.03,KHG Pulau Tebing Tinggi,viirs_hotspots,2026-08,,5.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,mcd64a1,2026-02,1260.9,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,mcd64a1,2026-03,1901.9,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,mcd64a1,2026-04,277.8,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,mcd64a1,2026-07,1111.3,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,mcd64a1,2026-08,277.8,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,vnp64a1,2026-01,918.9,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,vnp64a1,2026-02,854.8,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,vnp64a1,2026-03,1431.8,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,vnp64a1,2026-04,106.9,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,vnp64a1,2026-07,1987.4,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,vnp64a1,2026-08,1110.7,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,klhk_ba,2026,6083.6,
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-01,,202.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-02,,136.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-03,,397.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-05,,1.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-06,,7.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-07,,339.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-08,,1200.0
+KHG.61.12-71.01,KHG Sungai Pungurbesar - Sungai Kapuas,viirs_hotspots,2026-09,,108.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,mcd64a1,2026-02,106.8,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,mcd64a1,2026-08,2451.2,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,vnp64a1,2026-08,3816.5,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,klhk_ba,2026,9.4,
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-02,,1.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-03,,6.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-04,,2.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-05,,2.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-08,,79.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-09,,1320.0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,viirs_hotspots,2026-10,,1265.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,mcd64a1,2026-02,213.6,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,mcd64a1,2026-03,64.1,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,mcd64a1,2026-07,85.9,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,mcd64a1,2026-08,3270.1,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,vnp64a1,2026-03,21.4,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,vnp64a1,2026-04,21.4,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,vnp64a1,2026-07,85.4,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,vnp64a1,2026-08,2494.7,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,klhk_ba,2026,0.0,
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-02,,1.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-03,,2.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-05,,2.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-06,,5.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-07,,6.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-08,,231.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-09,,1134.0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,viirs_hotspots,2026-10,,1471.0
