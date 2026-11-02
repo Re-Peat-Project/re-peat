@@ -1,0 +1,12 @@
+{
+ "fingerprint": "775e901e4e0d6134",
+ "khg_id": "KHG.61.02-08.01",
+ "cell_m": 200.0,
+ "cells": 9347,
+ "hotspots_on_peat": 7072,
+ "hotspots_on_cells": 7045,
+ "licence_polygons": 3,
+ "road_vertices": 4166,
+ "dem": "deltadtm",
+ "window_last_day": "2026-10-31"
+}

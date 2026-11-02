@@ -1,0 +1,12 @@
+{
+ "fingerprint": "34b7d6539b288f11",
+ "khg_id": "KHG.15-16.01",
+ "cell_m": 200.0,
+ "cells": 35797,
+ "hotspots_on_peat": 14735,
+ "hotspots_on_cells": 14596,
+ "licence_polygons": 5,
+ "road_vertices": 2593,
+ "dem": "lidar_muba25",
+ "window_last_day": "2026-10-31"
+}
