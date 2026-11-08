@@ -1,8 +1,8 @@
-# commit of each module repository (tools/khg_pipeline.py setup --lock), 2026-10-28
+# commit of each module repository (tools/khg_pipeline.py setup --lock), 2026-11-08
 # setup --clone checks these out; setup reports repositories on another commit
-repeat-common 1f7dbac192f84fed15420d736a0df64950a1300a
-repeat-dem 910eb59cbb78ec89946e48f8fbe50b1faa86db22
-repeat-delineation fc67dafdf5bdfbef10a6fd1f0167dfc8cff3a11b
-repeat-neraca ed46a8bde3fb42ee6e1b81227f1ebc272c9736c6
-repeat-prioritisation 0e4d31cd2f120badb08c6b198052e14558831b3d
-repeat-pump e771212ab92462ed08b99b8cc1f331a655d99bca
+repeat-common ba3eda8e52030623f4b2a0b128c3cffc4353e8e6
+repeat-dem 17592b36af55b03daf06f7a8abf5db3033bb0876
+repeat-delineation d5e7b54116a8118419519a6f5476984dae22f184
+repeat-neraca a7e694d3226d5ac18ee56bb56f8f46c9978ea0c3
+repeat-prioritisation cf9b1045a82e51efd451a48a7726a73fdb087333
+repeat-pump 9c68bf92ee1dc45f27fdca05ffea4540d8116826

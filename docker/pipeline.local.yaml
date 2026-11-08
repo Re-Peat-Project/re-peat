@@ -1,0 +1,17 @@
+# pipeline.local.yaml of the container (docker/Dockerfile copies it next to pipeline.yaml). Linux interpreters and the mount
+# points of docker/README.md; everything else comes from pipeline.yaml.
+workspace: /opt/repeat
+data: /data                         # REPEAT_DATA (read only)
+khg_root: /khg                      # REPEAT_KHG, the per-KHG work folders
+
+python:
+  main: /opt/repeat/.venv/bin/python
+  dem: /opt/repeat/repeat-dem/.venv/bin/python
+  delineation: /opt/repeat/repeat-delineation/.venv/bin/python
+  pump: /opt/repeat/repeat-pump/.venv/bin/python
+  qgis: ""                          # no QGIS in the image: the print layouts are skipped
+
+environment:
+  EE_PROJECT: ${EE_PROJECT}         # from `docker run -e EE_PROJECT=...`
+  SITMAT_PROCESSED: /sitmat         # the processed SiTMAT folder (repeat-sitmat/sitmat_out/processed)
+  REPEAT_WORK: /work                # the national profile's outputs (re-peat/reports on the reference machine)
