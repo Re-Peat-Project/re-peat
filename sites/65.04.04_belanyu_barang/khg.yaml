@@ -1,0 +1,46 @@
+# KHG Sungai Belanyu - Sungai Barang (KHG.65.04.04): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 65.04.04
+  name: KHG Sungai Belanyu - Sungai Barang
+  folder: 65.04.04_belanyu_barang
+  island: PULAU KALIMANTAN
+  province: Kalimantan Utara
+  kabupaten: Tanatidung
+  role: national
+  tz_hours: 8
+  utm_epsg: 32650
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.0
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    planned: true
+    cover_pct: 97.0
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: PEATGRIDS (low confidence)
+  scale: 0.01
+  confidence: low
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'B2: peat depth from PEATGRIDS only'
+  area_ha: 1634
+  deltadtm_share: 0.97
+  lidar_share: 0.0
+  canal_km_total: 17.4
+  blocks_brgm: 0
+  licence_share_managed: 0.409
+  stations_community: 0
+  stations_concession: 0
+  dry_window: 01-01 to 05-20
+  dry_shortfall_mm_2018_2025: -732

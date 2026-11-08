@@ -1,0 +1,5 @@
+# KHG Pulau Padang (KHG.14.10.01): hand-written exceptions to the generated khg.yaml and to pipeline.yaml (khgconf.load merges them).
+# Each entry: what, why, when. `init` never rewrites this file.
+dems:
+  lidar:
+    skip: "the LiDAR is a 2 m DTM; left out by decision 2026-10-27"   # was NO_LIDAR in tools/pipeline/khgconf.py until 2026-11-08

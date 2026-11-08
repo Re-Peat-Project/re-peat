@@ -1,9 +1,15 @@
-"""Per-KHG settings of the full chain: re-peat/sites/<folder>/khg.yaml.
+"""Per-KHG settings of the full chain, in three layers:
 
-`init` writes one per KHG from what is found for it: the registry entry, the DEM clips of 01_dem/inputs (manifest.csv) with their
-coverage, and the peat-depth raster that covers the KHG. Paths are written with ${REPEAT_DATA} / ${REPEAT_KHG}, so the file works
-on any machine whose data folder has the same layout. An existing khg.yaml is kept unless overwrite is asked, so edits stay;
-`overrides` takes any pipeline.yaml step key for this KHG only.
+  re-peat/pipeline.yaml                 the national template: every setting shared by all KHG
+  re-peat/sites/<folder>/khg.yaml       generated facts of one KHG, never edited by hand (init rewrites it): registry entry, time
+                                        zone and UTM zone, the DEM clips of 01_dem/inputs (manifest.csv) or, before they exist, the
+                                        planned variants from sites/khg_availability.csv, the peat-depth source and the facts of the
+                                        availability table (tools/khg_availability.py, tools/khg_availability_ee.py)
+  re-peat/sites/<folder>/overrides.yaml hand-written exceptions only, each with a reason and a date; init never touches it.
+                                        Top-level keys are merged into khg.yaml (e.g. dems.lidar.skip), except `steps`, which takes
+                                        any pipeline.yaml step key for this KHG (e.g. steps: {delineation: {min_area_km2: 50}})
+Paths are written with ${REPEAT_DATA} / ${REPEAT_KHG}, so the files work on any machine whose data folder has the same layout.
+A legacy `overrides:` key inside khg.yaml is still read as step overrides.
 """
 from __future__ import annotations
 
@@ -16,7 +22,7 @@ import yaml
 
 from .config import HUB, Settings, expand
 
-NO_LIDAR = {"14.10.01": "the LiDAR is a 2 m DTM; left out by decision 2026-10-27"}
+AVAILABILITY = HUB / "sites" / "khg_availability.csv"
 
 
 def K():
@@ -54,14 +60,42 @@ def _manifest(folder: Path) -> list[dict]:
     return list(csv.DictReader(open(f, encoding="utf-8"))) if f.is_file() else []
 
 
+def _availability(code: str) -> dict:
+    """The KHG's row of sites/khg_availability.csv (empty if the table or the row is missing)."""
+    if not AVAILABILITY.is_file():
+        return {}
+    for r in csv.DictReader(open(AVAILABILITY, encoding="utf-8")):
+        if r["code"] == code:
+            return r
+    return {}
+
+
+def _f(r: dict, k: str, nd: int = 3):
+    try:
+        v = round(float(r[k]), nd)
+        return int(v) if nd == 0 else v
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def _planned_dem(av: dict, dem: str, min_cover: float) -> dict:
+    """Before the dem_inputs step: whether the variant should run, from the availability table."""
+    share = {"deltadtm": _f(av, "deltadtm_share"), "lidar": _f(av, "lidar_share"), "demnas": 1.0}.get(dem)
+    if share is None:
+        return {"skip": "01_dem/inputs has no clips yet (run the dem_inputs step)"}
+    d = {"planned": True, "cover_pct": round(100 * share, 1)}
+    if 100 * share < min_cover:
+        d["skip"] = (f"covers {100 * share:.1f} % of the KHG (< {min_cover:g} %, sites/khg_availability.csv)" if dem != "lidar" or share > 0
+                     else "no LiDAR in the data folder covers the KHG")
+    return d
+
+
 def _dem(folder: Path, code: str, dem: str, min_cover: float) -> dict:
     rows = _manifest(folder)
-    if dem == "lidar" and code in NO_LIDAR:
-        return {"skip": NO_LIDAR[code]}
     rows = [r for r in rows if (r["product"].startswith("lidar") if dem == "lidar" else r["product"] == dem) and r.get("file")]
     if not rows:
         if not _manifest(folder):
-            return {"skip": "01_dem/inputs has no clips yet (run the dem_inputs step)"}
+            return _planned_dem(_availability(code), dem, min_cover)
         return {"skip": "no LiDAR in the data folder covers the KHG" if dem == "lidar" else f"no {dem} clip (see 01_dem/inputs/manifest.csv)"}
     best = max(rows, key=lambda r: float(r.get("cover_pct") or 0))
     cov = round(float(best.get("cover_pct") or 0), 1)
@@ -117,32 +151,67 @@ def _peat_depth(s: Settings, geom) -> dict | None:
     return {"path": _templated(best, s), "scale": 0.01, "valid_share": round(share, 3)}
 
 
+TZ_HOURS = (("maluku", 9), ("papua", 9), ("kalimantan selatan", 8), ("kalimantan timur", 8), ("kalimantan utara", 8),
+            ("sulawesi", 8), ("gorontalo", 8), ("bali", 8), ("nusa tenggara", 8))
+
+
+def tz_hours(province: str) -> int:
+    """UTC offset of the province (the first one named): WIT 9, WITA 8, else WIB 7."""
+    import re
+    p = re.split(r"[,;/]", str(province).lower().strip(' "'))[0].strip()
+    return next((h for key, h in TZ_HOURS if p.startswith(key)), 7)
+
+
+def _peat_from_availability(s: Settings, av: dict, geom) -> dict | None:
+    """The peat-depth source of the availability table; the modelled raster keeps its path and its valid share."""
+    src = av.get("peat_depth_source")
+    if not src:
+        return _peat_depth(s, geom)
+    if src == "modelled raster":
+        return {"source": src, "path": "${REPEAT_DATA}/" + av["peat_model_file"], "scale": 0.01, "valid_share": _f(av, "peat_model_share")}
+    share = {"FEG 50k classes": "feg50k_share", "BBSDLP classes": "bbsdlp_share"}.get(src)
+    return {"source": src, "scale": 0.01, **({"cover_share": _f(av, share)} if share else {"confidence": "low"})}
+
+
 def build(s: Settings, code: str) -> dict:
     k = K()
     r = k.lookup(code)
     folder = k.folder(code)
     sel = {row["khg_name_in_gpkg"]: row for row in csv.DictReader(open(HUB / s["khg_list"], encoding="utf-8"))}.get(r["name"], {})
-    geom = _khg_geometry(s, code)
+    av = _availability(r["khg_code"][4:])
+    geom = None if av else _khg_geometry(s, code)
+    prov = r.get("province") or sel.get("province", "")
+    facts = {}
+    if av:
+        facts = {"run_class": av.get("run_class"), "area_ha": _f(av, "area_ha", 0), "deltadtm_share": _f(av, "deltadtm_share"),
+                 "lidar_share": _f(av, "lidar_share"), "canal_km_total": _f(av, "canal_km_total", 1), "blocks_brgm": _f(av, "blocks_brgm", 0),
+                 "licence_share_managed": _f(av, "licence_share_managed"),
+                 "stations_community": _f(av, "stations_community", 0), "stations_concession": _f(av, "stations_concession", 0),
+                 "dry_window": f"{av.get('dry_first')} to {av.get('dry_last')}" if av.get("dry_first") else None,
+                 "dry_shortfall_mm_2018_2025": _f(av, "dry_shortfall_mm", 0)}
     return {
-        "khg": {"code": r["khg_code"][4:], "name": r["name"], "folder": folder.name, "province": sel.get("province", ""),
-                "role": sel.get("role", "extra")},
+        "khg": {"code": r["khg_code"][4:], "name": r["name"], "folder": folder.name, "island": r.get("island", ""), "province": prov,
+                "kabupaten": r.get("kabupaten", ""), "role": sel.get("role", "national"), "tz_hours": tz_hours(prov),
+                **({"utm_epsg": int(float(av["utm_epsg"]))} if av.get("utm_epsg") else {})},
         "dems": {d: _dem(folder, r["khg_code"][4:], d, float(s["dems"]["min_cover_pct"])) for d in s["dems"]["variants"]},
-        "peat_depth": _peat_depth(s, geom),
+        "peat_depth": _peat_from_availability(s, av, geom),
         "canals": {"class_field": "KET_KANAL"},
-        "overrides": {},
+        "facts": facts,
     }
 
 
-HEADER = """# {name} (KHG.{code}): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
-# Written by `python tools/khg_pipeline.py init` on {date} from the data found then (01_dem/inputs/manifest.csv, the peat-depth
-# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
-#   dems.<dem>.skip      the variant does not run, with the reason
-#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
-#   overrides            any pipeline.yaml step key for this KHG only, e.g. {{delineation: {{min_area_km2: 50}}}}
+HEADER = """# {name} (KHG.{code}): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on {date} from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
 """
 
 
 def write(s: Settings, code: str, overwrite: bool = False) -> tuple[Path, bool]:
+    """khg.yaml from the data; an existing one is rewritten only with overwrite (it holds no hand edits since overrides.yaml)."""
     p = path_of(code)
     if p.exists() and not overwrite:
         return p, False
@@ -158,8 +227,15 @@ def load(s: Settings, code: str) -> dict:
     p = path_of(code)
     if not p.exists():
         raise SystemExit(f"{p} is missing; run: python tools/khg_pipeline.py init --khg {code}")
-    c = expand(yaml.safe_load(p.read_text(encoding="utf-8")), {"REPEAT_DATA": str(s.data), "REPEAT_KHG": str(s.khg_root)})
+    env = {"REPEAT_DATA": str(s.data), "REPEAT_KHG": str(s.khg_root)}
+    c = expand(yaml.safe_load(p.read_text(encoding="utf-8")), env)
     from .config import _merge
-    c["settings"] = {k: _merge(s.get(k) or {}, (c.get("overrides") or {}).get(k) or {}) if isinstance(s.get(k), dict) else s.get(k)
+    ov_file = p.with_name("overrides.yaml")
+    ov = expand(yaml.safe_load(ov_file.read_text(encoding="utf-8")) or {}, env) if ov_file.is_file() else {}
+    step_ov = _merge(c.get("overrides") or {}, ov.get("steps") or {})          # legacy khg.yaml key, then overrides.yaml
+    for key, val in ov.items():
+        if key != "steps":
+            c[key] = _merge(c.get(key) or {}, val) if isinstance(val, dict) and isinstance(c.get(key), dict) else val
+    c["settings"] = {k: _merge(s.get(k) or {}, step_ov.get(k) or {}) if isinstance(s.get(k), dict) else s.get(k)
                      for k in ("dem_correction", "delineation", "neraca", "prioritisation", "pump")}
     return c

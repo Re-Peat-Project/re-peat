@@ -1,15 +1,20 @@
-# KHG Sungai Sugihan - Sungai Lumpur (KHG.16.02.01): settings of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
-# Written by `python tools/khg_pipeline.py init` on 2026-10-27 from the data found then (01_dem/inputs/manifest.csv, the peat-depth
-# rasters in the data folder). Edit freely: `init` keeps this file unless --overwrite is given.
-#   dems.<dem>.skip      the variant does not run, with the reason
-#   peat_depth: null     no peat-depth raster covers the KHG; the criterion gets weight 0
-#   overrides            any pipeline.yaml step key for this KHG only, e.g. {delineation: {min_area_km2: 50}}
+# KHG Sungai Sugihan - Sungai Lumpur (KHG.16.02.01): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
 khg:
   code: 16.02.01
   name: KHG Sungai Sugihan - Sungai Lumpur
   folder: 16.02.01_sugihan_lumpur
+  island: PULAU SUMATERA
   province: Sumatera Selatan
+  kabupaten: Ogan Komering Ilir
   role: reserve
+  tz_hours: 7
+  utm_epsg: 32748
 dems:
   lidar:
     product: lidar_oki25
@@ -49,9 +54,21 @@ dems:
     - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-42_v1.0.tif
     - ${REPEAT_DATA}/dem/demnas_tiles/DEMNAS_1113-51_v1.0.tif
 peat_depth:
+  source: modelled raster
   path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/03_Sumatera Selatan/Peat_depth_model_KHG_Sungai_Sugihan_Sungai_Lumpur.img
   scale: 0.01
   valid_share: 0.747
 canals:
   class_field: KET_KANAL
-overrides: {}
+facts:
+  run_class: 'A: modelled peat depth and mapped canals'
+  area_ha: 635147.0
+  deltadtm_share: 0.984
+  lidar_share: 1.0
+  canal_km_total: 14228.9
+  blocks_brgm: 2847.0
+  licence_share_managed: 0.77
+  stations_community: 0.0
+  stations_concession: 54.0
+  dry_window: 06-01 to 10-20
+  dry_shortfall_mm_2018_2025: -213.0

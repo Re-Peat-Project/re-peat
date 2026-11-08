@@ -1,0 +1,13 @@
+# Build context of docker/Dockerfile is the re-peat folder; the image needs tools/, pipeline.yaml, sites/, env/ and docker/.
+.git
+**/__pycache__
+**/*.egg-info
+.pytest_cache
+reports
+docs
+data
+_out
+*.pdf
+*.docx
+*.start
+pipeline.local.yaml

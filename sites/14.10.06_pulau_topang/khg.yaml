@@ -1,0 +1,46 @@
+# KHG Pulau Topang (KHG.14.10.06): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 14.10.06
+  name: KHG Pulau Topang
+  folder: 14.10.06_pulau_topang
+  island: PULAU SUMATERA
+  province: Riau
+  kabupaten: Kepulauan Meranti
+  role: national
+  tz_hours: 7
+  utm_epsg: 32648
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.0
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    planned: true
+    cover_pct: 97.3
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: FEG 50k classes
+  scale: 0.01
+  cover_share: 0.976
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'B1: peat depth from 1:50k classes'
+  area_ha: 2914
+  deltadtm_share: 0.973
+  lidar_share: 0.0
+  canal_km_total: 28.6
+  blocks_brgm: 0
+  licence_share_managed: 0.0
+  stations_community: 0
+  stations_concession: 0
+  dry_window: 05-21 to 10-10
+  dry_shortfall_mm_2018_2025: -324

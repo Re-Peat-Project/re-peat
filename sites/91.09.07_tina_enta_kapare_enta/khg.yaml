@@ -1,0 +1,46 @@
+# KHG Sungai Tina Enta - Sungai Kapare Enta (KHG.91.09.07): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 91.09.07
+  name: KHG Sungai Tina Enta - Sungai Kapare Enta
+  folder: 91.09.07_tina_enta_kapare_enta
+  island: PULAU PAPUA
+  province: Papua
+  kabupaten: Mimika
+  role: national
+  tz_hours: 9
+  utm_epsg: 32753
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.0
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    planned: true
+    cover_pct: 98.8
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: PEATGRIDS (low confidence)
+  scale: 0.01
+  confidence: low
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'C: no mapped canals'
+  area_ha: 4779
+  deltadtm_share: 0.988
+  lidar_share: 0.0
+  canal_km_total: 0.0
+  blocks_brgm: 0
+  licence_share_managed: 0.0
+  stations_community: 0
+  stations_concession: 0
+  dry_window: 10-01 to 02-20
+  dry_shortfall_mm_2018_2025: -744

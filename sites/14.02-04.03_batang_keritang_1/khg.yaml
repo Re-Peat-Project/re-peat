@@ -1,0 +1,46 @@
+# KHG Sungai Batang - Sungai Keritang 1 (KHG.14.02-04.03): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 14.02-04.03
+  name: KHG Sungai Batang - Sungai Keritang 1
+  folder: 14.02-04.03_batang_keritang_1
+  island: PULAU SUMATERA
+  province: Riau
+  kabupaten: Indragiri Hilir
+  role: national
+  tz_hours: 7
+  utm_epsg: 32748
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.1
+    skip: covers 0.1 % of the KHG (< 90 %, sites/khg_availability.csv)
+  deltadtm:
+    planned: true
+    cover_pct: 99.8
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: PEATGRIDS (low confidence)
+  scale: 0.01
+  confidence: low
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'B2: peat depth from PEATGRIDS only'
+  area_ha: 47432
+  deltadtm_share: 0.998
+  lidar_share: 0.001
+  canal_km_total: 834.3
+  blocks_brgm: 0
+  licence_share_managed: 0.163
+  stations_community: 0
+  stations_concession: 0
+  dry_window: 05-11 to 09-end
+  dry_shortfall_mm_2018_2025: -257

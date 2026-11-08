@@ -104,6 +104,9 @@ def cmd_data(a) -> None:
 
 
 def cmd_init(a) -> None:
+    if a.all:
+        import csv
+        a.khg = [r["khg_code"][4:] for r in csv.DictReader(open(config.HUB / "sites" / "khg_registry.csv", encoding="utf-8"))]
     for code in codes(a, init=True):
         p, written = khgconf.write(S, code, a.overwrite)
         print(f"{'wrote' if written else 'kept '} {p.relative_to(config.HUB)}")
@@ -267,7 +270,8 @@ def main():
     p.add_argument("--write", action="store_true", help="write sites/data_manifest.csv (default: check the data folder against it)")
     p = sub.add_parser("init")
     p.add_argument("--khg", nargs="*")
-    p.add_argument("--overwrite", action="store_true")
+    p.add_argument("--all", action="store_true", help="every KHG of sites/khg_registry.csv (the national run)")
+    p.add_argument("--overwrite", action="store_true", help="rewrite existing khg.yaml (safe: hand-written exceptions live in overrides.yaml)")
     for name in ("status", "plan", "run"):
         p = sub.add_parser(name)
         p.add_argument("--khg", nargs="*")

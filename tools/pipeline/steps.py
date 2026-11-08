@@ -179,7 +179,7 @@ def run_localize(code: str) -> None:
     kc = khgconf.load(s, code)
     c = Ctx(s, kc)
     sit = s.get("environment", {}).get("SITMAT_PROCESSED")
-    out = localize.localize(s.data, c.kf, (kc.get("peat_depth") or {}).get("path"), c.icesat2(), Path(sit) if sit else None)
+    out = localize.localize(s.data, c.kf, kc.get("peat_depth"), c.icesat2(), Path(sit) if sit else None)
     print(f"wrote {out}")
 
 
@@ -274,7 +274,7 @@ class Deficit(Step):
                 "units": c.t(c0.sd("02_delineation") / "subkhg_units.gpkg"), "inputs_dir": f"${{REPEAT_KHG}}/{f}/03_neraca/inputs",
                 "forcing_window": "calibration", "evaporation": "E_era5_mm",
                 "forcing_direct": {"cache_dir": f"${{REPEAT_KHG}}/{f}/cache/{c.code}/neraca", "start": n["window"][0], "end": n["window"][1],
-                                   "tz_hours": TZ.get(c.kc["khg"].get("province"), 7)},
+                                   "tz_hours": c.kc["khg"].get("tz_hours") or TZ.get(c.kc["khg"].get("province"), 7)},
                 "stations": {"tma": {"path": c.sitmat()}, "start": n["window"][0], "end": n["window"][1]}}
         return _write(c.site / "neraca.yaml", GEN.format(f=f) + f"# {c.name}: KHG deficit (SiTMAT stations, ERA5); set up on the {d0} variant's units.\n", body)
 

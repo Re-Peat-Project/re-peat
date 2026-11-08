@@ -1,0 +1,46 @@
+# KHG Sungai Siak - Sungai Kampar (KHG.14.05-08.01): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 14.05-08.01
+  name: KHG Sungai Siak - Sungai Kampar
+  folder: 14.05-08.01_siak_kampar
+  island: PULAU SUMATERA
+  province: Riau
+  kabupaten: Pelalawan, Siak
+  role: national
+  tz_hours: 7
+  utm_epsg: 32648
+dems:
+  lidar:
+    planned: true
+    cover_pct: 100.0
+  deltadtm:
+    planned: true
+    cover_pct: 99.2
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: modelled raster
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_clip_Sungai_Siak_Sungai_Kampar.img
+  scale: 0.01
+  valid_share: 0.926
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'A: modelled peat depth and mapped canals'
+  area_ha: 722848
+  deltadtm_share: 0.992
+  lidar_share: 1.0
+  canal_km_total: 10224.2
+  blocks_brgm: 2026
+  licence_share_managed: 0.739
+  stations_community: 2
+  stations_concession: 63
+  dry_window: 05-11 to 09-end
+  dry_shortfall_mm_2018_2025: -207

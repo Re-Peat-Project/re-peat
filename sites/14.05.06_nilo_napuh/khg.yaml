@@ -1,0 +1,47 @@
+# KHG Sungai Nilo - Sungai Napuh (KHG.14.05.06): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 14.05.06
+  name: KHG Sungai Nilo - Sungai Napuh
+  folder: 14.05.06_nilo_napuh
+  island: PULAU SUMATERA
+  province: Riau
+  kabupaten: Pelalawan
+  role: national
+  tz_hours: 7
+  utm_epsg: 32748
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.0
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    planned: true
+    cover_pct: 100.0
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: modelled raster
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_clip_Sungai_Nilo_Sungai_Napuh.img
+  scale: 0.01
+  valid_share: 0.751
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'A: modelled peat depth and mapped canals'
+  area_ha: 25341
+  deltadtm_share: 1.0
+  lidar_share: 0.0
+  canal_km_total: 881.0
+  blocks_brgm: 2829
+  licence_share_managed: 0.906
+  stations_community: 1
+  stations_concession: 12
+  dry_window: 05-11 to 09-end
+  dry_shortfall_mm_2018_2025: -269

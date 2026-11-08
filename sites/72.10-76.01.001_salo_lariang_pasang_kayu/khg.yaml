@@ -1,0 +1,46 @@
+# KHG Sungai Salo Lariang - Sungai Pasang Kayu (KHG.72.10-76.01.001): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 72.10-76.01.001
+  name: KHG Sungai Salo Lariang - Sungai Pasang Kayu
+  folder: 72.10-76.01.001_salo_lariang_pasang_kayu
+  island: PULAU SULAWESI
+  province: Sulawesi Barat, Sulawesi Tengah
+  kabupaten: Mamuju Utara, Sigi
+  role: national
+  tz_hours: 8
+  utm_epsg: 32750
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.0
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    planned: true
+    cover_pct: 99.4
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: PEATGRIDS (low confidence)
+  scale: 0.01
+  confidence: low
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'B2: peat depth from PEATGRIDS only'
+  area_ha: 19254
+  deltadtm_share: 0.994
+  lidar_share: 0.0
+  canal_km_total: 343.4
+  blocks_brgm: 49
+  licence_share_managed: 0.415
+  stations_community: 0
+  stations_concession: 2
+  dry_window: 07-11 to 11-end
+  dry_shortfall_mm_2018_2025: -114

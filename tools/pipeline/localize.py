@@ -8,7 +8,9 @@ Written by the `local_inputs` step (tools/khg_pipeline.py), into <khg>/00_inputs
                          KLH hotspots (every monthly layer), canals, existing infrastructure, target villages, the national peat-depth
                          polygons, the DPG village list, and the peat-extent rasters (GFW composite, Global Peatland Map)
     feg_protected.gpkg   the peat ecosystem function (FEG 2017) polygons, for the protected share
-    peat_depth.tif       the KHG's peat-depth raster (the one khg.yaml names), window on its own grid, nothing resampled
+    peat_depth.tif       the KHG's peat depth in cm from the source khg.yaml names (peat_depth.source; tools/pipeline/peat_depth.py):
+                         a modelled raster as a window on its own grid, KLHK FEG 1:50k or BBSDLP classes rasterised at 30 m, or
+                         PEATGRIDS from Earth Engine
     sitmat/              the SiTMAT stations inside the KHG plus BUFFER_M and their daily readings, same files as
                          repeat-sitmat/sitmat_out/processed (stations.csv, stations_geo.csv, daily_long.csv)
     icesat2_atl08.gpkg   the ICESat-2 ground points of the KHG (copied from the data folder; the icesat2 step fetches them first)
@@ -117,7 +119,7 @@ def clip_sitmat(src: Path, dst: Path, area) -> int:
     return len(keep)
 
 
-def localize(data: Path, kf: Path, peat_depth: str | None, icesat2: Path | None, sitmat: Path | None) -> Path:
+def localize(data: Path, kf: Path, peat: dict | None, icesat2: Path | None, sitmat: Path | None) -> Path:
     """Write <kf>/00_inputs/{national, feg_protected.gpkg, peat_depth.tif, sitmat, icesat2_atl08.gpkg, local_manifest.csv}."""
     inp = kf / "00_inputs"
     area = _area(inp / "khg.gpkg")
@@ -142,10 +144,10 @@ def localize(data: Path, kf: Path, peat_depth: str | None, icesat2: Path | None,
             note(inp / "national" / name, name, f"peat {key} raster, window", f"{w}x{h}")
     if (data / FEG).exists():
         note(inp / "feg_protected.gpkg", FEG, "peat ecosystem function (protected share)", clip_vector(data / FEG, inp / "feg_protected.gpkg", area))
-    if peat_depth and Path(peat_depth).exists():
-        w, h = clip_raster(Path(peat_depth), inp / "peat_depth.tif", area)
-        note(inp / "peat_depth.tif", str(Path(peat_depth).relative_to(data)).replace("\\", "/") if str(peat_depth).startswith(str(data)) else peat_depth,
-             "peat depth raster of the KHG, window", f"{w}x{h}")
+    if peat and (peat.get("source") or (peat.get("path") and Path(peat["path"]).exists())):
+        from . import peat_depth
+        src, size = peat_depth.build(data, peat, area, inp / "peat_depth.tif", clip_raster)
+        note(inp / "peat_depth.tif", src, f"peat depth of the KHG (cm), source: {peat.get('source') or 'modelled raster'}", size)
     if sitmat and sitmat.is_dir():
         note(inp / "sitmat" / "stations.csv", "SiTMAT processed (repeat-sitmat)", "SiTMAT stations in the KHG", clip_sitmat(sitmat, inp / "sitmat", area))
     if icesat2 and icesat2.exists():

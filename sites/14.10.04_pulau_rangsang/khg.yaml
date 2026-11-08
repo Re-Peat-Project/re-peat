@@ -1,0 +1,47 @@
+# KHG Pulau Rangsang (KHG.14.10.04): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
+# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
+#   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
+#   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
+#                        00_inputs/peat_depth.tif from it (tools/pipeline/peat_depth.py)
+#   facts                from the availability table, for planning and reports; no step reads them
+khg:
+  code: 14.10.04
+  name: KHG Pulau Rangsang
+  folder: 14.10.04_pulau_rangsang
+  island: PULAU SUMATERA
+  province: Riau
+  kabupaten: Kepulauan Meranti
+  role: national
+  tz_hours: 7
+  utm_epsg: 32648
+dems:
+  lidar:
+    planned: true
+    cover_pct: 0.0
+    skip: no LiDAR in the data folder covers the KHG
+  deltadtm:
+    planned: true
+    cover_pct: 97.9
+  demnas:
+    planned: true
+    cover_pct: 100.0
+peat_depth:
+  source: modelled raster
+  path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_clip_Pulau_Rangsang.img
+  scale: 0.01
+  valid_share: 0.793
+canals:
+  class_field: KET_KANAL
+facts:
+  run_class: 'A: modelled peat depth and mapped canals'
+  area_ha: 88932
+  deltadtm_share: 0.979
+  lidar_share: 0.0
+  canal_km_total: 1234.8
+  blocks_brgm: 80
+  licence_share_managed: 0.204
+  stations_community: 1
+  stations_concession: 5
+  dry_window: 05-21 to 10-10
+  dry_shortfall_mm_2018_2025: -292
