@@ -47,11 +47,15 @@ RUN set -eu; \
     cat /opt/repeat/repos.installed.txt
 
 # Lock files as written on the reference machine (Windows): editable paths made absolute, and the lines that pip freeze adds
-# for the editable packages and for pip itself dropped (uv installs those from the -e lines).
+# for the editable packages and for pip itself dropped (uv installs those from the -e lines). The report and test tools of
+# docker/exclude.txt are dropped too; the lock files themselves stay complete.
 RUN set -eu; mkdir -p /opt/repeat/locks; \
+    names=$(sed -e 's/\r$//' -e 's/#.*//' -e 's/[[:space:]]//g' re-peat/docker/exclude.txt | grep . | paste -sd'|'); \
     for env in main dem delineation pump; do \
       sed -e 's/\r$//' -e 's#^-e \./#-e /opt/repeat/#' re-peat/env/${env}.lock.txt \
-        | grep -v -E '^(repeat-[a-z]+|pip)==' > /opt/repeat/locks/${env}.txt; \
+        | grep -v -E '^(repeat-[a-z]+|pip)==' \
+        | grep -v -i -E "^(${names})==" > /opt/repeat/locks/${env}.txt; \
+      echo "${env}: $(grep -c . /opt/repeat/locks/${env}.txt) lines"; \
     done
 
 # main: repeat-common, repeat-neraca, repeat-prioritisation, earthengine-api, sliderule (workspace .venv, as in pipeline.yaml)

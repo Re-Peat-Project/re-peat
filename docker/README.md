@@ -69,6 +69,9 @@ lists repositories, interpreters, folders and package versions against the locks
 
 ## Not in the image
 
+- report, screenshot and test packages of the reference machine (playwright, pymupdf, python-docx, onnxruntime, pytest and
+  their dependencies): `docker/exclude.txt` lists them, and the build drops them from the lock files it installs. A package
+  that a chain step starts to import must come off that list.
 - QGIS (print layouts are skipped: `python.qgis: ""`)
 - tippecanoe for the dashboard tiles (its own image: `repeat-prioritisation/tiles/Dockerfile`)
 - the report tools (draw.io, Chrome)

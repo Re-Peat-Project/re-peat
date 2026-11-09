@@ -1,0 +1,21 @@
+# Packages of env/*.lock.txt left out of the image: report, screenshot and test tools of the reference machine that no chain step
+# imports (checked 2026-11-08 against repeat-common, repeat-neraca, repeat-prioritisation src and re-peat/tools/pipeline).
+# One package name per line, as written in the lock files (case-insensitive). The lock files stay complete; only the image skips these.
+playwright        # dashboard and report screenshots
+pyee              # playwright
+greenlet          # playwright
+pymupdf           # PDF reading for the reports and literature notes
+pymupdf4llm
+pymupdf_layout
+onnxruntime       # pymupdf_layout
+flatbuffers       # onnxruntime
+python-docx       # the Word project report
+lxml              # python-docx
+tabulate          # DataFrame.to_markdown, only in repeat_prioritisation.investigations
+pmtiles           # dashboard tiles (repeat-national-tiles, outside the chain)
+psutil
+pytest            # tests
+iniconfig         # pytest
+pluggy            # pytest
+Pygments          # pytest
+colorama          # pytest on Windows
