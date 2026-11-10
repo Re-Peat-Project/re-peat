@@ -19,3 +19,4 @@ iniconfig         # pytest
 pluggy            # pytest
 Pygments          # pytest
 colorama          # pytest on Windows
+pip               # uv builds the environments without pip; the lock files list it (pip freeze)

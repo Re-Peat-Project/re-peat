@@ -28,7 +28,10 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # git for the repositories; rasterio, pyogrio and pyproj bring GDAL and PROJ in their wheels, so no system GDAL is needed
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl git tini \
- && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* \
+ && git config --system --add safe.directory '*'
+# (the repositories belong to root and the chain runs as the user repeat: without safe.directory git refuses to read their
+# commit, and `setup` reports every repository as differing from env/repos.lock.txt)
 
 COPY --from=ghcr.io/astral-sh/uv:0.9 /uv /uvx /usr/local/bin/
 RUN uv python install ${PY_MAIN} ${PY_DEM} ${PY_DELINEATION} ${PY_PUMP}
@@ -38,12 +41,13 @@ WORKDIR /opt/repeat
 # the hub first (small: tools, settings, sites, env locks), then the module repositories at the locked commits
 COPY . re-peat/
 RUN set -eu; \
-    while read -r repo commit; do \
+    sed 's/\r$//' re-peat/env/repos.lock.txt | while read -r repo commit; do \
       case "$repo" in ''|\#*) continue ;; esac; \
       git clone --quiet "https://github.com/Re-Peat-Project/${repo}.git" "$repo"; \
       if [ "$REPOS" = "lock" ]; then git -C "$repo" checkout --quiet "$commit"; fi; \
       echo "$repo $(git -C "$repo" rev-parse HEAD)" >> /opt/repeat/repos.installed.txt; \
-    done < re-peat/env/repos.lock.txt; \
+    done; \
+    test "$(grep -c . /opt/repeat/repos.installed.txt)" -eq 6; \
     cat /opt/repeat/repos.installed.txt
 
 # Lock files as written on the reference machine (Windows): editable paths made absolute, and the lines that pip freeze adds
@@ -70,19 +74,22 @@ RUN uv venv --python ${PY_DELINEATION} /opt/repeat/repeat-delineation/.venv \
 # pump: repeat-pump pulls repeat-neraca v0.2.0 as a GitHub archive; the workspace copy then replaces it (README of repeat-pump,
 # docs/19-running-the-pipeline.md: the two installs must be separate)
 RUN uv venv --python ${PY_PUMP} /opt/repeat/repeat-pump/.venv \
- && uv pip install --python /opt/repeat/repeat-pump/.venv/bin/python -r /opt/repeat/locks/pump.txt \
+ && grep -v -x -e '-e /opt/repeat/repeat-neraca' /opt/repeat/locks/pump.txt > /opt/repeat/locks/pump_first.txt \
+ && uv pip install --python /opt/repeat/repeat-pump/.venv/bin/python -r /opt/repeat/locks/pump_first.txt \
  && uv pip install --python /opt/repeat/repeat-pump/.venv/bin/python --no-deps -e /opt/repeat/repeat-neraca
 
 # interpreters and mount points of the container (pipeline.local.yaml overrides pipeline.yaml)
 COPY docker/pipeline.local.yaml re-peat/pipeline.local.yaml
 
-RUN groupadd -g ${GID} repeat && useradd -m -u ${UID} -g ${GID} repeat \
+RUN (userdel -r ubuntu 2>/dev/null || true) \
+ && groupadd -g ${GID} repeat && useradd -m -u ${UID} -g ${GID} repeat \
  && mkdir -p /data /khg /sitmat /work /secrets \
  && chown -R repeat:repeat /opt/repeat/re-peat /khg /work
 USER repeat
 
 ENV REPEAT_DATA=/data \
     REPEAT_KHG=/khg \
+    REPEAT_LOCK_EXCLUDE=/opt/repeat/re-peat/docker/exclude.txt \
     PATH=/opt/repeat/.venv/bin:$PATH
 WORKDIR /opt/repeat/re-peat
 VOLUME ["/data", "/khg", "/sitmat", "/work"]

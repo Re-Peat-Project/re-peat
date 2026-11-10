@@ -17,6 +17,7 @@ import csv
 import datetime
 import hashlib
 import json
+import os
 import subprocess
 from pathlib import Path
 
@@ -88,9 +89,23 @@ def lock_matches(s: Settings) -> dict:
         if env == "qgis" or not py or not Path(py).is_file() or not f.is_file():
             res[env] = None
             continue
-        want = [ln for ln in f.read_text(encoding="utf-8").splitlines() if ln and not ln.startswith("#")]
-        res[env] = want == [ln for ln in _freeze(py, s.ws) if not ln.startswith("#")]
+        skip = _lock_exclude()
+        want = [ln for ln in f.read_text(encoding="utf-8").splitlines() if ln and not ln.startswith("#") and _name(ln) not in skip]
+        res[env] = want == [ln for ln in _freeze(py, s.ws) if not ln.startswith("#") and _name(ln) not in skip]
     return res
+
+
+def _name(line: str) -> str:
+    return line.split("==", 1)[0].strip().lower().replace("_", "-")
+
+
+def _lock_exclude() -> set:
+    """Packages the lock check ignores: the file named by REPEAT_LOCK_EXCLUDE (the Docker image sets docker/exclude.txt, the
+    report and test tools it leaves out), one name per line, # comments."""
+    f = os.environ.get("REPEAT_LOCK_EXCLUDE")
+    if not f or not Path(f).is_file():
+        return set()
+    return {_name(ln.split("#", 1)[0]) for ln in Path(f).read_text(encoding="utf-8").splitlines() if ln.split("#", 1)[0].strip()}
 
 
 def data_files(s: Settings) -> list[Path]:
