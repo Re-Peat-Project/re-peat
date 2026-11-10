@@ -1,4 +1,4 @@
-# installed packages of the 'main' environment (tools/khg_pipeline.py setup --lock), 2026-11-08
+# installed packages of the 'main' environment (tools/khg_pipeline.py setup --lock), 2026-11-10
 # install from the workspace folder: python -m venv <env>; <env>/python -m pip install -r re-peat/env/main.lock.txt
 -e ./repeat-common
 -e ./repeat-neraca
@@ -134,7 +134,7 @@ pytz==2026.5
 PyYAML==6.0.3
 rasterio==1.5.2
 repeat-common==0.0.1
-repeat-neraca==0.2.0
+repeat-neraca==0.3.0
 repeat-prioritisation==0.1.0
 requests==2.34.2
 scikit-image==0.26.0
