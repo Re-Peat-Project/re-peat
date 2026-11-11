@@ -251,10 +251,15 @@ def load(s: Settings, code: str) -> dict:
     c = expand(yaml.safe_load(p.read_text(encoding="utf-8")), env)
     from .config import _merge
     folder = s.khg_root / c["khg"]["folder"]
-    if any((e or {}).get("planned") for e in (c.get("dems") or {}).values()) and (folder / "01_dem" / "inputs" / "manifest.csv").is_file():
-        # khg.yaml still lists planned DEMs, but this machine's dem_inputs step has clipped them (a container whose sites/ is
-        # not kept between runs): the variants come from the work folder's manifest, as `init` would write them
+    if (folder / "01_dem" / "inputs" / "manifest.csv").is_file():
+        # this machine's dem_inputs step has run: the DEM variants come from its manifest, as `init` would write them. khg.yaml
+        # may describe another machine's clips (a peer without our LiDAR, or a container whose sites/ is not kept)
         c["dems"] = expand({d: _dem(folder, c["khg"]["code"], d, float(s["dems"]["min_cover_pct"])) for d in c["dems"]}, env)
+    else:
+        # not clipped here yet: a clip khg.yaml names but this machine does not have counts as planned (dem_inputs decides)
+        for d, e in (c.get("dems") or {}).items():
+            if e and e.get("clip") and not e.get("skip") and not Path(e["clip"]).is_file():
+                c["dems"][d] = {"planned": True, "cover_pct": e.get("cover_pct")}
     pd_ = c.get("peat_depth") or {}
     if pd_.get("source") == "modelled raster" and pd_.get("path") and not Path(pd_["path"]).is_file():
         # the modelled raster is not in this data folder (a peer's): the next source of the agreed order for this KHG

@@ -56,7 +56,8 @@ class Ctx:
 
     def first_dem(self) -> str | None:
         """The variant whose units the KHG-level neraca (the deficit) is set up on: the first that runs."""
-        return next((d for d in self.s["dems"]["variants"] if not (self.kc["dems"].get(d) or {}).get("skip")), None)
+        run = self.s["dems"].get("run") or self.s["dems"].get("default") or self.s["dems"]["variants"]   # only DEMs this run runs
+        return next((d for d in self.s["dems"]["variants"] if d in run and not (self.kc["dems"].get(d) or {}).get("skip")), None)
 
     def local(self, rel: str) -> Path | None:
         """A file of the KHG's own copies in 00_inputs (local_inputs step), or None."""
