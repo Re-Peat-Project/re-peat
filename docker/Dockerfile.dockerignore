@@ -11,3 +11,4 @@ _out
 *.docx
 *.start
 pipeline.local.yaml
+.env

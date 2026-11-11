@@ -16,6 +16,7 @@ from __future__ import annotations
 import csv
 import datetime
 import glob
+import os
 from pathlib import Path
 
 import yaml
@@ -173,6 +174,15 @@ def _peat_from_availability(s: Settings, av: dict, geom) -> dict | None:
     return {"source": src, "scale": 0.01, **({"cover_share": _f(av, share)} if share else {"confidence": "low"})}
 
 
+def _peat_fallback(av: dict) -> dict:
+    """Peat depth without the modelled raster: KLHK FEG 1:50k classes, BBSDLP classes, then PEATGRIDS (the order of
+    tools/khg_availability.py), each where it covers at least half the KHG."""
+    for src, share in (("FEG 50k classes", "feg50k_share"), ("BBSDLP classes", "bbsdlp_share")):
+        if (_f(av, share) or 0) >= 0.5:
+            return {"source": src, "scale": 0.01, "cover_share": _f(av, share)}
+    return {"source": "PEATGRIDS (low confidence)", "scale": 0.01, "confidence": "low"}
+
+
 def build(s: Settings, code: str) -> dict:
     k = K()
     r = k.lookup(code)
@@ -222,6 +232,16 @@ def write(s: Settings, code: str, overwrite: bool = False) -> tuple[Path, bool]:
     return p, True
 
 
+def override_files(p: Path, code: str) -> list[Path]:
+    """Overrides of one KHG, merged in this order: sites/<folder>/overrides.yaml (tracked), then the peer's own
+    $REPEAT_OVERRIDES/<code>.yaml or $REPEAT_OVERRIDES/<folder>.yaml (a folder mounted into the container)."""
+    out = [p.with_name("overrides.yaml")]
+    peer = os.environ.get("REPEAT_OVERRIDES")
+    if peer:
+        out += [Path(peer) / f"{code}.yaml", Path(peer) / f"{p.parent.name}.yaml"]
+    return [f for f in out if f.is_file()]
+
+
 def load(s: Settings, code: str) -> dict:
     """khg.yaml with ${REPEAT_DATA}/${REPEAT_KHG} expanded; the pipeline steps merged with this KHG's overrides under 'settings'."""
     p = path_of(code)
@@ -230,8 +250,19 @@ def load(s: Settings, code: str) -> dict:
     env = {"REPEAT_DATA": str(s.data), "REPEAT_KHG": str(s.khg_root)}
     c = expand(yaml.safe_load(p.read_text(encoding="utf-8")), env)
     from .config import _merge
-    ov_file = p.with_name("overrides.yaml")
-    ov = expand(yaml.safe_load(ov_file.read_text(encoding="utf-8")) or {}, env) if ov_file.is_file() else {}
+    folder = s.khg_root / c["khg"]["folder"]
+    if any((e or {}).get("planned") for e in (c.get("dems") or {}).values()) and (folder / "01_dem" / "inputs" / "manifest.csv").is_file():
+        # khg.yaml still lists planned DEMs, but this machine's dem_inputs step has clipped them (a container whose sites/ is
+        # not kept between runs): the variants come from the work folder's manifest, as `init` would write them
+        c["dems"] = expand({d: _dem(folder, c["khg"]["code"], d, float(s["dems"]["min_cover_pct"])) for d in c["dems"]}, env)
+    pd_ = c.get("peat_depth") or {}
+    if pd_.get("source") == "modelled raster" and pd_.get("path") and not Path(pd_["path"]).is_file():
+        # the modelled raster is not in this data folder (a peer's): the next source of the agreed order for this KHG
+        c["peat_depth"] = {**_peat_fallback(_availability(c["khg"]["code"])),
+                           "note": f"fallback: {Path(pd_['path']).name} is not in this data folder"}
+    ov = {}
+    for ov_file in override_files(p, c["khg"]["code"]):
+        ov = _merge(ov, expand(yaml.safe_load(ov_file.read_text(encoding="utf-8")) or {}, env))
     step_ov = _merge(c.get("overrides") or {}, ov.get("steps") or {})          # legacy khg.yaml key, then overrides.yaml
     for key, val in ov.items():
         if key != "steps":

@@ -148,7 +148,7 @@ def localize(data: Path, kf: Path, peat: dict | None, icesat2: Path | None, sitm
         from . import peat_depth
         src, size = peat_depth.build(data, peat, area, inp / "peat_depth.tif", clip_raster)
         note(inp / "peat_depth.tif", src, f"peat depth of the KHG (cm), source: {peat.get('source') or 'modelled raster'}", size)
-    if sitmat and sitmat.is_dir():
+    if sitmat and (sitmat / "stations.csv").is_file():     # an empty SiTMAT folder (a peer without SiTMAT): no stations, deficit skipped
         note(inp / "sitmat" / "stations.csv", "SiTMAT processed (repeat-sitmat)", "SiTMAT stations in the KHG", clip_sitmat(sitmat, inp / "sitmat", area))
     if icesat2 and icesat2.exists():
         if icesat2.resolve() != (inp / "icesat2_atl08.gpkg").resolve():          # a rerun finds the KHG's copy already there

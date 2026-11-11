@@ -197,6 +197,7 @@ class PeatDepth(_M):
     valid_share: Optional[float] = F(None, en="Valid share", id="Porsi valid", ge=0, le=1, desc="Share of the KHG with depth > 0")
     cover_share: Optional[float] = F(None, en="Class coverage", id="Cakupan kelas", ge=0, le=1, desc="Share covered by the class map")
     confidence: Optional[Literal["low"]] = F(None, en="Confidence", id="Tingkat keyakinan", desc="low for PEATGRIDS")
+    note: Optional[str] = F(None, en="Note", id="Catatan", desc="Why the source differs from khg.yaml (e.g. a fallback)")
 
     @model_validator(mode="after")
     def _path_for_raster(self):
@@ -294,13 +295,14 @@ def validate_khg(s, code: str, pump_sch: dict | None = None) -> list[str]:
     if raw is None:
         return [f"{code}: khg.yaml missing (init --khg {code})"]
     out += errors(KhgFile, raw, f"{p.parent.name}/khg.yaml")
-    ovf = p.with_name("overrides.yaml")
-    if ovf.is_file():
-        out += errors(Overrides, yaml.safe_load(ovf.read_text(encoding="utf-8")) or {}, f"{p.parent.name}/overrides.yaml")
+    for ovf in khgconf.override_files(p, raw["khg"]["code"]):
+        out += errors(Overrides, yaml.safe_load(ovf.read_text(encoding="utf-8")) or {}, str(ovf))
     c = khgconf.load(s, code)
     for sec, model in SECTION_MODELS.items():
         out += errors(model, c["settings"][sec], f"{p.parent.name} merged {sec}")
     pd_ = c.get("peat_depth") or {}
+    if pd_.get("note"):
+        out.append(f"{p.parent.name}: note: peat_depth {pd_['note']}; using {pd_['source']}")
     if pd_.get("path") and not Path(pd_["path"]).is_file():
         out.append(f"{p.parent.name}: peat_depth.path not found: {pd_['path']}")
     for dem, e in (c.get("dems") or {}).items():
@@ -348,7 +350,10 @@ def show(s, code: str) -> list[tuple[str, Any, str]]:
     if (HUB / "pipeline.local.yaml").is_file():
         layers.append(("pipeline.local.yaml", yaml.safe_load((HUB / "pipeline.local.yaml").read_text(encoding="utf-8")) or {}))
     kh = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
-    ov = yaml.safe_load(p.with_name("overrides.yaml").read_text(encoding="utf-8")) or {} if p.with_name("overrides.yaml").is_file() else {}
+    import os
+    if os.environ.get("REPEAT_SETTINGS") and Path(os.environ["REPEAT_SETTINGS"]).is_file():
+        layers.append(("REPEAT_SETTINGS", yaml.safe_load(Path(os.environ["REPEAT_SETTINGS"]).read_text(encoding="utf-8")) or {}))
+    ovs = [(f, yaml.safe_load(f.read_text(encoding="utf-8")) or {}) for f in khgconf.override_files(p, code)]
     origin = {}
     for name, raw in layers:
         for sec in (*STEP_SECTIONS, "dems"):
@@ -358,10 +363,12 @@ def show(s, code: str) -> list[tuple[str, Any, str]]:
         origin[k] = "khg.yaml"
     for k in _flat({"steps": kh.get("overrides")}):
         origin[k.removeprefix("steps.")] = "khg.yaml (legacy overrides)"
-    for k in _flat({x: v for x, v in ov.items() if x != "steps"}):
-        origin[k] = "overrides.yaml"
-    for k in _flat(ov.get("steps") or {}):
-        origin[k] = "overrides.yaml (steps)"
+    for f, ov in ovs:
+        name = "overrides.yaml" if f.name == "overrides.yaml" else f"REPEAT_OVERRIDES/{f.name}"
+        for k in _flat({x: v for x, v in ov.items() if x != "steps"}):
+            origin[k] = name
+        for k in _flat(ov.get("steps") or {}):
+            origin[k] = f"{name} (steps)"
     c = khgconf.load(s, code)
     merged = {**{x: c.get(x) for x in ("khg", "peat_depth", "canals", "dems")}, **c["settings"],
               "run": {"dems": s["dems"].get("default") or s["dems"]["variants"]}}

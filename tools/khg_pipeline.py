@@ -236,9 +236,11 @@ def cmd_config(a) -> None:
         todo = (codes(a) if not a.khg else khgconf.khg_codes(S, a.khg))
         for code in todo:
             problems += schema.validate_khg(S, code, sch)
-        for p in problems:
+        notes = [p for p in problems if ": note: " in p]           # information (e.g. a peat-depth fallback), not a problem
+        problems = [p for p in problems if ": note: " not in p]
+        for p in notes + problems:
             print(p)
-        print(f"{len(todo)} KHG checked, {len(problems)} problem(s)")
+        print(f"{len(todo)} KHG checked, {len(problems)} problem(s)" + (f", {len(notes)} note(s)" if notes else ""))
         if problems:
             sys.exit(1)
 

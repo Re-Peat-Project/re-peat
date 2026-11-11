@@ -38,8 +38,10 @@ RUN uv python install ${PY_MAIN} ${PY_DEM} ${PY_DELINEATION} ${PY_PUMP}
 
 WORKDIR /opt/repeat
 
-# the hub first (small: tools, settings, sites, env locks), then the module repositories at the locked commits
-COPY . re-peat/
+# the locks first (they decide the repositories and the environments, so a change elsewhere in re-peat does not rebuild the
+# environments), then the module repositories at the locked commits; the rest of re-peat is copied at the end
+COPY env/ re-peat/env/
+COPY docker/exclude.txt re-peat/docker/exclude.txt
 RUN set -eu; \
     sed 's/\r$//' re-peat/env/repos.lock.txt | while read -r repo commit; do \
       case "$repo" in ''|\#*) continue ;; esac; \
@@ -82,21 +84,27 @@ RUN uv venv --python ${PY_PUMP} /opt/repeat/repeat-pump/.venv \
 # (the pump's hydrology uses WhiteboxTools, which the whitebox package downloads on first use into its own folder: done here,
 # since the chain runs as a user that cannot write into the environments)
 
-# interpreters and mount points of the container (pipeline.local.yaml overrides pipeline.yaml)
+# the hub: tools, settings, sites (small; changes here rebuild only from this line)
+COPY . re-peat/
+# interpreters and mount points of the container (pipeline.local.yaml overrides pipeline.yaml); the entry point (ee-auth, ee-check)
 COPY docker/pipeline.local.yaml re-peat/pipeline.local.yaml
+COPY docker/entrypoint.sh /usr/local/bin/repeat-entrypoint
+RUN sed -i 's/\r$//' /usr/local/bin/repeat-entrypoint && chmod 755 /usr/local/bin/repeat-entrypoint
 
 RUN (userdel -r ubuntu 2>/dev/null || true) \
  && groupadd -g ${GID} repeat && useradd -m -u ${UID} -g ${GID} repeat \
- && mkdir -p /data /khg /sitmat /work /secrets \
- && chown -R repeat:repeat /opt/repeat/re-peat /khg /work
+ && mkdir -p /data /khg /sitmat /work /secrets /config/overrides /home/repeat/.config/earthengine \
+ && chown -R repeat:repeat /opt/repeat/re-peat /khg /work /home/repeat/.config
 USER repeat
 
 ENV REPEAT_DATA=/data \
     REPEAT_KHG=/khg \
     REPEAT_LOCK_EXCLUDE=/opt/repeat/re-peat/docker/exclude.txt \
+    REPEAT_SETTINGS=/config/settings.yaml \
+    REPEAT_OVERRIDES=/config/overrides \
     PATH=/opt/repeat/.venv/bin:$PATH
 WORKDIR /opt/repeat/re-peat
-VOLUME ["/data", "/khg", "/sitmat", "/work"]
+VOLUME ["/data", "/khg", "/sitmat", "/work", "/config"]
 
-ENTRYPOINT ["/usr/bin/tini", "--", "/opt/repeat/.venv/bin/python", "tools/khg_pipeline.py"]
+ENTRYPOINT ["/usr/bin/tini", "--", "/usr/local/bin/repeat-entrypoint"]
 CMD ["setup"]

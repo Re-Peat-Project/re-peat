@@ -26,3 +26,6 @@ reports/**/*.start
 
 # machine-specific settings of tools/national_run.py (copy of docker/batch.example.toml)
 docker/batch.toml
+
+# a peer's settings of docker/compose.yaml (copy of docker/peer.example.env)
+docker/.env

@@ -4,7 +4,8 @@ One image holds the re-peat hub, the six module repositories and the four Python
 (main, dem, delineation, pump), installed from `env/*.lock.txt` at the commits of `env/repos.lock.txt`. Data, work folders
 and credentials stay outside the image and are mounted at run time.
 
-Status (2026-11-08): written, not yet built or run.
+For team members running the chain on their own machine, start with docs/22-running-on-your-machine.md (docker/compose.yaml,
+Earth Engine login with `ee-auth`, check with `ee-check`). This file covers the image itself and the server.
 
 ## Before building
 

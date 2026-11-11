@@ -3,6 +3,8 @@
 Paths may use ${WORKSPACE}, ${REPEAT_DATA}, ${REPEAT_KHG} and any environment variable. REPEAT_DATA and REPEAT_KHG, when set in the
 environment, win over the `data` and `khg_root` keys, so a peer can point the whole chain at their own data with two variables.
 `load()` also exports REPEAT_HUB, REPEAT_DATA, REPEAT_KHG and the `environment` block, which every step's process inherits.
+REPEAT_SETTINGS, when set, names one more YAML file merged last (any key of pipeline.yaml): a peer's own national choices,
+mounted into the container without rebuilding it.
 """
 from __future__ import annotations
 
@@ -58,6 +60,9 @@ def load(path: Path | None = None) -> Settings:
     local = path.with_name("pipeline.local.yaml")
     if local.exists():
         raw = _merge(raw, yaml.safe_load(local.read_text(encoding="utf-8")) or {})
+    extra = os.environ.get("REPEAT_SETTINGS")
+    if extra and Path(extra).is_file():
+        raw = _merge(raw, yaml.safe_load(Path(extra).read_text(encoding="utf-8")) or {})
     ws = (HUB / raw["workspace"]).resolve() if not Path(raw["workspace"]).is_absolute() else Path(raw["workspace"])
     env = {"WORKSPACE": str(ws)}
     data = os.environ.get("REPEAT_DATA") or expand(raw["data"], env)

@@ -109,7 +109,7 @@ def validate(cfg: dict, codes: list[str]) -> set[str]:
     for line in r.stdout.splitlines():
         head = line.split(":", 1)[0].split("/", 1)[0].split(" ", 1)[0]
         code = head.split("_", 1)[0]
-        if code in codes and not line.startswith("note"):
+        if code in codes and not line.startswith("note") and ": note: " not in line:
             bad.add(code)
             print(f"  config: {line}")
     if r.returncode not in (0, 1):

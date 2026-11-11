@@ -1,0 +1,26 @@
+# RE-PEAT chain on your own machine (docs/22-running-on-your-machine.md).
+# In the folder of this file:
+#   cp peer.example.env .env                     # then set REPEAT_DIR and EE_PROJECT in .env
+#   docker compose pull                          # the published image (or `docker compose build` from a clone of re-peat)
+#   docker compose run --rm chain ee-auth        # once: Earth Engine login
+#   docker compose run --rm chain ee-check
+#   docker compose run --rm chain run --khg 14.08.04
+# Folders under REPEAT_DIR that do not exist yet are created empty.
+name: repeat
+
+services:
+  chain:
+    image: ${REPEAT_IMAGE:-ghcr.io/re-peat-project/repeat-chain:latest}
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ${REPEAT_DIR:?set REPEAT_DIR in .env}/data:/data                   # national data, your LiDAR in data/lidar_own (docs/22)
+      - ${REPEAT_DIR}/khg:/khg                                             # per-KHG work folders and results
+      - ${REPEAT_DIR}/config:/config                                       # settings.yaml, overrides/<code>.yaml (yours)
+      - ${REPEAT_DIR}/earthengine:/home/repeat/.config/earthengine         # your Earth Engine login (ee-auth writes it)
+      - ${REPEAT_DIR}/sitmat:/sitmat:ro                                    # processed SiTMAT (team's shared drive); empty: no deficit step
+      - ${REPEAT_DIR}/work:/work                                           # national profile outputs (empty is fine)
+    environment:
+      EE_PROJECT: ${EE_PROJECT:?set EE_PROJECT in .env}
+      TANAHAIR_LINK: ${TANAHAIR_LINK:-}                                    # only for DEMNAS
