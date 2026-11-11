@@ -89,5 +89,10 @@ prioritisation:                     # repeat-prioritisation subkhg; as re-peat/s
 pump:                               # repeat-pump; run config from the KHG folder (scripts/khg_run_config.py), proposed defaults attached
   tertiary: false
   layouts: {papers: [A3, A0], orient: [landscape]}
-  set: {}                           # any key of the pump's run config, dotted, e.g. {interventions.held_target: 0.6}; wins over the
-                                    # template and the proposed defaults; checked against repeat_pump.core.config.Config
+  set:                              # any key of the pump's run config, dotted; wins over the template and the proposed defaults;
+                                    # checked against repeat_pump.core.config.Config. National choices (decided 2026-11-11):
+    run.subkhg_selection.n: 5       # plan the 5 highest-priority sub-KHG of each KHG (was 3)
+    pumping.enabled: false          # canal blocking only for now: no pumps (RBI rivers carry no dry-season level anyway)
+    optimise.enabled: true          # stage 11 picks the best block layout among the proposed sekat (Urzainki et al. 2020);
+                                    # its other values come from the proposed defaults (n_blocks 10, objective canal_rise, ...)
+  # tertiary canals stay out (tertiary: false above), as the KLH guide says (decided again 2026-11-11)

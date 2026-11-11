@@ -49,7 +49,7 @@ Check a KHG before running: `config validate --khg <code>`; see what applies and
 | `pump.tertiary` | Include tertiary canals | Sertakan kanal tersier |  |  | false | Off by default, as in the KLH guide |
 | `pump.layouts.papers` | Paper sizes | Ukuran kertas |  | A0, A1, A2, A3, A4 | ["A3", "A0"] | KLH print layouts |
 | `pump.layouts.orient` | Orientation | Orientasi |  | landscape, portrait | ["landscape"] | Page orientation |
-| `pump.set` | Pump run-config values | Nilai konfigurasi pompa |  |  | {} | Any key of repeat-pump's run config, dotted (e.g. interventions.held_target: 0.6); wins over the template and the proposed defaults; checked against repeat_pump.core.config.Config |
+| `pump.set` | Pump run-config values | Nilai konfigurasi pompa |  |  | {"run.subkhg_selection.n": 5, "pumping.enabled": false, "optimise.enabled": true} | Any key of repeat-pump's run config, dotted (e.g. interventions.held_target: 0.6); wins over the template and the proposed defaults; checked against repeat_pump.core.config.Config |
 
 ## One KHG: khg.yaml (generated) and overrides.yaml (hand-written)
 
