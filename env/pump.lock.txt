@@ -1,4 +1,4 @@
-# installed packages of the 'pump' environment (tools/khg_pipeline.py setup --lock), 2026-11-10
+# installed packages of the 'pump' environment (tools/khg_pipeline.py setup --lock), 2026-11-11
 # install from the workspace folder: python -m venv <env>; <env>/python -m pip install -r re-peat/env/pump.lock.txt
 -e ./repeat-neraca
 -e ./repeat-pump

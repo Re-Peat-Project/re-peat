@@ -43,7 +43,11 @@ national:                           # national files in the data folder
   lidar_dirs: ["lidar_klhk"]
 
 dems:
-  variants: [lidar, deltadtm, demnas]   # the whole chain runs once per DEM (decided 2026-10-27)
+  variants: [lidar, deltadtm, demnas]   # every DEM the chain knows; the whole chain runs once per DEM (decided 2026-10-27)
+  default: [lidar, deltadtm]        # run without --dem (decided 2026-11-11): DeltaDTM everywhere (fetched from Earth Engine when
+                                    # missing), LiDAR where it covers the KHG. DEMNAS is optional: `run --dem demnas` (or add it here
+                                    # in pipeline.local.yaml); its sheets download only with the user's own Tanahair link in the
+                                    # environment variable TANAHAIR_LINK (repeat_common.fetch_demnas)
   min_cover_pct: 90                 # a variant runs when its DEM covers this share of the KHG (the pump's stage 1 threshold)
 
 steps:                              # in order; `run --steps` picks some

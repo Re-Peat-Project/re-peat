@@ -46,7 +46,8 @@ def codes(a, init: bool = False) -> list[str]:
 def units(a) -> list[tuple[str, dict, str, str | None]]:
     """(code, khg config, step, dem) in run order: per KHG, each step, each DEM for the per-DEM steps."""
     steps = a.steps or S["steps"]
-    dems = a.dem or S["dems"]["variants"]
+    dems = a.dem or S["dems"].get("default") or S["dems"]["variants"]
+    S["dems"]["run"] = list(dems)               # read by the dem_inputs step (fetch DeltaDTM, DEMNAS only when asked)
     out = []
     for code in codes(a):
         kc = khgconf.load(S, code)
@@ -143,6 +144,7 @@ def cmd_status(a) -> Path:
 
 def cmd_plan(a) -> None:
     for code, kc, st, dem in units(a):
+        kc = khgconf.load(S, code)          # current khg.yaml: dem_inputs rewrites it (planned DEM variants become clips)
         c = Ctx(S, kc, dem)
         why = STEPS[st].applies(c)
         if why or (STEPS[st].done(c) and not a.force):
@@ -161,6 +163,7 @@ def cmd_run(a) -> None:
     rid = provenance.record(S)              # code, packages, data and settings of this run: $REPEAT_KHG/pipeline_provenance/<rid>.json
     print(f"provenance {rid}", flush=True)
     for code, kc, st, dem in units(a):
+        kc = khgconf.load(S, code)          # current khg.yaml: dem_inputs rewrites it (planned DEM variants become clips)
         c = Ctx(S, kc, dem)
         if (code, None) in failed or (code, dem) in failed:
             continue
@@ -183,6 +186,9 @@ def cmd_run(a) -> None:
                         raise RuntimeError(f"exit {r.returncode}; see {log}")
             if not STEPS[st].done(c):
                 raise RuntimeError(f"finished but its output is missing; see {log}")
+            if st == "dem_inputs":              # the clips exist now: khg.yaml gets their paths and coverage (overrides.yaml untouched)
+                p_, _ = khgconf.write(S, code, overwrite=True)
+                print(f"    rewrote {p_.relative_to(config.HUB)} from 01_dem/inputs/manifest.csv", flush=True)
         except (Exception, SystemExit) as e:   # noqa: BLE001
             if STEPS[st].optional:                 # recorded, and the chain goes on without it
                 status = f"not available: {e}"
@@ -197,6 +203,8 @@ def cmd_run(a) -> None:
         log_run({"time": datetime.datetime.now().isoformat(timespec="seconds"), "khg": code, "step": st, "dem": dem or "",
                  "status": status, "seconds": round(time.time() - t0, 1), "log": str(log), "provenance": rid})
     cmd_status(argparse.Namespace(khg=a.khg, steps=None, dem=None))
+    if failed:                                  # a batch runner needs to see it (the container's exit code)
+        sys.exit(f"failed: {', '.join(sorted(f'{k} {d or ""}'.strip() for k, d in failed))}")
 
 
 RUN_FIELDS = ["time", "khg", "step", "dem", "status", "seconds", "log", "provenance"]

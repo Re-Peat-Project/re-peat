@@ -1,5 +1,5 @@
 # KHG Sungai Mandiangin - Sungai Siak (KHG.14.08.04): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
-# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Written by `python tools/khg_pipeline.py init` on 2026-11-11 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
 # Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
 #   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
 #   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
@@ -17,14 +17,19 @@ khg:
   utm_epsg: 32647
 dems:
   lidar:
-    planned: true
-    cover_pct: 99.9
-  deltadtm:
-    planned: true
-    cover_pct: 99.9
-  demnas:
-    planned: true
+    product: lidar_riau25m
+    clip: ${REPEAT_KHG}/14.08.04_mandiangin_siak/01_dem/inputs/lidar_riau25m.tif
     cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/lidar_klhk/dem_25m/DEM25M/RIAU25m.tif
+  deltadtm:
+    product: deltadtm
+    clip: ${REPEAT_KHG}/14.08.04_mandiangin_siak/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.9
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Mandiangin_Siak.tif
+  demnas:
+    skip: no demnas clip (see 01_dem/inputs/manifest.csv)
 peat_depth:
   source: modelled raster
   path: ${REPEAT_DATA}/Peat depth and DTM/PeatDepth_Sumatera/RIAU/Peat_depth_clip_Sungai_Mandiangin_Sungai_Siak.img

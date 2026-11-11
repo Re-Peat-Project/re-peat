@@ -76,7 +76,11 @@ RUN uv venv --python ${PY_DELINEATION} /opt/repeat/repeat-delineation/.venv \
 RUN uv venv --python ${PY_PUMP} /opt/repeat/repeat-pump/.venv \
  && grep -v -x -e '-e /opt/repeat/repeat-neraca' /opt/repeat/locks/pump.txt > /opt/repeat/locks/pump_first.txt \
  && uv pip install --python /opt/repeat/repeat-pump/.venv/bin/python -r /opt/repeat/locks/pump_first.txt \
- && uv pip install --python /opt/repeat/repeat-pump/.venv/bin/python --no-deps -e /opt/repeat/repeat-neraca
+ && uv pip install --python /opt/repeat/repeat-pump/.venv/bin/python --no-deps -e /opt/repeat/repeat-neraca \
+ && /opt/repeat/repeat-pump/.venv/bin/python -c "from whitebox.whitebox_tools import download_wbt; download_wbt(verbose=False)" \
+ && ls /opt/repeat/repeat-pump/.venv/lib/python*/site-packages/whitebox/WBT/whitebox_tools
+# (the pump's hydrology uses WhiteboxTools, which the whitebox package downloads on first use into its own folder: done here,
+# since the chain runs as a user that cannot write into the environments)
 
 # interpreters and mount points of the container (pipeline.local.yaml overrides pipeline.yaml)
 COPY docker/pipeline.local.yaml re-peat/pipeline.local.yaml

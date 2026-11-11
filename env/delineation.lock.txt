@@ -1,4 +1,4 @@
-# installed packages of the 'delineation' environment (tools/khg_pipeline.py setup --lock), 2026-11-10
+# installed packages of the 'delineation' environment (tools/khg_pipeline.py setup --lock), 2026-11-11
 # install from the workspace folder: python -m venv <env>; <env>/python -m pip install -r re-peat/env/delineation.lock.txt
 -e ./repeat-common
 -e ./repeat-delineation
