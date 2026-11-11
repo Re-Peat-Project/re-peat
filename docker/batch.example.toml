@@ -1,0 +1,25 @@
+# Settings of tools/national_run.py. Copy to docker/batch.toml (not tracked) and set the paths of your machine.
+# Values here are for the DTI server (DGX Station: 32 cores, 256 GB); the laptop needs workers = 1-2 and memory = "6g".
+
+mode = "docker"                 # docker: one repeat-chain container per KHG; native: the local interpreters (pipeline.yaml python)
+image = "repeat-chain"
+workers = 12                    # KHG at a time. Not yet measured on the server: start lower, watch memory and Earth Engine errors
+retries = 1                     # extra attempts for a failed KHG (the chain resumes from the last finished step)
+order = "large"                 # large: biggest KHG first, so the batch ends sooner; small: quick results first
+memory = "16g"                  # per container (docker --memory); a job above it is killed and counted as failed
+cpus = "2"                      # per container (docker --cpus)
+khg_root = "/srv/repeat/_khg"   # where _batch/<batch>/status.csv and the logs go (the host path of /khg below)
+
+# host path = path in the container (docker/README.md, "Mounts")
+[mounts]
+"/srv/repeat/_data" = "/data"                 # the data folder; writable: DeltaDTM and ICESat-2 downloads land here
+"/srv/repeat/_khg" = "/khg"
+"/srv/repeat/sitmat/processed" = "/sitmat:ro"
+"/srv/repeat/work" = "/work:ro"               # national profile outputs (re-peat/reports on the reference machine)
+"/srv/repeat/re-peat/sites" = "/opt/repeat/re-peat/sites"   # per-KHG configs; writable (dem_inputs rewrites khg.yaml)
+"/srv/repeat/keys" = "/secrets:ro"            # the Earth Engine service-account key
+
+[env]
+EE_PROJECT = "ee-danylaksono"
+GOOGLE_APPLICATION_CREDENTIALS = "/secrets/ee-key.json"
+# TANAHAIR_LINK = ""            # only with DEMNAS (dems.default); a bare name would pass the host's value instead

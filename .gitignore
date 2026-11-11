@@ -23,3 +23,6 @@ reports/national_profile_backup_20261102/
 
 # run markers of the national profile builds (timestamps only)
 reports/**/*.start
+
+# machine-specific settings of tools/national_run.py (copy of docker/batch.example.toml)
+docker/batch.toml
