@@ -89,3 +89,5 @@ prioritisation:                     # repeat-prioritisation subkhg; as re-peat/s
 pump:                               # repeat-pump; run config from the KHG folder (scripts/khg_run_config.py), proposed defaults attached
   tertiary: false
   layouts: {papers: [A3, A0], orient: [landscape]}
+  set: {}                           # any key of the pump's run config, dotted, e.g. {interventions.held_target: 0.6}; wins over the
+                                    # template and the proposed defaults; checked against repeat_pump.core.config.Config

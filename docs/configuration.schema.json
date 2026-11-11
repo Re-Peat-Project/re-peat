@@ -1,0 +1,1100 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "RE-PEAT chain settings",
+ "pipeline": {
+  "$defs": {
+   "Delineation": {
+    "additionalProperties": false,
+    "properties": {
+     "outlet_canal_classes": {
+      "description": "Canal classes whose ends become outlets of sub-KHG units",
+      "items": {
+       "type": "string"
+      },
+      "label_id": "Kelas kanal outlet",
+      "title": "Outlet canal classes",
+      "type": "array"
+     },
+     "min_area_km2": {
+      "anyOf": [
+       {
+        "const": "auto",
+        "type": "string"
+       },
+       {
+        "exclusiveMinimum": 0,
+        "type": "number"
+       }
+      ],
+      "description": "Smallest sub-KHG unit; `auto` aims at 6-30 units per KHG",
+      "label_id": "Luas unit minimum",
+      "title": "Minimum unit area",
+      "unit": "km²"
+     },
+     "merge": {
+      "description": "Small pieces merge into the neighbour with the longest shared border (adjacent) or preferably across the divide (flow)",
+      "enum": [
+       "adjacent",
+       "flow"
+      ],
+      "label_id": "Aturan penggabungan",
+      "title": "Merge rule",
+      "type": "string"
+     }
+    },
+    "required": [
+     "outlet_canal_classes",
+     "min_area_km2",
+     "merge"
+    ],
+    "title": "Delineation",
+    "type": "object"
+   },
+   "DemCorrection": {
+    "additionalProperties": false,
+    "properties": {
+     "templates": {
+      "description": "repeat-dem config per DEM; {dem} is replaced",
+      "label_id": "Templat koreksi",
+      "title": "Correction templates",
+      "type": "string"
+     },
+     "icesat2_period": {
+      "description": "First and last day of the ICESat-2 ATL08 ground points used",
+      "label_id": "Periode ICESat-2",
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+       {
+        "format": "date",
+        "type": "string"
+       },
+       {
+        "format": "date",
+        "type": "string"
+       }
+      ],
+      "title": "ICESat-2 period",
+      "type": "array"
+     }
+    },
+    "required": [
+     "templates",
+     "icesat2_period"
+    ],
+    "title": "DemCorrection",
+    "type": "object"
+   },
+   "Dems": {
+    "additionalProperties": false,
+    "properties": {
+     "variants": {
+      "description": "Every DEM variant; the chain runs once per DEM",
+      "items": {
+       "enum": [
+        "lidar",
+        "deltadtm",
+        "demnas"
+       ],
+       "type": "string"
+      },
+      "label_id": "DEM yang dikenal",
+      "title": "DEMs the chain knows",
+      "type": "array"
+     },
+     "default": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "lidar",
+        "deltadtm",
+        "demnas"
+       ],
+       "type": "string"
+      },
+      "title": "DEMs run by default",
+      "description": "Variants run when `run` gets no --dem. DEMNAS is optional: its sheets download only with the user's own Tanahair link (TANAHAIR_LINK)",
+      "label_id": "DEM bawaan"
+     },
+     "min_cover_pct": {
+      "description": "A variant runs only when its DEM covers at least this share of the KHG",
+      "exclusiveMinimum": 0,
+      "label_id": "Cakupan DEM minimum",
+      "maximum": 100,
+      "title": "Minimum DEM coverage",
+      "type": "number",
+      "unit": "%"
+     }
+    },
+    "required": [
+     "variants",
+     "default",
+     "min_cover_pct"
+    ],
+    "title": "Dems",
+    "type": "object"
+   },
+   "Layouts": {
+    "additionalProperties": false,
+    "properties": {
+     "papers": {
+      "description": "KLH print layouts",
+      "items": {
+       "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+       ],
+       "type": "string"
+      },
+      "label_id": "Ukuran kertas",
+      "title": "Paper sizes",
+      "type": "array"
+     },
+     "orient": {
+      "description": "Page orientation",
+      "items": {
+       "enum": [
+        "landscape",
+        "portrait"
+       ],
+       "type": "string"
+      },
+      "label_id": "Orientasi",
+      "title": "Orientation",
+      "type": "array"
+     }
+    },
+    "required": [
+     "papers",
+     "orient"
+    ],
+    "title": "Layouts",
+    "type": "object"
+   },
+   "National": {
+    "additionalProperties": false,
+    "properties": {
+     "boundary": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "KHG polygons (SK.129/MENLHK/2017), matched by registry code",
+      "label_id": "Batas KHG",
+      "title": "KHG boundaries"
+     },
+     "canals": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "Canal lines with a class field (Kanal Primer / Sekunder / Tersier)",
+      "label_id": "Kanal",
+      "title": "Canals"
+     },
+     "rivers": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "River lines (RBI)",
+      "label_id": "Sungai",
+      "title": "Rivers"
+     },
+     "lakes": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "Lakes and reservoirs (RBI)",
+      "label_id": "Danau dan waduk",
+      "title": "Lakes"
+     },
+     "blocks": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "Built canal blocks (BRGM)",
+      "label_id": "Sekat kanal eksisting",
+      "title": "Existing canal blocks"
+     },
+     "burnt_area": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "Burnt-area polygons with year",
+      "label_id": "Area terbakar",
+      "title": "Burnt area"
+     },
+     "protected": {
+      "$ref": "#/$defs/NationalFile",
+      "description": "FEG polygons with the protection class",
+      "label_id": "Fungsi lindung gambut",
+      "title": "Protected peat function"
+     },
+     "peat_depth_dirs": {
+      "description": "Folders searched for one modelled peat-depth raster per KHG (found by overlap)",
+      "items": {
+       "type": "string"
+      },
+      "label_id": "Folder raster kedalaman gambut",
+      "title": "Peat-depth raster folders",
+      "type": "array"
+     },
+     "lidar_dirs": {
+      "description": "Folders holding airborne LiDAR DTMs",
+      "items": {
+       "type": "string"
+      },
+      "label_id": "Folder LiDAR",
+      "title": "LiDAR folders",
+      "type": "array"
+     }
+    },
+    "required": [
+     "boundary",
+     "canals",
+     "rivers",
+     "lakes",
+     "blocks",
+     "burnt_area",
+     "protected",
+     "peat_depth_dirs",
+     "lidar_dirs"
+    ],
+    "title": "National",
+    "type": "object"
+   },
+   "NationalFile": {
+    "additionalProperties": false,
+    "properties": {
+     "path": {
+      "description": "Path inside the data folder",
+      "label_id": "Berkas",
+      "title": "File",
+      "type": "string"
+     },
+     "layer": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Layer of a multi-layer file (GeoPackage)",
+      "label_id": "Lapisan",
+      "title": "Layer"
+     },
+     "where": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "pandas query applied to the attribute table",
+      "label_id": "Filter",
+      "title": "Filter"
+     },
+     "field": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Attribute used to select features",
+      "label_id": "Kolom",
+      "title": "Field"
+     },
+     "values": {
+      "anyOf": [
+       {
+        "items": {
+         "type": "string"
+        },
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Values of `field` that are kept",
+      "label_id": "Nilai",
+      "title": "Values"
+     }
+    },
+    "required": [
+     "path"
+    ],
+    "title": "NationalFile",
+    "type": "object"
+   },
+   "Neraca": {
+    "additionalProperties": false,
+    "properties": {
+     "rain": {
+      "description": "Rainfall source of the water balance",
+      "enum": [
+       "chirps",
+       "imerg",
+       "terraclimate_pr"
+      ],
+      "label_id": "Produk curah hujan",
+      "title": "Rainfall product",
+      "type": "string"
+     },
+     "et": {
+      "description": "ET sources; the balance reports each",
+      "items": {
+       "enum": [
+        "wapor",
+        "mod16",
+        "mod16nrt",
+        "terraclimate_aet"
+       ],
+       "type": "string"
+      },
+      "label_id": "Produk evapotranspirasi",
+      "title": "Evapotranspiration products",
+      "type": "array"
+     },
+     "start": {
+      "description": "First day of the balance",
+      "format": "date",
+      "label_id": "Tanggal mulai",
+      "title": "Start date",
+      "type": "string"
+     },
+     "end": {
+      "description": "First day after the last complete dekad",
+      "format": "date",
+      "label_id": "Tanggal akhir (eksklusif)",
+      "title": "End date (exclusive)",
+      "type": "string"
+     },
+     "workers": {
+      "description": "Parallel Earth Engine requests",
+      "label_id": "Permintaan paralel",
+      "maximum": 32,
+      "minimum": 1,
+      "title": "Parallel requests",
+      "type": "integer"
+     },
+     "window": {
+      "description": "SiTMAT window of the KHG deficit",
+      "label_id": "Jendela defisit",
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+       {
+        "format": "date",
+        "type": "string"
+       },
+       {
+        "format": "date",
+        "type": "string"
+       }
+      ],
+      "title": "Deficit window",
+      "type": "array"
+     }
+    },
+    "required": [
+     "rain",
+     "et",
+     "start",
+     "end",
+     "workers",
+     "window"
+    ],
+    "title": "Neraca",
+    "type": "object"
+   },
+   "Prioritisation": {
+    "additionalProperties": false,
+    "properties": {
+     "years": {
+      "additionalProperties": {
+       "items": {
+        "type": "integer"
+       },
+       "type": "array"
+      },
+      "description": "Baseline, validation and El Niño years",
+      "label_id": "Tahun",
+      "propertyNames": {
+       "enum": [
+        "baseline",
+        "validation",
+        "elnino"
+       ]
+      },
+      "title": "Years",
+      "type": "object"
+     },
+     "ndmi_res_m": {
+      "description": "Grid of the Sentinel-2 moisture index",
+      "exclusiveMinimum": 0,
+      "label_id": "Resolusi NDMI",
+      "title": "NDMI resolution",
+      "type": "integer",
+      "unit": "m"
+     },
+     "ipg_canal_classes": {
+      "description": "Canals counted in the drainage indicator",
+      "items": {
+       "type": "string"
+      },
+      "label_id": "Kelas kanal untuk IPG",
+      "title": "Canal classes for the IPG",
+      "type": "array"
+     },
+     "national_profile": {
+      "description": "repeat-prioritisation national profile",
+      "label_id": "Konfigurasi profil nasional",
+      "title": "National profile config",
+      "type": "string"
+     }
+    },
+    "required": [
+     "years",
+     "ndmi_res_m",
+     "ipg_canal_classes",
+     "national_profile"
+    ],
+    "title": "Prioritisation",
+    "type": "object"
+   },
+   "Pump": {
+    "additionalProperties": false,
+    "properties": {
+     "tertiary": {
+      "description": "Off by default, as in the KLH guide",
+      "label_id": "Sertakan kanal tersier",
+      "title": "Include tertiary canals",
+      "type": "boolean"
+     },
+     "layouts": {
+      "$ref": "#/$defs/Layouts",
+      "description": "KLH print layouts (need QGIS)",
+      "label_id": "Tata letak cetak",
+      "title": "Print layouts"
+     },
+     "set": {
+      "additionalProperties": true,
+      "description": "Any key of repeat-pump's run config, dotted (e.g. interventions.held_target: 0.6); wins over the template and the proposed defaults; checked against repeat_pump.core.config.Config",
+      "label_id": "Nilai konfigurasi pompa",
+      "title": "Pump run-config values",
+      "type": "object"
+     }
+    },
+    "required": [
+     "tertiary",
+     "layouts"
+    ],
+    "title": "Pump",
+    "type": "object"
+   }
+  },
+  "additionalProperties": false,
+  "properties": {
+   "workspace": {
+    "description": "Folder holding re-peat and the module repositories",
+    "label_id": "Ruang kerja",
+    "title": "Workspace",
+    "type": "string"
+   },
+   "data": {
+    "description": "The shared data folder (REPEAT_DATA)",
+    "label_id": "Folder data",
+    "title": "Data folder",
+    "type": "string"
+   },
+   "khg_root": {
+    "description": "Per-KHG work folders (REPEAT_KHG)",
+    "label_id": "Folder kerja KHG",
+    "title": "KHG work folders",
+    "type": "string"
+   },
+   "repos": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "description": "Module repositories (git URLs)",
+    "label_id": "Repositori",
+    "title": "Repositories",
+    "type": "object"
+   },
+   "python": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "description": "Python of each environment",
+    "label_id": "Interpreter",
+    "propertyNames": {
+     "enum": [
+      "main",
+      "dem",
+      "delineation",
+      "pump",
+      "qgis"
+     ]
+    },
+    "title": "Interpreters",
+    "type": "object"
+   },
+   "environment": {
+    "additionalProperties": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "description": "Passed to every step (EE_PROJECT, ...)",
+    "label_id": "Variabel lingkungan",
+    "title": "Environment",
+    "type": "object"
+   },
+   "khg_list": {
+    "description": "CSV of the selected KHG",
+    "label_id": "Daftar KHG terpilih",
+    "title": "Selected KHG list",
+    "type": "string"
+   },
+   "extra_khg": {
+    "description": "Codes added to the list",
+    "items": {
+     "type": "string"
+    },
+    "label_id": "KHG tambahan",
+    "title": "Extra KHG",
+    "type": "array"
+   },
+   "national": {
+    "$ref": "#/$defs/National"
+   },
+   "dems": {
+    "$ref": "#/$defs/Dems"
+   },
+   "steps": {
+    "description": "The steps, in order",
+    "items": {
+     "enum": [
+      "inputs",
+      "dem_inputs",
+      "icesat2",
+      "local_inputs",
+      "dem_correction",
+      "delineation",
+      "deficit",
+      "neraca",
+      "prioritisation",
+      "pump",
+      "layouts"
+     ],
+     "type": "string"
+    },
+    "label_id": "Langkah",
+    "title": "Steps",
+    "type": "array"
+   },
+   "dem_correction": {
+    "$ref": "#/$defs/DemCorrection"
+   },
+   "delineation": {
+    "$ref": "#/$defs/Delineation"
+   },
+   "neraca": {
+    "$ref": "#/$defs/Neraca"
+   },
+   "prioritisation": {
+    "$ref": "#/$defs/Prioritisation"
+   },
+   "pump": {
+    "$ref": "#/$defs/Pump"
+   }
+  },
+  "required": [
+   "workspace",
+   "data",
+   "khg_root",
+   "repos",
+   "python",
+   "environment",
+   "khg_list",
+   "national",
+   "dems",
+   "steps",
+   "dem_correction",
+   "delineation",
+   "neraca",
+   "prioritisation",
+   "pump"
+  ],
+  "title": "Pipeline",
+  "type": "object"
+ },
+ "khg": {
+  "$defs": {
+   "Canals": {
+    "additionalProperties": false,
+    "properties": {
+     "class_field": {
+      "default": "KET_KANAL",
+      "description": "Field with Kanal Primer / Sekunder / Tersier",
+      "label_id": "Kolom kelas kanal",
+      "title": "Canal class field",
+      "type": "string"
+     }
+    },
+    "title": "Canals",
+    "type": "object"
+   },
+   "DemEntry": {
+    "additionalProperties": false,
+    "properties": {
+     "product": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "DEM product of the clip",
+      "label_id": "Produk",
+      "title": "Product"
+     },
+     "clip": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "The DEM clipped to the KHG (01_dem/inputs)",
+      "label_id": "Potongan",
+      "title": "Clip"
+     },
+     "cover_pct": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Share of the KHG the DEM covers",
+      "label_id": "Cakupan",
+      "title": "Coverage",
+      "unit": "%"
+     },
+     "sources": {
+      "anyOf": [
+       {
+        "items": {
+         "type": "string"
+        },
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Files the clip was made from",
+      "label_id": "Berkas sumber",
+      "title": "Source files"
+     },
+     "planned": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "True until the dem_inputs step has clipped the DEM",
+      "label_id": "Direncanakan",
+      "title": "Planned"
+     },
+     "skip": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "The variant does not run, for this reason",
+      "label_id": "Lewati (alasan)",
+      "title": "Skip (reason)"
+     }
+    },
+    "title": "DemEntry",
+    "type": "object"
+   },
+   "KhgId": {
+    "additionalProperties": false,
+    "properties": {
+     "code": {
+      "description": "Registry code without the KHG. prefix",
+      "label_id": "Kode KHG",
+      "pattern": "^\\d{2}[\\d\\-.]+$",
+      "title": "KHG code",
+      "type": "string"
+     },
+     "name": {
+      "description": "KHG name as in the boundary file",
+      "label_id": "Nama",
+      "title": "Name",
+      "type": "string"
+     },
+     "folder": {
+      "description": "Folder name under the KHG root",
+      "label_id": "Folder kerja",
+      "title": "Work folder",
+      "type": "string"
+     },
+     "island": {
+      "default": "",
+      "description": "From the registry",
+      "label_id": "Pulau",
+      "title": "Island",
+      "type": "string"
+     },
+     "province": {
+      "default": "",
+      "description": "From the registry",
+      "label_id": "Provinsi",
+      "title": "Province",
+      "type": "string"
+     },
+     "kabupaten": {
+      "default": "",
+      "description": "From the registry",
+      "label_id": "Kabupaten",
+      "title": "Regency",
+      "type": "string"
+     },
+     "role": {
+      "default": "national",
+      "description": "main, reserve, extra or national",
+      "label_id": "Peran",
+      "title": "Role",
+      "type": "string"
+     },
+     "tz_hours": {
+      "anyOf": [
+       {
+        "enum": [
+         7,
+         8,
+         9
+        ],
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "WIB 7, WITA 8, WIT 9",
+      "label_id": "Zona waktu",
+      "title": "Time zone",
+      "unit": "UTC+h"
+     },
+     "utm_epsg": {
+      "anyOf": [
+       {
+        "maximum": 32760,
+        "minimum": 32600,
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "EPSG code of the KHG's UTM zone",
+      "label_id": "Zona UTM",
+      "title": "UTM zone"
+     }
+    },
+    "required": [
+     "code",
+     "name",
+     "folder"
+    ],
+    "title": "KhgId",
+    "type": "object"
+   },
+   "PeatDepth": {
+    "additionalProperties": false,
+    "properties": {
+     "source": {
+      "anyOf": [
+       {
+        "enum": [
+         "modelled raster",
+         "FEG 50k classes",
+         "BBSDLP classes",
+         "PEATGRIDS (low confidence)"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Where the KHG's peat depth comes from",
+      "label_id": "Sumber",
+      "title": "Source"
+     },
+     "path": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Peat-depth raster (modelled raster, or your own file)",
+      "label_id": "Raster",
+      "title": "Raster"
+     },
+     "scale": {
+      "default": 0.01,
+      "description": "Raster value x scale = depth in m (0.01 for cm)",
+      "exclusiveMinimum": 0,
+      "label_id": "Faktor ke meter",
+      "title": "Scale to metres",
+      "type": "number"
+     },
+     "valid_share": {
+      "anyOf": [
+       {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Share of the KHG with depth > 0",
+      "label_id": "Porsi valid",
+      "title": "Valid share"
+     },
+     "cover_share": {
+      "anyOf": [
+       {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Share covered by the class map",
+      "label_id": "Cakupan kelas",
+      "title": "Class coverage"
+     },
+     "confidence": {
+      "anyOf": [
+       {
+        "const": "low",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "low for PEATGRIDS",
+      "label_id": "Tingkat keyakinan",
+      "title": "Confidence"
+     }
+    },
+    "title": "PeatDepth",
+    "type": "object"
+   }
+  },
+  "additionalProperties": false,
+  "properties": {
+   "khg": {
+    "$ref": "#/$defs/KhgId"
+   },
+   "dems": {
+    "additionalProperties": {
+     "$ref": "#/$defs/DemEntry"
+    },
+    "propertyNames": {
+     "enum": [
+      "lidar",
+      "deltadtm",
+      "demnas"
+     ]
+    },
+    "title": "Dems",
+    "type": "object"
+   },
+   "peat_depth": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/PeatDepth"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "canals": {
+    "$ref": "#/$defs/Canals",
+    "default": {
+     "class_field": "KET_KANAL"
+    }
+   },
+   "facts": {
+    "additionalProperties": true,
+    "description": "From the availability table; no step reads them",
+    "label_id": "Fakta",
+    "title": "Facts",
+    "type": "object"
+   },
+   "overrides": {
+    "additionalProperties": true,
+    "description": "Old place of step overrides; use overrides.yaml `steps`",
+    "label_id": "Penimpaan lama",
+    "title": "Legacy step overrides",
+    "type": "object"
+   }
+  },
+  "required": [
+   "khg",
+   "dems"
+  ],
+  "title": "KhgFile",
+  "type": "object"
+ },
+ "overrides": {
+  "$defs": {
+   "StepOverrides": {
+    "additionalProperties": false,
+    "description": "Partial step sections: any key of the pipeline.yaml section, for this KHG only (checked after merging).",
+    "properties": {
+     "dem_correction": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Dem Correction",
+      "type": "object"
+     },
+     "delineation": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Delineation",
+      "type": "object"
+     },
+     "neraca": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Neraca",
+      "type": "object"
+     },
+     "prioritisation": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Prioritisation",
+      "type": "object"
+     },
+     "pump": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Pump",
+      "type": "object"
+     }
+    },
+    "title": "StepOverrides",
+    "type": "object"
+   }
+  },
+  "additionalProperties": false,
+  "properties": {
+   "khg": {
+    "additionalProperties": true,
+    "default": {},
+    "title": "Khg",
+    "type": "object"
+   },
+   "dems": {
+    "additionalProperties": {
+     "additionalProperties": true,
+     "type": "object"
+    },
+    "default": {},
+    "propertyNames": {
+     "enum": [
+      "lidar",
+      "deltadtm",
+      "demnas"
+     ]
+    },
+    "title": "Dems",
+    "type": "object"
+   },
+   "peat_depth": {
+    "anyOf": [
+     {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Peat Depth"
+   },
+   "canals": {
+    "additionalProperties": true,
+    "default": {},
+    "title": "Canals",
+    "type": "object"
+   },
+   "steps": {
+    "$ref": "#/$defs/StepOverrides",
+    "default": {
+     "dem_correction": {},
+     "delineation": {},
+     "neraca": {},
+     "prioritisation": {},
+     "pump": {}
+    }
+   }
+  },
+  "title": "Overrides",
+  "type": "object"
+ }
+}

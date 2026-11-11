@@ -17,6 +17,7 @@ with the next KHG or DEM (steps after a failed one are skipped for that KHG or D
 from __future__ import annotations
 
 import argparse
+import json
 import csv
 import datetime
 import os
@@ -207,6 +208,41 @@ def cmd_run(a) -> None:
         sys.exit(f"failed: {', '.join(sorted(f'{k} {d or ""}'.strip() for k, d in failed))}")
 
 
+def cmd_config(a) -> None:
+    """schema: JSON Schema of the three layers; catalogue: docs/21-configuration.md; show: the settings a KHG's steps read, with the
+    file each comes from; validate: the layers against the schema, files that must exist, pump.set keys (exit 1 on problems)."""
+    from pipeline import schema
+    if a.action == "schema":
+        out = config.HUB / "docs" / "configuration.schema.json"
+        out.write_text(json.dumps(schema.json_schema(), indent=1, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+        print(f"wrote {out.relative_to(config.HUB)}")
+    elif a.action == "catalogue":
+        out = config.HUB / "docs" / "21-configuration.md"
+        out.write_text(schema.catalogue(), encoding="utf-8")
+        print(f"wrote {out.relative_to(config.HUB)}")
+    elif a.action == "show":
+        if not a.khg or len(a.khg) != 1:
+            sys.exit("config show needs one --khg")
+        code = khgconf.khg_codes(S, a.khg)[0]
+        rows = schema.show(S, code)
+        w = max(len(k) for k, _, _ in rows)
+        for k, v, src in rows:
+            print(f"{k:<{w}}  {json.dumps(v, default=str, ensure_ascii=False)[:90]:<92}  {src}")
+    else:
+        problems = schema.validate_template(S)
+        sch = schema.pump_schema(S.python("pump"))
+        if sch is None:
+            print("note: repeat-pump's run config could not be read with the pump interpreter; pump.set keys not checked")
+        todo = (codes(a) if not a.khg else khgconf.khg_codes(S, a.khg))
+        for code in todo:
+            problems += schema.validate_khg(S, code, sch)
+        for p in problems:
+            print(p)
+        print(f"{len(todo)} KHG checked, {len(problems)} problem(s)")
+        if problems:
+            sys.exit(1)
+
+
 RUN_FIELDS = ["time", "khg", "step", "dem", "status", "seconds", "log", "provenance"]
 
 
@@ -286,10 +322,13 @@ def main():
         p.add_argument("--steps", nargs="*", choices=list(STEPS))
         p.add_argument("--dem", nargs="*", choices=list(S["dems"]["variants"]))
         p.add_argument("--force", action="store_true")
+    p = sub.add_parser("config", help="schema | catalogue | show --khg X | validate [--khg ...]")
+    p.add_argument("action", choices=["schema", "catalogue", "show", "validate"])
+    p.add_argument("--khg", nargs="*")
     p = sub.add_parser("compare")
     p.add_argument("--khg", nargs="*")
     a = ap.parse_args()
-    {"data": cmd_data, "compare": cmd_compare, "setup": cmd_setup, "init": cmd_init, "status": cmd_status, "plan": cmd_plan, "run": cmd_run}[a.cmd](a)
+    {"data": cmd_data, "compare": cmd_compare, "setup": cmd_setup, "init": cmd_init, "status": cmd_status, "plan": cmd_plan, "run": cmd_run, "config": cmd_config}[a.cmd](a)
 
 
 if __name__ == "__main__":

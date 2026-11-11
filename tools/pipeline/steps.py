@@ -354,6 +354,11 @@ class Prioritisation(Step):
         return [("main", ["-m", "repeat_prioritisation.subkhg.run", "--config", str(self.config(c))], c.s.ws / "repeat-prioritisation")]
 
 
+def _yaml_value(v) -> str:
+    """A value of pump.set as khg_run_config.py --set reads it back (YAML flow style, one line)."""
+    return yaml.safe_dump(v, default_flow_style=True, allow_unicode=True).strip().removesuffix("...").strip()
+
+
 class Pump(Step):
     name, per_dem, env = "pump", True, "pump"
 
@@ -365,7 +370,8 @@ class Pump(Step):
         # --overwrite: the step runs only when forced or unfinished, and then the config (and its copy of the preset) must
         # come from the current settings; a kept config would rerun with the defaults of its first run
         gen = ["scripts/khg_run_config.py", str(c.kf), "--dem", c.dem, "--dtm", str(c.surface()), "--overwrite"] + \
-              (["--tertiary"] if c.st["pump"].get("tertiary") else [])
+              (["--tertiary"] if c.st["pump"].get("tertiary") else []) + \
+              [a for k, v in sorted((c.st["pump"].get("set") or {}).items()) for a in ("--set", f"{k}={_yaml_value(v)}")]
         run = ["-m", "repeat_pump.cli", "run", "--config", str(cfg), "--accept", "2", "--accept", "6", "--accept", "9"]
         return [("pump", gen, c.s.ws / "repeat-pump"), ("pump", run, c.s.ws / "repeat-pump"),
                 ("pump", ["-m", "repeat_pump.cli", "report-html", "--config", str(cfg)], c.s.ws / "repeat-pump")]

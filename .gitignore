@@ -20,3 +20,6 @@ reports/**/*.pmtiles-journal
 
 # local backup made before the per-KHG tile rebuild (2026-11-02)
 reports/national_profile_backup_20261102/
+
+# run markers of the national profile builds (timestamps only)
+reports/**/*.start
