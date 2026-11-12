@@ -4,6 +4,17 @@
 
 This folder explains what the RE-PEAT GIS toolkit does, why it is built the way it is, and what every parameter means. It is written for team members who will run, check or extend the code without having followed its development.
 
+## Running the chain: start here
+
+| You want to | Read |
+|---|---|
+| run the chain on your own computer (Docker, no setup beyond Docker) | [22 Running on your machine](22-running-on-your-machine.md) |
+| change settings for one KHG or all, check them, rerun what they affect | [23 Configuring a run](23-configuring-a-run.md) |
+| look up a setting: every option with its allowed values | [21 Configuration](21-configuration.md); complete examples in [config/](config/): [settings](config/settings.example.yaml), [per KHG](config/overrides.example.yaml), [pump](config/pump-settings.md) |
+| run many KHG at once on a server | [docker/README.md](../docker/README.md) and `tools/national_run.py` |
+| develop the modules or run without Docker (a workstation with the four environments) | [19 Running the full chain](19-running-the-pipeline.md) |
+| know which KHG have which data, and how each will run | [20 Data availability per KHG](20-khg-availability.md) |
+
 ## What the toolkit is for
 
 Indonesia's peat fire problem is a water problem: drained peat dries out in the dry season and burns. Government regulation (PP 71/2014 as amended by PP 57/2016) treats cultivation-function peat as damaged when the water table (*tinggi muka air*, TMA) is more than 0.4 m below the surface at a compliance point. Rewetting means holding or bringing back enough water to keep the TMA above that line, using canal blocks (*sekat kanal*), water gates (*pintu air*) and, in emergencies, pumps.
@@ -72,4 +83,8 @@ Machine learning and the `peatfr` package / PFVI index are deliberately deferred
 - [16 Per-KHG data recap](16-khg-data-recap.md): generated; what data each selected KHG has, at what resolution and coverage, and the gaps per module.
 - [17 Sub-KHG delineation background](17-subkhg-delineation-background.md): how the Kahayan-Sebangau study and the literature subdivide a KHG, how repeat-delineation compares, and what a water-balance unit still needs.
 - [18 Full run plan](18-full-run-plan.md): every selected KHG, once per DEM.
-- [19 Running the full chain](19-running-the-pipeline.md): setup, commands and outputs of `tools/khg_pipeline.py`.
+- [19 Running the full chain](19-running-the-pipeline.md): setup, commands and outputs of `tools/khg_pipeline.py` on a workstation.
+- [20 Data availability per KHG](20-khg-availability.md): generated; inputs, DEM coverage, dry window and run class of all 865 KHG.
+- [21 Configuration](21-configuration.md): generated; every setting of the chain.
+- [22 Running on your machine](22-running-on-your-machine.md): the chain in Docker, Earth Engine login, data pack.
+- [23 Configuring a run](23-configuring-a-run.md): settings files, checks, reruns after a change.

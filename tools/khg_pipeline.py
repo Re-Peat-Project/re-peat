@@ -6,7 +6,9 @@
     python tools/khg_pipeline.py status [--khg ...]         # what is done, what can run, what is missing -> $REPEAT_KHG/pipeline_status.csv
     python tools/khg_pipeline.py plan [--khg ...] [--steps ...] [--dem ...]   # the commands `run` would execute, nothing run
     python tools/khg_pipeline.py run  [--khg ...] [--steps ...] [--dem ...] [--force]
+    python tools/khg_pipeline.py run  --khg CODE --from STEP # rerun STEP and every later one (after a change of settings)
     python tools/khg_pipeline.py compare [--khg ...]        # one row per KHG and DEM: units, sekat, water, budget -> $REPEAT_KHG/pipeline_compare.csv
+    python tools/khg_pipeline.py config schema | catalogue | show --khg CODE | validate [--khg ...]   # settings (docs/21, docs/23)
 
 Settings: pipeline.yaml (shared; pipeline.local.yaml overrides it on one machine) and sites/<folder>/khg.yaml (per KHG). Without
 --khg, the KHG with a khg.yaml are used (for `init`: the confirmed rows of sites/selected_khg.csv plus extra_khg).
@@ -47,6 +49,11 @@ def codes(a, init: bool = False) -> list[str]:
 def units(a) -> list[tuple[str, dict, str, str | None]]:
     """(code, khg config, step, dem) in run order: per KHG, each step, each DEM for the per-DEM steps."""
     steps = a.steps or S["steps"]
+    if getattr(a, "from_step", None):             # this step and every step after it, forced (after a change of settings)
+        if a.steps:
+            sys.exit("--from and --steps exclude each other")
+        steps = S["steps"][S["steps"].index(a.from_step):]
+        a.force = True
     dems = a.dem or S["dems"].get("default") or S["dems"]["variants"]
     S["dems"]["run"] = list(dems)               # read by the dem_inputs step (fetch DeltaDTM, DEMNAS only when asked)
     out = []
@@ -217,9 +224,16 @@ def cmd_config(a) -> None:
         out.write_text(json.dumps(schema.json_schema(), indent=1, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
         print(f"wrote {out.relative_to(config.HUB)}")
     elif a.action == "catalogue":
-        out = config.HUB / "docs" / "21-configuration.md"
-        out.write_text(schema.catalogue(), encoding="utf-8")
-        print(f"wrote {out.relative_to(config.HUB)}")
+        d = config.HUB / "docs" / "config"
+        d.mkdir(exist_ok=True)
+        files = {config.HUB / "docs" / "21-configuration.md": schema.catalogue(), d / "settings.example.yaml": schema.example_settings(),
+                 d / "overrides.example.yaml": schema.example_overrides(), d / "pump-settings.md": schema.pump_settings_md(S)}
+        for out, text in files.items():
+            if text is None:
+                print(f"skipped {out.relative_to(config.HUB)}: the pump interpreter could not read repeat-pump's run config")
+                continue
+            out.write_text(text, encoding="utf-8")
+            print(f"wrote {out.relative_to(config.HUB)}")
     elif a.action == "show":
         if not a.khg or len(a.khg) != 1:
             sys.exit("config show needs one --khg")
@@ -324,6 +338,8 @@ def main():
         p.add_argument("--steps", nargs="*", choices=list(STEPS))
         p.add_argument("--dem", nargs="*", choices=list(S["dems"]["variants"]))
         p.add_argument("--force", action="store_true")
+        p.add_argument("--from", dest="from_step", choices=list(STEPS),
+                       help="this step and every later one, forced: what to rerun after changing a setting (docs/23)")
     p = sub.add_parser("config", help="schema | catalogue | show --khg X | validate [--khg ...]")
     p.add_argument("action", choices=["schema", "catalogue", "show", "validate"])
     p.add_argument("--khg", nargs="*")

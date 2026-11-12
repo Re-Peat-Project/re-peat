@@ -76,6 +76,7 @@ Check a KHG before running: `config validate --khg <code>`; see what applies and
 | `peat_depth.valid_share` | Valid share | Porsi valid |  | ≥ 0; ≤ 1 | null | Share of the KHG with depth > 0 |
 | `peat_depth.cover_share` | Class coverage | Cakupan kelas |  | ≥ 0; ≤ 1 | null | Share covered by the class map |
 | `peat_depth.confidence` | Confidence | Tingkat keyakinan |  | low | null | low for PEATGRIDS |
+| `peat_depth.note` | Note | Catatan |  |  | null | Why the source differs from khg.yaml (e.g. a fallback) |
 | `canals.class_field` | Canal class field | Kolom kelas kanal |  |  | "KET_KANAL" | Field with Kanal Primer / Sekunder / Tersier |
 | `facts` | Facts | Fakta |  |  | {} | From the availability table; no step reads them |
 | `overrides` | Legacy step overrides | Penimpaan lama |  |  | {} | Old place of step overrides; use overrides.yaml `steps` |

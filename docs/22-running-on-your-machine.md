@@ -91,7 +91,8 @@ Check what is missing for a KHG before running: `docker compose run --rm chain c
 
 `<code>` is the KHG code of `sites/khg_registry.csv` (e.g. `14.08.04`) or its name. Results are in `REPEAT_DIR/khg/<folder>/`:
 the canal-block plan and its report in `05_pump/<dem>/` (`report.html`, the map layers in `<name>.gpkg`). A stopped run resumes
-where it stopped: run the same command again. `run --force --steps pump` redoes one step.
+where it stopped: run the same command again. After changing a setting, `run --khg <code> --from <step>` reruns that step and
+everything after it (docs/23).
 
 By default the chain runs DeltaDTM and, where it covers the KHG, LiDAR. Your choices go in `config/`, never in the image:
 
@@ -107,7 +108,8 @@ By default the chain runs DeltaDTM and, where it covers the KHG, LiDAR. Your cho
       delineation: {min_area_km2: 10}
 
 `config show --khg <code>` lists every setting with the file it comes from; `config validate --khg <code>` catches typos and
-wrong values. All settings: docs/21-configuration.md.
+wrong values. More on settings, every option with examples, and what to rerun after a change (`run --khg <code> --from <step>`):
+[23 Configuring a run](23-configuring-a-run.md).
 
 ## 6. Time and size
 

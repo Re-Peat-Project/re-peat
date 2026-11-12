@@ -1,5 +1,8 @@
 # 19 Running the full chain
 
+> Running in Docker instead (no environments to install): [22](22-running-on-your-machine.md). Changing settings and rerunning:
+> [23](23-configuring-a-run.md). Every option: [21](21-configuration.md) and [config/](config/).
+
 How to run the whole RE-PEAT chain (DEM, sub-KHG delineation, neraca air, prioritisation, interventions) for one or many KHG, on
 this machine or another one, with the project data or your own. The plan behind it (which KHG, which DEMs, why) is in
 [18-full-run-plan.md](18-full-run-plan.md).

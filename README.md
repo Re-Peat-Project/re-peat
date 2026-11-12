@@ -6,6 +6,10 @@ This repository is the hub. It holds no analysis code; that lives in the modules
 
 ## Run the chain
 
+**To run it on your own computer, use Docker: [docs/22-running-on-your-machine.md](docs/22-running-on-your-machine.md).** To change
+settings: [docs/23-configuring-a-run.md](docs/23-configuring-a-run.md). Every option: [docs/21-configuration.md](docs/21-configuration.md)
+and the examples in [docs/config/](docs/config/). The commands below are for a workstation with the module environments (docs/19).
+
 ```bash
 python tools/khg_pipeline.py setup     # repositories, interpreters, folders, lock files (--clone, --lock)
 python tools/khg_pipeline.py data      # data folder against sites/data_manifest.csv (--write: make it)
