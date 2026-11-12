@@ -51,12 +51,13 @@ def main():
     names = {khg.folder_name(n) for n, _, _ in entries}
     for n in a.khg:
         entries.append((n, "extra", khg.lookup(n)["province"]))
+    # site configs exist for all 865 KHG (national run): add one only when its work folder already exists, never create it here
+    known = names | {khg.folder_name(n) for n, _, _ in entries}
     for d in sorted((HUB / "sites").iterdir()):
-        if d.is_dir() and "_" in d.name and d.name.split("_")[0][:1].isdigit():
-            code = d.name.split("_")[0]
-            r = khg.lookup(code)
-            if khg.folder_name(code) not in names | {khg.folder_name(n) for n, _, _ in entries}:
-                entries.append((r["name"], "existing site", r["province"]))
+        if d.is_dir() and "_" in d.name and d.name.split("_")[0][:1].isdigit() and d.name not in known and (khg.root() / d.name).is_dir():
+            r = khg.lookup(d.name.split("_")[0])
+            entries.append((r["name"], "existing site", r["province"]))
+            known.add(d.name)
     recap = list(csv.DictReader(open(HUB / "sites" / "khg_data_recap.csv", encoding="utf-8"))) if (HUB / "sites" / "khg_data_recap.csv").exists() else []
     index = []
     for name, role, prov in entries:

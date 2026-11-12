@@ -41,10 +41,10 @@ CHECKS = WS / "repeat-dem" / "runs" / "checks"
 OUT = HUB / "reports" / "dem_benchmark"
 DATA = Path(os.environ.get("REPEAT_DATA") or WS / "_data")
 SITES = {"mendahara": "Mendahara", "sugihan_lumpur": "Sugihan-Lumpur"}
-CANDS = ["deltadtm", "klhk_modelled", "demnas", "fabdem", "glo30"]
-LABEL = {"deltadtm": "DeltaDTM v1.1", "klhk_modelled": "KLHK modelled DTM", "demnas": "DEMNAS", "fabdem": "FABDEM v1.2", "glo30": "Copernicus GLO-30"}
-COLOR_L = {"deltadtm": "#2a78d6", "klhk_modelled": "#eb6834", "demnas": "#1baf7a", "fabdem": "#eda100", "glo30": "#e87ba4"}
-COLOR_D = {"deltadtm": "#3987e5", "klhk_modelled": "#d95926", "demnas": "#199e70", "fabdem": "#c98500", "glo30": "#d55181"}
+CANDS = ["deltadtm", "klhk_modelled", "demnas", "fabdem", "glo30", "gedtm30"]
+LABEL = {"deltadtm": "DeltaDTM v1.1", "klhk_modelled": "KLHK modelled DTM", "demnas": "DEMNAS", "fabdem": "FABDEM v1.2", "glo30": "Copernicus GLO-30", "gedtm30": "GEDTM30 v1.1"}
+COLOR_L = {"deltadtm": "#2a78d6", "klhk_modelled": "#eb6834", "demnas": "#1baf7a", "fabdem": "#eda100", "glo30": "#e87ba4", "gedtm30": "#008300"}
+COLOR_D = {"deltadtm": "#3987e5", "klhk_modelled": "#d95926", "demnas": "#199e70", "fabdem": "#c98500", "glo30": "#d55181", "gedtm30": "#008300"}
 WC_SHOW = ["tree cover", "shrubland", "grassland", "cropland", "mangroves"]
 
 
@@ -126,8 +126,8 @@ def png_uri(fig, name):
 
 def error_maps(site):
     cmap = LinearSegmentedColormap.from_list("div", ["#1c5cab", "#86b6ef", "#e8e7e2", "#ee9a92", "#b8302f"])
-    show = ["deltadtm__processed", "klhk_modelled__processed", "demnas__processed"]
-    fig, axes = plt.subplots(1, 3, figsize=(12, 4.6))
+    show = ["deltadtm__processed", "klhk_modelled__processed", "gedtm30__processed", "demnas__processed"]
+    fig, axes = plt.subplots(1, 4, figsize=(16, 4.6))
     for ax, k in zip(axes, show):
         with rasterio.open(BENCH[site] / "02_error_maps" / f"{k}_minus_lidar.tif") as d:
             a = d.read(1).astype(float)
@@ -211,6 +211,9 @@ def main():
     cfg = {s: yaml.safe_load(open(DEM / "benchmark" / f"{s}.yaml", encoding="utf-8")) for s in SITES}
     pipe = BENCH["sugihan_lumpur"] / "05_pipeline"
     dl = pd.read_csv(pipe / "delineation_compare.csv").set_index("variant")
+    # the report shows the full-chain variants (delineation and neraca) and the flat control; the smoothing and dome-fit
+    # sweeps (delineation only) are in their own check reports
+    dl = dl.loc[[v for v in dl.index if (pipe / v / "neraca" / "neraca_report.md").exists() or v == "flat"]]
 
     def hd(s, c, b=1000, ref="lidar"):
         t = M[s]["height_difference"]
@@ -223,7 +226,7 @@ def main():
     rest = [hd(s, f"{c}__processed") for s in SITES for c in ("demnas", "fabdem", "glo30")]
     meds = [float(M[s]["pointwise"].query("reference == 'lidar' and `class` == 'all'").set_index("candidate").loc[f"{c}__processed", "median"])
             for s in SITES for c in CANDS]
-    reports = {v: (pipe / v / "neraca" / "neraca_report.md").read_text(encoding="utf-8") for v in dl.index}
+    reports = {v: (pipe / v / "neraca" / "neraca_report.md").read_text(encoding="utf-8") for v in dl.index if v != "flat"}
     fixed = re.search(r"fixed \(([\d,]+) of ([\d,]+) cells, (\d+)%\)", reports["lidar"])
     ref = pd.read_csv(CHECKS / "reference_resolution_padang.csv").set_index("name").value
     tiling = pd.read_csv(BENCH["mendahara"] / "04_processed" / "_tiling_check" / "tiling_check.csv")
@@ -234,6 +237,9 @@ def main():
          "tiling_max": f"{tiling.max_abs_diff_m.max():.6f}",
          "load_old_nmad": f"{load_chk.loc['old_crop', 'nmad_m']:.2f}", "load_fixed_nmad": f"{load_chk.loc['fixed_crop', 'nmad_m']:.2f}",
          "m_best_1km": fmt(hd("mendahara", "deltadtm__processed")), "s_best_1km": fmt(hd("sugihan_lumpur", "deltadtm__processed")),
+         "m_gedtm_1km": fmt(hd("mendahara", "gedtm30__processed")), "s_gedtm_1km": fmt(hd("sugihan_lumpur", "gedtm30__processed")),
+         "m_gedtm_raw": fmt(hd("mendahara", "gedtm30")), "s_gedtm_raw": fmt(hd("sugihan_lumpur", "gedtm30")),
+         "dl_gd": fmt(dl.loc["gedtm30__processed", "mean_best_iou_vs_lidar"]), "dl_flat": fmt(dl.loc["flat", "mean_best_iou_vs_lidar"]),
          "m_klhk_1km": fmt(hd("mendahara", "klhk_modelled__processed")), "s_klhk_1km": fmt(hd("sugihan_lumpur", "klhk_modelled__processed")),
          "s_rest_range": f"{min(rest):.1f} to {max(rest):.1f}", "m_signal": fmt(sig("mendahara")), "s_signal": fmt(sig("sugihan_lumpur")),
          "dl_dd": fmt(dl.loc["deltadtm__processed", "mean_best_iou_vs_lidar"]), "dl_base": fmt(dl.loc["klhk_modelled_raw", "mean_best_iou_vs_lidar"]),
@@ -301,11 +307,11 @@ def main():
             r = pw[pw["class"] == cl].set_index("candidate")
             if f"deltadtm__processed" not in r.index or r.loc["deltadtm__processed", "cover_pct"] < 2:
                 continue
-            lrows.append([name, cl, f"{r.loc['deltadtm__processed', 'cover_pct']:.0f}%"] + [fmt(r.loc[f"{c}__processed", "nmad"]) for c in ("deltadtm", "klhk_modelled", "demnas")])
-    T["landcover"] = table(["Site", "Land cover (WorldCover)", "Share of LiDAR cells", "DeltaDTM", "KLHK modelled", "DEMNAS"], lrows, "num",
+            lrows.append([name, cl, f"{r.loc['deltadtm__processed', 'cover_pct']:.0f}%"] + [fmt(r.loc[f"{c}__processed", "nmad"]) for c in ("deltadtm", "klhk_modelled", "gedtm30", "demnas")])
+    T["landcover"] = table(["Site", "Land cover (WorldCover)", "Share of LiDAR cells", "DeltaDTM", "KLHK modelled", "GEDTM30", "DEMNAS"], lrows, "num",
                            "NMAD of candidate minus LiDAR (m) after processing, per land-cover class with at least 2% of the cells.")
     drow = [[v.replace("__processed", ", processed").replace("_raw", ", as used now").replace("klhk_modelled", "KLHK modelled DTM").replace("deltadtm", "DeltaDTM")
-             .replace("demnas", "DEMNAS").replace("lidar", "LiDAR (reference)"), int(r.units), fmt(r.mean_best_iou_vs_lidar), fmt(r.median_best_iou_vs_lidar),
+             .replace("demnas", "DEMNAS").replace("gedtm30", "GEDTM30").replace("lidar", "LiDAR (reference)").replace("flat", "flat surface (control)"), int(r.units), fmt(r.mean_best_iou_vs_lidar), fmt(r.median_best_iou_vs_lidar),
              f"{100 * r.khg_area_in_matched_overlap:.0f}%"] for v, r in dl.iterrows()]
     T["delineation"] = table(["DTM", "Sub-KHG units", "Mean best-match IoU with LiDAR units", "Median IoU", "KHG area in matched overlap"], drow, "num")
     nrows = []

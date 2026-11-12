@@ -6,10 +6,10 @@ Prepared by the RE-PEAT GIS team, Departemen Teknik Geodesi UGM, {date}. Every n
 
 Where a KHG has no airborne LiDAR, we need another elevation source for sub-KHG delineation and the neraca air (water balance). This benchmark asks which source comes closest, and whether the repeat-dem processing improves it.
 
-- We tested five sources at two KHG with full LiDAR coverage: DEMNAS, the KLHK modelled DTM, Copernicus GLO-30, FABDEM v1.2 and DeltaDTM v1.1. Each was scored as delivered and again after the repeat-dem processing, which calibrates the surface per land-cover class with ICESat-2 and then smooths it. The LiDAR served only as the reference and never entered a fit.
-- DeltaDTM after processing came closest to the LiDAR at both sites. Its error of height differences over 1 km was {m_best_1km} m at Mendahara and {s_best_1km} m at Sugihan-Lumpur. The KLHK modelled DTM was second ({m_klhk_1km} m and {s_klhk_1km} m). DEMNAS, GLO-30 and FABDEM stayed at {s_rest_range} m even after processing.
+- We tested six sources at two KHG with full LiDAR coverage: DEMNAS, the KLHK modelled DTM, Copernicus GLO-30, FABDEM v1.2, DeltaDTM v1.1 and GEDTM30 v1.1. Each was scored as delivered and again after the repeat-dem processing, which calibrates the surface per land-cover class with ICESat-2 and then smooths it. The LiDAR served only as the reference and never entered a fit.
+- DeltaDTM after processing came closest to the LiDAR at both sites. Its error of height differences over 1 km was {m_best_1km} m at Mendahara and {s_best_1km} m at Sugihan-Lumpur. The KLHK modelled DTM was second ({m_klhk_1km} m and {s_klhk_1km} m) and GEDTM30 third ({m_gedtm_1km} m and {s_gedtm_1km} m). DEMNAS, GLO-30 and FABDEM stayed at {s_rest_range} m even after processing.
 - No source met the pass criterion we set before the run. These peatlands are very flat: over 1 km the LiDAR itself changes by only {m_signal} m (Mendahara) and {s_signal} m (Sugihan-Lumpur) RMS, and even the best errors are larger than that relief.
-- In the pipeline test at Sugihan-Lumpur, the sub-KHG units delineated from the processed DeltaDTM matched the LiDAR units best, with a mean best-match IoU of {dl_dd} against {dl_base} for the DTM the pipeline uses now. That is still a weak match.
+- In the pipeline test at Sugihan-Lumpur, the sub-KHG units delineated from the processed DeltaDTM matched the LiDAR units best, with a mean best-match IoU of {dl_dd} against {dl_base} for the DTM the pipeline uses now. That is still a weak match. GEDTM30 gave {dl_gd}, below the flat control surface ({dl_flat}), which uses only the mapped channels.
 - The neraca air model in its current set-up cannot tell the DTMs apart. {fixed_pct}% of its grid cells have fixed heads at the canals and the KHG edge, and it shows no skill at the water-table stations even when it runs on the LiDAR.
 
 ## Sites and reference
@@ -40,7 +40,7 @@ Every candidate was processed at its own resolution, with no coarsening. DEMNAS 
 
 [[table:terrain]]
 
-Processing helps the surface models most, because it removes part of the canopy. DEMNAS improved from {m_demnas_raw} to {m_demnas_p} m at Mendahara and from {s_demnas_raw} to {s_demnas_p} m at Sugihan-Lumpur. DeltaDTM and the KLHK modelled DTM are already bare-earth surfaces and gained little.
+Processing helps the surface models most, because it removes part of the canopy. DEMNAS improved from {m_demnas_raw} to {m_demnas_p} m at Mendahara and from {s_demnas_raw} to {s_demnas_p} m at Sugihan-Lumpur. DeltaDTM and the KLHK modelled DTM are already bare-earth surfaces and gained little. GEDTM30 is also a terrain model but gained more, from {m_gedtm_raw} to {m_gedtm_1km} m at Mendahara and from {s_gedtm_raw} to {s_gedtm_1km} m at Sugihan-Lumpur.
 
 At every source the error grows with distance (see the chart), so what remains is a regional tilt or bow in the surface. More smoothing will not remove it.
 
@@ -69,6 +69,8 @@ The mapped rivers and primary canals are always unit boundaries, so part of the 
 - There are two sites, both in the eastern Sumatra lowland, and one kind of reference: 25 m LiDAR of unknown date and datum.
 - The ICESat-2 points (2019 to 2025) are newer than the LiDAR and the global models (GLO-30 comes from TanDEM-X data of 2011 to 2015), so peat subsidence since then is part of the errors.
 - Its makers may have calibrated the KLHK modelled DTM to this same LiDAR, and nothing records how it was made. If they did, its scores at these two sites are better than it would get elsewhere. We have not yet tested this.
+- DeltaDTM and GEDTM30 are both built with ICESat-2, and the processing calibrates every source to ICESat-2, so a bias shared with ICESat-2 cannot show against these points. Only the LiDAR can reveal it.
+- GEDTM30 carries the epoch label 2006 to 2015, before the ICESat-2 years, so subsidence on drained land is part of its error as well.
 - Some ICESat-2 granules failed to read on the server, so the calibration points are slightly incomplete.
 - The neraca air model is still being built, so its result here says nothing yet about the DTMs.
 
@@ -78,7 +80,6 @@ The mapped rivers and primary canals are always unit boundaries, so part of the 
 - Try a trend correction from ICESat-2 (regression-kriging, which fits and removes the long-range part of the error). The error behaves as a regional tilt, and that is what such a correction targets.
 - Test whether the KLHK modelled DTM does as well away from LiDAR by comparing it with ICESat-2 inside and outside the LiDAR footprints.
 - Revisit the neraca grid set-up (canal cells with fixed heads) before using it to judge terrain.
-- Add GEDTM30 when its host is reachable again.
 
 ## How to reproduce
 

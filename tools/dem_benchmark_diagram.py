@@ -48,7 +48,7 @@ BR = "<br>"
 X = {"A": 20, "B": 320, "C": 610, "D1": 940, "D2": 1270, "E": 1560}
 W = {"A": 260, "B": 250, "C": 290, "D1": 300, "D2": 250, "E": 300}
 Y0, RH, BH = 210, 82, 58          # first row, row pitch, box height
-NOTES_Y = Y0 + 13 * RH + 24
+NOTES_Y = Y0 + 14 * RH + 24
 
 cells, boxes = [], {}
 
@@ -140,11 +140,13 @@ def main():
         (2, "<b>Hugging Face mirror</b>" + BR + "FABDEM v1.2 (bare earth, 30 m)", "<b>fetch_open_dem.py</b> --product fabdem", "dem/open/fabdem/"),
         (3, "<b>Google Earth Engine</b>" + BR + "DeltaDTM v1.1 (coastal DTM, 30 m)", "<b>gee.py</b> (Earth Engine bridge)" + BR + "native grid, chunks under 48 MB",
          "dem/open/deltadtm/"),
-        (6, "<b>AWS open data</b>" + BR + "ESA WorldCover 2021 (10 m)", "<b>fetch_open_dem.py</b> --product worldcover", "dem/open/worldcover/"),
-        (7, "<b>AWS open data</b>" + BR + "Meta/WRI canopy height (1 m)", "<b>fetch_open_dem.py</b> --product chm", f"canopy/meta_chm_v1/ ({v['chm_n']} tiles, {v['chm_gb']:.1f} GB)"),
-        (8, "<b>SlideRule</b>" + BR + "ICESat-2 ATL08 ground heights 2019-2025", "<b>fetch_icesat2.py</b>" + BR + "0.5° tiles, repeat-dem settings",
+        (4, "<b>OpenGeoHub S3</b>" + BR + "GEDTM30 v1.1 (ensemble DTM, 30 m)", "<b>fetch_open_dem.py</b> --product gedtm30" + BR + "KHG window of the global COG, band scale kept",
+         "dem/open/gedtm30/"),
+        (7, "<b>AWS open data</b>" + BR + "ESA WorldCover 2021 (10 m)", "<b>fetch_open_dem.py</b> --product worldcover", "dem/open/worldcover/"),
+        (8, "<b>AWS open data</b>" + BR + "Meta/WRI canopy height (1 m)", "<b>fetch_open_dem.py</b> --product chm", f"canopy/meta_chm_v1/ ({v['chm_n']} tiles, {v['chm_gb']:.1f} GB)"),
+        (9, "<b>SlideRule</b>" + BR + "ICESat-2 ATL08 ground heights 2019-2025", "<b>fetch_icesat2.py</b>" + BR + "0.5° tiles, repeat-dem settings",
          "icesat2/ (" + " + ".join(f"{n:,}" for n in v["is"]) + " points)"),
-        (9, "<b>REPEAT-LH folder</b>" + BR + "Pulau Padang 2 m LiDAR (Nov 2016)", "<b>copy + sha256 check</b>", "lidar_pulau_padang_2016/"),
+        (10, "<b>REPEAT-LH folder</b>" + BR + "Pulau Padang 2 m LiDAR (Nov 2016)", "<b>copy + sha256 check</b>", "lidar_pulau_padang_2016/"),
     ]
     for r, a, b, c in rows:
         box(f"a{r}", "src", "A", r, a)
@@ -152,54 +154,54 @@ def main():
         box(f"c{r}", "data", "C", r, c)
         edge(f"a{r}", f"b{r}")
         edge(f"b{r}", f"c{r}")
-    box("a4", "src", "A", 4, "<b>BRGM / KLHK archive</b> (no metadata)" + BR + "modelled DTMs 10-12 m, LiDAR DEMs 25 m, 25 cm contours", r1=5)
-    box("b4", "pass", "B", 4, "no fetch: already on disk," + BR + "catalogued as delivered", r1=5)
-    box("c4", "data", "C", 4, "Peat depth and DTM/ (KLHK modelled DTMs)")
-    box("c5", "data", "C", 5, "lidar_klhk/dem_25m/ (Jambi25m, OKI25: LiDAR)")
-    edge("a4", "b4")
-    edge("b4", "c4", ya=center(4), yb=center(4))
-    edge("b4", "c5", ya=center(5), yb=center(5))
+    box("a5", "src", "A", 5, "<b>BRGM / KLHK archive</b> (no metadata)" + BR + "modelled DTMs 10-12 m, LiDAR DEMs 25 m, 25 cm contours", r1=6)
+    box("b5", "pass", "B", 5, "no fetch: already on disk," + BR + "catalogued as delivered", r1=6)
+    box("c5", "data", "C", 5, "Peat depth and DTM/ (KLHK modelled DTMs)")
+    box("c6", "data", "C", 6, "lidar_klhk/dem_25m/ (Jambi25m, OKI25: LiDAR)")
+    edge("a5", "b5")
+    edge("b5", "c5", ya=center(5), yb=center(5))
+    edge("b5", "c6", ya=center(6), yb=center(6))
 
     # benchmark lane
     box("cfg", "step", "D1", 0, "<b>benchmark/&lt;site&gt;.yaml</b> (tracked)" + BR + "candidates, reference, metrics, pass criterion, processing; written <i>before</i> any result",
         y=110, h=72)
     box("d01", "step", "D1", 0, "<b>Steps 00-01</b> dem_benchmark.py" + BR + "manifest with sha256 of every input" + BR +
-        "each candidate as a VRT (mosaic by reference: no copy, no resampling)" + BR + BR + "candidates: DEMNAS, GLO-30, FABDEM, DeltaDTM, KLHK modelled DTM", r1=4)
-    box("d02", "step", "D1", 5, "<b>Step 02</b> candidate minus LiDAR at every LiDAR cell inside the KHG")
-    box("d04", "step", "D1", 6, "<b>Step 04</b> dem_benchmark_process.py + tiled_dtm.py" + BR + "reads the candidate VRTs of step 01; per candidate, native resolution:" + BR +
-        "pass 0 land cover + canopy onto the grid" + BR + "pass 1 fit canopy factor and offset per class to ICESat-2" + BR + "pass 2 correct, despike, smooth, strip by strip", r1=8)
-    box("kc", "check", "D1", 9, "<b>Side checks</b>" + BR + "reference_resolution_test.py: 2 m vs 24 m blocks" + BR + "check_contour_source.py, contour_grid_spacing.py" + BR +
-        "check_tiling.py, check_load_alignment.py", r1=10)
-    box("d03", "step", "D2", 5, "<b>Step 03</b> metrics: NMAD, error of height differences over 0.5/1/2 km, variogram, land cover, tiers")
-    box("drs", "step", "D2", 6, "<b>Re-score</b> processed surfaces against the LiDAR and the LiDAR smoothed the same way")
-    for r in range(5):
+        "each candidate as a VRT (mosaic by reference: no copy, no resampling)" + BR + BR + "candidates: DEMNAS, GLO-30, FABDEM, DeltaDTM, GEDTM30, KLHK modelled DTM", r1=5)
+    box("d02", "step", "D1", 6, "<b>Step 02</b> candidate minus LiDAR at every LiDAR cell inside the KHG")
+    box("d04", "step", "D1", 7, "<b>Step 04</b> dem_benchmark_process.py + tiled_dtm.py" + BR + "reads the candidate VRTs of step 01; per candidate, native resolution:" + BR +
+        "pass 0 land cover + canopy onto the grid" + BR + "pass 1 fit canopy factor and offset per class to ICESat-2" + BR + "pass 2 correct, despike, smooth, strip by strip", r1=9)
+    box("kc", "check", "D1", 10, "<b>Side checks</b>" + BR + "reference_resolution_test.py: 2 m vs 24 m blocks" + BR + "check_contour_source.py, contour_grid_spacing.py" + BR +
+        "check_tiling.py, check_load_alignment.py", r1=11)
+    box("d03", "step", "D2", 6, "<b>Step 03</b> metrics: NMAD, error of height differences over 0.5/1/2 km, variogram, land cover, tiers")
+    box("drs", "step", "D2", 7, "<b>Re-score</b> processed surfaces against the LiDAR and the LiDAR smoothed the same way")
+    for r in range(6):
         edge(f"c{r}", "d01", ya=center(r), yb=center(r))
-    edge("c5", "d02", label="reference")
-    for r in (6, 7, 8):
+    edge("c6", "d02", label="reference")
+    for r in (7, 8, 9):
         edge(f"c{r}", "d04", ya=center(r), yb=center(r))
-    edge("c9", "kc", ya=center(9), yb=center(9))
+    edge("c10", "kc", ya=center(10), yb=center(10))
     edge("cfg", "d01", side=("B", "T"))
     edge("d01", "d02", side=("B", "T"))
     edge("d02", "d03")
     edge("d03", "drs", side=("B", "T"))
-    edge("d04", "drs", ya=center(6), yb=center(6))
+    edge("d04", "drs", ya=center(7), yb=center(7))
 
     # pipeline lane
-    box("ep", "pipe", "E", 7, "<b>Step 05</b> dem_benchmark_pipeline.py (Sugihan-Lumpur)" + BR + "site configs; only the DTM changes; LiDAR runs as the truth variant")
-    box("edl", "pipe", "E", 8, "<b>repeat-delineation</b> per DTM variant" + BR + "sub-KHG units, matched to the LiDAR units (IoU)")
-    box("enr", "pipe", "E", 9, "<b>repeat-neraca</b> tier 1 + 2 per DTM variant" + BR + "on the LiDAR units, same forcing")
-    box("ecmp", "pipe", "E", 10, "<b>Compare</b> delineation_compare.csv," + BR + "neraca_compare.csv, neraca_unit_compare.csv")
-    box("erep", "out", "E", 11, "<b>Report</b> re-peat/reports/dem_benchmark/report.md" + BR + "(tools/dem_benchmark_report.py, from the CSVs)")
-    box("edec", "out", "E", 12, "<b>Product</b>: the DTM and processing for sub-KHG delineation and neraca air, with its measured error")
-    edge("d04", "ep", ya=center(7), yb=center(7), label="processed DTMs")
+    box("ep", "pipe", "E", 8, "<b>Step 05</b> dem_benchmark_pipeline.py (Sugihan-Lumpur)" + BR + "site configs; only the DTM changes; LiDAR runs as the truth variant")
+    box("edl", "pipe", "E", 9, "<b>repeat-delineation</b> per DTM variant" + BR + "sub-KHG units, matched to the LiDAR units (IoU)")
+    box("enr", "pipe", "E", 10, "<b>repeat-neraca</b> tier 1 + 2 per DTM variant" + BR + "on the LiDAR units, same forcing")
+    box("ecmp", "pipe", "E", 11, "<b>Compare</b> delineation_compare.csv," + BR + "neraca_compare.csv, neraca_unit_compare.csv")
+    box("erep", "out", "E", 12, "<b>Report</b> re-peat/reports/dem_benchmark/report.md" + BR + "(tools/dem_benchmark_report.py, from the CSVs)")
+    box("edec", "out", "E", 13, "<b>Product</b>: the DTM and processing for sub-KHG delineation and neraca air, with its measured error")
+    edge("d04", "ep", ya=center(8), yb=center(8), label="processed DTMs")
     for a, b in (("ep", "edl"), ("edl", "enr"), ("enr", "ecmp"), ("ecmp", "erep"), ("erep", "edec")):
         edge(a, b, side=("B", "T"))
     xr = X["E"] + W["E"] + 14
-    edge("drs", "erep", ya=center(6), yb=center(11), side=("R", "R"), label="metrics", points=((xr, center(6)), (xr, center(11))))
+    edge("drs", "erep", ya=center(7), yb=center(12), side=("R", "R"), label="metrics", points=((xr, center(7)), (xr, center(12))))
 
     # notes band
     box("nA", "note", "A", 0, "Not reachable / not used" + BR + "- 4TU (home of DeltaDTM): TCP blocked from this machine, so the Earth Engine copy was used" + BR +
-        "- GEDTM30: host TLS certificate expired (deferred)" + BR + "- FathomDEM, WorldDEM Neo DTM: skipped by decision" + BR +
+        "- FathomDEM: not in this benchmark" + BR + "- WorldDEM Neo DTM: skipped by decision" + BR +
         "- KLHK/BRGM: no further data or metadata obtainable", y=NOTES_Y, h=260)
     box("nB", "note", "B", 0, "How the fetchers behave" + BR + "- files kept as delivered (upstream names, no resampling)" + BR + "- files already present are skipped" + BR +
         "- one request at a time, with a pause" + BR + "- the Tanahair link is read from the environment, never saved" + BR + "- wrappers in re-peat/tools/", y=NOTES_Y, h=260)
@@ -214,10 +216,10 @@ def main():
         "- The LiDAR is held out: it never enters a fit.", y=NOTES_Y, h=260, x=X["D1"], w=W["D1"] + W["D2"] + 30)
     box("nE", "note", "E", 0, "Results" + BR +
         f"1 km height-difference error, processed: DeltaDTM {m['deltadtm__processed']:.2f} / {s['deltadtm__processed']:.2f} m, "
-        f"KLHK {m['klhk_modelled__processed']:.2f} / {s['klhk_modelled__processed']:.2f} m (Mendahara / Sugihan-Lumpur); "
+        f"KLHK {m['klhk_modelled__processed']:.2f} / {s['klhk_modelled__processed']:.2f} m, GEDTM30 {m['gedtm30__processed']:.2f} / {s['gedtm30__processed']:.2f} m (Mendahara / Sugihan-Lumpur); "
         f"real relief {m['signal']:.2f} / {s['signal']:.2f} m." + BR +
         f"Pass criterion (written first): Tier A 0.30 m, Tier B half the real relief: {'some pass' if m['any_pass'] or s['any_pass'] else 'nothing passes'}." + BR +
-        f"Delineation, mean IoU with LiDAR units: DeltaDTM {v['iou']['deltadtm__processed']:.2f}, KLHK as used now {v['iou']['klhk_modelled_raw']:.2f}." + BR +
+        f"Delineation, mean IoU with LiDAR units: DeltaDTM {v['iou']['deltadtm__processed']:.2f}, KLHK as used now {v['iou']['klhk_modelled_raw']:.2f}, GEDTM30 {v['iou']['gedtm30__processed']:.2f}, flat control {v['iou']['flat']:.2f}." + BR +
         f"Neraca tier 2: {v['fixed']}% of cells fixed at canals and edge, so it cannot judge the DTMs yet.", y=NOTES_Y, h=260)
 
     xml = ('<mxfile host="app.diagrams.net"><diagram name="DEM benchmark workflow" id="dem-benchmark">'
