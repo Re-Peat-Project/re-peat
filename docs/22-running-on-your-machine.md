@@ -54,7 +54,7 @@ The login stays in `REPEAT_DIR/earthengine/`; keep it private (it gives access t
 
 ## 4. Data
 
-Put these files in `REPEAT_DIR/data/`, same names and subfolders (1.92 GB in total). They will be on the team's shared drive.
+Put these files in `REPEAT_DIR/data/`, same names and subfolders (1.92 GB in total). They will be on the team's shared drive as a data pack (`data/`, `sitmat/`, `MANIFEST.csv` with the size and sha256 of every file, `README.md`): copy its `data/` and `sitmat/` into `REPEAT_DIR`. The GIS team makes the pack with `python tools/peer_data_pack.py --out <folder>` (`--khg <codes>` adds the modelled peat-depth rasters of those KHG, `--sitmat khg` keeps only their SiTMAT stations, `--zip` writes one zip file).
 
 | File | Size |
 |---|---|
