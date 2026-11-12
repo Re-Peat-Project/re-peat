@@ -1,0 +1,5 @@
+source,file,n_file,n_tiles,outside_land_tiles
+modis,hotspots_modis_2026.gpkg,238425,236484,1941
+viirs,hotspot_viirs_snpp_2012_2025.gpkg,3350961,3350961,0
+viirs,hotspot_viirs_snpp_sp_2026.gpkg,52364,47610,4754
+viirs,hotspot_viirs_snpp_nrt_2026.gpkg,619669,604622,15047

@@ -1,0 +1,469 @@
+scope,name,year,burned_ha,viirs_n,ha_per_detection
+Indonesia,Indonesia,2015,2579074.5,811971,3.176
+Indonesia,Indonesia,2016,432944.8,101781,4.254
+Indonesia,Indonesia,2017,161760.5,76861,2.105
+Indonesia,Indonesia,2018,523969.2,166583,3.145
+Indonesia,Indonesia,2019,1638460.9,394718,4.151
+Indonesia,Indonesia,2020,291772.1,74660,3.908
+Indonesia,Indonesia,2021,352267.7,54938,6.412
+Indonesia,Indonesia,2022,201925.0,44726,4.515
+Indonesia,Indonesia,2023,1161204.8,217339,5.343
+Indonesia,Indonesia,2024,47290.1,83154,0.569
+Indonesia,Indonesia,2025,359579.2,79286,4.535
+Indonesia,Indonesia,2026,111780.9,572701,0.195
+province,Aceh,2015,900.4,2966,0.304
+province,Aceh,2016,9044.5,4551,1.987
+province,Aceh,2017,3842.7,3542,1.085
+province,Aceh,2018,1284.7,3052,0.421
+province,Aceh,2019,725.1,1902,0.381
+province,Aceh,2020,1105.7,1194,0.926
+province,Aceh,2021,1260.5,986,1.278
+province,Aceh,2022,3696.1,1050,3.52
+province,Aceh,2023,1938.9,1155,1.679
+province,Aceh,2024,3099.2,1568,1.977
+province,Aceh,2025,8925.5,2378,3.753
+province,Aceh,2026,3098.6,2652,1.168
+province,Bali,2015,369.0,91,4.055
+province,Bali,2016,0.0,1,0.0
+province,Bali,2017,363.6,93,3.91
+province,Bali,2018,992.9,269,3.691
+province,Bali,2019,366.0,174,2.104
+province,Bali,2020,28.3,34,0.831
+province,Bali,2021,3.1,11,0.278
+province,Bali,2022,0.0,20,0.0
+province,Bali,2023,2012.4,237,8.491
+province,Bali,2024,0.0,80,0.0
+province,Bali,2025,93.2,28,3.33
+province,Bali,2026,0.0,82,0.0
+province,Banten,2015,247.1,907,0.272
+province,Banten,2016,0.0,123,0.0
+province,Banten,2017,0.0,382,0.0
+province,Banten,2018,0.0,828,0.0
+province,Banten,2019,9.4,1140,0.008
+province,Banten,2020,1.8,286,0.006
+province,Banten,2021,0.0,366,0.0
+province,Banten,2022,0.0,177,0.0
+province,Banten,2023,1.0,726,0.001
+province,Banten,2024,0.0,580,0.0
+province,Banten,2025,4.5,170,0.026
+province,Banten,2026,5.9,681,0.009
+province,Bengkulu,2015,920.3,2876,0.32
+province,Bengkulu,2016,987.7,873,1.131
+province,Bengkulu,2017,130.0,963,0.135
+province,Bengkulu,2018,8.8,899,0.01
+province,Bengkulu,2019,10.8,1038,0.01
+province,Bengkulu,2020,220.4,589,0.374
+province,Bengkulu,2021,92.6,478,0.194
+province,Bengkulu,2022,1615.1,860,1.878
+province,Bengkulu,2023,76.4,1093,0.07
+province,Bengkulu,2024,36.7,883,0.042
+province,Bengkulu,2025,2538.5,1037,2.448
+province,Bengkulu,2026,109.3,893,0.122
+province,DKI Jakarta,2015,0.0,76,0.0
+province,DKI Jakarta,2016,0.0,15,0.0
+province,DKI Jakarta,2017,0.0,48,0.0
+province,DKI Jakarta,2018,0.0,73,0.0
+province,DKI Jakarta,2019,0.0,104,0.0
+province,DKI Jakarta,2020,0.0,26,0.0
+province,DKI Jakarta,2021,0.0,7,0.0
+province,DKI Jakarta,2022,0.0,8,0.0
+province,DKI Jakarta,2023,0.0,32,0.0
+province,DKI Jakarta,2024,0.0,36,0.0
+province,DKI Jakarta,2025,0.0,24,0.0
+province,DKI Jakarta,2026,0.0,31,0.0
+province,Daerah Istimewa Yogyakarta,2015,21.8,64,0.34
+province,Daerah Istimewa Yogyakarta,2016,0.0,3,0.0
+province,Daerah Istimewa Yogyakarta,2017,0.0,32,0.0
+province,Daerah Istimewa Yogyakarta,2018,0.0,45,0.0
+province,Daerah Istimewa Yogyakarta,2019,23.1,51,0.454
+province,Daerah Istimewa Yogyakarta,2020,177.7,25,7.106
+province,Daerah Istimewa Yogyakarta,2021,0.0,45,0.0
+province,Daerah Istimewa Yogyakarta,2022,0.0,17,0.0
+province,Daerah Istimewa Yogyakarta,2023,120.7,41,2.944
+province,Daerah Istimewa Yogyakarta,2024,0.0,48,0.0
+province,Daerah Istimewa Yogyakarta,2025,0.0,12,0.0
+province,Daerah Istimewa Yogyakarta,2026,0.0,57,0.0
+province,Gorontalo,2015,5161.9,4436,1.164
+province,Gorontalo,2016,729.0,601,1.213
+province,Gorontalo,2017,0.0,505,0.0
+province,Gorontalo,2018,159.8,1202,0.133
+province,Gorontalo,2019,1910.4,2343,0.815
+province,Gorontalo,2020,79.6,399,0.2
+province,Gorontalo,2021,161.2,303,0.532
+province,Gorontalo,2022,99.8,300,0.333
+province,Gorontalo,2023,666.6,1162,0.574
+province,Gorontalo,2024,611.8,407,1.503
+province,Gorontalo,2025,89.4,240,0.372
+province,Gorontalo,2026,198.5,2358,0.084
+province,Jambi,2015,112213.9,43267,2.594
+province,Jambi,2016,8113.9,1390,5.837
+province,Jambi,2017,133.6,1257,0.106
+province,Jambi,2018,1381.3,1900,0.727
+province,Jambi,2019,49945.2,29482,1.694
+province,Jambi,2020,996.3,887,1.123
+province,Jambi,2021,539.6,650,0.83
+province,Jambi,2022,913.8,903,1.012
+province,Jambi,2023,6538.9,2823,2.316
+province,Jambi,2024,118.2,2250,0.053
+province,Jambi,2025,3563.5,1576,2.261
+province,Jambi,2026,229.0,7619,0.03
+province,Jawa Barat,2015,2851.1,3176,0.898
+province,Jawa Barat,2016,0.0,416,0.0
+province,Jawa Barat,2017,640.9,1167,0.549
+province,Jawa Barat,2018,4049.5,2313,1.751
+province,Jawa Barat,2019,9418.0,3560,2.645
+province,Jawa Barat,2020,2313.7,746,3.102
+province,Jawa Barat,2021,1282.4,901,1.423
+province,Jawa Barat,2022,1980.6,624,3.174
+province,Jawa Barat,2023,11528.9,2290,5.034
+province,Jawa Barat,2024,27.8,1101,0.025
+province,Jawa Barat,2025,1608.7,383,4.2
+province,Jawa Barat,2026,156.1,2031,0.077
+province,Jawa Tengah,2015,2456.9,2425,1.013
+province,Jawa Tengah,2016,0.0,301,0.0
+province,Jawa Tengah,2017,5925.1,890,6.657
+province,Jawa Tengah,2018,354.6,1775,0.2
+province,Jawa Tengah,2019,4701.4,2603,1.806
+province,Jawa Tengah,2020,7403.2,867,8.539
+province,Jawa Tengah,2021,592.3,754,0.786
+province,Jawa Tengah,2022,104.4,348,0.3
+province,Jawa Tengah,2023,9968.3,2214,4.502
+province,Jawa Tengah,2024,1.4,1257,0.001
+province,Jawa Tengah,2025,1372.7,499,2.751
+province,Jawa Tengah,2026,187.7,2152,0.087
+province,Jawa Timur,2015,7825.9,8230,0.951
+province,Jawa Timur,2016,0.0,1424,0.0
+province,Jawa Timur,2017,5042.1,3124,1.614
+province,Jawa Timur,2018,8691.1,5923,1.467
+province,Jawa Timur,2019,23217.2,10148,2.288
+province,Jawa Timur,2020,18818.8,3120,6.032
+province,Jawa Timur,2021,15179.9,1946,7.801
+province,Jawa Timur,2022,2341.4,1386,1.689
+province,Jawa Timur,2023,49493.4,6655,7.437
+province,Jawa Timur,2024,361.4,4158,0.087
+province,Jawa Timur,2025,10660.8,1936,5.507
+province,Jawa Timur,2026,3925.5,8349,0.47
+province,Kalimantan Barat,2015,92360.0,55473,1.665
+province,Kalimantan Barat,2016,9059.6,16039,0.565
+province,Kalimantan Barat,2017,7410.9,8949,0.828
+province,Kalimantan Barat,2018,68367.0,29825,2.292
+province,Kalimantan Barat,2019,151751.4,41452,3.661
+province,Kalimantan Barat,2020,7644.8,9686,0.789
+province,Kalimantan Barat,2021,20580.2,10918,1.885
+province,Kalimantan Barat,2022,21827.4,8538,2.557
+province,Kalimantan Barat,2023,111854.4,25243,4.431
+province,Kalimantan Barat,2024,1787.8,14752,0.121
+province,Kalimantan Barat,2025,26699.1,21208,1.259
+province,Kalimantan Barat,2026,28751.4,79375,0.362
+province,Kalimantan Selatan,2015,193861.9,36822,5.265
+province,Kalimantan Selatan,2016,2303.7,1596,1.443
+province,Kalimantan Selatan,2017,8265.1,2095,3.945
+province,Kalimantan Selatan,2018,98266.0,7382,13.312
+province,Kalimantan Selatan,2019,135417.9,16785,8.068
+province,Kalimantan Selatan,2020,3960.4,980,4.041
+province,Kalimantan Selatan,2021,8429.7,1027,8.208
+province,Kalimantan Selatan,2022,427.1,777,0.55
+province,Kalimantan Selatan,2023,189886.0,14391,13.195
+province,Kalimantan Selatan,2024,7.3,1943,0.004
+province,Kalimantan Selatan,2025,11898.7,1485,8.013
+province,Kalimantan Selatan,2026,384.3,24343,0.016
+province,Kalimantan Tengah,2015,576363.1,196117,2.939
+province,Kalimantan Tengah,2016,6073.6,3871,1.569
+province,Kalimantan Tengah,2017,1740.0,2575,0.676
+province,Kalimantan Tengah,2018,47263.4,16050,2.945
+province,Kalimantan Tengah,2019,319104.3,87896,3.63
+province,Kalimantan Tengah,2020,7725.9,2907,2.658
+province,Kalimantan Tengah,2021,3813.3,1718,2.22
+province,Kalimantan Tengah,2022,1550.6,1333,1.163
+province,Kalimantan Tengah,2023,166407.1,31315,5.314
+province,Kalimantan Tengah,2024,253.4,4262,0.059
+province,Kalimantan Tengah,2025,4805.8,3764,1.277
+province,Kalimantan Tengah,2026,3238.7,164968,0.02
+province,Kalimantan Timur,2015,68682.9,54629,1.257
+province,Kalimantan Timur,2016,42604.7,10309,4.133
+province,Kalimantan Timur,2017,674.0,3084,0.219
+province,Kalimantan Timur,2018,27969.3,7815,3.579
+province,Kalimantan Timur,2019,68490.0,18336,3.735
+province,Kalimantan Timur,2020,5223.2,4494,1.162
+province,Kalimantan Timur,2021,2995.7,1906,1.572
+province,Kalimantan Timur,2022,372.8,1993,0.187
+province,Kalimantan Timur,2023,39498.3,10887,3.628
+province,Kalimantan Timur,2024,13231.3,7534,1.756
+province,Kalimantan Timur,2025,9573.8,4143,2.311
+province,Kalimantan Timur,2026,1493.9,30175,0.05
+province,Kalimantan Utara,2015,14581.5,5817,2.507
+province,Kalimantan Utara,2016,2081.2,1872,1.112
+province,Kalimantan Utara,2017,81.8,1038,0.079
+province,Kalimantan Utara,2018,626.5,1488,0.421
+province,Kalimantan Utara,2019,8538.7,2688,3.177
+province,Kalimantan Utara,2020,1719.4,1385,1.241
+province,Kalimantan Utara,2021,1697.1,698,2.431
+province,Kalimantan Utara,2022,369.3,740,0.499
+province,Kalimantan Utara,2023,793.6,1276,0.622
+province,Kalimantan Utara,2024,306.7,1355,0.226
+province,Kalimantan Utara,2025,2742.9,1003,2.735
+province,Kalimantan Utara,2026,317.8,3101,0.102
+province,Kepulauan Bangka Belitung,2015,19526.0,12179,1.603
+province,Kepulauan Bangka Belitung,2016,0.0,1596,0.0
+province,Kepulauan Bangka Belitung,2017,0.0,1236,0.0
+province,Kepulauan Bangka Belitung,2018,2052.0,2230,0.92
+province,Kepulauan Bangka Belitung,2019,4768.8,4318,1.104
+province,Kepulauan Bangka Belitung,2020,574.3,1300,0.442
+province,Kepulauan Bangka Belitung,2021,386.1,1556,0.248
+province,Kepulauan Bangka Belitung,2022,329.8,1155,0.286
+province,Kepulauan Bangka Belitung,2023,4749.8,3754,1.265
+province,Kepulauan Bangka Belitung,2024,81.4,1810,0.045
+province,Kepulauan Bangka Belitung,2025,1668.0,2053,0.812
+province,Kepulauan Bangka Belitung,2026,99.5,8030,0.012
+province,Kepulauan Riau,2015,0.0,1258,0.0
+province,Kepulauan Riau,2016,66.9,1711,0.039
+province,Kepulauan Riau,2017,19.7,272,0.072
+province,Kepulauan Riau,2018,321.7,593,0.542
+province,Kepulauan Riau,2019,6116.0,3206,1.908
+province,Kepulauan Riau,2020,8773.8,1712,5.125
+province,Kepulauan Riau,2021,1589.9,426,3.732
+province,Kepulauan Riau,2022,23.0,91,0.252
+province,Kepulauan Riau,2023,724.4,190,3.813
+province,Kepulauan Riau,2024,1498.3,246,6.091
+province,Kepulauan Riau,2025,356.2,153,2.328
+province,Kepulauan Riau,2026,5710.3,1242,4.598
+province,Lampung,2015,70445.4,8253,8.536
+province,Lampung,2016,3157.1,799,3.951
+province,Lampung,2017,6133.5,1031,5.949
+province,Lampung,2018,15062.1,2349,6.412
+province,Lampung,2019,35320.4,7934,4.452
+province,Lampung,2020,1348.4,829,1.627
+province,Lampung,2021,5370.8,1103,4.869
+province,Lampung,2022,7935.5,463,17.139
+province,Lampung,2023,6509.5,5393,1.207
+province,Lampung,2024,779.0,1487,0.524
+province,Lampung,2025,3790.3,491,7.719
+province,Lampung,2026,3489.3,5506,0.634
+province,Maluku,2015,42748.4,17884,2.39
+province,Maluku,2016,7740.3,1730,4.474
+province,Maluku,2017,3869.3,1549,2.498
+province,Maluku,2018,14729.7,3723,3.956
+province,Maluku,2019,26943.2,7338,3.672
+province,Maluku,2020,19908.2,2262,8.801
+province,Maluku,2021,11615.7,1090,10.657
+province,Maluku,2022,14728.3,985,14.953
+province,Maluku,2023,45993.7,5171,8.895
+province,Maluku,2024,1668.2,1746,0.955
+province,Maluku,2025,21938.0,1356,16.178
+province,Maluku,2026,7106.2,18132,0.392
+province,Maluku Utara,2015,13094.4,7306,1.792
+province,Maluku Utara,2016,102.1,467,0.219
+province,Maluku Utara,2017,31.1,200,0.156
+province,Maluku Utara,2018,69.3,561,0.124
+province,Maluku Utara,2019,2777.9,1503,1.848
+province,Maluku Utara,2020,59.2,828,0.072
+province,Maluku Utara,2021,107.9,428,0.252
+province,Maluku Utara,2022,170.8,172,0.993
+province,Maluku Utara,2023,541.2,759,0.713
+province,Maluku Utara,2024,19.8,397,0.05
+province,Maluku Utara,2025,27.2,602,0.045
+province,Maluku Utara,2026,320.2,8090,0.04
+province,Nusa Tenggara Barat,2015,2534.2,8001,0.317
+province,Nusa Tenggara Barat,2016,697.5,1886,0.37
+province,Nusa Tenggara Barat,2017,32164.5,5668,5.675
+province,Nusa Tenggara Barat,2018,14149.2,7396,1.913
+province,Nusa Tenggara Barat,2019,58950.2,11639,5.065
+province,Nusa Tenggara Barat,2020,28523.2,5114,5.577
+province,Nusa Tenggara Barat,2021,98974.9,4538,21.81
+province,Nusa Tenggara Barat,2022,29903.7,2507,11.928
+province,Nusa Tenggara Barat,2023,66731.6,7816,8.538
+province,Nusa Tenggara Barat,2024,4902.8,4294,1.142
+province,Nusa Tenggara Barat,2025,27824.4,3705,7.51
+province,Nusa Tenggara Barat,2026,8457.4,6209,1.362
+province,Nusa Tenggara Timur,2015,84370.0,18493,4.562
+province,Nusa Tenggara Timur,2016,8857.4,6619,1.338
+province,Nusa Tenggara Timur,2017,36887.3,14011,2.633
+province,Nusa Tenggara Timur,2018,55917.9,14861,3.763
+province,Nusa Tenggara Timur,2019,133301.8,19670,6.777
+province,Nusa Tenggara Timur,2020,111694.4,13026,8.575
+province,Nusa Tenggara Timur,2021,133866.7,9602,13.942
+province,Nusa Tenggara Timur,2022,68881.1,6470,10.646
+province,Nusa Tenggara Timur,2023,102536.5,20876,4.912
+province,Nusa Tenggara Timur,2024,7175.1,11624,0.617
+province,Nusa Tenggara Timur,2025,118414.0,10758,11.007
+province,Nusa Tenggara Timur,2026,10528.5,12161,0.866
+province,Papua,2015,0.0,620,0.0
+province,Papua,2016,1067.9,308,3.467
+province,Papua,2017,157.2,186,0.845
+province,Papua,2018,23.3,236,0.099
+province,Papua,2019,105.5,404,0.261
+province,Papua,2020,632.2,580,1.09
+province,Papua,2021,180.1,256,0.703
+province,Papua,2022,868.3,346,2.51
+province,Papua,2023,603.1,217,2.779
+province,Papua,2024,236.2,159,1.486
+province,Papua,2025,199.2,137,1.454
+province,Papua,2026,341.1,655,0.521
+province,Papua Barat,2015,4636.9,2636,1.759
+province,Papua Barat,2016,205.3,122,1.683
+province,Papua Barat,2017,804.1,128,6.282
+province,Papua Barat,2018,508.5,258,1.971
+province,Papua Barat,2019,1192.2,360,3.312
+province,Papua Barat,2020,2771.9,246,11.268
+province,Papua Barat,2021,28.4,138,0.205
+province,Papua Barat,2022,1295.9,167,7.76
+province,Papua Barat,2023,257.2,347,0.741
+province,Papua Barat,2024,33.4,149,0.224
+province,Papua Barat,2025,1229.8,134,9.178
+province,Papua Barat,2026,531.9,12909,0.041
+province,Papua Barat Daya,2015,3228.7,1508,2.141
+province,Papua Barat Daya,2016,329.8,205,1.609
+province,Papua Barat Daya,2017,349.9,111,3.152
+province,Papua Barat Daya,2018,0.0,127,0.0
+province,Papua Barat Daya,2019,337.1,252,1.338
+province,Papua Barat Daya,2020,2936.5,318,9.234
+province,Papua Barat Daya,2021,48.4,68,0.712
+province,Papua Barat Daya,2022,438.2,111,3.948
+province,Papua Barat Daya,2023,503.5,118,4.267
+province,Papua Barat Daya,2024,28.7,81,0.354
+province,Papua Barat Daya,2025,187.7,66,2.843
+province,Papua Barat Daya,2026,230.9,2564,0.09
+province,Papua Pegunungan,2015,6529.3,1933,3.378
+province,Papua Pegunungan,2016,287.5,286,1.005
+province,Papua Pegunungan,2017,104.9,408,0.257
+province,Papua Pegunungan,2018,83.7,569,0.147
+province,Papua Pegunungan,2019,293.6,592,0.496
+province,Papua Pegunungan,2020,375.2,759,0.494
+province,Papua Pegunungan,2021,1543.1,642,2.404
+province,Papua Pegunungan,2022,1816.8,725,2.506
+province,Papua Pegunungan,2023,782.7,425,1.842
+province,Papua Pegunungan,2024,275.1,344,0.8
+province,Papua Pegunungan,2025,670.0,487,1.376
+province,Papua Pegunungan,2026,514.8,3261,0.158
+province,Papua Selatan,2015,338747.8,57272,5.915
+province,Papua Selatan,2016,182852.6,8964,20.399
+province,Papua Selatan,2017,27526.7,6201,4.439
+province,Papua Selatan,2018,86638.6,19067,4.544
+province,Papua Selatan,2019,105475.3,13996,7.536
+province,Papua Selatan,2020,26255.9,5661,4.638
+province,Papua Selatan,2021,13845.9,1412,9.806
+province,Papua Selatan,2022,4886.0,1182,4.134
+province,Papua Selatan,2023,150810.3,21121,7.14
+province,Papua Selatan,2024,1223.2,3419,0.358
+province,Papua Selatan,2025,8106.3,757,10.708
+province,Papua Selatan,2026,6281.5,72322,0.087
+province,Papua Tengah,2015,392.9,1556,0.253
+province,Papua Tengah,2016,61.7,164,0.376
+province,Papua Tengah,2017,144.7,161,0.899
+province,Papua Tengah,2018,151.9,351,0.433
+province,Papua Tengah,2019,117.9,359,0.328
+province,Papua Tengah,2020,472.6,339,1.394
+province,Papua Tengah,2021,135.2,167,0.809
+province,Papua Tengah,2022,661.0,268,2.467
+province,Papua Tengah,2023,2596.1,404,6.426
+province,Papua Tengah,2024,21.2,105,0.202
+province,Papua Tengah,2025,243.5,113,2.155
+province,Papua Tengah,2026,2100.2,4320,0.486
+province,Riau,2015,182090.0,40311,4.517
+province,Riau,2016,84019.7,14607,5.752
+province,Riau,2017,6718.3,2728,2.463
+province,Riau,2018,36669.9,10953,3.348
+province,Riau,2019,90193.1,31122,2.898
+province,Riau,2020,15432.8,4292,3.596
+province,Riau,2021,8963.3,2503,3.581
+province,Riau,2022,4911.4,1217,4.036
+province,Riau,2023,7268.0,2830,2.568
+province,Riau,2024,4251.8,2215,1.92
+province,Riau,2025,21836.1,3699,5.903
+province,Riau,2026,15614.3,5858,2.665
+province,Sulawesi Barat,2015,4935.9,2956,1.67
+province,Sulawesi Barat,2016,4084.7,328,12.453
+province,Sulawesi Barat,2017,186.8,397,0.471
+province,Sulawesi Barat,2018,958.9,850,1.128
+province,Sulawesi Barat,2019,3039.6,1242,2.447
+province,Sulawesi Barat,2020,568.4,346,1.643
+province,Sulawesi Barat,2021,903.6,260,3.475
+province,Sulawesi Barat,2022,487.1,226,2.155
+province,Sulawesi Barat,2023,2129.1,1203,1.77
+province,Sulawesi Barat,2024,20.5,430,0.048
+province,Sulawesi Barat,2025,1078.5,448,2.407
+province,Sulawesi Barat,2026,272.8,1907,0.143
+province,Sulawesi Selatan,2015,9939.0,9167,1.084
+province,Sulawesi Selatan,2016,433.2,1472,0.294
+province,Sulawesi Selatan,2017,994.8,1544,0.644
+province,Sulawesi Selatan,2018,1744.6,2654,0.657
+province,Sulawesi Selatan,2019,15574.3,4603,3.384
+province,Sulawesi Selatan,2020,1894.3,1174,1.614
+province,Sulawesi Selatan,2021,890.3,732,1.216
+province,Sulawesi Selatan,2022,987.4,793,1.245
+province,Sulawesi Selatan,2023,6481.1,3855,1.681
+province,Sulawesi Selatan,2024,110.3,1111,0.099
+province,Sulawesi Selatan,2025,3542.6,1472,2.407
+province,Sulawesi Selatan,2026,1452.0,8004,0.181
+province,Sulawesi Tengah,2015,31297.2,15836,1.976
+province,Sulawesi Tengah,2016,11598.1,2561,4.529
+province,Sulawesi Tengah,2017,1311.2,2050,0.64
+province,Sulawesi Tengah,2018,4143.2,3508,1.181
+province,Sulawesi Tengah,2019,11545.3,6261,1.844
+province,Sulawesi Tengah,2020,2553.9,2039,1.253
+province,Sulawesi Tengah,2021,3132.6,1520,2.061
+province,Sulawesi Tengah,2022,3702.7,1668,2.22
+province,Sulawesi Tengah,2023,10852.5,4830,2.247
+province,Sulawesi Tengah,2024,1565.2,2240,0.699
+province,Sulawesi Tengah,2025,4580.2,2079,2.203
+province,Sulawesi Tengah,2026,2473.6,10281,0.241
+province,Sulawesi Tenggara,2015,31371.5,10168,3.085
+province,Sulawesi Tenggara,2016,71.7,2063,0.035
+province,Sulawesi Tenggara,2017,3329.4,1905,1.748
+province,Sulawesi Tenggara,2018,8541.5,4199,2.034
+province,Sulawesi Tenggara,2019,16836.9,5629,2.991
+province,Sulawesi Tenggara,2020,3186.1,1636,1.947
+province,Sulawesi Tenggara,2021,2113.3,1011,2.09
+province,Sulawesi Tenggara,2022,3080.6,725,4.249
+province,Sulawesi Tenggara,2023,18739.4,4213,4.448
+province,Sulawesi Tenggara,2024,95.5,1499,0.064
+province,Sulawesi Tenggara,2025,7056.5,1841,3.833
+province,Sulawesi Tenggara,2026,968.3,7208,0.134
+province,Sulawesi Utara,2015,4803.7,4819,0.997
+province,Sulawesi Utara,2016,2212.9,459,4.821
+province,Sulawesi Utara,2017,102.6,151,0.679
+province,Sulawesi Utara,2018,326.2,827,0.394
+province,Sulawesi Utara,2019,4571.5,1867,2.449
+province,Sulawesi Utara,2020,177.1,203,0.873
+province,Sulawesi Utara,2021,578.8,142,4.076
+province,Sulawesi Utara,2022,469.6,118,3.98
+province,Sulawesi Utara,2023,2528.1,1047,2.415
+province,Sulawesi Utara,2024,122.2,201,0.608
+province,Sulawesi Utara,2025,6.5,119,0.054
+province,Sulawesi Utara,2026,172.4,2748,0.063
+province,Sumatera Barat,2015,3967.6,4138,0.959
+province,Sumatera Barat,2016,2572.8,1890,1.361
+province,Sumatera Barat,2017,2175.0,1933,1.125
+province,Sumatera Barat,2018,2182.9,1777,1.228
+province,Sumatera Barat,2019,2358.5,1917,1.23
+province,Sumatera Barat,2020,1573.5,805,1.955
+province,Sumatera Barat,2021,2068.7,1015,2.038
+province,Sumatera Barat,2022,9832.0,3069,3.204
+province,Sumatera Barat,2023,4888.2,2535,1.928
+province,Sumatera Barat,2024,253.3,1276,0.198
+province,Sumatera Barat,2025,8134.8,2323,3.502
+province,Sumatera Barat,2026,1209.1,1222,0.989
+province,Sumatera Selatan,2015,639662.9,163865,3.904
+province,Sumatera Selatan,2016,8672.4,3297,2.63
+province,Sumatera Selatan,2017,3590.6,2976,1.207
+province,Sumatera Selatan,2018,16367.6,5730,2.856
+province,Sumatera Selatan,2019,342306.8,48887,7.002
+province,Sumatera Selatan,2020,946.4,1660,0.57
+province,Sumatera Selatan,2021,5225.6,1923,2.717
+province,Sumatera Selatan,2022,3711.0,1484,2.501
+province,Sumatera Selatan,2023,132076.3,27568,4.791
+province,Sumatera Selatan,2024,314.4,4639,0.068
+province,Sumatera Selatan,2025,5939.4,2752,2.158
+province,Sumatera Selatan,2026,665.8,49779,0.013
+province,Sumatera Utara,2015,5935.1,4440,1.337
+province,Sumatera Utara,2016,32855.7,6862,4.788
+province,Sumatera Utara,2017,909.0,2271,0.4
+province,Sumatera Utara,2018,3911.9,2925,1.337
+province,Sumatera Utara,2019,2705.9,1917,1.412
+province,Sumatera Utara,2020,3694.3,1906,1.938
+province,Sumatera Utara,2021,4071.0,1692,2.406
+province,Sumatera Utara,2022,7506.4,1710,4.39
+province,Sumatera Utara,2023,2117.8,1127,1.879
+province,Sumatera Utara,2024,2771.5,1468,1.888
+province,Sumatera Utara,2025,38172.9,3855,9.902
+province,Sumatera Utara,2026,1144.0,1426,0.802

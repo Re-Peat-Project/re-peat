@@ -29,3 +29,7 @@ docker/batch.toml
 
 # a peer's settings of docker/compose.yaml (copy of docker/peer.example.env)
 docker/.env
+
+# national fire by land status: 30 m review rasters (rebuild: repeat-national-fire)
+reports/**/fire_landstatus/layers/tiles/
+reports/**/fire_landstatus/layers/status.vrt

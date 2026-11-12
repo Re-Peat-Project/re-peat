@@ -1,0 +1,52 @@
+{
+ "crs": "EPSG:6933",
+ "cell_m": 30,
+ "tile_cells": 3000,
+ "tiles": 1250,
+ "years": [
+  2015,
+  2026
+ ],
+ "inputs": {
+  "villages": "batas_desa_indonesia_2023_KLH.gpkg",
+  "khg": "batas_khg_indonesia.gpkg",
+  "forest_area": "landstatus/KWSHUTAN_AR_250K_2023_Transcripted.gpkg",
+  "licences": "landstatus/ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg",
+  "dmpg": "dpg/dmpg_villages_sitmat.gpkg",
+  "burned": "burnt_area_2015_2026_Indonesia.gpkg",
+  "peat": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gfw_v20230315_z11.tif",
+  "modis": "hotspots_modis_2026.gpkg",
+  "viirs": [
+   "hotspot_viirs_snpp_2012_2025.gpkg",
+   "hotspot_viirs_snpp_sp_2026.gpkg",
+   "hotspot_viirs_snpp_nrt_2026.gpkg"
+  ]
+ },
+ "static_radius_m": {
+  "modis": 1000,
+  "viirs": 375
+ },
+ "viirs_last": "2026-10-31",
+ "modis_last": "2026-10-29",
+ "kawasan_codes": [
+  "cons",
+  "hl",
+  "prod",
+  "hpk",
+  "apl",
+  "other"
+ ],
+ "licence_bits": {
+  "sawit": 1,
+  "tambang": 2,
+  "pphtr": 4,
+  "pbph": 8,
+  "pphkm": 16
+ },
+ "peat_codes": {
+  "0": "not peat",
+  "1": "peat",
+  "3": "peat tile not fetched"
+ },
+ "raster_bands": "layers/status.vrt: 7 uint16 bands, nodata 65535 outside village land; each band carries its meaning as its description"
+}

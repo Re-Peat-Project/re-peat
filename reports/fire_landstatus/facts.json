@@ -1,0 +1,514 @@
+{
+ "window_end": "2026-10-31",
+ "modis_last": "2026-10-29",
+ "land_mha": 189.09110807999997,
+ "viirs26": 572701,
+ "viirs26_with_static": 584150,
+ "viirs26_high": 20704,
+ "modis26": 199069,
+ "modis26_with_static": 220060,
+ "viirs_by_year": {
+  "2012": 276663,
+  "2013": 228015,
+  "2014": 467538,
+  "2015": 765124,
+  "2016": 96157,
+  "2017": 71635,
+  "2018": 157799,
+  "2019": 353523,
+  "2020": 67912,
+  "2021": 51798,
+  "2022": 41973,
+  "2023": 198513,
+  "2024": 79440,
+  "2025": 75035,
+  "2026": 572701
+ },
+ "viirs_mean_past": 178082.63636363635,
+ "viirs26_ratio": 3.2159283560389995,
+ "viirs_max_year": 2015,
+ "viirs_rank_since_2012": 2,
+ "burned_past_mha": 7.75024875,
+ "burned_by_year_mha": {
+  "2015": 2.57907447,
+  "2016": 0.43294481999999995,
+  "2017": 0.16176050999999997,
+  "2018": 0.5239692,
+  "2019": 1.6384608900000002,
+  "2020": 0.29177207999999993,
+  "2021": 0.35226774,
+  "2022": 0.20192499,
+  "2023": 1.16120484,
+  "2024": 0.04729005,
+  "2025": 0.35957915999999995,
+  "2026": 0.11178089999999999
+ },
+ "rate26": 30.287040242934307,
+ "classes": {
+  "conc": {
+   "name": "Concessions",
+   "land_mha": 42.13771074,
+   "land_pct": 22.28434280588833,
+   "burned_mha": 1.5268126499999999,
+   "burned_pct": 19.70017607499372,
+   "viirs26": 150715,
+   "viirs26_pct": 26.31652467867177,
+   "rate26": 35.76724918208027,
+   "rate26_outside": 28.71563418324167
+  },
+  "kawasan": {
+   "name": "Forest area",
+   "land_mha": 118.25464176,
+   "land_pct": 62.538446657136966,
+   "burned_mha": 4.46431239,
+   "burned_pct": 57.602181994481136,
+   "viirs26": 369337,
+   "viirs26_pct": 64.49037106622828,
+   "rate26": 31.2323469508771,
+   "rate26_outside": 28.708941956719563
+  },
+  "dmpg": {
+   "name": "DMPG villages",
+   "land_mha": 8.674138710000001,
+   "land_pct": 4.587280067305004,
+   "burned_mha": 1.9215228599999998,
+   "burned_pct": 24.79304757798903,
+   "viirs26": 154575,
+   "viirs26_pct": 26.990523851014753,
+   "rate26": 178.20213068739363,
+   "rate26_outside": 23.17553617379001
+  },
+  "peat": {
+   "name": "Peat",
+   "land_mha": 23.489029979999998,
+   "land_pct": 12.422070090182316,
+   "burned_mha": 2.73528234,
+   "burned_pct": 35.29283289133139,
+   "viirs26": 223067,
+   "viirs26_pct": 38.94999310285821,
+   "rate26": 94.9664588916328,
+   "rate26_outside": 21.11289930727023
+  }
+ },
+ "static_share_shift_max": 0.703138699023576,
+ "month26": {
+  "1": 4618,
+  "2": 2546,
+  "3": 6026,
+  "4": 2837,
+  "5": 2934,
+  "6": 5558,
+  "7": 19295,
+  "8": 134170,
+  "9": 198786,
+  "10": 195931
+ },
+ "month_mean_past": {
+  "1": 2587.909090909091,
+  "2": 3462.5454545454545,
+  "3": 3945.2727272727275,
+  "4": 2671.2727272727275,
+  "5": 2661.5454545454545,
+  "6": 4171.181818181818,
+  "7": 12233.818181818182,
+  "8": 32954.818181818184,
+  "9": 62092.454545454544,
+  "10": 51301.818181818184
+ },
+ "peak_month": 9,
+ "provinces": [
+  {
+   "province": "Kalimantan Tengah",
+   "viirs26": 164968,
+   "rate": 107.50494225376666,
+   "conc_pct": 18.783642888317733
+  },
+  {
+   "province": "Kalimantan Barat",
+   "viirs26": 79375,
+   "rate": 53.982940845252664,
+   "conc_pct": 35.38267716535433
+  },
+  {
+   "province": "Papua Selatan",
+   "viirs26": 72322,
+   "rate": 61.78664165682292,
+   "conc_pct": 15.813998506678466
+  },
+  {
+   "province": "Sumatera Selatan",
+   "viirs26": 49779,
+   "rate": 57.36779425342937,
+   "conc_pct": 47.64258020450391
+  },
+  {
+   "province": "Kalimantan Timur",
+   "viirs26": 30175,
+   "rate": 23.762654595972077,
+   "conc_pct": 63.993371996686
+  },
+  {
+   "province": "Kalimantan Selatan",
+   "viirs26": 24343,
+   "rate": 65.56590870962496,
+   "conc_pct": 28.492790535266813
+  },
+  {
+   "province": "Maluku",
+   "viirs26": 18132,
+   "rate": 39.28023862991932,
+   "conc_pct": 23.345466578424883
+  },
+  {
+   "province": "Papua Barat",
+   "viirs26": 12909,
+   "rate": 21.689116212467184,
+   "conc_pct": 53.265163839181966
+  },
+  {
+   "province": "Nusa Tenggara Timur",
+   "viirs26": 12161,
+   "rate": 26.182669524614525,
+   "conc_pct": 3.6181235095798043
+  },
+  {
+   "province": "Sulawesi Tengah",
+   "viirs26": 10281,
+   "rate": 16.688402739046552,
+   "conc_pct": 21.359789903705867
+  },
+  {
+   "province": "Jawa Timur",
+   "viirs26": 8349,
+   "rate": 17.38009261459787,
+   "conc_pct": 0.9581985866570847
+  },
+  {
+   "province": "Maluku Utara",
+   "viirs26": 8090,
+   "rate": 25.70458540381545,
+   "conc_pct": 44.276885043263285
+  },
+  {
+   "province": "Kepulauan Bangka Belitung",
+   "viirs26": 8030,
+   "rate": 48.11244108757412,
+   "conc_pct": 36.986301369863014
+  },
+  {
+   "province": "Sulawesi Selatan",
+   "viirs26": 8004,
+   "rate": 17.657002469035305,
+   "conc_pct": 13.618190904547726
+  },
+  {
+   "province": "Jambi",
+   "viirs26": 7619,
+   "rate": 15.540541585202226,
+   "conc_pct": 22.706391914949467
+  },
+  {
+   "province": "Sulawesi Tenggara",
+   "viirs26": 7208,
+   "rate": 19.927895025710146,
+   "conc_pct": 14.6503884572697
+  },
+  {
+   "province": "Nusa Tenggara Barat",
+   "viirs26": 6209,
+   "rate": 31.556580450673508,
+   "conc_pct": 6.7804799484619105
+  },
+  {
+   "province": "Riau",
+   "viirs26": 5858,
+   "rate": 6.513522999962442,
+   "conc_pct": 11.300785250938887
+  },
+  {
+   "province": "Lampung",
+   "viirs26": 5506,
+   "rate": 16.401394661883415,
+   "conc_pct": 19.14275335997094
+  },
+  {
+   "province": "Papua Tengah",
+   "viirs26": 4320,
+   "rate": 7.058416528658693,
+   "conc_pct": 7.916666666666667
+  },
+  {
+   "province": "Papua Pegunungan",
+   "viirs26": 3261,
+   "rate": 6.007074620754092,
+   "conc_pct": 0.33731984053971176
+  },
+  {
+   "province": "Kalimantan Utara",
+   "viirs26": 3101,
+   "rate": 4.423615875485208,
+   "conc_pct": 44.27603998710094
+  },
+  {
+   "province": "Sulawesi Utara",
+   "viirs26": 2748,
+   "rate": 18.9428496088498,
+   "conc_pct": 7.569141193595342
+  },
+  {
+   "province": "Aceh",
+   "viirs26": 2652,
+   "rate": 4.666158255998226,
+   "conc_pct": 17.647058823529413
+  },
+  {
+   "province": "Papua Barat Daya",
+   "viirs26": 2564,
+   "rate": 6.553675473738081,
+   "conc_pct": 17.706708268330733
+  },
+  {
+   "province": "Gorontalo",
+   "viirs26": 2358,
+   "rate": 19.608874797109895,
+   "conc_pct": 23.367260390161153
+  },
+  {
+   "province": "Jawa Tengah",
+   "viirs26": 2152,
+   "rate": 6.267183133812665,
+   "conc_pct": 0.8364312267657993
+  },
+  {
+   "province": "Jawa Barat",
+   "viirs26": 2031,
+   "rate": 5.482542184679847,
+   "conc_pct": 1.427868045297883
+  },
+  {
+   "province": "Sulawesi Barat",
+   "viirs26": 1907,
+   "rate": 11.491515838562847,
+   "conc_pct": 3.5658101730466703
+  },
+  {
+   "province": "Sumatera Utara",
+   "viirs26": 1426,
+   "rate": 1.9679000884815354,
+   "conc_pct": 11.640953716690042
+  },
+  {
+   "province": "Kepulauan Riau",
+   "viirs26": 1242,
+   "rate": 15.018180160048093,
+   "conc_pct": 1.0466988727858293
+  },
+  {
+   "province": "Sumatera Barat",
+   "viirs26": 1222,
+   "rate": 2.9012283067033935,
+   "conc_pct": 3.7643207855973815
+  },
+  {
+   "province": "Bengkulu",
+   "viirs26": 893,
+   "rate": 4.4365213042696965,
+   "conc_pct": 6.382978723404255
+  },
+  {
+   "province": "Banten",
+   "viirs26": 681,
+   "rate": 7.28127561276906,
+   "conc_pct": 1.7621145374449338
+  },
+  {
+   "province": "Papua",
+   "viirs26": 655,
+   "rate": 0.808326278989681,
+   "conc_pct": 5.801526717557252
+  },
+  {
+   "province": "Bali",
+   "viirs26": 82,
+   "rate": 1.4668709695931244,
+   "conc_pct": 0.0
+  },
+  {
+   "province": "Daerah Istimewa Yogyakarta",
+   "viirs26": 57,
+   "rate": 1.7977322270278442,
+   "conc_pct": 0.0
+  },
+  {
+   "province": "DKI Jakarta",
+   "viirs26": 31,
+   "rate": 4.689860295113241,
+   "conc_pct": 0.0
+  }
+ ],
+ "top5_share": 69.25411340297991,
+ "completeness_ha_per_hotspot": {
+  "2015": 3.3707927995984965,
+  "2016": 4.502478446706948,
+  "2017": 2.2581211698192223,
+  "2018": 3.3204849206902454,
+  "2019": 4.634665608743986,
+  "2020": 4.296325833431499,
+  "2021": 6.800798100312753,
+  "2022": 4.810830533914659,
+  "2023": 5.849515346601985,
+  "2024": 0.5952926737160121,
+  "2025": 4.792152462184314,
+  "2026": 0.1951819535848549
+ },
+ "rates": [
+  {
+   "group": "Concession type",
+   "label": "Oil palm",
+   "rate": 66.48558094492712,
+   "land_mha": 4.95791712,
+   "viirs26": 32963
+  },
+  {
+   "group": "Concession type",
+   "label": "Plantation forest (PPHTR)",
+   "rate": 151.5789380817407,
+   "land_mha": 0.18135764999999998,
+   "viirs26": 2749
+  },
+  {
+   "group": "Concession type",
+   "label": "Mining",
+   "rate": 28.490662107308044,
+   "land_mha": 7.13040642,
+   "viirs26": 20315
+  },
+  {
+   "group": "Concession type",
+   "label": "Forest concession (PBPH)",
+   "rate": 31.702124789145987,
+   "land_mha": 29.868029550000003,
+   "viirs26": 94688
+  },
+  {
+   "group": "Concession type",
+   "label": "No concession",
+   "rate": 28.71563418324167,
+   "land_mha": 146.95339734000004,
+   "viirs26": 421986
+  },
+  {
+   "group": "Forest area function",
+   "label": "Conservation",
+   "rate": 30.227518571465236,
+   "land_mha": 22.000482719999997,
+   "viirs26": 66502
+  },
+  {
+   "group": "Forest area function",
+   "label": "Protection forest",
+   "rate": 18.69272001913665,
+   "land_mha": 29.24240022,
+   "viirs26": 54662
+  },
+  {
+   "group": "Forest area function",
+   "label": "Production forest",
+   "rate": 31.94464200537587,
+   "land_mha": 55.92831497999999,
+   "viirs26": 178661
+  },
+  {
+   "group": "Forest area function",
+   "label": "Convertible production",
+   "rate": 62.716968663775894,
+   "land_mha": 11.08344384,
+   "viirs26": 69512
+  },
+  {
+   "group": "Forest area function",
+   "label": "Other land use (APL)",
+   "rate": 28.95521359538414,
+   "land_mha": 70.02227744999999,
+   "viirs26": 202751
+  },
+  {
+   "group": "DMPG and peat",
+   "label": "DMPG villages",
+   "rate": 178.20213068739363,
+   "land_mha": 8.674138710000001,
+   "viirs26": 154575
+  },
+  {
+   "group": "DMPG and peat",
+   "label": "Outside DMPG villages",
+   "rate": 23.17553617379001,
+   "land_mha": 180.41696937,
+   "viirs26": 418126
+  },
+  {
+   "group": "DMPG and peat",
+   "label": "Peat",
+   "rate": 94.9664588916328,
+   "land_mha": 23.489029979999998,
+   "viirs26": 223067
+  },
+  {
+   "group": "DMPG and peat",
+   "label": "Not peat or not mapped",
+   "rate": 21.11289930727023,
+   "land_mha": 165.6020781,
+   "viirs26": 349634
+  }
+ ],
+ "dmpg_by_province": [
+  {
+   "province": "Sumatera Utara",
+   "dmpg_rate": 10.318040707250102,
+   "other_rate": 4.9077407247983,
+   "dmpg_km2": 387.67049999999995
+  },
+  {
+   "province": "Riau",
+   "dmpg_rate": 13.423137378104101,
+   "other_rate": 6.347354969751845,
+   "dmpg_km2": 18736.3053
+  },
+  {
+   "province": "Jambi",
+   "dmpg_rate": 46.064406428606674,
+   "other_rate": 33.750938877768824,
+   "dmpg_km2": 4172.418900000001
+  },
+  {
+   "province": "Sumatera Selatan",
+   "dmpg_rate": 158.88758353911925,
+   "other_rate": 119.72821943449065,
+   "dmpg_km2": 8496.5733
+  },
+  {
+   "province": "Papua Selatan",
+   "dmpg_rate": 174.88636081329403,
+   "other_rate": 39.923256318919606,
+   "dmpg_km2": 1420.9227
+  },
+  {
+   "province": "Kalimantan Barat",
+   "dmpg_rate": 220.7476519904782,
+   "other_rate": 113.38909563527406,
+   "dmpg_km2": 9134.865000000002
+  },
+  {
+   "province": "Kalimantan Selatan",
+   "dmpg_rate": 290.0767956111099,
+   "other_rate": 128.04347449931038,
+   "dmpg_km2": 923.2038
+  },
+  {
+   "province": "Kalimantan Tengah",
+   "dmpg_rate": 395.06359344752326,
+   "other_rate": 169.9478028391287,
+   "dmpg_km2": 23305.868099999996
+  }
+ ]
+}

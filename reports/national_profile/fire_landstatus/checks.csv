@@ -1,0 +1,71 @@
+check,basis,measure,value,reference,diff
+t_scope sums to national,all,area_ha,189091108.08,189091108.08,-0.0
+t_scope sums to national,all,burned_any_ha,5612035.86,5612035.86,-0.0
+t_scope sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_scope sums to national,peat,area_ha,23489029.98,23489029.98,0.0
+t_scope sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_scope sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+t_concession_x_forest sums to national,all,area_ha,189091108.08,189091108.08,0.0
+t_concession_x_forest sums to national,all,burned_any_ha,5612035.86,5612035.86,0.0
+t_concession_x_forest sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_concession_x_forest sums to national,peat,area_ha,23489029.98,23489029.98,0.0
+t_concession_x_forest sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_concession_x_forest sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+t_forest_function sums to national,all,area_ha,189091108.08,189091108.08,0.0
+t_forest_function sums to national,all,burned_any_ha,5612035.86,5612035.86,0.0
+t_forest_function sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_forest_function sums to national,peat,area_ha,23489029.98,23489029.98,0.0
+t_forest_function sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_forest_function sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+t_concession_type sums to national,all,area_ha,189091108.08,189091108.08,0.0
+t_concession_type sums to national,all,burned_any_ha,5612035.86,5612035.86,0.0
+t_concession_type sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_concession_type sums to national,peat,area_ha,23489029.98,23489029.98,-0.0
+t_concession_type sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_concession_type sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+t_dmpg sums to national,all,area_ha,189091108.08,189091108.08,-0.0
+t_dmpg sums to national,all,burned_any_ha,5612035.86,5612035.86,0.0
+t_dmpg sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_dmpg sums to national,peat,area_ha,23489029.98,23489029.98,0.0
+t_dmpg sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_dmpg sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+t_island sums to national,all,area_ha,189091108.08,189091108.08,-0.0
+t_island sums to national,all,burned_any_ha,5612035.86,5612035.86,0.0
+t_island sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_island sums to national,peat,area_ha,23489029.98,23489029.98,0.0
+t_island sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_island sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+t_province sums to national,all,area_ha,189091108.08,189091108.08,0.0
+t_province sums to national,all,burned_any_ha,5612035.86,5612035.86,0.0
+t_province sums to national,all,modis_2026_n,199069.0,199069.0,0.0
+t_province sums to national,peat,area_ha,23489029.98,23489029.98,0.0
+t_province sums to national,peat,burned_any_ha,2090577.69,2090577.69,0.0
+t_province sums to national,peat,modis_2026_n,64034.0,64034.0,0.0
+burned raster against exact polygon area,all cells,burned_2015_ha,2632310.01,2632936.682,-626.672
+burned on village land against exact polygon area,all,burned_2015_ha,2579074.47,2632936.682,-53862.212
+burned raster against exact polygon area,all cells,burned_2016_ha,432998.37,433064.489,-66.119
+burned on village land against exact polygon area,all,burned_2016_ha,432944.82,433064.489,-119.669
+burned raster against exact polygon area,all cells,burned_2017_ha,161801.28,163004.334,-1203.054
+burned on village land against exact polygon area,all,burned_2017_ha,161760.51,163004.334,-1243.824
+burned raster against exact polygon area,all cells,burned_2018_ha,523970.19,524844.83,-874.64
+burned on village land against exact polygon area,all,burned_2018_ha,523969.2,524844.83,-875.63
+burned raster against exact polygon area,all cells,burned_2019_ha,1638493.2,1639346.896,-853.696
+burned on village land against exact polygon area,all,burned_2019_ha,1638460.89,1639346.896,-886.006
+burned raster against exact polygon area,all cells,burned_2020_ha,291772.44,292309.447,-537.007
+burned on village land against exact polygon area,all,burned_2020_ha,291772.08,292309.447,-537.367
+burned raster against exact polygon area,all cells,burned_2021_ha,352269.72,352979.429,-709.709
+burned on village land against exact polygon area,all,burned_2021_ha,352267.74,352979.429,-711.689
+burned raster against exact polygon area,all cells,burned_2022_ha,201924.99,202516.731,-591.741
+burned on village land against exact polygon area,all,burned_2022_ha,201924.99,202516.731,-591.741
+burned raster against exact polygon area,all cells,burned_2023_ha,1161204.84,1161729.752,-524.912
+burned on village land against exact polygon area,all,burned_2023_ha,1161204.84,1161729.752,-524.912
+burned raster against exact polygon area,all cells,burned_2024_ha,47290.05,47287.655,2.395
+burned on village land against exact polygon area,all,burned_2024_ha,47290.05,47287.655,2.395
+burned raster against exact polygon area,all cells,burned_2025_ha,359579.16,360201.102,-621.942
+burned on village land against exact polygon area,all,burned_2025_ha,359579.16,360201.102,-621.942
+burned raster against exact polygon area,all cells,burned_2026_ha,111780.9,111974.584,-193.684
+burned on village land against exact polygon area,all,burned_2026_ha,111780.9,111974.584,-193.684
+hotspots in land tiles against the file,all,hotspots_modis_2026.gpkg,236484.0,238425.0,-1941.0
+hotspots in land tiles against the file,all,hotspot_viirs_snpp_2012_2025.gpkg,3350961.0,3350961.0,0.0
+hotspots in land tiles against the file,all,hotspot_viirs_snpp_sp_2026.gpkg,47610.0,52364.0,-4754.0
+hotspots in land tiles against the file,all,hotspot_viirs_snpp_nrt_2026.gpkg,604622.0,619669.0,-15047.0

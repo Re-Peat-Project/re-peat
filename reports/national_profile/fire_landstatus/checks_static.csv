@@ -1,0 +1,2 @@
+file,radius_m,detections,typed_static,flagged,true_pos,false_pos,false_neg,precision,recall
+hotspot_viirs_snpp_sp_2026.gpkg,375,62538,12186,9327,8174,1153,4012,0.876,0.671

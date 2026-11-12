@@ -1,0 +1,117 @@
+# Sources of the numbers in the report
+
+Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-national-fire, repeat-national-fire-tables).
+
+- land_ha = 189091108.08: t_national basis all, area_ha
+- peat_ha = 23489029.98: t_national basis peat, area_ha
+- modis = 199069: t_national basis all, modis_2026_n (medium + high, static left out)
+- modis_high = 45040: t_national basis all, modis_2026_high_n
+- modis_static = 20991: t_national basis all, modis_2026_static_n
+- modis_peat = 64034: t_national basis peat, modis_2026_n
+- viirs26 = 572701: t_national basis all, viirs_2026_n
+- viirs2012 = 289401: t_national basis all, viirs_2012_n
+- viirs2013 = 235199: t_national basis all, viirs_2013_n
+- viirs2014 = 506573: t_national basis all, viirs_2014_n
+- viirs2015 = 811971: t_national basis all, viirs_2015_n
+- viirs2016 = 101781: t_national basis all, viirs_2016_n
+- viirs2017 = 76861: t_national basis all, viirs_2017_n
+- viirs2018 = 166583: t_national basis all, viirs_2018_n
+- viirs2019 = 394718: t_national basis all, viirs_2019_n
+- viirs2020 = 74660: t_national basis all, viirs_2020_n
+- viirs2021 = 54938: t_national basis all, viirs_2021_n
+- viirs2022 = 44726: t_national basis all, viirs_2022_n
+- viirs2023 = 217339: t_national basis all, viirs_2023_n
+- viirs2024 = 83154: t_national basis all, viirs_2024_n
+- viirs2025 = 79286: t_national basis all, viirs_2025_n
+- viirs_ytd_mean = 178082.6364: t_national basis all, mean of viirs_<2015..2025>_ytd_n
+- viirs26_ratio = 3.2159: viirs_2026_ytd_n / mean of viirs_<2015..2025>_ytd_n
+- burned2015 = 2579074.47: t_national basis all, burned_2015_ha
+- burned2016 = 432944.82: t_national basis all, burned_2016_ha
+- burned2017 = 161760.51: t_national basis all, burned_2017_ha
+- burned2018 = 523969.2: t_national basis all, burned_2018_ha
+- burned2019 = 1638460.89: t_national basis all, burned_2019_ha
+- burned2020 = 291772.08: t_national basis all, burned_2020_ha
+- burned2021 = 352267.74: t_national basis all, burned_2021_ha
+- burned2022 = 201924.99: t_national basis all, burned_2022_ha
+- burned2023 = 1161204.84: t_national basis all, burned_2023_ha
+- burned2024 = 47290.05: t_national basis all, burned_2024_ha
+- burned2025 = 359579.16: t_national basis all, burned_2025_ha
+- burned2026 = 111780.9: t_national basis all, burned_2026_ha
+- burned_past_sum = 7750248.75: t_national basis all, sum of burned_<2015..2025>_ha
+- burned_any = 5612035.86: t_national basis all, burned_any_ha
+- burned_2plus = 1488936.42: t_national basis all, burned_2plus_ha
+- burned_peat_share = 0.3529: t_national peat/all, burned 2015-2025
+- conc_area = 0.2228: t_concession_x_forest basis all, area_ha share (conc)
+- conc_burned = 0.197: t_concession_x_forest basis all, burned 2015-2025 share (conc)
+- conc_modis = 0.2468: t_concession_x_forest basis all, modis_2026_n share (conc)
+- conc_rate = 11.6587: t_concession_x_forest basis all, modis_2026_n per 100 km2 (conc)
+- kaw_area = 0.6254: t_concession_x_forest basis all, area_ha share (kaw)
+- kaw_burned = 0.576: t_concession_x_forest basis all, burned 2015-2025 share (kaw)
+- kaw_modis = 0.5749: t_concession_x_forest basis all, modis_2026_n share (kaw)
+- kaw_rate = 9.6773: t_concession_x_forest basis all, modis_2026_n per 100 km2 (kaw)
+- aplnc_area = 0.3193: t_concession_x_forest basis all, area_ha share (aplnc)
+- aplnc_burned = 0.3591: t_concession_x_forest basis all, burned 2015-2025 share (aplnc)
+- aplnc_modis = 0.3398: t_concession_x_forest basis all, modis_2026_n share (aplnc)
+- aplnc_rate = 11.2022: t_concession_x_forest basis all, modis_2026_n per 100 km2 (aplnc)
+- kawnc_area = 0.4537: t_concession_x_forest basis all, area_ha share (kawnc)
+- kawnc_burned = 0.4437: t_concession_x_forest basis all, burned 2015-2025 share (kawnc)
+- kawnc_modis = 0.4128: t_concession_x_forest basis all, modis_2026_n share (kawnc)
+- kawnc_rate = 9.5766: t_concession_x_forest basis all, modis_2026_n per 100 km2 (kawnc)
+- rate_all = 10.5277: t_national basis all, modis_2026_n per 100 km2
+- rate_peat = 27.2612: t_national basis peat, modis_2026_n per 100 km2
+- peat_modis_share = 0.3217: t_national peat/all, modis_2026_n
+- peat_area_share = 0.1242: t_national peat/all, area_ha
+- khg_area = 0.1276: t_scope basis all, in_khg True, area_ha share
+- khg_modis = 0.3399: t_scope basis all, in_khg True, modis_2026_n share
+- khg_burned = 0.3687: t_scope basis all, in_khg True, burned 2015-2025 share
+- dmpg_area = 8674138.71: t_dmpg basis all, dmpg True, area_ha
+- dmpg_modis_share = 0.2068: t_dmpg basis all, dmpg True, modis_2026_n share
+- dmpg_burned_share = 0.2479: t_dmpg basis all, dmpg True, burned 2015-2025 share
+- dmpgc_prov = 10: t_dmpg_comparable, provinces
+- dmpgc_in_area = 6665700.78: t_dmpg_comparable dmpg True, area_ha (peat)
+- dmpgc_in_rate = 203.0979: t_dmpg_comparable dmpg True, viirs_2026_n per 100 km2 of peat
+- dmpgc_in_ever = 0.1835: t_dmpg_comparable dmpg True, burned_any_ha / area_ha
+- dmpgc_in_ratio = 3.6517: t_dmpg_comparable dmpg True, viirs_2026_ytd_n / mean 2015-2025
+- dmpgc_out_area = 11466200.79: t_dmpg_comparable dmpg False, area_ha (peat)
+- dmpgc_out_rate = 68.2397: t_dmpg_comparable dmpg False, viirs_2026_n per 100 km2 of peat
+- dmpgc_out_ever = 0.0668: t_dmpg_comparable dmpg False, burned_any_ha / area_ha
+- dmpgc_out_ratio = 3.5653: t_dmpg_comparable dmpg False, viirs_2026_ytd_n / mean 2015-2025
+- hapd = {2015: 3.176, 2016: 4.254, 2017: 2.105, 2018: 3.145, 2019: 4.151, 2020: 3.908, 2021: 6.412, 2022: 4.515, 2023: 5.343, 2024: 0.569, 2025: 4.535, 2026: 0.195}: t_completeness scope Indonesia, ha_per_detection
+- hapd_lo = 2.105: t_completeness, min over complete years
+- hapd_hi = 6.412: t_completeness, max over complete years
+- hapd_prov = [('Kalimantan Tengah', 0.02, 164968), ('Kalimantan Barat', 0.362, 79375), ('Papua Selatan', 0.087, 72322), ('Sumatera Selatan', 0.013, 49779)]: t_completeness scope province, 2026, top 4 by viirs_n
+- raster_err_max = 0.0074: checks_burned_tiles, max over years of |raster-exact|/exact
+- raster_err_all = -0.0009: checks_burned_tiles, all years
+- png_2015 = 53235.54: checks_burned_tiles 2015, raster_ha - raster_land_ha
+- static_prec = 0.876: checks_static, precision
+- static_rec = 0.671: checks_static, recall
+- khg_area_med = 0.0009: checks_khg_area, median |rel_diff|
+- khg_forest_max = 0.0187: checks_khg_forest, max class |diff|/land (mapped classes)
+- out_modis = 4517: hotspots_outside_villages, modis
+- out_viirs = 41322: hotspots_outside_villages, viirs
+- peat_unknown = 141098789.7: area.parquet, peat code 3 (peat tile not fetched)
+- peat_unknown_in_khg = 0.0: area.parquet, peat code 3 inside KHG
+- L_vil = 83519: village layer, rows
+- L_prov = 38: village layer, PROV_2023 distinct
+- L_kab = 517: village layer, province and district pairs
+- L_lic = {'Pertambangan': 5776, 'PPHKM': 3160, 'PBPH': 2416, 'Perkebunan Kelapa Sawit': 1610, 'PPHTR': 353}: licence layer, IZIN_USAHA counts
+- L_kws = 4265: forest area layer, rows
+- L_kws_codes = 21: forest area layer, Fungsi distinct
+- L_dmpg = 838: DMPG layer, rows
+- L_dmpg_prov = 10: DMPG layer, PROVINSI distinct
+- viirs2015_ytd = 765124: t_national, viirs_2015_ytd_n
+- viirs_prev_max_year = 2019: t_national, year of max viirs_<2016..2025>_ytd_n
+- viirs_prev_max = 353523: t_national, max viirs_<2016..2025>_ytd_n
+- viirs26_rank_text = the second highest since 2012, after 2015 (765,124): t_national, viirs_<2012..2026>_ytd_n ranked
+- q03 = ('inconclusive', 0.8712136636584511, 0.6018179988322484, 1.1358541221475897, 28): national_profile/hypotheses/hypotheses.json q03
+
+Figures stated in the text from other workspace files
+
+- 43.7% of Mendahara-Batanghari as tree crops with no licence: repeat-neraca/docs/reports/forest_type_managed.md, table of KHG Sungai Mendahara - Sungai Batanghari, row tree_crop, column no licence (ForTy 2020, share of the KHG area).
+- MODIS file joins KLH and NASA FIRMS at 15 September 2026, FIRMS 4.3% more detections over 1 to 15 September: re-peat/docs/15-national-profile.md, section This year's hotspots (from reports/investigations/hotspot_splice/hotspot_splice.md).
+- 2026 test of DMPG villages (ratio, interval, verdict): re-peat/reports/national_profile/hypotheses/hypotheses.json, question q03.
+
+References cited
+
+- Miettinen, J., Shi, C., & Liew, S. C. (2016). Land cover distribution in the peatlands of Peninsular Malaysia, Sumatra and Borneo in 2015 with changes since 1990. Global Ecology and Conservation, 6, 67-78. https://doi.org/10.1016/j.gecco.2016.02.004
+- Gumbricht, T., Roman-Cuesta, R. M., Verchot, L., Herold, M., Wittmann, F., Householder, E., Herold, N., & Murdiyarso, D. (2017). An expert system model for mapping tropical wetlands and peatlands reveals South America as the largest contributor. Global Change Biology, 23(9), 3581-3599. https://doi.org/10.1111/gcb.13689
