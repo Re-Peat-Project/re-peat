@@ -26,12 +26,14 @@ from pathlib import Path
 
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+import pyogrio  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 WORKSPACE = HERE.parents[1]
 SRC = Path(os.environ.get("REPEAT_WORK", WORKSPACE / "re-peat" / "reports")) / "national_profile" / "fire_landstatus"
 REPORT_OUT = WORKSPACE / "re-peat" / "reports" / "fire_landstatus"
 SLIDES = WORKSPACE / "_slides"
+DATA = Path(os.environ.get("REPEAT_DATA", WORKSPACE / "_data"))
 PAST = list(range(2015, 2026))
 NOW = 2026
 CONC = 1 | 2 | 4 | 8            # licence bits that are concessions (PPHKM, 16, is not)
@@ -142,6 +144,18 @@ def facts(a, h, meta):
         if ai >= 1e4 and ao >= 1e4:                        # at least 100 km2 of peat on each side
             D.append({"province": p, "dmpg_rate": hi / ai * 1e4, "other_rate": ho / ao * 1e4, "dmpg_km2": ai / 100})
     F["dmpg_by_province"] = sorted(D, key=lambda r: r["dmpg_rate"])
+    # the same comparison every year (1 January to the last date of this year): peat of the provinces that hold DMPG village peat
+    va = viirs(h, None)
+    va = va[va["peat_"] & va["province"].isin(dprov)]
+    pd_ = pa[pa["province"].isin(dprov)]
+    ad, ao = pd_.loc[pd_["dmpg"], "area_ha"].sum(), pd_.loc[~pd_["dmpg"], "area_ha"].sum()
+    hy = va.groupby(["year", "dmpg"])["n"].sum().unstack(fill_value=0)
+    F["dmpg_years"] = [{"year": int(y), "dmpg_rate": float(r.get(True, 0) / ad * 1e4), "other_rate": float(r.get(False, 0) / ao * 1e4)}
+                       for y, r in hy.iterrows() if y >= PAST[0]]
+    F["dmpg_years_provinces"], F["dmpg_years_mha"] = len(dprov), [ad / 1e6, ao / 1e6]
+    sk = pyogrio.read_dataframe(DATA / "dpg" / "dmpg_villages_sitmat.gpkg", layer="dmpg_villages", columns=["Skema_DPG"], read_geometry=False)["Skema_DPG"]
+    yrs = pd.to_numeric(sk.astype(str).str.extract(r"((?:19|20)\d{2})")[0], errors="coerce")
+    F["dmpg_first_year"] = int(yrs.min())
     return F
 
 
@@ -192,15 +206,20 @@ def figdata(F, a, h):
     names = dict(zip(reg["khg_code"], reg["name"].str.replace("KHG ", "", regex=False).str.replace("Sungai ", "", regex=False)))
     D["khg"] = [{"id": k, "name": names.get(k, k), "km2": float(r["area_ha"] / 100), "n": int(r["viirs_2026_n"]),
                  "rate": float(r["viirs_2026_n"] / r["area_ha"] * 1e4), "conc_pct": float(100 * r["conc"] / r["viirs_2026_n"])} for k, r in g.iterrows()]
-    # times burned (burn years 2015-2026) by concession x forest group and by DMPG village, all land
+    # times burned (burn years 2015-2026) by concession x forest group (all land) and DMPG village peat against other peat
     tb = pd.read_csv(SRC / "tables" / "t_times_burned.csv")
     tb = tb[tb["basis"] == "all"]
     hc = ["unburned_ha", "burned_1x_ha", "burned_2x_ha", "burned_3x_ha", "burned_4plus_ha"]
     D["times"] = []
     for (c, g), r in tb[tb["forest_group"] != "other"].groupby(["concession_any", "forest_group"])[hc].sum().iterrows():
         D["times"].append({"set": "conc", "conc": bool(c), "group": g, "ha": [float(v) for v in r]})
-    for d, r in tb.groupby("dmpg")[hc].sum().iterrows():
-        D["times"].append({"set": "dmpg", "dmpg": bool(d), "ha": [float(v) for v in r]})
+    # DMPG: like for like, KLH peat of the provinces that hold DMPG village peat (as F["dmpg_years"])
+    dprov = a.loc[a["peat_"] & a["dmpg"], "province"].unique()
+    pa = a[a["peat_"] & a["province"].isin(dprov)]
+    for d, r in pa.groupby("dmpg")[["area_ha", "burned_any_ha", "burned_2x_ha", "burned_3x_ha", "burned_4plus_ha"]].sum().iterrows():
+        once = r["burned_any_ha"] - r["burned_2x_ha"] - r["burned_3x_ha"] - r["burned_4plus_ha"]
+        D["times"].append({"set": "dmpg", "dmpg": bool(d), "basis": "peat, provinces with DMPG villages",
+                           "ha": [float(r["area_ha"] - r["burned_any_ha"]), float(once), float(r["burned_2x_ha"]), float(r["burned_3x_ha"]), float(r["burned_4plus_ha"])]})
     D["times_total"] = [float(v) for v in tb[hc].sum()]
     # KLH priority area (repeat-national-ppeg) and who covers it (re-peat/tools/ppeg_roles.py)
     pdir, rdir = SRC.parent / "ppeg", WORKSPACE / "re-peat" / "reports" / "ppeg_roles"

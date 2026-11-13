@@ -82,7 +82,7 @@
     const [w, h] = size(640, 300, 880, 430)
     const svg = chart('shares', 'share of the land against share of the fire, and hotspot density inside each class against the rest of the land', w, h)
     const M = [['land_pct', 'share of the land', C.muted], ['burned_pct', `burned area ${PAST[0]}–${PAST[1]}`, C.blue], ['viirs26_pct', `hotspots ${NOW}`, C.orange]]
-    const cls = [['dmpg', 'DMPG villages'], ['peat', 'Peat'], ['conc', 'Concessions'], ['kawasan', 'Forest area']]
+    const cls = [['peat', 'Peat'], ['conc', 'Concessions'], ['kawasan', 'Forest area']]   // DMPG: like-for-like in dmpg_years
       .map(([k, n]) => ({ k, n, c: F.classes[k] })).sort((a, b) => b.c.rate26 / b.c.rate26_outside - a.c.rate26 / a.c.rate26_outside)
     const L = R ? 120 : 170, top = R ? 80 : 112, rh = (h - top - (R ? 26 : 34)) / cls.length
     const xa = d3.scaleLinear([0, 70], [L, L + (w - L) * 0.47]), xb = d3.scaleLinear([0, 200], [xa(70) + (R ? 70 : 96), w - (R ? 86 : 118)])
@@ -261,6 +261,37 @@
       txt(svg, L - 8, y, p.province, { anchor: 'end', size: fsT, fill: C.ink2 })
     })
     legend(svg, [['DMPG village peat', C.magenta], ['Other peat', C.blue]], L, 10)
+  }
+
+  // ---- 8b DMPG village peat against other peat in the same provinces, every year (same window) ----
+  {
+    const P = F.dmpg_years, y0 = F.dmpg_first_year
+    const [w, h] = size(640, 300, 880, 470)
+    const svg = chart('dmpg_years', `VIIRS hotspots per 100 km² of peat, DMPG villages and other peat in the same ${F.dmpg_years_provinces} provinces, 1 January to the last ${NOW} date`, w, h)
+    const m = { l: 46, r: R ? 128 : 178, t: R ? 46 : 66, b: 26 }
+    const x = d3.scaleLinear(d3.extent(P, (p) => p.year), [m.l, w - m.r])
+    const y = d3.scaleLinear([0, d3.max(P, (p) => p.dmpg_rate) * 1.12], [h - m.b, m.t]).nice()
+    svg.append('rect').attr('x', m.l).attr('y', m.t - 4).attr('width', x(y0) - m.l).attr('height', h - m.b - m.t + 4).attr('fill', C.track)
+    gridY(svg, y, m.l, w - m.r, 4, (v) => v)
+    P.forEach((p) => { if (p.year % 2 === 1 || p.year === NOW) txt(svg, x(p.year), h - m.b + 14, p.year, { anchor: 'middle', size: fsT, fill: C.muted }) })
+    txt(svg, (m.l + x(y0)) / 2, m.t + 4, 'Before DMPG', { anchor: 'middle', size: fsT, fill: C.ink2, weight: 600 })
+    svg.append('line').attr('x1', x(y0)).attr('x2', x(y0)).attr('y1', m.t - 4).attr('y2', h - m.b).attr('stroke', C.ink2).attr('stroke-dasharray', '3 3')
+    txt(svg, x(y0) + 6, m.t + 4, `${y0}: first DMPG villages`, { size: fsT, fill: C.ink2 })
+    line(svg, P.map((p) => [p.year, p.other_rate]), x, y, C.blue)
+    line(svg, P.map((p) => [p.year, p.dmpg_rate]), x, y, C.magenta)
+    P.filter((p) => p.other_rate >= 10).forEach((p) => {
+      svg.append('circle').attr('cx', x(p.year)).attr('cy', y(p.dmpg_rate)).attr('r', 4).attr('fill', C.magenta).attr('stroke', '#fff').attr('stroke-width', 2)
+      svg.append('circle').attr('cx', x(p.year)).attr('cy', y(p.other_rate)).attr('r', 4).attr('fill', C.blue).attr('stroke', '#fff').attr('stroke-width', 2)
+      const last = p.year === NOW
+      txt(svg, x(p.year) + (last ? -10 : 0), y(p.dmpg_rate) - (last ? 0 : R ? 12 : 16), `${(p.dmpg_rate / p.other_rate).toFixed(1)}×`, { anchor: last ? 'end' : 'middle', size: fsS, weight: 600, halo: true })
+    })
+    const e = P.at(-1)
+    txt(svg, w - m.r + 10, y(e.dmpg_rate), 'DMPG village peat', { size: fsS, weight: 600 })
+    txt(svg, w - m.r + 10, y(e.dmpg_rate) + fsS + 4, `${F.dmpg_years_mha[0].toFixed(1)} Mha`, { size: fsT, fill: C.muted })
+    txt(svg, w - m.r + 10, y(e.other_rate), 'Other peat', { size: fsS, weight: 600 })
+    txt(svg, w - m.r + 10, y(e.other_rate) + fsS + 4, `${F.dmpg_years_mha[1].toFixed(1)} Mha`, { size: fsT, fill: C.muted })
+    legend(svg, [['DMPG village peat', C.magenta], ['Other peat, same provinces', C.blue]], m.l, 10)
+    txt(svg, m.l, 10 + fsT + 10, `Labels: DMPG peat against other peat in fire years. Hotspots per 100 km², 1 January to ${new Date(F.window_end).toLocaleString('en-GB', { day: 'numeric', month: 'long' })} each year`, { size: fsT, fill: C.muted })
   }
 
   // ---- 9 mosaic (Marimekko): forest group x concession, all land and peat ----
@@ -513,7 +544,7 @@
     const T = D.times, tot = D.times_total, tot2 = tot[2] + tot[3] + tot[4], totA = d3.sum(tot)
     const rows = [
       ...[[true, 'kawasan'], [true, 'apl'], [false, 'kawasan'], [false, 'apl']].map(([c, g]) => ({ r: T.find((d) => d.set === 'conc' && d.conc === c && d.group === g), label: `${c ? 'Concession' : 'No concession'} · ${g === 'kawasan' ? 'forest area' : 'APL'}`, sec: 0 })),
-      ...[true, false].map((d) => ({ r: T.find((x) => x.set === 'dmpg' && x.dmpg === d), label: d ? 'DMPG villages' : 'Other villages', sec: 1 }))]
+      ...[true, false].map((d) => ({ r: T.find((x) => x.set === 'dmpg' && x.dmpg === d), label: d ? 'DMPG village peat' : 'Other peat', sec: 1 }))]
     const L = R ? 150 : 210, top = R ? 54 : 84, rh = R ? 30 : 46, gap = R ? 18 : 26, ly = R ? 30 : 46
     const [w, h] = size(640, top + rows.length * rh + gap + 34, 880, top + rows.length * rh + gap + 44)
     const svg = chart('repeat', 'land burned once, twice, three and four or more times in 2015-2026, and shares of the land burned twice or more', w, h)

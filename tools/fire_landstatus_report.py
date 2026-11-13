@@ -177,6 +177,7 @@ def numbers(T, meta, chk):
         put(f"dmpgc_{lab}_area", dc.loc[k, "area_ha"], f"t_dmpg_comparable dmpg {k}, area_ha (peat)")
         put(f"dmpgc_{lab}_rate", rate(dc.loc[k, "viirs_2026_n"], dc.loc[k, "area_ha"]), f"t_dmpg_comparable dmpg {k}, viirs_2026_n per 100 km2 of peat")
         put(f"dmpgc_{lab}_ever", dc.loc[k, "burned_any_ha"] / dc.loc[k, "area_ha"], f"t_dmpg_comparable dmpg {k}, burned_any_ha / area_ha")
+        put(f"dmpgc_{lab}_rep", dc.loc[k, "burned_2plus_ha"] / dc.loc[k, "area_ha"], f"t_dmpg_comparable dmpg {k}, burned_2plus_ha / area_ha")
         vm = np.mean([dc.loc[k, f"viirs_{y}_ytd_n"] for y in range(PAST[0], PAST[1] + 1)])
         put(f"dmpgc_{lab}_ratio", dc.loc[k, "viirs_2026_ytd_n"] / vm, f"t_dmpg_comparable dmpg {k}, viirs_2026_ytd_n / mean 2015-2025")
     # completeness
@@ -289,6 +290,8 @@ def chapters(T, meta, N, figs, FX):
     hp = N["hapd_prov"]
     c, k_, dm_, pt_ = FX["classes"]["conc"], FX["classes"]["kawasan"], FX["classes"]["dmpg"], FX["classes"]["peat"]
     vend = pd.Timestamp(FX["window_end"]).strftime("%d %B %Y").lstrip("0")
+    fyr = [(d["year"], d["dmpg_rate"] / d["other_rate"]) for d in FX["dmpg_years"] if d["other_rate"] >= 10]
+    fy_lo, fy_hi, fy_first = min(r for _, r in fyr), max(r for _, r in fyr), fyr[0]
     C["01_summary"] = f"""# 1 Summary
 
 This report sets out where Indonesia's burned area of 2015 to 2025 and its hotspots of 2026 fall with respect to business licences (concessions), the forest area (*kawasan hutan*), the villages of the Desa Mandiri Peduli Gambut programme (DMPG) and peat. It covers all land inside the 2023 village boundaries, {mha(N['land_ha'])}. The figures say where fires were observed. They do not show the cause of a fire or who is responsible for it. The last chapters set out KLH's priority area for peat restoration, who covers which part of it and the roles of the ministries.
@@ -299,7 +302,7 @@ This report sets out where Indonesia's burned area of 2015 to 2025 and its hotsp
 - Concessions hold {c['land_pct']:.0f}% of the land, {c['burned_pct']:.0f}% of the area burned in 2015 to 2025 ({c['burned_mha']:.2f} of {FX['burned_past_mha']:.2f} million ha) and {c['viirs26_pct']:.0f}% of the 2026 hotspots ({n0(c['viirs26'])}). They had {c['rate26']:.0f} hotspots per 100 km² in 2026, against {c['rate26_outside']:.0f} outside them.
 - The forest area holds {k_['land_pct']:.0f}% of the land, {k_['burned_pct']:.0f}% of the burned area and {k_['viirs26_pct']:.0f}% of the 2026 hotspots.
 - Peat covers {pt_['land_pct']:.0f}% of the land and holds {pt_['burned_pct']:.0f}% of the burned area and {pt_['viirs26_pct']:.0f}% of the 2026 hotspots.
-- DMPG villages cover {dm_['land_pct']:.0f}% of the land and hold {dm_['viirs26_pct']:.0f}% of the 2026 hotspots. The programme works on fire-prone peat; within their provinces, DMPG village peat had {n1(N['dmpgc_in_rate'])} hotspots per 100 km² in 2026 against {n1(N['dmpgc_out_rate'])} on other peat, and hotspots rose about as much in both ({N['dmpgc_in_ratio']:.1f} and {N['dmpgc_out_ratio']:.1f} times the 2015 to 2025 mean).
+- DMPG villages cover {dm_['land_pct']:.0f}% of the land and hold {dm_['viirs26_pct']:.0f}% of the 2026 hotspots, because they lie on the most fire-prone peat. Within their provinces, DMPG village peat had {fy_lo:.1f} to {fy_hi:.1f} times the hotspot density of other peat in every fire year since {fy_first[0]} ({fy_first[1]:.1f} times in {fy_first[0]}, before the first villages joined in {FX['dmpg_first_year']}). In 2026 it had {n1(N['dmpgc_in_rate'])} hotspots per 100 km² against {n1(N['dmpgc_out_rate'])} on other peat, and hotspots rose about as much in both ({N['dmpgc_in_ratio']:.1f} and {N['dmpgc_out_ratio']:.1f} times the 2015 to 2025 mean) (chapter 9).
 - {mha(N['rep_ha'])} burned in two or more different years of 2015 to 2026. Concessions hold {P(N['rep_conc_share'])} of this repeatedly burned land and DMPG villages {P(N['rep_dmpg_share'])} (chapter 10).
 - Five provinces hold {FX['top5_share']:.0f}% of the 2026 hotspots.
 - KLH's priority area is {mha(N['pr_ha'])} of peat with damaged ecosystem status (SKEG 2024) in {N['pr_khg']} priority KHG (chapter 13). KLH assigns {P((N['pr_actors'][0]['ha'] + N['pr_actors'][1]['ha']) / N['pr_ha'])} of it to licence holders, inside their licences or in the 5 km buffer around them, {P(N['pr_actors'][2]['ha'] / N['pr_ha'])} to the Ministry of Forestry and {P(N['pr_actors'][3]['ha'] / N['pr_ha'])} to KLH/BPLH (chapters 14 and 15).
@@ -459,6 +462,10 @@ Of the area burned in 2015 to 2025, {100 * b_kaw_nc / bsum:.0f}% lay in the fore
 
 DMPG villages cover {mha(N['dmpg_area'])}, {P(N['dmpg_area'] / N['land_ha'])} of the land, and hold {P(N['dmpg_burned_share'])} of the burned area of 2015 to 2025 and {FX['classes']['dmpg']['viirs26_pct']:.0f}% of the 2026 VIIRS hotspots. The programme chose villages on fire-prone peat, so the comparison below keeps to peat in the {N['dmpgc_prov']} provinces that hold DMPG villages.
 
+![VIIRS hotspots per 100 km² of peat in DMPG villages and on other peat in the same {N['dmpgc_prov']} provinces, 1 January to {vend[:-5]} of each year; labels give the ratio in fire years. Source: NASA FIRMS VIIRS S-NPP, SiTMAT DMPG villages, KLH peat (PPEG 2026).]({figs['dmpg_years']})
+
+DMPG village peat had more hotspots per km² than other peat in every fire year, {fy_lo:.1f} to {fy_hi:.1f} times as many. The gap was already there in {fy_first[0]} ({fy_first[1]:.1f} times), before the first villages joined the programme in {FX['dmpg_first_year']}, so it reflects where the programme was placed. It has stayed in that range since, so these counts neither show nor rule out an effect of the programme. The village list of today is used for every year, although villages joined between {FX['dmpg_first_year']} and 2024.
+
 ![VIIRS hotspots of 2026 per 100 km² of peat in DMPG villages and on other peat, by province (provinces with at least 100 km² of peat on each side). Source: NASA FIRMS VIIRS S-NPP, SiTMAT DMPG villages, KLH peat (PPEG 2026).]({figs['dmpg']})
 
 On this comparable land, {P(N['dmpgc_in_ever'])} of the DMPG village peat burned at least once in 2015 to 2026, against {P(N['dmpgc_out_ever'])} of other peat. VIIRS hotspots of 2026 were {N['dmpgc_in_ratio']:.1f} times the 2015 to 2025 mean in DMPG villages and {N['dmpgc_out_ratio']:.1f} times elsewhere. {qtext} Table A.7 gives the values.
@@ -488,11 +495,11 @@ On this comparable land, {P(N['dmpgc_in_ever'])} of the DMPG village peat burned
 
 Of the {mha(tot['land'])} of land, {mha(tot['ever'])} burned at least once in 2015 to 2026 and {mha(tot['rep'])} burned in two or more different years: {mha(tot['burned_2x_ha'])} twice, {mha(tot['burned_3x_ha'])} three times and {mha(tot['burned_4plus_ha'])} four times or more. A cell counts as burned twice when the burned-area maps of two different years cover it. The maps of 2024 and 2026 are incomplete (chapter 5), so these counts are lower bounds.
 
-![Left: share of each class burned once, twice, three times and four or more times in 2015 to 2026. Right: each class's share of all land burned twice or more (bar) against its share of the land (tick). Source: KLHK burned area, licences 2025, forest area 2023, SiTMAT DMPG villages.]({figs['repeat']})
+![Left: share of each class burned once, twice, three times and four or more times in 2015 to 2026. Right: each class's share of all land burned twice or more (bar) against its share of the land (tick). DMPG rows: KLH peat in the provinces with DMPG villages. Source: KLHK burned area, licences 2025, forest area 2023, SiTMAT DMPG villages, KLH peat (PPEG 2026).]({figs['repeat']})
 
 Most repeatedly burned land lies outside concessions: {P(k_nc['rep'] / tot['rep'])} in the forest area and {P(a_nc['rep'] / tot['rep'])} in other land use (APL) without a licence. Concessions hold {P(ccon['land'] / tot['land'])} of the land, {P(ccon['ever'] / tot['ever'])} of the land ever burned and {P(ccon['rep'] / tot['rep'])} of the land burned twice or more. Inside concessions, burned land burned again less often: {100 * k_c['rep'] / k_c['ever']:.0f}% of the ever-burned land in the forest area and {100 * a_c['rep'] / a_c['ever']:.0f}% in APL, against {100 * k_nc['rep'] / k_nc['ever']:.0f}% and {100 * a_nc['rep'] / a_nc['ever']:.0f}% outside them.
 
-DMPG villages cover {P(dmy['land'] / tot['land'])} of the land and hold {P(dmy['ever'] / tot['ever'])} of the land ever burned and {P(dmy['rep'] / tot['rep'])} of the land burned twice or more. {100 * dmy['ever'] / dmy['land']:.1f}% of their land burned at least once, against {100 * dmn['ever'] / dmn['land']:.1f}% elsewhere; the programme chose villages on fire-prone peat (chapter 9). Within burned land the share that burned again is about the same in and outside DMPG villages ({100 * dmy['rep'] / dmy['ever']:.0f}% and {100 * dmn['rep'] / dmn['ever']:.0f}%). Table A.11 gives the values.
+DMPG villages cover {P(dmy['land'] / tot['land'])} of the land and hold {P(dmy['ever'] / tot['ever'])} of the land ever burned and {P(dmy['rep'] / tot['rep'])} of the land burned twice or more. They lie on the most fire-prone peat (chapter 9). On peat in the provinces with DMPG villages, {100 * N['dmpgc_in_ever']:.1f}% of DMPG village peat burned at least once, against {100 * N['dmpgc_out_ever']:.1f}% of other peat, and {100 * N['dmpgc_in_rep']:.1f}% against {100 * N['dmpgc_out_rep']:.1f}% burned twice or more, a gap similar to that in the hotspots. Within burned land the share that burned again is about the same in and outside DMPG villages ({100 * dmy['rep'] / dmy['ever']:.0f}% and {100 * dmn['rep'] / dmn['ever']:.0f}%). Table A.11 gives the values.
 """
     isl = basis(T["t_island"], "all")
     h, r = class_table(isl, "island", {k: k.replace("Pulau ", "") for k in isl["island"]})

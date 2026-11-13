@@ -8,7 +8,7 @@ This report sets out where Indonesia's burned area of 2015 to 2025 and its hotsp
 - Concessions hold 22% of the land, 20% of the area burned in 2015 to 2025 (1.53 of 7.75 million ha) and 26% of the 2026 hotspots (150,715). They had 36 hotspots per 100 km² in 2026, against 29 outside them.
 - The forest area holds 63% of the land, 58% of the burned area and 64% of the 2026 hotspots.
 - Peat covers 7% of the land and holds 25% of the burned area and 32% of the 2026 hotspots.
-- DMPG villages cover 5% of the land and hold 27% of the 2026 hotspots. The programme works on fire-prone peat; within their provinces, DMPG village peat had 221.8 hotspots per 100 km² in 2026 against 81.7 on other peat, and hotspots rose about as much in both (3.7 and 3.4 times the 2015 to 2025 mean).
+- DMPG villages cover 5% of the land and hold 27% of the 2026 hotspots, because they lie on the most fire-prone peat. Within their provinces, DMPG village peat had 2.3 to 3.0 times the hotspot density of other peat in every fire year since 2015 (2.5 times in 2015, before the first villages joined in 2017). In 2026 it had 221.8 hotspots per 100 km² against 81.7 on other peat, and hotspots rose about as much in both (3.7 and 3.4 times the 2015 to 2025 mean) (chapter 9).
 - 1.5 million ha burned in two or more different years of 2015 to 2026. Concessions hold 15% of this repeatedly burned land and DMPG villages 26% (chapter 10).
 - Five provinces hold 69% of the 2026 hotspots.
 - KLH's priority area is 3.3 million ha of peat with damaged ecosystem status (SKEG 2024) in 362 priority KHG (chapter 13). KLH assigns 78% of it to licence holders, inside their licences or in the 5 km buffer around them, 13% to the Ministry of Forestry and 9% to KLH/BPLH (chapters 14 and 15).

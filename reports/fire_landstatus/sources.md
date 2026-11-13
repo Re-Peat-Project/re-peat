@@ -71,10 +71,12 @@ Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-na
 - dmpgc_in_area = 5523206.58: t_dmpg_comparable dmpg True, area_ha (peat)
 - dmpgc_in_rate = 221.8204: t_dmpg_comparable dmpg True, viirs_2026_n per 100 km2 of peat
 - dmpgc_in_ever = 0.1843: t_dmpg_comparable dmpg True, burned_any_ha / area_ha
+- dmpgc_in_rep = 0.0477: t_dmpg_comparable dmpg True, burned_2plus_ha / area_ha
 - dmpgc_in_ratio = 3.6773: t_dmpg_comparable dmpg True, viirs_2026_ytd_n / mean 2015-2025
 - dmpgc_out_area = 6604914.06: t_dmpg_comparable dmpg False, area_ha (peat)
 - dmpgc_out_rate = 81.671: t_dmpg_comparable dmpg False, viirs_2026_n per 100 km2 of peat
 - dmpgc_out_ever = 0.0679: t_dmpg_comparable dmpg False, burned_any_ha / area_ha
+- dmpgc_out_rep = 0.0147: t_dmpg_comparable dmpg False, burned_2plus_ha / area_ha
 - dmpgc_out_ratio = 3.3511: t_dmpg_comparable dmpg False, viirs_2026_ytd_n / mean 2015-2025
 - hapd = {2015: 3.176, 2016: 4.254, 2017: 2.105, 2018: 3.145, 2019: 4.151, 2020: 3.908, 2021: 6.412, 2022: 4.515, 2023: 5.343, 2024: 0.569, 2025: 4.535, 2026: 0.195}: t_completeness scope Indonesia, ha_per_detection
 - hapd_lo = 2.105: t_completeness, min over complete years
