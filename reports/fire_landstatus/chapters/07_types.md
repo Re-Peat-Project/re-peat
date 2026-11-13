@@ -1,24 +1,9 @@
 # 7 Concession types
 
-In Table 7.1 every cell counts once: where licences overlap, the land goes to the first type in the order of the table. Table 7.2 counts each licence type over all the land it covers, so overlapping licences appear under each of their types and the rows do not add up; community forest permits (PPHKM), which are not concessions, are shown for comparison.
+![VIIRS hotspots of 2026 by concession type (inner ring) and the forest area function inside each type (outer ring). Source: this analysis.](re-peat/reports/fire_landstatus/figures/fig_sunburst.png)
 
-Table: Land, burned area and hotspots by concession type, each cell counted once, all land. Source: this analysis.
+Most 2026 hotspots lie outside any concession (74%). Of those inside one, most are in forest concessions (PBPH, 17% of all hotspots) and oil palm (6%).
 
-| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
-|---|---|---|---|---|---|---|---|---|---|
-| Oil palm | 4,958 | 3% | 388 | 5% | 6.0 | 32,963 | 6% | 66.5 | 3.4 |
-| Mining | 7,130 | 4% | 137 | 2% | 1.5 | 20,315 | 4% | 28.5 | 2.5 |
-| Plantation forest (PPHTR) | 181 | 0% | 13.7 | 0% | 5.8 | 2,749 | 0% | 151.6 | 6.2 |
-| Forest concession (PBPH) | 29,868 | 16% | 988 | 13% | 2.9 | 94,688 | 17% | 31.7 | 3.4 |
-| No concession | 146,953 | 78% | 6,223 | 80% | 3.0 | 421,986 | 74% | 28.7 | 3.2 |
+![Land by concession type and forest area function (box size), coloured by VIIRS hotspots of 2026 per 100 km². Source: this analysis.](re-peat/reports/fire_landstatus/figures/fig_treemap.png)
 
-Table: The same by licence type, overlapping licences counted under each type. Shares are of all land. Source: this analysis.
-
-| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
-|---|---|---|---|---|---|---|---|---|---|
-| Oil palm | 4,958 | 3% | 388 | 5% | 6.0 | 32,963 | 6% | 66.5 | 3.4 |
-| Mining | 7,130 | 4% | 137 | 2% | 1.5 | 20,315 | 4% | 28.5 | 2.5 |
-| Plantation forest (PPHTR) | 181 | 0% | 13.7 | 0% | 5.8 | 2,749 | 0% | 151.6 | 6.2 |
-| Forest concession (PBPH) | 29,868 | 16% | 988 | 13% | 2.9 | 94,688 | 17% | 31.7 | 3.4 |
-| Community forest (PPHKM) | 1,116 | 1% | 58.2 | 1% | 4.2 | 5,696 | 1% | 51.0 | 2.7 |
-
+By density the order changes: plantation forest licences (PPHTR) had 152 hotspots per 100 km² and oil palm 66, against 32 in forest concessions, 28 in mining licences and 29 outside concessions. Tables A.3 and B.4 give the values.

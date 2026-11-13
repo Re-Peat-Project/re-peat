@@ -16,6 +16,7 @@ pipeline.local.yaml
 
 # tile sources of the dashboard map layers (rebuild: repeat-national-dashboard)
 reports/**/tiles/src/
+reports/**/tiles/by_khg/
 reports/**/*.pmtiles-journal
 
 # local backup made before the per-KHG tile rebuild (2026-11-02)

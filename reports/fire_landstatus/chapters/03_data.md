@@ -12,9 +12,11 @@ Table: Input layers. Source: data catalogue of the project.
 | Forest area function | 4,265 polygons in 21 function codes | Project team, inferred KLHK | 2023 | 1:250,000 |
 | DMPG villages | 838 villages in 10 provinces | SiTMAT portal, KLH | 2017 to 2024 | Polygons |
 | Burned area | One polygon per burned patch, with a flag for each burn year 2015 to 2026 | KLHK; production method not stated | 2015 to 2026 | Polygons |
-| Peat extent | Union of Miettinen et al. (2016) and Gumbricht et al. (2017) | Global Forest Watch, CC BY 4.0 | Version 2023 | About 76 m |
+| Peat extent | Peat land (lahan gambut) of KLH's integrated thematic analysis for peat ecosystem restoration, 13.3 million ha | KLH | April 2026 | Polygons, counted on the 30 m grid |
 | MODIS hotspots 2026 | KLH file to 15 September, NASA FIRMS MODIS near real time after it; low, medium and high confidence | KLH, NASA FIRMS | 1 January to 29 October 2026 | 1 km |
 | VIIRS hotspots | S-NPP country archive 2012 to 2025 and 2026 standard and near-real-time files | NASA FIRMS | 2012 to 31 October 2026 | 375 m |
+| PPEG integrated thematic analysis | Overlay of KHG, peat, SKEG 2024 damage status, canal-affected zone, licences, forest area, landform and peat thickness, with an intervention class and an actor for every polygon | KLH | April 2026 | Polygons |
+| Target villages | 2,004 villages for peat ecosystem restoration | Bluebook 2026 | April 2026 | Polygons |
 
 A cell is in a concession when it lies in an oil palm, mining, PBPH or PPHTR licence. Community forest permits (PPHKM, *perhutanan sosial*) are social forestry permits and are not counted as concessions: their land keeps its forest area class. Where licences overlap, the land counts once in the concession totals and, in the table by type, under the first type in the order oil palm, mining, plantation forest, forest concession. The licence layer covers only the licences it holds. Land with unlicensed plantations counts as "no concession": at one KHG studied by the project, Mendahara-Batanghari, a forest-type map shows 43.7% of the land as tree crops outside any licence.
 

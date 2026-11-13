@@ -8,10 +8,10 @@ Indonesia,Indonesia,2020,291772.1,74660,3.908
 Indonesia,Indonesia,2021,352267.7,54938,6.412
 Indonesia,Indonesia,2022,201925.0,44726,4.515
 Indonesia,Indonesia,2023,1161204.8,217339,5.343
-Indonesia,Indonesia,2024,47290.1,83154,0.569
+Indonesia,Indonesia,2024,47290.0,83154,0.569
 Indonesia,Indonesia,2025,359579.2,79286,4.535
 Indonesia,Indonesia,2026,111780.9,572701,0.195
-province,Aceh,2015,900.4,2966,0.304
+province,Aceh,2015,900.5,2966,0.304
 province,Aceh,2016,9044.5,4551,1.987
 province,Aceh,2017,3842.7,3542,1.085
 province,Aceh,2018,1284.7,3052,0.421
@@ -49,12 +49,12 @@ province,Banten,2025,4.5,170,0.026
 province,Banten,2026,5.9,681,0.009
 province,Bengkulu,2015,920.3,2876,0.32
 province,Bengkulu,2016,987.7,873,1.131
-province,Bengkulu,2017,130.0,963,0.135
+province,Bengkulu,2017,130.1,963,0.135
 province,Bengkulu,2018,8.8,899,0.01
 province,Bengkulu,2019,10.8,1038,0.01
 province,Bengkulu,2020,220.4,589,0.374
 province,Bengkulu,2021,92.6,478,0.194
-province,Bengkulu,2022,1615.1,860,1.878
+province,Bengkulu,2022,1615.0,860,1.878
 province,Bengkulu,2023,76.4,1093,0.07
 province,Bengkulu,2024,36.7,883,0.042
 province,Bengkulu,2025,2538.5,1037,2.448
@@ -157,7 +157,7 @@ province,Kalimantan Barat,2025,26699.1,21208,1.259
 province,Kalimantan Barat,2026,28751.4,79375,0.362
 province,Kalimantan Selatan,2015,193861.9,36822,5.265
 province,Kalimantan Selatan,2016,2303.7,1596,1.443
-province,Kalimantan Selatan,2017,8265.1,2095,3.945
+province,Kalimantan Selatan,2017,8265.2,2095,3.945
 province,Kalimantan Selatan,2018,98266.0,7382,13.312
 province,Kalimantan Selatan,2019,135417.9,16785,8.068
 province,Kalimantan Selatan,2020,3960.4,980,4.041
@@ -196,7 +196,7 @@ province,Kalimantan Utara,2016,2081.2,1872,1.112
 province,Kalimantan Utara,2017,81.8,1038,0.079
 province,Kalimantan Utara,2018,626.5,1488,0.421
 province,Kalimantan Utara,2019,8538.7,2688,3.177
-province,Kalimantan Utara,2020,1719.4,1385,1.241
+province,Kalimantan Utara,2020,1719.5,1385,1.241
 province,Kalimantan Utara,2021,1697.1,698,2.431
 province,Kalimantan Utara,2022,369.3,740,0.499
 province,Kalimantan Utara,2023,793.6,1276,0.622
@@ -221,8 +221,8 @@ province,Kepulauan Riau,2017,19.7,272,0.072
 province,Kepulauan Riau,2018,321.7,593,0.542
 province,Kepulauan Riau,2019,6116.0,3206,1.908
 province,Kepulauan Riau,2020,8773.8,1712,5.125
-province,Kepulauan Riau,2021,1589.9,426,3.732
-province,Kepulauan Riau,2022,23.0,91,0.252
+province,Kepulauan Riau,2021,1589.8,426,3.732
+province,Kepulauan Riau,2022,22.9,91,0.252
 province,Kepulauan Riau,2023,724.4,190,3.813
 province,Kepulauan Riau,2024,1498.3,246,6.091
 province,Kepulauan Riau,2025,356.2,153,2.328
@@ -346,7 +346,7 @@ province,Papua Selatan,2022,4886.0,1182,4.134
 province,Papua Selatan,2023,150810.3,21121,7.14
 province,Papua Selatan,2024,1223.2,3419,0.358
 province,Papua Selatan,2025,8106.3,757,10.708
-province,Papua Selatan,2026,6281.5,72322,0.087
+province,Papua Selatan,2026,6281.6,72322,0.087
 province,Papua Tengah,2015,392.9,1556,0.253
 province,Papua Tengah,2016,61.7,164,0.376
 province,Papua Tengah,2017,144.7,161,0.899
@@ -354,7 +354,7 @@ province,Papua Tengah,2018,151.9,351,0.433
 province,Papua Tengah,2019,117.9,359,0.328
 province,Papua Tengah,2020,472.6,339,1.394
 province,Papua Tengah,2021,135.2,167,0.809
-province,Papua Tengah,2022,661.0,268,2.467
+province,Papua Tengah,2022,661.1,268,2.467
 province,Papua Tengah,2023,2596.1,404,6.426
 province,Papua Tengah,2024,21.2,105,0.202
 province,Papua Tengah,2025,243.5,113,2.155
@@ -367,7 +367,7 @@ province,Riau,2019,90193.1,31122,2.898
 province,Riau,2020,15432.8,4292,3.596
 province,Riau,2021,8963.3,2503,3.581
 province,Riau,2022,4911.4,1217,4.036
-province,Riau,2023,7268.0,2830,2.568
+province,Riau,2023,7267.9,2830,2.568
 province,Riau,2024,4251.8,2215,1.92
 province,Riau,2025,21836.1,3699,5.903
 province,Riau,2026,15614.3,5858,2.665
@@ -431,11 +431,11 @@ province,Sulawesi Utara,2023,2528.1,1047,2.415
 province,Sulawesi Utara,2024,122.2,201,0.608
 province,Sulawesi Utara,2025,6.5,119,0.054
 province,Sulawesi Utara,2026,172.4,2748,0.063
-province,Sumatera Barat,2015,3967.6,4138,0.959
+province,Sumatera Barat,2015,3967.7,4138,0.959
 province,Sumatera Barat,2016,2572.8,1890,1.361
 province,Sumatera Barat,2017,2175.0,1933,1.125
 province,Sumatera Barat,2018,2182.9,1777,1.228
-province,Sumatera Barat,2019,2358.5,1917,1.23
+province,Sumatera Barat,2019,2358.4,1917,1.23
 province,Sumatera Barat,2020,1573.5,805,1.955
 province,Sumatera Barat,2021,2068.7,1015,2.038
 province,Sumatera Barat,2022,9832.0,3069,3.204
@@ -443,7 +443,7 @@ province,Sumatera Barat,2023,4888.2,2535,1.928
 province,Sumatera Barat,2024,253.3,1276,0.198
 province,Sumatera Barat,2025,8134.8,2323,3.502
 province,Sumatera Barat,2026,1209.1,1222,0.989
-province,Sumatera Selatan,2015,639662.9,163865,3.904
+province,Sumatera Selatan,2015,639662.8,163865,3.904
 province,Sumatera Selatan,2016,8672.4,3297,2.63
 province,Sumatera Selatan,2017,3590.6,2976,1.207
 province,Sumatera Selatan,2018,16367.6,5730,2.856

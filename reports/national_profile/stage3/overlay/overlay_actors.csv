@@ -1,359 +1,385 @@
 khg_id,khg,company,type,activity,area_km2,share_khg,burned_peat_km2,lindung_km2,forest_protected_km2,hs_now,hs_now_peat,ring_km2,ring_peat_km2,ring_burned_peat_km2,ring_hs_now,ring_hs_now_peat
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. SUMATERA UNGGUL MAKMUR (KUBURAYA),Oil palm,HGU/Kebun Sawit,6.5925,0.0065,1.9125,6.5925,0.0,15,15,184.2975,165.3975,102.1275,1117,1101
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. PUTRA LIRIK DOMAS,Oil palm,HGU/Kebun Sawit,16.29,0.0161,1.575,10.9125,0.0,6,6,165.4875,118.8,62.5275,726,700
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. AGRO ALAM NUSANTARA,Oil palm,HGU/Kebun Sawit,7.0875,0.007,1.7325,6.93,0.0,23,23,141.2775,111.2625,32.9625,420,416
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. SEBUKIT INTERNUSA,Oil palm,HGU/Kebun Sawit,98.46,0.0972,41.31,45.6075,0.0,301,278,50.31,36.7425,6.345,22,17
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. RAJAWALI JAYA PERKASA,Oil palm,HGU/Kebun Sawit,44.145,0.0436,4.995,17.7525,0.0,8,7,121.9725,97.425,20.4975,195,192
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. ASIA PALEM LESTARI,Oil palm,HGU/Kebun Sawit,22.815,0.0225,7.515,19.8,0.0,29,29,74.1375,63.7425,12.8025,46,45
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. MITRA ANEKA REZEKI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,41.49,16.515,0.6525,35,30
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BINA AGRO BERKEMBANG LESTARI (SUI BULAN),Oil palm,HGU/Kebun Sawit,8.8425,0.0087,1.26,7.8075,0.0,1,1,72.0675,61.8075,12.5325,33,32
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BINA AGRO BERKEMBANG LESTARI (MEKAR SARI),Oil palm,HGU/Kebun Sawit,12.69,0.0125,3.6225,11.9025,0.0,13,13,32.6475,26.4375,4.86,17,16
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BUMI ALAM SENTOSA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,12.915,6.57,0.45,16,12
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BUMI PERKASA GEMILANG,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,14.7825,7.5375,0.0,5,2
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. CIPTA TUMBUH BERBUAH,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.5275,3.285,0.0,3,0
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. NUSA JAYA PERKASA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.28,3.2625,0.0,1,0
-KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. REZEKI KENCANA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,28.1025,11.115,0.0225,1,0
-KHG.91.01.07,KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,PT SELARAS INTI SEMESTA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.53,0.24,0.06,1,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PT EKOSISTEM WANA LESTARI,Forest concession (PBPH),PBPH HP,101.8125,0.0226,89.625,74.5,0.0,179,170,528.875,484.4375,223.1875,549,533
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KTH SIDO MAKMUR,Community forest (PPHKM),PPHKM,3.375,0.0007,2.75,0.0,0.0,11,11,113.4375,113.4375,81.25,479,479
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KT HANDAK MAJU,Community forest (PPHKM),PPHKM,9.4375,0.0021,9.4375,9.4375,9.4375,0,0,152.4375,139.5625,63.9375,425,420
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTAN SUMBER REJEKI,Plantation forest (PPHTR),PPHTR,2.75,0.0006,1.5625,2.75,0.0,9,9,179.125,179.125,91.75,361,361
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PETANI LANDREFORM,Oil palm,HGU/Kebun Sawit,7.6875,0.0017,6.8125,5.875,0.0,20,20,115.4375,104.5,34.0625,244,240
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTANHUT HTR SENGON,Plantation forest (PPHTR),PPHTR,5.0625,0.0011,4.375,0.0,0.0,15,13,152.4375,120.125,94.1875,243,236
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTAN DANDANG BERSATU,Plantation forest (PPHTR),PPHTR,7.625,0.0017,4.8125,0.0,0.0,27,27,115.75,113.875,59.125,209,207
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,SUDARMADI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,43.0,38.9375,21.8125,124,124
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTANHUT HUTAN MAJU,Plantation forest (PPHTR),PPHTR,1.125,0.0002,0.0625,0.0,0.0,1,1,90.5625,89.125,29.25,109,109
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,RUSDI,Mining,"IUP, SDR",0.0625,0.0,0.0,0.0,0.0,0,0,55.6875,48.5625,17.3125,108,108
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ANDRI EFRYA WIRANATA,Mining,"IUP, SDR",0.0625,0.0,0.0625,0.0,0.0,0,0,56.1875,48.6875,15.6875,93,91
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTAN HUTAN,Plantation forest (PPHTR),PPHTR,2.375,0.0005,2.3125,0.375,0.0,0,0,118.0625,100.3125,75.375,40,40
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,MACHMUDI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,49.5625,34.25,21.125,34,33
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PAIMO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,55.0,31.75,12.8125,16,7
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KTH HAPAKAT NUSA LESTARI 1,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,20.375,10.375,1.4375,8,5
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ANDA BADAK GANI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,25.375,13.25,5.9375,7,3
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,NADIE YANEPI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,31.0,18.5625,5.75,7,6
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PT EKOSISTEM WANA LESTARI UNIT II,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,44.8125,40.5,14.8125,6,3
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ZAMRUD MUSTIKA INDAH,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,26.0625,17.0,0.0,6,3
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,CHRISMASTIANTO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,24.1875,12.5625,5.25,5,2
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ARAFIK,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.5,19.0625,0.3125,0,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,DIMIN L. BANGKAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,34.625,21.0,3.1875,0,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,HERY,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,29.9375,18.9375,0.0,0,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,JAMRI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,27.6875,21.6875,1.375,0,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KELOMPOK HKM SIMPUR BASEWOT,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.5,0.4375,0.0,0,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KTH HAPAKAT NUSA LESTARI 2,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,25.9375,14.0625,0.4375,0,0
-KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,NUDI NEMEN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,31.25,17.625,2.25,0,0
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,PT. SUBUR AGRO MAKMUR,Oil palm,HGU/Kebun Sawit,147.8925,0.1321,13.725,65.1375,0.0,88,64,312.9075,177.3,128.0475,223,142
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,PT. PLANTINDO AGRO SUBUR,Oil palm,HGU/Kebun Sawit,73.5975,0.0657,19.665,51.615,0.0,23,15,245.52,196.83,54.135,113,86
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,GAWI MAJU KARSA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,58.6125,36.9225,15.7275,21,9
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,WAHYUDIN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,43.9875,19.0575,2.385,17,12
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,LAMSUNI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,44.8425,19.08,1.44,16,11
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,PT HUTAN AMANAH LESTARI,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,37.485,22.7025,1.845,16,10
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,H. SAYUTMAN H. LISA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,4.1175,2.88,0.405,9,6
-KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,ROSITA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,34.605,15.5475,6.39,1,1
-KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,HJ. FATMAWATI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.13,9.48,7.28,11,7
-KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,ADARO INDONESIA,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,13.11,1.37,0.98,2,0
-KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,PT. SUMATERA UNGGUL MAKMUR (SAMBAS),Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,23.15,14.07,2.6,3,1
-KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,KELOMPOK HKM CAKRA TIMBA RAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,32.49,4.52,0.25,1,0
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. DINAMIKA GRAHA SARANA,Oil palm,HGU/Kebun Sawit,82.26,0.0784,50.625,51.6825,0.0,409,376,92.61,89.955,67.9275,247,243
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. PILAR AGENG YANTA AKUSARA WAHYA,Oil palm,HGU/Kebun Sawit,52.5825,0.0501,29.655,43.2225,0.0,237,234,237.4425,223.6725,152.595,373,356
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. AGRO GEMILANG SURYA,Oil palm,HGU/Kebun Sawit,116.7075,0.1112,67.365,95.1075,0.0,281,276,168.885,134.37,82.71,231,214
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. TANIA BINA TAMA,Oil palm,HGU/Kebun Sawit,48.015,0.0458,36.63,24.48,0.0,57,55,210.78,174.5775,119.115,207,204
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. ANUGERAH SURYA AGRO,Oil palm,HGU/Kebun Sawit,44.865,0.0428,16.38,35.505,0.0,137,136,9.9225,9.27,6.9075,26,24
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,3.015,0.0029,1.8675,0.0,0.0,3,2,102.915,88.605,42.345,80,67
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. BUMI SRIWIJAYA SENTOSA,Oil palm,HGU/Kebun Sawit,8.595,0.0082,2.925,0.0675,0.0,30,25,8.01,7.3575,5.6925,21,19
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. WARINGIN AGRO JAYA,Oil palm,HGU/Kebun Sawit,2.1825,0.0021,0.72,0.0,0.0,0,0,22.5,20.6325,17.5275,23,21
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. TELAGA HIKMAH,Oil palm,HGU/Kebun Sawit,19.89,0.019,0.0,0.0,0.0,0,0,127.3725,24.1425,10.935,16,4
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. LONDON SUMATERA INDONESIA TBK BLOK I,Oil palm,HGU/Kebun Sawit,1.35,0.0013,0.27,0.0,0.0,5,4,43.425,41.13,19.0575,10,10
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. HORTINESIA PERMAI,Oil palm,HGU/Kebun Sawit,4.365,0.0042,0.6075,0.0,0.0,3,0,29.8125,19.5975,8.3475,4,2
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,2.3175,1.89,1.89,7,6
-KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. KELANTAN SAKTI 2,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,28.125,26.1,20.1375,3,3
-KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,KENCANA INDAH,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,24.12,11.03,0.2,72,48
-KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,PT INHUTANI III NANGAPINOH,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,25.77,17.78,8.69,40,35
-KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,KAYA KENCANA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,20.29,2.91,0.99,36,6
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. PROTEKSINDO UTAMA MULIA,Oil palm,HGU/Kebun Sawit,33.61,0.1212,26.41,25.89,0.0,101,99,110.16,71.77,18.4,92,70
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. LARAS KARYA KAHURIPAN,Oil palm,HGU/Kebun Sawit,27.07,0.0976,6.83,4.5,0.0,4,2,74.43,56.59,14.53,84,66
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. ABURAHMI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,29.21,19.27,0.84,37,22
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. GOLDEN BLOSSEM INDONESIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,4.38,3.27,0.0,4,2
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,BASIN COAL MINING,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,5.93,4.47,0.0,2,2
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,BATURONA ADIMULYA,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.62,0.41,0.0,0,0
-KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,LAIS BATUBARA PERSADA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.83,0.47,0.0,0,0
-KHG.13.01.03,KHG Aek Ubar - Aek Lunang,PT. CITALARAS CIPTA INDONESIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,46.42,35.27,8.44,190,179
-KHG.13.01.03,KHG Aek Ubar - Aek Lunang,PT. SUMATERA JAYA AGRO LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,18.86,15.15,10.39,22,21
-KHG.13.01.03,KHG Aek Ubar - Aek Lunang,PT. SUMBAR ANDALAS KENCANA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,33.76,23.95,14.98,6,5
-KHG.13.01.03,KHG Aek Ubar - Aek Lunang,TRIPABARA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,2.73,0.0,0.0,0,0
-KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,PT. UNITED AGRO INDONESIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,106.04,53.04,38.69,57,27
-KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,GAWI MAJU KARSA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,44.25,18.13,13.24,30,11
-KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,PT. GLOBALINDO AGUNG LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,42.79,27.55,22.06,26,17
-KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,ROSITA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,37.58,12.41,8.82,12,7
-KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,WAHYUDIN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,1.84,1.63,1.49,4,4
-KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,LAMSUNI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,1.08,0.87,0.84,0,0
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.London Sumatera,Oil palm,HGU,90.61,0.5796,11.04,29.47,0.0,101,26,11.95,3.41,1.33,3,3
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Mahakam Hijau Makmur,Oil palm,IUP,47.59,0.3044,1.88,18.78,0.0,20,2,11.34,3.15,0.69,2,2
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,PT. PP LONDON SUMATERA (KALTIM),Oil palm,HGU/Kebun Sawit,4.28,0.0274,1.78,0.0,0.0,12,9,4.87,2.28,1.09,3,3
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Delta Utama Resources,Oil palm,IUP,0.0,0.0,0.0,0.0,0.0,0,0,2.08,1.42,0.96,3,3
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Maha Karya Bersama,Oil palm,IUP,1.2,0.0077,0.0,0.0,0.0,1,1,6.32,0.37,0.0,0,0
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Alam Sawit,Oil palm,IL,0.0,0.0,0.0,0.0,0.0,0,0,0.95,0.54,0.0,0,0
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Sumber Sawit Mitrajaya,Oil palm,IUP,0.0,0.0,0.0,0.0,0.0,0,0,0.71,0.4,0.0,0,0
-KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,SARANA MARINE PERKASA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,4.46,0.1,0.0,0,0
-KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,GAPOKTAN SINAR HARAPAN,Community forest (PPHKM),PPHKM,15.1,0.0221,13.82,12.86,0.0,9,9,159.56,141.21,43.96,72,72
-KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,KTH MAJU BERSAMA,Community forest (PPHKM),PPHKM,8.32,0.0122,7.53,8.32,0.0,8,8,139.43,112.05,46.51,33,33
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. CAMPANG TIGA,Oil palm,HGU/Kebun Sawit,49.9,0.1163,23.22,35.52,0.0,114,112,25.32,23.43,15.37,62,61
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. BANYU KAHURIPAN INDONESIA,Oil palm,HGU/Kebun Sawit,80.0,0.1864,38.0,65.82,0.0,38,38,48.19,42.85,26.74,97,96
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,KT MANDIRI KARYA SEJAHTERA,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,33.07,31.26,20.82,93,92
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. AGRONUSA BUMI LESTARI,Oil palm,HGU/Kebun Sawit,4.1,0.0096,3.9,2.56,0.0,2,2,31.76,29.65,22.8,89,89
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PRIMARAYA ENERGY,Mining,"IUP, PT",2.25,0.0052,0.07,0.0,0.0,3,0,28.18,26.21,16.48,75,74
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,TITAN PRAWIRA SRIWIJAYA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,14.13,12.48,6.24,15,14
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,SUMBER ALAM MAKMUR UTAMA,Mining,"IUP, PT",3.69,0.0086,0.81,0.17,0.0,6,5,16.74,11.69,1.93,5,5
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. HINDOLI,Oil palm,HGU/Kebun Sawit,99.62,0.2322,2.26,28.2,0.0,3,3,61.08,40.84,0.88,3,3
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. SURYA CIPTA KAHURIPAN,Oil palm,HGU/Kebun Sawit,76.69,0.1787,0.0,42.23,0.0,0,0,44.7,30.23,1.6,3,3
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,KTH RIMAU JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,5.54,3.79,0.0,0,0
-KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. PINANG WITMAS SEJATI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,1.99,1.14,0.0,0,0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. SUMATERA UNGGUL MAKMUR (KUBURAYA),Oil palm,HGU/Kebun Sawit,6.5925,0.0065,1.9125,6.5925,0.0,15,15,184.2975,151.9425,101.5425,1117,1078
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. PUTRA LIRIK DOMAS,Oil palm,HGU/Kebun Sawit,16.29,0.0161,1.575,10.9125,0.0,6,6,165.4875,87.93,61.0425,726,660
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. AGRO ALAM NUSANTARA,Oil palm,HGU/Kebun Sawit,7.0875,0.007,1.7325,6.93,0.0,23,23,141.2775,107.1225,33.48,420,412
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. SEBUKIT INTERNUSA,Oil palm,HGU/Kebun Sawit,98.46,0.0972,41.4,45.6075,0.0,301,278,50.31,30.8475,6.4575,22,22
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. RAJAWALI JAYA PERKASA,Oil palm,HGU/Kebun Sawit,44.145,0.0436,5.31,17.7525,0.0,8,8,121.9725,91.5525,20.745,195,193
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. ASIA PALEM LESTARI,Oil palm,HGU/Kebun Sawit,22.815,0.0225,7.4925,19.8,0.0,29,29,74.1375,60.165,12.915,46,46
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. MITRA ANEKA REZEKI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,41.49,4.23,0.315,35,30
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BINA AGRO BERKEMBANG LESTARI (SUI BULAN),Oil palm,HGU/Kebun Sawit,8.8425,0.0087,1.26,7.8075,0.0,1,1,72.0675,58.1175,12.645,33,33
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BINA AGRO BERKEMBANG LESTARI (MEKAR SARI),Oil palm,HGU/Kebun Sawit,12.69,0.0125,3.6225,11.9025,0.0,13,13,32.6475,22.3875,4.9275,17,17
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BUMI ALAM SENTOSA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,12.915,5.625,0.45,16,16
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. BUMI PERKASA GEMILANG,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,14.7825,4.1625,0.0,5,5
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. CIPTA TUMBUH BERBUAH,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.5275,4.23,0.0,3,3
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. NUSA JAYA PERKASA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.28,0.6975,0.0,1,0
+KHG.61.12-71.01,KHG Sungai Pungurbesar -  Sungai Kapuas,PT. REZEKI KENCANA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,28.1025,0.6075,0.0,1,0
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,PT. SUMATERA UNGGUL MAKMUR (SAMBAS),Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,23.15,12.64,2.57,3,2
+KHG.61.01.11,KHG Sungai Selakau - Sungai Sebangkau,KELOMPOK HKM CAKRA TIMBA RAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,32.49,0.0,0.0,1,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PT EKOSISTEM WANA LESTARI,Forest concession (PBPH),PBPH HP,101.8125,0.0226,91.0,74.5,0.0,179,179,528.875,500.375,218.4375,549,531
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KTH SIDO MAKMUR,Community forest (PPHKM),PPHKM,3.375,0.0007,2.75,0.0,0.0,11,11,113.4375,107.125,80.875,479,479
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KT HANDAK MAJU,Community forest (PPHKM),PPHKM,9.4375,0.0021,9.4375,9.4375,9.4375,0,0,152.4375,139.6875,64.1875,425,422
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTAN SUMBER REJEKI,Plantation forest (PPHTR),PPHTR,2.75,0.0006,1.5625,2.75,0.0,9,9,179.125,176.25,91.0,361,358
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PETANI LANDREFORM,Oil palm,HGU/Kebun Sawit,7.6875,0.0017,6.8125,5.875,0.0,20,20,115.4375,84.4375,32.25,244,231
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTANHUT HTR SENGON,Plantation forest (PPHTR),PPHTR,5.0625,0.0011,4.5625,0.0,0.0,15,15,152.4375,94.8125,83.1875,243,230
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTAN DANDANG BERSATU,Plantation forest (PPHTR),PPHTR,7.625,0.0017,4.6875,0.0,0.0,27,27,115.75,63.8125,53.375,209,202
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,SUDARMADI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,43.0,24.1875,18.1875,124,123
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTANHUT HUTAN MAJU,Plantation forest (PPHTR),PPHTR,1.125,0.0002,0.0625,0.0,0.0,1,1,90.5625,40.375,26.625,109,108
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,RUSDI,Mining,"IUP, SDR",0.0625,0.0,0.0,0.0,0.0,0,0,55.6875,36.75,16.125,108,104
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ANDRI EFRYA WIRANATA,Mining,"IUP, SDR",0.0625,0.0,0.0625,0.0,0.0,0,0,56.1875,36.3125,14.625,93,87
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,GAPOKTAN HUTAN,Plantation forest (PPHTR),PPHTR,2.375,0.0005,0.3125,0.375,0.0,0,0,118.0625,69.25,63.8125,40,40
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,MACHMUDI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,49.5625,22.375,17.6875,34,34
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PAIMO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,55.0,33.625,12.8125,16,16
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KTH HAPAKAT NUSA LESTARI 1,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,20.375,1.125,0.5,8,3
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ANDA BADAK GANI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,25.375,0.0,0.0,7,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,NADIE YANEPI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,31.0,11.0625,6.0,7,7
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,PT EKOSISTEM WANA LESTARI UNIT II,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,44.8125,21.625,1.875,6,1
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ZAMRUD MUSTIKA INDAH,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,26.0625,13.0,0.0,6,3
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,CHRISMASTIANTO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,24.1875,0.0,0.0,5,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,ARAFIK,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.5,6.5,0.0625,0,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,DIMIN L. BANGKAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,34.625,0.0,0.0,0,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,HERY,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,29.9375,3.0625,0.0,0,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,JAMRI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,27.6875,0.0,0.0,0,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KELOMPOK HKM SIMPUR BASEWOT,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.5,0.0,0.0,0,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,KTH HAPAKAT NUSA LESTARI 2,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,25.9375,2.9375,0.1875,0,0
+KHG.62.11-14.02,KHG Sungai Kahayan - Sungai Sebangau,NUDI NEMEN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,31.25,0.0,0.0,0,0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. DINAMIKA GRAHA SARANA,Oil palm,HGU/Kebun Sawit,82.26,0.0784,56.6325,51.6825,0.0,409,406,92.61,91.6425,68.9625,247,244
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. PILAR AGENG YANTA AKUSARA WAHYA,Oil palm,HGU/Kebun Sawit,52.5825,0.0501,30.5325,43.2225,0.0,237,237,237.4425,228.24,153.72,373,359
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. AGRO GEMILANG SURYA,Oil palm,HGU/Kebun Sawit,116.7075,0.1112,68.715,95.1075,0.0,281,279,168.885,127.3725,79.2,231,202
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. TANIA BINA TAMA,Oil palm,HGU/Kebun Sawit,48.015,0.0458,34.4025,24.48,0.0,57,53,210.78,164.295,118.665,207,198
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. ANUGERAH SURYA AGRO,Oil palm,HGU/Kebun Sawit,44.865,0.0428,16.425,35.505,0.0,137,137,9.9225,5.175,4.1175,26,22
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,3.015,0.0029,0.0,0.0,0.0,3,0,102.915,70.3575,25.1325,80,39
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. BUMI SRIWIJAYA SENTOSA,Oil palm,HGU/Kebun Sawit,8.595,0.0082,3.8025,0.0675,0.0,30,27,8.01,3.3975,2.97,21,18
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. WARINGIN AGRO JAYA,Oil palm,HGU/Kebun Sawit,2.1825,0.0021,0.7875,0.0,0.0,0,0,22.5,18.5625,15.615,23,20
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. TELAGA HIKMAH,Oil palm,HGU/Kebun Sawit,19.89,0.019,0.0,0.0,0.0,0,0,127.3725,15.39,11.115,16,3
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. LONDON SUMATERA INDONESIA TBK BLOK I,Oil palm,HGU/Kebun Sawit,1.35,0.0013,0.225,0.0,0.0,5,4,43.425,40.6575,19.1025,10,9
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. HORTINESIA PERMAI,Oil palm,HGU/Kebun Sawit,4.365,0.0042,0.0,0.0,0.0,3,0,29.8125,13.815,6.75,4,3
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,2.3175,0.0,0.0,7,0
+KHG.16.02.04,KHG Sungai Sibumbung - Sungai Talangrimba,PT. KELANTAN SAKTI 2,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,28.125,26.1225,20.1825,3,3
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. CAMPANG TIGA,Oil palm,HGU/Kebun Sawit,49.9,0.1163,17.54,35.52,0.0,114,104,25.32,15.93,11.68,62,40
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. BANYU KAHURIPAN INDONESIA,Oil palm,HGU/Kebun Sawit,80.0,0.1864,37.44,65.82,0.0,38,33,48.19,24.97,19.16,97,54
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,KT MANDIRI KARYA SEJAHTERA,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,33.07,15.67,13.33,93,51
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. AGRONUSA BUMI LESTARI,Oil palm,HGU/Kebun Sawit,4.1,0.0096,2.16,2.56,0.0,2,2,31.76,16.7,15.3,89,49
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PRIMARAYA ENERGY,Mining,"IUP, PT",2.25,0.0052,0.0,0.0,0.0,3,0,28.18,11.64,9.64,75,36
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,TITAN PRAWIRA SRIWIJAYA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,14.13,6.46,4.47,15,4
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,SUMBER ALAM MAKMUR UTAMA,Mining,"IUP, PT",3.69,0.0086,0.04,0.17,0.0,6,0,16.74,5.36,1.91,5,4
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. HINDOLI,Oil palm,HGU/Kebun Sawit,99.62,0.2322,2.26,28.2,0.0,3,3,61.08,3.32,0.88,3,3
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. SURYA CIPTA KAHURIPAN,Oil palm,HGU/Kebun Sawit,76.69,0.1787,0.0,42.23,0.0,0,0,44.7,4.25,1.6,3,3
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,KTH RIMAU JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,5.54,0.0,0.0,0,0
+KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,PT. PINANG WITMAS SEJATI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,1.99,0.61,0.0,0,0
 KHG.16.06-07.04,KHG Sungai Bentayan - Sungai Penimpahan,WIUP BLOK PULAU RIMAU,Mining,"WIUP, -",0.0,0.0,0.0,0.0,0.0,0,0,0.04,0.0,0.0,0,0
-KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,551.77,0.7716,275.6,304.71,0.0,296,238,114.82,66.67,35.83,39,28
-KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,DAYA TIRTA ENDIKAT,Mining,"IUP, PT",11.28,0.0158,7.67,6.29,0.0,4,4,43.9,28.77,23.16,18,15
-KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,ANUGRAH TENAM RAYA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,29.22,20.97,15.83,18,15
-KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,PT SBA WOOD INDUSTRIES,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,8.51,4.26,0.39,5,1
-KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,0.07,0.0001,0.0,0.0,0.0,0,0,0.31,0.22,0.04,0,0
-KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,KTH SELEKAN INDAH,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.61,0.42,0.05,0,0
-KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. SUMATERA SAWIT LESTARI,Oil palm,HGU/Kebun Sawit,28.84,0.2013,2.81,0.0,0.0,8,1,67.6,43.92,24.78,20,17
-KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,BARASENTOSA LESTARI,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,28.43,12.77,6.01,11,9
-KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. BINA SAINT CORP I,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,5.42,1.02,0.11,4,0
-KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. WANAPOTENSI GUNA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,14.64,8.18,5.13,4,2
-KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. SURYA AGRO PERSADA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,6.03,2.6,0.66,1,0
-KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,NUSANTARA BARA RESOURCES,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,2.1,0.01,0.0,0,0
-KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,PT. PATIWARE,Oil palm,HGU/Kebun Sawit,16.35,0.1255,0.74,10.68,0.0,7,7,107.58,53.42,10.64,78,74
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,PT. SUBUR AGRO MAKMUR,Oil palm,HGU/Kebun Sawit,147.8925,0.1321,0.225,65.1375,0.0,88,24,312.9075,47.25,39.3075,223,45
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,PT. PLANTINDO AGRO SUBUR,Oil palm,HGU/Kebun Sawit,73.5975,0.0657,2.4525,51.615,0.0,23,2,245.52,14.3775,2.6775,113,4
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,GAWI MAJU KARSA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,58.6125,2.79,0.27,21,0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,WAHYUDIN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,43.9875,6.7275,0.0,17,2
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,LAMSUNI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,44.8425,8.37,0.0,16,2
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,PT HUTAN AMANAH LESTARI,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,37.485,2.475,0.36,16,3
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,H. SAYUTMAN H. LISA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,4.1175,0.0,0.0,9,0
+KHG.63.04-05-06-08.01,KHG Sungai Barito - Sungai Taping,ROSITA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,34.605,1.44,0.3375,1,0
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,PT. CITALARAS CIPTA INDONESIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,46.42,27.07,8.12,190,119
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,PT. SUMATERA JAYA AGRO LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,18.86,13.09,8.93,22,20
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,PT. SUMBAR ANDALAS KENCANA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,33.76,24.8,14.98,6,5
+KHG.13.01.03,KHG Aek Ubar - Aek Lunang,TRIPABARA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,2.73,0.36,0.0,0,0
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,GAPOKTAN SINAR HARAPAN,Community forest (PPHKM),PPHKM,15.1,0.0221,13.82,12.86,0.0,9,9,159.56,104.26,43.86,72,72
+KHG.61.01.05,KHG Sungai Sambas Besar - Sungai Seiyung,KTH MAJU BERSAMA,Community forest (PPHKM),PPHKM,8.32,0.0122,7.53,8.32,0.0,8,8,139.43,99.38,46.5,33,32
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,HJ. FATMAWATI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.13,5.11,3.31,11,5
+KHG.63.07-08-11.01,KHG Sungai Balangan - Sungai Batangalai,ADARO INDONESIA,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,13.11,0.0,0.0,2,0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. PROTEKSINDO UTAMA MULIA,Oil palm,HGU/Kebun Sawit,33.61,0.1212,25.59,25.89,0.0,101,94,110.16,51.07,17.44,92,53
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. LARAS KARYA KAHURIPAN,Oil palm,HGU/Kebun Sawit,27.07,0.0976,7.12,4.5,0.0,4,3,74.43,45.86,13.88,84,51
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. ABURAHMI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,29.21,0.02,0.02,37,0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,PT. GOLDEN BLOSSEM INDONESIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,4.38,0.0,0.0,4,0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,BASIN COAL MINING,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,5.93,0.0,0.0,2,0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,BATURONA ADIMULYA,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.62,0.0,0.0,0,0
+KHG.16.03-06.01,KHG Sungai Musi - Sungai Penu,LAIS BATUBARA PERSADA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.83,0.0,0.0,0,0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.London Sumatera,Oil palm,HGU,90.61,0.5796,38.3,29.47,0.0,101,96,11.95,5.93,1.4,3,3
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Mahakam Hijau Makmur,Oil palm,IUP,47.59,0.3044,7.64,18.78,0.0,20,13,11.34,5.38,0.88,2,2
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,PT. PP LONDON SUMATERA (KALTIM),Oil palm,HGU/Kebun Sawit,4.28,0.0274,2.59,0.0,0.0,12,11,4.87,3.05,1.16,3,3
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Delta Utama Resources,Oil palm,IUP,0.0,0.0,0.0,0.0,0.0,0,0,2.08,1.03,0.81,3,3
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Maha Karya Bersama,Oil palm,IUP,1.2,0.0077,0.0,0.0,0.0,1,0,6.32,2.4,0.0,0,0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Alam Sawit,Oil palm,IL,0.0,0.0,0.0,0.0,0.0,0,0,0.95,0.0,0.0,0,0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,Pt.Sumber Sawit Mitrajaya,Oil palm,IUP,0.0,0.0,0.0,0.0,0.0,0,0,0.71,0.0,0.0,0,0
+KHG.64.07.02,KHG Sungai Jempang - Sungai Kedangpahu,SARANA MARINE PERKASA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,4.46,1.49,0.0,0,0
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,PT. UNITED AGRO INDONESIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,106.04,32.63,24.34,57,18
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,GAWI MAJU KARSA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,44.25,31.16,22.4,30,21
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,PT. GLOBALINDO AGUNG LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,42.79,11.73,8.99,26,5
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,ROSITA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,37.58,26.63,20.51,12,10
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,WAHYUDIN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,1.84,1.35,1.32,4,4
+KHG.62.03.03,KHG Sungai Mangkatip - Sungai Barito 1,LAMSUNI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,1.08,0.68,0.68,0,0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. SUMATERA SAWIT LESTARI,Oil palm,HGU/Kebun Sawit,28.84,0.2013,4.81,0.0,0.0,8,2,67.6,37.39,24.64,20,16
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,BARASENTOSA LESTARI,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,28.43,9.8,5.51,11,8
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. BINA SAINT CORP I,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,5.42,1.17,0.37,4,2
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. WANAPOTENSI GUNA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,14.64,9.33,7.27,4,2
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,PT. SURYA AGRO PERSADA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,6.03,0.61,0.2,1,0
+KHG.16.05-06.01,KHG Sungai Musi - Sungai Rawas,NUSANTARA BARA RESOURCES,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,2.1,0.0,0.0,0,0
+KHG.16.05.02,KHG Sungai Kalumpang,PT. BUANA SRIWIJAYA SEJAHTERA,Oil palm,HGU/Kebun Sawit,60.12,0.8356,27.24,28.37,0.0,10,9,10.5,0.71,0.35,4,0
+KHG.16.05.02,KHG Sungai Kalumpang,BANYAN KOALINDO LESTARI,Mining,"IUP, PT",1.33,0.0185,0.0,0.0,0.0,0,0,5.27,0.11,0.03,3,0
+KHG.16.05.02,KHG Sungai Kalumpang,PT. DENDY MARKER INDAH LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,0.76,0.13,0.08,0,0
+KHG.16.05.02,KHG Sungai Kalumpang,PT. PP LONDON SUMATERA INDONESIA BLOK I,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,2.92,0.0,0.0,0,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,160.32,94.8,94.76,127,73
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. TUNAS BARU LAMPUNG TBK,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,136.8,45.72,42.6,87,32
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. BUMI SRIWIJAYA SENTOSA,Oil palm,HGU/Kebun Sawit,16.56,0.0087,0.0,0.0,0.0,8,0,92.0,61.72,61.64,64,28
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. PERSADA SAWIT MAS,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,77.96,30.16,24.52,43,12
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT CIPTAMAS BUMI SUBUR,Forest concession (PBPH),PBPH HP,50.2,0.0264,10.76,14.76,0.0,36,16,120.04,10.84,5.48,4,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. BINTANG HARAPAN PALMA,Oil palm,HGU/Kebun Sawit,0.36,0.0002,0.0,0.0,0.0,1,0,32.64,26.28,26.28,21,17
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT BUMI ANDALAS PERMAI,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,7.44,0.0,0.0,7,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. DAYA SEMESTA  AGRO PERSADA,Oil palm,HGU/Kebun Sawit,4.24,0.0022,0.0,0.0,0.0,0,0,36.48,17.88,16.68,5,3
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. ANDIRA AGRO,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,12.8,1.52,1.4,2,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,KTH KARYA MAJU JURU TARO,Community forest (PPHKM),PPHKM,1.6,0.0008,0.0,1.6,1.6,0,0,46.32,0.0,0.0,0,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,BUMI HIJAU MESUJI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.12,0.0,0.0,0,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,KTH RANGGAS BERKAH,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,1.52,0.0,0.0,0,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,KTH SUMBER TANI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,3.0,0.0,0.0,0,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT KARAWANG EKAWANA NUGRAHA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.08,0.0,0.0,0,0
+KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. BULUH CAWANG PLANTATION,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,0.48,0.0,0.0,0,0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,551.77,0.7716,259.77,304.71,0.0,296,195,114.82,28.62,19.76,39,23
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,DAYA TIRTA ENDIKAT,Mining,"IUP, PT",11.28,0.0158,5.82,6.29,0.0,4,4,43.9,19.79,18.38,18,15
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,ANUGRAH TENAM RAYA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,29.22,8.88,7.8,18,12
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,PT SBA WOOD INDUSTRIES,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,8.51,6.11,1.26,5,5
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,0.07,0.0001,0.0,0.0,0.0,0,0,0.31,0.01,0.0,0,0
+KHG.16.02.02,KHG Sungai Ulakkedondong - Sungai Lumpur,KTH SELEKAN INDAH,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.61,0.0,0.0,0,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. KHARISMA INTI USAHA,Oil palm,HGU/Kebun Sawit,147.19,0.3079,0.04,99.14,0.0,0,0,86.33,27.18,13.27,47,16
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. HASNUR CITRA TERPADU,Oil palm,HGU/Kebun Sawit,97.81,0.2046,0.01,34.39,0.0,5,1,96.83,21.25,7.08,41,15
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. KHARISMA ALAM PERSADA,Oil palm,HGU/Kebun Sawit,45.54,0.0953,0.0,0.0,0.0,7,0,75.84,0.14,0.0,30,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. MONRAT INTAN BARAKAT,Oil palm,HGU/Kebun Sawit,20.15,0.0422,9.08,9.1,0.0,11,6,21.3,10.83,9.9,23,4
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. HASNUR SAWIT PUTRA,Oil palm,HGU/Kebun Sawit,9.64,0.0202,0.0,0.16,0.0,1,0,71.17,10.56,2.68,23,11
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. PALMINA UTAMA,Oil palm,HGU/Kebun Sawit,0.32,0.0007,0.0,0.0,0.0,0,0,6.19,2.92,2.11,16,3
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,ANTANG GUNUNG MERATUS,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,17.94,3.33,0.81,6,1
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,BINUANG MITRA BERSAMA BLOK TIGA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,21.02,5.52,0.81,6,1
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,BINUANG MITRA BERSAMA BLOK EMPAT,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,17.67,4.59,0.87,2,1
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,KARYATI,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,14.79,2.69,0.62,2,1
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,SURAINDO BARA,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,1.83,0.41,0.33,2,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,BANJAR GLOBAL MINING,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,0.09,0.0,0.0,0,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,BINUANG MITRA BERSAMA BLOK DUA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.06,0.0,0.0,0,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,INDOMARTA MULTI MINING,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.09,0.0,0.0,0,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,PT. PLANTINDO AGRO SUBUR,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,13.64,0.0,0.0,0,0
+KHG.63.03-05.01,KHG Sungai Barito - Sungai Alalak,SUMBER KURNIA BUANA,Mining,"PKP2B, PT",0.0,0.0,0.0,0.0,0.0,0,0,4.49,0.0,0.0,0,0
+KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,PT. PATIWARE,Oil palm,HGU/Kebun Sawit,16.35,0.1255,0.74,10.68,0.0,7,7,107.58,39.54,9.83,78,66
 KHG.61.72-7.01,KHG Sungai Raya - Sungai Pangnilang,ADHI PRIMA MINERAL,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.1,0.0,0.0,0,0
-KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,101.83,0.9802,85.06,49.68,0.0,66,50,1.79,1.19,1.05,1,1
-KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,PT. HORTINESIA PERMAI,Oil palm,HGU/Kebun Sawit,0.27,0.0026,0.17,0.0,0.0,1,1,0.61,0.44,0.37,0,0
-KHG.16.02.03,KHG Sungai Talang - Sungai Ulakkedondong,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,1.18,0.75,0.68,1,1
-KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT. KAYUNG AGRO LESTARI,Oil palm,HGU/Kebun Sawit,156.77,0.5599,9.06,60.85,0.0,367,335,110.36,60.04,30.13,360,303
-KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT MOHAIRSON PAWAN KHATULISTIWA,Forest concession (PBPH),PBPH HP,4.46,0.0159,0.28,0.0,0.0,14,7,18.92,17.5,7.04,101,96
-KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,LAMAN MINING,Mining,"IUP, PT",2.32,0.0083,0.0,0.0,0.0,0,0,15.22,2.42,1.27,26,18
-KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT. GEMILANG MAKMUR SUBUR,Oil palm,HGU/Kebun Sawit,1.52,0.0054,0.0,0.0,0.0,0,0,3.49,2.44,1.67,25,20
-KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT. DAMAI AGRO SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,2.03,0.98,0.34,14,9
-KHG.16.05.02,KHG Sungai Kalumpang,PT. BUANA SRIWIJAYA SEJAHTERA,Oil palm,HGU/Kebun Sawit,60.12,0.8356,27.2,28.37,0.0,10,9,10.5,3.22,0.79,4,1
-KHG.16.05.02,KHG Sungai Kalumpang,BANYAN KOALINDO LESTARI,Mining,"IUP, PT",1.33,0.0185,0.0,0.0,0.0,0,0,5.27,0.85,0.02,3,0
-KHG.16.05.02,KHG Sungai Kalumpang,PT. DENDY MARKER INDAH LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,0.76,0.46,0.01,0,0
-KHG.16.05.02,KHG Sungai Kalumpang,PT. PP LONDON SUMATERA INDONESIA BLOK I,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,2.92,1.07,0.0,0,0
-KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,PT. BAHANA KARYA SEMESTA,Oil palm,HGU/Kebun Sawit,50.2,0.1698,8.39,9.05,0.0,22,15,58.34,25.93,4.55,17,8
-KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,PT. KRESNA DUTA AGROINDO,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,52.93,21.19,4.77,11,3
-KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,PT. PRIMATAMA KREASI MAS,Oil palm,HGU/Kebun Sawit,119.29,0.4034,49.02,56.81,0.0,7,5,95.47,35.79,6.3,2,2
-KHG.15.02-03.01,KHG Batang Tembei - Sungai Merak,MARGA PERKASA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.26,0.01,0.0,0,0
-KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,KTH RAJAKI TALINO,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,57.27,37.21,10.1,412,405
-KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,ANEKA TAMBANG TBK,Mining,"IUP, PT",4.51,0.0088,0.0,0.0,0.0,0,0,105.79,71.91,5.66,194,178
-KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,KOPERASI PRODUSEN USAHA KARYA KEMILAU,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,6.26,4.01,0.09,37,35
-KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,PT MUARA SUNGAI  LANDAK,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,13.86,10.25,1.35,4,4
-KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,BATU PRIMA PERSADA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,20.32,5.43,0.0,2,0
-KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,SULENCO WIBAWA PERKASA,Mining,"IUP, PT",0.02,0.0,0.0,0.0,0.0,0,0,64.14,32.6,1.46,1,1
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. RAMBANG AGRO JAYA,Oil palm,HGU/Kebun Sawit,74.97,0.0868,21.99,47.1,0.0,113,110,122.66,85.1,30.32,68,54
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. KELANTAN SAKTI 2,Oil palm,HGU/Kebun Sawit,97.84,0.1132,6.88,85.96,0.0,2,2,184.13,168.08,45.16,62,51
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. MUTIARA BUNDA JAYA,Oil palm,HGU/Kebun Sawit,34.82,0.0403,2.21,19.51,0.0,3,2,148.61,130.1,28.04,35,25
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. WARINGIN AGRO JAYA,Oil palm,HGU/Kebun Sawit,126.9,0.1469,90.64,92.5,0.0,14,14,108.47,74.25,24.28,20,17
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. KELANTAN SAKTI 1,Oil palm,HGU/Kebun Sawit,29.44,0.0341,0.0,28.54,0.0,0,0,67.26,60.87,10.57,24,22
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. TELAGA HIKMAH,Oil palm,HGU/Kebun Sawit,15.29,0.0177,1.99,5.72,0.0,0,0,121.1,115.53,11.12,12,12
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,SELARAS GEMILANG PRATAMA,Mining,"IUP, PT",1.13,0.0013,0.0,0.0,0.0,0,0,34.27,22.68,9.13,4,2
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PT. AGRO GEMILANG SURYA,Oil palm,HGU/Kebun Sawit,1.76,0.002,0.26,0.0,0.0,0,0,28.77,25.14,6.85,2,2
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,KTH DURIAN JAYA,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,0.75,0.32,0.0,0,0
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,KTH MEKAR JAYA,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,0.01,0.01,0.0,0,0
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,KTH SINAR TIMUR,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,0.4,0.19,0.0,0,0
-KHG.16.02.05,KHG Sungai Burnai - Sungai Sibumbung,PRIMA INDOJAYA MANDIRI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.27,0.16,0.0,0,0
-KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT PARAMITRA MULIA LANGGENG,Forest concession (PBPH),PBPH HP,124.48,0.2584,56.47,66.36,0.0,125,118,145.69,84.58,38.39,21,13
-KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT. DENDY MARKER INDAH LESTARI,Oil palm,HGU/Kebun Sawit,134.17,0.2785,36.77,61.17,0.0,29,17,147.04,82.92,39.66,25,15
-KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT. PP LONDON SUMATERA INDONESIA BLOK I,Oil palm,HGU/Kebun Sawit,2.1,0.0044,0.0,0.0,0.0,0,0,43.15,18.32,6.96,5,3
-KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT. BUANA SRIWIJAYA SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,38.94,17.03,0.94,2,1
-KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,"PT. DWI REKSA USAHA PERKASA (PT. PP LONSUM, TBK)",Oil palm,HGU/Kebun Sawit,0.16,0.0003,0.0,0.0,0.0,0,0,32.24,8.49,0.09,0,0
-KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT ESA YASA DINAMIKA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,6.38,2.22,0.13,0,0
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. ARRTU ENERGIE RESOURCES,Oil palm,HGU/Kebun Sawit,76.9,0.1193,32.4,37.72,0.0,466,444,195.3,152.32,56.94,748,721
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. LIMPAH SEJAHTERA,Oil palm,HGU/Kebun Sawit,161.22,0.2501,2.17,76.36,0.0,297,283,110.04,83.29,24.5,319,301
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. PRANA INDAH GEMILANG,Oil palm,HGU/Kebun Sawit,5.79,0.009,1.72,0.0,0.0,14,7,86.27,67.25,26.3,298,289
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT MOHAIRSON PAWAN KHATULISTIWA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,23.38,18.13,5.86,58,57
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,GAPOKTAN SUMBER KARYA,Community forest (PPHKM),PPHKM,0.28,0.0004,0.0,0.0,0.0,0,0,37.64,22.67,2.22,49,36
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. SEJAHTERA SAWIT LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,17.02,10.48,2.02,36,31
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,JESICA ABADI,Mining,"IUP, CV",0.03,0.0,0.0,0.0,0.0,0,0,23.02,16.2,4.64,28,28
-KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. DAMAI AGRO SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.21,5.0,0.25,10,9
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,160.32,108.0,107.6,127,86
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. TUNAS BARU LAMPUNG TBK,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,136.8,100.0,87.88,87,69
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. BUMI SRIWIJAYA SENTOSA,Oil palm,HGU/Kebun Sawit,16.56,0.0087,1.84,0.0,0.0,8,2,92.0,73.92,71.36,64,45
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. PERSADA SAWIT MAS,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,77.96,57.76,47.8,43,36
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT CIPTAMAS BUMI SUBUR,Forest concession (PBPH),PBPH HP,50.2,0.0264,26.08,14.76,0.0,36,33,120.04,107.92,19.32,4,3
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. BINTANG HARAPAN PALMA,Oil palm,HGU/Kebun Sawit,0.36,0.0002,0.24,0.0,0.0,1,0,32.64,28.0,27.64,21,20
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT BUMI ANDALAS PERMAI,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,7.44,4.64,2.6,7,7
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. DAYA SEMESTA  AGRO PERSADA,Oil palm,HGU/Kebun Sawit,4.24,0.0022,0.0,0.0,0.0,0,0,36.48,20.84,18.36,5,3
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. ANDIRA AGRO,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,12.8,8.28,2.64,2,1
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,KTH KARYA MAJU JURU TARO,Community forest (PPHKM),PPHKM,1.6,0.0008,0.0,1.6,1.6,0,0,46.32,37.72,0.0,0,0
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,BUMI HIJAU MESUJI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.12,0.12,0.0,0,0
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,KTH RANGGAS BERKAH,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,1.52,0.68,0.0,0,0
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,KTH SUMBER TANI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,3.0,1.4,0.0,0,0
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT KARAWANG EKAWANA NUGRAHA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.08,0.04,0.0,0,0
-KHG.16.02-07.01,KHG Sungai Saleh - Sungai Sugihan,PT. BULUH CAWANG PLANTATION,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,0.48,0.4,0.24,0,0
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,1255.5025,0.1976,285.3025,931.49,0.0,227,207,94.6925,53.9,11.76,35,22
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. BINTANG HARAPAN PALMA,Oil palm,HGU/Kebun Sawit,88.2,0.0139,72.3975,0.0,0.0,187,168,2.5725,0.6125,0.6125,4,1
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT SBA WOOD INDUSTRIES,Forest concession (PBPH),PBPH HP,1369.305,0.2155,417.8475,674.6075,0.0,90,64,190.855,121.275,70.1925,7,7
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT BUMI ANDALAS PERMAI,Forest concession (PBPH),PBPH HP,1895.4425,0.2983,798.0875,1193.0275,0.0,88,77,786.3275,604.17,136.8325,7,5
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. BUMI SRIWIJAYA SENTOSA,Oil palm,HGU/Kebun Sawit,36.26,0.0057,21.315,13.8425,0.0,65,63,7.35,4.5325,0.6125,5,1
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT KARAWANG EKAWANA NUGRAHA,Forest concession (PBPH),PBPH HP,80.9725,0.0127,71.785,3.0625,0.0,52,47,170.3975,142.9575,68.845,3,3
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,91.14,0.0143,40.67,14.5775,0.0,26,21,16.2925,12.3725,6.125,17,13
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. PERSADA SAWIT MAS,Oil palm,HGU/Kebun Sawit,46.55,0.0073,4.0425,2.5725,0.0,15,15,63.5775,37.3625,2.5725,10,4
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. BULUH CAWANG PLANTATION,Oil palm,HGU/Kebun Sawit,7.84,0.0012,4.655,0.0,0.0,5,3,68.4775,63.21,30.5025,4,4
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT CIPTAMAS BUMI SUBUR,Forest concession (PBPH),PBPH HP,24.255,0.0038,14.455,0.0,0.0,0,0,149.5725,128.38,51.205,4,4
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,KTH PUTRA DAERAH SIMPANG TIGA SAKTI,Community forest (PPHKM),PPHKM,20.09,0.0032,17.5175,20.09,0.0,0,0,76.5625,52.3075,30.5025,0,0
-KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,KTH SELEKAN INDAH,Community forest (PPHKM),PPHKM,1.47,0.0002,0.0,1.47,1.47,0,0,25.97,16.17,0.245,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT WIRAKARYA SAKTI,Forest concession (PBPH),PBPH HP,326.36,0.1621,42.36,273.52,0.0,7,7,594.64,479.04,58.44,34,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH SUMBER JAYA,Community forest (PPHKM),PPHKM,0.44,0.0002,0.44,0.44,0.44,2,2,45.28,45.2,23.44,33,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH ALHAMDULILLAH,Community forest (PPHKM),PPHKM,4.48,0.0022,4.48,4.48,4.12,1,1,62.92,61.64,43.48,33,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH GEMAH RIPAH LOH JINAWI,Community forest (PPHKM),PPHKM,4.24,0.0021,4.24,4.24,4.24,0,0,57.16,55.16,39.96,33,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH KARYA MAKMUR II,Community forest (PPHKM),PPHKM,2.0,0.001,2.0,2.0,2.0,0,0,45.76,45.72,29.32,33,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH MAKARTI MULYO,Community forest (PPHKM),PPHKM,1.84,0.0009,1.84,1.84,1.84,0,0,53.8,51.2,42.6,33,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH MEKAR JAYA,Community forest (PPHKM),PPHKM,0.32,0.0002,0.32,0.32,0.32,0,0,48.04,47.96,38.44,33,33
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KOPERASI CIPTA KARYA BANGSA,Community forest (PPHKM),PPHKM,25.44,0.0126,21.76,24.76,5.28,0,0,197.4,195.4,93.04,32,32
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KOPERASI SERBAGUNA SIDODADI,Community forest (PPHKM),PPHKM,28.04,0.0139,10.32,26.8,0.0,1,1,92.08,84.48,48.64,9,9
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTAN BINA LESTARI,Community forest (PPHKM),PPHKM,13.64,0.0068,2.44,12.68,0.0,0,0,71.84,67.24,32.16,8,8
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KOPERASI SINAR ABADI,Community forest (PPHKM),PPHKM,11.96,0.0059,1.4,11.96,0.0,0,0,60.52,57.16,27.04,7,7
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,M DAUD,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,41.08,31.56,25.68,7,7
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT GAMBUT BERSAHAJA,Community forest (PPHKM),PPHKM,19.92,0.0099,7.52,19.92,17.48,0,0,100.84,95.28,48.04,6,6
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. ERASAKTI WIRAFORESTAMA - KEBUN TANJUNG,Oil palm,HGU/Kebun Sawit,31.92,0.0159,9.0,3.84,0.0,0,0,100.04,89.72,58.84,5,5
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ANGSO DUO,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,21.28,18.6,15.48,5,5
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PATRON,Mining,"IUP, KOPERASI",0.0,0.0,0.0,0.0,0.0,0,0,19.64,17.28,13.84,4,4
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. JAMBI BATANGHARI PLANTATION,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,23.8,19.84,12.12,4,4
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SYAMSURIZAL,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,55.2,45.36,26.48,3,3
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT SUNGAI RAMBUT SEJAHTERA,Community forest (PPHKM),PPHKM,8.4,0.0042,4.44,8.4,4.84,0,0,73.96,72.04,40.04,2,2
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. AGRO TUMBUH GEMILANG ABADI,Oil palm,HGU/Kebun Sawit,8.16,0.0041,2.24,8.16,0.0,0,0,113.92,108.72,35.68,2,2
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KASWARI UNGGUL,Oil palm,HGU/Kebun Sawit,29.04,0.0144,2.2,22.88,0.0,1,1,264.4,244.08,46.48,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. PETALING MANDRAGUNA,Oil palm,HGU/Kebun Sawit,15.88,0.0079,0.0,2.76,0.0,0,0,112.6,90.52,0.0,1,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. ERASAKTI WIRAFORESTAMA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,30.72,13.32,0.04,1,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. MENDAHARA AGRO JAYA INDUSTRI,Oil palm,HGU/Kebun Sawit,32.6,0.0162,0.0,32.36,0.0,0,0,193.12,178.16,3.04,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH BUMI INDAH SEJAHTERA,Community forest (PPHKM),PPHKM,8.52,0.0042,8.52,8.36,8.52,0,0,63.72,59.08,44.4,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT CATUR RAHAYU,Community forest (PPHKM),PPHKM,6.6,0.0033,5.56,6.52,0.0,0,0,130.76,128.88,50.28,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KURNIA SAWIT YANTO BERSAUDARA,Oil palm,HGU/Kebun Sawit,1.96,0.001,0.0,0.0,0.0,0,0,53.28,42.8,4.08,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH KARYA TANI,Community forest (PPHKM),PPHKM,1.16,0.0006,0.0,0.0,0.0,0,0,58.6,10.6,3.8,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH MAJU BERSAMA,Community forest (PPHKM),PPHKM,1.0,0.0005,0.0,0.0,0.0,0,0,55.44,6.52,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT WONO LESTARI,Community forest (PPHKM),PPHKM,0.96,0.0005,0.32,0.96,0.0,0,0,65.44,65.44,15.8,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,FAUZI ABBAS,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,10.44,6.12,0.24,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RIKI ANDRI,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,10.28,5.16,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RINI LISTYANINGTYAS,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,12.16,9.96,3.44,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SUHARYANTA,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,15.24,9.68,3.12,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ADE IRAWAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,54.64,37.68,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ALAM PERMATA BATANGHARI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,58.52,42.16,12.52,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ANUGERAH MULIA,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,24.4,16.44,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,BANGUN BERKAH,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,30.44,14.96,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ERWIN LIM,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,41.12,35.36,4.08,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,FIRMAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,53.36,45.56,0.04,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,HASAN BASRI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,48.16,36.68,2.64,0,0
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT. KAYUNG AGRO LESTARI,Oil palm,HGU/Kebun Sawit,156.77,0.5599,8.5,60.85,0.0,367,330,110.36,38.39,26.16,360,279
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT MOHAIRSON PAWAN KHATULISTIWA,Forest concession (PBPH),PBPH HP,4.46,0.0159,0.16,0.0,0.0,14,4,18.92,14.66,6.26,101,91
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,LAMAN MINING,Mining,"IUP, PT",2.32,0.0083,0.0,0.0,0.0,0,0,15.22,2.2,1.37,26,20
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT. GEMILANG MAKMUR SUBUR,Oil palm,HGU/Kebun Sawit,1.52,0.0054,0.0,0.0,0.0,0,0,3.49,2.4,1.77,25,22
+KHG.61.04.06,KHG Sungai Tolak - Sungai Siduk,PT. DAMAI AGRO SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,2.03,1.0,0.44,14,11
+KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT PARAMITRA MULIA LANGGENG,Forest concession (PBPH),PBPH HP,124.48,0.2584,46.86,66.36,0.0,125,119,145.69,60.54,37.45,21,15
+KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT. DENDY MARKER INDAH LESTARI,Oil palm,HGU/Kebun Sawit,134.17,0.2785,31.76,61.17,0.0,29,23,147.04,57.45,37.92,25,17
+KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT. PP LONDON SUMATERA INDONESIA BLOK I,Oil palm,HGU/Kebun Sawit,2.1,0.0044,0.0,0.0,0.0,0,0,43.15,9.38,6.77,5,5
+KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT. BUANA SRIWIJAYA SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,38.94,0.0,0.0,2,0
+KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,"PT. DWI REKSA USAHA PERKASA (PT. PP LONSUM, TBK)",Oil palm,HGU/Kebun Sawit,0.16,0.0003,0.0,0.0,0.0,0,0,32.24,3.43,0.0,0,0
+KHG.16.05.03,KHG Sungai Rumpit - Sungai Rawas,PT ESA YASA DINAMIKA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,6.38,0.0,0.0,0,0
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. ARRTU ENERGIE RESOURCES,Oil palm,HGU/Kebun Sawit,76.9,0.1193,27.64,37.72,0.0,466,439,195.3,93.04,45.73,748,620
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. LIMPAH SEJAHTERA,Oil palm,HGU/Kebun Sawit,161.22,0.2501,2.15,76.36,0.0,297,288,110.04,54.39,21.84,319,272
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. PRANA INDAH GEMILANG,Oil palm,HGU/Kebun Sawit,5.79,0.009,2.97,0.0,0.0,14,10,86.27,45.51,23.59,298,266
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT MOHAIRSON PAWAN KHATULISTIWA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,23.38,5.35,4.13,58,34
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,GAPOKTAN SUMBER KARYA,Community forest (PPHKM),PPHKM,0.28,0.0004,0.0,0.0,0.0,0,0,37.64,13.97,1.31,49,31
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. SEJAHTERA SAWIT LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,17.02,1.61,0.71,36,8
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,JESICA ABADI,Mining,"IUP, CV",0.03,0.0,0.0,0.0,0.0,0,0,23.02,5.96,4.09,28,23
+KHG.61.04.08,KHG Sungai Pawan - Sungai Kepulu,PT. DAMAI AGRO SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.21,0.0,0.0,10,0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,KTH RAJAKI TALINO,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,57.27,49.41,10.1,412,410
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,ANEKA TAMBANG TBK,Mining,"IUP, PT",4.51,0.0088,0.01,0.0,0.0,0,0,105.79,93.79,5.18,194,192
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,KOPERASI PRODUSEN USAHA KARYA KEMILAU,Plantation forest (PPHTR),PPHTR,0.0,0.0,0.0,0.0,0.0,0,0,6.26,4.43,0.09,37,37
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,PT MUARA SUNGAI  LANDAK,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,13.86,10.55,1.35,4,4
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,BATU PRIMA PERSADA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,20.32,13.75,0.0,2,0
+KHG.61.02-08.01,KHG Sungai Mempawah - Sungai Peniti,SULENCO WIBAWA PERKASA,Mining,"IUP, PT",0.02,0.0,0.0,0.0,0.0,0,0,64.14,35.99,1.55,1,1
+KHG.62.04.03,KHG Sungai Mangkatip - Sungai Barito 2,PT. GLOBALINDO AGUNG LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,42.31,25.8,13.84,20,13
+KHG.62.04.03,KHG Sungai Mangkatip - Sungai Barito 2,AAN DARMIN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,32.32,12.78,10.71,16,11
+KHG.62.04.03,KHG Sungai Mangkatip - Sungai Barito 2,AKHMAD HIJAJI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,41.32,18.75,13.68,8,4
+KHG.62.04.03,KHG Sungai Mangkatip - Sungai Barito 2,H. SAYUTMAN H. LISA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,23.25,3.46,0.0,4,0
+KHG.62.04.03,KHG Sungai Mangkatip - Sungai Barito 2,PT HUTAN AMANAH LESTARI,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,25.0,4.21,0.69,4,0
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,KENCANA INDAH,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,24.12,13.22,0.19,72,56
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,PT INHUTANI III NANGAPINOH,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,25.77,14.98,8.74,40,34
+KHG.61.05-10.01,KHG Sungai Melawi - Sungai Batunanta,KAYA KENCANA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,20.29,2.59,1.17,36,7
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT TIESICO CAHAYA PERTIWI,Forest concession (PBPH),PBPH HP,46.79,0.0557,23.41,18.3,0.0,78,78,203.67,175.85,52.85,293,291
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT RIMBA HUTANI MAS,Forest concession (PBPH),PBPH HP,249.85,0.2975,36.47,212.96,0.0,19,14,209.89,166.66,39.8,287,284
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. TIESICO CAHAYA PERTIWI,Oil palm,HGU/Kebun Sawit,0.02,0.0,0.02,0.0,0.0,0,0,185.48,163.52,52.76,292,290
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KTH MEDAK LESTARI,Community forest (PPHKM),PPHKM,4.26,0.0051,1.48,3.31,0.0,14,11,47.75,38.36,31.02,172,169
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KTH MEDAK AGRI LESTARI,Community forest (PPHKM),PPHKM,1.69,0.002,0.0,1.69,0.0,0,0,73.23,46.6,9.72,51,49
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KTH KARYA LIBERIKA,Community forest (PPHKM),PPHKM,0.53,0.0006,0.0,0.53,0.0,0,0,66.9,47.14,9.22,50,48
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. MENTARI SUBUR ABADI,Oil palm,HGU/Kebun Sawit,62.49,0.0744,0.0,17.54,0.0,4,0,38.15,10.97,0.0,2,1
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,BUMI BORNEO INTI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,18.32,7.78,0.0,5,5
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KTH BINA TANI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,2.79,1.02,0.63,5,3
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. BAHARI GEMBIRA RIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,28.77,15.82,0.0,5,5
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KETALING UTAMA SEJAHTERA,Oil palm,HGU/Kebun Sawit,1.88,0.0022,0.0,0.0,0.0,0,0,48.42,36.69,0.52,3,3
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. PP LONDON SUMATERA (SUMSEL),Oil palm,HGU/Kebun Sawit,42.27,0.0503,0.0,7.46,0.0,1,0,35.31,12.26,0.21,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. AGRONUSA BUMI LESTARI,Oil palm,HGU/Kebun Sawit,4.65,0.0055,0.0,0.34,0.0,0,0,53.44,27.23,0.21,1,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KOPERASI MULTI USAHA & KOPERASI LOH JINAWI,Community forest (PPHKM),PPHKM,4.11,0.0049,0.09,0.0,0.0,0,0,57.59,55.25,7.63,1,1
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KTH TAPAK RIMAU MEDAK,Community forest (PPHKM),PPHKM,1.08,0.0013,0.02,0.0,0.0,0,0,40.64,40.64,8.21,1,1
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KOPERASI BERSATU ARAH MAJU,Community forest (PPHKM),PPHKM,0.67,0.0008,0.0,0.0,0.0,0,0,49.11,40.7,2.64,1,1
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT BUMI PERSADA PERMAI (SK 337),Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,64.72,33.27,0.21,1,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT WAHANA LESTARI MAKMUR SUKSES,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,24.46,2.86,0.0,1,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. PANCA TIRTA BUDI  AGUNG,Oil palm,HGU/Kebun Sawit,10.38,0.0124,0.0,2.52,0.0,0,0,49.31,27.77,1.13,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,BHUMI SRIWIJAYA PERDANA COAL,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,0.01,0.0,0.0,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,GAPOKTAN MANDIRI JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.37,0.0,0.0,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KOPERASI KARISMA TANI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,18.26,18.26,0.5,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,KT KARYA MAKMUR,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,28.89,20.98,0.09,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT PESONA BELANTARA PERSADA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,29.18,27.24,0.29,0,0
+KHG.15-16.02,KHG Sungai Lalan - Sungai Merang,PT. PINANG WITMAS SEJATI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,15.93,0.0,0.0,0,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT BUMI MEKAR HIJAU,Forest concession (PBPH),PBPH HP,1255.5025,0.1976,244.1425,931.49,0.0,227,174,94.6925,14.5775,2.8175,35,12
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. BINTANG HARAPAN PALMA,Oil palm,HGU/Kebun Sawit,88.2,0.0139,79.87,0.0,0.0,187,182,2.5725,0.0,0.0,4,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT SBA WOOD INDUSTRIES,Forest concession (PBPH),PBPH HP,1369.305,0.2155,372.0325,674.6075,0.0,90,75,190.855,13.72,11.76,7,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT BUMI ANDALAS PERMAI,Forest concession (PBPH),PBPH HP,1895.4425,0.2983,539.3675,1193.0275,0.0,88,58,786.3275,21.4375,9.4325,7,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. BUMI SRIWIJAYA SENTOSA,Oil palm,HGU/Kebun Sawit,36.26,0.0057,20.4575,13.8425,0.0,65,58,7.35,3.185,0.0,5,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT KARAWANG EKAWANA NUGRAHA,Forest concession (PBPH),PBPH HP,80.9725,0.0127,3.43,3.0625,0.0,52,2,170.3975,0.0,0.0,3,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. SAMORA USAHA JAYA,Oil palm,HGU/Kebun Sawit,91.14,0.0143,1.8375,14.5775,0.0,26,3,16.2925,8.2075,2.8175,17,10
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. PERSADA SAWIT MAS,Oil palm,HGU/Kebun Sawit,46.55,0.0073,0.0,2.5725,0.0,15,0,63.5775,6.86,0.0,10,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT. BULUH CAWANG PLANTATION,Oil palm,HGU/Kebun Sawit,7.84,0.0012,0.0,0.0,0.0,5,0,68.4775,0.0,0.0,4,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,PT CIPTAMAS BUMI SUBUR,Forest concession (PBPH),PBPH HP,24.255,0.0038,0.0,0.0,0.0,0,0,149.5725,0.245,0.0,4,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,KTH PUTRA DAERAH SIMPANG TIGA SAKTI,Community forest (PPHKM),PPHKM,20.09,0.0032,17.5175,20.09,0.0,0,0,76.5625,16.5375,11.76,0,0
+KHG.16.02.01,KHG Sungai Sugihan - Sungai Lumpur,KTH SELEKAN INDAH,Community forest (PPHKM),PPHKM,1.47,0.0002,0.0,1.47,1.47,0,0,25.97,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT WIRAKARYA SAKTI,Forest concession (PBPH),PBPH HP,326.36,0.1621,41.48,273.52,0.0,7,7,594.64,379.96,57.6,34,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH SUMBER JAYA,Community forest (PPHKM),PPHKM,0.44,0.0002,0.44,0.44,0.44,2,2,45.28,40.28,23.2,33,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH ALHAMDULILLAH,Community forest (PPHKM),PPHKM,4.48,0.0022,4.48,4.48,4.12,1,1,62.92,55.68,43.24,33,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH GEMAH RIPAH LOH JINAWI,Community forest (PPHKM),PPHKM,4.24,0.0021,4.24,4.24,4.24,0,0,57.16,54.28,39.96,33,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH KARYA MAKMUR II,Community forest (PPHKM),PPHKM,2.0,0.001,2.0,2.0,2.0,0,0,45.76,45.0,29.32,33,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH MAKARTI MULYO,Community forest (PPHKM),PPHKM,1.84,0.0009,1.84,1.84,1.84,0,0,53.8,49.64,42.6,33,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH MEKAR JAYA,Community forest (PPHKM),PPHKM,0.32,0.0002,0.32,0.32,0.32,0,0,48.04,47.76,38.44,33,33
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KOPERASI CIPTA KARYA BANGSA,Community forest (PPHKM),PPHKM,25.44,0.0126,21.76,24.76,5.28,0,0,197.4,168.68,92.32,32,32
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KOPERASI SERBAGUNA SIDODADI,Community forest (PPHKM),PPHKM,28.04,0.0139,10.32,26.8,0.0,1,1,92.08,78.04,47.48,9,7
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTAN BINA LESTARI,Community forest (PPHKM),PPHKM,13.64,0.0068,2.44,12.68,0.0,0,0,71.84,58.64,30.08,8,7
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KOPERASI SINAR ABADI,Community forest (PPHKM),PPHKM,11.96,0.0059,1.4,11.96,0.0,0,0,60.52,51.0,25.8,7,7
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,M DAUD,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,41.08,25.88,24.64,7,5
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT GAMBUT BERSAHAJA,Community forest (PPHKM),PPHKM,19.92,0.0099,7.52,19.92,17.48,0,0,100.84,92.12,46.16,6,5
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. ERASAKTI WIRAFORESTAMA - KEBUN TANJUNG,Oil palm,HGU/Kebun Sawit,31.92,0.0159,6.24,3.84,0.0,0,0,100.04,75.32,57.48,5,5
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ANGSO DUO,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,21.28,15.8,14.68,5,3
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PATRON,Mining,"IUP, KOPERASI",0.0,0.0,0.0,0.0,0.0,0,0,19.64,14.68,13.56,4,3
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. JAMBI BATANGHARI PLANTATION,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,23.8,12.68,10.84,4,3
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SYAMSURIZAL,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,55.2,32.72,24.0,3,2
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT SUNGAI RAMBUT SEJAHTERA,Community forest (PPHKM),PPHKM,8.4,0.0042,4.44,8.4,4.84,0,0,73.96,68.56,39.52,2,2
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. AGRO TUMBUH GEMILANG ABADI,Oil palm,HGU/Kebun Sawit,8.16,0.0041,2.24,8.16,0.0,0,0,113.92,85.2,34.72,2,2
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KASWARI UNGGUL,Oil palm,HGU/Kebun Sawit,29.04,0.0144,2.2,22.88,0.0,1,1,264.4,169.8,46.44,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. PETALING MANDRAGUNA,Oil palm,HGU/Kebun Sawit,15.88,0.0079,0.0,2.76,0.0,0,0,112.6,30.04,0.0,1,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. ERASAKTI WIRAFORESTAMA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,30.72,0.12,0.04,1,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. MENDAHARA AGRO JAYA INDUSTRI,Oil palm,HGU/Kebun Sawit,32.6,0.0162,0.0,32.36,0.0,0,0,193.12,108.28,3.04,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH BUMI INDAH SEJAHTERA,Community forest (PPHKM),PPHKM,8.52,0.0042,8.52,8.36,8.52,0,0,63.72,54.44,44.4,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT CATUR RAHAYU,Community forest (PPHKM),PPHKM,6.6,0.0033,5.56,6.52,0.0,0,0,130.76,108.48,50.24,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KURNIA SAWIT YANTO BERSAUDARA,Oil palm,HGU/Kebun Sawit,1.96,0.001,0.0,0.0,0.0,0,0,53.28,7.92,4.08,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH KARYA TANI,Community forest (PPHKM),PPHKM,1.16,0.0006,0.0,0.0,0.0,0,0,58.6,8.8,3.28,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,KTH MAJU BERSAMA,Community forest (PPHKM),PPHKM,1.0,0.0005,0.0,0.0,0.0,0,0,55.44,8.08,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,GAPOKTANHUT WONO LESTARI,Community forest (PPHKM),PPHKM,0.96,0.0005,0.32,0.96,0.0,0,0,65.44,59.84,15.76,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,FAUZI ABBAS,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,10.44,0.24,0.24,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RIKI ANDRI,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,10.28,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RINI LISTYANINGTYAS,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,12.16,3.28,2.08,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SUHARYANTA,Mining,"IUP, SDR",0.04,0.0,0.0,0.0,0.0,0,0,15.24,3.44,3.12,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ADE IRAWAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,54.64,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ALAM PERMATA BATANGHARI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,58.52,14.2,12.52,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ANUGERAH MULIA,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,24.4,0.28,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,BANGUN BERKAH,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,30.44,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,ERWIN LIM,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,41.12,8.16,4.08,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,FIRMAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,53.36,21.84,0.04,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,HASAN BASRI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,48.16,4.56,2.64,0,0
 KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,JUNAIDI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,0.16,0.0,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,LADANG SAWIT SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,52.0,44.12,0.52,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. BUKIT BINTANG SAWIT,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.72,6.88,2.44,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KASWARI ESA UNGGUL,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,49.04,48.8,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KHARISMA KEMINGKING,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,5.92,0.76,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. PURI HIJAU LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,10.04,6.0,0.04,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PUTRA BATANGHARI,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,30.12,24.36,2.8,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RADEN Z ANSYORI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,93.8,66.24,6.84,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RUDY AGUNG LAKSANA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,39.72,33.8,2.44,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RUSMANSYAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,43.64,26.32,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SALEH SHIBLY,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,83.32,60.52,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SAND BATANGHARI,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,29.24,22.56,1.76,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SUNAR,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,64.56,44.52,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,USAHA BATANG HARI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,32.68,28.4,2.6,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,USMAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,25.96,16.6,0.0,0,0
-KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,UTAMA KARYA,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,69.4,47.44,0.0,0,0
-KHG.14.03.02,KHG Pulau Bengkalis,PT. MESKOM AGRO SARIMAS,Oil palm,HGU/Kebun Sawit,38.55,0.0425,3.42,22.74,0.0,84,84,121.86,121.73,5.46,70,70
-KHG.14.03.02,KHG Pulau Bengkalis,KTH MANGROVE BANGKIT BERSAMA,Community forest (PPHKM),PPHKM,1.84,0.002,0.0,0.0,0.0,0,0,63.65,63.4,12.63,102,102
-KHG.14.03.02,KHG Pulau Bengkalis,KTH MANGROVE BERKAH USAHA,Community forest (PPHKM),PPHKM,1.21,0.0013,0.0,0.0,0.0,0,0,48.39,46.71,4.59,44,44
-KHG.14.03.02,KHG Pulau Bengkalis,KTH PULAU MANDIRI,Community forest (PPHKM),PPHKM,2.74,0.003,0.0,0.0,0.0,0,0,89.38,88.51,4.1,10,10
-KHG.14.03.02,KHG Pulau Bengkalis,KTH BANGUN MEKAR JAYA,Community forest (PPHKM),PPHKM,0.72,0.0008,0.0,0.0,0.0,0,0,41.59,41.59,0.0,0,0
-KHG.14.03.02,KHG Pulau Bengkalis,KT BAKAU JAYA DELIMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,29.5,29.5,0.1,0,0
-KHG.14.03.02,KHG Pulau Bengkalis,PT RIAU ANDALAN PULP & PAPER,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,8.46,7.12,0.0,0,0
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT TRI PUPAJAYA,Forest concession (PBPH),PBPH HP,116.73,0.0635,0.5625,77.5125,0.0,0,0,206.4825,182.7,29.1375,121,119
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KOPERASI KARISMA TANI,Community forest (PPHKM),PPHKM,5.4,0.0029,3.0825,2.9025,0.0,0,0,45.4275,41.445,26.46,40,39
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT PESONA BELANTARA PERSADA,Forest concession (PBPH),PBPH HP,87.9975,0.0479,43.155,35.46,0.0,0,0,42.03,39.195,24.7275,38,38
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT PUTRADUTA INDAH WOOD,Forest concession (PBPH),PBPH HP,224.19,0.122,34.7625,178.5375,10.17,0,0,208.7775,189.675,7.83,16,12
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KTH TAPAK RIMAU MEDAK,Community forest (PPHKM),PPHKM,0.72,0.0004,0.135,0.0,0.0,0,0,21.285,16.9425,8.19,8,8
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KOPERASI MULTI USAHA & KOPERASI LOH JINAWI,Community forest (PPHKM),PPHKM,15.435,0.0084,5.6025,0.0,0.0,0,0,18.135,15.4575,6.9975,6,6
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT RIMBA HUTANI MAS,Forest concession (PBPH),PBPH HP,12.0825,0.0066,0.0675,0.0,0.0,0,0,43.7625,33.0525,0.27,0,0
-KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT RESTORASI HUTAN SUMATERA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,12.645,8.01,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT NUSANTARA RAYA SOLUSI,Forest concession (PBPH),PBPH HP,183.78,0.033,1.71,98.55,0.0,59,29,385.47,196.83,12.33,195,100
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. GLOBALINDO AGUNG LESTARI,Oil palm,HGU/Kebun Sawit,286.02,0.0513,34.11,41.49,40.59,49,40,503.91,413.82,170.64,147,124
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. UNITED AGRO INDONESIA,Oil palm,HGU/Kebun Sawit,64.98,0.0117,24.39,1.44,0.0,24,19,149.85,94.41,43.83,52,32
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,HERNOTO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,42.66,35.64,8.1,22,21
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BUDIANSYAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,38.25,31.23,7.92,21,21
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT SINERGI HUTAN SEJATI,Forest concession (PBPH),PBPH HP,129.87,0.0233,0.0,31.5,0.0,18,17,80.46,27.99,0.0,1,1
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,GAPOKTAN TUMBANG MUROI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,43.56,30.78,4.05,12,4
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT DASA INTIGA,Forest concession (PBPH),PBPH HP,35.73,0.0064,0.63,8.28,0.0,4,3,52.74,36.09,0.36,6,4
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ERIC ASTRAWINATA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.6,21.42,0.99,8,6
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,RIO SAPUTRA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,31.14,12.42,2.16,8,6
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,H. IBRAMSYAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,32.76,19.98,0.54,7,5
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BAHTIAR,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,33.93,27.54,6.75,6,6
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,H. MISDAN H. HUSAINI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,26.91,18.09,0.45,6,4
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,SITI MAIMANAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.78,18.45,0.54,6,5
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,RUSMINI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,27.72,18.09,0.45,5,3
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ASPILAMRI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,39.15,32.94,7.92,4,3
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,TAKINDO ARTHA PRATAMA MATAHARI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,37.62,32.67,0.36,4,4
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. GRAHA INTI JAYA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,29.16,15.3,0.18,3,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BARITO BHAKTI PERSADA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,28.53,22.14,0.0,2,1
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BUDI BERKAT,Mining,"IUP, UD",0.0,0.0,0.0,0.0,0.0,0,0,31.77,15.93,4.95,1,1
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,FEREN CHIA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,48.6,19.8,0.0,1,1
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,KTH IJE ATEI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,10.8,5.85,0.0,1,1
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,UYUNG HENDRA,Mining,"IUP, SDR",0.09,0.0,0.0,0.0,0.0,0,0,22.41,11.25,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ABDUL MURID,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,28.53,17.01,0.36,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,AKHMAD HIJAJI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,1.44,0.9,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,FERY SUPIAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,28.62,23.94,1.8,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ILHAM BUSRA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,32.58,9.09,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,KALTIM CHINDO PRIMA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,16.2,6.03,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,KTH RIMBA LESTARI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,3.96,0.9,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,M. SAKURA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,40.32,12.33,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT AUSTRAL BYNA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.72,0.18,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT NUSA LESTARI INDAH,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.72,0.27,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. MAKMUR BERSAMA ASIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,4.05,2.88,0.0,0,0
-KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,RANO ARIANTO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,47.88,25.74,1.53,0,0
-KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,PT DAMAI SETIATAMA TIMBER,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,301.875,182.375,0.0,58,50
-KHG.14.10.01,KHG Pulau Padang,PT RIAU ANDALAN PULP & PAPER,Forest concession (PBPH),PBPH HP,343.665,0.3089,17.6625,216.6975,1.71,2,2,487.5975,481.3425,23.3775,15,15
-KHG.14.10.01,KHG Pulau Padang,KTH BERKAH BERSAMA,Community forest (PPHKM),PPHKM,9.1125,0.0082,0.045,7.245,0.0,0,0,105.2775,101.0025,4.095,14,14
-KHG.14.10.01,KHG Pulau Padang,KTH RIMBUN JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,30.1725,29.385,0.495,12,12
-KHG.14.10.01,KHG Pulau Padang,PT FIRST FLOWER,Forest concession (PBPH),PBPH HP,12.8925,0.0116,0.0,0.0,0.0,0,0,152.0775,150.6825,3.4425,10,10
-KHG.14.10.01,KHG Pulau Padang,GAPOKTAN KARYA BERSAMA,Community forest (PPHKM),PPHKM,1.2825,0.0012,0.0,0.0,0.0,0,0,58.4775,53.7525,2.0025,2,2
-KHG.14.10.01,KHG Pulau Padang,PT GEMILANG CIPTA NUSANTARA (KEP. MERANTI),Forest concession (PBPH),PBPH HP,204.4575,0.1838,0.405,128.52,0.0,0,0,188.505,186.3225,7.425,1,1
-KHG.14.10.01,KHG Pulau Padang,KT BAKTI RAYA LUKIT,Community forest (PPHKM),PPHKM,1.2375,0.0011,0.0,1.2375,0.0,0,0,43.515,43.47,0.0,0,0
-KHG.14.10.01,KHG Pulau Padang,KT BAKAU JAYA DELIMA,Community forest (PPHKM),PPHKM,0.8775,0.0008,0.0,0.0,0.0,0,0,50.49,50.49,2.9925,0,0
-KHG.14.10.01,KHG Pulau Padang,KT MANGROVE FORMULA,Community forest (PPHKM),PPHKM,0.765,0.0007,0.0,0.0,0.0,0,0,48.465,48.33,0.3825,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH MASYARAKAT SUNGAI MELIBUR,Community forest (PPHKM),PPHKM,0.1125,0.0001,0.0,0.0,0.0,0,0,53.775,53.325,0.0,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH KHAZANAH HIJAU PESISIR,Community forest (PPHKM),PPHKM,0.045,0.0,0.0,0.0,0.0,0,0,38.3625,37.8675,0.0,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH MANGROVE BANGKIT BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,35.5725,34.9425,0.45,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH MANGROVE BERKAH USAHA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,29.52,28.8,0.45,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH PERANAP LESTARI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,2.115,1.3725,0.0,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH REMAI GEMILANG,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,5.4225,4.725,0.0,0,0
-KHG.14.10.01,KHG Pulau Padang,KTH TERUS JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,11.0925,9.99,0.0,0,0
-KHG.14.10.01,KHG Pulau Padang,PT. TRISETYA USAHA MANDIRI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,2.925,2.835,0.0225,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KOPERASI BUMI MANGROVE SEJAHTERA,Community forest (PPHKM),PPHKM,5.31,0.0038,0.0,0.0,0.0,0,0,125.28,116.0325,0.4275,2,1
-KHG.14.10.03,KHG Pulau Tebing Tinggi,PT FIRST FLOWER,Forest concession (PBPH),PBPH HP,39.3975,0.0285,0.0,4.1175,0.0,0,0,402.39,396.4725,3.42,1,1
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH MANGROVE JAYA,Community forest (PPHKM),PPHKM,16.6725,0.0121,0.0,0.0,0.0,0,0,147.78,141.975,0.54,1,1
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PELITA BANGLAS SEJAHTERA,Community forest (PPHKM),PPHKM,6.21,0.0045,0.0,0.0,0.0,0,0,89.955,83.205,0.0,1,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH TANJUNG MANGROVE BERSATU,Community forest (PPHKM),PPHKM,3.5775,0.0026,0.0,0.0,0.0,0,0,116.64,113.4675,0.4275,1,1
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SUBUR MAKMUR,Community forest (PPHKM),PPHKM,2.61,0.0019,0.0,0.0,0.0,0,0,92.1825,88.8075,0.54,1,1
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH LESTARI PANTAI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,34.2,32.5575,0.1125,1,1
-KHG.14.10.03,KHG Pulau Tebing Tinggi,PT NATIONAL SAGO PRIMA,Forest concession (PBPH),PBPH HP,208.665,0.1512,5.3325,172.4175,0.0,0,0,345.51,343.5525,8.73,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. TANI SWADAYA PERDANA,Oil palm,HGU/Kebun Sawit,22.5,0.0163,2.6325,4.545,0.0,0,0,112.5675,112.545,5.04,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KOPERASI JASA RIMBA MUTIARA LUKUN,Community forest (PPHKM),PPHKM,15.8175,0.0115,4.005,5.985,0.0,0,0,125.0325,123.9975,8.4375,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KT KEPAU BARU LESTARI,Community forest (PPHKM),PPHKM,14.7375,0.0107,0.0,4.5675,0.0,0,0,153.315,153.225,1.8675,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH TANI MEKAR,Community forest (PPHKM),PPHKM,7.4025,0.0054,0.0,6.795,0.0,0,0,87.9075,87.9075,6.6825,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PERANAP LESTARI,Community forest (PPHKM),PPHKM,6.57,0.0048,1.1025,5.5575,0.0,0,0,131.6475,130.59,15.525,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH WAHANA RIMBA BESTARI,Community forest (PPHKM),PPHKM,4.23,0.0031,0.0,4.23,4.23,0,0,105.7275,104.805,0.1125,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH LESTARI ALAM,Community forest (PPHKM),PPHKM,2.6775,0.0019,0.0,0.0,0.0,0,0,51.3,51.1425,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH CIPTA KARYA BERSAMA,Community forest (PPHKM),PPHKM,1.9575,0.0014,0.0,0.0,0.0,0,0,53.7525,53.7525,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH FLAMBOYAN,Community forest (PPHKM),PPHKM,1.6875,0.0012,0.0,1.44,0.0,0,0,44.64,44.64,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PUTRA ASLI KUNDUR,Community forest (PPHKM),PPHKM,1.5975,0.0012,0.0,0.0,0.0,0,0,63.405,62.64,1.5975,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SAGU MAKMUR,Community forest (PPHKM),PPHKM,1.3725,0.001,0.0,1.3725,0.0,0,0,86.805,86.7825,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH CIPTA KARYA,Community forest (PPHKM),PPHKM,1.0125,0.0007,0.0,0.855,0.0,0,0,88.3125,88.2225,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KUD BHAKTI SEPAKAT,Oil palm,HGU/Kebun Sawit,1.0125,0.0007,0.0,0.0,0.0,0,0,32.7375,32.6925,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SELAT MANDIRI,Community forest (PPHKM),PPHKM,0.45,0.0003,0.0,0.0,0.0,0,0,31.41,29.9025,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PUTRA ASLI TENAN,Community forest (PPHKM),PPHKM,0.2475,0.0002,0.0,0.0,0.0,0,0,84.5325,82.6875,1.575,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,GAPOKTAN KARYA BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,16.9425,15.705,2.5875,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KOPERASI BANAU BISA MAJU,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,26.5275,25.875,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH BERKAH BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.855,0.27,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH LESTARI MUDA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,16.2675,16.1775,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH MAJU BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,8.2125,7.9875,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH MANGROVE MERANTI LESTARI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,9.495,9.2025,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PECINTA MANGROVE KULIT BAKAU,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,6.1875,5.7825,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH REMAI GEMILANG,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,51.9975,51.5025,2.52,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SEMUKUT MANGROVE BERSATU,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,64.7325,62.955,0.3375,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH TERUS JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,46.53,45.99,6.39,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. TRIOMAS FDI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,15.0075,15.0075,0.7425,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. TRISETYA USAHA MANDIRI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,1.6425,1.6425,0.0,0,0
-KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. UNISERAYA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,12.195,12.1275,3.3525,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,LADANG SAWIT SEJAHTERA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,52.0,34.52,0.44,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. BUKIT BINTANG SAWIT,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,8.72,1.4,1.08,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KASWARI ESA UNGGUL,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,49.04,44.44,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. KHARISMA KEMINGKING,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,5.92,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PT. PURI HIJAU LESTARI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,10.04,0.04,0.04,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,PUTRA BATANGHARI,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,30.12,4.84,2.8,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RADEN Z ANSYORI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,93.8,7.96,6.84,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RUDY AGUNG LAKSANA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,39.72,18.64,2.2,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,RUSMANSYAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,43.64,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SALEH SHIBLY,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,83.32,3.28,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SAND BATANGHARI,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,29.24,3.56,1.76,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,SUNAR,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,64.56,2.32,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,USAHA BATANG HARI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,32.68,14.24,2.36,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,USMAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,25.96,0.0,0.0,0,0
+KHG.15.05-07-10.01,KHG Sungai Mendahara - Sungai Batanghari,UTAMA KARYA,Mining,"IUP, CV",0.0,0.0,0.0,0.0,0.0,0,0,69.4,1.2,0.0,0,0
+KHG.14.03.02,KHG Pulau Bengkalis,PT. MESKOM AGRO SARIMAS,Oil palm,HGU/Kebun Sawit,38.55,0.0425,2.97,22.74,0.0,84,83,121.86,104.85,5.29,70,69
+KHG.14.03.02,KHG Pulau Bengkalis,KTH MANGROVE BANGKIT BERSAMA,Community forest (PPHKM),PPHKM,1.84,0.002,0.0,0.0,0.0,0,0,63.65,60.88,12.63,102,102
+KHG.14.03.02,KHG Pulau Bengkalis,KTH MANGROVE BERKAH USAHA,Community forest (PPHKM),PPHKM,1.21,0.0013,0.0,0.0,0.0,0,0,48.39,45.01,4.59,44,44
+KHG.14.03.02,KHG Pulau Bengkalis,KTH PULAU MANDIRI,Community forest (PPHKM),PPHKM,2.74,0.003,0.0,0.0,0.0,0,0,89.38,72.62,4.1,10,9
+KHG.14.03.02,KHG Pulau Bengkalis,KTH BANGUN MEKAR JAYA,Community forest (PPHKM),PPHKM,0.72,0.0008,0.0,0.0,0.0,0,0,41.59,29.54,0.0,0,0
+KHG.14.03.02,KHG Pulau Bengkalis,KT BAKAU JAYA DELIMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,29.5,26.81,0.1,0,0
+KHG.14.03.02,KHG Pulau Bengkalis,PT RIAU ANDALAN PULP & PAPER,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,8.46,2.79,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT NUSANTARA RAYA SOLUSI,Forest concession (PBPH),PBPH HP,183.78,0.033,1.53,98.55,0.0,59,18,385.47,207.0,14.4,195,123
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. GLOBALINDO AGUNG LESTARI,Oil palm,HGU/Kebun Sawit,286.02,0.0513,27.72,41.49,40.59,49,38,503.91,379.53,153.9,147,114
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. UNITED AGRO INDONESIA,Oil palm,HGU/Kebun Sawit,64.98,0.0117,1.08,1.44,0.0,24,2,149.85,102.15,37.08,52,29
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,HERNOTO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,42.66,28.71,6.21,22,19
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BUDIANSYAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,38.25,24.3,6.12,21,18
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT SINERGI HUTAN SEJATI,Forest concession (PBPH),PBPH HP,129.87,0.0233,0.0,31.5,0.0,18,13,80.46,0.0,0.0,1,1
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,GAPOKTAN TUMBANG MUROI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,43.56,14.67,3.42,12,3
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT DASA INTIGA,Forest concession (PBPH),PBPH HP,35.73,0.0064,0.72,8.28,0.0,4,4,52.74,32.13,0.36,6,6
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ERIC ASTRAWINATA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.6,9.9,0.36,8,5
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,RIO SAPUTRA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,31.14,14.22,3.15,8,8
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,H. IBRAMSYAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,32.76,7.74,0.27,7,2
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BAHTIAR,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,33.93,7.74,1.62,6,2
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,H. MISDAN H. HUSAINI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,26.91,4.68,0.09,6,1
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,SITI MAIMANAH,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,30.78,7.74,0.27,6,2
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,RUSMINI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,27.72,1.26,0.09,5,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ASPILAMRI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,39.15,12.69,2.79,4,2
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,TAKINDO ARTHA PRATAMA MATAHARI,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,37.62,21.15,0.36,4,4
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. GRAHA INTI JAYA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,29.16,0.27,0.0,3,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BARITO BHAKTI PERSADA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,28.53,12.06,0.0,2,2
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,BUDI BERKAT,Mining,"IUP, UD",0.0,0.0,0.0,0.0,0.0,0,0,31.77,3.69,0.09,1,1
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,FEREN CHIA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,48.6,4.77,0.0,1,1
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,KTH IJE ATEI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,10.8,0.0,0.0,1,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,UYUNG HENDRA,Mining,"IUP, SDR",0.09,0.0,0.0,0.0,0.0,0,0,22.41,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ABDUL MURID,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,28.53,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,AKHMAD HIJAJI,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,1.44,1.35,0.18,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,FERY SUPIAN,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,28.62,8.01,0.09,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,ILHAM BUSRA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,32.58,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,KALTIM CHINDO PRIMA,Mining,"IUP, PT",0.0,0.0,0.0,0.0,0.0,0,0,16.2,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,KTH RIMBA LESTARI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,3.96,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,M. SAKURA,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,40.32,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT AUSTRAL BYNA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.72,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT NUSA LESTARI INDAH,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,0.72,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,PT. MAKMUR BERSAMA ASIA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,4.05,0.0,0.0,0,0
+KHG.62.03-04.01,KHG Sungai Kapuas - Sungai Barito,RANO ARIANTO,Mining,"IUP, SDR",0.0,0.0,0.0,0.0,0.0,0,0,47.88,0.0,0.0,0,0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT TRI PUPAJAYA,Forest concession (PBPH),PBPH HP,116.73,0.0635,3.33,77.5125,0.0,0,0,206.4825,199.2375,30.06,121,121
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KOPERASI KARISMA TANI,Community forest (PPHKM),PPHKM,5.4,0.0029,3.0825,2.9025,0.0,0,0,45.4275,45.4275,27.0225,40,40
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT PESONA BELANTARA PERSADA,Forest concession (PBPH),PBPH HP,87.9975,0.0479,43.155,35.46,0.0,0,0,42.03,42.03,25.1325,38,38
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT PUTRADUTA INDAH WOOD,Forest concession (PBPH),PBPH HP,224.19,0.122,34.7625,178.5375,10.17,0,0,208.7775,198.315,8.235,16,13
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KTH TAPAK RIMAU MEDAK,Community forest (PPHKM),PPHKM,0.72,0.0004,0.2025,0.0,0.0,0,0,21.285,21.285,8.5725,8,8
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KOPERASI MULTI USAHA & KOPERASI LOH JINAWI,Community forest (PPHKM),PPHKM,15.435,0.0084,5.6925,0.0,0.0,0,0,18.135,18.135,7.2,6,6
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT RIMBA HUTANI MAS,Forest concession (PBPH),PBPH HP,12.0825,0.0066,0.3825,0.0,0.0,0,0,43.7625,41.9175,0.6075,0,0
+KHG.15-16.01,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,PT RESTORASI HUTAN SUMATERA,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,12.645,8.7525,0.0,0,0
+KHG.91.18-17.01,KHG Sungai Buru Mappi - Sungai Buru Obaa,PT DAMAI SETIATAMA TIMBER,Forest concession (PBPH),PBPH HP,0.0,0.0,0.0,0.0,0.0,0,0,301.875,110.3125,0.0,58,14
+KHG.14.10.01,KHG Pulau Padang,PT RIAU ANDALAN PULP & PAPER,Forest concession (PBPH),PBPH HP,343.665,0.3089,17.6625,216.6975,1.71,2,2,487.5975,439.6275,23.3325,15,15
+KHG.14.10.01,KHG Pulau Padang,KTH BERKAH BERSAMA,Community forest (PPHKM),PPHKM,9.1125,0.0082,0.045,7.245,0.0,0,0,105.2775,99.9,4.095,14,14
+KHG.14.10.01,KHG Pulau Padang,KTH RIMBUN JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,30.1725,25.425,0.495,12,12
+KHG.14.10.01,KHG Pulau Padang,PT FIRST FLOWER,Forest concession (PBPH),PBPH HP,12.8925,0.0116,0.0,0.0,0.0,0,0,152.0775,143.1225,3.4425,10,10
+KHG.14.10.01,KHG Pulau Padang,GAPOKTAN KARYA BERSAMA,Community forest (PPHKM),PPHKM,1.2825,0.0012,0.0,0.0,0.0,0,0,58.4775,53.1675,2.0025,2,2
+KHG.14.10.01,KHG Pulau Padang,PT GEMILANG CIPTA NUSANTARA (KEP. MERANTI),Forest concession (PBPH),PBPH HP,204.4575,0.1838,0.405,128.52,0.0,0,0,188.505,174.8475,7.65,1,1
+KHG.14.10.01,KHG Pulau Padang,KT BAKTI RAYA LUKIT,Community forest (PPHKM),PPHKM,1.2375,0.0011,0.0,1.2375,0.0,0,0,43.515,42.435,0.0,0,0
+KHG.14.10.01,KHG Pulau Padang,KT BAKAU JAYA DELIMA,Community forest (PPHKM),PPHKM,0.8775,0.0008,0.0,0.0,0.0,0,0,50.49,46.35,2.9925,0,0
+KHG.14.10.01,KHG Pulau Padang,KT MANGROVE FORMULA,Community forest (PPHKM),PPHKM,0.765,0.0007,0.0,0.0,0.0,0,0,48.465,45.45,0.3825,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH MASYARAKAT SUNGAI MELIBUR,Community forest (PPHKM),PPHKM,0.1125,0.0001,0.0,0.0,0.0,0,0,53.775,50.625,0.0,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH KHAZANAH HIJAU PESISIR,Community forest (PPHKM),PPHKM,0.045,0.0,0.0,0.0,0.0,0,0,38.3625,34.965,0.0,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH MANGROVE BANGKIT BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,35.5725,25.605,0.45,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH MANGROVE BERKAH USAHA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,29.52,17.775,0.45,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH PERANAP LESTARI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,2.115,1.35,0.0,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH REMAI GEMILANG,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,5.4225,3.7125,0.0,0,0
+KHG.14.10.01,KHG Pulau Padang,KTH TERUS JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,11.0925,8.3025,0.0,0,0
+KHG.14.10.01,KHG Pulau Padang,PT. TRISETYA USAHA MANDIRI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,2.925,0.6975,0.0225,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KOPERASI BUMI MANGROVE SEJAHTERA,Community forest (PPHKM),PPHKM,5.31,0.0038,0.0,0.0,0.0,0,0,125.28,115.1775,0.4275,2,1
+KHG.14.10.03,KHG Pulau Tebing Tinggi,PT FIRST FLOWER,Forest concession (PBPH),PBPH HP,39.3975,0.0285,0.0,4.1175,0.0,0,0,402.39,384.8625,3.465,1,1
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH MANGROVE JAYA,Community forest (PPHKM),PPHKM,16.6725,0.0121,0.0,0.0,0.0,0,0,147.78,143.28,0.54,1,1
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PELITA BANGLAS SEJAHTERA,Community forest (PPHKM),PPHKM,6.21,0.0045,0.0,0.0,0.0,0,0,89.955,83.9475,0.0,1,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH TANJUNG MANGROVE BERSATU,Community forest (PPHKM),PPHKM,3.5775,0.0026,0.0,0.0,0.0,0,0,116.64,106.47,0.4275,1,1
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SUBUR MAKMUR,Community forest (PPHKM),PPHKM,2.61,0.0019,0.0,0.0,0.0,0,0,92.1825,91.8,0.54,1,1
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH LESTARI PANTAI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,34.2,26.28,0.1125,1,1
+KHG.14.10.03,KHG Pulau Tebing Tinggi,PT NATIONAL SAGO PRIMA,Forest concession (PBPH),PBPH HP,208.665,0.1512,5.3325,172.4175,0.0,0,0,345.51,328.725,8.82,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. TANI SWADAYA PERDANA,Oil palm,HGU/Kebun Sawit,22.5,0.0163,2.6325,4.545,0.0,0,0,112.5675,108.7875,4.545,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KOPERASI JASA RIMBA MUTIARA LUKUN,Community forest (PPHKM),PPHKM,15.8175,0.0115,4.005,5.985,0.0,0,0,125.0325,123.6375,8.5275,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KT KEPAU BARU LESTARI,Community forest (PPHKM),PPHKM,14.7375,0.0107,0.0,4.5675,0.0,0,0,153.315,150.1425,1.71,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH TANI MEKAR,Community forest (PPHKM),PPHKM,7.4025,0.0054,0.0,6.795,0.0,0,0,87.9075,86.4675,6.66,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PERANAP LESTARI,Community forest (PPHKM),PPHKM,6.57,0.0048,1.1025,5.5575,0.0,0,0,131.6475,130.995,15.525,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH WAHANA RIMBA BESTARI,Community forest (PPHKM),PPHKM,4.23,0.0031,0.0,4.23,4.23,0,0,105.7275,102.24,0.1125,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH LESTARI ALAM,Community forest (PPHKM),PPHKM,2.6775,0.0019,0.0,0.0,0.0,0,0,51.3,47.475,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH CIPTA KARYA BERSAMA,Community forest (PPHKM),PPHKM,1.9575,0.0014,0.0,0.0,0.0,0,0,53.7525,52.4025,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH FLAMBOYAN,Community forest (PPHKM),PPHKM,1.6875,0.0012,0.0,1.44,0.0,0,0,44.64,33.7275,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PUTRA ASLI KUNDUR,Community forest (PPHKM),PPHKM,1.5975,0.0012,0.0,0.0,0.0,0,0,63.405,60.2775,1.5975,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SAGU MAKMUR,Community forest (PPHKM),PPHKM,1.3725,0.001,0.0,1.3725,0.0,0,0,86.805,86.31,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH CIPTA KARYA,Community forest (PPHKM),PPHKM,1.0125,0.0007,0.0,0.855,0.0,0,0,88.3125,87.6825,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KUD BHAKTI SEPAKAT,Oil palm,HGU/Kebun Sawit,1.0125,0.0007,0.0,0.0,0.0,0,0,32.7375,28.98,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SELAT MANDIRI,Community forest (PPHKM),PPHKM,0.45,0.0003,0.0,0.0,0.0,0,0,31.41,25.965,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PUTRA ASLI TENAN,Community forest (PPHKM),PPHKM,0.2475,0.0002,0.0,0.0,0.0,0,0,84.5325,77.895,1.575,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,GAPOKTAN KARYA BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,16.9425,15.9075,2.3625,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KOPERASI BANAU BISA MAJU,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,26.5275,24.93,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH BERKAH BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,0.855,0.72,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH LESTARI MUDA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,16.2675,15.3,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH MAJU BERSAMA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,8.2125,6.2775,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH MANGROVE MERANTI LESTARI,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,9.495,7.3125,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH PECINTA MANGROVE KULIT BAKAU,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,6.1875,5.31,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH REMAI GEMILANG,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,51.9975,50.22,2.52,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH SEMUKUT MANGROVE BERSATU,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,64.7325,58.4325,0.3375,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,KTH TERUS JAYA,Community forest (PPHKM),PPHKM,0.0,0.0,0.0,0.0,0.0,0,0,46.53,45.3825,6.39,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. TRIOMAS FDI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,15.0075,13.275,0.72,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. TRISETYA USAHA MANDIRI,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,1.6425,1.3725,0.0,0,0
+KHG.14.10.03,KHG Pulau Tebing Tinggi,PT. UNISERAYA,Oil palm,HGU/Kebun Sawit,0.0,0.0,0.0,0.0,0.0,0,0,12.195,8.775,2.88,0,0

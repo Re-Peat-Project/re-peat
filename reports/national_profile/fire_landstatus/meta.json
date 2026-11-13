@@ -14,7 +14,7 @@
   "licences": "landstatus/ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg",
   "dmpg": "dpg/dmpg_villages_sitmat.gpkg",
   "burned": "burnt_area_2015_2026_Indonesia.gpkg",
-  "peat": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gfw_v20230315_z11.tif",
+  "peat": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat/ppeg_lahan_gambut_2026_30m.tif",
   "modis": "hotspots_modis_2026.gpkg",
   "viirs": [
    "hotspot_viirs_snpp_2012_2025.gpkg",

@@ -1,0 +1,12 @@
+source,kind,path,files,count,crs,resolution,units,year,provenance
+PPEG PEAT_THICK,vector classes,ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg,1,989398.0,EPSG:4326,polygons,"class (0.5 m steps, or BBSDLP cm classes)",2026 (April),"KLH PPEG integrated analysis, field PEAT_THICK"
+PPEG KDLMN_GBT,vector classes,ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg,1,989398.0,EPSG:4326,polygons,"class (0.5 m steps, or BBSDLP cm classes)",2026 (April),"KLH PPEG integrated analysis, field KDLMN_GBT"
+"KLHK FEG 1:50,000",vector classes,klhk_khg_feg_50k.gpkg (feg_50k),1,15980.0,EPSG:4326,"1:50,000","class, 0.5 m steps",SK by KHG 2017-2024,"KLHK, via BIG; field peat_thick"
+"BBSDLP peat depth 1:50,000",vector classes,kedalaman_gambut_bbsdlp.gpkg,1,1413.0,EPSG:4326,"1:50,000",class D1-D6 (50 cm to >700 cm),2019,BBSDLP (Ministry of Agriculture); field KELAS_GBT
+LiDAR-based thickness (TopoToRaster),raster,peat_thickness,2,30525712.0,32748,20,"cm, float32 (-8888 = no data)",2020 (LiDAR),KLHK LiDAR Sugihan-Saleh 2020
+modelled KHG depth raster,raster,Peat depth and DTM,58,1545595505.0,"32647, 32648, 32649, 32748, 32749, 32750, 4326","10, 10.1, 12.3, 8.89e-05, 9.01e-05, 9.02e-05, 9.03e-05, 9e-05","cm, float32 (-8888 = no data)",not stated,KLHK delivery 'Peat depth and DTM'
+per-KHG clips (_khg/*/00_inputs/peat_depth.tif),raster,_khg,11,,as source,as source,m,,windows of the modelled KHG rasters (local_manifest.csv); not compared again
+Saleh-Sugihan survey points,points,lidar_klhk/sugihan_saleh_2020/peat_thickness/PEAT_THICK__*.shp,1,208.0,EPSG:32748,points,cm (P_DEPTH_CM),field survey (TANGGAL_SU),KLHK LiDAR delivery
+Saleh-Sugihan thickness class polygons,vector classes,TopoToR__PEAT_THICK__*.shp,1,61.0,EPSG:32748,polygons,class,2020,classes of the LiDAR-based raster; not compared again
+Tebing Tinggi survey points,points,Peat depth and DTM/Tebingtinggi.csv,1,1385.0,"EPSG:4326 (POINT_X, POINT_Y)",points,m (TebalGmbt1),2015,field survey; depths differ more by field team than by place
+peat masks (PEAT_*.shp),vector,Peat depth and DTM/PeatDepth_*,6,,,,1 peat / 0 not peat,,masks of the modelled rasters; no depth

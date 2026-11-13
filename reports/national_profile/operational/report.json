@@ -28,8 +28,8 @@
   "ahp": {},
   "class_thresholds": {
     "risk": [
-      0.002631733235789569,
-      0.143171854024469
+      0.037960792108892444,
+      0.17076635686459185
     ],
     "feasibility": []
   },
@@ -43,33 +43,28 @@
     "u_canal_tertiary"
   ],
   "class_counts": {
-    "Fokus nasional: sedang": 159,
-    "Fokus nasional: rendah": 159,
-    "Fokus nasional: tinggi": 158
+    "Fokus nasional: rendah": 109,
+    "Fokus nasional: tinggi": 108,
+    "Fokus nasional: sedang": 108
   },
   "correlated_pairs": [
     {
       "a": "u_fire_freq",
       "b": "u_hotspot",
-      "spearman": 0.891
+      "spearman": 0.873
     },
     {
       "a": "u_fire_freq",
       "b": "u_burn_repeat",
-      "spearman": 0.867
-    },
-    {
-      "a": "u_hotspot",
-      "b": "u_hotspot_now",
-      "spearman": 0.85
+      "spearman": 0.868
     }
   ],
-  "_corr": "                     n_u_fire_freq  ...  n_u_canal_tertiary\nn_u_fire_freq             1.000000  ...            0.132535\nn_u_hotspot               0.891196  ...            0.089421\nn_u_burn_repeat           0.867257  ...            0.093390\nn_u_hotspot_now           0.763801  ...           -0.086634\nn_u_canal_primary         0.141140  ...            0.391307\nn_u_canal_secondary       0.020469  ...            0.641916\nn_u_canal_tertiary        0.132535  ...            1.000000\n\n[7 rows x 7 columns]",
+  "_corr": "                     n_u_fire_freq  ...  n_u_canal_tertiary\nn_u_fire_freq             1.000000  ...            0.207155\nn_u_hotspot               0.872990  ...            0.135640\nn_u_burn_repeat           0.867856  ...            0.162855\nn_u_hotspot_now           0.690797  ...           -0.068966\nn_u_canal_primary         0.184600  ...            0.380214\nn_u_canal_secondary       0.085506  ...            0.635633\nn_u_canal_tertiary        0.207155  ...            1.000000\n\n[7 rows x 7 columns]",
   "validation": {},
   "sensitivity": {
     "runs": 300,
-    "share_units_stable_class": 0.8970588235294118,
-    "median_rank_sd": 13.663825973190896
+    "share_units_stable_class": 0.8523076923076923,
+    "median_rank_sd": 15.007690991251414
   },
   "now": {
     "weight": 1.0,
@@ -89,7 +84,7 @@
       10
     ]
   },
-  "n_ranked": 476,
+  "n_ranked": 325,
   "n_profiled": 865,
   "mode": "operational",
   "config": {
@@ -180,10 +175,12 @@
       "min_days": 30
     },
     "peat": {
-      "extent": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gfw_v20230315_z11.tif",
+      "extent": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat/ppeg_lahan_gambut_2026_30m.tif",
       "global": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gpm2022_1km.tif",
       "basis": "peat",
-      "min_peat_km2": 25
+      "min_peat_km2": 25,
+      "vector": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat/ppeg_lahan_gambut_2026.gpkg",
+      "gfw": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gfw_v20230315_z11.tif"
     }
   },
   "inputs": {

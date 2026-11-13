@@ -1,5 +1,105 @@
 # Annex A Tables
 
+The values behind the charts. Areas are on the 30 m grid; hotspots are VIIRS of 2026 (1 January to 31 October), medium and high confidence, likely static sources left out; burned area is the sum of the yearly areas 2015 to 2025.
+
+## Concessions and forest area
+
+Table: Land, burned area and hotspots by concession and forest area, all land. The last column compares VIIRS hotspots of 2026 with the mean of 2015 to 2025 over the same months. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Concession, forest area | 32,455 | 17% | 1,026 | 13% | 2.7 | 105,262 | 18% | 32.4 | 3.5 |
+| Concession, APL | 9,644 | 5% | 501 | 6% | 4.0 | 45,421 | 8% | 47.1 | 2.8 |
+| Concession, water or undefined | 38.6 | 0% | 0.4 | 0% | 0.9 | 32 | 0% | 8.3 | 2.8 |
+| No concession, forest area | 85,800 | 45% | 3,439 | 44% | 2.9 | 264,075 | 46% | 30.8 | 3.8 |
+| No concession, APL | 60,378 | 32% | 2,783 | 36% | 3.1 | 157,330 | 27% | 26.1 | 2.5 |
+| No concession, water or undefined | 776 | 0% | 2.0 | 0% | 0.2 | 581 | 0% | 7.5 | 6.5 |
+
+## Peat
+
+Table: Peat, burned peat and hotspots on peat by concession and forest area; shares are of the peat. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Concession, forest area | 3,025 | 23% | 384 | 20% | 11.2 | 20,770 | 11% | 68.7 | 1.9 |
+| Concession, APL | 1,697 | 13% | 214 | 11% | 9.6 | 20,559 | 11% | 121.1 | 3.8 |
+| Concession, water or undefined | 0.6 | 0% | 0.0 | 0% | 4.3 | 0 | 0% | 0.0 | 0.0 |
+| No concession, forest area | 6,202 | 47% | 937 | 48% | 11.7 | 105,194 | 58% | 169.6 | 4.4 |
+| No concession, APL | 2,402 | 18% | 423 | 22% | 12.6 | 34,680 | 19% | 144.4 | 3.2 |
+| No concession, water or undefined | 6.2 | 0% | 0.5 | 0% | 5.2 | 26 | 0% | 42.1 | 2.9 |
+
+## Concession types
+
+Table: Land, burned area and hotspots by concession type, each cell counted once (overlaps go to the first type in the order of the table), all land. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Oil palm | 4,958 | 3% | 388 | 5% | 6.0 | 32,963 | 6% | 66.5 | 3.4 |
+| Mining | 7,130 | 4% | 137 | 2% | 1.5 | 20,315 | 4% | 28.5 | 2.5 |
+| Plantation forest (PPHTR) | 181 | 0% | 13.7 | 0% | 5.8 | 2,749 | 0% | 151.6 | 6.2 |
+| Forest concession (PBPH) | 29,868 | 16% | 988 | 13% | 2.9 | 94,688 | 17% | 31.7 | 3.4 |
+| No concession | 146,953 | 78% | 6,223 | 80% | 3.0 | 421,986 | 74% | 28.7 | 3.2 |
+
+Table: The same by licence type, overlapping licences counted under each type; community forest permits (PPHKM), which are not concessions, for comparison. Shares are of all land. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Oil palm | 4,958 | 3% | 388 | 5% | 6.0 | 32,963 | 6% | 66.5 | 3.4 |
+| Mining | 7,130 | 4% | 137 | 2% | 1.5 | 20,315 | 4% | 28.5 | 2.5 |
+| Plantation forest (PPHTR) | 181 | 0% | 13.7 | 0% | 5.8 | 2,749 | 0% | 151.6 | 6.2 |
+| Forest concession (PBPH) | 29,868 | 16% | 988 | 13% | 2.9 | 94,688 | 17% | 31.7 | 3.4 |
+| Community forest (PPHKM) | 1,116 | 1% | 58.2 | 1% | 4.2 | 5,696 | 1% | 51.0 | 2.7 |
+
+## Forest area function
+
+Table: Land, burned area and hotspots by forest area function, all land. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Conservation | 22,000 | 12% | 1,137 | 15% | 3.5 | 66,502 | 12% | 30.2 | 4.4 |
+| Protection forest | 29,242 | 15% | 574 | 7% | 1.5 | 54,662 | 10% | 18.7 | 3.6 |
+| Production forest (HP, HPT) | 55,928 | 30% | 2,034 | 26% | 2.9 | 178,661 | 31% | 31.9 | 3.3 |
+| Convertible production (HPK) | 11,083 | 6% | 719 | 9% | 4.7 | 69,512 | 12% | 62.7 | 5.3 |
+| Other land use (APL) | 70,022 | 37% | 3,284 | 42% | 3.2 | 202,751 | 35% | 29.0 | 2.6 |
+| Water, undefined | 805 | 0% | 2.3 | 0% | 0.3 | 613 | 0% | 7.6 | 6.1 |
+| Not mapped | 8.9 | 0% | 0.0 | 0% | 0.0 | 0 | 0% | 0.0 | 0.0 |
+
+Table: Forest area function of the land inside concessions; shares are of the concession land. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Conservation | 89.2 | 0% | 2.9 | 0% | 2.7 | 263 | 0% | 29.5 | 2.8 |
+| Protection forest | 1,123 | 3% | 5.2 | 0% | 0.4 | 2,125 | 1% | 18.9 | 5.5 |
+| Production forest (HP, HPT) | 29,504 | 70% | 989 | 65% | 2.9 | 96,817 | 64% | 32.8 | 3.4 |
+| Convertible production (HPK) | 1,739 | 4% | 28.7 | 2% | 1.4 | 6,057 | 4% | 34.8 | 5.1 |
+| Other land use (APL) | 9,644 | 23% | 501 | 33% | 4.0 | 45,421 | 30% | 47.1 | 2.8 |
+| Water, undefined | 38.4 | 0% | 0.4 | 0% | 0.9 | 32 | 0% | 8.3 | 2.8 |
+
+## DMPG villages
+
+Table: Peat in DMPG villages and other peat, provinces with DMPG villages; shares are of that peat. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| DMPG village, no concession | 3,562 | 29% | 938 | 50% | 19.7 | 100,196 | 57% | 281.3 | 4.2 |
+| DMPG village, concession | 1,962 | 16% | 385 | 21% | 16.1 | 22,320 | 13% | 113.8 | 2.4 |
+| Other peat, no concession | 4,069 | 34% | 361 | 19% | 6.8 | 36,738 | 21% | 90.3 | 3.9 |
+| Other peat, concession | 2,536 | 21% | 191 | 10% | 6.8 | 17,205 | 10% | 67.8 | 2.6 |
+
+## Islands and provinces
+
+Table: Land, burned area and hotspots by island. Source: this analysis.
+
+| Class | Area (thousand ha) | Area (%) | Burned 2015 to 2025 (thousand ha) | Burned (%) | Ever burned (% of class) | VIIRS hotspots 2026 | Hotspots (%) | Hotspots per 100 km² | 2026 / mean 2015 to 2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| Bali-Nusa Tenggara | 7,171 | 4% | 1,231 | 16% | 9.1 | 18,452 | 3% | 25.7 | 1.1 |
+| Jawa-Madura | 13,260 | 7% | 211 | 3% | 1.3 | 13,301 | 2% | 10.0 | 1.8 |
+| Kalimantan | 53,470 | 28% | 2,620 | 34% | 3.6 | 301,962 | 53% | 56.5 | 4.2 |
+| Maluku | 7,763 | 4% | 229 | 3% | 2.1 | 26,222 | 5% | 33.8 | 5.9 |
+| Papua | 41,221 | 22% | 990 | 13% | 1.7 | 96,031 | 17% | 23.3 | 8.0 |
+| Sulawesi | 18,623 | 10% | 267 | 3% | 1.1 | 32,506 | 6% | 17.5 | 3.1 |
+| Sumatera | 47,581 | 25% | 2,202 | 28% | 3.7 | 84,227 | 15% | 17.7 | 1.6 |
+
 Table: Land, burned area and hotspots by province, ordered by VIIRS hotspots of 2026. Source: this analysis.
 
 | Province | Island | Land (thousand ha) | Burned 2015 to 2025 (thousand ha) | Burned in concessions (%) | Burned in forest area (%) | VIIRS hotspots 2026 | Hotspots in concessions (%) | Hotspots in forest area (%) | Hotspots per 100 km² |
@@ -77,4 +177,80 @@ Table: The 30 KHG with the most VIIRS hotspots in 2026. Source: this analysis.
 | Sungai Lalan - Sungai Merang | 84.0 | 17.5 | 2,007 | 16% | 238.9 |
 | Sungai Lamandau - Sungai Kumai | 90.3 | 23.3 | 1,967 | 6% | 217.9 |
 | Sungai Pukun - Sungai Kelua Besar | 72.4 | 17.8 | 1,747 | 66% | 241.1 |
+
+## Repeatedly burned land
+
+Table: Land burned once, twice, three and four or more times in the burn years 2015 to 2026, by concession and forest area and by DMPG village, all land; areas in thousand ha. A cell that burned in two different years counts as burned twice. Water and undefined land (0.8 million ha) is left out of the rows and kept in the total. Source: this analysis.
+
+| Class | Land | Ever burned (%) | Once | Twice | 3 times | 4 or more | Burned again (% of burned) | Share of land burned 2+ times |
+|---|---|---|---|---|---|---|---|---|
+| Concession, forest area | 32,455 | 2.7 | 759 | 106 | 16.1 | 3.0 | 14 | 8% |
+| Concession, APL | 9,644 | 4.0 | 292 | 72.1 | 17.1 | 4.5 | 24 | 6% |
+| No concession, forest area | 85,800 | 2.9 | 1,785 | 464 | 147 | 76.0 | 28 | 46% |
+| No concession, APL | 60,378 | 3.1 | 1,285 | 355 | 135 | 93.2 | 31 | 39% |
+| DMPG villages | 8,674 | 16.7 | 1,055 | 303 | 70.2 | 17.5 | 27 | 26% |
+| Other villages | 180,417 | 2.3 | 3,068 | 694 | 245 | 159 | 26 | 74% |
+| All land | 189,091 | 3.0 | 4,123 | 997 | 315 | 177 | 27 | 100% |
+
+## KLH priority area
+
+Table: The 30 KHG with the most SKEG 2024 damaged peat; damaged peat in thousand ha. Source: KLH PPEG integrated analysis, Bluebook 2026 target villages.
+
+| KHG | Province | Damaged peat | On a peat dome | On peat 3 m or deeper | Licence holders and buffer | In target villages |
+|---|---|---|---|---|---|---|
+| Sungai Siak - Sungai Kampar | Riau | 260 | 91% | 83% | 99% | yes |
+| Sungai Kampar - Sungai Gaung | Riau | 240 | 60% | 70% | 96% | yes |
+| Sungai Rokan - Sungai Siak Kecil | Riau | 180 | 40% | 71% | 94% | yes |
+| Sungai Kahayan - Sungai Sebangau | Kalimantan Tengah | 155 | 62% | 57% | 29% | yes |
+| Sungai Gaung - Sungai Batangtuaka | Riau | 103 | 68% | 45% | 78% | yes |
+| Sungai Kahayan - Sungai Kapuas | Kalimantan Tengah | 79.7 | 0% | 39% | 26% | yes |
+| Sungai Sugihan - Sungai Lumpur | Sumatera Selatan | 74.9 | 0% | 52% | 100% | yes |
+| Sungai Kapuas - Sungai Barito | Kalimantan Tengah | 73.4 | 85% | 3% | 29% | yes |
+| Sungai Barumun - Sungai Kubu | Riau... | 64.7 | 94% | 41% | 60% | yes |
+| Sungai Kiyap - Sungai Kerumutan | Riau | 55.8 | 80% | 79% | 100% | yes |
+| Pulau Bengkalis | Riau | 55.3 | 0% | 81% | 23% | yes |
+| Sungai Kapuas - Sungai Ambawang | Kalimantan Barat | 52.3 | 70% | 64% | 99% | yes |
+| Sungai Rokan Kiri - Sungai Mandau | Riau | 49.1 | 9% | 81% | 57% | yes |
+| Pulau Rupat | Riau | 45.1 | 87% | 63% | 89% | yes |
+| Sungai Batanghari - Sungai Air Hitam Laut | Jambi | 45.0 | 0% | 75% | 89% | yes |
+| Pulau Tebing Tinggi | Riau | 44.8 | 95% | 65% | 84% | yes |
+| Sungai Siak Kecil - Sungai Siak | Riau | 43.3 | 37% | 72% | 100% | yes |
+| Sungai Mendahara - Sungai Batanghari | Jambi | 40.6 | 80% | 46% | 97% | yes |
+| Pulau Padang | Riau | 40.2 | 98% | 83% | 97% | yes |
+| Sungai Saleh - Sungai Sugihan | Sumatera Selatan | 38.9 | 0% | 0% | 44% | yes |
+| Pulau Rangsang | Riau | 38.8 | 92% | 75% | 73% | yes |
+| Sungai Burnai - Sungai Sibumbung | Sumatera Selatan | 38.1 | 0% | 73% | 98% | yes |
+| Sungai Kapuas - Sungai Mandor | Kalimantan Barat | 34.5 | 0% | 65% | 61% | yes |
+| Sungai Mentarang- Sungai Sembakung | Kalimantan Utara | 34.4 | 0% | 89% | 98% | yes |
+| Sungai Enok - Sungai Batang | Riau | 33.2 | 0% | 0% | 68% | yes |
+| Sungai Rokan - Sungai Kubu | Riau | 32.3 | 95% | 71% | 58% | yes |
+| Sungai Katingan - Sungai Sebangau | Kalimantan Tengah | 28.0 | 51% | 34% | 9% | yes |
+| Sungai Pungurbesar - Sungai Kapuas | Kalimantan Barat | 27.9 | 29% | 0% | 82% | yes |
+| Sungai Mempawah - Sungai Peniti | Kalimantan Barat | 27.0 | 0% | 84% | 2% | yes |
+| Sungai Kualuh Bilah - Sungai Barumun | Sumatera Utara | 26.8 | 95% | 0% | 100% | yes |
+
+Table: SKEG 2024 damaged peat by province and actor, thousand ha; provinces with at least 1,000 ha. Source: KLH PPEG integrated analysis.
+
+| Province | Licence holders | Licence holders and communities, buffer | Ministry of Forestry | KLH/BPLH | Total |
+|---|---|---|---|---|---|
+| Riau | 804 | 442 | 136 | 95.5 | 1,477 |
+| Kalimantan Tengah | 73.0 | 122 | 219 | 59.6 | 473 |
+| Kalimantan Barat | 174 | 130 | 34.2 | 64.9 | 404 |
+| Sumatera Selatan | 218 | 96.4 | 27.2 | 20.7 | 363 |
+| Jambi | 102 | 64.1 | 3.8 | 10.8 | 181 |
+| Sumatera Utara | 47.2 | 60.3 | 7.5 | 5.8 | 121 |
+| Kalimantan Utara | 59.6 | 15.0 | 0.0 | 0.6 | 75.2 |
+| Sumatera Barat | 18.1 | 20.7 | 2.1 | 11.7 | 52.6 |
+| Aceh | 25.9 | 12.5 | 0.0 | 7.0 | 45.4 |
+| Kalimantan Selatan | 12.9 | 11.4 | 2.5 | 12.8 | 39.6 |
+| Kalimantan Timur | 30.9 | 7.3 | 0.1 | 0.1 | 38.4 |
+| Papua Selatan | 7.6 | 0.7 | 0.8 | 0.5 | 9.5 |
+| Lampung | 3.0 | 4.8 | 0.0 | 0.2 | 8.0 |
+| Papua Tengah | 3.3 | 0.0 | 1.6 | 2.4 | 7.3 |
+| Bengkulu | 0.0 | 0.1 | 0.0 | 4.3 | 4.4 |
+| Papua Barat Daya | 0.3 | 0.4 | 1.9 | 1.4 | 4.1 |
+| Sulawesi Tengah | 3.0 | 0.5 | 0.0 | 0.0 | 3.6 |
+| Sulawesi Barat | 2.5 | 0.4 | 0.0 | 0.0 | 2.9 |
+| Kepulauan Bangka Belitung | 1.5 | 0.6 | 0.1 | 0.0 | 2.2 |
+| Papua Barat | 1.9 | 0.0 | 0.0 | 0.0 | 1.9 |
 

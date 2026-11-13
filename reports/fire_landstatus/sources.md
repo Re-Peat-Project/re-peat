@@ -3,11 +3,11 @@
 Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-national-fire, repeat-national-fire-tables).
 
 - land_ha = 189091108.08: t_national basis all, area_ha
-- peat_ha = 23489029.98: t_national basis peat, area_ha
+- peat_ha = 13332917.43: t_national basis peat, area_ha
 - modis = 199069: t_national basis all, modis_2026_n (medium + high, static left out)
 - modis_high = 45040: t_national basis all, modis_2026_high_n
 - modis_static = 20991: t_national basis all, modis_2026_static_n
-- modis_peat = 64034: t_national basis peat, modis_2026_n
+- modis_peat = 51242: t_national basis peat, modis_2026_n
 - viirs26 = 572701: t_national basis all, viirs_2026_n
 - viirs2012 = 289401: t_national basis all, viirs_2012_n
 - viirs2013 = 235199: t_national basis all, viirs_2013_n
@@ -40,7 +40,7 @@ Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-na
 - burned_past_sum = 7750248.75: t_national basis all, sum of burned_<2015..2025>_ha
 - burned_any = 5612035.86: t_national basis all, burned_any_ha
 - burned_2plus = 1488936.42: t_national basis all, burned_2plus_ha
-- burned_peat_share = 0.3529: t_national peat/all, burned 2015-2025
+- burned_peat_share = 0.2527: t_national peat/all, burned 2015-2025
 - conc_area = 0.2228: t_concession_x_forest basis all, area_ha share (conc)
 - conc_burned = 0.197: t_concession_x_forest basis all, burned 2015-2025 share (conc)
 - conc_modis = 0.2468: t_concession_x_forest basis all, modis_2026_n share (conc)
@@ -58,9 +58,9 @@ Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-na
 - kawnc_modis = 0.4128: t_concession_x_forest basis all, modis_2026_n share (kawnc)
 - kawnc_rate = 9.5766: t_concession_x_forest basis all, modis_2026_n per 100 km2 (kawnc)
 - rate_all = 10.5277: t_national basis all, modis_2026_n per 100 km2
-- rate_peat = 27.2612: t_national basis peat, modis_2026_n per 100 km2
-- peat_modis_share = 0.3217: t_national peat/all, modis_2026_n
-- peat_area_share = 0.1242: t_national peat/all, area_ha
+- rate_peat = 38.4327: t_national basis peat, modis_2026_n per 100 km2
+- peat_modis_share = 0.2574: t_national peat/all, modis_2026_n
+- peat_area_share = 0.0705: t_national peat/all, area_ha
 - khg_area = 0.1276: t_scope basis all, in_khg True, area_ha share
 - khg_modis = 0.3399: t_scope basis all, in_khg True, modis_2026_n share
 - khg_burned = 0.3687: t_scope basis all, in_khg True, burned 2015-2025 share
@@ -68,14 +68,14 @@ Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-na
 - dmpg_modis_share = 0.2068: t_dmpg basis all, dmpg True, modis_2026_n share
 - dmpg_burned_share = 0.2479: t_dmpg basis all, dmpg True, burned 2015-2025 share
 - dmpgc_prov = 10: t_dmpg_comparable, provinces
-- dmpgc_in_area = 6665700.78: t_dmpg_comparable dmpg True, area_ha (peat)
-- dmpgc_in_rate = 203.0979: t_dmpg_comparable dmpg True, viirs_2026_n per 100 km2 of peat
-- dmpgc_in_ever = 0.1835: t_dmpg_comparable dmpg True, burned_any_ha / area_ha
-- dmpgc_in_ratio = 3.6517: t_dmpg_comparable dmpg True, viirs_2026_ytd_n / mean 2015-2025
-- dmpgc_out_area = 11466200.79: t_dmpg_comparable dmpg False, area_ha (peat)
-- dmpgc_out_rate = 68.2397: t_dmpg_comparable dmpg False, viirs_2026_n per 100 km2 of peat
-- dmpgc_out_ever = 0.0668: t_dmpg_comparable dmpg False, burned_any_ha / area_ha
-- dmpgc_out_ratio = 3.5653: t_dmpg_comparable dmpg False, viirs_2026_ytd_n / mean 2015-2025
+- dmpgc_in_area = 5523206.58: t_dmpg_comparable dmpg True, area_ha (peat)
+- dmpgc_in_rate = 221.8204: t_dmpg_comparable dmpg True, viirs_2026_n per 100 km2 of peat
+- dmpgc_in_ever = 0.1843: t_dmpg_comparable dmpg True, burned_any_ha / area_ha
+- dmpgc_in_ratio = 3.6773: t_dmpg_comparable dmpg True, viirs_2026_ytd_n / mean 2015-2025
+- dmpgc_out_area = 6604914.06: t_dmpg_comparable dmpg False, area_ha (peat)
+- dmpgc_out_rate = 81.671: t_dmpg_comparable dmpg False, viirs_2026_n per 100 km2 of peat
+- dmpgc_out_ever = 0.0679: t_dmpg_comparable dmpg False, burned_any_ha / area_ha
+- dmpgc_out_ratio = 3.3511: t_dmpg_comparable dmpg False, viirs_2026_ytd_n / mean 2015-2025
 - hapd = {2015: 3.176, 2016: 4.254, 2017: 2.105, 2018: 3.145, 2019: 4.151, 2020: 3.908, 2021: 6.412, 2022: 4.515, 2023: 5.343, 2024: 0.569, 2025: 4.535, 2026: 0.195}: t_completeness scope Indonesia, ha_per_detection
 - hapd_lo = 2.105: t_completeness, min over complete years
 - hapd_hi = 6.412: t_completeness, max over complete years
@@ -89,7 +89,8 @@ Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-na
 - khg_forest_max = 0.0187: checks_khg_forest, max class |diff|/land (mapped classes)
 - out_modis = 4517: hotspots_outside_villages, modis
 - out_viirs = 41322: hotspots_outside_villages, viirs
-- peat_unknown = 141098789.7: area.parquet, peat code 3 (peat tile not fetched)
+- peat_unknown = 0.0: area.parquet, peat code 3 (no peat information)
+- peat_klh = 13332917.43: area.parquet, peat code 1 (KLH peat cells on land)
 - peat_unknown_in_khg = 0.0: area.parquet, peat code 3 inside KHG
 - L_vil = 83519: village layer, rows
 - L_prov = 38: village layer, PROV_2023 distinct
@@ -103,6 +104,34 @@ Tables and checks in re-peat/reports/national_profile/fire_landstatus (repeat-na
 - viirs_prev_max_year = 2019: t_national, year of max viirs_<2016..2025>_ytd_n
 - viirs_prev_max = 353523: t_national, max viirs_<2016..2025>_ytd_n
 - viirs26_rank_text = the second highest since 2012, after 2015 (765,124): t_national, viirs_<2012..2026>_ytd_n ranked
+- rep_ha = 1488936.42: t_times_burned basis all, burned_2x_ha + burned_3x_ha + burned_4plus_ha
+- rep_conc_share = 0.1468: t_times_burned basis all, concession_any True, share of burned 2+ times
+- rep_dmpg_share = 0.2621: t_times_burned basis all, dmpg True, share of burned 2+ times
+- pr_ha = 3313126.26: ppeg_national.csv, priority_ha (SKEG 2024 damaged peat)
+- pr_khg = 362: ppeg_khg.csv, priority
+- pr_khg_vil = 345: ppeg_khg.csv, in_target_villages
+- pr_khg_skeg = 328: ppeg_khg.csv, has_skeg_damage
+- pr_khg_both = 311: ppeg_khg.csv, both flags
+- pr_khg_vil_only = 34: ppeg_khg.csv, in_target_villages only
+- pr_khg_skeg_only = 17: ppeg_khg.csv, has_skeg_damage only
+- pr_in_vil = 2993979.77: ppeg_national.csv, priority_in_target_villages_ha
+- pr_dome = 1408748.4: ppeg_national.csv, priority_dome_ha
+- pr_thick = 1533226.52: ppeg_national.csv, priority_thick3m_ha
+- pr_ringan = 2590335.71: ppeg_national.csv, priority_ringan_ha
+- pr_sedang = 366850.46: ppeg_national.csv, priority_sedang_ha
+- pr_berat = 216620.01: ppeg_national.csv, priority_berat_ha
+- pr_sangat_berat = 2541.79: ppeg_national.csv, priority_sangat_berat_ha
+- pr_half_khg = 17: ppeg_khg.csv, KHG holding half of priority_ha, largest first
+- pr_top3 = [('Siak - Kampar', 259769.28), ('Kampar - Gaung', 239881.61), ('Rokan - Siak Kecil', 179861.75)]: ppeg_khg.csv, three largest priority_ha
+- pr_actors = [{'actor': 'Licence holders, inside their licences', 'ha': 1589131.6, 'share': 0.5, 'khg': 232, 'r1_ha': 1435000.2, 'r2_ha': 255327.1, 'ps_ha': 395606.0, 'forest_ha': 898458.8, 'apl_ha': 690672.8}, {'actor': 'Licence holders with communities, 5 km buffer around licences', 'ha': 989362.7, 'share': 0.3, 'khg': 263, 'r1_ha': 948171.2, 'r2_ha': 262334.9, 'ps_ha': 438715.8, 'forest_ha': 460679.8, 'apl_ha': 528682.9}, {'actor': 'Ministry of Forestry, forest area outside licences', 'ha': 436356.3, 'share': 0.1, 'khg': 122, 'r1_ha': 393592.8, 'r2_ha': 191375.8, 'ps_ha': 184022.7, 'forest_ha': 436356.3, 'apl_ha': 0.0}, {'actor': 'KLH/BPLH, other land use (APL) outside licences', 'ha': 298275.6, 'share': 0.1, 'khg': 156, 'r1_ha': 293506.4, 'r2_ha': 73538.8, 'ps_ha': 147597.0, 'forest_ha': 0.0, 'apl_ha': 298275.6}]: ppeg_roles/roles_actor.csv
+- pr_prov = [('Riau', 1477050.0, 1245752.1), ('Kalimantan Tengah', 473117.7, 194601.8), ('Kalimantan Barat', 403923.9, 304843.6), ('Sumatera Selatan', 362702.3, 314794.6), ('Jambi', 180620.1, 166054.7)]: ppeg_roles/roles_province.csv, five largest
+- pr_canal = {'primary': 25390.853766510347, 'secondary': 73150.10033537727, 'tertiary': 233496.8349910261}: roles_facts.json canal_km (national profile canal_km_<class> over the priority KHG)
+- pr_canal_blank = 44: roles_facts.json canal_blank
+- pr_ps = 1165941.4905: roles_facts.json ps_ha (KET_KANAL primary or secondary)
+- pr_forest = 1795494.9558: roles_facts.json forest_ha
+- pr_forest_lic = 898458.8498: roles_facts.json forest_lic_ha
+- pr_r1 = 3070270.6199: roles_facts.json r1_ha
+- pr_r2 = 782576.5785: roles_facts.json r2_ha
 - q03 = ('inconclusive', 0.8712136636584511, 0.6018179988322484, 1.1358541221475897, 28): national_profile/hypotheses/hypotheses.json q03
 
 Figures stated in the text from other workspace files
@@ -113,5 +142,4 @@ Figures stated in the text from other workspace files
 
 References cited
 
-- Miettinen, J., Shi, C., & Liew, S. C. (2016). Land cover distribution in the peatlands of Peninsular Malaysia, Sumatra and Borneo in 2015 with changes since 1990. Global Ecology and Conservation, 6, 67-78. https://doi.org/10.1016/j.gecco.2016.02.004
-- Gumbricht, T., Roman-Cuesta, R. M., Verchot, L., Herold, M., Wittmann, F., Householder, E., Herold, N., & Murdiyarso, D. (2017). An expert system model for mapping tropical wetlands and peatlands reveals South America as the largest contributor. Global Change Biology, 23(9), 3581-3599. https://doi.org/10.1111/gcb.13689
+- KLH (2026). Analisis integrasi tematik pemulihan ekosistem gambut (PPEG) Indonesia, April 2026. GeoPackage delivered to the project.

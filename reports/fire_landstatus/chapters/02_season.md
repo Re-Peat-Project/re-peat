@@ -16,4 +16,4 @@ Five provinces hold 69% of the 2026 hotspots: Kalimantan Tengah (164,968), Kalim
 
 ![VIIRS hotspots of 2026 per 100 km² by land status; dashed line: all land. Source: this analysis.](re-peat/reports/fire_landstatus/figures/fig_rates.png)
 
-Near known static heat sources such as gas flares, 11,449 further VIIRS detections are set apart. With them the 2026 total is 584,150, and the shares by land status change by at most 0.7 percentage points. With them, MODIS counts 220,060.
+Near known static heat sources such as gas flares, 11,449 further VIIRS detections are set apart. With them the 2026 total is 584,150, and the shares by land status change by at most 0.6 percentage points. With them, MODIS counts 220,060.

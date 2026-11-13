@@ -1,0 +1,867 @@
+khg_name,khg_code,island,ppeg_ha,sitmat_ha,gfw_ha
+KHG Sungai Siak - Sungai Kampar,KHG.14.05-08.01,Pulau Sumatera,664533.9,664463.8,675073.0
+KHG Sungai Kampar - Sungai Gaung,KHG.14.02-04-05.01,Pulau Sumatera,588369.4,588361.7,686269.5
+KHG Sungai Rokan - Sungai Siak Kecil,KHG.14.03-07-12.01,Pulau Sumatera,670811.9,670289.3,698544.0
+KHG Sungai Kahayan - Sungai Sebangau,KHG.62.11-14.02,Pulau Kalimantan,319664.7,318828.7,395212.5
+KHG Sungai Gaung - Sungai Batangtuaka,KHG.14.02-04.01,Pulau Sumatera,265926.9,265920.5,296237.5
+KHG Sungai Kahayan - Sungai Kapuas,KHG.62.03-11.01,Pulau Kalimantan,247202.8,246796.7,332362.5
+KHG Sungai Sugihan - Sungai Lumpur,KHG.16.02.01,Pulau Sumatera,344360.1,343452.3,542185.0
+KHG Sungai Kapuas - Sungai Barito,KHG.62.03-04.01,Pulau Kalimantan,398598.0,398047.7,441189.0
+KHG Sungai Barumun - Sungai Kubu,KHG.12-14.01,Pulau Sumatera,201681.5,201383.0,217148.0
+KHG Sungai Kiyap - Sungai Kerumutan,KHG.14.05.05,Pulau Sumatera,93995.6,93993.7,82363.5
+KHG Pulau Bengkalis,KHG.14.03.02,Pulau Sumatera,75211.4,75162.6,89328.0
+KHG Sungai Kapuas - Sungai Ambawang,KHG.61.71-12-03.01,Pulau Kalimantan,139223.9,139222.7,143201.2
+KHG Sungai Rokan Kiri - Sungai Mandau,KHG.14.01-03-06-08.01,Pulau Sumatera,165198.8,165141.1,171884.0
+KHG Pulau Rupat,KHG.14.03.01,Pulau Sumatera,92929.5,92831.7,95469.8
+KHG Sungai Batanghari - Sungai Air Hitam Laut,KHG.15.05-07.01,Pulau Sumatera,155541.0,155440.6,159336.0
+KHG Pulau Tebing Tinggi,KHG.14.10.03,Pulau Sumatera,132797.0,132766.6,136435.5
+KHG Sungai Siak Kecil - Sungai Siak,KHG.14.03-08.01,Pulau Sumatera,112879.4,112848.2,127028.2
+KHG Sungai Mendahara - Sungai Batanghari,KHG.15.05-07-10.01,Pulau Sumatera,114961.1,114904.3,172688.0
+KHG Pulau Padang,KHG.14.10.01,Pulau Sumatera,104217.3,104174.1,110153.2
+KHG Sungai Saleh - Sungai Sugihan,KHG.16.02-07.01,Pulau Sumatera,61991.9,61831.9,160428.0
+KHG Pulau Rangsang,KHG.14.10.04,Pulau Sumatera,79722.1,79697.4,84885.0
+KHG Sungai Burnai - Sungai Sibumbung,KHG.16.02.05,Pulau Sumatera,64683.5,64450.9,75704.0
+KHG Sungai Kapuas - Sungai Mandor,KHG.61.02-08-12-71.01,Pulau Kalimantan,57865.1,57864.8,64525.0
+KHG Sungai Mentarang- Sungai Sembakung,KHG.65.02-03-04.01,Pulau Kalimantan,122693.8,122180.6,130281.8
+KHG Sungai Enok - Sungai Batang,KHG.14.04.11,Pulau Sumatera,58691.1,58684.7,84431.2
+KHG Sungai Rokan - Sungai Kubu,KHG.14.07.01,Pulau Sumatera,108115.2,108002.7,107583.7
+KHG Sungai Katingan - Sungai Sebangau,KHG.62.06-11-14.01,Pulau Kalimantan,653468.6,652137.5,708662.5
+KHG Sungai Pungurbesar - Sungai Kapuas,KHG.61.12-71.01,Pulau Kalimantan,53580.1,53579.3,74306.2
+KHG Sungai Mempawah - Sungai Peniti,KHG.61.02-08.01,Pulau Kalimantan,34313.9,34312.9,37632.0
+KHG Sungai Kualuh Bilah - Sungai Barumun,KHG.12.10-22.01,Pulau Sumatera,41354.5,41291.7,59021.0
+KHG Sungai Pukun - Sungai Mentaya,KHG.62.02-07.02,Pulau Kalimantan,139629.9,139326.8,210944.0
+KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,KHG.15-16.01,Pulau Sumatera,149384.0,149260.0,143235.0
+KHG Sungai Terentang - Sungai Kapuas,KHG.61.12.07,Pulau Kalimantan,147902.0,147891.8,169992.0
+KHG Aek Tapan - Aek Silaut,KHG.13.01.01,Pulau Sumatera,39778.3,39716.3,41953.0
+KHG Sungai Indragiri - Sungai Batang,KHG.14.02-04.02,Pulau Sumatera,61776.2,61769.6,55866.0
+KHG Sungai Merang - Sungai Ngirawan,KHG.16.06-07.01,Pulau Sumatera,74659.7,74573.0,65991.0
+KHG Sungai Kiyap - Sungai Kerinci,KHG.14.01-05-11.01,Pulau Sumatera,32135.0,32133.8,37065.0
+KHG Sungai Sebuku - Sungai Sembakung,KHG.65.03.01,Pulau Kalimantan,89533.1,89127.2,77985.0
+KHG Sungai Kiyap - Sungai Kampar Kiri,KHG.14.01-05.01,Pulau Sumatera,29848.8,29848.1,34827.0
+KHG Air Banyuasin - Air Lalang,KHG.16.07.02,Pulau Sumatera,24155.2,24106.9,45741.0
+KHG Sungai Pelanduk - Sungai Tumu,KHG.14.04.01,Pulau Sumatera,27093.0,27092.5,41800.0
+KHG Sungai Kuo - Sungai Kualuh Bilah,KHG.12.10-23.01,Pulau Sumatera,43673.8,43598.0,44936.0
+KHG Sungai Utar - Sungai Serapat,KHG.62-63.01,Pulau Kalimantan,75204.1,75082.6,87412.5
+KHG Sungai Ambawang - Sungai Kubu,KHG.61.12.06,Pulau Kalimantan,21204.2,21202.6,40211.0
+KHG Sungai Mentaya - Sungai Cempaga,KHG.62.02.03,Pulau Kalimantan,29091.6,29047.1,35341.0
+KHG Sungai Asahan - Sungai Leidong,KHG.12.09-23.01,Pulau Sumatera,48706.3,48595.6,73145.0
+KHG Sungai Lalan - Sungai Merang,KHG.15-16.02,Pulau Sumatera,60779.1,60711.1,71756.0
+KHG Sungai Sambas Besar - Sungai Seiyung,KHG.61.01.05,Pulau Kalimantan,22941.7,22927.5,49094.0
+KHG Sungai Buluh Besar - Sungai Seruyan,KHG.62.01-07.01,Pulau Kalimantan,166210.0,165765.9,218800.0
+KHG Sungai Pawan - Sungai Kepulu,KHG.61.04.08,Pulau Kalimantan,32031.3,31999.0,47857.0
+KHG Sungai Selat Maya - Sungai Aping,KHG.61.11.01,Pulau Kalimantan,54711.9,54690.6,84417.8
+KHG Sungai Musi - Sungai Aek Lematang,KHG.16.03.02,Pulau Sumatera,16662.8,16613.2,19900.0
+KHG Sungai Sibumbung - Sungai Talangrimba,KHG.16.02.04,Pulau Sumatera,82725.8,82433.9,85556.2
+KHG Sungai Batang - Sungai Keritang 1,KHG.14.02-04.03,Pulau Sumatera,31262.3,31257.4,33767.0
+KHG Sungai Katingan - Sungai Mentaya,KHG.62.02-06.01,Pulau Kalimantan,287322.4,286746.4,299275.0
+KHG Sungai Pengabuan - Sungai Baung,KHG.15.06.01,Pulau Sumatera,21952.5,21947.2,25998.0
+KHG Sungai Batang - Sungai Tungkal,KHG.14-15.01,Pulau Sumatera,45503.4,45495.3,74189.0
+KHG Sungai Burung - Sungai Way Mesuji,KHG.16.02.08,Pulau Sumatera,34913.7,34748.9,74764.0
+KHG Sungai Indragiri - Sungai Cenaku,KHG.14.02.04,Pulau Sumatera,18829.0,18827.9,24214.0
+KHG Sungai Barito - Sungai Taping,KHG.63.04-05-06-08.01,Pulau Kalimantan,17620.5,17585.0,72913.5
+KHG Sungai Belayan - Sungai Kelinjau,KHG.64.02-08.01,Pulau Kalimantan,96090.4,96090.0,92619.0
+KHG Sungai Mentarang - Sungai Belayu,KHG.65.04.03,Pulau Kalimantan,26646.3,26545.3,21725.0
+KHG Sungai Mangkatip - Sungai Barito 1,KHG.62.03.03,Pulau Kalimantan,14023.0,13993.2,17543.0
+KHG Sungai Balangan - Sungai Batangalai,KHG.63.07-08-11.01,Pulau Kalimantan,14284.4,14258.2,13652.0
+KHG Sungai Kapuas - Sungai Mendawak,KHG.61.03.06,Pulau Kalimantan,52367.6,52366.2,52266.0
+KHG Sungai Kedangyantau - Sungai Sabintulung,KHG.64.02.02,Pulau Kalimantan,31185.0,31185.0,27249.0
+KHG Sungai Ngirawan - Sungai Sembilang,KHG.16.06-07.02,Pulau Sumatera,58172.2,58096.5,66073.0
+KHG Sungai Kubu - Sungai Pungurbesar,KHG.61.12.02,Pulau Kalimantan,14537.1,14536.4,15610.0
+KHG Sungai Rumpit - Sungai Rawas,KHG.16.05.03,Pulau Sumatera,24865.1,24805.5,31611.0
+KHG Sungai Penyangkat - Sungai Selat Maya,KHG.61.12.10,Pulau Kalimantan,49966.4,49956.4,77280.0
+KHG Sungai Batanghari - Sungai Kampeh,KHG.15.05.01,Pulau Sumatera,24087.7,24072.4,44523.0
+KHG Sungai Pawan - Sungai Tolak,KHG.61.04.07,Pulau Kalimantan,69209.5,69154.2,87068.2
+KHG Batang Merangin - Batang Tembesi,KHG.15.02-03.02,Pulau Sumatera,10350.7,10335.9,14697.0
+KHG Sungai Kuala - Sungai Kuo,KHG.12.23.02,Pulau Sumatera,17070.7,17040.1,16424.0
+KHG Sungai Bangko - Sungai Rokan Kanan,KHG.14.07.03,Pulau Sumatera,12132.6,12124.7,19165.0
+KHG Pulau Mendol,KHG.14.05.01,Pulau Sumatera,18176.6,18174.8,30090.0
+KHG Krueng Surin - Krueng Muling,KHG.11.15.05,Pulau Sumatera,18314.6,18234.3,18519.0
+KHG Sungai Mandiangin - Sungai Siak,KHG.14.08.04,Pulau Sumatera,14384.3,14381.5,12324.0
+KHG Sungai Sembilang - Sungai Lalan,KHG.16.06-07.03,Pulau Sumatera,39170.1,39112.4,60735.0
+KHG Sungai Tapung Kiri - Sungai Kiyap,KHG.14.01-11.01,Pulau Sumatera,20523.1,20521.5,27520.0
+KHG Sungai Leidong - Sungai Kuala,KHG.12.09-23.02,Pulau Sumatera,16511.0,16477.6,17489.0
+KHG Sungai Ulakkedondong - Sungai Lumpur,KHG.16.02.02,Pulau Sumatera,42505.1,42359.1,55438.0
+KHG Sungai Punggurbesar - Sungai Ambawang,KHG.61.12.01,Pulau Kalimantan,37603.5,37602.1,40501.0
+KHG Sungai Bentayan - Sungai Penimpahan,KHG.16.06-07.04,Pulau Sumatera,19461.7,19428.2,35227.0
+KHG Sungai Medak - Sungai Lalan,KHG.16.06.01,Pulau Sumatera,7955.4,7945.9,17483.0
+KHG Sungai Mempawah - Sungai Duri,KHG.61.02.01,Pulau Kalimantan,24687.7,24686.0,30451.0
+KHG Sungai Bangko - Sungai Rokan,KHG.14.07.02,Pulau Sumatera,17975.1,17959.7,26282.0
+KHG Sungai Barito - Sungai Alalak,KHG.63.03-05.01,Pulau Kalimantan,8050.9,8027.8,27493.0
+KHG Sungai Musi - Sungai Penu,KHG.16.03-06.01,Pulau Sumatera,14808.6,14768.4,19382.0
+KHG Sungai Jempang - Sungai Kedangpahu,KHG.64.07.02,Pulau Kalimantan,10870.5,10869.9,4529.0
+KHG Batang Rokan Kiri - Batang Sosa,KHG.14.06-07.01,Pulau Sumatera,28482.0,28467.6,34200.0
+KHG Batang Tembei - Sungai Merak,KHG.15.02-03.01,Pulau Sumatera,14041.7,14023.7,14820.0
+KHG Sungai Labai - Sungai Kualan,KHG.61.04.03,Pulau Kalimantan,35814.5,35810.6,35596.0
+KHG Sungai Ambawang - Sungai Landak,KHG.61.12-03.01,Pulau Kalimantan,25862.8,25862.8,29623.0
+KHG Sungai Yebour - Sungai Landak,KHG.61.08-12-3.1,Pulau Kalimantan,21560.0,21559.9,18511.0
+KHG Krueng Tripa - Krueng Seuneuam,KHG.11.15.04,Pulau Sumatera,12593.8,12537.0,12580.0
+KHG Krueng Teumiyee - Krueng Tadu,KHG.11.15.02,Pulau Sumatera,8232.7,8192.3,9701.0
+KHG Sungai Mandor - Sungai Temila,KHG.61.08-12.01,Pulau Kalimantan,17444.2,17444.0,17869.0
+KHG Sungai Mesuji - Sungai Kebumangah,KHG.18.11.01,Pulau Sumatera,10325.5,10278.1,23260.0
+KHG Sungai Betara - Sungai Mendahara,KHG.15.06-07.01,Pulau Sumatera,27293.6,27284.4,67940.0
+KHG Sungai Bunut - Sungai Umban,KHG.14.03-08.02,Pulau Sumatera,14232.9,14228.8,11668.0
+KHG Sungai Musi - Sungai Blidah,KHG.16.03-07.01,Pulau Sumatera,22384.6,22320.0,26486.0
+KHG Sungai Durian - Sungai Kualan,KHG.61.11-04.01,Pulau Kalimantan,84382.3,84362.3,140985.0
+KHG Sungai Belutu - Sungai Leko,KHG.14.08.01,Pulau Sumatera,6201.2,6199.4,6457.0
+KHG Sungai Seruyan - Sungai Sembuluh,KHG.62.07.01,Pulau Kalimantan,13814.8,13785.6,22451.0
+KHG Sungai Tabat - Batang Masangkiri,KHG.13.06-12.01,Pulau Sumatera,8648.1,8648.0,11305.0
+KHG Sungai Buluh Besar,KHG.62.01-07.02,Pulau Kalimantan,70971.3,70746.2,113818.5
+KHG Sungai Lamandau - Sungai Jelai,KHG.62.01-08.02,Pulau Kalimantan,110717.5,110447.4,146788.0
+KHG Sungai Baung - Sungai Betara,KHG.15.06.02,Pulau Sumatera,41612.1,41599.3,69544.0
+KHG Sungai Musi - Sungai Rawas,KHG.16.05-06.01,Pulau Sumatera,7373.4,7356.5,8109.0
+KHG Sungai Batang - Sungai Keritang 2,KHG.14.04.12,Pulau Sumatera,8442.9,8441.3,11212.0
+KHG Sungai Kampar Kiri - Sungai Segati,KHG.14.01-05.02,Pulau Sumatera,10722.0,10721.9,11646.0
+KHG Sungai Leko - Sungai Minas,KHG.14.08.02,Pulau Sumatera,8941.3,8939.0,8142.0
+KHG Aek Silaut - Aek Menjuto,KHG.13-17.01,Pulau Sumatera,6970.1,6957.6,9543.0
+KHG Sungai Durian - Sungai Labai,KHG.61.12.09,Pulau Kalimantan,31105.0,31099.5,40849.0
+KHG Sungai Kumba - Sungai Setap,KHG.61.01-07.02,Pulau Kalimantan,28165.2,28150.1,26573.0
+KHG Sungai Nidir - Sungai Enok,KHG.14.04.10,Pulau Sumatera,9268.5,9267.8,17823.0
+KHG Sungai Gongan - Sungai Nilo,KHG.14.05.07,Pulau Sumatera,17426.7,17426.7,15589.0
+KHG Sei Lalan - Sungai Bentayan,KHG.16.06.02,Pulau Sumatera,13966.6,13945.2,18035.0
+KHG Lae Sulampi - Lae Gosong,KHG.11.10.02,Pulau Sumatera,5187.2,5178.8,12485.0
+KHG Aek Lunang - Aek Sidang,KHG.13.01.02,Pulau Sumatera,11634.3,11616.0,8474.0
+KHG Sungai Kalumpang,KHG.16.05.02,Pulau Sumatera,4509.5,4500.0,4782.0
+KHG Sungai Ketungau - Sungai Segarau,KHG.61.05.07,Pulau Kalimantan,7243.8,7243.2,8205.0
+KHG Krueng Tadu - Krueng Tripa,KHG.11.15.03,Pulau Sumatera,6903.0,6870.5,9606.0
+KHG Sungai Lamandau - Sungai Arut,KHG.62.01.02,Pulau Kalimantan,38381.1,38305.7,41155.0
+KHG Krueng Wonki - Krueng Gubon,KHG.11.05.01,Pulau Sumatera,8960.4,8910.5,7867.0
+KHG Pulau Merbau,KHG.14.10.02,Pulau Sumatera,17531.2,17525.4,21139.0
+KHG Sungai Kapuas - Sungai Ketungau,KHG.61.05.08,Pulau Kalimantan,21707.3,21706.6,28169.0
+KHG Lae Silabuhan - Lae Tambiski,KHG.11-12.01,Pulau Sumatera,5732.1,5723.5,7631.0
+KHG Sungai Seruyan - Sungai Kelua Besar,KHG.62.07.02,Pulau Kalimantan,27850.5,27773.4,32270.0
+KHG Aek Na Birong - Aek Batang Toru,KHG.12.03.01,Pulau Sumatera,10408.0,10402.1,7074.0
+KHG Sungai Mejunto - Aek Selangkanan,KHG.17.06.01,Pulau Sumatera,3991.8,3984.1,4724.0
+KHG Sungai Gasip - Sungai Siak,KHG.14.08.05,Pulau Sumatera,6374.0,6373.0,6124.0
+KHG Bah Btung - Sungai Tabat,KHG.13.12.01,Pulau Sumatera,5380.8,5380.7,6101.0
+KHG Sungai Sambih - Sungai Landak,KHG.61.08.04,Pulau Kalimantan,6990.3,6990.2,16095.0
+KHG Sungai Kapuas - Sungai Sibau,KHG.61.06.04,Pulau Kalimantan,40970.9,40960.4,55771.0
+KHG Sungai Melawi - Sungai Batunanta,KHG.61.05-10.01,Pulau Kalimantan,7031.7,7031.6,6221.0
+KHG Sungai Indragiri - Sungai Belilas,KHG.14.02.01,Pulau Sumatera,6076.8,6076.4,11081.0
+KHG Sungai Katingan - Sungai Klaru,KHG.62.06.02,Pulau Kalimantan,23044.5,23007.5,21428.0
+KHG Sungai Pukun - Sungai Kelua Besar,KHG.62.07.03,Pulau Kalimantan,39158.4,39045.5,47361.0
+KHG Sungai Kapuas - Sungai Jentu,KHG.61.06-05.01,Pulau Kalimantan,13434.3,13433.2,15683.0
+KHG Krueng Pneunom - Krueng Lambalik,KHG.11.05-14.01,Pulau Sumatera,4032.7,4009.0,5866.0
+KHG Sungai Musi - Sungai Saleh,KHG.16.07.06,Pulau Sumatera,7265.1,7249.8,20467.0
+KHG Sungai Tapah - Sungai Pesaguan,KHG.61.04.10,Pulau Kalimantan,16465.2,16443.8,15564.0
+KHG Sungai Beberi - Sungai Way Mesuji,KHG.16.02.07,Pulau Sumatera,7654.6,7620.6,7331.0
+KHG Sungai Tandatuan - Sungai Beberi,KHG.16.02.06,Pulau Sumatera,7554.6,7522.8,6911.0
+KHG Muara Sakai - Aek Bentayan,KHG.13.01.05,Pulau Sumatera,3208.8,3205.0,3564.0
+KHG Sungai Mange - Sungai Dadau,KHG.61.01.01,Pulau Kalimantan,7894.1,7887.7,17240.0
+KHG Air Banyuasin - Sungai Musi,KHG.16.07.03,Pulau Sumatera,3109.3,3102.7,29307.0
+KHG Krueng Meureubo - Krueng Matee,KHG.11.05-15.01,Pulau Sumatera,4153.2,4132.0,4133.0
+KHG Sungai Pukun - Sungai Seruyan,KHG.62.02-07.01,Pulau Kalimantan,59915.5,59735.0,63324.0
+KHG Sungai Mesuji - Sungai Tulangbawang,KHG.18.05-11.01,Pulau Sumatera,11517.4,11458.7,43798.0
+KHG Sungai Mesao - Aek Rawas,KHG.15.03.01,Pulau Sumatera,2938.9,2933.3,2685.0
+KHG Sungai Tolak - Sungai Siduk,KHG.61.04.06,Pulau Kalimantan,11845.0,11837.6,15393.0
+KHG Sungai Tengar - Sungai Tapah,KHG.61.04.11,Pulau Kalimantan,12390.1,12372.2,27688.0
+KHG Batang Singkuang - Nainjan Nu Godang,KHG.12.13.05,Pulau Sumatera,14866.1,14862.1,14906.0
+KHG Sungai Selakau - Sungai Sebangkau,KHG.61.01.11,Pulau Kalimantan,3328.3,3327.1,5218.0
+KHG Sungai Kapuas,KHG.61.12.03,Pulau Kalimantan,4263.7,4263.7,5412.0
+KHG Sungai Talungai - Sungai Emparayau,KHG.61.05.13,Pulau Kalimantan,2710.6,2710.6,2978.0
+KHG Sungai Sangku - Bah Kambang,KHG.13.01.07,Pulau Sumatera,1988.8,1987.2,3912.0
+KHG Aek Tapan - Aek Ubar,KHG.13.01.04,Pulau Sumatera,4116.7,4111.2,4295.0
+KHG Sungai Penu - Sungai Abah,KHG.16.03.01,Pulau Sumatera,5831.3,5814.7,6642.0
+KHG Sungai Minas - Sungai Mandiangin,KHG.14.08.03,Pulau Sumatera,4620.1,4619.0,3717.0
+KHG Sungai Sampang - Sungai Kala,KHG.62.06.01,Pulau Kalimantan,22214.7,22189.8,21897.0
+KHG Sungai Kapuas - Sungai Mangkutup,KHG.62.03.01,Pulau Kalimantan,27305.0,27272.7,48310.0
+KHG Sungai Sabuak - Sungai Landak,KHG.61.07.03,Pulau Kalimantan,2148.7,2148.7,2666.0
+KHG Sungai Wai Sapran - Sungai Wai Liam,KHG.92.01.02,Pulau Papua,10674.5,10669.2,13787.0
+KHG Sungai Mangkatip - Sungai Barito 2,KHG.62.04.03,Pulau Kalimantan,7274.2,7262.0,9243.0
+KHG Krueng Trumon - Lae Tarap,KHG.11.01-10-23.01,Pulau Sumatera,55959.6,55847.0,99238.5
+KHG Krueng Gubon - Krueng Meureubo,KHG.11.05.02,Pulau Sumatera,10906.3,10846.8,8368.0
+KHG Bah Mandiangin - Bah Btung,KHG.13.12.02,Pulau Sumatera,2303.1,2303.1,2055.0
+KHG Sungai Raya - Sungai Pangnilang,KHG.61.72-7.01,Pulau Kalimantan,5348.5,5347.5,6921.0
+KHG Sungai Bila - Sungai Rasaw,KHG.62.01-08.01,Pulau Kalimantan,8123.8,8107.9,12056.0
+KHG Sungai Tempunak,KHG.61.05.16,Pulau Kalimantan,2922.3,2922.3,3217.0
+KHG Sungai Kampar Kiri - Sungai Lipai,KHG.14.01.01,Pulau Sumatera,1674.3,1674.3,1683.0
+KHG Aek Ubar - Aek Lunang,KHG.13.01.03,Pulau Sumatera,17117.7,17092.7,18430.0
+KHG Sungai Degey One - Sungai Pege,KHG.91.26.02,Pulau Papua,2096.4,2086.2,3446.0
+KHG Sungai Lipai - Sungai Bunut,KHG.14.01.02,Pulau Sumatera,1434.2,1434.2,2187.0
+KHG Sungai Kapuas - Sungai Dawak,KHG.61.12.05,Pulau Kalimantan,1259.0,1258.9,1598.0
+KHG Sungai Sebuku,KHG.65.03.02,Pulau Kalimantan,12000.7,11942.8,7747.0
+KHG Sungai Duri - Sungai Raya,KHG.61.07.02,Pulau Kalimantan,6375.6,6374.8,14757.0
+KHG Sungai Barumun - Sungai Mabar,KHG.12.22.01,Pulau Sumatera,2445.6,2442.4,2969.0
+KHG Krueng Surin - Krueng Batee,KHG.11.12.02,Pulau Sumatera,2429.8,2419.2,8411.0
+KHG Sungai Bumi - Sungai Pepeya,KHG.91.04.06,Pulau Papua,1890.7,1884.1,6041.0
+KHG Sungai Keramat - Sungai Jelai,KHG.61.04.14,Pulau Kalimantan,12820.9,12790.7,10649.0
+KHG Sungai Salo Lariang - Sungai Pasang Kayu,KHG.72.10-76.01.001,Pulau Sulawesi,5163.2,5160.3,6177.0
+KHG Sungai Mentaya - Sungai Seranau Kiri,KHG.62.02.02,Pulau Kalimantan,8820.2,8806.2,13750.0
+KHG Sungai Saleh - Sungai Batanghari,KHG.16.07.07,Pulau Sumatera,3021.8,3014.6,8184.0
+KHG Sungai Kapuas - Sungai Separoh,KHG.61.12.04,Pulau Kalimantan,2386.2,2386.2,3138.0
+KHG Sungai Wanggar - Sungai Bumi,KHG.91.04.04,Pulau Papua,1596.7,1591.1,3913.0
+KHG Aek Musi - Sungai Upang,KHG.16.07.05,Pulau Sumatera,941.3,939.6,16736.0
+KHG Bah Antokan - Sungai Tiku,KHG.13.06.01,Pulau Sumatera,2035.6,2035.6,2528.0
+KHG Sungai Dadau - Sungai Sikan,KHG.61.01.02,Pulau Kalimantan,5350.9,5346.5,6591.0
+KHG Sungai Kumbe - Sungai Bian,KHG.91.01.10,Pulau Papua,5548.6,5440.0,44403.0
+KHG Sungai Lamandau - Sungai Kumai,KHG.62.01.04,Pulau Kalimantan,15931.5,15893.7,48783.0
+KHG Sungai Mentarang - Sungai Siduyun,KHG.65.04.02,Pulau Kalimantan,2049.0,2041.2,1514.0
+KHG Sungai Nilo - Sungai Napuh,KHG.14.05.06,Pulau Sumatera,18139.3,18139.3,17903.0
+KHG Sungai Kepulu - Sungai Pesaguan,KHG.61.04.09,Pulau Kalimantan,10110.3,10098.7,10736.0
+KHG Sungai Kapuas - Sungai Baiangtuk,KHG.61.05.10,Pulau Kalimantan,16035.0,16034.9,20388.0
+KHG Sungai Seputuk - Sungai Rian,KHG.65.04.01,Pulau Kalimantan,1634.8,1628.6,1152.0
+KHG Aek Siriam - Batang Singkuang,KHG.12.13.04,Pulau Sumatera,2619.1,2618.2,1624.0
+KHG Sungai Tempunak - Sungai Penjernang,KHG.61.05.17,Pulau Kalimantan,3216.7,3216.7,3509.0
+KHG Sungai Kla Segun - Sungai Kla Betur,KHG.92.01.18,Pulau Papua,2387.5,2386.2,4328.0
+KHG Sungai Laa - Sungai Petasia,KHG.72.06.01,Pulau Sulawesi,3982.7,3977.7,740.0
+KHG Aek Sebatik - Aek Musi,KHG.16.07.04,Pulau Sumatera,824.3,822.7,19964.0
+KHG Sungai Indragiri - Sungai Enok,KHG.14.04.08,Pulau Sumatera,39884.7,39882.4,51637.0
+KHG Sungai Ketungau - Sungai Berau,KHG.61.06-05.02,Pulau Kalimantan,2869.7,2869.6,3942.0
+KHG Sungai Enaro One - Sungai Aga One,KHG.91.08.03,Pulau Papua,2362.6,2351.7,3608.0
+KHG Sungai Rotoh - Sungai Bang,KHG.14.04.07,Pulau Sumatera,2626.1,2626.0,4446.0
+KHG Sungai Buru Obaa - Sungai Buru Mappi,KHG.91.17.04,Pulau Papua,31765.0,31350.7,62347.5
+KHG Sungai Labai,KHG.61.04.01,Pulau Kalimantan,7157.7,7157.2,9043.0
+KHG Batang Ampu - Bah Mandiangin,KHG.13.12.03,Pulau Sumatera,3809.1,3809.1,4263.0
+KHG Sungai Siduk - Sungai Rantaupanjang,KHG.61.11.03,Pulau Kalimantan,13332.8,13326.5,14330.0
+KHG Sungai Jerora - Sungai Majau,KHG.61.05.12,Pulau Kalimantan,2317.4,2317.4,2374.0
+KHG Sungai Lamandau - Sungai Sematu,KHG.62.01-09.01,Pulau Kalimantan,1697.7,1694.9,2448.0
+KHG Aek Maraitgadang - Aek Sikapas,KHG.12.13.03,Pulau Sumatera,2114.2,2113.3,1315.0
+KHG Sungai Sambas Besar - Sungai Sijang,KHG.61.01.04,Pulau Kalimantan,5620.0,5616.1,9880.0
+KHG Sungai Kumai - Sungai Sekonyer,KHG.62.01.05,Pulau Kalimantan,1169.8,1167.1,8802.0
+KHG Sungai Temila - Sungai Mandor,KHG.61.08.01,Pulau Kalimantan,7414.3,7414.3,11738.0
+KHG Sungai Mahakam - Sungai Kedangpahu,KHG.64.07.01,Pulau Kalimantan,2660.3,2660.2,14620.0
+KHG Sungai Musi - Sungai Empasan,KHG.16.05-06.02,Pulau Sumatera,8460.7,8440.3,13087.0
+KHG Sungai Marbau - Sungai Kualuh Bilah,KHG.12.10-23.02,Pulau Sumatera,8175.6,8163.5,8892.0
+KHG Batang Masangkiri - Bah Antokan,KHG.13.06.02,Pulau Sumatera,682.1,682.1,1485.0
+KHG Sungai Sambas Kecil - Sungai Sambas Besar,KHG.61.01.08,Pulau Kalimantan,1560.5,1559.7,5143.0
+KHG Sungai Pasang Kayu - Sungai Bambalamotu,KHG.72.10-76.01.002,Pulau Sulawesi,6330.4,6327.5,1817.0
+KHG Sungai Udugaga - Sungai Kamundan,KHG.92.04-06.01,Pulau Papua,22107.2,22076.6,47054.0
+KHG Sungai Wakamuk - Sungai Kla Waimon,KHG.92.01.08,Pulau Papua,1708.0,1707.0,3065.0
+KHG Sungai Belanyu - Sungai Barang,KHG.65.04.04,Pulau Kalimantan,1167.8,1163.5,1109.0
+KHG Sungai Kurau - Sungai Kepuh,KHG.19.04.01,Pulau Sumatera,2744.2,2739.3,3824.0
+KHG Sungai Sengah - Sungai Landak,KHG.61.08.05,Pulau Kalimantan,1337.1,1337.1,4827.0
+KHG Sungai Alekikosi Sia - Sungai Alekikosi Digoel,KHG.91.16.09,Pulau Papua,3768.8,3721.9,8639.0
+KHG Sungai Selan,KHG.19.01-04.01,Pulau Sumatera,6787.7,6776.2,12026.0
+KHG Sungai Arut,KHG.62.01.03,Pulau Kalimantan,4896.5,4887.8,9570.0
+KHG Sungai Melintang - Sungai Layah,KHG.64.02-07.02,Pulau Kalimantan,31183.8,31183.1,34440.0
+KHG Sungai Belayan - Sungai Melintang,KHG.64.02.01,Pulau Kalimantan,33512.2,33511.9,33571.0
+KHG Sungai Senama Kecil - Sungai Rajaelok,KHG.14.04.02,Pulau Sumatera,5452.9,5452.8,9225.0
+KHG Sungai Merusi - Sungai Belanak,KHG.14.04.03,Pulau Sumatera,1728.3,1728.2,4770.0
+KHG Sungai Alur - Sungai Lintang,KHG.16.05.01,Pulau Sumatera,3476.8,3469.6,3299.0
+KHG Sungai Kapuas - Sungai Kubu,KHG.61.09.03,Pulau Kalimantan,708.6,708.6,815.0
+KHG Sungai Jaman Kawarga - Sungai Samaleki Digul,KHG.91.17.08,Pulau Papua,25715.2,25333.4,55586.2
+KHG Aek Sordang - Aek Kalang,KHG.12.01.04,Pulau Sumatera,691.1,690.4,1129.0
+KHG Pulau Topang,KHG.14.10.06,Pulau Sumatera,2166.9,2166.5,2876.0
+KHG Sungai Warmon - Sungai Klamalu II,KHG.92.01.54,Pulau Papua,293.1,293.1,310.0
+KHG Sungai Indragiri - Sungai Tuana,KHG.14.04.09,Pulau Sumatera,5187.7,5187.6,13805.0
+KHG Sungai Rasaw - Sungai Lamandau,KHG.62.01.01,Pulau Kalimantan,11211.4,11188.5,22101.0
+KHG Sungai Alekikos Kauh - Sungai Ifuleki Mati,KHG.91.16.16,Pulau Papua,6667.5,6585.4,11062.0
+KHG Sungai Eka One - Sungai Ega One,KHG.91.08.02,Pulau Papua,1692.4,1684.8,2269.0
+KHG Sungai Mendawai - Sungai Gasip,KHG.14.08.06,Pulau Sumatera,4681.3,4680.7,3261.0
+KHG Sungai Melawi - Sungai Sirai,KHG.61.05.18,Pulau Kalimantan,693.6,693.6,1405.0
+KHG Krueng Lembang - Krueng Bakongan,KHG.11.01.06,Pulau Sumatera,10379.9,10352.0,14648.0
+KHG Sungai Sentinok - Sungai Kumba,KHG.61.01-07.01,Pulau Kalimantan,5631.6,5628.2,9313.0
+KHG Sungai Talang - Sungai Ulakkedondong,KHG.16.02.03,Pulau Sumatera,366.9,365.6,8703.0
+KHG Sungai Sekatau - Sungai Kebangak,KHG.61.05.05,Pulau Kalimantan,415.8,415.7,574.0
+KHG Lae Sibungkuang,KHG.12.01.01,Pulau Sumatera,4410.2,4404.1,5055.0
+KHG Sungai Kungan - Sungai Ketungau,KHG.61.05.04,Pulau Kalimantan,611.6,611.5,751.0
+KHG Batang Batahan - Batang Tamak,KHG.12.13.07,Pulau Sumatera,2111.6,2111.5,1955.0
+KHG Sungai Boang - Sungai Basira,KHG.14.04.06,Pulau Sumatera,4729.1,4729.0,6613.0
+KHG Sungai Walal,KHG.92.01.49,Pulau Papua,292.1,291.9,437.0
+KHG Sungai Sambih,KHG.61.08.03,Pulau Kalimantan,1077.5,1077.5,1008.0
+KHG Sungai Kapuas - Sungai Manyam,KHG.61.05.09,Pulau Kalimantan,266.6,266.6,462.0
+KHG Sungai Kapuas - Sungai Muna,KHG.61.03.08,Pulau Kalimantan,967.5,967.4,1079.0
+KHG Aek Garoga - Batang Toru,KHG.12.01.06,Pulau Sumatera,1535.6,1534.6,1336.0
+KHG Sungai Kapuas - Sungai Murui,KHG.62.03.02,Pulau Kalimantan,10362.7,10352.8,44902.0
+KHG Sungai Kelinjau - Sungai Kedangyantau,KHG.64.02-08.02,Pulau Kalimantan,21683.4,21683.3,19899.0
+KHG Sungai Belimbing - Sungai Menunuh,KHG.61.10.03,Pulau Kalimantan,336.0,336.0,398.0
+KHG Sungai Kaibus - Sungai Semor,KHG.92.04.13,Pulau Papua,6277.1,6272.1,9967.0
+KHG Sungai Jelai - Sungai Bila,KHG.61-62.01,Pulau Kalimantan,9648.0,9628.7,10085.0
+KHG Sungai Kapuas - Sungai Ayak,KHG.61.09.02,Pulau Kalimantan,1557.8,1557.8,3743.0
+KHG Sungai Teberau - Sungai Sambas Kecil,KHG.61.01.07,Pulau Kalimantan,178.5,178.4,6174.0
+KHG Aek Maros - Aek Pandan,KHG.12.01.05,Pulau Sumatera,2924.9,2922.9,1621.0
+KHG Sungai Alekikosi Yang - Sungai Alekikosi Digoel,KHG.91.16.10,Pulau Papua,17112.2,16880.3,27070.0
+KHG Lae Sibungkuang - Aek Tarutungol,KHG.12.01.02,Pulau Sumatera,1133.7,1132.1,1369.0
+KHG Sungai Matan - Sungai Rantaupanjang,KHG.61.11.02,Pulau Kalimantan,8201.0,8197.8,21620.0
+KHG Sungai Ketungau - Sungai Sejelu,KHG.61.05.01,Pulau Kalimantan,250.8,250.8,349.0
+KHG Sungai Alekikosi Digoel - Sungai Alekikosi Kauh,KHG.91.16.13,Pulau Papua,25548.3,25250.8,45642.0
+KHG Sungai Sijang - Sungai Bantanan,KHG.61.01.03,Pulau Kalimantan,546.0,545.6,3965.0
+KHG Aek Maraitgadang - Batang Maraitgodang,KHG.12.13.02,Pulau Sumatera,812.4,812.0,1136.0
+KHG Sungai Kapuas - Sungai Embau,KHG.61.06.06,Pulau Kalimantan,12363.3,12362.0,15581.0
+KHG Sungai Labai - Sungai Ambawang Besar,KHG.61.03.14,Pulau Kalimantan,1177.5,1177.4,1013.0
+KHG Sungai Tanjung Mangkubung - Sungai Sampul,KHG.19.05.03,Pulau Sumatera,87.7,87.6,1205.0
+KHG Sungai Samabas Kecil - Sungai Teberau,KHG.61.01.06,Pulau Kalimantan,339.6,339.4,7379.0
+KHG Lae Rapus - Aek Pardomuan,KHG.12.01.03,Pulau Sumatera,936.2,935.0,902.0
+KHG Sungai Mading - Sungai Jelai,KHG.61.04.15,Pulau Kalimantan,547.9,546.5,12740.0
+KHG Sungai Mahakam - Sungai Sabintulung,KHG.64.02.03,Pulau Kalimantan,6388.0,6388.0,9076.0
+KHG Sungai Sekadau - Sungai Menterap,KHG.61.09.07,Pulau Kalimantan,1085.9,1085.9,879.0
+KHG Sungai Inggis - Sungai Kapuas,KHG.61.03-09.02,Pulau Kalimantan,1471.9,1471.9,3178.0
+KHG Sungai Mentaya - Sungai Tualan,KHG.62.02.01,Pulau Kalimantan,4111.5,4105.7,9422.0
+KHG Sungai Penimpahan - Sungai Air Hitam,KHG.16.07.01,Pulau Sumatera,370.8,370.1,11570.0
+KHG Sungai Mencong 1,KHG.19.05.04,Pulau Sumatera,3002.4,2998.6,10052.0
+KHG Sungai Kapuas - Sungai Jelawat Besar,KHG.61.06-05.03,Pulau Kalimantan,2036.9,2036.8,2429.0
+KHG Sungai Wai Tunun - Sungai Warmon II,KHG.92.01.06,Pulau Papua,87.0,87.0,104.0
+KHG Sungai Barito - Sungai Ayuh,KHG.62.04.01,Pulau Kalimantan,8702.0,8694.4,16896.0
+KHG Sungai Sambas Besar - Sungai Kumba,KHG.61.01.09,Pulau Kalimantan,1283.2,1282.4,6877.0
+KHG Sungai Aga One - Sungai Koabeu One,KHG.91.08.01,Pulau Papua,3804.1,3787.1,4263.0
+KHG Batang Toru - Aek Maraitgadang,KHG.12.13.01,Pulau Sumatera,1246.3,1245.7,1009.0
+KHG Sungai Alekikosi Digoel - Sungai Udi Lebah,KHG.91.16.08,Pulau Papua,20007.9,19795.8,33779.0
+KHG Sungai Labai - Sungai Bantilkecil,KHG.61.04.02,Pulau Kalimantan,532.5,532.5,662.0
+KHG Sungai Kapuas - Sungai Campedik,KHG.61.03.01,Pulau Kalimantan,1139.5,1139.5,3712.0
+KHG Sungai Kapuas - Sungai Asam,KHG.61.09.04,Pulau Kalimantan,148.9,148.9,278.0
+KHG Sungai Pergam - Sungai Pucuk Besar,KHG.14.04.05,Pulau Sumatera,5541.6,5541.5,7824.0
+KHG Pulau Kundur,KHG.21.02.04,Pulau Sumatera,2106.2,2105.8,5638.0
+KHG Sungai Belanyu - Sungai Balai,KHG.65.04.05,Pulau Kalimantan,2128.9,2121.3,2676.0
+KHG Sungai Rungan - Sungai Kahayan,KHG.62.11-14.01,Pulau Kalimantan,62823.5,62757.6,69216.8
+KHG Sungai Wai Tunun - Sungai Warmon I,KHG.92.01.53,Pulau Papua,33.4,33.4,72.0
+KHG Sungai Nata - Sungai Sinunukan,KHG.12.13.06,Pulau Sumatera,1016.3,1016.2,1089.0
+KHG SUngai Waprak - Sungai Tunun,KHG.92.01.50,Pulau Papua,73.1,73.0,216.0
+KHG Sungai Barito - Sungai Napu,KHG.62.04.02,Pulau Kalimantan,25.5,25.5,7665.0
+KHG Sungai Sedawar - Sungai Sambas Besar,KHG.61.01.10,Pulau Kalimantan,621.4,621.1,476.0
+KHG Sungai Indragiri - Sungai Ekok,KHG.14.02.02,Pulau Sumatera,241.6,241.5,3002.0
+KHG Sungai Wai Tunun II,KHG.92.01.52,Pulau Papua,25.8,25.8,75.0
+KHG Sungai Kanggu - Sungai Fly,KHG.91.16.17,Pulau Papua,3365.5,3324.4,4901.0
+KHG Sungai Ifuleki Kumbe - Sungai Lekiagi,KHG.91.01.12,Pulau Papua,15602.0,15294.7,15182.0
+KHG Pulau Serapung,KHG.14.05.02,Pulau Sumatera,2471.6,2471.3,2720.0
+KHG Sungai Berantai - Sungai Penyengat Besar,KHG.61.04.12,Pulau Kalimantan,1295.7,1293.0,2333.0
+KHG Sungai Tanjung Mangkubung - Sungai Antan,KHG.19.05.02,Pulau Sumatera,550.2,549.7,2666.0
+KHG Sungai Kanopan - Sungai Kuala,KHG.12.23.01,Pulau Sumatera,1070.7,1068.6,5617.0
+KHG Pulau Papan,KHG.21.02.03,Pulau Sumatera,178.8,178.8,2551.0
+KHG Sungai Wai Tunun I,KHG.92.01.51,Pulau Papua,29.4,29.4,93.0
+KHG Sungai Kanan - Sungai Buluh,KHG.14.04.04,Pulau Sumatera,6576.9,6576.5,11762.0
+KHG Sungai Selan - Sungai Bangka,KHG.19.03-04.01,Pulau Sumatera,5167.8,5158.3,7372.0
+KHG Sungai Kauga - Sungai Wania,KHG.91.09.16,Pulau Papua,3749.2,3725.1,4563.0
+KHG Krueng Pango - Krueng On,KHG.11.14.04,Pulau Sumatera,1498.7,1489.5,5600.0
+KHG Aek Sulpi - Aek Sibundong,KHG.12.16.01,Pulau Sumatera,2089.3,2086.0,4380.0
+KHG Sungai Kapuas - Sungai Beran,KHG.61.06.13,Pulau Kalimantan,1324.2,1324.1,2320.0
+KHG Sungai Bunut - Sungai Kapuas,KHG.61.06.08,Pulau Kalimantan,51330.6,51323.4,68760.0
+KHG Sungai Menterap - Sungai Kerabat,KHG.61.09.08,Pulau Kalimantan,891.4,891.4,871.0
+KHG Sungai Waigo,KHG.92.04.18,Pulau Papua,391.0,390.7,2063.0
+KHG Sungai Kapuas - Sungai Sebidau,KHG.61.09.05,Pulau Kalimantan,415.1,415.1,946.0
+KHG Sungai Kedupan - Sungai Layah,KHG.64.02-07.01,Pulau Kalimantan,9831.7,9831.5,8961.0
+KHG Sungai Ivo - Sungai Fly,KHG.91.16-01.02,Pulau Papua,3864.7,3815.4,5193.0
+KHG Sungai Kapuas - Sungai Maday,KHG.61.06.09,Pulau Kalimantan,24820.4,24816.1,29139.0
+KHG Sungai Mandor - Sungai Landak,KHG.61.08.02,Pulau Kalimantan,0.0,0.0,6621.0
+KHG Sungai Sumbal - Sungai Samadik,KHG.65.03.03,Pulau Kalimantan,2483.2,2471.3,2145.0
+KHG Pulau Muda,KHG.14.05.04,Pulau Sumatera,1385.8,1385.8,3037.0
+KHG Sungai Nahaya - Sungai Landak,KHG.61.08.06,Pulau Kalimantan,1553.6,1553.5,1812.0
+KHG Sungai Bakoi - Sungai Bakop,KHG.92.04.14,Pulau Papua,3479.3,3476.5,4890.0
+KHG Sungai Sedaung - Sungai Itai,KHG.65.03.04,Pulau Kalimantan,1063.2,1058.3,1981.0
+KHG Sungai Ifuleki Onam - Sungai Fly,KHG.91.01.13,Pulau Papua,2963.2,2923.1,9043.0
+KHG Krueng Matee - Krueng Teumiyee,KHG.11.15.01,Pulau Sumatera,0.0,0.0,3041.0
+KHG Delta Talang,KHG.16.07.08,Pulau Sumatera,0.0,0.0,1007.0
+KHG Sungai Ketungau - Sungai Mualang,KHG.61.05.03,Pulau Kalimantan,496.8,496.7,754.0
+KHG Sungai Sekadau - Sungai Kenawan,KHG.61.09.06,Pulau Kalimantan,354.6,354.6,1374.0
+KHG Sungai Kaibus - Sungai Koper,KHG.92.04.19,Pulau Papua,7089.0,7082.7,18621.0
+KHG Lae Tarap - Lae Kumbi,KHG.11.23.04,Pulau Sumatera,0.0,0.0,1152.0
+KHG Lae Tarap - Lae Sulampi,KHG.11.10-23.01,Pulau Sumatera,0.0,0.0,2609.0
+KHG Sungai Tumu,KHG.14.04.13,Pulau Sumatera,0.0,0.0,856.0
+KHG Sungai Keludai - Sungai Merakai,KHG.61.05.06,Pulau Kalimantan,320.8,320.7,557.0
+KHG Pulau Menggung,KHG.14.10.05,Pulau Sumatera,232.0,231.9,654.0
+KHG Pulau Labu,KHG.14.05.03,Pulau Sumatera,507.0,506.9,589.0
+KHG Sungai Ketungau - Sungai Serasau,KHG.61.05.02,Pulau Kalimantan,94.4,94.4,179.0
+KHG Sungai Matan -Sungai Semandang,KHG.61.11-04.02,Pulau Kalimantan,0.0,0.0,15021.0
+KHG Sungai Kapuas - Sungai Muntik,KHG.61.06.12,Pulau Kalimantan,185.8,185.8,337.0
+KHG Alue Getah - Krueng Le Mirah,KHG.11.12.01,Pulau Sumatera,0.0,0.0,4605.0
+KHG Krueng Trumon,KHG.11.01.07,Pulau Sumatera,0.0,0.0,506.0
+KHG Sungai Warmon - Sungai Klamalu I,KHG.92.01.05,Pulau Papua,24.2,24.2,40.0
+KHG Krueng On - Krueng Pneunom,KHG.11.14.05,Pulau Sumatera,586.5,582.9,3731.0
+KHG Sungai Rambai - Sungai Meliau,KHG.61.03.09,Pulau Kalimantan,0.0,0.0,405.0
+KHG Sungai Kla Sepa - Sungai Kla Kaibus,KHG.92.04.12,Pulau Papua,1051.0,1050.2,1440.0
+KHG Bah Kambang - Batang Airlakitan,KHG.13.01.06,Pulau Sumatera,0.0,0.0,3173.0
+KHG Sungai Embau - Sungai Kapuas,KHG.61.06.07,Pulau Kalimantan,30115.8,30111.7,26532.0
+KHG Krueng Susoh - Krueng Batee,KHG.11.12.03,Pulau Sumatera,0.0,0.0,443.0
+KHG Sungai Jenu - Sungai Labai,KHG.61.12.08,Pulau Kalimantan,7193.5,7192.5,10528.0
+KHG Aek Panggainsira - Aek Arong,KHG.12.16.02,Pulau Sumatera,650.3,649.3,2049.0
+KHG Aek Silang - Lae Renun,KHG.12.17.01,Pulau Sumatera,235.6,235.1,351.0
+KHG Alue Baksukon - Alue Semerah,KHG.11.01.02,Pulau Sumatera,0.0,0.0,367.0
+KHG Alue Semerah - Krueng Batee,KHG.11.01.03,Pulau Sumatera,0.0,0.0,1167.0
+KHG Danau Lere,KHG.91.25.04,Pulau Papua,0.0,0.0,1090.0
+KHG Kla Sayal - Sungai Kla Kaibus,KHG.92.04.38,Pulau Papua,2021.9,2020.4,2910.0
+KHG Krueng Baru - Krueng Aluetho,KHG.11.01.01,Pulau Sumatera,0.0,0.0,759.0
+KHG Krueng Batee - Krueng Kluet,KHG.11.01.04,Pulau Sumatera,0.0,0.0,1008.0
+KHG Krueng Kluet - Krueng Lembang,KHG.11.01.05,Pulau Sumatera,0.0,0.0,398.0
+KHG Krueng Ligan - Krueng Masem,KHG.11.14.01,Pulau Sumatera,0.0,0.0,1719.0
+KHG Krueng Manggeng - Krueng Baru,KHG.11.12.05,Pulau Sumatera,0.0,0.0,1205.0
+KHG Krueng Masem,KHG.11.14.02,Pulau Sumatera,0.0,0.0,1684.0
+KHG Krueng Naca - Krueng Kapaksesak,KHG.11.01.08,Pulau Sumatera,0.0,0.0,1489.0
+KHG Krueng Peungapet,KHG.11.14.03,Pulau Sumatera,0.0,0.0,1789.0
+KHG Krueng Susoh,KHG.11.12.04,Pulau Sumatera,0.0,0.0,1475.0
+KHG Lae Kumbi,KHG.11.23.03,Pulau Sumatera,0.0,0.0,478.0
+KHG Lae Puncu - Lae Tarap,KHG.11.23.01,Pulau Sumatera,0.0,0.0,699.0
+KHG Lae Rih - Lae Puncu,KHG.11.23.02,Pulau Sumatera,0.0,0.0,830.0
+KHG Lae Sulampi - Lae Rimo,KHG.11.10.01,Pulau Sumatera,0.0,0.0,493.0
+KHG Pulau Karimun,KHG.21.02.01,Pulau Sumatera,64.8,64.8,290.0
+KHG Pulau Kora-Kora,KHG.92.06.65,Pulau Papua,0.0,0.0,1487.0
+KHG Pulau Parit,KHG.21.02.02,Pulau Sumatera,105.2,105.1,318.0
+KHG Pulau Rutomo,KHG.91.04.08,Pulau Papua,0.0,0.0,756.0
+KHG Pulau Sungai Raahiba - Sungai Ubuara,KHG.92.06.59,Pulau Papua,0.0,0.0,2155.0
+KHG Pulau Tanbuayabuaya,KHG.64.03.03,Pulau Kalimantan,108.2,108.2,221.0
+KHG Pulau Tanjungbuaya-buaya,KHG.64.03.05,Pulau Kalimantan,1414.5,1413.7,2857.0
+KHG Pulau Urgar,KHG.21.02.05,Pulau Sumatera,0.0,0.0,1937.0
+KHG Pulau Warir I,KHG.92.05.03,Pulau Papua,147.9,147.8,241.0
+KHG Pulau Warir II,KHG.92.05.02,Pulau Papua,67.2,67.2,118.0
+KHG Pulau Warir III,KHG.92.05.01,Pulau Papua,194.2,194.2,356.0
+KHG SUngai Ewas,KHG.92.08.01,Pulau Papua,0.0,0.0,88.0
+KHG SUngai Serjin - Sungai Kamundan,KHG.92.04.07,Pulau Papua,0.0,0.0,3826.0
+KHG Sei Batu Putih,KHG.64.03.04,Pulau Kalimantan,1420.8,1420.0,1731.0
+KHG Sungai Aenomon Gong - Sungai Atimet Enta,KHG.91.09.32,Pulau Papua,0.0,0.0,2855.0
+KHG Sungai Aenomon Gong - Sungai Olaronomon,KHG.91.09.31,Pulau Papua,5940.9,5898.9,10238.0
+KHG Sungai Aidui - Sungai Orakeb,KHG.91.20.04,Pulau Papua,0.0,0.0,3447.0
+KHG Sungai Aikwa - Sungai Minajerwi,KHG.91.09.19,Pulau Papua,0.0,0.0,6114.0
+KHG Sungai Ajari - Sungai Kubai,KHG.91.04.03,Pulau Papua,0.0,0.0,1371.0
+KHG Sungai Akar,KHG.61.09.01,Pulau Kalimantan,1326.1,1326.1,1638.0
+KHG Sungai Akimuga - Sungai Seruwinomon,KHG.91.09.33,Pulau Papua,0.0,0.0,4990.0
+KHG Sungai Aleki Eli - Sungai Aleki Mafe,KHG.91.01.04,Pulau Papua,0.0,0.0,1956.0
+KHG Sungai Aleki Male - Sungai Ifuleki Bian,KHG.91.01.06,Pulau Papua,0.0,0.0,2243.0
+KHG Sungai Alekikos Bakian - Sungai Ifuleki Bian,KHG.91.01.08,Pulau Papua,0.0,0.0,1279.0
+KHG Sungai Alekikosi Digoel - Sungai Aleki Seme,KHG.91.16-01.01,Pulau Papua,14566.1,14352.3,16564.0
+KHG Sungai Alekikosi Digoel - Sungai Alekikosi Bagon,KHG.91.16.14,Pulau Papua,3042.1,3001.5,5139.0
+KHG Sungai Alekikosi Kaswari - Sungai Alekikosi Digoel,KHG.91.16.12,Pulau Papua,0.0,0.0,2099.0
+KHG Sungai Alekikosi Soap - Sungai Alekikosi Seghab,KHG.91.01.05,Pulau Papua,0.0,0.0,3008.0
+KHG Sungai Alekokosi Kaswari - Sungai Alekikosi Dawe,KHG.91.16.11,Pulau Papua,198.6,196.8,552.0
+KHG Sungai Aliki Alo - Sungai Aliki Mauwk Ere,KHG.91.01.01,Pulau Papua,0.0,0.0,1807.0
+KHG Sungai Anakasi - Sungai Muaraanakasi,KHG.92.06.31,Pulau Papua,0.0,0.0,4241.0
+KHG Sungai Andaiwaren - Sungai Motosi,KHG.91.20.16,Pulau Papua,0.0,0.0,14272.0
+KHG Sungai Aparuka Enta - Sungai Dita One,KHG.91.28.01,Pulau Papua,1326.2,1318.7,3131.0
+KHG Sungai Apauwar - Sungai Tramuas,KHG.91.10.02,Pulau Papua,0.0,0.0,6472.0
+KHG Sungai Apauwar - Sungai Willy,KHG.91.10.03,Pulau Papua,0.0,0.0,2545.0
+KHG Sungai Api - Sungai Asiti,KHG.92.02.01,Pulau Papua,0.0,0.0,2231.0
+KHG Sungai Armina - Sungai Wagura,KHG.92.06.43,Pulau Papua,0.0,0.0,4209.0
+KHG Sungai Aroba - Sungai Roarifa,KHG.92.06.64,Pulau Papua,0.0,0.0,2973.0
+KHG Sungai Atimet Enta - Sungai Amokono,KHG.91.09.30,Pulau Papua,998.7,991.8,8003.0
+KHG Sungai Atuka - Sungai Kamora I,KHG.91.09.12,Pulau Papua,2657.5,2639.8,4129.0
+KHG Sungai Auwewa - Sungai Owa,KHG.91.15.03,Pulau Papua,0.0,0.0,4117.0
+KHG Sungai Awisio - Sungai Muturi,KHG.92.06.18,Pulau Papua,0.0,0.0,4201.0
+KHG Sungai Badara - Sungai Aiyamada,KHG.92.08.29,Pulau Papua,0.0,0.0,1404.0
+KHG Sungai Bakoi,KHG.92.04.39,Pulau Papua,329.8,329.5,468.0
+KHG Sungai Bakop - Sungai Keyen,KHG.92.04.16,Pulau Papua,713.6,713.0,971.0
+KHG Sungai Bangkudulisungai,KHG.65.04.06,Pulau Kalimantan,2914.4,2903.4,5112.0
+KHG Sungai Bangkudulisungai - Sungai Umbus,KHG.65.04.07,Pulau Kalimantan,637.4,635.1,1696.0
+KHG Sungai Barari - Sungai Gariyoga,KHG.92.08.21,Pulau Papua,0.0,0.0,307.0
+KHG Sungai Barari - Sungai Kali Sihuna,KHG.92.08.22,Pulau Papua,0.0,0.0,751.0
+KHG Sungai Batang Kalis - Sungai Maday,KHG.61.06.10,Pulau Kalimantan,3974.8,3974.3,8726.0
+KHG Sungai Batanghari - Sungai Mandahara,KHG.15.10.01,Pulau Sumatera,0.0,0.0,588.0
+KHG Sungai Baturusa,KHG.19.07.01,Pulau Sumatera,0.0,0.0,3331.0
+KHG Sungai Belikat - Sungai Lengko,KHG.19.04.02,Pulau Sumatera,0.0,0.0,3778.0
+KHG Sungai Belitung - Sungai Kapuas,KHG.61.06.01,Pulau Kalimantan,72017.5,71999.6,76016.2
+KHG Sungai Benewa - Sungai Mamberamo,KHG.91.22-13.01,Pulau Papua,7796.8,7766.0,11840.0
+KHG Sungai Berparar - Sungai Naramasa,KHG.92.06.39,Pulau Papua,0.0,0.0,11076.0
+KHG Sungai Betur - Sungai Jari,KHG.92.01.20,Pulau Papua,1773.5,1772.5,3115.0
+KHG Sungai Bianoga - Sungai Watro,KHG.92.08.18,Pulau Papua,0.0,0.0,3903.0
+KHG Sungai Bianoga - Sungai Wirfatn,KHG.92.06-08.01,Pulau Papua,0.0,0.0,1517.0
+KHG Sungai Biate - Sungai Dijai,KHG.91.20.33,Pulau Papua,0.0,0.0,18680.0
+KHG Sungai Bier - Sungai Kwalitar,KHG.91.10.11,Pulau Papua,0.0,0.0,16233.0
+KHG Sungai Bintuni - Sungai Syakarer,KHG.92.06.09,Pulau Papua,0.0,0.0,2771.0
+KHG Sungai Biri - Sungai Kali Berpa,KHG.91.10.13,Pulau Papua,0.0,0.0,8052.0
+KHG Sungai Biri - Sungai Rouffaer,KHG.91.20.26,Pulau Papua,0.0,0.0,6466.0
+KHG Sungai Bob Buraka - Sungai Aleki Buraka,KHG.91.01.02,Pulau Papua,0.0,0.0,2257.0
+KHG Sungai Bobburaka - Sungai Aliki Anaw,KHG.91.01.03,Pulau Papua,913.2,896.3,3786.0
+KHG Sungai Bogoremo,KHG.92.04.22,Pulau Papua,182.4,182.2,252.0
+KHG Sungai Bogoremo - Sungai Sedai,KHG.92.04.23,Pulau Papua,1501.7,1500.2,2149.0
+KHG Sungai Bomberai,KHG.92.03.04,Pulau Papua,0.0,0.0,930.0
+KHG Sungai Bomberai - Sungai Otoweri,KHG.92.03.05,Pulau Papua,0.0,0.0,8350.0
+KHG Sungai Budidi - Sungai Bomberai,KHG.92.03.03,Pulau Papua,0.0,0.0,17908.0
+KHG Sungai Bulu - Sungai Mangkurat,KHG.61.05.15,Pulau Kalimantan,277.2,277.2,346.0
+KHG Sungai Buru Bagaram,KHG.91.17-16.02,Pulau Papua,1339.0,1323.0,1149.0
+KHG Sungai Buru Bayeni - Sungai Buru Mappi,KHG.91.16.06,Pulau Papua,0.0,0.0,1845.0
+KHG Sungai Buru Mappi - Sungai Buru Obaa,KHG.91.18-17.01,Pulau Papua,123284.1,121833.8,169487.5
+KHG Sungai Buru Mappi - Sungai Mangguno,KHG.91.16.03,Pulau Papua,1772.4,1754.8,2173.0
+KHG Sungai Buru Mappi - Sungai Siakha Homo,KHG.91.17.06,Pulau Papua,3906.4,3852.3,4471.0
+KHG Sungai Buru Mappi - Sungai Udi Afu,KHG.91.16.05,Pulau Papua,1752.5,1730.8,4037.0
+KHG Sungai Buru Mappi I,KHG.91.17.07,Pulau Papua,3889.5,3838.1,5891.0
+KHG Sungai Buru Mappi II,KHG.91.16.01,Pulau Papua,88.5,87.6,173.0
+KHG Sungai Buru Miyaman - Sungai Buru Mappi,KHG.91.17-16.03,Pulau Papua,6549.8,6467.1,13602.0
+KHG Sungai Buya - SUngai Furakara,KHG.92.08.08,Pulau Papua,0.0,0.0,713.0
+KHG Sungai Cabang Arafoi - Sungai Uniswala,KHG.92.08.32,Pulau Papua,0.0,0.0,826.0
+KHG Sungai Datur Sungai Metamani,KHG.92.04.33,Pulau Papua,704.6,703.8,1241.0
+KHG Sungai Dayewa - Sungai Owa,KHG.91.15.02,Pulau Papua,0.0,0.0,1651.0
+KHG Sungai Dijai - Sungai Jaro,KHG.91.20-10.01,Pulau Papua,4470.4,4455.8,85502.0
+KHG Sungai Dinu - Sungai Palu,KHG.91.25.03,Pulau Papua,0.0,0.0,1092.0
+KHG Sungai Dita One - Kopai One,KHG.91.28.02,Pulau Papua,0.0,0.0,3066.0
+KHG Sungai Dug - Sungai Kla Mer,KHG.92.01.13,Pulau Papua,414.3,414.1,887.0
+KHG Sungai Duk - Sungai Sepa Klabra,KHG.92.01.44,Pulau Papua,709.0,708.6,873.0
+KHG Sungai Efra - Sungai Karsid,KHG.91.20.11,Pulau Papua,0.0,0.0,573.0
+KHG Sungai Embalon - Sungai Palin,KHG.61.06.02,Pulau Kalimantan,31006.2,30996.7,34295.0
+KHG Sungai Epawa - Sungai Binataboa,KHG.91.15.05,Pulau Papua,0.0,0.0,3615.0
+KHG Sungai Fakuja - Sungai Foli,KHG.91.20-07-14.01,Pulau Papua,969.4,966.3,96279.8
+KHG Sungai Fakujo - Sungai Mamberamo,KHG.91.20-14.01,Pulau Papua,2087.0,2080.3,73961.0
+KHG Sungai Feria - Sungai Noma,KHG.92.08.03,Pulau Papua,0.0,0.0,1083.0
+KHG Sungai Feria - Sungai Yaga,KHG.92.08.02,Pulau Papua,0.0,0.0,1866.0
+KHG Sungai Ferkame - Sunagi Orei,KHG.91.10.06,Pulau Papua,0.0,0.0,11144.0
+KHG Sungai Fesia,KHG.92.01.48,Pulau Papua,158.9,158.9,189.0
+KHG Sungai Fesia Kecil,KHG.92.01.47,Pulau Papua,133.3,133.3,170.0
+KHG Sungai Fira - Sungai Tirasu,KHG.91.20.09,Pulau Papua,0.0,0.0,352.0
+KHG Sungai Foen - Sungai Tor,KHG.91.10.09,Pulau Papua,0.0,0.0,4722.0
+KHG Sungai Gaigar - Sungai Maranarauni,KHG.91.15.08,Pulau Papua,0.0,0.0,1986.0
+KHG Sungai Garawa - Sungai Buruway,KHG.92.08.10,Pulau Papua,423.4,421.8,4161.0
+KHG Sungai Gebiasi - Sungai Wermura,KHG.92.08.28,Pulau Papua,0.0,0.0,1919.0
+KHG Sungai Geno - Sungai Fesia Kecil,KHG.92.01.07,Pulau Papua,2840.6,2839.2,3752.0
+KHG Sungai Gesa - Sungai Efra,KHG.91.20.07,Pulau Papua,0.0,0.0,2447.0
+KHG Sungai Gesa - Sungai Inggodi,KHG.91.20.06,Pulau Papua,0.0,0.0,4730.0
+KHG Sungai Gesa - Sungai Kirema,KHG.91.20.14,Pulau Papua,0.0,0.0,3308.0
+KHG Sungai Gesa - Sungai Warawuri I,KHG.91.20.23,Pulau Papua,0.0,0.0,2727.0
+KHG Sungai Gesa - Sungai Warawuri II,KHG.91.20.22,Pulau Papua,0.0,0.0,1892.0
+KHG Sungai Gobo - Sungai Garawa,KHG.92.08.11,Pulau Papua,6399.6,6375.7,20607.0
+KHG Sungai Gobo - Sungai Wegera,KHG.92.08.12,Pulau Papua,0.0,0.0,2069.0
+KHG Sungai Grime - Sungai Nanggutu,KHG.91.03.01,Pulau Papua,0.0,0.0,942.0
+KHG Sungai Hablisfura - Sungai Benewa,KHG.91.22.02,Pulau Papua,5072.2,5052.2,13454.0
+KHG Sungai Husori - Sungai Mumusi Satu,KHG.92.06.52,Pulau Papua,0.0,0.0,1057.0
+KHG Sungai Ifileki Bian - Sungai Lekiage Sentuf,KHG.91.01.07,Pulau Papua,0.0,0.0,4832.0
+KHG Sungai Ifuleki Berapto - Sungai Ifuleki Obat,KHG.91.01.16,Pulau Papua,0.0,0.0,1631.0
+KHG Sungai Ifuleki Bian - Sungai Dalik,KHG.91.01.09,Pulau Papua,0.0,0.0,682.0
+KHG Sungai Ifuleki Kumbe - Sungai Lekiage Ser,KHG.91.01.11,Pulau Papua,508.0,498.4,1823.0
+KHG Sungai Ifuleki Obathrow - Sungai Ifuleki Berapto,KHG.91.01.15,Pulau Papua,0.0,0.0,2325.0
+KHG Sungai Ifuleki Onam - Sungai Lekiage Wagini,KHG.91.01.14,Pulau Papua,0.0,0.0,205.0
+KHG Sungai Igwa - Sungai Kapare,KHG.91.09.08,Pulau Papua,19091.4,18970.5,23688.0
+KHG Sungai Igwa Enta - Sungai Paripi Enta,KHG.91.09.06,Pulau Papua,2849.0,2830.9,4058.0
+KHG Sungai Inabukwa - Sungai Otokwa,KHG.91.09.22,Pulau Papua,13808.8,13715.9,20787.0
+KHG Sungai Indragiri,KHG.14.02.03,Pulau Sumatera,0.0,0.0,1227.0
+KHG Sungai Inggodi - Sungai Pawai,KHG.91.20.05,Pulau Papua,0.0,0.0,7862.0
+KHG Sungai Irimawa - Sungai Wawara,KHG.92.08.14,Pulau Papua,0.0,0.0,1740.0
+KHG Sungai Isai - Sungai Beraur,KHG.92.01.38,Pulau Papua,1312.5,1311.9,1847.0
+KHG Sungai Jagua - Sungai Nakambi,KHG.91.03.03,Pulau Papua,7376.0,7349.7,22104.0
+KHG Sungai Jaro - Sungai Jagua,KHG.91.10.17,Pulau Papua,44175.9,44027.0,80982.0
+KHG Sungai Jeruk - Selat Bangka,KHG.19.01.04,Pulau Sumatera,0.0,0.0,1388.0
+KHG Sungai Jo Dairam,KHG.91.17.02,Pulau Papua,17649.3,17480.6,23960.0
+KHG Sungai Jo Vriendschaps - Sungai Jo Siret,KHG.91.18.31,Pulau Papua,50820.0,50383.0,92414.2
+KHG Sungai Ju Siret- Sungai Wade Assue,KHG.91.18.32,Pulau Papua,24156.6,23930.5,20694.0
+KHG Sungai Juk Afe - Sungai Juk Aswet,KHG.91.18.23,Pulau Papua,1719.3,1706.3,4317.0
+KHG Sungai Juk Asor - Juk Epas,KHG.91.18.25,Pulau Papua,817.4,811.2,1823.0
+KHG Sungai Juk Bafut - Sungai Juk Yisun,KHG.91.18.13,Pulau Papua,461.2,458.1,1185.0
+KHG Sungai Juk Binijau - Sungai Juk Ba,KHG.91.18.17,Pulau Papua,3231.5,3208.8,6653.0
+KHG Sungai Juk Jats - Sungai Juk Bafut,KHG.91.18.10,Pulau Papua,6168.8,6124.5,16692.0
+KHG Sungai Juk Jats - Sungai Juk Momats,KHG.91.18.08,Pulau Papua,1768.8,1755.4,7904.0
+KHG Sungai Juk Katarina - Sungai Jo Vriendschaps,KHG.91.18.29,Pulau Papua,10896.5,10810.1,27473.0
+KHG Sungai Juk Katarina - Sungai Juk Asor,KHG.91.18.24,Pulau Papua,2778.8,2757.7,5847.0
+KHG Sungai Juk Mamats - Juk Jats,KHG.91.18.09,Pulau Papua,10534.5,10449.3,18951.0
+KHG Sungai Juk Mawar - Sungai Juk Fai,KHG.91.18.12,Pulau Papua,1479.1,1466.9,4593.0
+KHG Sungai Juk Pai - Sungai Juk Bininjai,KHG.91.18.18,Pulau Papua,2400.6,2383.3,5594.0
+KHG Sungai Juk Pai - Sungai Juk Senajuh,KHG.91.18.19,Pulau Papua,3169.6,3146.7,12459.0
+KHG Sungai Juk Patatmini,KHG.91.18.03,Pulau Papua,0.0,0.0,217.0
+KHG Sungai Juk Patatmini - Sungai Juk Orotok,KHG.91.18.05,Pulau Papua,0.0,0.0,779.0
+KHG Sungai Juk Pek - Sungai Juk Aswet,KHG.91.18.15,Pulau Papua,2216.7,2196.7,4331.0
+KHG Sungai Juk Poet - Sungai Blumen,KHG.91.18.07,Pulau Papua,1797.1,1783.7,6156.0
+KHG Sungai Juk Poet - Sungai Juk Jats,KHG.91.18.06,Pulau Papua,4014.7,3985.6,9207.0
+KHG Sungai Juk Pomats - Sungai Juk Binijau,KHG.91.18.16,Pulau Papua,1714.6,1702.4,2954.0
+KHG Sungai Juk Serep - Sungai Juk Semen,KHG.91.18.27,Pulau Papua,2834.7,2811.3,14852.0
+KHG Sungai Juk Tere - Sungai Juk Katarina,KHG.91.18.30,Pulau Papua,1763.3,1749.1,4640.0
+KHG Sungai Juk Tojoh - Sungai Jo Vriendschaps,KHG.91.18.28,Pulau Papua,0.0,0.0,3827.0
+KHG Sungai Juk Unir - Sungai Juk Aswet,KHG.91.18.14,Pulau Papua,787.8,780.8,2376.0
+KHG Sungai Juk Unir/Kali Wosak - Sungai Utumbuwe,KHG.91.18.20,Pulau Papua,0.0,0.0,14651.0
+KHG Sungai Juk Wab - Sungai Jub Orotok,KHG.91.18.02,Pulau Papua,1561.8,1550.1,3512.0
+KHG Sungai Juk Wab - Sungai Juk Patatmini,KHG.91.18.04,Pulau Papua,0.0,0.0,317.0
+KHG Sungai Juk Yapi - Sungai Juk Katarina,KHG.91.18.26,Pulau Papua,1365.0,1354.4,3276.0
+KHG Sungai Kabre Lama - Sungai Biate,KHG.91.20.32,Pulau Papua,0.0,0.0,28214.0
+KHG Sungai Kaferi - Sungai Fira,KHG.91.20.08,Pulau Papua,0.0,0.0,357.0
+KHG Sungai Kaibus - Sungai Bariat,KHG.92.04.08,Pulau Papua,1771.5,1770.3,3170.0
+KHG Sungai Kaibus - Sungai Warongge,KHG.92.04.10,Pulau Papua,574.7,574.4,1365.0
+KHG Sungai Kais - Sungai Datur,KHG.92.04.32,Pulau Papua,567.8,567.2,1972.0
+KHG Sungai Kais - Sungai Metamani,KHG.92.04.34,Pulau Papua,10253.0,10241.6,46283.0
+KHG Sungai Kaitaro - Sungai Suga,KHG.92.06.46,Pulau Papua,0.0,0.0,8052.0
+KHG Sungai Kaitaro - Sungai Wagura,KHG.92.06.44,Pulau Papua,0.0,0.0,8263.0
+KHG Sungai Kaitera - Sungai Suga,KHG.92.06.47,Pulau Papua,0.0,0.0,3071.0
+KHG Sungai Kalamulung- Sungai Sofok,KHG.92.01.27,Pulau Papua,808.5,808.2,1929.0
+KHG Sungai Kali Dormas - Sungai Wiruai,KHG.91.10.14,Pulau Papua,0.0,0.0,1447.0
+KHG Sungai Kali Waermura - Sungai Sawaruktu,KHG.92.08.23,Pulau Papua,0.0,0.0,878.0
+KHG Sungai Kaliten - Sungai Wangi One,KHG.91.26.01,Pulau Papua,0.0,0.0,1853.0
+KHG Sungai Kamanita - Sungai Inabukwa,KHG.91.09.21,Pulau Papua,4125.9,4098.1,7344.0
+KHG Sungai Kamika - Sungai Hablisfura,KHG.91.22.01,Pulau Papua,4998.9,4979.5,13503.0
+KHG Sungai Kamora - Sungai Murepiga,KHG.91.09.13,Pulau Papua,10284.8,10218.3,13640.0
+KHG Sungai Kamundan - Sungai Weriagar,KHG.92.04-06.02,Pulau Papua,0.0,0.0,89424.0
+KHG Sungai Kamura - Sungai Atuka,KHG.91.09.11,Pulau Papua,33752.6,33535.9,38731.0
+KHG Sungai Kapare - Sungai Mimika,KHG.91.09.09,Pulau Papua,7495.2,7448.5,10336.0
+KHG Sungai Kapuas - Sungai Dekan Besar,KHG.61.03.10,Pulau Kalimantan,626.4,626.4,605.0
+KHG Sungai Kapuas - Sungai Melawi,KHG.61.05.11,Pulau Kalimantan,191.2,191.2,852.0
+KHG Sungai Kapuas - Sungai Menukung,KHG.61.03.13,Pulau Kalimantan,1141.3,1141.3,1966.0
+KHG Sungai Kapuas - Sungai Rusan,KHG.61.03.11,Pulau Kalimantan,280.3,280.3,365.0
+KHG Sungai Kapuas - Sungai Segelam,KHG.61.03.07,Pulau Kalimantan,897.0,897.0,2005.0
+KHG Sungai Kapuas - Sungai Tayan,KHG.61.03.05,Pulau Kalimantan,933.4,933.4,1245.0
+KHG Sungai Kapuas - Sungai Tembaga,KHG.61.03.12,Pulau Kalimantan,652.6,652.6,641.0
+KHG Sungai Kariabu,KHG.64.03.06,Pulau Kalimantan,227.4,227.3,315.0
+KHG Sungai Karsid - Sungai Efra,KHG.91.20.10,Pulau Papua,0.0,0.0,452.0
+KHG Sungai Kaseremao - Sungai Kla Betur,KHG.92.01.19,Pulau Papua,441.9,441.7,1201.0
+KHG Sungai Kasira - Sungai Saka,KHG.92.06.57,Pulau Papua,0.0,0.0,3115.0
+KHG Sungai Kasira - Sungai Tifa,KHG.92.06.56,Pulau Papua,0.0,0.0,5180.0
+KHG Sungai Kasuwari - Sungai Kenaburi,KHG.92.04.37,Pulau Papua,6965.7,6955.5,9678.0
+KHG Sungai Kawor Besar - Sungai Serumuk,KHG.92.01.22,Pulau Papua,1082.7,1082.0,2249.0
+KHG Sungai Kedukul,KHG.61.03-09.01,Pulau Kalimantan,664.6,664.6,696.0
+KHG Sungai Keeme - Sungai Bayeni,KHG.91.17-16.01,Pulau Papua,3422.8,3383.2,7993.0
+KHG Sungai Ken - Sungai Mafi,KHG.91.11.05,Pulau Papua,0.0,0.0,1358.0
+KHG Sungai Ketiak - Sengai Bikang,KHG.19.03.02,Pulau Sumatera,1669.0,1665.1,10809.0
+KHG Sungai Keyen - Sungai Waigo,KHG.92.04.17,Pulau Papua,760.9,760.3,4726.0
+KHG Sungai Keyen - Sungai Waren,KHG.92.04.15,Pulau Papua,1047.6,1046.8,2898.0
+KHG Sungai Kirasai - Sungai Samberi,KHG.92.06.26,Pulau Papua,0.0,0.0,2841.0
+KHG Sungai Kla Bak - Sungai Kla Duk,KHG.92.01.43,Pulau Papua,3731.4,3729.2,5021.0
+KHG Sungai Kla Beraur - Sungai Kla Seremuk,KHG.92.01.30,Pulau Papua,775.3,774.9,1428.0
+KHG Sungai Kla Beraur - Sungai Kla Wan,KHG.92.01.34,Pulau Papua,5192.2,5189.6,5796.0
+KHG Sungai Kla Beraur - Sungai Sepa Beraur,KHG.92.01.31,Pulau Papua,2658.1,2656.4,3595.0
+KHG Sungai Kla Jarin - Kla Seremuk,KHG.92.01.21,Pulau Papua,0.0,0.0,610.0
+KHG Sungai Kla Jarin - Sungai Kawor Besar,KHG.92.01.23,Pulau Papua,3305.7,3303.6,5007.0
+KHG Sungai Kla Kaibun,KHG.92.01.01,Pulau Papua,738.0,737.6,1058.0
+KHG Sungai Kla Makambar - Sungai Kla Serai,KHG.92.04.05,Pulau Papua,1299.0,1298.2,2194.0
+KHG Sungai Kla Marine - Sungai Kasol,KHG.92.01.04,Pulau Papua,1931.4,1930.2,2218.0
+KHG Sungai Kla Marine - Sungai Wasinsion,KHG.92.01.03,Pulau Papua,603.1,602.8,693.0
+KHG Sungai Kla Mer,KHG.92.01.15,Pulau Papua,114.2,114.2,307.0
+KHG Sungai Kla Mer - Sungai Buf I,KHG.92.01.11,Pulau Papua,1812.3,1811.1,3507.0
+KHG Sungai Kla Mer - Sungai Buf II,KHG.92.01.09,Pulau Papua,560.2,559.8,1161.0
+KHG Sungai Kla Mer - Sungai Kla Segun I,KHG.92.01.16,Pulau Papua,1826.5,1825.5,2705.0
+KHG Sungai Kla Mer - Sungai Kla Segun II,KHG.92.01.17,Pulau Papua,234.2,234.1,826.0
+KHG Sungai Kla Mer - Sungai Sigit,KHG.92.01.12,Pulau Papua,0.0,0.0,256.0
+KHG Sungai Kla Mer - Sungai Sijeni,KHG.92.01.14,Pulau Papua,657.4,657.1,1413.0
+KHG Sungai Kla Sepa - Sungai Kla Bak,KHG.92.01.42,Pulau Papua,1656.8,1655.9,2844.0
+KHG Sungai Kla Seremuk - Sungai Kanaya,KHG.92.04.01,Pulau Papua,672.0,671.5,2206.0
+KHG Sungai Kla Seremuk - Sungai Kla Makambar,KHG.92.04.02,Pulau Papua,443.4,443.1,1678.0
+KHG Sungai Kla Seremuk - Sungai Kla Sayal,KHG.92.04.03,Pulau Papua,6012.6,6008.2,8395.0
+KHG Sungai Kla Seremuk - Sungai Murnaim,KHG.92.01.24,Pulau Papua,239.9,239.7,1122.0
+KHG Sungai Kla Wan - Sungai Duk,KHG.92.01.40,Pulau Papua,4517.7,4515.3,6803.0
+KHG Sungai Kla Wan - Sungai Kla Bak,KHG.92.01.41,Pulau Papua,1183.6,1182.9,1389.0
+KHG Sungai Kualan - Sungai Lelayang,KHG.61.04.05,Pulau Kalimantan,0.0,0.0,813.0
+KHG Sungai Kualan - Sungai Sekucing,KHG.61.04.04,Pulau Kalimantan,2985.4,2985.0,6524.0
+KHG Sungai Kuis - Sungai Bapai,KHG.91.18-17.02,Pulau Papua,254272.8,251295.8,392319.0
+KHG Sungai Kwalitar - Sungai Biri,KHG.91.10.12,Pulau Papua,0.0,0.0,5270.0
+KHG Sungai Landenwala - Sungai I'wai,KHG.92.08.33,Pulau Papua,33.3,33.1,880.0
+KHG Sungai Legari - Sungai Tabai,KHG.91.04.07,Pulau Papua,480.9,479.4,31651.0
+KHG Sungai Lenggo,KHG.64.03.01,Pulau Kalimantan,833.1,832.6,1234.0
+KHG Sungai Lepar,KHG.19.03.04,Pulau Sumatera,0.0,0.0,1261.0
+KHG Sungai Mafi - Sungai Pawasi,KHG.91.11.06,Pulau Papua,0.0,0.0,2408.0
+KHG Sungai Mafirikamo - Sungai Buraromi,KHG.91.04.15,Pulau Papua,0.0,0.0,312.0
+KHG Sungai Makpan - Sungai Kasim,KHG.92.05.05,Pulau Papua,0.0,0.0,3494.0
+KHG Sungai Maluka - Sungai Martapura,,Pulau Kalimantan,2120.7,0.0,
+KHG Sungai Mamberamo - Sungai Apauwar,KHG.91.10.01,Pulau Papua,0.0,0.0,95634.0
+KHG Sungai Mamberamo - Sungai Idenburg,KHG.91.20.29,Pulau Papua,0.0,0.0,12220.0
+KHG Sungai Mamberamo - Sungai Kamika,KHG.91.21-22.01,Pulau Papua,11011.0,10969.2,22240.0
+KHG Sungai Mamberamo - Sungai Taria,KHG.91.14.01,Pulau Papua,15446.4,15395.1,33955.0
+KHG Sungai Manimeri,KHG.92.06.16,Pulau Papua,0.0,0.0,415.0
+KHG Sungai Manimeri - Sungai Peresari I,KHG.92.06.19,Pulau Papua,0.0,0.0,56.0
+KHG Sungai Manimeri - Sungai Peresari II,KHG.92.06.20,Pulau Papua,0.0,0.0,1393.0
+KHG Sungai Manimeri - Sungai Potong,KHG.92.06.17,Pulau Papua,0.0,0.0,678.0
+KHG Sungai Manimeri Dua - Sungai Uroroni,KHG.92.06.22,Pulau Papua,0.0,0.0,971.0
+KHG Sungai Manimeri II,KHG.92.06.15,Pulau Papua,0.0,0.0,107.0
+KHG Sungai Manimeri Satu - Sungai Bui,KHG.92.06.25,Pulau Papua,0.0,0.0,2129.0
+KHG Sungai Mappi - Sungai Edera,KHG.91.16.07,Pulau Papua,2761.9,2729.8,5933.0
+KHG Sungai Marafuara - Sungai Tifa,KHG.92.06.54,Pulau Papua,0.0,0.0,1014.0
+KHG Sungai Mawana - Sungai Wakamba,KHG.91.20.18,Pulau Papua,0.0,0.0,68020.0
+KHG Sungai Mawati - Sungai Otokwa,KHG.91.09.24,Pulau Papua,1764.6,1752.3,4347.0
+KHG Sungai Mbiabu - Sungai Bayajali,KHG.91.25.01,Pulau Papua,0.0,0.0,3411.0
+KHG Sungai Mbiabu - Sungai Sikuua,KHG.91.25.02,Pulau Papua,0.0,0.0,779.0
+KHG Sungai Mbiabu - Sungai Tariku Tiga,KHG.91.15.11,Pulau Papua,0.0,0.0,3192.0
+KHG Sungai Melawi,KHG.61.05.19,Pulau Kalimantan,181.4,181.4,214.0
+KHG Sungai Melawi - Sungai Belimbing,KHG.61.10.01,Pulau Kalimantan,740.4,740.4,568.0
+KHG Sungai Melawi - Sungai Takelak,KHG.61.10.02,Pulau Kalimantan,563.6,563.6,649.0
+KHG Sungai Memberamo - Sungai Kabre Lama,KHG.91.20.31,Pulau Papua,0.0,0.0,55783.0
+KHG Sungai Memberamo - Sungai Origio,KHG.91.20.30,Pulau Papua,0.0,0.0,2230.0
+KHG Sungai Mendalam - Sungai Sambus,KHG.61.06.05,Pulau Kalimantan,1215.6,1215.3,1110.0
+KHG Sungai Metamani - Sungai Kasuweri,KHG.92.04.35,Pulau Papua,58940.9,58861.3,86593.0
+KHG Sungai Mias - Sungai Perogang,KHG.61.03.04,Pulau Kalimantan,827.8,827.8,1027.0
+KHG Sungai Mimika Enta - Sungai Kamura Enta,KHG.91.09.10,Pulau Papua,6891.2,6849.3,13049.0
+KHG Sungai Minarjewi - Sungai Kamanita,KHG.91.09.20,Pulau Papua,19249.5,19121.2,33154.0
+KHG Sungai Minowari - Sungai Mabo,KHG.91.20.15,Pulau Papua,0.0,0.0,477.0
+KHG Sungai Mintiber - Sungai Budidi,KHG.92.03.02,Pulau Papua,0.0,0.0,7891.0
+KHG Sungai Momatsi - Sungai Juk Fase,KHG.91.18.11,Pulau Papua,12996.6,12896.4,23120.0
+KHG Sungai Motosi - Sungai Mamberamo,KHG.91.20.21,Pulau Papua,0.0,0.0,1591.0
+KHG Sungai Muawa- Sungai Tiningga,KHG.92.08.36,Pulau Papua,108.9,108.4,532.0
+KHG Sungai Muera - Sungai Mematefare,KHG.92.08.37,Pulau Papua,3723.1,3705.3,4437.0
+KHG Sungai Muera - Sungai Omba,KHG.92.08.39,Pulau Papua,36295.7,36115.1,49479.0
+KHG Sungai Mumusi Satu - Sungai Kaitera,KHG.92.06.50,Pulau Papua,0.0,0.0,9935.0
+KHG Sungai Munguk - Sungai Melawi,KHG.61.05.14,Pulau Kalimantan,595.5,595.5,778.0
+KHG Sungai Murebi - Sungai Awisio I,KHG.92.06.10,Pulau Papua,0.0,0.0,256.0
+KHG Sungai Murebi - Sungai Awisio II,KHG.92.06.11,Pulau Papua,0.0,0.0,105.0
+KHG Sungai Murepiga - Sungai Kauga,KHG.91.09.14,Pulau Papua,7417.8,7369.7,8003.0
+KHG Sungai Murnaim - Sungai Beraur I,KHG.92.01.29,Pulau Papua,0.0,0.0,664.0
+KHG Sungai Murnaim - Sungai Beraur II,KHG.92.01.35,Pulau Papua,1583.2,1582.4,3333.0
+KHG Sungai Murnaim - Sungai Kla Beraur I,KHG.92.01.25,Pulau Papua,978.2,977.6,1527.0
+KHG Sungai Murnaim - Sungai Kla Beraur II,KHG.92.01.26,Pulau Papua,1121.6,1120.9,1931.0
+KHG Sungai Musaino - Sungai Makimi Tua,KHG.91.04.05,Pulau Papua,0.0,0.0,4299.0
+KHG Sungai Muturi - Sungai Manimeri Dua,KHG.92.06.23,Pulau Papua,0.0,0.0,1136.0
+KHG Sungai Muturi - Sungai Uroroni,KHG.92.06.21,Pulau Papua,0.0,0.0,2838.0
+KHG Sungai Muyu,KHG.91.16.15,Pulau Papua,0.0,0.0,325.0
+KHG Sungai Naggobi - Sungai Nandira,KHG.91.04.01,Pulau Papua,0.0,0.0,3138.0
+KHG Sungai Nakambi - Sungai Mamberamo,KHG.91.03.04,Pulau Papua,371.9,370.6,3798.0
+KHG Sungai Naramasa - Sungai Sobrawara,KHG.92.06.38,Pulau Papua,0.0,0.0,6227.0
+KHG Sungai Naramasa - Sungai Tatowari,KHG.92.06.36,Pulau Papua,0.0,0.0,19384.0
+KHG Sungai Nawa - Sungai Sutuy,KHG.91.03.02,Pulau Papua,0.0,0.0,8114.0
+KHG Sungai Nawo - Sungai Epawa,KHG.91.15.04,Pulau Papua,0.0,0.0,845.0
+KHG Sungai Niyo Aremi - Sungai Niyo Amok,KHG.91.10.18,Pulau Papua,0.0,0.0,4435.0
+KHG Sungai Niyo Fowoga - Sungai Biri,KHG.91.20.25,Pulau Papua,0.0,0.0,4493.0
+KHG Sungai Niyo Rouffer - Sungai Tariku,KHG.91.15.14,Pulau Papua,0.0,0.0,11001.0
+KHG Sungai Niyo Tariku Tiga - Sungai Niyo Muyabu,KHG.91.15.12,Pulau Papua,0.0,0.0,7063.0
+KHG Sungai Niyo Vandaalen,KHG.91.07.01,Pulau Papua,0.0,0.0,4337.0
+KHG Sungai Niyo Yambi - Sungai Niyo Gurage,KHG.91.07-25.02,Pulau Papua,0.0,0.0,2890.0
+KHG Sungai Noani - Sungai Sekua,KHG.92.08.24,Pulau Papua,0.0,0.0,1518.0
+KHG Sungai Noma,KHG.92.08.04,Pulau Papua,0.0,0.0,215.0
+KHG Sungai Nukarie - Sungai Mabel,KHG.92.05.06,Pulau Papua,0.0,0.0,1092.0
+KHG Sungai Nusuamar - Sungai Muaraanakasi,KHG.92.06.32,Pulau Papua,0.0,0.0,1007.0
+KHG Sungai Nusuamar - Sungai Pasomol,KHG.92.06.33,Pulau Papua,0.0,0.0,1457.0
+KHG Sungai Nusuamar - Sungai Tatowari,KHG.92.06.35,Pulau Papua,0.0,0.0,3366.0
+KHG Sungai Nyabau - Sungai Palin,KHG.61.06.03,Pulau Kalimantan,1523.8,1523.3,2625.0
+KHG Sungai Obuai - Sungai Usoa,KHG.91.15-20.01,Pulau Papua,0.0,0.0,3051.0
+KHG Sungai Oi - Sungai Iri,KHG.91.20.28,Pulau Papua,0.0,0.0,10390.0
+KHG Sungai Olaronomon - Sungai Torpedoboot Enta,KHG.91.09.35,Pulau Papua,2922.9,2902.5,5681.0
+KHG Sungai Omba - Sungai Aria,KHG.92.08.41,Pulau Papua,0.0,0.0,1459.0
+KHG Sungai Omba - Sungai Mairuna,KHG.92.08.40,Pulau Papua,959.9,954.8,1518.0
+KHG Sungai Omba - Sungai Timbona,KHG.92.08.38,Pulau Papua,0.0,0.0,3319.0
+KHG Sungai Omba - Sungai Urama,KHG.92.08.42,Pulau Papua,4009.3,3988.5,7096.0
+KHG Sungai Orakeb - Sungai Mabo,KHG.91.20.12,Pulau Papua,0.0,0.0,12040.0
+KHG Sungai Otakwa - Sungai Setakwa,KHG.91.09.25,Pulau Papua,5830.2,5791.8,11244.0
+KHG Sungai Otokwa - Sungai Aingno Gong,KHG.91.09.23,Pulau Papua,6457.3,6413.8,7757.0
+KHG Sungai Otokwa - Sungai Setakwa,KHG.91.09.28,Pulau Papua,749.9,744.6,1248.0
+KHG Sungai Otoweri - Sungai Saengga,KHG.92.03-06.01,Pulau Papua,0.0,0.0,39254.0
+KHG Sungai Pasir - Sungai Kuaro,KHG.64.01.01,Pulau Kalimantan,0.0,0.0,4048.0
+KHG Sungai Pawasi - Sungai Merah,KHG.91.11.02,Pulau Papua,435.9,434.4,7775.0
+KHG Sungai Pawasi - Sungai Sanggolo,KHG.91.11.04,Pulau Papua,166.6,166.0,9339.0
+KHG Sungai Pegi - Sungai Seiwa,KHG.91.04.19,Pulau Papua,0.0,0.0,16536.0
+KHG Sungai Pemawari - Sungai Pami,KHG.91.04.16,Pulau Papua,0.0,0.0,990.0
+KHG Sungai Poronai - Sungai Kali Pegi,KHG.91.04.20,Pulau Papua,0.0,0.0,16564.0
+KHG Sungai Potong - Sungai Buruway,KHG.92.08.09,Pulau Papua,361.3,359.9,2885.0
+KHG Sungai Raahiba - Sungai Kasira,KHG.92.06.61,Pulau Papua,0.0,0.0,1739.0
+KHG Sungai Rasawa - Sungai Wutoa,KHG.91.15.06,Pulau Papua,0.0,0.0,6218.0
+KHG Sungai Rerum - Sungai Rafa,KHG.92.08.17,Pulau Papua,0.0,0.0,2304.0
+KHG Sungai Roarifa - Sungai Raahiba,KHG.92.06.62,Pulau Papua,0.0,0.0,596.0
+KHG Sungai Rorai - Sungai Andaiwaren,KHG.91.20.13,Pulau Papua,0.0,0.0,12672.0
+KHG Sungai Rouffaer - Sungai Van Der Wiligen,KHG.91.20.27,Pulau Papua,0.0,0.0,2948.0
+KHG Sungai Rouffer - Sungai Foli,KHG.91.07.02,Pulau Papua,0.0,0.0,36166.0
+KHG Sungai Rouffer - Sungai Van Daalen,KHG.91.07-25.01,Pulau Papua,507.9,506.3,74673.0
+KHG Sungai Rur - Sungai Kais,KHG.92.04.31,Pulau Papua,1628.7,1626.7,2206.0
+KHG Sungai Rurawa - Sungai Botawa,KHG.91.15.07,Pulau Papua,0.0,0.0,5010.0
+KHG Sungai Safet - Sungai Isai,KHG.92.01.33,Pulau Papua,1432.8,1432.1,2470.0
+KHG Sungai Safet - Sungai Kla Beraur,KHG.92.01.28,Pulau Papua,426.5,426.3,747.0
+KHG Sungai Safet - Sungai Mer,KHG.92.01.10,Pulau Papua,208.5,208.4,428.0
+KHG Sungai Saka - Sungai Tifa,KHG.92.06.55,Pulau Papua,0.0,0.0,2501.0
+KHG Sungai Samap - Sungai Segayao,KHG.91.10-03.02,Pulau Papua,0.0,0.0,4638.0
+KHG Sungai Samberi - Sungai Tayamari I,KHG.92.06.27,Pulau Papua,0.0,0.0,896.0
+KHG Sungai Samberi - Sungai Tayamari II,KHG.92.06.28,Pulau Papua,0.0,0.0,70.0
+KHG Sungai Samberi - Sungai Tayamari III,KHG.92.06.29,Pulau Papua,0.0,0.0,221.0
+KHG Sungai Sara - Sungai Besura,KHG.92.06.48,Pulau Papua,0.0,0.0,780.0
+KHG Sungai Sarmowai - Sungai Muaif,KHG.91.10-03.04,Pulau Papua,0.0,0.0,2024.0
+KHG Sungai Sebyar - Sungai Tembuni,KHG.92.06.02,Pulau Papua,0.0,0.0,97186.5
+KHG Sungai Segayao - Sungai Sarmowai,KHG.91.10-03.03,Pulau Papua,0.0,0.0,2477.0
+KHG Sungai Seiwa - Sungai Dayewa,KHG.91.15-27.01,Pulau Papua,0.0,0.0,4336.0
+KHG Sungai Sekak - Sungai Kais,KHG.92.04.20,Pulau Papua,10683.8,10673.3,35746.0
+KHG Sungai Sekua,KHG.92.08.25,Pulau Papua,0.0,0.0,1193.0
+KHG Sungai Selakau,KHG.61.07.01,Pulau Kalimantan,0.0,0.0,585.0
+KHG Sungai Selangkanan - Aek Bakal Kecil,KHG.17.06.02,Pulau Sumatera,0.0,0.0,2320.0
+KHG Sungai Selasin - Sungai Kaibu,KHG.92.04.09,Pulau Papua,613.8,613.4,1511.0
+KHG Sungai Senua,KHG.19.03.03,Pulau Sumatera,0.0,0.0,4148.0
+KHG Sungai Sepa,KHG.92.04.26,Pulau Papua,418.6,418.2,648.0
+KHG Sungai Sepa - Sungai Kais,KHG.92.04.30,Pulau Papua,6764.4,6756.9,21650.0
+KHG Sungai Sepa - Sungai Kamamur I,KHG.92.04.28,Pulau Papua,1235.3,1234.0,1518.0
+KHG Sungai Sepa - Sungai Kamamur II,KHG.92.04.29,Pulau Papua,783.2,782.4,987.0
+KHG Sungai Sepa Beraur - Sungai Kla Bak,KHG.92.01.36,Pulau Papua,4383.8,4381.2,7848.0
+KHG Sungai Sepa Klabra - Sungai Seremuk,KHG.92.01.46,Pulau Papua,11095.8,11088.2,13099.0
+KHG Sungai Serai- Sungai Kla Sayal,KHG.92.04.06,Pulau Papua,2461.4,2459.7,3117.0
+KHG Sungai Seringga - Sungai Wami,KHG.92.06.63,Pulau Papua,0.0,0.0,23735.0
+KHG Sungai Serjin - Sungai Kais,KHG.92.04.36,Pulau Papua,345.9,345.6,2487.0
+KHG Sungai Sersebak - Sungai Duk,KHG.92.01.37,Pulau Papua,10217.5,10210.7,13046.0
+KHG Sungai Seruwinomon Gong - Sungai Olaronomon,KHG.91.09.34,Pulau Papua,3921.7,3894.5,9806.0
+KHG Sungai Setakwa - Sungai Aenomon,KHG.91.09.27,Pulau Papua,14201.5,14104.5,27027.0
+KHG Sungai Setakwa - Sungai Ipukwa,KHG.91.09.29,Pulau Papua,3284.2,3261.0,7132.0
+KHG Sungai Setakwa - Sungai Mamoa,KHG.91.09.26,Pulau Papua,5156.7,5122.5,8053.0
+KHG Sungai Sia-Sia - Sungai Merah,KHG.91.11.01,Pulau Papua,0.0,0.0,1764.0
+KHG Sungai Sirim,KHG.91.10.08,Pulau Papua,0.0,0.0,959.0
+KHG Sungai Sirim - Sungai Waskey,KHG.91.10.07,Pulau Papua,0.0,0.0,3543.0
+KHG Sungai Siriwo,KHG.91.04.13,Pulau Papua,0.0,0.0,813.0
+KHG Sungai Siriwo - Sungai Kurere,KHG.91.04.10,Pulau Papua,0.0,0.0,1542.0
+KHG Sungai Siriwo - Sungai Lemawa,KHG.91.04.11,Pulau Papua,0.0,0.0,819.0
+KHG Sungai Siriwo - Sungai Poronai,KHG.91.04.14,Pulau Papua,0.0,0.0,71489.0
+KHG Sungai Siriwo - Sungai Tobo,KHG.91.04.12,Pulau Papua,1638.5,1633.2,8942.0
+KHG Sungai Sisir Satu - Sisir Dua,KHG.92.08.30,Pulau Papua,0.0,0.0,613.0
+KHG Sungai Sofok - Sungai Safet,KHG.92.01.32,Pulau Papua,1305.7,1305.1,2326.0
+KHG Sungai Soimiangga - Sungai Epawa,KHG.91.15.15,Pulau Papua,0.0,0.0,366.0
+KHG Sungai Songawat - Sungai Serumuk,KHG.92.01.45,Pulau Papua,216.1,216.0,757.0
+KHG Sungai Songgolo - Sungai Pai,KHG.91.11.03,Pulau Papua,0.0,0.0,1928.0
+KHG Sungai Suaboor - Sungai Awoge,KHG.92.04.25,Pulau Papua,693.4,692.8,1111.0
+KHG Sungai Suaboor - Sungai Bogoremo,KHG.92.04.21,Pulau Papua,1054.6,1053.6,1585.0
+KHG Sungai Suaboor - Sungai Sedai,KHG.92.04.24,Pulau Papua,1467.9,1466.5,2119.0
+KHG Sungai Suaboor - Sungai Sepa,KHG.92.04.27,Pulau Papua,2137.7,2135.5,3548.0
+KHG Sungai Suga - Sungai Armina,KHG.92.06.45,Pulau Papua,0.0,0.0,5431.0
+KHG Sungai Sunua,KHG.92.08.16,Pulau Papua,0.0,0.0,158.0
+KHG Sungai Suruk - Sungai Mentebah,KHG.61.06.11,Pulau Kalimantan,2282.7,2282.5,3822.0
+KHG Sungai Syakarer - Sungai Manimeri,KHG.92.06.14,Pulau Papua,0.0,0.0,1447.0
+KHG Sungai Tabai - Siriwo,KHG.91.04.09,Pulau Papua,1361.9,1357.5,21052.0
+KHG Sungai Tabutabu,KHG.92.08.26,Pulau Papua,0.0,0.0,1268.0
+KHG Sungai Tabutabu - Sungai Karora,KHG.92.08.27,Pulau Papua,0.0,0.0,1703.0
+KHG Sungai Tamar - Sungai Mawesday,KHG.91.10.16,Pulau Papua,0.0,0.0,1866.0
+KHG Sungai Tamaroma - Sungai Sara,KHG.92.06.49,Pulau Papua,0.0,0.0,1240.0
+KHG Sungai Tami,KHG.91.71.02,Pulau Papua,0.0,0.0,2321.0
+KHG Sungai Tanbuayabuaya - Sungai Domaring,KHG.64.03.02,Pulau Kalimantan,642.9,642.5,1003.0
+KHG Sungai Tanggiri - Sungai Binawa,KHG.92.08.13,Pulau Papua,125.2,124.6,1951.0
+KHG Sungai Tanggiri - Sungai Fewan,KHG.92.08.06,Pulau Papua,151.7,151.0,680.0
+KHG Sungai Tanggiri - Sungai Kabasesi,KHG.92.08.07,Pulau Papua,525.4,523.1,2218.0
+KHG Sungai Tanggiri - Sungai Wulmaset,KHG.92.08.05,Pulau Papua,0.0,0.0,282.0
+KHG Sungai Tanjung Kampak - Sungai Kampak,KHG.19.05.01,Pulau Sumatera,174.4,174.2,2004.0
+KHG Sungai Tanjung Mangkubung - Sungai Gendir,KHG.19.01.01,Pulau Sumatera,324.6,324.3,729.0
+KHG Sungai Tanjung Mangkubung - Sungai Kayu Anak,KHG.19.01.02,Pulau Sumatera,0.0,0.0,1923.0
+KHG Sungai Taria - Sungai Memberamo,KHG.91.14-21.01,Pulau Papua,15261.7,15209.6,28010.0
+KHG Sungai Tariku Dua - Sungai Rouffaer,KHG.91.15.13,Pulau Papua,0.0,0.0,1719.0
+KHG Sungai Tariku Satu - Sungai Rouffaer Satu,KHG.91.20.24,Pulau Papua,0.0,0.0,4856.0
+KHG Sungai Tawari - Sungai Pasomol,KHG.92.06.34,Pulau Papua,0.0,0.0,252.0
+KHG Sungai Tayamari - Sungai Anakasi,KHG.92.06.30,Pulau Papua,0.0,0.0,1727.0
+KHG Sungai Tayan,KHG.61.03.02,Pulau Kalimantan,1243.2,1243.2,1419.0
+KHG Sungai Tayan - Sungai Muna,KHG.61.03.03,Pulau Kalimantan,2331.8,2331.8,2876.0
+KHG Sungai Tembuni - Sungai Bintuni,KHG.92.06.03,Pulau Papua,0.0,0.0,7262.0
+KHG Sungai Tembuni - Sungai Retui I,KHG.92.06.04,Pulau Papua,0.0,0.0,21792.0
+KHG Sungai Tembuni - Sungai Retui II,KHG.92.06.05,Pulau Papua,0.0,0.0,8888.0
+KHG Sungai Tembuni - Sungai Tisai I,KHG.92.06.13,Pulau Papua,0.0,0.0,170.0
+KHG Sungai Tembuni - Sungai Tisai II,KHG.92.06.06,Pulau Papua,0.0,0.0,6480.0
+KHG Sungai Tembuni - Sungai Tisai III,KHG.92.06.12,Pulau Papua,0.0,0.0,206.0
+KHG Sungai Terusan teladan,KHG.65.04.08,Pulau Kalimantan,270.7,269.8,529.0
+KHG Sungai Terusanraya - Sungai Kapuasmurung,KHG.62.03.04,Pulau Kalimantan,0.0,0.0,3473.0
+KHG Sungai Tifa - Sungai Husori,KHG.92.06.53,Pulau Papua,0.0,0.0,3312.0
+KHG Sungai Tifa - Sungai Kaitera,KHG.92.06.51,Pulau Papua,0.0,0.0,8035.0
+KHG Sungai Tina Enta - Sungai Kapare Enta,KHG.91.09.07,Pulau Papua,3807.6,3784.3,4381.0
+KHG Sungai Tisai - Sungai Murebi I,KHG.92.06.08,Pulau Papua,0.0,0.0,855.0
+KHG Sungai Tisai - Sungai Murebi II,KHG.92.06.07,Pulau Papua,0.0,0.0,411.0
+KHG Sungai Toarim - Sungai Samap,KHG.91.10-03.01,Pulau Papua,0.0,0.0,7319.0
+KHG Sungai Tobi - Sungai Ennma,KHG.92.06.42,Pulau Papua,0.0,0.0,2862.0
+KHG Sungai Tor - Sungai Bier,KHG.91.10.10,Pulau Papua,0.0,0.0,6404.0
+KHG Sungai Torpedoboot - Sungai Kasteel Timur,KHG.91.18.01,Pulau Papua,2823.1,2803.6,4833.0
+KHG Sungai Totoberi - Sungai Kali Pegi,KHG.91.04.18,Pulau Papua,0.0,0.0,10697.0
+KHG Sungai Trambo - Sungai Mawana,KHG.91.20.17,Pulau Papua,0.0,0.0,5395.0
+KHG Sungai Tramuas - Sungai Waim,KHG.91.10.04,Pulau Papua,0.0,0.0,9114.0
+KHG Sungai Treu - Sungai Doorman,KHG.91.20-14.02,Pulau Papua,3038.6,3028.8,25368.0
+KHG Sungai Ubuara - Sungai Kasira,KHG.92.06.60,Pulau Papua,0.0,0.0,3992.0
+KHG Sungai Ubuara - Sungai Sianiri Besar,KHG.92.06.58,Pulau Papua,0.0,0.0,2115.0
+KHG Sungai Udi Aifo - Sungai Buru Mappi,KHG.91.16.02,Pulau Papua,2841.6,2813.4,4116.0
+KHG Sungai Udi Edera - Sungai Samaleki Digul,KHG.91.17-16.04,Pulau Papua,35404.0,34887.0,75536.0
+KHG Sungai Ulin - Sungai Kemis,KHG.19.03.01,Pulau Sumatera,1873.8,1869.2,2794.0
+KHG Sungai Umar - Sungai Amara,KHG.91.09.01,Pulau Papua,0.0,0.0,832.0
+KHG Sungai Urere - Sungai Tambana,KHG.92.08.31,Pulau Papua,0.0,0.0,420.0
+KHG Sungai Urononi - Sungai Kirasai,KHG.92.06.24,Pulau Papua,0.0,0.0,4574.0
+KHG Sungai Urumuka Enta - Sungai Utanta Enta,KHG.91.09.03,Pulau Papua,5047.1,5017.3,5809.0
+KHG Sungai Usoa - Sungai Eroina,KHG.91.20.01,Pulau Papua,0.0,0.0,14282.0
+KHG Sungai Utanta - Sungai Kapare,KHG.91.09.05,Pulau Papua,25202.5,25050.2,44783.0
+KHG Sungai Utumbuwe - Sungai Dumas,KHG.91.18.22,Pulau Papua,583.6,579.1,2490.0
+KHG Sungai Utumbuwe - Sungai Sor,KHG.91.18.21,Pulau Papua,7495.7,7427.6,23738.0
+KHG Sungai Utumuka - Sungai Kawar,KHG.91.09.04,Pulau Papua,0.0,0.0,4058.0
+KHG Sungai Wade Kowo - Sungai Buru Bayeni,KHG.91.16.04,Pulau Papua,0.0,0.0,4940.0
+KHG Sungai Wade Nanu - Sungai Wade Assue,KHG.91.17.01,Pulau Papua,25524.0,25257.1,27561.0
+KHG Sungai Wade Passue,KHG.91.17.05,Pulau Papua,673.2,664.9,997.0
+KHG Sungai Wade Passue - Sungai Jo Dairam,KHG.91.17.03,Pulau Papua,56271.2,55673.2,57460.5
+KHG Sungai Wafun - Sungai Budidi,KHG.92.03.01,Pulau Papua,0.0,0.0,4131.0
+KHG Sungai Wagura - Sungai Beparar,KHG.92.06.40,Pulau Papua,0.0,0.0,2198.0
+KHG Sungai Wagura - Sungai Tobi,KHG.92.06.41,Pulau Papua,0.0,0.0,2224.0
+KHG Sungai Wai - Sungai Webi,KHG.92.07.01,Pulau Papua,0.0,0.0,8157.0
+KHG Sungai Wai Bo - Sungai Wai Mafu,KHG.92.05.04,Pulau Papua,341.9,341.8,546.0
+KHG Sungai Waim - Sunga Ferkame,KHG.91.10.05,Pulau Papua,0.0,0.0,15326.0
+KHG Sungai Wakamba - Sungai Warembori,KHG.91.20.19,Pulau Papua,0.0,0.0,41950.0
+KHG Sungai Wakia - Sungai Utarena Enta,KHG.91.09.02,Pulau Papua,2199.2,2185.9,3241.0
+KHG Sungai Wania - Sungai Aikwa,KHG.91.09.18,Pulau Papua,6376.4,6334.6,7519.0
+KHG Sungai Wania - Sungai Jaramaya,KHG.91.09.15,Pulau Papua,2978.0,2958.1,9807.0
+KHG Sungai Wania Enta - Sungai Aikwa Enta,KHG.91.09.17,Pulau Papua,732.3,727.7,1008.0
+KHG Sungai Wapoga - Sungai Amewa I,KHG.91.04-15.01,Pulau Papua,0.0,0.0,23331.0
+KHG Sungai Wapoga - Sungai Amewa II,KHG.91.04-15.02,Pulau Papua,0.0,0.0,11259.0
+KHG Sungai Wapoga - Sungai Dayewa,KHG.91.15.01,Pulau Papua,0.0,0.0,5789.0
+KHG Sungai Warako - Sungai Wayandi,KHG.91.20.02,Pulau Papua,0.0,0.0,1504.0
+KHG Sungai Waranggera,KHG.92.08.35,Pulau Papua,0.0,0.0,363.0
+KHG Sungai Warembori - Sungai Mamberamo,KHG.91.20.20,Pulau Papua,0.0,0.0,29000.0
+KHG Sungai Warena - Sungai Daewawa,KHG.91.27.01,Pulau Papua,0.0,0.0,1399.0
+KHG Sungai Warkesi - Sungai Irai,KHG.92.12.01,Pulau Papua,0.0,0.0,1794.0
+KHG Sungai Warsih - Sungai Sindu,KHG.92.08.15,Pulau Papua,0.0,0.0,1324.0
+KHG Sungai Wawa - Sungai Kafa,KHG.92.08.34,Pulau Papua,239.3,238.2,1266.0
+KHG Sungai Wayandi - Sungai Rorai,KHG.91.20.03,Pulau Papua,0.0,0.0,538.0
+KHG Sungai Wembi - Sungai Natamasa,KHG.92.06.37,Pulau Papua,0.0,0.0,6306.0
+KHG Sungai Weriagar - Sungai Sebyar,KHG.92.06.01,Pulau Papua,0.0,0.0,38609.0
+KHG Sungai Wilis - Sungai Beraur,KHG.92.01.39,Pulau Papua,550.3,550.1,1310.0
+KHG Sungai Wimro - Sungai Aroba,KHG.92.06.66,Pulau Papua,0.0,0.0,3990.0
+KHG Sungai Wirfatn - Sungai Repada,KHG.92.08.19,Pulau Papua,0.0,0.0,2639.0
+KHG Sungai Wiruai - Sungai Gwin,KHG.91.10.15,Pulau Papua,0.0,0.0,2114.0
+KHG Sungai Wobari - Sungai Ghaiwando,KHG.91.15.09,Pulau Papua,0.0,0.0,513.0
+KHG Sungai Wobari - Sungai Wonti,KHG.91.15.10,Pulau Papua,0.0,0.0,927.0
+KHG Sungai Wororomi - Sungai Aprege,KHG.91.04.02,Pulau Papua,0.0,0.0,1626.0
+KHG Sungai Wutoa - Sungai Rurawa,KHG.91.15.16,Pulau Papua,0.0,0.0,9332.0
+KHG Sungai Yaos Kanan - Sungai Tami,KHG.91.71.01,Pulau Papua,0.0,0.0,3396.0
+KHG Sungai Yuswar - Sungai Pemawari,KHG.91.04.17,Pulau Papua,0.0,0.0,742.0
+KHG Tanjung Raya - Sungai Songehitfun,KHG.19.01.03,Pulau Sumatera,0.0,0.0,619.0
+KHG Way Seputih,KHG.18.02.01,Pulau Sumatera,0.0,0.0,1508.0
+KHG Way Terusan,KHG.18.05.01,Pulau Sumatera,0.0,0.0,830.0
+KHG Way Wako - Way Kambas,KHG.18.07.01,Pulau Sumatera,0.0,0.0,3366.0

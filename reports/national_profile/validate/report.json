@@ -9,6 +9,10 @@
     "u_spell14": 0.5,
     "u_fire_freq": 2.0,
     "u_hotspot": 1.0,
+    "u_burn_repeat": 1.0,
+    "u_canal_primary": 0.5,
+    "u_canal_secondary": 0.3,
+    "u_canal_tertiary": 0.2,
     "u_tma": 1.0,
     "u_tma_recession": 1.0,
     "u_ipg_gap": 1.5,
@@ -18,17 +22,13 @@
     "f_reach": 2.0,
     "f_water_dist": 1.0,
     "f_lift": 1.0,
-    "f_access": 0.5,
-    "u_burn_repeat": 1.0,
-    "u_canal_primary": 0.5,
-    "u_canal_secondary": 0.3,
-    "u_canal_tertiary": 0.2
+    "f_access": 0.5
   },
   "ahp": {},
   "class_thresholds": {
     "risk": [
-      0.0007202011526540725,
-      0.14523118150603362
+      0.03783616188924274,
+      0.18021146731405543
     ],
     "feasibility": []
   },
@@ -41,75 +41,75 @@
     "u_canal_tertiary"
   ],
   "class_counts": {
-    "Fokus nasional: sedang": 159,
-    "Fokus nasional: rendah": 159,
-    "Fokus nasional: tinggi": 158
+    "Fokus nasional: rendah": 109,
+    "Fokus nasional: tinggi": 108,
+    "Fokus nasional: sedang": 108
   },
   "correlated_pairs": [
     {
       "a": "u_fire_freq",
       "b": "u_hotspot",
-      "spearman": 0.867
+      "spearman": 0.855
     },
     {
       "a": "u_fire_freq",
       "b": "u_burn_repeat",
-      "spearman": 0.841
+      "spearman": 0.839
     }
   ],
-  "_corr": "                     n_u_fire_freq  ...  n_u_canal_tertiary\nn_u_fire_freq             1.000000  ...            0.128596\nn_u_hotspot               0.866807  ...            0.091274\nn_u_burn_repeat           0.840631  ...            0.095220\nn_u_canal_primary         0.169152  ...            0.391307\nn_u_canal_secondary       0.018596  ...            0.641916\nn_u_canal_tertiary        0.128596  ...            1.000000\n\n[6 rows x 6 columns]",
+  "_corr": "                     n_u_fire_freq  ...  n_u_canal_tertiary\nn_u_fire_freq             1.000000  ...            0.198948\nn_u_hotspot               0.854642  ...            0.140096\nn_u_burn_repeat           0.838708  ...            0.162520\nn_u_canal_primary         0.191887  ...            0.380214\nn_u_canal_secondary       0.076760  ...            0.635633\nn_u_canal_tertiary        0.198948  ...            1.000000\n\n[6 rows x 6 columns]",
   "validation": {
     "v_burned_frac": {
-      "n_units": 476,
-      "positive_units": 10,
+      "n_units": 325,
+      "positive_units": 12,
       "skor_risiko": {
-        "auc": 0.9727467811158799,
-        "capture_top20pct": 0.8462291264163047,
-        "spearman": 0.7346822439997293
+        "auc": 0.9792332268370607,
+        "capture_top20pct": 0.7631387264095916,
+        "spearman": 0.6609135469300673
       },
       "skor_urgensi": {
-        "auc": 0.9727467811158799,
-        "capture_top20pct": 0.8462291264163047,
-        "spearman": 0.7346822439997293
+        "auc": 0.9792332268370607,
+        "capture_top20pct": 0.7631387264095916,
+        "spearman": 0.6609135469300673
       },
       "hanya_riwayat_kebakaran": {
-        "auc": 0.9697424892703863,
-        "capture_top20pct": 0.8855535853773221,
-        "spearman": 0.771495586976386
+        "auc": 0.9672523961661342,
+        "capture_top20pct": 0.7669394245582513,
+        "spearman": 0.699157519705894
       },
       "random_capture_expected": 0.2
     },
     "v_hotspot": {
-      "n_units": 476,
-      "positive_units": 282,
+      "n_units": 325,
+      "positive_units": 226,
       "skor_risiko": {
-        "auc": 0.956432331651678,
-        "capture_top20pct": 0.7710298087852415,
-        "spearman": 0.8289768109474454
+        "auc": 0.9153481719853401,
+        "capture_top20pct": 0.7003359816597263,
+        "spearman": 0.7500966594654894
       },
       "skor_urgensi": {
-        "auc": 0.956432331651678,
-        "capture_top20pct": 0.7710298087852415,
-        "spearman": 0.8289768109474454
+        "auc": 0.9153481719853401,
+        "capture_top20pct": 0.7003359816597263,
+        "spearman": 0.7500966594654894
       },
       "hanya_riwayat_kebakaran": {
-        "auc": 0.8819551071141332,
-        "capture_top20pct": 0.8146363194423661,
-        "spearman": 0.783637339377783
+        "auc": 0.8821846786448556,
+        "capture_top20pct": 0.689953029099213,
+        "spearman": 0.7207939305463045
       },
       "random_capture_expected": 0.2
     }
   },
   "sensitivity": {
     "runs": 300,
-    "share_units_stable_class": 0.8949579831932774,
-    "median_rank_sd": 12.014387502692973
+    "share_units_stable_class": 0.88,
+    "median_rank_sd": 13.63514209680266
   },
   "now": {
     "weight": 0.0,
-    "last_date": "2026-09-15",
-    "n_points": 167718,
-    "n_kept": 160207,
+    "last_date": "2026-10-29",
+    "n_points": 238425,
+    "n_kept": 225977,
     "months": [
       1,
       2,
@@ -119,10 +119,11 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ]
   },
-  "n_ranked": 476,
+  "n_ranked": 325,
   "n_profiled": 865,
   "mode": "validate",
   "config": {
@@ -201,7 +202,7 @@
       "top_n": 25
     },
     "tma": {
-      "path": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/../repeat-sitmat/sitmat_out/processed",
+      "path": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-sitmat/sitmat_out/processed",
       "kinds": [
         "concession"
       ],
@@ -213,20 +214,23 @@
       "min_days": 30
     },
     "peat": {
-      "extent": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/../_data/peat_extent_gfw_v20230315_z11.tif",
-      "global": "C:/Users/danyl/Documents/Github/_repeat-project/repeat-prioritisation/../_data/peat_extent_gpm2022_1km.tif",
+      "extent": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat/ppeg_lahan_gambut_2026_30m.tif",
+      "global": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gpm2022_1km.tif",
       "basis": "peat",
-      "min_peat_km2": 25
+      "min_peat_km2": 25,
+      "vector": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat/ppeg_lahan_gambut_2026.gpkg",
+      "gfw": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat_extent_gfw_v20230315_z11.tif"
     }
   },
   "inputs": {
-    "khg": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\batas_khg_indonesia.gpkg",
-    "burned": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\burnt_area_2015_2026_Indonesia.gpkg",
-    "hotspots": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\hotspot_viirs_snpp_2012_2025.gpkg",
-    "canals": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\kanal_osgm_khg_existing_Indonesia.gpkg",
-    "blocks": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg",
-    "villages": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\desa_target_pemulihan_ekosistem.gpkg",
-    "peat_depth": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\kedalaman_gambut_bbsdlp.gpkg",
-    "hotspots_now": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\repeat-prioritisation\\..\\_data\\_data_hotspot_Januari_September_2026.gpkg"
+    "khg": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\batas_khg_indonesia.gpkg",
+    "burned": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\burnt_area_2015_2026_Indonesia.gpkg",
+    "hotspots": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\hotspot_viirs_snpp_2012_2025.gpkg",
+    "canals": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\kanal_osgm_khg_existing_Indonesia.gpkg",
+    "blocks": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg",
+    "villages": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\desa_target_pemulihan_ekosistem_gambut.gpkg",
+    "dmpg": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\dpg\\dmpg_villages_sitmat.gpkg",
+    "peat_depth": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\kedalaman_gambut_bbsdlp.gpkg",
+    "hotspots_now": "C:\\Users\\danyl\\Documents\\Github\\_repeat-project\\_data\\hotspots_modis_2026.gpkg"
   }
 }

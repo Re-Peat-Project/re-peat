@@ -5,13 +5,16 @@
 
 Reads <REPEAT_WORK>/national_profile/fire_landstatus/ (area.parquet, hot.parquet, layers/summary.gpkg). Writes
   re-peat/reports/fire_landstatus/facts.json and _slides/build/fire_facts.json    every number the text and slides quote
+  re-peat/reports/fire_landstatus/charts/figdata.json                              the series every chart draws
   re-peat/reports/fire_landstatus/figures/fig_*.png                                 report style (Source Sans 3)
   _slides/img/fire_*.png                                                            slide style (Plus Jakarta Sans)
+The charts are drawn with D3 (fire_charts/charts.js) in headless Chrome (fire_charts/render.mjs, needs node); the page
+re-peat/reports/fire_landstatus/charts/charts_<style>.html shows them all, and svg_<style>/ holds each as SVG.
 One filter throughout: land inside the 2023 village boundaries; hotspots of medium and high confidence; likely static sources
 (gas flares, volcanoes) left out; VIIRS years compared over the same window, 1 January to the last 2026 date. 2026 is read
 from VIIRS (375 m, a single sensor since 2012); MODIS, the series KLH reports, is given next to it. Burned area is taken over
 2015 to 2025, because the 2026 (and 2024) burned-area maps are incomplete as delivered. Colours: the validated categorical
-palette of the dashboard, one hue against grey per comparison.
+palette of the dashboard; ramps validated as ordinal scales.
 """
 from __future__ import annotations
 
@@ -21,9 +24,6 @@ import os
 import shutil
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
@@ -144,217 +144,102 @@ def facts(a, h, meta):
     return F
 
 
-# --- style ----------------------------------------------------------------------------------------------------------------
-class Style:
-    def __init__(self, kind):
-        self.kind = kind
-        if kind == "report":
-            import sys
-            sys.path.insert(0, str(HERE))
-            import project_report_style as PS
-            PS.register_matplotlib()
-            self.font, self.out, self.prefix, self.w, self.fs = PS.SANS, REPORT_OUT / "figures", "fig_", 6.3, 8.5
-        else:
-            from matplotlib import font_manager
-            for f in sorted((SLIDES / "fonts").glob("PlusJakartaSans-*.ttf")):
-                font_manager.fontManager.addfont(str(f))
-            self.font, self.out, self.prefix, self.w, self.fs = "Plus Jakarta Sans", SLIDES / "img", "fire_", 6.0, 10
-        plt.rcParams.update({"font.family": self.font, "font.size": self.fs, "text.color": INK, "axes.edgecolor": BASE, "axes.labelcolor": INK2,
-                             "xtick.color": MUTED, "ytick.color": MUTED, "axes.titlesize": self.fs + 1, "axes.titleweight": "semibold"})
-        self.out.mkdir(parents=True, exist_ok=True)
-
-    def save(self, fig, name):
-        p = self.out / f"{self.prefix}{name}.png"
-        fig.savefig(p, dpi=220, bbox_inches="tight", facecolor="white")
-        plt.close(fig)
-        return p
+# --- chart data (drawn with D3 by fire_charts/render.mjs) ----------------------------------------------------------------
+FUN_ORDER = ["cons", "hl", "prod", "hpk", "apl", "other"]
 
 
-def clean(ax, grid="x"):
-    ax.spines[["top", "right"]].set_visible(False)
-    ax.spines[["left", "bottom"]].set_color(BASE)
-    if grid:
-        ax.grid(axis=grid, color=GRID, lw=0.6)
-    ax.set_axisbelow(True)
-    ax.tick_params(length=0)
-
-
-def fmt_n(v):
-    return f"{v / 1e6:.2f} M" if v >= 1e6 else f"{v / 1e3:.0f} k" if v >= 1e4 else f"{v:,.0f}"
-
-
-# --- figures --------------------------------------------------------------------------------------------------------------
-def fig_shares(F, S):
-    """For each class: its share of the land, of the area burned 2015-2025 and of the 2026 VIIRS hotspots (one hue against grey)."""
-    rows = [("Land", "land_pct", "land_mha", lambda v: f"{v:.1f} Mha"), (f"Burned area {PAST[0]}–{PAST[-1]}", "burned_pct", "burned_mha", lambda v: f"{v:.2f} Mha"),
-            (f"Hotspots {NOW}", "viirs26_pct", "viirs26", lambda v: f"{v / 1e3:.0f}k")]
-    fig, axes = plt.subplots(len(CLASSES), 1, figsize=(S.w, 0.95 * len(CLASSES) + 0.5), sharex=True)
-    for ax, (name, key, col) in zip(axes, CLASSES):
-        c = F["classes"][key]
-        for i, (lab, pk, ak, f) in enumerate(rows):
-            y = len(rows) - 1 - i
-            ax.barh(y, 100, color=GREY, height=0.62, alpha=0.35, lw=0)
-            ax.barh(y, c[pk], color=col, height=0.62, lw=0)
-            ax.text(-1.5, y, lab, ha="right", va="center", fontsize=S.fs - 0.5, color=INK2)
-            ax.text(c[pk] + 1.2, y, f"{c[pk]:.0f}%", ha="left", va="center", fontsize=S.fs, color=INK, fontweight="semibold")
-            ax.text(102, y, f(c[ak]), ha="left", va="center", fontsize=S.fs - 1, color=INK2)       # absolute value in its own column
-        ax.set_title(name, loc="left", fontsize=S.fs + 0.5, color=INK, pad=3, x=-0.3 if S.kind == "report" else -0.33)
-        ax.set_xlim(0, 100)
-        ax.set_yticks([])
-        ax.spines[:].set_visible(False)
-        ax.tick_params(length=0)
-    axes[-1].set_xticks([0, 25, 50, 75, 100])
-    axes[-1].set_xticklabels(["0", "25", "50", "75", "100%"])
-    fig.subplots_adjust(left=0.27, hspace=0.55)
-    return S.save(fig, "shares")
-
-
-def fig_months(F, S):
-    """VIIRS hotspots per month: 2026 against the 2015-2025 mean and the record year."""
-    fig, ax = plt.subplots(figsize=(S.w, 2.7))
-    ms = sorted(F["month26"])
-    mean = [F["month_mean_past"].get(m, 0) / 1e3 for m in ms]
-    ax.plot(ms, mean, color=MUTED, lw=2, ls=(0, (4, 2)))
-    ax.plot(ms, [F["month26"][m] / 1e3 for m in ms], color=ORANGE, lw=2.2, marker="o", ms=4.5, mfc=ORANGE, mec="white", mew=1)
-    pk = F["peak_month"]
-    ax.annotate(f"{NOW}: {F['month26'][pk] / 1e3:,.0f}k in {pd.Timestamp(NOW, pk, 1):%B}", (pk, F["month26"][pk] / 1e3), xytext=(-8, 4),
-                textcoords="offset points", ha="right", va="bottom", fontsize=S.fs - 0.5, color=INK)
-    ax.annotate(f"mean {PAST[0]}–{PAST[-1]}", (ms[-1], mean[-1]), xytext=(6, 0), textcoords="offset points", va="center", fontsize=S.fs - 1, color=INK2)
-    ax.set_xticks(ms)
-    ax.set_xticklabels([pd.Timestamp(2026, m, 1).strftime("%b") for m in ms])
-    ax.set_ylabel("VIIRS hotspots (thousand)")
-    ax.set_ylim(0)
-    clean(ax, "y")
-    return S.save(fig, "months_2026")
-
-
-def fig_years(F, S, a, h):
-    """VIIRS hotspots per year, 1 January to the 2026 end date, inside and outside concessions (2026 emphasised)."""
-    v = viirs(h, None)
-    t = v.groupby(["year", "conc"])["n"].sum().unstack(fill_value=0)
-    fig, ax = plt.subplots(figsize=(S.w, 2.6))
-    for conc, col, lab in ((False, BLUE, "No concession"), (True, ORANGE, "Concessions")):
-        ys = t.index.tolist()
-        ax.plot(ys, t[conc] / 1e3, color=col, lw=2)
-        ax.plot(ys[-1:], (t[conc] / 1e3).iloc[-1:], "o", color=col, ms=5, mec="white", mew=1)
-        ax.annotate(f"{lab}", (ys[-1], t[conc].iloc[-1] / 1e3), xytext=(7, 0), textcoords="offset points", va="center", fontsize=S.fs - 0.5, color=INK)
-    ax.set_xticks([y for y in t.index if y % 2 == 0])
-    ax.set_ylabel(f"VIIRS hotspots, 1 Jan–{pd.Timestamp(F['window_end']):%d %b} (thousand)")
-    ax.set_ylim(0)
-    clean(ax, "y")
-    return S.save(fig, "years")
-
-
-def fig_burned(F, S, a):
-    """Burned area per year inside and outside concessions; 2024 and 2026 maps incomplete (hollow markers, grey bands)."""
-    t = pd.DataFrame({y: a.groupby("conc")[f"burned_{y}_ha"].sum() for y in PAST + [NOW]}).T / 1e3
-    fig, ax = plt.subplots(figsize=(S.w, 2.6))
-    for y in (2024, NOW):
-        ax.axvspan(y - 0.45, y + 0.45, color=GRID, lw=0, zorder=0)
-        ax.text(y, 1.0, "incomplete", transform=ax.get_xaxis_transform(), ha="center", va="bottom", fontsize=S.fs - 2, color=MUTED)
-    for conc, col, lab in ((False, BLUE, "No concession"), (True, ORANGE, "Concessions")):
-        ax.plot(t.index, t[conc], color=col, lw=2, label=lab)
-    ax.legend(loc="upper center", frameon=False, fontsize=S.fs - 1, ncol=2)
-    ax.set_xticks([y for y in t.index if y % 2 == 1])
-    ax.set_ylabel("Burned area (thousand ha)")
-    ax.set_ylim(0)
-    clean(ax, "y")
-    return S.save(fig, "burned_years")
-
-
-def fig_rates(F, S):
-    """VIIRS hotspots 2026 per 100 km2 by class, ranked within each group, with the national rate."""
-    R = pd.DataFrame(F["rates"]).dropna(subset=["rate"])
-    groups = list(dict.fromkeys(R["group"]))
-    fig, ax = plt.subplots(figsize=(S.w, 0.27 * (len(R) + 2 * len(groups)) + 0.4))
-    y, ticks, labels = 0, [], []
-    for g in groups:
-        sub = R[R["group"] == g].sort_values("rate")
-        for _, r in sub.iterrows():
-            ax.barh(y, r["rate"], color=ORANGE, height=0.66, lw=0)
-            ax.text(r["rate"] + 0.6, y, f"{r['rate']:.0f}", va="center", fontsize=S.fs - 1, color=INK)
-            ticks.append(y); labels.append(r["label"])
-            y += 1
-        ax.text(0, y + 0.1, g, fontsize=S.fs - 0.5, color=INK2, fontweight="semibold", va="bottom", zorder=5,
-                bbox=dict(boxstyle="square,pad=0.1", fc="white", ec="none"))
-        y += 1.6
-    ax.axvline(F["rate26"], color=INK, lw=1, ls=(0, (3, 2)))
-    ax.annotate(f"Indonesia, all land: {F['rate26']:.0f}", (F["rate26"], -1.1), xytext=(4, 0), textcoords="offset points",
-                fontsize=S.fs - 1, color=INK, va="center")
-    ax.set_ylim(-1.7, y - 0.4)
-    ax.set_yticks(ticks)
-    ax.set_yticklabels(labels, fontsize=S.fs - 0.5)
-    ax.set_xlabel(f"VIIRS hotspots {NOW} per 100 km²")
-    clean(ax, "x")
-    return S.save(fig, "rates")
-
-
-def fig_map(F, S):
-    """Province choropleth of 2026 VIIRS hotspots per 100 km2 (classed, one hue). Outlines simplified in memory for drawing only."""
+def figdata(F, a, h):
+    """Every series the charts draw, as plain JSON (the same filters as the facts)."""
+    v26 = viirs(h)
+    vall = viirs(h, None)
+    D = {"facts": F, "now": NOW, "past": [PAST[0], PAST[-1]]}
+    t = vall.groupby(["year", "conc"])["n"].sum().unstack(fill_value=0)
+    D["years"] = [{"year": int(y), "conc": int(r[True]), "out": int(r[False])} for y, r in t.iterrows()]
+    b = pd.DataFrame({y: a.groupby("conc")[f"burned_{y}_ha"].sum() for y in PAST + [NOW]}).T
+    D["burned"] = [{"year": int(y), "conc": float(r[True]), "out": float(r[False])} for y, r in b.iterrows()]
+    # mosaic: forest group x concession, all land and peat
+    D["mosaic"] = []
+    for basis, pa, pv in (("all", a, v26), ("peat", a[a["peat_"]], v26[v26["peat_"]])):
+        ga = pa.groupby(["forest_group", "conc"])["area_ha"].sum()
+        gn = pv.groupby(["forest_group", "conc"])["n"].sum()
+        for (g, c), ar in ga.items():
+            D["mosaic"].append({"basis": basis, "group": g, "conc": bool(c), "area_ha": float(ar), "n": int(gn.get((g, c), 0))})
+    # treemap and sunburst: concession type -> forest function
+    fa = a.assign(fun=a["forest_class"].where(a["forest_class"].isin(FUN_ORDER), "other"))
+    fv = v26.assign(fun=v26["forest_class"].where(v26["forest_class"].isin(FUN_ORDER), "other"))
+    ar = fa.groupby(["concession", "fun"])["area_ha"].sum()
+    nn = fv.groupby(["concession", "fun"])["n"].sum()
+    D["hier"] = [{"type": k, "fun": f, "area_ha": float(v), "n": int(nn.get((k, f), 0))} for (k, f), v in ar.items()]
+    # alluvial: burned area 2015-2025 (sum of yearly areas), forest group -> concession type -> peat
+    d = a.assign(p=np.where(a["peat"] == 1, "peat", np.where(a["peat"] == 0, "nopeat", "unknown")))
+    D["flows"] = ([{"step": 0, "s": g, "t": c, "v": float(x)} for (g, c), x in d.groupby(["forest_group", "concession"])["burned_past"].sum().items() if x > 0]
+                  + [{"step": 1, "s": c, "t": p, "v": float(x)} for (c, p), x in d.groupby(["concession", "p"])["burned_past"].sum().items() if x > 0])
+    # heatmap: province x year, VIIRS hotspots per 100 km2 of land over the shared window
+    land = a.groupby(["island", "province"])["area_ha"].sum()
+    hn = vall.groupby(["island", "province", "year"])["n"].sum()
+    D["heat"] = [{"island": i, "province": p, "year": int(y), "rate": float(n / land[(i, p)] * 1e4)} for (i, p, y), n in hn.items()
+                 if (i, p) in land.index and not i.startswith("Outside")]
+    D["heat_land"] = [{"island": i, "province": p} for (i, p) in land.index if not i.startswith("Outside")]
+    # KHG bubbles
+    t = pd.read_csv(SRC / "tables" / "t_khg.csv")
+    t = t[t["basis"] == "all"]
+    g = t.groupby("khg_id")[["area_ha", "viirs_2026_n"]].sum()
+    g["conc"] = t[t["concession_any"]].groupby("khg_id")["viirs_2026_n"].sum()
+    g = g.fillna(0)
+    g = g[g["viirs_2026_n"] > 0]
+    reg = pd.read_csv(WORKSPACE / "re-peat" / "sites" / "khg_registry.csv")
+    names = dict(zip(reg["khg_code"], reg["name"].str.replace("KHG ", "", regex=False).str.replace("Sungai ", "", regex=False)))
+    D["khg"] = [{"id": k, "name": names.get(k, k), "km2": float(r["area_ha"] / 100), "n": int(r["viirs_2026_n"]),
+                 "rate": float(r["viirs_2026_n"] / r["area_ha"] * 1e4), "conc_pct": float(100 * r["conc"] / r["viirs_2026_n"])} for k, r in g.iterrows()]
+    # times burned (burn years 2015-2026) by concession x forest group and by DMPG village, all land
+    tb = pd.read_csv(SRC / "tables" / "t_times_burned.csv")
+    tb = tb[tb["basis"] == "all"]
+    hc = ["unburned_ha", "burned_1x_ha", "burned_2x_ha", "burned_3x_ha", "burned_4plus_ha"]
+    D["times"] = []
+    for (c, g), r in tb[tb["forest_group"] != "other"].groupby(["concession_any", "forest_group"])[hc].sum().iterrows():
+        D["times"].append({"set": "conc", "conc": bool(c), "group": g, "ha": [float(v) for v in r]})
+    for d, r in tb.groupby("dmpg")[hc].sum().iterrows():
+        D["times"].append({"set": "dmpg", "dmpg": bool(d), "ha": [float(v) for v in r]})
+    D["times_total"] = [float(v) for v in tb[hc].sum()]
+    # KLH priority area (repeat-national-ppeg) and who covers it (re-peat/tools/ppeg_roles.py)
+    pdir, rdir = SRC.parent / "ppeg", WORKSPACE / "re-peat" / "reports" / "ppeg_roles"
+    if (pdir / "ppeg_khg.csv").exists() and (rdir / "roles_actor.csv").exists():
+        pk = pd.read_csv(pdir / "ppeg_khg.csv")
+        pn = pd.read_csv(pdir / "ppeg_national.csv", index_col=0)["value"]
+        both = pk["in_target_villages"] & pk["has_skeg_damage"]
+        D["prio"] = {"khg_both": int(both.sum()), "khg_villages_only": int((pk["in_target_villages"] & ~pk["has_skeg_damage"]).sum()),
+                     "khg_skeg_only": int((pk["has_skeg_damage"] & ~pk["in_target_villages"]).sum()),
+                     "ha_in_villages": float(pn["priority_in_target_villages_ha"]), "ha": float(pn["priority_ha"]),
+                     "damage": [float(pn[f"priority_{k}_ha"]) for k in ("ringan", "sedang", "berat", "sangat_berat")],
+                     "dome": float(pn["priority_dome_ha"]), "thick3m": float(pn["priority_thick3m_ha"])}
+        top = pk[pk["has_skeg_damage"]].nlargest(20, "priority_ha")
+        D["prio_khg"] = [{"name": n.removeprefix("KHG ").replace("Sungai ", ""), "ha": float(h), "dome": float(dm), "villages": bool(v)}
+                         for n, h, dm, v in zip(top["khg_name"], top["priority_ha"], top["priority_dome_ha"], top["in_target_villages"])]
+        ra = pd.read_csv(rdir / "roles_actor.csv")
+        D["actors"] = ra.drop(columns=["share"]).to_dict("records")
+        rp = pd.read_csv(rdir / "roles_province.csv", index_col=0)
+        D["actor_prov"] = [{"province": p, "v": [float(x) for x in r.drop("total")], "total": float(r["total"])} for p, r in rp.head(12).iterrows()]
+    # provinces for the map: outlines simplified for drawing only (the analysis uses the full geometry)
     import geopandas as gpd
-    g = gpd.read_file(SRC / "layers" / "summary.gpkg", layer="province", columns=["province"])
-    g["geometry"] = g.geometry.simplify(0.02)
-    r = pd.DataFrame(F["provinces"]).set_index("province")["rate"]
-    g["rate"] = g["province"].map(r).fillna(0)
-    br = [5, 15, 40, 80]
-    g["cls"] = np.digitize(g["rate"], br)
-    fig, ax = plt.subplots(figsize=(S.w * 1.25, S.w * 0.5))
-    for k in range(len(SEQ)):
-        sub = g[g["cls"] == k]
-        if len(sub):
-            sub.plot(ax=ax, color=SEQ[k], edgecolor="white", linewidth=0.4)
-    ax.set_axis_off()
-    labs = [f"< {br[0]}"] + [f"{br[i]}–{br[i + 1]}" for i in range(len(br) - 1)] + [f"≥ {br[-1]}"]
-    from matplotlib.patches import Patch
-    ax.legend([Patch(color=c) for c in SEQ], labs, title=f"VIIRS hotspots {NOW}\nper 100 km²", loc="upper left", bbox_to_anchor=(1.0, 1.0), frameon=False,
-              fontsize=S.fs - 1.5, title_fontsize=S.fs - 1, ncol=1, handlelength=1.2, alignment="left")
-    # the four highest rates, labelled off the land with a leader line (offsets in degrees: up for Kalimantan, down elsewhere)
-    for _, row in g.sort_values("rate", ascending=False).head(4).iterrows():
-        c = row.geometry.representative_point()
-        up = "Kalimantan" in row["province"] and "Selatan" not in row["province"]
-        tx, ty = (c.x - 3, 5.5) if up else (c.x + (2 if c.x > 120 else -2), -9.5)
-        ax.annotate(f"{row['province']} {row['rate']:.0f}", (c.x, c.y), xytext=(tx, ty), fontsize=S.fs - 2, color=INK, ha="center",
-                    va="bottom" if up else "top", arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.6))
-    ax.set_ylim(-11.5, 7)
-    return S.save(fig, "map_2026")
+    import shapely
+    pg = gpd.read_file(SRC / "layers" / "summary.gpkg", layer="province", columns=["province"])
+    pg["geometry"] = shapely.set_precision(pg.geometry.simplify(0.01), 0.001)
+    D["provinces_geo"] = json.loads(pg.to_json(drop_id=True))
+    return D
 
 
-def fig_provinces(F, S, n=10):
-    """The provinces with the most 2026 VIIRS hotspots, split inside and outside concessions."""
-    P = pd.DataFrame(F["provinces"]).head(n).iloc[::-1]
-    conc = P["viirs26"] * P["conc_pct"].fillna(0) / 100
-    narrow = S.kind == "slides"                       # the slide puts it beside the map: narrower and taller, short labels
-    fig, ax = plt.subplots(figsize=(4.4, 0.42 * n + 0.8) if narrow else (S.w, 0.3 * n + 0.6))
-    y = np.arange(len(P))
-    ax.barh(y, conc / 1e3, color=ORANGE, height=0.66, lw=0, label="In concessions")
-    ax.barh(y, (P["viirs26"] - conc) / 1e3, left=conc / 1e3 + P["viirs26"].max() / 1e3 * 0.004, color=BLUE, height=0.66, lw=0, label="Outside concessions")
-    for yi, tot, pcc in zip(y, P["viirs26"], P["conc_pct"]):
-        ax.text(tot / 1e3 * 1.01 + 0.5, yi, f"{tot / 1e3:,.0f}k · {pcc:.0f}%" if narrow else f"{tot / 1e3:,.0f}k · {pcc:.0f}% in concessions",
-                va="center", fontsize=S.fs - 1.5, color=INK2)
-    ax.set_yticks(y)
-    ax.set_yticklabels(P["province"], fontsize=S.fs - 0.5)
-    ax.set_xlabel(f"VIIRS hotspots {NOW} (thousand)")
-    ax.legend(loc="lower right", frameon=False, fontsize=S.fs - 1.5, title="% = share in concessions" if narrow else None, title_fontsize=S.fs - 2)
-    ax.set_xlim(0, P["viirs26"].max() / 1e3 * (1.3 if narrow else 1.45))
-    clean(ax, "x")
-    return S.save(fig, "provinces")
-
-
-def fig_dmpg(F, S):
-    """Dumbbell: 2026 VIIRS hotspots per 100 km2 of peat in DMPG villages and on other peat, per province."""
-    D = pd.DataFrame(F["dmpg_by_province"])
-    fig, ax = plt.subplots(figsize=(S.w, 0.32 * len(D) + 0.7))
-    y = np.arange(len(D))
-    for yi, (_, r) in zip(y, D.iterrows()):
-        ax.plot([r["other_rate"], r["dmpg_rate"]], [yi, yi], color=GREY, lw=2, zorder=1)
-    ax.scatter(D["other_rate"], y, s=46, color=BLUE, zorder=2, label="Other peat", edgecolor="white", linewidth=1)
-    ax.scatter(D["dmpg_rate"], y, s=46, color=MAGENTA, zorder=3, label="DMPG village peat", edgecolor="white", linewidth=1)
-    ax.set_yticks(y)
-    ax.set_yticklabels(D["province"], fontsize=S.fs - 0.5)
-    ax.set_xlabel(f"VIIRS hotspots {NOW} per 100 km² of peat")
-    ax.legend(loc="lower right", frameon=False, fontsize=S.fs - 1)
-    clean(ax, "x")
-    return S.save(fig, "dmpg")
+def render(D, style):
+    """Draw every chart with D3 in headless Chrome (fire_charts/render.mjs): PNG and SVG per chart."""
+    import subprocess
+    data = REPORT_OUT / "charts" / "figdata.json"
+    data.parent.mkdir(parents=True, exist_ok=True)
+    data.write_text(json.dumps(D, default=float), encoding="utf-8")
+    out, prefix = (REPORT_OUT / "figures", "fig_") if style == "report" else (SLIDES / "img", "fire_")
+    r = subprocess.run(["node", str(HERE / "fire_charts" / "render.mjs"), "--data", str(data), "--style", style, "--out", str(out), "--prefix", prefix],
+                       capture_output=True, text=True, timeout=600)
+    if r.returncode:
+        raise RuntimeError(r.stderr or r.stdout)
+    return {line.split("\t")[0]: Path(line.split("\t")[1]) for line in r.stdout.splitlines() if "\t" in line}
 
 
 def build(style):
@@ -364,12 +249,8 @@ def build(style):
     (REPORT_OUT / "facts.json").write_text(json.dumps(F, indent=1, default=float), encoding="utf-8")
     (SLIDES / "build").mkdir(exist_ok=True)
     shutil.copyfile(REPORT_OUT / "facts.json", SLIDES / "build" / "fire_facts.json")
-    out = {}
-    for kind in (["report", "slides"] if style == "both" else [style]):
-        S = Style(kind)
-        out[kind] = {"shares": fig_shares(F, S), "months": fig_months(F, S), "years": fig_years(F, S, a, h), "burned": fig_burned(F, S, a),
-                     "rates": fig_rates(F, S), "map": fig_map(F, S), "provinces": fig_provinces(F, S), "dmpg": fig_dmpg(F, S)}
-    return F, out
+    D = figdata(F, a, h)
+    return F, {kind: render(D, kind) for kind in (["report", "slides"] if style == "both" else [style])}
 
 
 if __name__ == "__main__":
