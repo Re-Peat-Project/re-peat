@@ -2,7 +2,7 @@
 
 This report sets out where Indonesia's burned area of 2015 to 2025 and its hotspots of 2026 fall with respect to business licences (concessions), the forest area (*kawasan hutan*), the villages of the Desa Mandiri Peduli Gambut programme (DMPG) and peat. It covers all land inside the 2023 village boundaries, 189.1 million ha. The figures say where fires were observed. They do not show the cause of a fire or who is responsible for it. The last chapters set out KLH's priority area for peat restoration, who covers which part of it and the roles of the ministries.
 
-![Share of the land, of the burned area 2015 to 2025 and of the 2026 VIIRS hotspots inside concessions, forest area, DMPG villages and peat; absolute values on the right. Source: KLHK burned area, NASA FIRMS VIIRS, licences 2025, forest area 2023, SiTMAT DMPG villages, KLH peat (PPEG 2026).](re-peat/reports/fire_landstatus/figures/fig_shares.png)
+![Left: each class's share of Indonesia's land (hollow dot), of the burned area 2015 to 2025 and of the 2026 VIIRS hotspots. Right: VIIRS hotspots of 2026 per 100 km² inside the class and on the rest of the land. Source: KLHK burned area, NASA FIRMS VIIRS, licences 2025, forest area 2023, SiTMAT DMPG villages, KLH peat (PPEG 2026).](re-peat/reports/fire_landstatus/figures/fig_shares.png)
 
 - VIIRS recorded 572,701 hotspots on land from 1 January to 31 October 2026, 3.2 times the mean of 2015 to 2025 over the same months and the second highest since 2012, after 2015 (765,124). MODIS, the series KLH reports, recorded 199,069 to 29 October 2026.
 - Concessions hold 22% of the land, 20% of the area burned in 2015 to 2025 (1.53 of 7.75 million ha) and 26% of the 2026 hotspots (150,715). They had 36 hotspots per 100 km² in 2026, against 29 outside them.

@@ -77,30 +77,46 @@
     g.append('circle').attr('cx', x(e[0])).attr('cy', y(e[1])).attr('r', 4).attr('fill', col).attr('stroke', '#fff').attr('stroke-width', 2)
   }
 
-  // ---- 1 shares: land, burned area, hotspots inside each class ----
+  // ---- 1 shares: does each class carry more fire than its share of the land? ----
   {
-    const [w, h] = size(620, 410, 760, 540)
-    const svg = chart('shares', 'share of land, burned area and 2026 hotspots by class', w, h)
-    const cls = [['Concessions', 'conc', C.orange], ['Forest area', 'kawasan', C.green], ['DMPG villages', 'dmpg', C.magenta], ['Peat (where mapped)', 'peat', C.violet]]
-    const rows = [['Land', 'land_pct', 'land_mha', (v) => `${v.toFixed(1)} Mha`], [`Burned area ${PAST[0]}–${PAST[1]}`, 'burned_pct', 'burned_mha', (v) => `${v.toFixed(2)} Mha`],
-      [`Hotspots ${NOW}`, 'viirs26_pct', 'viirs26', kfmt]]
-    const L = R ? 150 : 200, Rt = R ? 72 : 92
-    const x = d3.scaleLinear([0, 100], [L, w - Rt])
-    const ph = (h - 30) / cls.length, bh = R ? 11 : 15
-    cls.forEach(([name, key, col], i) => {
-      const c = F.classes[key], y0 = i * ph + 6
-      txt(svg, 8, y0 + fs * 0.55, name, { size: fs, weight: 600 })
-      rows.forEach(([lab, pk, ak, f], j) => {
-        const y = y0 + fs * 1.3 + j * (bh + 5)
-        svg.append('rect').attr('x', x(0)).attr('y', y).attr('width', x(100) - x(0)).attr('height', bh).attr('fill', C.track).attr('rx', 2)
-        hbar(svg, x(0), y, x(c[pk]) - x(0), bh, col)
-        txt(svg, x(0) - 6, y + bh / 2, lab, { anchor: 'end', size: fsT, fill: C.ink2 })
-        txt(svg, x(c[pk]) + 4, y + bh / 2, `${Math.round(c[pk])}%`, { size: fsS, weight: 600 })
-        txt(svg, w - Rt + 8, y + bh / 2, f(c[ak]), { size: fsT, fill: C.ink2 })
-      })
+    const [w, h] = size(640, 300, 880, 430)
+    const svg = chart('shares', 'share of the land against share of the fire, and hotspot density inside each class against the rest of the land', w, h)
+    const M = [['land_pct', 'share of the land', C.muted], ['burned_pct', `burned area ${PAST[0]}–${PAST[1]}`, C.blue], ['viirs26_pct', `hotspots ${NOW}`, C.orange]]
+    const cls = [['dmpg', 'DMPG villages'], ['peat', 'Peat'], ['conc', 'Concessions'], ['kawasan', 'Forest area']]
+      .map(([k, n]) => ({ k, n, c: F.classes[k] })).sort((a, b) => b.c.rate26 / b.c.rate26_outside - a.c.rate26 / a.c.rate26_outside)
+    const L = R ? 120 : 170, top = R ? 80 : 112, rh = (h - top - (R ? 26 : 34)) / cls.length
+    const xa = d3.scaleLinear([0, 70], [L, L + (w - L) * 0.47]), xb = d3.scaleLinear([0, 200], [xa(70) + (R ? 70 : 96), w - (R ? 86 : 118)])
+    txt(svg, L, 10, 'Share of Indonesia\'s total (%)', { weight: 600, size: fsS })
+    txt(svg, xb(0), 10, `Hotspots ${NOW} per 100 km²`, { weight: 600, size: fsS })
+    let lx = L
+    M.forEach(([, lab, col], i) => {
+      if (i === 0) svg.append('circle').attr('cx', lx + 5).attr('cy', 32).attr('r', 5).attr('fill', '#fff').attr('stroke', col).attr('stroke-width', 2)
+      else svg.append('circle').attr('cx', lx + 5).attr('cy', 32).attr('r', 5).attr('fill', col)
+      const t = txt(svg, lx + 14, 32, lab, { size: fsT, fill: C.ink2 }); lx += 14 + tw(t) + 14
     })
-    const ax = svg.append('g').attr('transform', `translate(0,${h - 20})`).call(d3.axisBottom(x).tickValues([0, 25, 50, 75, 100]).tickFormat((d) => `${d}%`).tickSize(0))
-    axis(ax).select('.domain').remove()
+    for (const v of [0, 20, 40, 60]) { svg.append('line').attr('x1', xa(v)).attr('x2', xa(v)).attr('y1', top - 10).attr('y2', top + cls.length * rh - 6).attr('stroke', C.grid); txt(svg, xa(v), top + cls.length * rh + 6, `${v}%`, { anchor: 'middle', size: fsT, fill: C.muted }) }
+    for (const v of [0, 50, 100, 150, 200]) { svg.append('line').attr('x1', xb(v)).attr('x2', xb(v)).attr('y1', top - 10).attr('y2', top + cls.length * rh - 6).attr('stroke', C.grid); txt(svg, xb(v), top + cls.length * rh + 6, v, { anchor: 'middle', size: fsT, fill: C.muted }) }
+    let lx2 = xb(0)
+    ;[['inside the class', C.orange], ['rest of the land', C.base]].forEach(([lab, col]) => { svg.append('rect').attr('x', lx2).attr('y', (R ? 50 : 66) - 5).attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', col); const t = txt(svg, lx2 + 14, R ? 50 : 66, lab, { size: fsT, fill: C.ink2 }); lx2 += 14 + tw(t) + 14 })
+    cls.forEach(({ n, c }, i) => {
+      const y = top + i * rh + rh * 0.35
+      txt(svg, L - 12, y - fs * 0.35, n, { anchor: 'end', weight: 600 })
+      txt(svg, L - 12, y + fs * 0.75, `${c.land_mha.toFixed(1)} Mha`, { anchor: 'end', size: fsT, fill: C.muted })
+      const hi = Math.max(c.burned_pct, c.viirs26_pct), lo = Math.min(c.land_pct, c.burned_pct)
+      svg.append('line').attr('x1', xa(lo)).attr('x2', xa(hi)).attr('y1', y).attr('y2', y).attr('stroke', C.base).attr('stroke-width', 2)
+      svg.append('circle').attr('cx', xa(c.land_pct)).attr('cy', y).attr('r', R ? 6 : 8).attr('fill', '#fff').attr('stroke', C.muted).attr('stroke-width', 2)
+      svg.append('circle').attr('cx', xa(c.burned_pct)).attr('cy', y).attr('r', R ? 6 : 8).attr('fill', C.blue).attr('stroke', '#fff').attr('stroke-width', 1.5)
+      svg.append('circle').attr('cx', xa(c.viirs26_pct)).attr('cy', y).attr('r', R ? 6 : 8).attr('fill', C.orange).attr('stroke', '#fff').attr('stroke-width', 1.5)
+      txt(svg, xa(c.land_pct), y + (R ? 15 : 21), `${Math.round(c.land_pct)}%`, { anchor: 'middle', size: fsT, fill: C.muted, halo: true })
+      const right = Math.max(c.land_pct, c.burned_pct, c.viirs26_pct)
+      txt(svg, xa(right) + (R ? 11 : 14), y, `${Math.round(c.burned_pct)}% · ${Math.round(c.viirs26_pct)}%`, { size: fsT, fill: C.ink2, halo: true })
+      const bh = R ? 7 : 10
+      ;[[c.rate26, C.orange, -bh - 1], [c.rate26_outside, C.base, 1]].forEach(([r, col, dy]) => {
+        hbar(svg, xb(0), y + dy, xb(r) - xb(0), bh, col)
+        txt(svg, xb(r) + 5, y + dy + bh / 2, Math.round(r), { size: fsT, fill: C.ink2 })
+      })
+      txt(svg, w - 4, y, `${(c.rate26 / c.rate26_outside).toFixed(1)}× the rest`, { anchor: 'end', size: fsS, weight: 600, fill: c.rate26 / c.rate26_outside >= 2 ? C.ink : C.ink2 })
+    })
   }
 
   // ---- 2 months: 2026 against the 2015-2025 mean ----
