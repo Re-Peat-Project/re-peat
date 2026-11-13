@@ -102,6 +102,7 @@ def facts(a, h, meta):
     mon = m.groupby(["year", "month"])["n"].sum().unstack(fill_value=0)
     F["month26"] = {int(k): int(v) for k, v in mon.loc[NOW].items()}
     F["month_mean_past"] = {int(k): float(v) for k, v in mon.loc[PAST].mean().items()}
+    F["month2015"] = {int(k): int(v) for k, v in mon.loc[2015].items()}   # the year with the most hotspots, for context
     F["peak_month"] = int(mon.loc[NOW].idxmax())
     # provinces, VIIRS 2026
     pr = a.groupby("province")["area_ha"].sum()

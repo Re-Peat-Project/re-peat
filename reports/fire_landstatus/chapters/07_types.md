@@ -1,6 +1,6 @@
 # 7 Concession types
 
-![VIIRS hotspots of 2026 by concession type (inner ring) and the forest area function inside each type (outer ring). Source: this analysis.](re-peat/reports/fire_landstatus/figures/fig_sunburst.png)
+![VIIRS hotspots of 2026 by concession type: number and share (left), hotspots per 100 km² of the type against all land (middle), and the forest area function of the hotspots inside each type (right). Source: this analysis.](re-peat/reports/fire_landstatus/figures/fig_types.png)
 
 Most 2026 hotspots lie outside any concession (74%). Of those inside one, most are in forest concessions (PBPH, 17% of all hotspots) and oil palm (6%).
 

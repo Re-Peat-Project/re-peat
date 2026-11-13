@@ -311,7 +311,7 @@ This report sets out where Indonesia's burned area of 2015 to 2025 and its hotsp
 
 VIIRS gives the 2026 figures in this report. It sees fires at 375 m against 1 km for MODIS, and one sensor (S-NPP) has recorded Indonesia since 2012, so 2026 can be set against earlier years over the same months. MODIS is the series KLH reports; its 2026 total is given beside each VIIRS figure where it matters. The 2026 VIIRS record runs to {vend}: January to July from the standard product, August to October from the near-real-time product. November and December are not yet in it.
 
-![VIIRS hotspots per month in 2026 against the mean of 2015 to 2025. Medium and high confidence, likely gas flares and volcanoes left out. Source: NASA FIRMS VIIRS S-NPP.]({figs['months_2026']})
+![VIIRS hotspots per month in 2026, in 2015 (the year with the most hotspots) and the mean of 2015 to 2025. Medium and high confidence, likely gas flares and volcanoes left out. Source: NASA FIRMS VIIRS S-NPP.]({figs['months_2026']})
 
 Hotspots stayed near the usual level until June. From July they rose far above it: {n0(FX['month26'][str(pk)] if str(pk) in FX['month26'] else FX['month26'][pk])} in {pd.Timestamp(2026, pk, 1):%B}, against a mean of {n0(FX['month_mean_past'][str(pk)] if str(pk) in FX['month_mean_past'] else FX['month_mean_past'][pk])} for that month in 2015 to 2025. Over 1 January to {vend}, VIIRS counts {n0(FX['viirs26'])} hotspots, {FX['viirs26_ratio']:.1f} times the mean of 2015 to 2025; {'no year since 2012 had more' if FX['viirs_rank_since_2012'] == 1 else 'only ' + str(FX['viirs_max_year']) + ' had more' if FX['viirs_rank_since_2012'] == 2 else str(FX['viirs_rank_since_2012'] - 1) + ' years had more'} over the same months.
 
@@ -404,6 +404,8 @@ Burned-area shares in this report are taken over 2015 to 2025, which includes th
     annex.append(("Peat", md_table("Peat, burned peat and hotspots on peat by concession and forest area; shares are of the peat. Source: this analysis.", h, r)))
     C["06_national"] = f"""# 6 Concessions and forest area
 
+![Share inside concessions: of the land, of the burned area 2015 to 2025 and of the 2026 VIIRS hotspots. Source: KLHK burned area, NASA FIRMS VIIRS, licences 2025.]({figs['conc_donuts']})
+
 ![Land by forest area (column width) and concession (height), coloured by VIIRS hotspots of 2026 per 100 km², for all land and for peat. Source: this analysis.]({figs['mosaic']})
 
 On all land, 2026 hotspots per 100 km² range from {cell_txt(ca, *lo_a)} to {cell_txt(ca, *hi_a)}. On peat it is higher in every combination{' than in any combination on all land' if min(cp.values()) > max(ca.values()) else ''}: from {cell_txt(cp, *lo_p)} to {cell_txt(cp, *hi_p)}.
@@ -422,7 +424,7 @@ Table A.1 in the annex gives the values, and Table A.2 those for peat.
     ctv = ct.set_index("concession")["viirs_2026_n"]
     C["07_types"] = f"""# 7 Concession types
 
-![VIIRS hotspots of 2026 by concession type (inner ring) and the forest area function inside each type (outer ring). Source: this analysis.]({figs['sunburst']})
+![VIIRS hotspots of 2026 by concession type: number and share (left), hotspots per 100 km² of the type against all land (middle), and the forest area function of the hotspots inside each type (right). Source: this analysis.]({figs['types']})
 
 Most 2026 hotspots lie outside any concession ({100 * ctv.get('none', 0) / ctv.sum():.0f}%). Of those inside one, most are in forest concessions (PBPH, {100 * ctv.get('pbph', 0) / ctv.sum():.0f}% of all hotspots) and oil palm ({100 * ctv.get('sawit', 0) / ctv.sum():.0f}%).
 
@@ -534,7 +536,7 @@ Tables A.8 to B.10 give the values by island, province and KHG.
 """
     C["11_peat"] = f"""# 12 Peat
 
-Peat is KLH's peat land map of the integrated thematic analysis for peat ecosystem restoration (April 2026), the map KLH's restoration targets are set on. A cell counts as peat when its centre lies in a peat polygon. The right panel of Figure 6.1 shows peat by concession and forest area, and Table A.2 gives the values.
+Peat is KLH's peat land map of the integrated thematic analysis for peat ecosystem restoration (April 2026), the map KLH's restoration targets are set on. A cell counts as peat when its centre lies in a peat polygon. The right panel of Figure 6.2 shows peat by concession and forest area, and Table A.2 gives the values.
 """
     A_ = N["pr_actors"]
     lic_share = (A_[0]["ha"] + A_[1]["ha"]) / N["pr_ha"]
