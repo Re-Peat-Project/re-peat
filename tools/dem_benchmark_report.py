@@ -2,6 +2,8 @@
 
     python tools/dem_benchmark_report.py
 
+Also reads 03_metrics/height_difference_ci*.csv (script/dem_benchmark_ci.py), 10_canopy/ (dem_benchmark_canopy.py) and
+09_profiles/ (dem_benchmark_profile.py, Mendahara) when they exist.
 Reads the prose from reports/dem_benchmark/report_text.md ({name} placeholders are filled from the results; [[kind:name]]
 markers are replaced by tables, charts and maps), the metrics in _khg/<code>_<name>/01_dem/benchmark/03_metrics/ and
 05_pipeline/, the error maps in 02_error_maps/, and the benchmark configs in ../repeat-dem/benchmark/. Writes
@@ -42,7 +44,7 @@ OUT = HUB / "reports" / "dem_benchmark"
 DATA = Path(os.environ.get("REPEAT_DATA") or WS / "_data")
 SITES = {"mendahara": "Mendahara", "sugihan_lumpur": "Sugihan-Lumpur"}
 CANDS = ["deltadtm", "klhk_modelled", "demnas", "fabdem", "glo30", "gedtm30"]
-LABEL = {"deltadtm": "DeltaDTM v1.1", "klhk_modelled": "KLHK modelled DTM", "demnas": "DEMNAS", "fabdem": "FABDEM v1.2", "glo30": "Copernicus GLO-30", "gedtm30": "GEDTM30 v1.1"}
+LABEL = {"gem15": "GEM-15 v1 DTM", "deltadtm": "DeltaDTM v1.1", "klhk_modelled": "KLHK modelled DTM", "demnas": "DEMNAS", "fabdem": "FABDEM v1.2", "glo30": "Copernicus GLO-30", "gedtm30": "GEDTM30 v1.1"}
 COLOR_L = {"deltadtm": "#2a78d6", "klhk_modelled": "#eb6834", "demnas": "#1baf7a", "fabdem": "#eda100", "glo30": "#e87ba4", "gedtm30": "#008300"}
 COLOR_D = {"deltadtm": "#3987e5", "klhk_modelled": "#d95926", "demnas": "#199e70", "fabdem": "#c98500", "glo30": "#d55181", "gedtm30": "#008300"}
 WC_SHOW = ["tree cover", "shrubland", "grassland", "cropland", "mangroves"]
@@ -113,6 +115,14 @@ def dh_chart_png(M):
     fig.subplots_adjust(wspace=0.25)
     png_uri(fig, "height_difference_error")
     return "figures/height_difference_error.png"
+
+
+def file_uri(src, name):
+    """Copy a PNG made by a repeat-dem script into figures/ and return it as a data URI for the HTML page."""
+    import shutil
+    (OUT / "figures").mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(src, OUT / "figures" / f"{name}.png")
+    return "data:image/png;base64," + base64.b64encode(Path(src).read_bytes()).decode()
 
 
 def png_uri(fig, name):
@@ -249,6 +259,42 @@ def main():
          "m_demnas_raw": fmt(hd("mendahara", "demnas")), "m_demnas_p": fmt(hd("mendahara", "demnas__processed")),
          "s_demnas_raw": fmt(hd("sugihan_lumpur", "demnas")), "s_demnas_p": fmt(hd("sugihan_lumpur", "demnas__processed"))}
 
+    # uncertainty (block bootstrap), canopy test, GEM-15
+    ci = {s: pd.read_csv(BENCH[s] / "03_metrics" / "height_difference_ci.csv") for s in SITES}
+    cip = {s: pd.read_csv(BENCH[s] / "03_metrics" / "height_difference_ci_paired.csv") for s in SITES}
+    can = pd.concat([pd.read_csv(BENCH[s] / "10_canopy" / "canopy_slopes.csv") for s in SITES])
+    ucfg = cfg["mendahara"]["uncertainty"]
+    main_b = ucfg["block_m"][0]
+
+    def civ(s, c, b=None):
+        t = ci[s]
+        r = t[(t.candidate == c) & (t.baseline_m == 1000) & (t.block_m == (b or main_b))].iloc[0]
+        return r
+
+    def pair(s, c, b):
+        t = cip[s]
+        return t[(t.candidate == c) & (t.baseline_m == 1000) & (t.block_m == b)].iloc[0]
+
+    kk = {s: pair(s, "klhk_modelled__processed", max(ucfg["block_m"])) for s in SITES}
+    V.update({"ci_block_km": f"{main_b / 1000:g}", "ci_draws": f"{ucfg['draws']:,}",
+              "m_best_ci": f"{civ('mendahara', 'deltadtm__processed').ci_low_m:.2f} to {civ('mendahara', 'deltadtm__processed').ci_high_m:.2f}",
+              "s_best_ci": f"{civ('sugihan_lumpur', 'deltadtm__processed').ci_low_m:.2f} to {civ('sugihan_lumpur', 'deltadtm__processed').ci_high_m:.2f}",
+              "m_kk_diff": f"{kk['mendahara'].difference_m:+.3f}", "m_kk_ci": f"{kk['mendahara'].ci_low_m:+.2f} to {kk['mendahara'].ci_high_m:+.2f}",
+              "s_kk_diff": f"{kk['sugihan_lumpur'].difference_m:+.3f}", "s_kk_ci": f"{kk['sugihan_lumpur'].ci_low_m:+.2f} to {kk['sugihan_lumpur'].ci_high_m:+.2f}",
+              "max_block_km": f"{max(ucfg['block_m']) / 1000:g}",
+              "m_blocks": f"{int(civ('mendahara', 'deltadtm__processed').blocks)}", "s_blocks": f"{int(civ('sugihan_lumpur', 'deltadtm__processed').blocks)}",
+              "gem_raw": fmt(hd("mendahara", "gem15")), "gem_p": fmt(hd("mendahara", "gem15__processed")),
+              "gem_ci": f"{civ('mendahara', 'gem15__processed').ci_low_m:.2f} to {civ('mendahara', 'gem15__processed').ci_high_m:.2f}"})
+    cs = can.set_index(["site", "candidate"])
+    V.update({"glo_slope": f"{cs.loc[('mendahara', 'glo30'), 'as delivered']:+.2f} to {cs.loc[('mendahara', 'glo30'), 'processed']:+.2f} at Mendahara and "
+                           f"{cs.loc[('sugihan_lumpur', 'glo30'), 'as delivered']:+.2f} to {cs.loc[('sugihan_lumpur', 'glo30'), 'processed']:+.2f} at Sugihan-Lumpur",
+              "dsm_left": f"{min(cs.loc[(s_, c_), 'processed'] for s_ in SITES for c_ in ('glo30', 'demnas')):.2f} to "
+                          f"{max(cs.loc[(s_, c_), 'processed'] for s_ in SITES for c_ in ('glo30', 'demnas')):.2f}",
+              "dd_slope": f"{max(abs(cs.loc[(s_, 'deltadtm'), 'processed']) for s_ in SITES):.2f}"})
+    gpw = M["mendahara"]["pointwise"].query("reference == 'lidar'")
+    V.update({"gem_tree_med": f"{gpw[(gpw.candidate == 'gem15') & (gpw['class'] == 'tree cover')]['median'].iloc[0]:+.1f}",
+              "gem_open_med": f"{gpw[(gpw.candidate == 'gem15') & (gpw['class'] == 'grassland')]['median'].iloc[0]:+.1f}"})
+
     # tables
     bnd = gpd.read_file(DATA / "batas_khg_indonesia.gpkg", layer="nama__khg__indonesia__2017__rev_tipologi")
     site_rows = []
@@ -322,18 +368,64 @@ def main():
     T["neraca"] = table(["DTM", "Rank correlation with stations: mean level", "Rank correlation: peak depth", "Bias at stations (cm)"], nrows, "num",
                         f"Tier 2 groundwater model on a 500 m grid; {fixed.group(1)} of {fixed.group(2)} cells ({fixed.group(3)}%) are canal or edge cells with fixed heads. "
                         "Same forcing and units for every DTM.")
+    crow = []
+    for s, name in SITES.items():
+        for c in ["deltadtm", "klhk_modelled", "gedtm30", "demnas", "fabdem", "glo30", "gem15"]:
+            t = ci[s]
+            if not ((t.candidate == f"{c}__processed")).any():
+                continue
+            r = civ(s, f"{c}__processed")
+            wide = civ(s, f"{c}__processed", max(ucfg["block_m"]))
+            if c == "deltadtm":
+                d = "reference"
+            else:
+                pr, pw_ = pair(s, f"{c}__processed", main_b), pair(s, f"{c}__processed", max(ucfg["block_m"]))
+                d = f"{pr.difference_m:+.2f} ({pr.ci_low_m:+.2f} to {pr.ci_high_m:+.2f}; {pw_.ci_low_m:+.2f} to {pw_.ci_high_m:+.2f})"
+            crow.append([name, LABEL[c], fmt(r.rms_m), f"{r.ci_low_m:.2f} to {r.ci_high_m:.2f}", f"{wide.ci_low_m:.2f} to {wide.ci_high_m:.2f}", d])
+    T["ci"] = table(["Site", "Candidate (processed)", "Δh error 1 km (m)", f"95% interval, {main_b / 1000:g} km blocks",
+                     f"95% interval, {max(ucfg['block_m']) / 1000:g} km blocks", f"Minus DeltaDTM (m), interval {main_b / 1000:g} km; {max(ucfg['block_m']) / 1000:g} km"],
+                    crow, "num", f"Block bootstrap ({ucfg['draws']:,} draws, seed {ucfg['seed']}) over square blocks of the KHG; each pair of cells belongs to the block of "
+                    "its first cell. Same draws for every candidate, so the difference to DeltaDTM has its own interval. Rules written in the site configs "
+                    "(<code>uncertainty</code>) before any interval was computed.")
+    krow = []
+    for _, r in can.iterrows():
+        if r.candidate not in LABEL:
+            continue
+        a, b = r["as delivered"], r["processed"]
+        share = f"{100 * (1 - b / a):.0f}%" if abs(a) >= 0.1 else "little to remove"
+        krow.append([SITES[r.site], LABEL[r.candidate], f"{a:+.2f}", f"{b:+.2f}", share, "yes" if r.canopy_removed else "no"])
+    T["canopy"] = table(["Site", "Candidate", "Slope as delivered (m per m of canopy)", "Slope processed", "Canopy effect removed",
+                         "Meets the rule"], krow, "num",
+                        "Tree cover only (WorldCover). Least squares on the median error of 2 m canopy-height bins, 0 to 30 m (Meta/WRI canopy height "
+                        "averaged into each 25 m LiDAR cell). Rule, written before the run: processed slope within ±0.05 and under a quarter of the "
+                        "delivered slope. Sources with almost no slope to begin with fail the second part trivially.")
     T["reproduce"] = table(["Step", "Command (run in repeat-dem unless noted)"], [
         ["Data", "<code>python -m repeat_common.fetch_demnas</code>, <code>fetch_open_dem</code>, <code>fetch_icesat2</code>, <code>repeat_common.gee</code> (see each docstring)"],
         ["00-03", "<code>python script/dem_benchmark.py benchmark/&lt;site&gt;.yaml</code>"],
         ["04", "<code>python script/dem_benchmark_process.py benchmark/&lt;site&gt;.yaml</code>, then step 00-03 again"],
         ["05", "<code>python script/dem_benchmark_pipeline.py benchmark/sugihan_lumpur.yaml</code>"],
+        ["Intervals", "<code>python script/dem_benchmark_ci.py benchmark/&lt;site&gt;.yaml</code>"],
+        ["Canopy test", "<code>python script/dem_benchmark_canopy.py benchmark/mendahara.yaml benchmark/sugihan_lumpur.yaml</code>"],
+        ["Profiles", "<code>python script/dem_benchmark_profile.py benchmark/mendahara.yaml</code>"],
+        ["GEM-15 data", "<code>python -m repeat_common.fetch_open_dem --khg \"KHG Sungai Mendahara - Sungai Batanghari\" --product gem15</code>"],
         ["Report", "<code>python tools/dem_benchmark_report.py</code> (in re-peat)"]])
     figs_md = {"error": (NL * 2).join(f"*{name}: candidate minus LiDAR after processing, median removed. Blue = candidate too low, red = too high.*"
                                        + NL * 2 + f"![Error maps, {name}](figures/error_maps_{s}.png)" for s, name in SITES.items()),
                "units": "*Sub-KHG units at Sugihan-Lumpur. Grey: the LiDAR units under each candidate.*" + NL * 2
                         + "![Sub-KHG units](figures/subkhg_units_sugihan_lumpur.png)"}
+    pf = BENCH["mendahara"] / "09_profiles"
+    cf = BENCH["mendahara"] / "10_canopy" / "canopy_vs_error_light.png"
+    extra = {"canopy": (cf, "canopy_vs_error", "Error against canopy height under tree cover, both sites. Grey: as delivered; red: processed. "
+                        "A flat processed line means the canopy is removed."),
+             "profiles": (pf / "profile_we_candidates_light.png", "profile_we_candidates",
+                          "Mendahara, west-east transect through the centre of the LiDAR: every source (grey as delivered, red processed) against the LiDAR (black), same height scale."),
+             "gem15": (pf / "profile_we_gem15_light.png", "profile_we_gem15",
+                       "Mendahara, same transect: GEM-15 surface (DSM) and terrain (DTM) as delivered against the LiDAR."),
+             "transects": (pf / "profile_transects_light.png", "profile_transects", "Where the Mendahara transects run.")}
+    figs_md.update({k: f"*{cap}*" + NL * 2 + f"![{name}](figures/{name}.png)" for k, (src, name, cap) in extra.items()})
     figs = {"error": "".join(f'<figure class="map"><figcaption>{name}: candidate minus LiDAR after processing, median removed. Blue = candidate too low, red = too high.</figcaption>'
                              f'<img src="{error_maps(s)}" alt="Error maps, {name}"></figure>' for s, name in SITES.items()),
+            **{k: f'<figure class="map"><figcaption>{cap}</figcaption><img src="{file_uri(src, name)}" alt="{name}"></figure>' for k, (src, name, cap) in extra.items()},
             "units": f'<figure class="map"><figcaption>Sub-KHG units at Sugihan-Lumpur. Grey: the LiDAR units under each candidate.</figcaption><img src="{unit_maps()}" alt="Sub-KHG units"></figure>'}
 
     # prose

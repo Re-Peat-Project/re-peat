@@ -8,8 +8,11 @@ Where a KHG has no airborne LiDAR, we need another elevation source for sub-KHG 
 
 - We tested six sources at two KHG with full LiDAR coverage: DEMNAS, the KLHK modelled DTM, Copernicus GLO-30, FABDEM v1.2, DeltaDTM v1.1 and GEDTM30 v1.1. Each was scored as delivered and again after the repeat-dem processing, which calibrates the surface per land-cover class with ICESat-2 and then smooths it. The LiDAR served only as the reference and never entered a fit.
 - DeltaDTM after processing came closest to the LiDAR at both sites. Its error of height differences over 1 km was {m_best_1km} m at Mendahara and {s_best_1km} m at Sugihan-Lumpur. The KLHK modelled DTM was second ({m_klhk_1km} m and {s_klhk_1km} m) and GEDTM30 third ({m_gedtm_1km} m and {s_gedtm_1km} m). DEMNAS, GLO-30 and FABDEM stayed at {s_rest_range} m even after processing.
+- With a block bootstrap, the 95% interval of DeltaDTM's 1 km error is {m_best_ci} m at Mendahara and {s_best_ci} m at Sugihan-Lumpur. DeltaDTM and the KLHK modelled DTM cannot be told apart at either site; every other source is clearly worse.
 - No source met the pass criterion we set before the run. These peatlands are very flat: over 1 km the LiDAR itself changes by only {m_signal} m (Mendahara) and {s_signal} m (Sugihan-Lumpur) RMS, and even the best errors are larger than that relief.
 - In the pipeline test at Sugihan-Lumpur, the sub-KHG units delineated from the processed DeltaDTM matched the LiDAR units best, with a mean best-match IoU of {dl_dd} against {dl_base} for the DTM the pipeline uses now. That is still a weak match. GEDTM30 gave {dl_gd}, below the flat control surface ({dl_flat}), which uses only the mapped channels.
+- The processing removes the canopy only partly. Under tree cover the error of the radar surface models still grows with canopy height after processing (GLO-30: {glo_slope} m per m of canopy). DeltaDTM's error does not depend on canopy height at all.
+- GEM-15 (Google, 15 m, 2022 to 2024 optical stereo), added at Mendahara only, came last of all sources: {gem_raw} m as delivered and {gem_p} m after processing.
 - The neraca air model in its current set-up cannot tell the DTMs apart. {fixed_pct}% of its grid cells have fixed heads at the canals and the KHG edge, and it shows no skill at the water-table stations even when it runs on the LiDAR.
 
 ## Sites and reference
@@ -42,11 +45,39 @@ Every candidate was processed at its own resolution, with no coarsening. DEMNAS 
 
 Processing helps the surface models most, because it removes part of the canopy. DEMNAS improved from {m_demnas_raw} to {m_demnas_p} m at Mendahara and from {s_demnas_raw} to {s_demnas_p} m at Sugihan-Lumpur. DeltaDTM and the KLHK modelled DTM are already bare-earth surfaces and gained little. GEDTM30 is also a terrain model but gained more, from {m_gedtm_raw} to {m_gedtm_1km} m at Mendahara and from {s_gedtm_raw} to {s_gedtm_1km} m at Sugihan-Lumpur.
 
+## How certain are these scores?
+
+Each score uses every pair of LiDAR cells 1 km apart, millions of pairs, but neighbouring pairs carry nearly the same error, so the real number of independent comparisons is far smaller. We put intervals on the scores with a block bootstrap: the KHG is cut into {ci_block_km} km squares ({m_blocks} at Mendahara, {s_blocks} at Sugihan-Lumpur), the squares are drawn at random with replacement {ci_draws} times, and the score is recomputed each time. The error variograms still rise at 8 km, so no block size is fully independent; we fixed 4 km as the main size and 2 and 8 km as checks before computing anything, and we report the wider interval where they disagree.
+
+[[table:ci]]
+
+No draw at any block size came under the 0.30 m of Tier A, for any source. DeltaDTM is better than every open global product by a margin far outside the intervals. The KLHK modelled DTM differs from DeltaDTM by {m_kk_diff} m at Mendahara and {s_kk_diff} m at Sugihan-Lumpur, with intervals at {max_block_km} km blocks of {m_kk_ci} m and {s_kk_ci} m: the two are tied. The difference between the sites is real.
+
 At every source the error grows with distance (see the chart), so what remains is a regional tilt or bow in the surface. More smoothing will not remove it.
 
 [[table:landcover]]
 
 [[maps:error]]
+
+## Does the processing remove the canopy?
+
+The processing subtracts a share k of the mapped canopy height (Meta/WRI) per land-cover class, plus an offset, both fitted to ICESat-2. Under tree cover its median error falls by several metres for the surface models, but an offset per class alone could do that. The direct test: within tree cover, does the error still grow with canopy height after processing?
+
+[[maps:canopy]]
+
+[[table:canopy]]
+
+The canopy term works but is too weak. For GLO-30 and DEMNAS the processing removes about half to two-thirds of the canopy effect; their error still grows by {dsm_left} m per m of canopy, several metres under tall forest. The fitted k under tree cover (0.09 to 0.44) is well below what the LiDAR shows is needed; the ICESat-2 ground under dense canopy may sit too high, and noise in the canopy map pulls a fitted slope down, but we have not tested either. DeltaDTM and the KLHK modelled DTM have flat lines (at most {dd_slope} m per m): their makers removed the canopy already, which is why the processing changes them little.
+
+## GEM-15 (Mendahara only)
+
+GEM-15 v1 (Google Research, preprint doi:10.31223/X55N75, CC BY 4.0, experimental) is a 15 m surface model from 2022 to 2024 sub-metre optical stereo imagery, with a bare-earth DTM predicted by a deep-learning model. We added its DTM as a candidate at Mendahara before any result, with the criterion unchanged, and moved its heights from EGM96 to EGM2008. Its 1 km error was {gem_raw} m as delivered and {gem_p} m after processing (interval {gem_ci} m), the worst of all sources. As delivered it sits a median {gem_tree_med} m above the LiDAR under tree cover and {gem_open_med} m on grassland. Its paper reports the same in Kalimantan: the DTM stays above the ground beneath closed canopy, because optical stereo never sees it.
+
+[[maps:gem15]]
+
+[[maps:profiles]]
+
+[[maps:transects]]
 
 ## Results: pipeline at Sugihan-Lumpur
 
@@ -66,6 +97,7 @@ The mapped rivers and primary canals are always unit boundaries, so part of the 
 
 ## Limits
 
+- GEM-15 was scored at Mendahara only.
 - There are two sites, both in the eastern Sumatra lowland, and one kind of reference: 25 m LiDAR of unknown date and datum.
 - The ICESat-2 points (2019 to 2025) are newer than the LiDAR and the global models (GLO-30 comes from TanDEM-X data of 2011 to 2015), so peat subsidence since then is part of the errors.
 - Its makers may have calibrated the KLHK modelled DTM to this same LiDAR, and nothing records how it was made. If they did, its scores at these two sites are better than it would get elsewhere. We have not yet tested this.
@@ -76,6 +108,8 @@ The mapped rivers and primary canals are always unit boundaries, so part of the 
 
 ## What we recommend next
 
+- Do not use GEM-15 as a terrain source on forested peat.
+- If the surface models are ever needed, calibrate the canopy factor against ground that is seen under forest (GEDI ground returns, ICESat-2 canopy-penetrating classes), never against the LiDAR reference.
 - Use the processed DeltaDTM as the interim terrain for KHG without LiDAR, with the mapped rivers and primary canals as unit boundaries, and carry its measured error ({m_best_1km} to {s_best_1km} m over 1 km) into the neraca uncertainty.
 - Try a trend correction from ICESat-2 (regression-kriging, which fits and removes the long-range part of the error). The error behaves as a regional tilt, and that is what such a correction targets.
 - Test whether the KLHK modelled DTM does as well away from LiDAR by comparing it with ICESat-2 inside and outside the LiDAR footprints.
