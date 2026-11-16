@@ -69,9 +69,15 @@ class Ctx:
         loc = self.local("peat_depth.tif")
         return str(loc) if loc else (self.kc.get("peat_depth") or {}).get("path")
 
-    def sitmat(self) -> str:
+    def sitmat(self) -> str | None:
+        """The SiTMAT folder the steps read: the KHG's clipped copy, else the national processed folder, else None (no SiTMAT
+        on this machine: a peer without it, or an empty sitmat/ in Docker). With None the deficit is skipped and the
+        prioritisation runs without the water-table indicators, instead of failing on a missing daily_long.csv."""
         loc = self.local("sitmat")
-        return self.t(loc) if loc else "${SITMAT_PROCESSED}"
+        if loc and (loc / "daily_long.csv").is_file():
+            return self.t(loc)
+        nat = (self.s.get("environment") or {}).get("SITMAT_PROCESSED")
+        return "${SITMAT_PROCESSED}" if nat and (Path(nat) / "daily_long.csv").is_file() else None
 
     def icesat2(self) -> Path | None:
         loc = self.local("icesat2_atl08.gpkg")
@@ -276,6 +282,8 @@ class Deficit(Step):
         return (c.kf / "03_neraca" / "runs" / "deficit" / "neraca_khg.csv").is_file() or self.note(c).is_file()
 
     def config(self, c) -> Path:
+        if c.sitmat() is None:
+            raise SystemExit("no SiTMAT on this machine (sitmat/ empty or SITMAT_PROCESSED missing); the chain goes on without a deficit")
         d0 = c.first_dem()
         c0 = Ctx(c.s, c.kc, d0)
         surf = c0.surface()
