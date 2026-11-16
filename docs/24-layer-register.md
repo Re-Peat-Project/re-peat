@@ -1,0 +1,101 @@
+# Layer register
+
+The layers the prioritisation rests on, with provenance and evidence. Source: `sites/layer_register.csv`; maintained with `python tools/layer_register.py` (see its docstring to add a layer). Generated; do not edit.
+
+## KHG units and KLH priorities
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| khg_boundary | `batas_khg_indonesia.gpkg`<br>865 KHG boundaries | NAMA_KHG, Luas__HA | KLHK/KLH (inferred) | 2017 | national (scale not stated) | verified — re-peat/reports/investigations/ppeg_verification.md (PPEG NAMA_KHG agrees 99.5%) | unit of every analysis; KHG names and areas |
+| khg_klh_priority | `re-peat/sites/khg_klh_priority.csv`<br>KLH priority attributes of the 865 KHG: the 337 work-list KHG and the 362 PPEG priority KHG (polygons: derived/khg_klh_priority.gpkg) | khg_code, klh_337, klh_337_team, klh_priority_362, priority_reason, priority_rank | this project (tools/khg_klh_priority.py) | 2026-11-16 | per KHG | derived — re-peat/reports/investigations/khg337_tim_gis.md | selecting and labelling KLH priority KHG |
+| klh_337_worklist | `Tim GIS - Intervensi Pembasahan Karhutla pada 337 KHG (2004 Desa DMPG), Sept 2026.xlsx`<br>KLH/team work list: 337 KHG of the rewetting design (2,004 DMPG priority villages), areas by intervention class, team, work stages |  | project GIS team for KLH | Sept 2026 | per KHG | verified — re-peat/reports/investigations/khg337_tim_gis.md (337/337 matched; areas = PPEG classes inside target villages, 324 KHG within 1 ha) | the 337 KLH priority KHG |
+| ppeg_khg_sums | `re-peat/reports/national_profile/ppeg/ppeg_khg.csv`<br>per-KHG sums of the PPEG analysis: priority flag (362 KHG), priority area, dome, thickness, actor | khg_code, priority, in_target_villages, has_skeg_damage, priority_ha, peat_dome_ha | this project (repeat-national-ppeg) | 2026-11 | per KHG | derived — re-peat/docs/15-national-profile.md | priority KHG and per-KHG indicators |
+
+## PPEG integrated analysis (KLH)
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| ppeg_admin | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>administrative names on each PPEG polygon | PULAU, PROV_2023, KABKO_2023, KEC_2023, DESA_2023 | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 | village | partly verified — re-peat/reports/investigations/ppeg_verification.md (92-95%) | none recommended: use batas_desa (admin_villages) |
+| ppeg_khg | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>KHG name and in/out of KHG | NAMA_KHG, CD_KHG | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 | 1:250,000 KHG map | verified — re-peat/reports/investigations/ppeg_verification.md (99.5%) | joining PPEG to KHG |
+| ppeg_peat | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>peat land, peat or mineral soil, thickness class, FEG function (1:50k and 1:250k) | LAHAN_GAMB, TNH_GAMBUT, PEAT_THICK, FEG_PEAT_1, FEG_250K, SK_FEG_50K | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 | 1:50,000 and 1:250,000 | verified — re-peat/reports/investigations/ppeg_verification.md (LAHAN_GAMB 100%; FEG_250K 91.8%; TNH_GAMBUT 94.1%, FEG_PEAT_1 89.1%, PEAT_THICK 80.6% on the 17% our FEG 1:50k copy covers) | peat basis, protected function, thickness >= 3 m |
+| ppeg_bbsdlp | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>BBSDLP 1:50k peat: extent, depth class, maturity, landform (dome / topogenous: the ombrogenous indicator) | GMBT_BBSDL, KDLMN_GBT, KMTNGN_GBT, LANDFORM | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 | 1:50,000 | not verified — needs the BBSDLP national 1:50k peat map | peat dome and ombrogenous share; depth class |
+| ppeg_landcover | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>KLH land cover 2022 | PL_2022 | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 | 1:250,000 (KLHK land cover) | not verified — needs KLHK land cover 2022 | land use / land cover |
+| ppeg_damage | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>peat ecosystem damage status 2024 (SKEG) | SKEG_2024, CD_SKEG_24 | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 |  | not verified — needs the SKEG 2024 layer; CD_SKEG_24 consistent with SKEG_2024 99.4% (re-peat/reports/investigations/ppeg_verification.md) | priority area (damaged peat) |
+| ppeg_landstatus | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>licence type and holder, concession / non-concession, 5 km concession buffer, forest area function, forest estate / APL | IZIN_USAHA, PERUSAHAAN, CD_KONSESI, BUFFER, Fungsi_KWS, CD_KAWASAN | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 | licences 2025; Kawasan Hutan 1:250,000 | verified — re-peat/reports/investigations/ppeg_verification.md (licences 98.1%; Fungsi_KWS 93.4%; buffer within 5,000 m of a licence) | concession / non-concession; forest / non-forest area; actor |
+| ppeg_fire | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>burned area per year 2015-2024, burned or not, burn count | BA_2015, BA_2016, BA_2017, BA_2018, BA_2019, BA_2020, BA_2021, BA_2022, BA_2023, BA_2024, CD_BURN, BURN_PERIOD | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 |  | verified — re-peat/reports/investigations/ppeg_verification.md (100% every year; codes consistent 100%) | burned peat, repeat burning, intervention class |
+| ppeg_canal | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>canal-affected zone by canal class | KET_KANAL, CD_ATK | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 |  | verified — re-peat/reports/investigations/ppeg_verification.md (zones reach about 1,000 m primary, 500 m secondary, 250 m tertiary from our canal map) | canal-affected peat; intervention class |
+| ppeg_program | `ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg`<br>KLH intervention class (R1-R3) and responsible actor | PROG_INTERVENSI, PROG_DMPG_2025 | KLH (Direktorat Pengendalian Kerusakan Ekosistem Gambut), integrated thematic analysis | April 2026 |  | not verified — KLH's own derived classes; rules not documented | intervention class, actor |
+
+## Administration and villages
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| admin_villages | `batas_desa_indonesia_2023_KLH.gpkg`<br>83,519 village boundaries, 2023 | PULAU, PROV_2023, KABKO_2023, KEC_2023, DESA_2023 | KLH (delivered to the project) | 2023 | village | source layer — re-peat/reports/investigations/ppeg_verification.md | province to village names and tallies (in place of PPEG admin names) |
+| target_villages | `desa_target_pemulihan_ekosistem_gambut.gpkg`<br>2,004 Bluebook target villages for peat restoration |  | BRGM Bluebook 2026 | 2026 (AOI April 2026) | village | source layer — re-peat/reports/investigations/khg337_tim_gis.md | the 337/345 target-village KHG; priority reason |
+| dmpg_villages | `dpg/dmpg_villages_sitmat.gpkg` (dmpg_villages)<br>838 Desa Mandiri Peduli Gambut villages served by SiTMAT |  | KLH SiTMAT portal (repeat_common.fetch_sitmat_layers) | 2017-2024 | village | source layer | community actors; tenure |
+| dpg_atlas_villages | `dpg/dpg_villages_boundaries.gpkg` (dpg_villages)<br>244 BRG atlas Desa Peduli Gambut villages (participatory maps in dpg/atlas_brg) |  | BRG atlas 2018-2019, matched to the 2023 villages | 2018-2019 | village | source layer | tenure; community mapping |
+
+## Land status and tenure
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| licences | `landstatus/ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg`<br>13,315 business-licence polygons: PBPH, oil palm, mining, HTR, community forest (overlapping) | IZIN_USAHA, PERUSAHAAN | project team (shared drive); issuing agency not stated | 2025 | not stated | source layer — re-peat/reports/investigations/ppeg_verification.md | concession / non-concession; actors; tenure complexity |
+| kawasan_hutan | `landstatus/KWSHUTAN_AR_250K_2023_Transcripted.gpkg`<br>forest area (Kawasan Hutan) function | Fungsi_KWS | project team (shared drive); inferred KLHK | 2023 | 1:250,000 | source layer — re-peat/reports/investigations/ppeg_verification.md | forest / non-forest area (legal) |
+
+## Peat
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| feg_2017 | `landstatus/FEG__Indonesia__2017__Rev_Tipologi.gpkg`<br>peat ecosystem function 2017, revised typology (indicative protected / cultivation) | FEG_KGHLTR | project team (shared drive); inferred KLHK | 2017 | 1:250,000 | source layer — re-peat/reports/investigations/ppeg_verification.md | protected peat function (national) |
+| feg_50k | `klhk_khg_feg_50k.gpkg` (feg_50k)<br>peat ecosystem function 1:50,000 (fetched KHG only) | peat_thick, tnh_gambut, feg_peat | KLHK via BIG Satu Peta | 2022 | 1:50,000 | source layer — re-peat/reports/investigations/ppeg_verification.md | peat thickness and function where fetched |
+| peat_sitmat_2025 | `peat/lahan_gambut_indonesia_2025.gpkg` (lahan_gambut)<br>peat map of Indonesia 2025 served by SiTMAT | LAHAN_GAMB | KLH SiTMAT portal | 2025 | not stated | source layer — re-peat/reports/investigations/ppeg_verification.md (PPEG LAHAN_GAMB 100%) | peat extent check |
+| peat_ppeg_2026 | `peat/ppeg_lahan_gambut_2026.gpkg` (lahan_gambut)<br>KLH peat extent dissolved from PPEG (the project's peat basis) |  | this project from PPEG | 2026 (April) | as PPEG | derived | peat basis of the chain |
+| peat_depth_bbsdlp | `kedalaman_gambut_bbsdlp.gpkg`<br>BBSDLP peat depth classes 1:50,000 (public part) |  | BBSDLP (inferred) | 2011-2019 | 1:50,000 | source layer | peat depth fill |
+
+## Fire
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| burnt_area | `burnt_area_2015_2026_Indonesia.gpkg`<br>burnt-area polygons 2015-2026 with burn frequency |  | KLHK (delivered); method not stated | 2015-2026 | not stated | source layer — re-peat/reports/investigations/ppeg_verification.md (PPEG BA_yyyy 100%) | burned peat; repeat burning |
+| hotspots_klh_2026 | `_data_hotspot_Januari_September_2026.gpkg`<br>KLH-curated MODIS hotspots, 1 Jan to 15 Sep 2026 |  | KLH (curated, FIRMS MODIS) | 2026 | 1 km | source layer | recent fire activity |
+| hotspots_viirs | `hotspot_viirs_snpp_2012_2025.gpkg`<br>FIRMS VIIRS S-NPP 375 m active fires, 2012-2025 |  | NASA FIRMS | 2012-2025 | 375 m | source layer | fire history |
+
+## Hydrology
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| canals | `kanal_osgm_khg_existing_Indonesia.gpkg`<br>existing canal network in KHG by class | KET_KANAL | OSM-derived (inferred, unconfirmed) | 2025 | not stated | source layer — re-peat/reports/investigations/ppeg_verification.md (the PPEG canal zones are buffers of this network) | canal-affected zones; blocking; pumps |
+| brgm_infrastructure | `infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg`<br>existing canal blocks and other hydrological infrastructure |  | BRGM Bluebook 2026 | 2026 | points | source layer | existing interventions |
+
+## Provenance details
+
+- **khg_boundary**: legal basis: KHG registry SK.129/2017 (codes matched in sites/khg_registry.csv); received: not recorded; rights: KLH, team use only; features 865; sha256 `243a7003b5c511fd…`
+- **khg_klh_priority**: legal basis: not stated; received: not recorded; rights: as its sources; features 865; sha256 `4e2773437a51953d…`; rebuild with tools/khg_klh_priority.py when either source changes
+- **klh_337_worklist**: legal basis: not stated; received: 2026-11-13, Tim GIS; rights: team use only; features -; sha256 `9cda7daef93e110d…`; areas typed with dots as thousands separators; the rows add to 12,550,577 ha, the workbook's totals row says 12,837,704 ha
+- **ppeg_khg_sums**: legal basis: not stated; received: not recorded; rights: as PPEG; features 867; sha256 `faad94a3850bc1e2…`
+- **ppeg_admin**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`; placeholder Papua/Jayapura/Ebungfao/Atabar on 16,302 polygons (2.55 Mha) of Papua KHG outside the 2017 maps; 'Papua' is the pre-2022 province
+- **ppeg_khg**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **ppeg_peat**: legal basis: FEG 1:50k decrees listed in SK_FEG_50K (SK.295/2017, SK.296/2019, SK.938/2019, SK.446/2020, SK.270/2022, SK.1152/2022, SK.370/2024); received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **ppeg_bbsdlp**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`; LANDFORM blank on 1.40 Mha of peat; 5 values spelt two ways; domes missing in some known domed KHG
+- **ppeg_landcover**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **ppeg_damage**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **ppeg_landstatus**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`; 6.6% of area APL in PPEG but forest estate in Kawasan Hutan 2023: ask KLH which release
+- **ppeg_fire**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **ppeg_canal**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **ppeg_program**: legal basis: not stated; received: 2026 (shared drive; file dated 2026-11-13 here); rights: KLH, team use only; clearance needed before publishing; features 989398; sha256 `690e159cc75c04c6…`
+- **admin_villages**: legal basis: not stated; received: not recorded; rights: KLH, team use only; features 83519; sha256 `020a98400b0a2542…`
+- **target_villages**: legal basis: not stated; received: not recorded; rights: team use only; features 2004; sha256 `6e35feef0054c3a6…`
+- **dmpg_villages**: legal basis: not stated; received: not recorded; rights: KLH portal; features 838; sha256 `2a59d313f24c8e2d…`
+- **dpg_atlas_villages**: legal basis: not stated; received: not recorded; rights: BRG publication; features 244; sha256 `cb966fb1b5b557df…`
+- **licences**: legal basis: not stated; received: not recorded; rights: team use only; features 13315; sha256 `3577c76910ae59c5…`; overlaps itself: dissolve before computing areas
+- **kawasan_hutan**: legal basis: not stated; received: not recorded; rights: team use only; features 4265; sha256 `2e782a303514f749…`; 173 polygons 'Belum terdefinisi'
+- **feg_2017**: legal basis: not stated; received: not recorded; rights: team use only; features 8875; sha256 `2a21e57eb86d8d76…`
+- **feg_50k**: legal basis: SK.295/2017, SK.296/2019, SK.938/2019, SK.446/2020, SK.270/2022, SK.1152/2022; received: not recorded; rights: KLHK, team use only; features 15980; sha256 `625788e6a1cec324…`; covers about 17% of the PPEG area
+- **peat_sitmat_2025**: legal basis: not stated; received: not recorded; rights: KLH portal; features 8586; sha256 `42d6a1f5a031a9a6…`
+- **peat_ppeg_2026**: legal basis: not stated; received: not recorded; rights: as PPEG; features 579; sha256 `8da2211b66938a4c…`
+- **peat_depth_bbsdlp**: legal basis: not stated; received: not recorded; rights: not stated; features 1413; sha256 `430f8af7cbb382b4…`; the full national map needs a formal request
+- **burnt_area**: legal basis: not stated; received: not recorded; rights: KLH, team use only; features 584723; sha256 `ce4106b57ea27fc2…`
+- **hotspots_klh_2026**: legal basis: not stated; received: not recorded; rights: KLH, team use only; features 167718; sha256 `22e49012ff5ac950…`
+- **hotspots_viirs**: legal basis: not stated; received: not recorded; rights: NASA open data; features 3514520; sha256 `c289e17e315ff829…`
+- **canals**: legal basis: not stated; received: not recorded; rights: origin unconfirmed; features 657621; sha256 `2bf959e75283a478…`
+- **brgm_infrastructure**: legal basis: not stated; received: not recorded; rights: team use only; features 46961; sha256 `051c47131c9e25ee…`

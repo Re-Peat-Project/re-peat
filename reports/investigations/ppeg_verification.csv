@@ -1,0 +1,25 @@
+field,source,points,agree_share,ha_sampled,note
+NAMA_KHG,batas_khg_indonesia.gpkg:NAMA_KHG,20000,0.995,9478624,
+PULAU,batas_desa_indonesia_2023_KLH.gpkg:PULAU,20000,0.9997,9478624,
+PROV_2023,batas_desa_indonesia_2023_KLH.gpkg:PROV_2023,20000,0.9477,9478624,
+KABKO_2023,batas_desa_indonesia_2023_KLH.gpkg:KABKO_2023,20000,0.9234,9478624,
+KEC_2023,batas_desa_indonesia_2023_KLH.gpkg:KEC_2023,20000,0.9227,9478624,
+DESA_2023,batas_desa_indonesia_2023_KLH.gpkg:DESA_2023,20000,0.9227,9478624,
+IZIN_USAHA,landstatus/ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg:IZIN_USAHA,20000,0.9815,9478624,
+PERUSAHAAN,landstatus/ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg:PERUSAHAAN,20000,0.9815,9478624,
+Fungsi_KWS,landstatus/KWSHUTAN_AR_250K_2023_Transcripted.gpkg:Fungsi_KWS,20000,0.9336,9478624,
+FEG_250K,landstatus/FEG__Indonesia__2017__Rev_Tipologi.gpkg:FEG_KGHLTR,20000,0.918,9478624,
+PEAT_THICK,klhk_khg_feg_50k.gpkg:peat_thick,3484,0.806,9478624,source covers 17.4% of the points; agreement on those only; compared by meaning (peat or mineral; protected or cultivation; PPEG thickness class inside the source class)
+TNH_GAMBUT,klhk_khg_feg_50k.gpkg:tnh_gambut,3484,0.9406,9478624,source covers 17.4% of the points; agreement on those only; compared by meaning (peat or mineral; protected or cultivation; PPEG thickness class inside the source class)
+FEG_PEAT_1,klhk_khg_feg_50k.gpkg:feg_peat,3484,0.8906,9478624,source covers 17.4% of the points; agreement on those only; compared by meaning (peat or mineral; protected or cultivation; PPEG thickness class inside the source class)
+LAHAN_GAMB,peat/lahan_gambut_indonesia_2025.gpkg:LAHAN_GAMB,20000,1.0,9478624,
+BA_2015,burnt_area_2015_2026_Indonesia.gpkg:BA_2015,20000,1.0,9478624,
+BA_2016,burnt_area_2015_2026_Indonesia.gpkg:BA_2016,20000,1.0,9478624,
+BA_2017,burnt_area_2015_2026_Indonesia.gpkg:BA_2017,20000,1.0,9478624,
+BA_2018,burnt_area_2015_2026_Indonesia.gpkg:BA_2018,20000,1.0,9478624,
+BA_2019,burnt_area_2015_2026_Indonesia.gpkg:BA_2019,20000,1.0,9478624,
+BA_2020,burnt_area_2015_2026_Indonesia.gpkg:BA_2020,20000,1.0,9478624,
+BA_2021,burnt_area_2015_2026_Indonesia.gpkg:BA_2021,20000,1.0,9478624,
+BA_2022,burnt_area_2015_2026_Indonesia.gpkg:BA_2022,20000,1.0,9478624,
+BA_2023,burnt_area_2015_2026_Indonesia.gpkg:BA_2023,20000,1.0,9478624,
+BA_2024,burnt_area_2015_2026_Indonesia.gpkg:BA_2024,20000,1.0,9478624,

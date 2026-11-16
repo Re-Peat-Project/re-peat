@@ -1,0 +1,338 @@
+no,khg_name_xlsx,island,province,c01,c02,c03,c04,total,team,Jalur Pembasahan,Sekat Kanal,Pompa Air,Pintu Air,Layout Peta,row_sum_ok,khg_code,priority,in_target_villages,has_skeg_damage,tv_all_total,tv_all_diff,tv_peat_total,tv_peat_diff
+1,KHG Alue Getah - Krueng Le Mirah,Sumatera,Aceh,0.0,0.0,75.0,27.0,102.0,Tim 1,False,False,False,False,False,True,KHG.11.12.01,True,True,False,102.0,0.0,,
+2,KHG Krueng Gubon - Krueng Meureubo,Sumatera,Aceh,214.0,1105.0,1535.0,4296.0,7151.0,Tim 1,False,False,False,False,False,True,KHG.11.05.02,True,True,True,7151.0,0.0,6394.0,757.0
+3,KHG Krueng Lembang - Krueng Bakongan,Sumatera,Aceh,0.0,559.0,0.0,4713.0,5271.0,Tim 1,False,False,False,False,False,True,KHG.11.01.06,True,True,True,5271.0,0.0,4218.0,1053.0
+4,KHG Krueng Matee - Krueng Teumiyee,Sumatera,Aceh,0.0,0.0,1588.0,76.0,1664.0,Tim 1,False,False,False,False,False,True,KHG.11.15.01,True,True,False,1664.0,0.0,,
+5,KHG Krueng Meureubo - Krueng Matee,Sumatera,Aceh,312.0,106.0,3064.0,1412.0,4894.0,Tim 1,False,False,False,False,False,True,KHG.11.05-15.01,True,True,True,4894.0,0.0,4050.0,844.0
+6,KHG Krueng On - Krueng Pneunom,Sumatera,Aceh,0.0,0.0,0.0,22.0,22.0,Tim 1,False,False,False,False,False,True,KHG.11.14.05,True,True,False,22.0,0.0,,
+7,KHG Krueng Pango - Krueng On,Sumatera,Aceh,0.0,170.0,0.0,1962.0,2132.0,Tim 1,False,False,False,False,False,True,KHG.11.14.04,True,True,True,2132.0,0.0,253.0,1879.0
+8,KHG Krueng Pneunom - Krueng Lambalik,Sumatera,Aceh,952.0,350.0,2926.0,3840.0,8067.0,Tim 1,False,False,False,False,False,True,KHG.11.05-14.01,True,True,True,8067.0,0.0,4032.0,4035.0
+9,KHG Krueng Surin - Krueng Batee,Sumatera,Aceh,13.0,20.0,4994.0,3179.0,8206.0,Tim 1,False,False,False,False,False,True,KHG.11.12.02,True,True,True,8206.0,0.0,2350.0,5856.0
+10,KHG Krueng Surin - Krueng Muling,Sumatera,Aceh,109.0,13.0,12446.0,9335.0,21904.0,Tim 1,False,False,False,False,False,True,KHG.11.15.05,True,True,True,21904.0,0.0,18240.0,3664.0
+11,KHG Krueng Tadu - Krueng Tripa,Sumatera,Aceh,35.0,0.0,7126.0,2897.0,10059.0,Tim 1,False,False,False,False,False,True,KHG.11.15.03,True,True,True,10059.0,0.0,6803.0,3256.0
+12,KHG Krueng Teumiyee - Krueng Tadu,Sumatera,Aceh,116.0,1.0,9281.0,1834.0,11232.0,Tim 1,False,False,False,False,False,True,KHG.11.15.02,True,True,True,11232.0,0.0,8233.0,2999.0
+13,KHG Krueng Tripa - Krueng Seuneuam,Sumatera,Aceh,614.0,36.0,10570.0,4695.0,15916.0,Tim 1,False,False,False,False,False,True,KHG.11.15.04,True,True,True,15916.0,0.0,12546.0,3370.0
+14,KHG Krueng Trumon,Sumatera,Aceh,0.0,0.0,0.0,89.0,89.0,Tim 1,False,False,False,False,False,True,KHG.11.01.07,True,True,False,89.0,0.0,,
+15,KHG Krueng Trumon - Lae Tarap,Sumatera,Aceh,505.0,797.0,4127.0,31587.0,37015.0,Tim 1,False,False,False,False,False,True,KHG.11.01-10-23.01,True,True,True,37015.0,0.0,18301.0,18714.0
+16,KHG Krueng Wonki - Krueng Gubon,Sumatera,Aceh,48.0,240.0,4136.0,4263.0,8688.0,Tim 1,False,False,False,False,False,True,KHG.11.05.01,True,True,True,8688.0,0.0,7742.0,946.0
+17,KHG Lae Sulampi - Lae Gosong,Sumatera,Aceh,0.0,0.0,8169.0,3682.0,11851.0,Tim 1,False,False,False,False,False,True,KHG.11.10.02,True,True,True,11851.0,0.0,5117.0,6734.0
+18,KHG Lae Tarap - Lae Kumbi,Sumatera,Aceh,198.0,14.0,808.0,184.0,1203.0,Tim 1,False,False,False,False,False,True,KHG.11.23.04,True,True,False,1203.0,0.0,,
+19,KHG Lae Tarap - Lae Sulampi,Sumatera,Aceh,0.0,0.0,899.0,221.0,1120.0,Tim 1,False,False,False,False,False,True,KHG.11.10-23.01,True,True,False,1120.0,0.0,,
+20,KHG Lae Sibungkuang,Sumatera,Aceh,0.0,0.0,82.0,11.0,93.0,Tim 1,False,False,False,False,False,True,KHG.12.01.01,True,True,True,8749.0,-8656.0,4410.0,-4317.0
+21,KHG Lae Silabuhan - Lae Tambiski,Sumatera,Aceh,634.0,85.0,3467.0,3156.0,7343.0,Tim 1,False,False,False,False,False,True,KHG.11-12.01,True,True,True,8015.0,-672.0,3494.0,3849.0
+22,KHG Aek Garoga - Batang Toru,Sumatera,Sumatera Utara,147.0,0.0,2058.0,516.0,2721.0,Tim 1,False,False,False,False,False,True,KHG.12.01.06,True,True,True,2721.0,0.0,1536.0,1185.0
+23,KHG Aek Lunang - Aek Sidang,Sumatera,Sumatera Barat,41.0,29.0,11048.0,2826.0,13944.0,Tim 1,False,False,False,False,False,True,KHG.13.01.02,True,True,True,13944.0,0.0,11579.0,2365.0
+24,KHG Aek Maraitgadang - Aek Sikapas,Sumatera,Sumatera Utara,0.0,0.0,220.0,36.0,255.0,Tim 1,False,False,False,False,False,True,KHG.12.13.03,True,True,True,255.0,0.0,45.0,210.0
+25,KHG Aek Maraitgadang - Batang Maraitgodang,Sumatera,Sumatera Utara,0.0,0.0,1157.0,343.0,1499.0,Tim 1,False,False,False,False,False,True,KHG.12.13.02,True,True,True,1499.0,0.0,812.0,687.0
+26,KHG Aek Maros - Aek Pandan,Sumatera,Sumatera Utara,10.0,0.0,3583.0,1004.0,4597.0,Tim 1,False,False,False,False,False,True,KHG.12.01.05,True,True,True,4597.0,0.0,2925.0,1672.0
+27,KHG Aek Na Birong - Aek Batang Toru,Sumatera,Sumatera Utara,21.0,170.0,11597.0,4396.0,16183.0,Tim 1,False,False,False,False,False,True,KHG.12.03.01,True,True,True,16183.0,0.0,10001.0,6182.0
+28,KHG Aek Siriam - Batang Singkuang,Sumatera,Sumatera Utara,89.0,12.0,2781.0,760.0,3642.0,Tim 1,False,False,False,False,False,True,KHG.12.13.04,True,True,True,3642.0,0.0,2442.0,1200.0
+29,KHG Aek Sordang - Aek Kalang,Sumatera,Sumatera Utara,34.0,10.0,1125.0,322.0,1491.0,Tim 1,False,False,False,False,False,True,KHG.12.01.04,True,True,True,1491.0,0.0,675.0,816.0
+30,KHG Batang Batahan - Batang Tamak,Sumatera,Sumatera Utara,0.0,0.0,3319.0,255.0,3573.0,Tim 1,False,False,False,False,False,True,KHG.12.13.07,True,True,True,3573.0,0.0,2112.0,1461.0
+31,KHG Batang Singkuang - Nainjan Nu Godang,Sumatera,Sumatera Utara,200.0,110.0,11769.0,6765.0,18844.0,Tim 1,False,False,False,False,False,True,KHG.12.13.05,True,True,True,18844.0,0.0,14301.0,4543.0
+32,KHG Batang Toru - Aek Maraitgadang,Sumatera,Sumatera Utara,0.0,0.0,1013.0,1007.0,2020.0,Tim 1,False,False,False,False,False,True,KHG.12.13.01,True,True,True,2020.0,0.0,1246.0,774.0
+33,KHG Lae Rapus - Aek Pardomuan,Sumatera,Sumatera Utara,0.0,0.0,1315.0,37.0,1352.0,Tim 1,False,False,False,False,False,True,KHG.12.01.03,True,True,True,1352.0,0.0,936.0,416.0
+34,KHG Lae Sibungkuang - Aek Tarutungol,Sumatera,Sumatera Utara,0.0,0.0,334.0,285.0,619.0,Tim 1,False,False,False,False,False,True,KHG.12.01.02,True,True,True,619.0,0.0,110.0,509.0
+35,KHG Sungai Asahan - Sungai Leidong,Sumatera,Sumatera Utara,280.0,177.0,52822.0,14351.0,67630.0,Tim 1,False,False,False,False,False,True,KHG.12.09-23.01,True,True,True,67630.0,0.0,46274.0,21356.0
+36,KHG Sungai Barumun - Sungai Mabar,Sumatera,Sumatera Utara,12.0,0.0,3416.0,1760.0,5189.0,Tim 1,False,False,False,False,False,True,KHG.12.22.01,True,True,True,5189.0,0.0,2446.0,2743.0
+37,KHG Sungai Kanopan - Sungai Kuala,Sumatera,Sumatera Utara,0.0,0.0,5034.0,641.0,5675.0,Tim 1,False,False,False,False,False,True,KHG.12.23.01,True,True,True,5675.0,0.0,670.0,5005.0
+38,KHG Sungai Kuala - Sungai Kuo,Sumatera,Sumatera Utara,21.0,8.0,18921.0,1848.0,20799.0,Tim 1,False,False,False,False,False,True,KHG.12.23.02,True,True,True,20799.0,0.0,17071.0,3728.0
+39,KHG Sungai Kualuh Bilah - Sungai Barumun,Sumatera,Sumatera Utara,692.0,439.0,49535.0,16808.0,67474.0,Tim 1,False,False,False,False,False,True,KHG.12.10-22.01,True,True,True,67474.0,0.0,41176.0,26298.0
+40,KHG Sungai Kuo - Sungai Kualuh Bilah,Sumatera,Sumatera Utara,568.0,254.0,52615.0,16745.0,70181.0,Tim 1,False,False,False,False,False,True,KHG.12.10-23.01,True,True,True,70181.0,0.0,43188.0,26993.0
+41,KHG Sungai Leidong - Sungai Kuala,Sumatera,Sumatera Utara,81.0,129.0,19397.0,5979.0,25585.0,Tim 1,True,False,False,False,False,True,KHG.12.09-23.02,True,True,True,25585.0,0.0,14674.0,10911.0
+42,KHG Sungai Marbau - Sungai Kualuh Bilah,Sumatera,Sumatera Utara,56.0,107.0,6532.0,5168.0,11862.0,Tim 1,False,False,False,False,False,True,KHG.12.10-23.02,True,True,True,11862.0,0.0,8176.0,3686.0
+43,KHG Sungai Nata - Sungai Sinunukan,Sumatera,Sumatera Utara,0.0,0.0,1306.0,319.0,1624.0,Tim 1,False,False,False,False,False,True,KHG.12.13.06,True,True,True,1624.0,0.0,728.0,896.0
+44,KHG Sungai Barumun - Sungai Kubu,Sumatera,Sumatera Utara,3846.0,759.0,84557.0,24635.0,113798.0,Tim 1,False,False,False,False,False,True,KHG.12-14.01,True,True,True,232193.0,-118395.0,190883.0,-77085.0
+45,KHG Batang Rokan Kiri - Batang Sosa,Sumatera,Riau,1949.0,205.0,24773.0,7536.0,34463.0,Tim 1,False,False,False,False,False,True,KHG.14.06-07.01,True,True,True,34463.0,0.0,21082.0,13381.0
+46,KHG Pulau Bengkalis,Sumatera,Riau,6180.0,2212.0,65739.0,13196.0,87328.0,Tim 1,False,False,False,False,False,True,KHG.14.03.02,True,True,True,87328.0,0.0,75152.0,12176.0
+47,KHG Pulau Labu,Sumatera,Riau,0.0,0.0,0.0,534.0,534.0,Tim 1,False,False,False,False,False,True,KHG.14.05.03,True,True,False,534.0,0.0,507.0,27.0
+48,KHG Pulau Mendol,Sumatera,Riau,1257.0,3001.0,14492.0,11912.0,30662.0,Tim 1,False,False,False,False,False,True,KHG.14.05.01,True,True,True,30662.0,0.0,18177.0,12485.0
+49,KHG Pulau Menggung,Sumatera,Riau,0.0,0.0,0.0,625.0,625.0,Tim 1,False,False,False,False,False,True,KHG.14.10.05,True,True,False,625.0,0.0,232.0,393.0
+50,KHG Pulau Merbau,Sumatera,Riau,72.0,88.0,6150.0,8610.0,14920.0,Tim 1,False,False,False,False,False,True,KHG.14.10.02,True,True,True,14920.0,0.0,12154.0,2766.0
+51,KHG Pulau Muda,Sumatera,Riau,0.0,0.0,0.0,3420.0,3420.0,Tim 1,False,False,False,False,False,True,KHG.14.05.04,True,True,False,3420.0,0.0,1386.0,2034.0
+52,KHG Pulau Padang,Sumatera,Riau,1881.0,2286.0,44065.0,62604.0,110837.0,Tim 1,False,False,False,False,False,True,KHG.14.10.01,True,True,True,110837.0,0.0,104217.0,6620.0
+53,KHG Pulau Rangsang,Sumatera,Riau,6135.0,5465.0,46190.0,27655.0,85445.0,Tim 1,False,False,False,False,False,True,KHG.14.10.04,True,True,True,85445.0,0.0,78440.0,7005.0
+54,KHG Pulau Rupat,Sumatera,Riau,19532.0,4314.0,63069.0,28462.0,115378.0,Tim 1,False,False,False,False,False,True,KHG.14.03.01,True,True,True,115378.0,0.0,92930.0,22448.0
+55,KHG Pulau Serapung,Sumatera,Riau,0.0,32.0,791.0,1961.0,2784.0,Tim 1,False,False,False,False,False,True,KHG.14.05.02,True,True,True,2784.0,0.0,2472.0,312.0
+56,KHG Pulau Tebing Tinggi,Sumatera,Riau,2009.0,2339.0,52470.0,79310.0,136129.0,Tim 1,False,False,False,False,False,True,KHG.14.10.03,True,True,True,136129.0,0.0,131382.0,4747.0
+57,KHG Pulau Topang,Sumatera,Riau,45.0,175.0,1132.0,1493.0,2845.0,Tim 2,False,False,False,False,False,True,KHG.14.10.06,True,True,True,2845.0,0.0,2167.0,678.0
+58,KHG Sungai Bangko - Sungai Rokan,Sumatera,Riau,42.0,690.0,15683.0,18848.0,35263.0,Tim 2,False,False,False,False,False,True,KHG.14.07.02,True,True,True,35263.0,0.0,17272.0,17991.0
+59,KHG Sungai Bangko - Sungai Rokan Kanan,Sumatera,Riau,106.0,26.0,13267.0,5304.0,18703.0,Tim 2,False,False,False,False,False,True,KHG.14.07.03,True,True,True,18703.0,0.0,6129.0,12574.0
+60,KHG Sungai Batang - Sungai Keritang 1,Sumatera,Riau,631.0,943.0,24112.0,19842.0,45528.0,Tim 2,False,False,False,False,False,True,KHG.14.02-04.03,True,True,True,45528.0,0.0,30459.0,15069.0
+61,KHG Sungai Batang - Sungai Keritang 2,Sumatera,Riau,5.0,73.0,7726.0,6231.0,14035.0,Tim 2,False,False,False,False,False,True,KHG.14.04.12,True,True,True,14035.0,0.0,8144.0,5891.0
+62,KHG Sungai Belutu - Sungai Leko,Sumatera,Riau,1403.0,53.0,6772.0,241.0,8469.0,Tim 2,False,False,False,False,False,True,KHG.14.08.01,True,True,True,8469.0,0.0,6199.0,2270.0
+63,KHG Sungai Boang - Sungai Basira,Sumatera,Riau,0.0,0.0,3251.0,4788.0,8039.0,Tim 2,False,False,False,False,False,True,KHG.14.04.06,True,True,True,8039.0,0.0,4729.0,3310.0
+64,KHG Sungai Bunut - Sungai Umban,Sumatera,Riau,390.0,82.0,10665.0,6168.0,17304.0,Tim 2,False,False,False,False,False,True,KHG.14.03-08.02,True,True,True,17304.0,0.0,14211.0,3093.0
+65,KHG Sungai Enok - Sungai Batang,Sumatera,Riau,1781.0,387.0,55070.0,15319.0,72557.0,Tim 2,False,False,False,False,False,True,KHG.14.04.11,True,True,True,72557.0,0.0,56975.0,15582.0
+66,KHG Sungai Gasip - Sungai Siak,Sumatera,Riau,0.0,0.0,6704.0,1152.0,7856.0,Tim 2,False,False,False,False,False,True,KHG.14.08.05,True,True,True,7856.0,0.0,6374.0,1482.0
+67,KHG Sungai Gaung - Sungai Batangtuaka,Sumatera,Riau,12072.0,4148.0,145265.0,137657.0,299143.0,Tim 2,False,False,False,False,False,True,KHG.14.02-04.01,True,True,True,299143.0,0.0,258295.0,40848.0
+68,KHG Sungai Gongan - Sungai Nilo,Sumatera,Riau,2967.0,297.0,9387.0,4527.0,17178.0,Tim 2,False,False,False,False,False,True,KHG.14.05.07,True,True,True,17178.0,0.0,13283.0,3895.0
+69,KHG Sungai Indragiri - Sungai Batang,Sumatera,Riau,371.0,271.0,28104.0,16960.0,45705.0,Tim 2,False,False,False,False,False,True,KHG.14.02-04.02,True,True,True,45705.0,0.0,36086.0,9619.0
+70,KHG Sungai Indragiri - Sungai Belilas,Sumatera,Riau,0.0,0.0,9546.0,1645.0,11191.0,Tim 2,False,False,False,False,False,True,KHG.14.02.01,True,True,True,11191.0,0.0,5323.0,5868.0
+71,KHG Sungai Indragiri - Sungai Cenaku,Sumatera,Riau,1596.0,188.0,16500.0,7598.0,25881.0,Tim 2,False,False,False,False,False,True,KHG.14.02.04,True,True,True,25881.0,0.0,16785.0,9096.0
+72,KHG Sungai Indragiri - Sungai Ekok,Sumatera,Riau,0.0,0.0,761.0,158.0,918.0,Tim 2,False,False,False,False,False,True,KHG.14.02.02,True,True,True,918.0,0.0,69.0,849.0
+73,KHG Sungai Indragiri - Sungai Enok,Sumatera,Riau,94.0,63.0,12060.0,12170.0,24387.0,Tim 2,False,False,False,False,False,True,KHG.14.04.08,True,True,True,24387.0,0.0,15708.0,8679.0
+74,KHG Sungai Indragiri - Sungai Tuana,Sumatera,Riau,0.0,446.0,1472.0,4671.0,6589.0,Tim 2,False,False,False,False,False,True,KHG.14.04.09,True,True,True,6589.0,0.0,3133.0,3456.0
+75,KHG Sungai Kampar - Sungai Gaung,Sumatera,Riau,17901.0,11062.0,346502.0,279437.0,654901.0,Tim 2,False,False,False,False,False,True,KHG.14.02-04-05.01,True,True,True,654901.0,0.0,569154.0,85747.0
+76,KHG Sungai Kampar Kiri - Sungai Lipai,Sumatera,Riau,0.0,0.0,3493.0,218.0,3711.0,Tim 2,False,False,False,False,False,True,KHG.14.01.01,True,True,True,3711.0,0.0,1674.0,2037.0
+77,KHG Sungai Kampar Kiri - Sungai Segati,Sumatera,Riau,867.0,78.0,11997.0,3578.0,16519.0,Tim 2,False,False,False,False,False,True,KHG.14.01-05.02,True,True,True,16519.0,0.0,10220.0,6299.0
+78,KHG Sungai Kanan - Sungai Buluh,Sumatera,Riau,0.0,0.0,1286.0,1705.0,2990.0,Tim 2,False,False,False,False,False,True,KHG.14.04.04,True,True,True,2990.0,0.0,2173.0,817.0
+79,KHG Sungai Kiyap - Sungai Kampar Kiri,Sumatera,Riau,1033.0,94.0,47367.0,7789.0,56284.0,Tim 2,False,False,False,False,False,True,KHG.14.01-05.01,True,True,True,56284.0,0.0,29848.0,26436.0
+80,KHG Sungai Kiyap - Sungai Kerinci,Sumatera,Riau,2318.0,122.0,35992.0,9026.0,47458.0,Tim 2,False,False,False,False,False,True,KHG.14.01-05-11.01,True,True,True,47458.0,0.0,31360.0,16098.0
+81,KHG Sungai Kiyap - Sungai Kerumutan,Sumatera,Riau,5952.0,1229.0,75836.0,17561.0,100579.0,Tim 2,False,False,False,False,False,True,KHG.14.05.05,True,True,True,100579.0,0.0,91667.0,8912.0
+82,KHG Sungai Leko - Sungai Minas,Sumatera,Riau,1.0,0.0,828.0,58.0,887.0,Tim 2,False,False,False,False,False,True,KHG.14.08.02,True,True,True,887.0,0.0,614.0,273.0
+83,KHG Sungai Lipai - Sungai Bunut,Sumatera,Riau,0.0,0.0,4127.0,324.0,4452.0,Tim 2,False,False,False,False,False,True,KHG.14.01.02,True,True,True,4452.0,0.0,1434.0,3018.0
+84,KHG Sungai Mandiangin - Sungai Siak,Sumatera,Riau,886.0,138.0,9961.0,4415.0,15401.0,Tim 2,False,False,False,False,False,True,KHG.14.08.04,True,True,True,15401.0,0.0,12918.0,2483.0
+85,KHG Sungai Mendawai - Sungai Gasip,Sumatera,Riau,0.0,0.0,1492.0,92.0,1584.0,Tim 2,False,False,False,False,False,True,KHG.14.08.06,True,True,True,1584.0,0.0,1584.0,0.0
+86,KHG Sungai Merusi - Sungai Belanak,Sumatera,Riau,0.0,0.0,2109.0,3475.0,5584.0,Tim 2,False,False,False,False,False,True,KHG.14.04.03,True,True,True,5584.0,0.0,1728.0,3856.0
+87,KHG Sungai Minas - Sungai Mandiangin,Sumatera,Riau,5.0,7.0,818.0,424.0,1254.0,Tim 2,False,False,False,False,False,True,KHG.14.08.03,True,True,True,1254.0,0.0,1108.0,146.0
+88,KHG Sungai Nidir - Sungai Enok,Sumatera,Riau,0.0,0.0,13744.0,3167.0,16911.0,Tim 2,False,False,False,False,False,True,KHG.14.04.10,True,True,True,16911.0,0.0,9173.0,7738.0
+89,KHG Sungai Nilo - Sungai Napuh,Sumatera,Riau,58.0,2111.0,4197.0,11978.0,18344.0,Tim 2,False,False,False,False,False,True,KHG.14.05.06,True,True,True,18344.0,0.0,14632.0,3712.0
+90,KHG Sungai Pelanduk - Sungai Tumu,Sumatera,Riau,249.0,14.0,32394.0,4333.0,36990.0,Tim 2,False,False,False,False,False,True,KHG.14.04.01,True,True,True,36990.0,0.0,22742.0,14248.0
+91,KHG Sungai Rokan - Sungai Kubu,Sumatera,Riau,6494.0,3192.0,69386.0,32902.0,111975.0,Tim 2,False,False,False,False,False,True,KHG.14.07.01,True,True,True,111975.0,0.0,89421.0,22554.0
+92,KHG Sungai Rokan - Sungai Siak Kecil,Sumatera,Riau,29724.0,25088.0,258298.0,338726.0,651836.0,Tim 2,False,False,False,False,False,True,KHG.14.03-07-12.01,True,True,True,651836.0,0.0,545342.0,106494.0
+93,KHG Sungai Rokan Kiri - Sungai Mandau,Sumatera,Riau,1241.0,78.0,146126.0,8288.0,155733.0,Tim 2,False,False,False,False,False,True,KHG.14.01-03-06-08.01,True,True,True,155733.0,0.0,111579.0,44154.0
+94,KHG Sungai Rotoh - Sungai Bang,Sumatera,Riau,0.0,0.0,3397.0,1733.0,5130.0,Tim 2,False,False,False,False,False,True,KHG.14.04.07,True,True,True,5130.0,0.0,2626.0,2504.0
+95,KHG Sungai Senama Kecil - Sungai Rajaelok,Sumatera,Riau,0.0,0.0,2211.0,2902.0,5113.0,Tim 2,False,False,False,False,False,True,KHG.14.04.02,True,True,True,5113.0,0.0,2499.0,2614.0
+96,KHG Sungai Siak - Sungai Kampar,Sumatera,Riau,16501.0,4583.0,298494.0,386239.0,705817.0,Tim 2,False,False,False,False,False,True,KHG.14.05-08.01,True,True,True,705817.0,0.0,657442.0,48375.0
+97,KHG Sungai Siak Kecil - Sungai Siak,Sumatera,Riau,4573.0,2638.0,79498.0,49096.0,135805.0,Tim 2,False,False,False,False,False,True,KHG.14.03-08.01,True,True,True,135805.0,0.0,101298.0,34507.0
+98,KHG Sungai Tapung Kiri - Sungai Kiyap,Sumatera,Riau,2926.0,2282.0,16379.0,19753.0,41339.0,Tim 2,False,False,False,False,False,True,KHG.14.01-11.01,True,True,True,41339.0,0.0,19909.0,21430.0
+99,KHG Sungai Tumu,Sumatera,Riau,0.0,0.0,0.0,946.0,946.0,Tim 2,False,False,False,False,False,True,KHG.14.04.13,True,True,False,946.0,0.0,,
+100,KHG Sungai Batang - Sungai Tungkal,Sumatera,Riau,235.0,55.0,16434.0,5833.0,22557.0,Tim 2,False,False,False,False,False,True,KHG.14-15.01,True,True,True,51948.0,-29391.0,35499.0,-12942.0
+101,KHG Batang Merangin - Batang Tembesi,Sumatera,Jambi,285.0,94.0,15190.0,2026.0,17595.0,Tim 2,False,False,False,False,False,True,KHG.15.02-03.02,True,True,True,17595.0,0.0,10351.0,7244.0
+102,KHG Batang Tembei - Sungai Merak,Sumatera,Jambi,4111.0,1512.0,11615.0,2690.0,19929.0,Tim 2,False,False,False,False,False,True,KHG.15.02-03.01,True,True,True,19929.0,0.0,9366.0,10563.0
+103,KHG Sungai Batanghari - Sungai Air Hitam Laut,Sumatera,Jambi,17129.0,20460.0,57301.0,89042.0,183933.0,Tim 2,False,False,False,False,False,True,KHG.15.05-07.01,True,True,True,183933.0,0.0,155137.0,28796.0
+104,KHG Sungai Batanghari - Sungai Kampeh,Sumatera,Jambi,1974.0,46.0,35157.0,5665.0,42842.0,Tim 2,False,False,False,False,False,True,KHG.15.05.01,True,True,True,42842.0,0.0,23018.0,19824.0
+105,KHG Sungai Baung - Sungai Betara,Sumatera,Jambi,453.0,4.0,26191.0,11655.0,38304.0,Tim 2,False,False,False,False,False,True,KHG.15.06.02,True,True,True,38304.0,0.0,27826.0,10478.0
+106,KHG Sungai Betara - Sungai Mendahara,Sumatera,Jambi,508.0,35.0,38795.0,17322.0,56661.0,Tim 2,False,False,False,False,False,True,KHG.15.06-07.01,True,True,True,56661.0,0.0,24301.0,32360.0
+107,KHG Sungai Mendahara - Sungai Batanghari,Sumatera,Jambi,14897.0,14366.0,115006.0,33.0,177268.0,Tim 2,False,False,False,False,False,False,KHG.15.05-07-10.01,True,True,True,177268.0,0.0,114959.0,62309.0
+108,KHG Sungai Mesao - Aek Rawas,Sumatera,Jambi,0.0,0.0,4374.0,657.0,5031.0,Tim 2,False,False,False,False,False,True,KHG.15.03.01,True,True,True,5031.0,0.0,2935.0,2096.0
+109,KHG Sungai Pengabuan - Sungai Baung,Sumatera,Jambi,84.0,0.0,28972.0,2946.0,32001.0,Tim 2,False,False,False,False,False,True,KHG.15.06.01,True,True,True,32001.0,0.0,21953.0,10048.0
+110,KHG Sungai Air Hitam Laut - Sungai Buntu Kecil,Sumatera,Jambi,5634.0,8476.0,20630.0,80811.0,115551.0,Tim 2,False,False,False,False,False,True,KHG.15-16.01,True,True,True,125475.0,-9924.0,106925.0,8626.0
+111,KHG Sungai Lalan - Sungai Merang,Sumatera,Jambi,6.0,2.0,2466.0,876.0,3351.0,Tim 2,False,False,False,False,False,True,KHG.15-16.02,True,True,True,81594.0,-78243.0,59309.0,-55958.0
+112,KHG Aek Musi - Sungai Upang,Sumatera,Sumatera Selatan,348.0,34.0,10209.0,1655.0,12245.0,Tim 2,False,False,False,False,False,True,KHG.16.07.05,True,True,True,12245.0,0.0,744.0,11501.0
+113,KHG Aek Sebatik - Aek Musi,Sumatera,Sumatera Selatan,0.0,0.0,9910.0,600.0,10510.0,Tim 3,False,False,False,False,False,True,KHG.16.07.04,True,True,True,10510.0,0.0,822.0,9688.0
+114,KHG Air Banyuasin - Air Lalang,Sumatera,Sumatera Selatan,992.0,545.0,45125.0,4347.0,51010.0,Tim 3,False,False,False,False,False,True,KHG.16.07.02,True,True,True,51010.0,0.0,21005.0,30005.0
+115,KHG Air Banyuasin - Sungai Musi,Sumatera,Sumatera Selatan,430.0,23.0,13595.0,858.0,14907.0,Tim 3,False,False,False,False,False,True,KHG.16.07.03,True,True,True,14907.0,0.0,3035.0,11872.0
+116,KHG Delta Talang,Sumatera,Sumatera Selatan,0.0,0.0,1576.0,0.0,1576.0,Tim 3,False,False,False,False,False,True,KHG.16.07.08,True,True,False,1576.0,0.0,,
+117,KHG Sei Lalan - Sungai Bentayan,Sumatera,Sumatera Selatan,410.0,390.0,19143.0,1174.0,21118.0,Tim 3,False,False,False,False,False,True,KHG.16.06.02,True,True,True,21118.0,0.0,13967.0,7151.0
+118,KHG Sungai Alur - Sungai Lintang,Sumatera,Sumatera Selatan,52.0,15.0,3546.0,1401.0,5014.0,Tim 3,False,False,False,False,False,True,KHG.16.05.01,True,True,True,5014.0,0.0,3474.0,1540.0
+119,KHG Sungai Beberi - Sungai Way Mesuji,Sumatera,Sumatera Selatan,1537.0,1910.0,1884.0,3307.0,8639.0,Tim 3,False,False,False,False,False,True,KHG.16.02.07,True,True,True,8639.0,0.0,7655.0,984.0
+120,KHG Sungai Bentayan - Sungai Penimpahan,Sumatera,Sumatera Selatan,7806.0,1902.0,24074.0,5985.0,39768.0,Tim 3,False,False,False,False,False,True,KHG.16.06-07.04,True,True,True,39768.0,0.0,19459.0,20309.0
+121,KHG Sungai Burnai - Sungai Sibumbung,Sumatera,Sumatera Selatan,17361.0,4265.0,40587.0,17488.0,79700.0,Tim 3,False,False,False,False,False,True,KHG.16.02.05,True,True,True,79700.0,0.0,63687.0,16013.0
+122,KHG Sungai Burung - Sungai Way Mesuji,Sumatera,Sumatera Selatan,6676.0,1714.0,57645.0,11995.0,78030.0,Tim 3,False,False,False,False,False,True,KHG.16.02.08,True,True,True,78030.0,0.0,34914.0,43116.0
+123,KHG Sungai Kalumpang,Sumatera,Sumatera Selatan,2836.0,580.0,1811.0,1487.0,6714.0,Tim 3,False,False,False,False,False,True,KHG.16.05.02,True,True,True,6714.0,0.0,4282.0,2432.0
+124,KHG Sungai Medak - Sungai Lalan,Sumatera,Sumatera Selatan,2877.0,171.0,14492.0,1693.0,19233.0,Tim 3,False,False,False,False,False,True,KHG.16.06.01,True,True,True,19233.0,0.0,7615.0,11618.0
+125,KHG Sungai Merang - Sungai Ngirawan,Sumatera,Sumatera Selatan,11310.0,11075.0,29207.0,27147.0,78739.0,Tim 3,False,False,False,False,False,True,KHG.16.06-07.01,True,True,True,78739.0,0.0,71378.0,7361.0
+126,KHG Sungai Musi - Sungai Aek Lematang,Sumatera,Sumatera Selatan,1847.0,543.0,17721.0,3129.0,23241.0,Tim 3,False,False,False,False,False,True,KHG.16.03.02,True,True,True,23241.0,0.0,16663.0,6578.0
+127,KHG Sungai Musi - Sungai Blidah,Sumatera,Sumatera Selatan,2649.0,487.0,10653.0,8166.0,21954.0,Tim 3,False,False,False,False,False,True,KHG.16.03-07.01,True,True,True,21954.0,0.0,16274.0,5680.0
+128,KHG Sungai Musi - Sungai Empasan,Sumatera,Sumatera Selatan,75.0,8.0,10363.0,8437.0,18882.0,Tim 3,False,False,False,False,False,True,KHG.16.05-06.02,True,True,True,18882.0,0.0,7994.0,10888.0
+129,KHG Sungai Musi - Sungai Penu,Sumatera,Sumatera Selatan,6089.0,360.0,10830.0,8600.0,25879.0,Tim 3,False,False,False,False,False,True,KHG.16.03-06.01,True,True,True,25879.0,0.0,14804.0,11075.0
+130,KHG Sungai Musi - Sungai Rawas,Sumatera,Sumatera Selatan,4763.0,1814.0,3817.0,1957.0,12351.0,Tim 3,False,False,False,False,False,True,KHG.16.05-06.01,True,True,True,12351.0,0.0,7262.0,5089.0
+131,KHG Sungai Musi - Sungai Saleh,Sumatera,Sumatera Selatan,126.0,199.0,18746.0,2345.0,21417.0,Tim 3,False,False,False,False,False,True,KHG.16.07.06,True,True,True,21417.0,0.0,7265.0,14152.0
+132,KHG Sungai Ngirawan - Sungai Sembilang,Sumatera,Sumatera Selatan,1142.0,4451.0,31511.0,36362.0,73465.0,Tim 3,False,False,False,False,False,True,KHG.16.06-07.02,True,True,True,73465.0,0.0,58165.0,15300.0
+133,KHG Sungai Penimpahan - Sungai Air Hitam,Sumatera,Sumatera Selatan,739.0,217.0,1607.0,822.0,3385.0,Tim 3,False,False,False,False,False,True,KHG.16.07.01,True,True,True,3385.0,0.0,371.0,3014.0
+134,KHG Sungai Penu - Sungai Abah,Sumatera,Sumatera Selatan,181.0,205.0,4381.0,2943.0,7710.0,Tim 3,False,False,False,False,False,True,KHG.16.03.01,True,True,True,7710.0,0.0,5831.0,1879.0
+135,KHG Sungai Rumpit - Sungai Rawas,Sumatera,Sumatera Selatan,8172.0,6325.0,10837.0,13336.0,38669.0,Tim 3,False,False,False,False,False,True,KHG.16.05.03,True,True,True,38669.0,0.0,24206.0,14463.0
+136,KHG Sungai Saleh - Sungai Batanghari,Sumatera,Sumatera Selatan,48.0,0.0,9883.0,3.0,9933.0,Tim 3,False,False,False,False,False,True,KHG.16.07.07,True,True,True,9933.0,0.0,2984.0,6949.0
+137,KHG Sungai Saleh - Sungai Sugihan,Sumatera,Sumatera Selatan,36943.0,43589.0,18718.0,11994.0,111244.0,Tim 3,False,False,False,False,False,True,KHG.16.02-07.01,True,True,True,111244.0,0.0,56429.0,54815.0
+138,KHG Sungai Sembilang - Sungai Lalan,Sumatera,Sumatera Selatan,4362.0,1645.0,50362.0,15095.0,71464.0,Tim 3,False,False,False,False,False,True,KHG.16.06-07.03,True,True,True,71464.0,0.0,38869.0,32595.0
+139,KHG Sungai Sibumbung - Sungai Talangrimba,Sumatera,Sumatera Selatan,13830.0,41090.0,14590.0,27295.0,96805.0,Tim 3,False,False,False,False,False,True,KHG.16.02.04,True,True,True,96805.0,0.0,74316.0,22489.0
+140,KHG Sungai Sugihan - Sungai Lumpur,Sumatera,Sumatera Selatan,77372.0,49955.0,116795.0,52253.0,296376.0,Tim 3,False,False,False,False,False,True,KHG.16.02.01,True,True,True,296376.0,0.0,193739.0,102637.0
+141,KHG Sungai Talang - Sungai Ulakkedondong,Sumatera,Sumatera Selatan,6.0,9.0,0.0,0.0,16.0,Tim 3,False,False,False,False,False,True,KHG.16.02.03,True,True,True,16.0,0.0,,
+142,KHG Sungai Tandatuan - Sungai Beberi,Sumatera,Sumatera Selatan,188.0,353.0,836.0,4370.0,5747.0,Tim 3,False,False,False,False,False,True,KHG.16.02.06,True,True,True,5747.0,0.0,4887.0,860.0
+143,KHG Sungai Ulakkedondong - Sungai Lumpur,Sumatera,Sumatera Selatan,2424.0,7207.0,6121.0,7062.0,22814.0,Tim 3,False,False,False,False,False,True,KHG.16.02.02,True,True,True,22814.0,0.0,14285.0,8529.0
+144,KHG Pulau Kundur,Sumatera,Kepulauan Riau,0.0,128.0,0.0,3334.0,3462.0,Tim 3,False,False,False,False,False,True,KHG.21.02.04,True,True,True,3462.0,0.0,1441.0,2021.0
+145,KHG Sungai Kurau - Sungai Kepuh,Sumatera,Kep. Bangka Belitung,174.0,179.0,592.0,3284.0,4229.0,Tim 3,False,False,False,False,False,True,KHG.19.04.01,True,True,True,4229.0,0.0,2744.0,1485.0
+146,KHG Sungai Selan,Sumatera,Kep. Bangka Belitung,338.0,57.0,1646.0,3813.0,5855.0,Tim 3,False,False,False,False,False,True,KHG.19.01-04.01,True,True,True,5855.0,0.0,1914.0,3941.0
+147,KHG Sungai Selan - Sungai Bangka,Sumatera,Kep. Bangka Belitung,0.0,308.0,0.0,7908.0,8216.0,Tim 3,False,False,False,False,False,True,KHG.19.03-04.01,True,True,True,8216.0,0.0,4477.0,3739.0
+148,KHG Sungai Mejunto - Aek Selangkanan,Sumatera,Bengkulu,12.0,0.0,4435.0,1247.0,5695.0,Tim 3,False,False,False,False,False,True,KHG.17.06.01,True,True,True,5695.0,0.0,3852.0,1843.0
+149,KHG Aek Silaut - Aek Menjuto,Sumatera,Bengkulu,0.0,0.0,3181.0,2084.0,5265.0,Tim 3,False,False,False,False,False,True,KHG.13-17.01,True,True,True,12272.0,-7007.0,6823.0,-1558.0
+150,KHG Aek Tapan - Aek Silaut,Sumatera,Sumatera Barat,2394.0,2974.0,31805.0,11252.0,48425.0,Tim 3,False,False,False,False,False,True,KHG.13.01.01,True,True,True,48425.0,0.0,39778.0,8647.0
+151,KHG Aek Tapan - Aek Ubar,Sumatera,Sumatera Barat,1.0,62.0,2564.0,3086.0,5714.0,Tim 3,False,False,False,False,False,True,KHG.13.01.04,True,True,True,5714.0,0.0,3463.0,2251.0
+152,KHG Aek Ubar - Aek Lunang,Sumatera,Sumatera Barat,248.0,5385.0,829.0,6535.0,12997.0,Tim 3,False,False,False,False,False,True,KHG.13.01.03,True,True,True,12997.0,0.0,10024.0,2973.0
+153,KHG Bah Antokan - Sungai Tiku,Sumatera,Sumatera Barat,0.0,13.0,2298.0,1639.0,3950.0,Tim 3,False,False,False,False,False,True,KHG.13.06.01,True,True,True,3950.0,0.0,2036.0,1914.0
+154,KHG Bah Btung - Sungai Tabat,Sumatera,Sumatera Barat,0.0,0.0,6999.0,610.0,7608.0,Tim 3,False,False,False,False,False,True,KHG.13.12.01,True,True,True,7608.0,0.0,5381.0,2227.0
+155,KHG Bah Mandiangin - Bah Btung,Sumatera,Sumatera Barat,0.0,0.0,2533.0,564.0,3097.0,Tim 3,False,False,False,False,False,True,KHG.13.12.02,True,True,True,3097.0,0.0,2303.0,794.0
+156,KHG Batang Ampu - Bah Mandiangin,Sumatera,Sumatera Barat,0.0,0.0,4572.0,871.0,5443.0,Tim 3,False,False,False,False,False,True,KHG.13.12.03,True,True,True,5443.0,0.0,3809.0,1634.0
+157,KHG Batang Masangkiri - Bah Antokan,Sumatera,Sumatera Barat,0.0,0.0,3060.0,110.0,3170.0,Tim 3,False,False,False,False,False,True,KHG.13.06.02,True,True,True,3170.0,0.0,682.0,2488.0
+158,KHG Muara Sakai - Aek Bentayan,Sumatera,Sumatera Barat,0.0,0.0,3710.0,735.0,4445.0,Tim 3,False,False,False,False,False,True,KHG.13.01.05,True,True,True,4445.0,0.0,3174.0,1271.0
+159,KHG Sungai Sangku - Bah Kambang,Sumatera,Sumatera Barat,0.0,0.0,3251.0,1155.0,4406.0,Tim 3,False,False,False,False,False,True,KHG.13.01.07,True,True,True,4406.0,0.0,1935.0,2471.0
+160,KHG Sungai Tabat - Batang Masangkiri,Sumatera,Sumatera Barat,23.0,0.0,14189.0,1106.0,15318.0,Tim 3,False,False,False,False,False,True,KHG.13.06-12.01,True,True,True,15318.0,0.0,8648.0,6670.0
+161,KHG Sungai Mesuji - Sungai Kebumangah,Sumatera,Lampung,4713.0,405.0,14167.0,1334.0,20619.0,Tim 3,False,False,False,False,False,True,KHG.18.11.01,True,True,True,20619.0,0.0,10326.0,10293.0
+162,KHG Sungai Mesuji - Sungai Tulangbawang,Sumatera,Lampung,284.0,293.0,15231.0,2752.0,18560.0,Tim 3,False,False,False,False,False,True,KHG.18.05-11.01,True,True,True,18561.0,-1.0,11517.0,7043.0
+163,KHG Sungai Ambawang - Sungai Kubu,Kalimantan,Kalimantan Barat,2709.0,305.0,25398.0,9314.0,37726.0,Tim 3,False,False,False,False,False,True,KHG.61.12.06,True,True,True,37726.0,0.0,21204.0,16522.0
+164,KHG Sungai Ambawang - Sungai Landak,Kalimantan,Kalimantan Barat,41.0,102.0,12337.0,21331.0,33811.0,Tim 3,False,False,False,False,False,True,KHG.61.12-03.01,True,True,True,33811.0,0.0,25700.0,8111.0
+165,KHG Sungai Belimbing - Sungai Menunuh,Kalimantan,Kalimantan Barat,0.0,1.0,442.0,362.0,804.0,Tim 3,False,False,False,False,False,True,KHG.61.10.03,True,True,True,804.0,0.0,336.0,468.0
+166,KHG Sungai Bunut - Sungai Kapuas,Kalimantan,Kalimantan Barat,0.0,64.0,0.0,1670.0,1733.0,Tim 3,False,False,False,False,False,True,KHG.61.06.08,True,True,True,1733.0,0.0,1473.0,260.0
+167,KHG Sungai Dadau - Sungai Sikan,Kalimantan,Kalimantan Barat,109.0,108.0,5912.0,7895.0,14023.0,Tim 3,False,False,False,False,False,True,KHG.61.01.02,True,True,True,14023.0,0.0,5351.0,8672.0
+168,KHG Sungai Duri - Sungai Raya,Kalimantan,Kalimantan Barat,1304.0,70.0,9861.0,6776.0,18010.0,Tim 3,False,False,False,False,False,True,KHG.61.07.02,True,True,True,18010.0,0.0,6327.0,11683.0
+169,KHG Sungai Durian - Sungai Kualan,Kalimantan,Kalimantan Barat,8769.0,3318.0,45056.0,56799.0,113941.0,Tim 4,False,False,False,False,False,True,KHG.61.11-04.01,True,True,True,113941.0,0.0,64779.0,49162.0
+170,KHG Sungai Durian - Sungai Labai,Kalimantan,Kalimantan Barat,1850.0,205.0,3764.0,11772.0,17590.0,Tim 4,False,False,False,False,False,True,KHG.61.12.09,True,True,True,17590.0,0.0,8274.0,9316.0
+171,KHG Sungai Inggis - Sungai Kapuas,Kalimantan,Kalimantan Barat,0.0,13.0,513.0,1409.0,1934.0,Tim 4,False,False,False,False,False,True,KHG.61.03-09.02,True,True,True,1934.0,0.0,536.0,1398.0
+172,KHG Sungai Jerora - Sungai Majau,Kalimantan,Kalimantan Barat,0.0,0.0,2757.0,571.0,3328.0,Tim 4,False,False,False,False,False,True,KHG.61.05.12,True,True,True,3328.0,0.0,2302.0,1026.0
+173,KHG Sungai Kapuas,Kalimantan,Kalimantan Barat,14.0,0.0,4729.0,1884.0,6627.0,Tim 4,False,False,False,False,False,True,KHG.61.12.03,True,True,True,6627.0,0.0,4264.0,2363.0
+174,KHG Sungai Kapuas - Sungai Ambawang,Kalimantan,Kalimantan Barat,6438.0,1708.0,87768.0,61139.0,157054.0,Tim 4,False,False,False,False,False,True,KHG.61.71-12-03.01,True,True,True,157054.0,0.0,139138.0,17916.0
+175,KHG Sungai Kapuas - Sungai Asam,Kalimantan,Kalimantan Barat,0.0,0.0,163.0,462.0,625.0,Tim 4,False,False,False,False,False,True,KHG.61.09.04,True,True,True,625.0,0.0,149.0,476.0
+176,KHG Sungai Kapuas - Sungai Ayak,Kalimantan,Kalimantan Barat,0.0,0.0,3243.0,4148.0,7391.0,Tim 4,False,False,False,False,False,True,KHG.61.09.02,True,True,True,7391.0,0.0,1558.0,5833.0
+177,KHG Sungai Kapuas - Sungai Baiangtuk,Kalimantan,Kalimantan Barat,21.0,216.0,7621.0,12605.0,20462.0,Tim 4,False,False,False,False,False,True,KHG.61.05.10,True,True,True,20462.0,0.0,13512.0,6950.0
+178,KHG Sungai Kapuas - Sungai Beran,Kalimantan,Kalimantan Barat,0.0,0.0,8.0,2.0,10.0,Tim 4,False,False,False,False,False,True,KHG.61.06.13,True,True,True,10.0,0.0,,
+179,KHG Sungai Kapuas - Sungai Campedik,Kalimantan,Kalimantan Barat,86.0,13.0,1715.0,2156.0,3970.0,Tim 4,False,False,False,False,False,True,KHG.61.03.01,True,True,True,3970.0,0.0,953.0,3017.0
+180,KHG Sungai Kapuas - Sungai Dawak,Kalimantan,Kalimantan Barat,124.0,1.0,2085.0,153.0,2363.0,Tim 4,False,False,False,False,False,True,KHG.61.12.05,True,True,True,2363.0,0.0,1259.0,1104.0
+181,KHG Sungai Kapuas - Sungai Embau,Kalimantan,Kalimantan Barat,21.0,0.0,1591.0,1529.0,3140.0,Tim 4,False,False,False,False,False,True,KHG.61.06.06,True,True,True,3140.0,0.0,1269.0,1871.0
+182,KHG Sungai Kapuas - Sungai Jelawat Besar,Kalimantan,Kalimantan Barat,18.0,0.0,739.0,1966.0,2722.0,Tim 4,False,False,False,False,False,True,KHG.61.06-05.03,True,True,True,2722.0,0.0,1299.0,1423.0
+183,KHG Sungai Kapuas - Sungai Jentu,Kalimantan,Kalimantan Barat,17.0,13.0,6147.0,11525.0,17701.0,Tim 4,False,False,False,False,False,True,KHG.61.06-05.01,True,True,True,17701.0,0.0,12947.0,4754.0
+184,KHG Sungai Kapuas - Sungai Ketungau,Kalimantan,Kalimantan Barat,563.0,457.0,9971.0,23524.0,34514.0,Tim 4,False,False,False,False,False,True,KHG.61.05.08,True,True,True,34514.0,0.0,21598.0,12916.0
+185,KHG Sungai Kapuas - Sungai Kubu,Kalimantan,Kalimantan Barat,0.0,0.0,746.0,891.0,1638.0,Tim 4,False,False,False,False,False,True,KHG.61.09.03,True,True,True,1638.0,0.0,686.0,952.0
+186,KHG Sungai Kapuas - Sungai Maday,Kalimantan,Kalimantan Barat,0.0,69.0,0.0,5505.0,5574.0,Tim 4,False,False,False,False,False,True,KHG.61.06.09,True,True,False,5574.0,0.0,3283.0,2291.0
+187,KHG Sungai Kapuas - Sungai Mandor,Kalimantan,Kalimantan Barat,4068.0,83.0,55151.0,10206.0,69508.0,Tim 4,False,False,False,False,False,True,KHG.61.02-08-12-71.01,True,True,True,69508.0,0.0,56832.0,12676.0
+188,KHG Sungai Kapuas - Sungai Manyam,Kalimantan,Kalimantan Barat,0.0,0.0,540.0,88.0,628.0,Tim 4,False,False,False,False,False,True,KHG.61.05.09,True,True,True,628.0,0.0,267.0,361.0
+189,KHG Sungai Kapuas - Sungai Mendawak,Kalimantan,Kalimantan Barat,91.0,219.0,19838.0,46190.0,66337.0,Tim 4,False,False,False,False,False,True,KHG.61.03.06,True,True,True,66337.0,0.0,51971.0,14366.0
+190,KHG Sungai Kapuas - Sungai Muna,Kalimantan,Kalimantan Barat,0.0,0.0,264.0,943.0,1208.0,Tim 4,False,False,False,False,False,True,KHG.61.03.08,True,True,True,1208.0,0.0,644.0,564.0
+191,KHG Sungai Kapuas - Sungai Muntik,Kalimantan,Kalimantan Barat,0.0,0.0,0.0,271.0,271.0,Tim 4,False,False,False,False,False,True,KHG.61.06.12,True,True,False,271.0,0.0,143.0,128.0
+192,KHG Sungai Kapuas - Sungai Sebidau,Kalimantan,Kalimantan Barat,3.0,6.0,836.0,373.0,1217.0,Tim 4,False,False,False,False,False,True,KHG.61.09.05,True,True,True,1217.0,0.0,412.0,805.0
+193,KHG Sungai Kapuas - Sungai Separoh,Kalimantan,Kalimantan Barat,0.0,0.0,1584.0,2281.0,3866.0,Tim 4,False,False,False,False,False,True,KHG.61.12.04,True,True,True,3866.0,0.0,2386.0,1480.0
+194,KHG Sungai Kapuas - Sungai Sibau,Kalimantan,Kalimantan Barat,254.0,24.0,5354.0,20441.0,26073.0,Tim 4,False,False,False,False,False,True,KHG.61.06.04,True,True,True,26073.0,0.0,15198.0,10875.0
+195,KHG Sungai Keludai - Sungai Merakai,Kalimantan,Kalimantan Barat,0.0,8.0,0.0,928.0,936.0,Tim 4,False,False,False,False,False,True,KHG.61.05.06,True,True,False,936.0,0.0,321.0,615.0
+196,KHG Sungai Kepulu - Sungai Pesaguan,Kalimantan,Kalimantan Barat,1205.0,2733.0,215.0,9417.0,13570.0,Tim 4,False,False,False,False,False,True,KHG.61.04.09,True,True,True,13570.0,0.0,10110.0,3460.0
+197,KHG Sungai Keramat - Sungai Jelai,Kalimantan,Kalimantan Barat,311.0,3502.0,3514.0,14309.0,21637.0,Tim 4,False,False,False,False,False,True,KHG.61.04.14,True,True,True,21640.0,-3.0,12821.0,8816.0
+198,KHG Sungai Ketungau - Sungai Berau,Kalimantan,Kalimantan Barat,10.0,1.0,2420.0,3458.0,5888.0,Tim 4,False,False,False,False,False,True,KHG.61.06-05.02,True,True,True,5888.0,0.0,2870.0,3018.0
+199,KHG Sungai Ketungau - Sungai Mualang,Kalimantan,Kalimantan Barat,0.0,37.0,0.0,1340.0,1376.0,Tim 4,False,False,False,False,False,True,KHG.61.05.03,True,True,False,1376.0,0.0,497.0,879.0
+200,KHG Sungai Ketungau - Sungai Segarau,Kalimantan,Kalimantan Barat,9.0,0.0,8795.0,4198.0,13002.0,Tim 4,False,False,False,False,False,True,KHG.61.05.07,True,True,True,13002.0,0.0,7131.0,5871.0
+201,KHG Sungai Ketungau - Sungai Sejelu,Kalimantan,Kalimantan Barat,8.0,0.0,333.0,341.0,682.0,Tim 4,False,False,False,False,False,True,KHG.61.05.01,True,True,True,682.0,0.0,251.0,431.0
+202,KHG Sungai Ketungau - Sungai Serasau,Kalimantan,Kalimantan Barat,0.0,0.0,0.0,346.0,346.0,Tim 4,False,False,False,False,False,True,KHG.61.05.02,True,True,False,346.0,0.0,94.0,252.0
+203,KHG Sungai Kubu - Sungai Pungurbesar,Kalimantan,Kalimantan Barat,1657.0,98.0,18392.0,1082.0,21229.0,Tim 4,False,False,False,False,False,True,KHG.61.12.02,True,True,True,21229.0,0.0,13400.0,7829.0
+204,KHG Sungai Kumba - Sungai Setap,Kalimantan,Kalimantan Barat,171.0,0.0,17204.0,1946.0,19321.0,Tim 4,False,False,False,False,False,True,KHG.61.01-07.02,True,True,True,19321.0,0.0,16776.0,2545.0
+205,KHG Sungai Kungan - Sungai Ketungau,Kalimantan,Kalimantan Barat,11.0,14.0,672.0,965.0,1663.0,Tim 4,False,False,False,False,False,True,KHG.61.05.04,True,True,True,1663.0,0.0,612.0,1051.0
+206,KHG Sungai Labai,Kalimantan,Kalimantan Barat,0.0,0.0,229.0,6955.0,7183.0,Tim 4,False,False,False,False,False,True,KHG.61.04.01,True,True,True,7183.0,0.0,3979.0,3204.0
+207,KHG Sungai Labai - Sungai Ambawang Besar,Kalimantan,Kalimantan Barat,0.0,0.0,1386.0,400.0,1786.0,Tim 4,False,False,False,False,False,True,KHG.61.03.14,True,True,True,1786.0,0.0,1178.0,608.0
+208,KHG Sungai Labai - Sungai Bantilkecil,Kalimantan,Kalimantan Barat,0.0,0.0,1073.0,272.0,1345.0,Tim 4,False,False,False,False,False,True,KHG.61.04.02,True,True,True,1345.0,0.0,533.0,812.0
+209,KHG Sungai Mading - Sungai Jelai,Kalimantan,Kalimantan Barat,3161.0,2509.0,11803.0,600.0,18074.0,Tim 4,False,False,False,False,False,True,KHG.61.04.15,True,True,True,18074.0,0.0,548.0,17526.0
+210,KHG Sungai Mandor - Sungai Landak,Kalimantan,Kalimantan Barat,0.0,0.0,2851.0,1940.0,4791.0,Tim 4,False,False,False,False,False,True,KHG.61.08.02,True,True,False,4791.0,0.0,,
+211,KHG Sungai Mandor - Sungai Temila,Kalimantan,Kalimantan Barat,41.0,3.0,12614.0,4089.0,16747.0,Tim 4,False,False,False,False,False,True,KHG.61.08-12.01,True,True,True,16747.0,0.0,13721.0,3026.0
+212,KHG Sungai Mange - Sungai Dadau,Kalimantan,Kalimantan Barat,2406.0,285.0,17317.0,3816.0,23823.0,Tim 4,False,False,False,False,False,True,KHG.61.01.01,True,True,True,23823.0,0.0,7894.0,15929.0
+213,KHG Sungai Matan - Sungai Rantaupanjang,Kalimantan,Kalimantan Barat,2397.0,486.0,4560.0,4131.0,11573.0,Tim 4,False,False,False,False,False,True,KHG.61.11.02,True,True,True,11573.0,0.0,3155.0,8418.0
+214,KHG Sungai Matan -Sungai Semandang,Kalimantan,Kalimantan Barat,1.0,0.0,162.0,182.0,346.0,Tim 4,False,False,False,False,False,True,KHG.61.11-04.02,True,True,False,346.0,0.0,,
+215,KHG Sungai Melawi - Sungai Batunanta,Kalimantan,Kalimantan Barat,1894.0,117.0,4465.0,4621.0,11096.0,Tim 4,False,False,False,False,False,True,KHG.61.05-10.01,True,True,True,11096.0,0.0,5661.0,5435.0
+216,KHG Sungai Melawi - Sungai Sirai,Kalimantan,Kalimantan Barat,0.0,1.0,796.0,897.0,1695.0,Tim 4,False,False,False,False,False,True,KHG.61.05.18,True,True,True,1695.0,0.0,525.0,1170.0
+217,KHG Sungai Mempawah - Sungai Duri,Kalimantan,Kalimantan Barat,2144.0,394.0,12724.0,13916.0,29178.0,Tim 4,False,False,False,False,False,True,KHG.61.02.01,True,True,True,29178.0,0.0,21702.0,7476.0
+218,KHG Sungai Mempawah - Sungai Peniti,Kalimantan,Kalimantan Barat,5860.0,105.0,35803.0,4764.0,46531.0,Tim 4,False,False,False,False,False,True,KHG.61.02-08.01,True,True,True,46531.0,0.0,33769.0,12762.0
+219,KHG Sungai Menterap - Sungai Kerabat,Kalimantan,Kalimantan Barat,9.0,1.0,491.0,640.0,1142.0,Tim 4,False,False,False,False,False,True,KHG.61.09.08,True,True,True,1142.0,0.0,702.0,440.0
+220,KHG Sungai Nahaya - Sungai Landak,Kalimantan,Kalimantan Barat,0.0,2.0,7.0,2408.0,2418.0,Tim 4,False,False,False,False,False,True,KHG.61.08.06,True,True,False,2418.0,0.0,640.0,1778.0
+221,KHG Sungai Pawan - Sungai Kepulu,Kalimantan,Kalimantan Barat,6827.0,6438.0,20917.0,16997.0,51179.0,Tim 4,False,False,False,False,False,True,KHG.61.04.08,True,True,True,51179.0,0.0,29902.0,21277.0
+222,KHG Sungai Pawan - Sungai Tolak,Kalimantan,Kalimantan Barat,14425.0,4183.0,32177.0,53294.0,104079.0,Tim 4,False,False,False,False,False,True,KHG.61.04.07,True,True,True,104079.0,0.0,69209.0,34870.0
+223,KHG Sungai Penyangkat - Sungai Selat Maya,Kalimantan,Kalimantan Barat,7172.0,3057.0,28673.0,53022.0,91923.0,Tim 4,False,False,False,False,False,True,KHG.61.12.10,True,True,True,91923.0,0.0,49955.0,41968.0
+224,KHG Sungai Punggurbesar - Sungai Ambawang,Kalimantan,Kalimantan Barat,928.0,165.0,41061.0,12759.0,54914.0,Tim 4,False,False,False,False,False,True,KHG.61.12.01,True,True,True,54914.0,0.0,37603.0,17311.0
+225,KHG Sungai Pungurbesar - Sungai Kapuas,Kalimantan,Kalimantan Barat,18686.0,2286.0,58022.0,5392.0,84385.0,Tim 5,False,False,False,False,False,True,KHG.61.12-71.01,True,True,True,84385.0,0.0,53114.0,31271.0
+226,KHG Sungai Rambai - Sungai Meliau,Kalimantan,Kalimantan Barat,0.0,0.0,0.0,17.0,17.0,Tim 5,False,False,False,False,False,True,KHG.61.03.09,True,True,False,17.0,0.0,,
+227,KHG Sungai Raya - Sungai Pangnilang,Kalimantan,Kalimantan Barat,1044.0,76.0,7880.0,4023.0,13023.0,Tim 5,False,False,False,False,False,True,KHG.61.72-7.01,True,True,True,13023.0,0.0,5349.0,7674.0
+228,KHG Sungai Sabuak - Sungai Landak,Kalimantan,Kalimantan Barat,23.0,3.0,5060.0,874.0,5960.0,Tim 5,False,False,False,False,False,True,KHG.61.07.03,True,True,True,5960.0,0.0,2142.0,3818.0
+229,KHG Sungai Samabas Kecil - Sungai Teberau,Kalimantan,Kalimantan Barat,0.0,0.0,906.0,481.0,1386.0,Tim 5,False,False,False,False,False,True,KHG.61.01.06,True,True,True,1386.0,0.0,254.0,1132.0
+230,KHG Sungai Sambas Besar - Sungai Kumba,Kalimantan,Kalimantan Barat,9.0,0.0,7641.0,1715.0,9365.0,Tim 5,False,False,False,False,False,True,KHG.61.01.09,True,True,True,9365.0,0.0,1283.0,8082.0
+231,KHG Sungai Sambas Besar - Sungai Seiyung,Kalimantan,Kalimantan Barat,7404.0,2486.0,31473.0,7024.0,48387.0,Tim 5,False,False,False,False,False,True,KHG.61.01.05,True,True,True,48387.0,0.0,22907.0,25480.0
+232,KHG Sungai Sambas Besar - Sungai Sijang,Kalimantan,Kalimantan Barat,0.0,0.0,9539.0,2484.0,12022.0,Tim 5,False,False,False,False,False,True,KHG.61.01.04,True,True,True,12022.0,0.0,4945.0,7077.0
+233,KHG Sungai Sambas Kecil - Sungai Sambas Besar,Kalimantan,Kalimantan Barat,0.0,0.0,4507.0,1253.0,5760.0,Tim 5,False,False,False,False,False,True,KHG.61.01.08,True,True,True,5760.0,0.0,1561.0,4199.0
+234,KHG Sungai Sambih,Kalimantan,Kalimantan Barat,0.0,0.0,981.0,979.0,1960.0,Tim 5,False,False,False,False,False,True,KHG.61.08.03,True,True,True,1960.0,0.0,1078.0,882.0
+235,KHG Sungai Sambih - Sungai Landak,Kalimantan,Kalimantan Barat,115.0,0.0,8316.0,6329.0,14760.0,Tim 5,False,False,False,False,False,True,KHG.61.08.04,True,True,True,14760.0,0.0,6765.0,7995.0
+236,KHG Sungai Sedawar - Sungai Sambas Besar,Kalimantan,Kalimantan Barat,0.0,0.0,122.0,390.0,513.0,Tim 5,False,False,False,False,False,True,KHG.61.01.10,True,True,True,513.0,0.0,398.0,115.0
+237,KHG Sungai Sekadau - Sungai Kenawan,Kalimantan,Kalimantan Barat,0.0,3.0,26.0,1291.0,1320.0,Tim 5,False,False,False,False,False,True,KHG.61.09.06,True,True,False,1320.0,0.0,115.0,1205.0
+238,KHG Sungai Sekadau - Sungai Menterap,Kalimantan,Kalimantan Barat,4.0,9.0,591.0,2213.0,2816.0,Tim 5,False,False,False,False,False,True,KHG.61.09.07,True,True,True,2816.0,0.0,1018.0,1798.0
+239,KHG Sungai Sekatau - Sungai Kebangak,Kalimantan,Kalimantan Barat,0.0,0.0,778.0,210.0,988.0,Tim 5,False,False,False,False,False,True,KHG.61.05.05,True,True,True,988.0,0.0,409.0,579.0
+240,KHG Sungai Selakau - Sungai Sebangkau,Kalimantan,Kalimantan Barat,695.0,199.0,4922.0,305.0,6121.0,Tim 5,False,False,False,False,False,True,KHG.61.01.11,True,True,True,6121.0,0.0,1852.0,4269.0
+241,KHG Sungai Selat Maya - Sungai Aping,Kalimantan,Kalimantan Barat,9922.0,2626.0,21955.0,65499.0,100002.0,Tim 5,False,False,False,False,False,True,KHG.61.11.01,True,True,True,100002.0,0.0,54712.0,45290.0
+242,KHG Sungai Sengah - Sungai Landak,Kalimantan,Kalimantan Barat,30.0,24.0,4798.0,2779.0,7630.0,Tim 5,False,False,False,False,False,True,KHG.61.08.05,True,True,True,7630.0,0.0,1337.0,6293.0
+243,KHG Sungai Sentinok - Sungai Kumba,Kalimantan,Kalimantan Barat,53.0,0.0,11178.0,0.0,11232.0,Tim 5,False,False,False,False,False,True,KHG.61.01-07.01,True,True,True,11232.0,0.0,5182.0,6050.0
+244,KHG Sungai Siduk - Sungai Rantaupanjang,Kalimantan,Kalimantan Barat,1132.0,1480.0,2693.0,16300.0,21605.0,Tim 5,False,False,False,False,False,True,KHG.61.11.03,True,True,True,21605.0,0.0,13053.0,8552.0
+245,KHG Sungai Sijang - Sungai Bantanan,Kalimantan,Kalimantan Barat,0.0,0.0,3525.0,790.0,4315.0,Tim 5,False,False,False,False,False,True,KHG.61.01.03,True,True,True,4315.0,0.0,546.0,3769.0
+246,KHG Sungai Talungai - Sungai Emparayau,Kalimantan,Kalimantan Barat,74.0,5.0,4228.0,1183.0,5490.0,Tim 5,False,False,False,False,False,True,KHG.61.05.13,True,True,True,5490.0,0.0,2711.0,2779.0
+247,KHG Sungai Tapah - Sungai Pesaguan,Kalimantan,Kalimantan Barat,2982.0,2442.0,1388.0,12944.0,19755.0,Tim 5,False,False,False,False,False,True,KHG.61.04.10,True,True,True,19755.0,0.0,16465.0,3290.0
+248,KHG Sungai Temila - Sungai Mandor,Kalimantan,Kalimantan Barat,117.0,18.0,8356.0,5028.0,13518.0,Tim 5,False,False,False,False,False,True,KHG.61.08.01,True,True,True,13518.0,0.0,7414.0,6104.0
+249,KHG Sungai Tempunak,Kalimantan,Kalimantan Barat,0.0,7.0,3807.0,2515.0,6329.0,Tim 5,False,False,False,False,False,True,KHG.61.05.16,True,True,True,6329.0,0.0,2922.0,3407.0
+250,KHG Sungai Tempunak - Sungai Penjernang,Kalimantan,Kalimantan Barat,0.0,20.0,2606.0,2780.0,5407.0,Tim 5,False,False,False,False,False,True,KHG.61.05.17,True,True,True,5407.0,0.0,3216.0,2191.0
+251,KHG Sungai Tengar - Sungai Tapah,Kalimantan,Kalimantan Barat,3239.0,4274.0,6818.0,22236.0,36566.0,Tim 5,False,False,False,False,False,True,KHG.61.04.11,True,True,True,36566.0,0.0,12217.0,24349.0
+252,KHG Sungai Terentang - Sungai Kapuas,Kalimantan,Kalimantan Barat,1308.0,585.0,63282.0,86905.0,152080.0,Tim 5,False,False,False,False,False,True,KHG.61.12.07,True,True,True,152080.0,0.0,122180.0,29900.0
+253,KHG Sungai Tolak - Sungai Siduk,Kalimantan,Kalimantan Barat,2861.0,2264.0,14806.0,8070.0,28002.0,Tim 5,False,False,False,False,False,True,KHG.61.04.06,True,True,True,28002.0,0.0,11845.0,16157.0
+254,KHG Sungai Yebour - Sungai Landak,Kalimantan,Kalimantan Barat,5.0,0.0,14253.0,14164.0,28422.0,Tim 5,False,False,False,False,False,True,KHG.61.08-12-3.1,True,True,True,28422.0,0.0,19496.0,8926.0
+255,KHG Sungai Arut,Kalimantan,Kalimantan Tengah,0.0,0.0,537.0,363.0,899.0,Tim 5,False,False,False,False,False,True,KHG.62.01.03,True,True,True,899.0,0.0,789.0,110.0
+256,KHG Sungai Barito - Sungai Ayuh,Kalimantan,Kalimantan Tengah,0.0,34.0,0.0,2503.0,2536.0,Tim 5,False,False,False,False,False,True,KHG.62.04.01,True,True,True,2536.0,0.0,,
+257,KHG Sungai Barito - Sungai Napu,Kalimantan,Kalimantan Tengah,977.0,891.0,1675.0,2261.0,5804.0,Tim 5,False,False,False,False,False,True,KHG.62.04.02,True,True,True,5804.0,0.0,26.0,5778.0
+258,KHG Sungai Bila - Sungai Rasaw,Kalimantan,Kalimantan Tengah,1708.0,1898.0,11879.0,6564.0,22049.0,Tim 5,False,False,False,False,False,True,KHG.62.01-08.01,True,True,True,22049.0,0.0,8022.0,14027.0
+259,KHG Sungai Buluh Besar,Kalimantan,Kalimantan Tengah,5727.0,21654.0,5073.0,102287.0,134742.0,Tim 5,False,False,False,False,False,True,KHG.62.01-07.02,True,True,True,134742.0,0.0,70971.0,63771.0
+260,KHG Sungai Buluh Besar - Sungai Seruyan,Kalimantan,Kalimantan Tengah,4546.0,14689.0,55811.0,205162.0,280207.0,Tim 5,False,False,False,False,False,True,KHG.62.01-07.01,True,True,True,280207.0,0.0,134883.0,145324.0
+261,KHG Sungai Jelai - Sungai Bila,Kalimantan,Kalimantan Tengah,167.0,1575.0,1643.0,13568.0,16953.0,Tim 5,False,False,False,False,False,True,KHG.61-62.01,True,True,True,16953.0,0.0,4937.0,12016.0
+262,KHG Sungai Kahayan - Sungai Kapuas,Kalimantan,Kalimantan Tengah,38519.0,28501.0,103649.0,140955.0,311623.0,Tim 5,False,False,False,False,False,True,KHG.62.03-11.01,True,True,True,311623.0,0.0,223823.0,87800.0
+263,KHG Sungai Kahayan - Sungai Sebangau,Kalimantan,Kalimantan Tengah,93172.0,99632.0,151447.0,80023.0,424274.0,Tim 5,False,False,False,False,False,True,KHG.62.11-14.02,True,True,True,424274.0,0.0,311339.0,112935.0
+264,KHG Sungai Kapuas - Sungai Barito,Kalimantan,Kalimantan Tengah,31365.0,24182.0,99613.0,149989.0,305149.0,Tim 5,False,False,False,False,False,True,KHG.62.03-04.01,True,True,True,305149.0,0.0,245046.0,60103.0
+265,KHG Sungai Kapuas - Sungai Mangkutup,Kalimantan,Kalimantan Tengah,6.0,333.0,430.0,5742.0,6510.0,Tim 5,False,False,False,False,False,True,KHG.62.03.01,True,True,True,6510.0,0.0,2120.0,4390.0
+266,KHG Sungai Kapuas - Sungai Murui,Kalimantan,Kalimantan Tengah,0.0,19.0,2.0,9258.0,9280.0,Tim 5,False,False,False,False,False,True,KHG.62.03.02,True,True,True,9280.0,0.0,819.0,8461.0
+267,KHG Sungai Katingan - Sungai Klaru,Kalimantan,Kalimantan Tengah,404.0,628.0,3727.0,2539.0,7298.0,Tim 5,False,False,False,False,False,True,KHG.62.06.02,True,True,True,7298.0,0.0,5877.0,1421.0
+268,KHG Sungai Katingan - Sungai Mentaya,Kalimantan,Kalimantan Tengah,7594.0,10360.0,39272.0,123790.0,181016.0,Tim 5,False,False,False,False,False,True,KHG.62.02-06.01,True,True,True,181016.0,0.0,137621.0,43395.0
+269,KHG Sungai Katingan - Sungai Sebangau,Kalimantan,Kalimantan Tengah,21854.0,52390.0,29687.0,400913.0,504844.0,Tim 5,False,False,False,False,False,True,KHG.62.06-11-14.01,True,True,True,504844.0,0.0,411869.0,92975.0
+270,KHG Sungai Kumai - Sungai Sekonyer,Kalimantan,Kalimantan Tengah,317.0,25.0,4810.0,650.0,5802.0,Tim 5,False,False,False,False,False,True,KHG.62.01.05,True,True,True,5802.0,0.0,1160.0,4642.0
+271,KHG Sungai Lamandau - Sungai Arut,Kalimantan,Kalimantan Tengah,2930.0,411.0,14814.0,19068.0,37223.0,Tim 5,False,False,False,False,False,True,KHG.62.01.02,True,True,True,37223.0,0.0,32908.0,4315.0
+272,KHG Sungai Lamandau - Sungai Jelai,Kalimantan,Kalimantan Tengah,5231.0,7016.0,19084.0,54134.0,85466.0,Tim 5,False,False,False,False,False,True,KHG.62.01-08.02,True,True,True,85468.0,-2.0,43651.0,41815.0
+273,KHG Sungai Lamandau - Sungai Kumai,Kalimantan,Kalimantan Tengah,3854.0,3010.0,22745.0,12461.0,42070.0,Tim 5,False,False,False,False,False,True,KHG.62.01.04,True,True,True,42070.0,0.0,9887.0,32183.0
+274,KHG Sungai Mangkatip - Sungai Barito 1,Kalimantan,Kalimantan Tengah,21029.0,2781.0,7475.0,1317.0,32601.0,Tim 5,False,False,False,False,False,True,KHG.62.03.03,True,True,True,32601.0,0.0,14023.0,18578.0
+275,KHG Sungai Mangkatip - Sungai Barito 2,Kalimantan,Kalimantan Tengah,2339.0,4054.0,5031.0,7047.0,18470.0,Tim 5,False,False,False,False,False,True,KHG.62.04.03,True,True,True,18470.0,0.0,7274.0,11196.0
+276,KHG Sungai Mentaya - Sungai Cempaga,Kalimantan,Kalimantan Tengah,760.0,467.0,35052.0,16344.0,52623.0,Tim 5,False,False,False,False,False,True,KHG.62.02.03,True,True,True,52623.0,0.0,29092.0,23531.0
+277,KHG Sungai Mentaya - Sungai Seranau Kiri,Kalimantan,Kalimantan Tengah,1823.0,391.0,5618.0,4250.0,12082.0,Tim 5,False,False,False,False,False,True,KHG.62.02.02,True,True,True,12082.0,0.0,6093.0,5989.0
+278,KHG Sungai Mentaya - Sungai Tualan,Kalimantan,Kalimantan Tengah,34.0,751.0,1744.0,1486.0,4016.0,Tim 5,False,False,False,False,False,True,KHG.62.02.01,True,True,True,4016.0,0.0,1134.0,2882.0
+279,KHG Sungai Pukun - Sungai Kelua Besar,Kalimantan,Kalimantan Tengah,4025.0,11573.0,10355.0,46703.0,72655.0,Tim 5,False,False,False,False,False,True,KHG.62.07.03,True,True,True,72655.0,0.0,39158.0,33497.0
+280,KHG Sungai Pukun - Sungai Mentaya,Kalimantan,Kalimantan Tengah,19072.0,11902.0,84861.0,108350.0,224185.0,Tim 5,False,False,False,False,False,True,KHG.62.02-07.02,True,True,True,224185.0,0.0,124374.0,99811.0
+281,KHG Sungai Pukun - Sungai Seruyan,Kalimantan,Kalimantan Tengah,3380.0,7076.0,10734.0,66125.0,87316.0,Tim 6,False,False,False,False,False,True,KHG.62.02-07.01,True,True,True,87316.0,0.0,58820.0,28496.0
+282,KHG Sungai Rasaw - Sungai Lamandau,Kalimantan,Kalimantan Tengah,179.0,266.0,13479.0,12263.0,26188.0,Tim 6,False,False,False,False,False,True,KHG.62.01.01,True,True,True,26188.0,0.0,7089.0,19099.0
+283,KHG Sungai Rungan - Sungai Kahayan,Kalimantan,Kalimantan Tengah,95.0,43.0,661.0,15521.0,16320.0,Tim 6,False,False,False,False,False,True,KHG.62.11-14.01,True,True,True,16320.0,0.0,9657.0,6663.0
+284,KHG Sungai Sampang - Sungai Kala,Kalimantan,Kalimantan Tengah,1439.0,1592.0,2132.0,8940.0,14103.0,Tim 6,False,False,False,False,False,True,KHG.62.06.01,True,True,True,14103.0,0.0,11449.0,2654.0
+285,KHG Sungai Seruyan - Sungai Kelua Besar,Kalimantan,Kalimantan Tengah,2692.0,3467.0,8921.0,14632.0,29712.0,Tim 6,False,False,False,False,False,True,KHG.62.07.02,True,True,True,29712.0,0.0,17406.0,12306.0
+286,KHG Sungai Seruyan - Sungai Sembuluh,Kalimantan,Kalimantan Tengah,1234.0,395.0,13441.0,12089.0,27159.0,Tim 6,False,False,False,False,False,True,KHG.62.07.01,True,True,True,27159.0,0.0,9835.0,17324.0
+287,KHG Sungai Utar - Sungai Serapat,Kalimantan,Kalimantan Tengah,654.0,745.0,1690.0,1173.0,4262.0,Tim 6,False,False,False,False,False,True,KHG.62-63.01,True,True,True,23949.0,-19687.0,18282.0,-14020.0
+288,KHG Sungai Balangan - Sungai Batangalai,Kalimantan,Kalimantan Selatan,6065.0,351.0,14268.0,2367.0,23051.0,Tim 6,False,False,False,False,False,True,KHG.63.07-08-11.01,True,True,True,23051.0,0.0,14085.0,8966.0
+289,KHG Sungai Barito - Sungai Alalak,Kalimantan,Kalimantan Selatan,4581.0,122.0,15386.0,460.0,20550.0,Tim 6,False,False,False,False,False,True,KHG.63.03-05.01,True,True,True,20550.0,0.0,7531.0,13019.0
+290,KHG Sungai Barito - Sungai Taping,Kalimantan,Kalimantan Selatan,11870.0,10507.0,24893.0,4565.0,51835.0,Tim 6,False,False,False,False,False,True,KHG.63.04-05-06-08.01,True,True,True,51835.0,0.0,10906.0,40929.0
+291,KHG Sungai Belayan - Sungai Kelinjau,Kalimantan,Kalimantan Timur,1459.0,4669.0,7411.0,64642.0,78182.0,Tim 6,False,False,False,False,False,True,KHG.64.02-08.01,True,True,True,78182.0,0.0,72851.0,5331.0
+292,KHG Sungai Belayan - Sungai Melintang,Kalimantan,Kalimantan Timur,0.0,1708.0,0.0,5302.0,7010.0,Tim 6,False,False,False,False,False,True,KHG.64.02.01,True,True,True,7010.0,0.0,5709.0,1301.0
+293,KHG Sungai Jempang - Sungai Kedangpahu,Kalimantan,Kalimantan Timur,4781.0,911.0,6802.0,1519.0,14013.0,Tim 6,False,False,False,False,False,True,KHG.64.07.02,True,True,True,14013.0,0.0,9905.0,4108.0
+294,KHG Sungai Kedangyantau - Sungai Sabintulung,Kalimantan,Kalimantan Timur,2950.0,5340.0,19528.0,10112.0,37930.0,Tim 6,False,False,False,False,False,True,KHG.64.02.02,True,True,True,37930.0,0.0,31185.0,6745.0
+295,KHG Sungai Kedupan - Sungai Layah,Kalimantan,Kalimantan Timur,0.0,3.0,0.0,10464.0,10466.0,Tim 6,False,False,False,False,False,True,KHG.64.02-07.01,True,True,False,10466.0,0.0,9828.0,638.0
+296,KHG Sungai Kelinjau - Sungai Kedangyantau,Kalimantan,Kalimantan Timur,0.0,6635.0,450.0,23526.0,30611.0,Tim 6,False,False,False,False,False,True,KHG.64.02-08.02,True,True,True,30611.0,0.0,21683.0,8928.0
+297,KHG Sungai Mahakam - Sungai Kedangpahu,Kalimantan,Kalimantan Timur,739.0,76.0,4559.0,3526.0,8899.0,Tim 6,False,False,False,False,False,True,KHG.64.07.01,True,True,True,8899.0,0.0,993.0,7906.0
+298,KHG Sungai Mahakam - Sungai Sabintulung,Kalimantan,Kalimantan Timur,0.0,431.0,575.0,6090.0,7095.0,Tim 6,False,False,False,False,False,True,KHG.64.02.03,True,True,True,7095.0,0.0,3898.0,3197.0
+299,KHG Sungai Melintang - Sungai Layah,Kalimantan,Kalimantan Timur,0.0,1737.0,0.0,15597.0,17334.0,Tim 6,False,False,False,False,False,True,KHG.64.02-07.02,True,True,True,17334.0,0.0,14342.0,2992.0
+300,KHG Sungai Belanyu - Sungai Balai,Kalimantan,Kalimantan Utara,0.0,0.0,124.0,3209.0,3333.0,Tim 6,False,False,False,False,False,True,KHG.65.04.05,True,True,True,3333.0,0.0,2129.0,1204.0
+301,KHG Sungai Belanyu - Sungai Barang,Kalimantan,Kalimantan Utara,516.0,27.0,717.0,380.0,1640.0,Tim 6,False,False,False,False,False,True,KHG.65.04.04,True,True,True,1640.0,0.0,1168.0,472.0
+302,KHG Sungai Mentarang - Sungai Belayu,Kalimantan,Kalimantan Utara,3.0,0.0,6596.0,7492.0,14091.0,Tim 6,False,False,False,False,False,True,KHG.65.04.03,True,True,True,14091.0,0.0,12094.0,1997.0
+303,KHG Sungai Mentarang - Sungai Siduyun,Kalimantan,Kalimantan Utara,0.0,0.0,1661.0,1501.0,3162.0,Tim 6,False,False,False,False,False,True,KHG.65.04.02,True,True,True,3162.0,0.0,1884.0,1278.0
+304,KHG Sungai Mentarang- Sungai Sembakung,Kalimantan,Kalimantan Utara,0.0,0.0,53923.0,73881.0,127804.0,Tim 6,False,False,False,False,False,True,KHG.65.02-03-04.01,True,True,True,127804.0,0.0,103003.0,24801.0
+305,KHG Sungai Sebuku,Kalimantan,Kalimantan Utara,0.0,0.0,1210.0,11189.0,12399.0,Tim 6,False,False,False,False,False,True,KHG.65.03.02,True,True,True,12399.0,0.0,10609.0,1790.0
+306,KHG Sungai Sebuku - Sungai Sembakung,Kalimantan,Kalimantan Utara,1129.0,1167.0,28918.0,76873.0,108087.0,Tim 6,False,False,False,False,False,True,KHG.65.03.01,True,True,True,108087.0,0.0,82585.0,25502.0
+307,KHG Sungai Sedaung - Sungai Itai,Kalimantan,Kalimantan Utara,0.0,0.0,0.0,2153.0,2153.0,Tim 6,False,False,False,False,False,True,KHG.65.03.04,True,True,False,2153.0,0.0,1063.0,1090.0
+308,KHG Sungai Seputuk - Sungai Rian,Kalimantan,Kalimantan Utara,0.0,0.0,687.0,291.0,978.0,Tim 6,False,False,False,False,False,True,KHG.65.04.01,True,True,True,978.0,0.0,751.0,227.0
+309,KHG Sungai Sumbal - Sungai Samadik,Kalimantan,Kalimantan Utara,0.0,121.0,0.0,3645.0,3767.0,Tim 6,False,False,False,False,False,True,KHG.65.03.03,True,True,False,3767.0,0.0,2483.0,1284.0
+310,KHG Sungai Laa - Sungai Petasia,Sulawesi,Sulawesi Tengah,0.0,0.0,4860.0,4430.0,9290.0,Tim 6,False,False,False,False,False,True,KHG.72.06.01,True,True,True,9290.0,0.0,3983.0,5307.0
+311,KHG Sungai Pasang Kayu - Sungai Bambalamotu,Sulawesi,Sulawesi Barat,13.0,16.0,6851.0,5962.0,12842.0,Tim 6,False,False,False,False,False,True,KHG.72.10-76.01.002,True,True,True,18333.0,-5491.0,5855.0,6987.0
+312,KHG Sungai Salo Lariang - Sungai Pasang Kayu,Sulawesi,Sulawesi Barat,461.0,196.0,5445.0,5056.0,11158.0,Tim 6,False,False,False,False,False,True,KHG.72.10-76.01.001,True,True,True,16794.0,-5636.0,5019.0,6139.0
+313,KHG Sungai Bakoi - Sungai Bakop,Papua,Papua Barat Daya,0.0,0.0,0.0,2185.0,2185.0,Tim 6,False,False,False,False,False,True,KHG.92.04.14,True,True,False,2185.0,0.0,1463.0,722.0
+314,KHG Sungai Kaibus - Sungai Koper,Papua,Papua Barat Daya,0.0,0.0,0.0,1262.0,1262.0,Tim 6,False,False,False,False,False,True,KHG.92.04.19,True,True,False,1262.0,0.0,908.0,354.0
+315,KHG Sungai Kaibus - Sungai Semor,Papua,Papua Barat Daya,0.0,0.0,507.0,4359.0,4866.0,Tim 6,False,False,False,False,False,True,KHG.92.04.13,True,True,True,4866.0,0.0,2932.0,1934.0
+316,KHG Sungai Kla Segun - Sungai Kla Betur,Papua,Papua Barat Daya,0.0,0.0,819.0,1100.0,1918.0,Tim 6,False,False,False,False,False,True,KHG.92.01.18,True,True,True,1918.0,0.0,1442.0,476.0
+317,KHG Sungai Wai Sapran - Sungai Wai Liam,Papua,Papua Barat Daya,0.0,0.0,3224.0,7423.0,10647.0,Tim 6,False,False,False,False,False,True,KHG.92.01.02,True,True,True,10647.0,0.0,7361.0,3286.0
+318,KHG Sungai Wai Tunun - Sungai Warmon I,Papua,Papua Barat Daya,0.0,0.0,70.0,0.0,70.0,Tim 6,False,False,False,False,False,True,KHG.92.01.53,True,True,True,70.0,0.0,33.0,37.0
+319,KHG Sungai Wai Tunun - Sungai Warmon II,Papua,Papua Barat Daya,0.0,0.0,72.0,30.0,103.0,Tim 6,False,False,False,False,False,True,KHG.92.01.06,True,True,True,103.0,0.0,87.0,16.0
+320,KHG Sungai Wai Tunun II,Papua,Papua Barat Daya,0.0,0.0,57.0,17.0,74.0,Tim 6,False,False,False,False,False,True,KHG.92.01.52,True,True,True,74.0,0.0,26.0,48.0
+321,KHG Sungai Walal,Papua,Papua Barat Daya,0.0,0.0,220.0,59.0,279.0,Tim 6,False,False,False,False,False,True,KHG.92.01.49,True,True,True,279.0,0.0,207.0,72.0
+322,KHG Sungai Warmon - Sungai Klamalu I,Papua,Papua Barat Daya,0.0,0.0,0.0,40.0,40.0,Tim 6,False,False,False,False,False,True,KHG.92.01.05,True,True,False,40.0,0.0,24.0,16.0
+323,KHG Sungai Warmon - Sungai Klamalu II,Papua,Papua Barat Daya,0.0,0.0,246.0,1.0,247.0,Tim 6,False,False,False,False,False,True,KHG.92.01.54,True,True,True,247.0,0.0,241.0,6.0
+324,KHG Sungai Bumi - Sungai Pepeya,Papua,Papua,0.0,0.0,789.0,1576.0,2365.0,Tim 6,False,False,False,False,False,True,KHG.91.04.06,True,True,True,4019.0,-1654.0,1891.0,474.0
+325,KHG Sungai Degey One - Sungai Pege,Papua,Papua Tengah,77.0,209.0,554.0,192.0,1032.0,Tim 6,False,False,False,False,False,True,KHG.91.26.02,True,True,True,1032.0,0.0,514.0,518.0
+326,KHG Sungai Eka One - Sungai Ega One,Papua,Papua Tengah,5.0,119.0,78.0,783.0,985.0,Tim 6,False,False,False,False,False,True,KHG.91.08.02,True,True,True,985.0,0.0,718.0,267.0
+327,KHG Sungai Enaro One - Sungai Aga One,Papua,Papua Tengah,58.0,56.0,602.0,835.0,1551.0,Tim 6,False,False,False,False,False,True,KHG.91.08.03,True,True,True,1551.0,0.0,1179.0,372.0
+328,KHG Sungai Aga One - Sungai Koabeu One,Papua,Papua Tengah,11.0,73.0,57.0,588.0,728.0,Tim 6,False,False,False,False,False,True,KHG.91.08.01,True,True,True,728.0,0.0,639.0,89.0
+329,KHG Sungai Wanggar - Sungai Bumi,Papua,Papua Tengah,2.0,72.0,2043.0,2858.0,4975.0,Tim 6,False,False,False,False,False,True,KHG.91.04.04,True,True,True,4975.0,0.0,1597.0,3378.0
+330,KHG Sungai Alekikos Kauh - Sungai Ifuleki Mati,Papua,Papua Selatan,0.0,0.0,2340.0,10535.0,12875.0,Tim 6,False,False,False,False,False,True,KHG.91.16.16,True,True,True,12875.0,0.0,4868.0,8007.0
+331,KHG Sungai Alekikosi Digoel - Sungai Alekikosi Kauh,Papua,Papua Selatan,0.0,0.0,394.0,19876.0,20270.0,Tim 6,False,False,False,False,False,True,KHG.91.16.13,True,True,True,20270.0,0.0,6618.0,13652.0
+332,KHG Sungai Alekikosi Sia - Sungai Alekikosi Digoel,Papua,Papua Selatan,0.0,0.0,144.0,5609.0,5753.0,Tim 6,False,False,False,False,False,True,KHG.91.16.09,True,True,True,5753.0,0.0,33.0,5720.0
+333,KHG Sungai Alekikosi Yang - Sungai Alekikosi Digoel,Papua,Papua Selatan,0.0,0.0,3355.0,7116.0,10471.0,Tim 6,False,False,False,False,False,True,KHG.91.16.10,True,True,True,10471.0,0.0,5099.0,5372.0
+334,KHG Sungai Ifuleki Onam - Sungai Fly,Papua,Papua Selatan,0.0,0.0,0.0,1688.0,1688.0,Tim 6,False,False,False,False,False,True,KHG.91.01.13,True,True,False,1688.0,0.0,1426.0,262.0
+335,KHG Sungai Ivo - Sungai Fly,Papua,Papua Selatan,0.0,0.0,0.0,5838.0,5838.0,Tim 6,False,False,False,False,False,True,KHG.91.16-01.02,True,True,False,5838.0,0.0,3865.0,1973.0
+336,KHG Sungai Jaman Kawarga - Sungai Samaleki Digul,Papua,Papua Selatan,327.0,900.0,2237.0,10105.0,13568.0,Tim 6,False,False,False,False,False,True,KHG.91.17.08,True,True,True,13568.0,0.0,2325.0,11243.0
+337,KHG Sungai Kumbe - Sungai Bian,Papua,Papua Selatan,1139.0,7899.0,2495.0,11439.0,22972.0,Tim 6,False,False,False,False,False,True,KHG.91.01.10,True,True,True,22972.0,0.0,2690.0,20282.0

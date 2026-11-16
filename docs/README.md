@@ -88,3 +88,4 @@ Machine learning and the `peatfr` package / PFVI index are deliberately deferred
 - [21 Configuration](21-configuration.md): generated; every setting of the chain.
 - [22 Running on your machine](22-running-on-your-machine.md): the chain in Docker, Earth Engine login, data pack.
 - [23 Configuring a run](23-configuring-a-run.md): settings files, checks, reruns after a change.
+- [24 Layer register](24-layer-register.md): the layers the prioritisation rests on, with provenance, verification and a check (`tools/layer_register.py`).

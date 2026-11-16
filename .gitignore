@@ -34,3 +34,7 @@ docker/.env
 # national fire by land status: 30 m review rasters (rebuild: repeat-national-fire)
 reports/**/fire_landstatus/layers/tiles/
 reports/**/fire_landstatus/layers/status.vrt
+
+# PPEG verification evidence: lists licence holders, kept locally for reports, not published
+reports/investigations/ppeg_verification.md
+reports/investigations/ppeg_verification_disagreements.csv
