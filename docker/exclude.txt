@@ -20,3 +20,9 @@ pluggy            # pytest
 Pygments          # pytest
 colorama          # pytest on Windows
 pip               # uv builds the environments without pip; the lock files list it (pip freeze)
+openpyxl          # Excel export of the national fire tables (repeat_prioritisation.national.fire_export), outside the chain (2026-11-16)
+et_xmlfile        # openpyxl
+xlsxwriter        # office reports of the reference machine (tools/inventory_337khg.py)
+python-pptx       # slide decks of the reference machine
+defusedxml        # python-pptx
+pyflakes          # code checks

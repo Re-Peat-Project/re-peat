@@ -1,4 +1,4 @@
-# installed packages of the 'main' environment (tools/khg_pipeline.py setup --lock), 2026-11-11
+# installed packages of the 'main' environment (tools/khg_pipeline.py setup --lock), 2026-11-16
 # install from the workspace folder: python -m venv <env>; <env>/python -m pip install -r re-peat/env/main.lock.txt
 -e ./repeat-common
 -e ./repeat-neraca
@@ -24,8 +24,10 @@ contourpy==1.4.0
 cryptography==50.0.2
 cycler==0.12.1
 dask==2026.8.0
+defusedxml==0.7.1
 donfig==0.8.1.post1
 earthengine-api==1.7.49
+et_xmlfile==2.0.0
 flatbuffers==25.12.19
 fonttools==4.67.0
 frozenlist==1.8.0
@@ -67,6 +69,7 @@ odc-geo==0.5.3
 odc-loader==0.6.5
 odc-stac==0.5.3
 onnxruntime==1.31.1
+openpyxl==3.1.5
 opentelemetry-api==1.45.1
 packaging==26.3
 pandas==3.0.6
@@ -90,6 +93,7 @@ pycparser==3.11
 pydantic==2.14.1
 pydantic_core==2.50.1
 pyee==14.0.0
+pyflakes==4.1.0
 Pygments==2.21.0
 PyJWT==2.15.1
 pymupdf4llm==2.0
@@ -130,6 +134,7 @@ pytest==9.2.0
 python-dateutil==3.0.0
 python-docx==1.2.0
 python-dotenv==1.2.4
+python-pptx==1.0.2
 pytz==2026.5
 PyYAML==6.0.3
 rasterio==1.5.2
@@ -141,7 +146,7 @@ scikit-image==0.26.0
 scipy==1.18.1
 shapely==2.2.0
 six==1.17.0
-sliderule==5.6.3
+sliderule==5.8.0
 tabulate==0.10.0
 tifffile==2026.10.15
 toolz==1.2.0
@@ -151,5 +156,6 @@ tzdata==2026.5
 uritemplate==4.2.0
 urllib3==2.8.0
 xarray==2026.9.0
+xlsxwriter==3.3.1
 yarl==1.25.1
 zarr==3.4.1
