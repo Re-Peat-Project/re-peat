@@ -6,7 +6,7 @@ All layers are laid on one equal-area grid of 30 m cells covering Indonesia, pro
 
 Hotspots take the classes of the cell they fall in. The VIIRS archive records a type for each detection (vegetation fire, volcano, static land source such as a gas flare, offshore), and only vegetation fires are kept. The MODIS file and the recent VIIRS file carry no type. A detection of these within 1 km (MODIS) or 375 m (VIIRS) of a VIIRS detection typed as volcano, static land source or offshore in any year is flagged as a likely static source and reported apart. Applied to the typed VIIRS file of 2026, with static locations taken from 2012 to 2025 only, the rule flags static sources with a precision of 0.88 and a recall of 0.67. KLH's own hotspot counts include these sources: with them, MODIS 2026 counts 220,060 medium and high confidence hotspots on land.
 
-Rates are hotspots per 100 km² of the class, so that classes of different size can be compared. VIIRS years are compared over the same calendar window, 1 January to 31 October. Burned area is summed per year; "ever burned" counts a cell once however often it burned.
+Rates are hotspots per 100 km², so that places of different size can be compared (provinces, KHG, years, and DMPG village peat against other peat of the same provinces). VIIRS years are compared over the same calendar window, 1 January to 31 October. Burned area is summed per year; "ever burned" counts a cell once however often it burned.
 
 Every result is checked against an independent total:
 

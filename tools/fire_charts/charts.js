@@ -77,45 +77,27 @@
     g.append('circle').attr('cx', x(e[0])).attr('cy', y(e[1])).attr('r', 4).attr('fill', col).attr('stroke', '#fff').attr('stroke-width', 2)
   }
 
-  // ---- 1 shares: does each class carry more fire than its share of the land? ----
+  // ---- 1 counts: hotspots and burned area inside and outside each class (inside + outside = Indonesia's total) ----
   {
     const [w, h] = size(640, 300, 880, 430)
-    const svg = chart('shares', 'share of the land against share of the fire, and hotspot density inside each class against the rest of the land', w, h)
-    const M = [['land_pct', 'share of the land', C.muted], ['burned_pct', `burned area ${PAST[0]}–${PAST[1]}`, C.blue], ['viirs26_pct', `hotspots ${NOW}`, C.orange]]
-    const cls = [['peat', 'Peat'], ['conc', 'Concessions'], ['kawasan', 'Forest area']]   // DMPG: like-for-like in dmpg_years
-      .map(([k, n]) => ({ k, n, c: F.classes[k] })).sort((a, b) => b.c.rate26 / b.c.rate26_outside - a.c.rate26 / a.c.rate26_outside)
-    const L = R ? 120 : 170, top = R ? 80 : 112, rh = (h - top - (R ? 26 : 34)) / cls.length
-    const xa = d3.scaleLinear([0, 70], [L, L + (w - L) * 0.47]), xb = d3.scaleLinear([0, 200], [xa(70) + (R ? 70 : 96), w - (R ? 86 : 118)])
-    txt(svg, L, 10, 'Share of Indonesia\'s total (%)', { weight: 600, size: fsS })
-    txt(svg, xb(0), 10, `Hotspots ${NOW} per 100 km²`, { weight: 600, size: fsS })
-    let lx = L
-    M.forEach(([, lab, col], i) => {
-      if (i === 0) svg.append('circle').attr('cx', lx + 5).attr('cy', 32).attr('r', 5).attr('fill', '#fff').attr('stroke', col).attr('stroke-width', 2)
-      else svg.append('circle').attr('cx', lx + 5).attr('cy', 32).attr('r', 5).attr('fill', col)
-      const t = txt(svg, lx + 14, 32, lab, { size: fsT, fill: C.ink2 }); lx += 14 + tw(t) + 14
-    })
-    for (const v of [0, 20, 40, 60]) { svg.append('line').attr('x1', xa(v)).attr('x2', xa(v)).attr('y1', top - 10).attr('y2', top + cls.length * rh - 6).attr('stroke', C.grid); txt(svg, xa(v), top + cls.length * rh + 6, `${v}%`, { anchor: 'middle', size: fsT, fill: C.muted }) }
-    for (const v of [0, 50, 100, 150, 200]) { svg.append('line').attr('x1', xb(v)).attr('x2', xb(v)).attr('y1', top - 10).attr('y2', top + cls.length * rh - 6).attr('stroke', C.grid); txt(svg, xb(v), top + cls.length * rh + 6, v, { anchor: 'middle', size: fsT, fill: C.muted }) }
-    let lx2 = xb(0)
-    ;[['inside the class', C.orange], ['rest of the land', C.base]].forEach(([lab, col]) => { svg.append('rect').attr('x', lx2).attr('y', (R ? 50 : 66) - 5).attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', col); const t = txt(svg, lx2 + 14, R ? 50 : 66, lab, { size: fsT, fill: C.ink2 }); lx2 += 14 + tw(t) + 14 })
-    cls.forEach(({ n, c }, i) => {
-      const y = top + i * rh + rh * 0.35
-      txt(svg, L - 12, y - fs * 0.35, n, { anchor: 'end', weight: 600 })
-      txt(svg, L - 12, y + fs * 0.75, `${c.land_mha.toFixed(1)} Mha`, { anchor: 'end', size: fsT, fill: C.muted })
-      const hi = Math.max(c.burned_pct, c.viirs26_pct), lo = Math.min(c.land_pct, c.burned_pct)
-      svg.append('line').attr('x1', xa(lo)).attr('x2', xa(hi)).attr('y1', y).attr('y2', y).attr('stroke', C.base).attr('stroke-width', 2)
-      svg.append('circle').attr('cx', xa(c.land_pct)).attr('cy', y).attr('r', R ? 6 : 8).attr('fill', '#fff').attr('stroke', C.muted).attr('stroke-width', 2)
-      svg.append('circle').attr('cx', xa(c.burned_pct)).attr('cy', y).attr('r', R ? 6 : 8).attr('fill', C.blue).attr('stroke', '#fff').attr('stroke-width', 1.5)
-      svg.append('circle').attr('cx', xa(c.viirs26_pct)).attr('cy', y).attr('r', R ? 6 : 8).attr('fill', C.orange).attr('stroke', '#fff').attr('stroke-width', 1.5)
-      txt(svg, xa(c.land_pct), y + (R ? 15 : 21), `${Math.round(c.land_pct)}%`, { anchor: 'middle', size: fsT, fill: C.muted, halo: true })
-      const right = Math.max(c.land_pct, c.burned_pct, c.viirs26_pct)
-      txt(svg, xa(right) + (R ? 11 : 14), y, `${Math.round(c.burned_pct)}% · ${Math.round(c.viirs26_pct)}%`, { size: fsT, fill: C.ink2, halo: true })
-      const bh = R ? 7 : 10
-      ;[[c.rate26, C.orange, -bh - 1], [c.rate26_outside, C.base, 1]].forEach(([r, col, dy]) => {
-        hbar(svg, xb(0), y + dy, xb(r) - xb(0), bh, col)
-        txt(svg, xb(r) + 5, y + dy + bh / 2, Math.round(r), { size: fsT, fill: C.ink2 })
+    const svg = chart('counts', `hotspots ${NOW} and burned area ${PAST[0]}-${PAST[1]} inside and outside concessions, forest area, DMPG villages and peat`, w, h)
+    const cls = [['conc', 'Concessions'], ['kawasan', 'Forest area'], ['dmpg', 'DMPG villages'], ['peat', 'Peat']].map(([k, n]) => ({ n, c: F.classes[k] }))
+    const L = R ? 110 : 150, top = R ? 58 : 84, gapP = R ? 40 : 60, pw = (w - L - gapP - 10) / 2
+    const rh = (h - top - 10) / cls.length, bh = Math.min(rh * 0.3, R ? 11 : 16)
+    const panels = [[`Hotspots ${NOW} (VIIRS)`, F.viirs26, (c) => c.viirs26, (v) => f0(v)],
+      [`Burned area ${PAST[0]}–${PAST[1]}, Mha`, F.burned_past_mha, (c) => c.burned_mha, (v) => v.toFixed(2)]]
+    legend(svg, [['inside', C.orange], ['outside', C.base]], L, 10)
+    panels.forEach(([title, tot, get, fmt], p) => {
+      const x0 = L + p * (pw + gapP), x = d3.scaleLinear([0, tot], [x0, x0 + pw * 0.82])
+      txt(svg, x0, top - (R ? 18 : 26), `${title} · total ${fmt(tot)}`, { size: fsS, weight: 600 })
+      cls.forEach(({ n, c }, i) => {
+        const y = top + i * rh, vin = get(c), vout = tot - vin
+        if (p === 0) txt(svg, L - 12, y + bh + 1, n, { anchor: 'end', size: fsS })
+        hbar(svg, x0, y, x(vin) - x0, bh, C.orange)
+        txt(svg, x(vin) + 5, y + bh / 2, fmt(vin), { size: fsT, fill: C.ink2 })
+        hbar(svg, x0, y + bh + 2, x(vout) - x0, bh, C.base)
+        txt(svg, x(vout) + 5, y + bh + 2 + bh / 2, fmt(vout), { size: fsT, fill: C.ink2 })
       })
-      txt(svg, w - 4, y, `${(c.rate26 / c.rate26_outside).toFixed(1)}× the rest`, { anchor: 'end', size: fsS, weight: 600, fill: c.rate26 / c.rate26_outside >= 2 ? C.ink : C.ink2 })
     })
   }
 
@@ -297,7 +279,7 @@
   // ---- 9 mosaic (Marimekko): forest group x concession, all land and peat ----
   {
     const [w, h] = size(620, 330)
-    const svg = chart('mosaic', 'land by forest group and concession; colour = hotspots per 100 km2', w, h)
+    const svg = chart('mosaic', 'land by forest group and concession, with the hotspots of the year in each part', w, h)
     const pw = (w - 24) / 2, top = 22, bot = 70, ph = h - top - bot
     ;[['all', 'All land'], ['peat', 'Peat']].forEach(([basis, title], pi) => {
       const g = svg.append('g').attr('transform', `translate(${8 + pi * (pw + 8)},0)`)
@@ -313,11 +295,11 @@
         for (const conc of [true, false]) {
           const c = gc.find((q) => q.conc === conc)
           if (!c) continue
-          const ch = ph * c.area_ha / ga, r = c.n / c.area_ha * 1e4, col = rateCol(r)
+          const ch = ph * c.area_ha / ga, col = conc ? C.orange : C.blue
           g.append('rect').attr('x', x + 1).attr('y', y + 1).attr('width', Math.max(cw - 2, 0.5)).attr('height', Math.max(ch - 2, 0.5)).attr('fill', col)
           if (cw > 64 && ch > 40) {
             txt(g, x + 6, y + 13, conc ? 'Concession' : 'No concession', { size: fsT, fill: inkOn(col), weight: 600 })
-            txt(g, x + 6, y + 13 + fsT + 3, `${f0(r)} per 100 km²`, { size: fsT, fill: inkOn(col) })
+            txt(g, x + 6, y + 13 + fsT + 3, `${f0(c.n)} hotspots`, { size: fsT, fill: inkOn(col) })
             txt(g, x + 6, y + 13 + 2 * (fsT + 3), `${(c.area_ha / 1e6).toFixed(1)} Mha`, { size: fsT, fill: inkOn(col) })
           }
           y += ch
@@ -327,13 +309,13 @@
         x += cw
       }
     })
-    rateLegend(svg, 8, h - 26, `VIIRS hotspots ${NOW} per 100 km² (width = land in the forest group, height = share in concessions)`)
+    txt(svg, 8, h - 20, `Width: land in the forest group. Height: share of it in concessions. Labels: VIIRS hotspots ${NOW} and land.`, { size: fsT, fill: C.ink2 })
   }
 
   // ---- 10 treemap: concession type, then forest function; size = land, colour = hotspot density ----
   {
     const [w, h] = size(620, 420)
-    const svg = chart('treemap', 'land by concession type and forest function; colour = hotspots per 100 km2', w, h)
+    const svg = chart('treemap', 'land by concession type and forest function, with the hotspots of the year', w, h)
     const kids = TYPES.map(([k, l]) => ({ name: k, children: D.hier.filter((d) => d.type === k && d.area_ha > 0).map((d) => ({ name: d.fun, area: d.area_ha, n: d.n })) }))
     const root = d3.hierarchy({ children: kids }).sum((d) => d.area ?? 0).sort((a, b) => b.value - a.value)
     d3.treemap().size([w, h - 50]).paddingOuter(2).paddingTop(fsS + 8).paddingInner(2).tile(d3.treemapSquarify)(root)
@@ -345,52 +327,45 @@
         t.remove()
       }
       for (const l of p.children) {
-        const r = l.data.n / l.data.area * 1e4, col = rateCol(r), cw = l.x1 - l.x0, ch = l.y1 - l.y0
+        const col = TYPE[p.data.name].color, cw = l.x1 - l.x0, ch = l.y1 - l.y0
         svg.append('rect').attr('x', l.x0).attr('y', l.y0).attr('width', cw).attr('height', ch).attr('fill', col)
-          .append('title').text(`${TYPE[p.data.name].label}, ${FUNL[l.data.name]}: ${(l.data.area / 1e6).toFixed(2)} Mha, ${f0(r)} per 100 km²`)
+          .attr('stroke', '#fff').attr('stroke-width', 1).append('title').text(`${TYPE[p.data.name].label}, ${FUNL[l.data.name]}: ${(l.data.area / 1e6).toFixed(2)} Mha, ${f0(l.data.n)} hotspots`)
         if (cw > 58 && ch > 30) {
           txt(svg, l.x0 + 4, l.y0 + 10, FUNL[l.data.name], { size: fsT, fill: inkOn(col) })
-          txt(svg, l.x0 + 4, l.y0 + 10 + fsT + 2, f0(r), { size: fsT, fill: inkOn(col), weight: 600 })
+          txt(svg, l.x0 + 4, l.y0 + 10 + fsT + 2, `${(l.data.area / 1e6).toFixed(1)} Mha · ${kfmt(l.data.n)}`, { size: fsT, fill: inkOn(col), weight: 600 })
         }
       }
     }
-    rateLegend(svg, 4, h - 28, `VIIRS hotspots ${NOW} per 100 km² (box size = land)`)
+    txt(svg, 4, h - 20, `Box size: land. Labels: forest function, land and VIIRS hotspots ${NOW}.`, { size: fsT, fill: C.ink2 })
   }
 
-  // ---- 11 concession types: hotspots, density and the forest functions inside each type ----
+  // ---- 11 concession types: hotspots and the forest functions inside each type ----
   {
     const FC = { cons: C.green, hl: C.aqua, prod: C.violet, hpk: C.magenta, apl: C.yellow, other: C.muted }
     const rows = TYPES.map(([k, l, c]) => {
       const hs = D.hier.filter((d) => d.type === k)
       return { k, l, c, n: d3.sum(hs, (d) => d.n), area: d3.sum(hs, (d) => d.area_ha), fun: FUN.map(([f]) => [f, d3.sum(hs.filter((d) => d.fun === f), (d) => d.n)]) }
     }).sort((a, b) => b.n - a.n)
-    const tot = d3.sum(rows, (r) => r.n), area = d3.sum(rows, (r) => r.area), all = tot / area * 1e4
+    const tot = d3.sum(rows, (r) => r.n)
     const L = R ? 160 : 270, top = R ? 74 : 104, rh = R ? 40 : 58
     const [w, h] = size(640, top + rows.length * rh + 26, 900, top + rows.length * rh + 34)
-    const svg = chart('types', `VIIRS hotspots ${NOW} by concession type: number, density and forest function`, w, h)
-    const W = w - L, wa = W * 0.27, wb = W * 0.27
-    const xa = d3.scaleLinear([0, d3.max(rows, (r) => r.n) * 1.75], [L, L + wa - 16])
-    const xb = d3.scaleLinear([0, d3.max(rows, (r) => r.n / r.area * 1e4) * 1.2], [L + wa + 10, L + wa + wb - 16])
-    const xc = d3.scaleLinear([0, 100], [L + wa + wb + 10, w - 8])
-    ;[[xa(0), 'Hotspots'], [xb(0), 'Per 100 km²'], [xc(0), 'Forest function']].forEach(([x, t]) => txt(svg, x, 10, t, { weight: 600, size: fsS }))
+    const svg = chart('types', `VIIRS hotspots ${NOW} by concession type: number and forest function`, w, h)
+    const W = w - L, wa = W * 0.42
+    const xa = d3.scaleLinear([0, d3.max(rows, (r) => r.n) * 1.45], [L, L + wa - 16])
+    const xc = d3.scaleLinear([0, 100], [L + wa + 10, w - 8])
+    ;[[xa(0), 'Hotspots (number and share)'], [xc(0), 'Forest function of the hotspots']].forEach(([x, t]) => txt(svg, x, 10, t, { weight: 600, size: fsS }))
     const colw = (xc(100) - xc(0)) / 2
     FUN.forEach(([f, l], i) => {
       const y = 28 + Math.floor(i / 2) * (fsT + 5), x = xc(0) + (i % 2) * colw
       svg.append('rect').attr('x', x).attr('y', y - 5).attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', FC[f])
       txt(svg, x + 14, y, l.replace('Water, undefined', 'Water, undef.'), { size: fsT - 0.5, fill: C.ink2 })
     })
-    svg.append('line').attr('x1', xb(all)).attr('x2', xb(all)).attr('y1', top - 8).attr('y2', top + rows.length * rh - 8).attr('stroke', C.ink2).attr('stroke-dasharray', '3 3')
-    txt(svg, xb(all), top + rows.length * rh + 4, `all land ${all.toFixed(0)}`, { anchor: 'middle', size: fsT, fill: C.ink2 })
     rows.forEach((r, i) => {
       const y = top + i * rh, bh = rh * 0.5, cy = y + bh / 2
       svg.append('rect').attr('x', 8).attr('y', cy - 5).attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', r.c)
       txt(svg, 24, cy, r.l, { size: fsS })
       hbar(svg, xa(0), y, xa(r.n) - xa(0), bh, r.c)
       txt(svg, xa(r.n) + 5, cy, `${kfmt(r.n)} · ${100 * r.n / tot < 1 ? '<1' : Math.round(100 * r.n / tot)}%`, { size: fsT, fill: C.ink2 })
-      const d = r.n / r.area * 1e4
-      svg.append('line').attr('x1', xb(0)).attr('x2', xb(d)).attr('y1', cy).attr('y2', cy).attr('stroke', C.base).attr('stroke-width', 2)
-      svg.append('circle').attr('cx', xb(d)).attr('cy', cy).attr('r', R ? 5 : 7).attr('fill', r.c)
-      txt(svg, xb(d) + 9, cy, d.toFixed(0), { size: fsT, fill: C.ink2 })
       let x = xc(0)
       r.fun.forEach(([f, n]) => {
         const len = (xc(100) - xc(0)) * n / r.n
@@ -404,12 +379,11 @@
   // ---- 11b concessions as donuts: share of the land, of the burned area and of the 2026 hotspots ----
   {
     const c = F.classes.conc
-    const parts = [['Land', c.land_pct, `${c.land_mha.toFixed(1)} of ${(c.land_mha / c.land_pct * 100).toFixed(0)} Mha`],
-      [`Burned area ${PAST[0]}–${PAST[1]}`, c.burned_pct, `${c.burned_mha.toFixed(2)} of ${(c.burned_mha / c.burned_pct * 100).toFixed(2)} Mha`],
+    const parts = [[`Burned area ${PAST[0]}–${PAST[1]}`, c.burned_pct, `${c.burned_mha.toFixed(2)} of ${(c.burned_mha / c.burned_pct * 100).toFixed(2)} Mha`],
       [`Hotspots ${NOW}`, c.viirs26_pct, `${kfmt(c.viirs26)} of ${kfmt(c.viirs26 / c.viirs26_pct * 100)}`]]
     const [w, h] = size(640, 250, 620, 330)
-    const svg = chart('conc_donuts', `share inside concessions: land, burned area ${PAST[0]}-${PAST[1]} and hotspots ${NOW}`, w, h)
-    const r = Math.min(h * 0.3, w / 8), cw = w / 3
+    const svg = chart('conc_donuts', `share inside concessions: burned area ${PAST[0]}-${PAST[1]} and hotspots ${NOW}`, w, h)
+    const r = Math.min(h * 0.3, w / 6), cw = w / 2
     legend(svg, [['inside concessions', C.orange], ['outside', C.track]], 8, 12)
     parts.forEach(([lab, p, sub], i) => {
       const cx = cw * i + cw / 2, cy = h * 0.5
@@ -538,7 +512,7 @@
     svg.selectAll('text').filter(function () { return /^< 10$|^10–25$|^25–50$|^≥ 50$/.test(this.textContent) }).text(function () { return this.textContent + '%' })
   }
 
-  // ---- 15 repeated burns: share of each class burned 1, 2, 3, 4+ times; share of the land burned twice or more ----
+  // ---- 15 repeated burns: land burned 1, 2, 3, 4+ times per class (thousand ha); share of all land burned twice or more ----
   {
     const TB = ['#f4a172', '#d9592a', '#a8410f', '#6e2a08']                    // 1, 2, 3, 4+ times (validated ordinal)
     const T = D.times, tot = D.times_total, tot2 = tot[2] + tot[3] + tot[4], totA = d3.sum(tot)
@@ -547,34 +521,30 @@
       ...[true, false].map((d) => ({ r: T.find((x) => x.set === 'dmpg' && x.dmpg === d), label: d ? 'DMPG village peat' : 'Other peat', sec: 1 }))]
     const L = R ? 150 : 210, top = R ? 54 : 84, rh = R ? 30 : 46, gap = R ? 18 : 26, ly = R ? 30 : 46
     const [w, h] = size(640, top + rows.length * rh + gap + 34, 880, top + rows.length * rh + gap + 44)
-    const svg = chart('repeat', 'land burned once, twice, three and four or more times in 2015-2026, and shares of the land burned twice or more', w, h)
+    const svg = chart('repeat', 'land burned once, twice, three and four or more times in 2015-2026, and each class\'s share of all land burned twice or more', w, h)
     const xa = [L, L + (w - L) * 0.52], xb = [xa[1] + 34, w - 40]
-    const pc = (r) => r.ha.slice(1).map((v) => 100 * v / d3.sum(r.ha))
+    const pc = (r) => r.ha.slice(1).map((v) => v / 1e3)
     const maxA = d3.max(rows, (o) => d3.sum(pc(o.r)))
     const a = d3.scaleLinear().domain([0, maxA * 1.12]).range(xa)
-    const maxB = d3.max(rows, (o) => Math.max(100 * (o.r.ha[2] + o.r.ha[3] + o.r.ha[4]) / tot2, 100 * d3.sum(o.r.ha) / totA))
+    const maxB = d3.max(rows, (o) => 100 * (o.r.ha[2] + o.r.ha[3] + o.r.ha[4]) / tot2)
     const b = d3.scaleLinear().domain([0, maxB * 1.08]).range(xb)
-    txt(svg, xa[0], 12, 'Share of the land burned (% of the class)', { weight: 600, size: fsT })
-    txt(svg, xb[0], 12, 'Share of land burned 2+ times (%)', { weight: 600, size: fsT })
+    txt(svg, xa[0], 12, 'Land burned, thousand ha', { weight: 600, size: fsT })
+    txt(svg, xb[0], 12, 'Share of all land burned 2+ times (%)', { weight: 600, size: fsT })
     legend(svg, [['1 time', TB[0]], ['2', TB[1]], ['3', TB[2]], ['4 or more', TB[3]]], xa[0], ly, 10)
-    const lx2 = legend(svg, [['burned 2+ times', TB[2]]], xb[0], ly, 10) + 4
-    svg.append('line').attr('x1', lx2).attr('x2', lx2).attr('y1', ly - 6).attr('y2', ly + 6).attr('stroke', C.ink).attr('stroke-width', 2)
-    txt(svg, lx2 + 6, ly, 'land', { size: fsT, fill: C.ink2 })
+    legend(svg, [['burned 2+ times', TB[2]]], xb[0], ly, 10)
     rows.forEach((o, i) => {
       const y = top + i * rh + o.sec * gap, bh = rh * 0.56, yb = y + (rh - bh) / 2
       if (i === 4) svg.append('line').attr('x1', 8).attr('x2', w - 8).attr('y1', y - gap / 2).attr('y2', y - gap / 2).attr('stroke', C.grid)
       txt(svg, L - 10, y + rh / 2, o.label, { anchor: 'end', size: fsS })
       let x0 = xa[0]
       pc(o.r).forEach((p, k) => { const len = a(p) - a(0); svg.append('rect').attr('x', x0).attr('y', yb).attr('width', Math.max(0, len - (len > 2 ? 1 : 0))).attr('height', bh).attr('fill', TB[k]); x0 += len })
-      txt(svg, x0 + 6, y + rh / 2, `${d3.sum(pc(o.r)).toFixed(1)}%`, { size: fsT, fill: C.ink2 })
-      const s2 = 100 * (o.r.ha[2] + o.r.ha[3] + o.r.ha[4]) / tot2, sl = 100 * d3.sum(o.r.ha) / totA
+      txt(svg, x0 + 6, y + rh / 2, f0(d3.sum(pc(o.r))), { size: fsT, fill: C.ink2 })
+      const s2 = 100 * (o.r.ha[2] + o.r.ha[3] + o.r.ha[4]) / tot2
       hbar(svg, b(0), yb, b(s2) - b(0), bh, TB[2])
-      svg.append('line').attr('x1', b(sl)).attr('x2', b(sl)).attr('y1', yb - 3).attr('y2', yb + bh + 3).attr('stroke', C.ink).attr('stroke-width', 2)
-      const lx = b(sl) > b(s2) && b(sl) < b(s2) + 36 ? b(sl) + 6 : b(s2) + 6
-      txt(svg, lx, y + rh / 2, `${s2.toFixed(0)}%`, { size: fsT, fill: C.ink2, halo: true })
+      txt(svg, b(s2) + 6, y + rh / 2, `${s2.toFixed(0)}%`, { size: fsT, fill: C.ink2 })
     })
     const yAx = top + rows.length * rh + gap + 4
-    axis(svg.append('g').attr('transform', `translate(0,${yAx})`).call(d3.axisBottom(a).ticks(4).tickFormat((v) => `${v}%`).tickSizeOuter(0)))
+    axis(svg.append('g').attr('transform', `translate(0,${yAx})`).call(d3.axisBottom(a).ticks(4).tickFormat((v) => f0(v)).tickSizeOuter(0)))
     axis(svg.append('g').attr('transform', `translate(0,${yAx})`).call(d3.axisBottom(b).ticks(4).tickFormat((v) => `${v}%`).tickSizeOuter(0)))
   }
 

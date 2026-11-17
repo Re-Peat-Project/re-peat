@@ -4,7 +4,7 @@ The PPEG analysis assigns every part of the priority area to one actor: licence 
 
 ![Damaged peat by actor, split into forest area and APL (left), and the share of each actor's area that is canal-affected, burned and near primary or secondary canals (right). Source: KLH PPEG integrated analysis.](re-peat/reports/fire_landstatus/figures/fig_actors.png)
 
-Licence holders cover 78% of the priority area: 1.6 million ha inside licences and 989 thousand ha in the buffer. The Ministry of Forestry covers 436 thousand ha and KLH/BPLH 298 thousand ha. Nearly all of the priority area is canal-affected (3.1 million ha), so rewetting is needed almost everywhere; 783 thousand ha burned. Land assigned to the Ministry of Forestry burned most often (44% of it, against 16% inside licences).
+Licence holders cover 78% of the priority area: 1.6 million ha inside licences and 989 thousand ha in the buffer. The Ministry of Forestry covers 436 thousand ha and KLH/BPLH 298 thousand ha. Nearly all of the priority area is canal-affected (3.1 million ha), so rewetting is needed almost everywhere; 783 thousand ha burned. Of the burned priority area, 33% lies inside licences, 34% in the buffer, 24% with the Ministry of Forestry and 9% with KLH/BPLH.
 
 Riau holds 45% of the priority area, 84% of it assigned to licence holders. In Kalimantan Tengah the Ministry of Forestry has the largest part. Table A.13 gives the values by province.
 
