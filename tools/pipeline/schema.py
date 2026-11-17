@@ -106,6 +106,63 @@ class Delineation(_M):
                                                 "or preferably across the divide (flow)")
 
 
+MonthDay = Annotated[str, Field(pattern=r"^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")]
+
+
+class NeracaDeficit(_M):
+    """repeat-neraca's `deficit:` section (repeat_neraca.deficit.DEFAULTS). Keys left empty keep the module's default."""
+    dz_no_obs_cm: Union[None, Literal["observed"], Annotated[float, Field(ge=0)]] = F(
+        None, en="Assumed water-table drop without stations", id="Asumsi penurunan TMA tanpa stasiun", unit="cm",
+        desc="For a KHG without SiTMAT readings: empty skips the deficit (as before); a number is the assumed drop over the window; "
+             "`observed` takes the median (and range) of the drops at the KHG with stations under the KHG root")
+    dz_no_obs_band_cm: Optional[tuple[Annotated[float, Field(ge=0)], Annotated[float, Field(ge=0)]]] = F(
+        None, en="Band of the assumed drop", id="Rentang asumsi penurunan TMA", unit="cm",
+        desc="[low, high] for deficit_mm_low / _high; must hold dz_no_obs_cm")
+    dz_observed_root: Optional[str] = F(None, en="Folder of the observed drops", id="Folder penurunan teramati",
+                                        desc="Where `observed` looks for */03_neraca/runs/deficit/neraca_khg.csv (default: the KHG root)")
+    start: Optional[MonthDay] = F(None, en="Deficit period start", id="Awal periode defisit", desc="MM-DD (module default 06-01)")
+    end: Optional[MonthDay] = F(None, en="Deficit period end", id="Akhir periode defisit", desc="MM-DD (module default 10-31)")
+    sy: Optional[float] = F(None, en="Specific yield", id="Specific yield", gt=0, lt=1, desc="Central Sy (module default 0.15)")
+    sy_band: Optional[tuple[float, float]] = F(None, en="Specific yield band", id="Rentang specific yield",
+                                               desc="[low, high] (module default [0.10, 0.20])")
+    edge_days: Optional[int] = F(None, en="Edge days", id="Hari tepi", ge=1, desc="Days averaged at each end of the period (default 7)")
+    min_station_coverage: Optional[float] = F(None, en="Minimum station coverage", id="Cakupan stasiun minimum", gt=0, le=1,
+                                              desc="Share of days with readings a KHG needs (default 0.5)")
+    wapor_bound: Optional[bool] = F(None, en="WaPOR in the band", id="WaPOR dalam rentang", desc="Use WaPOR ET as a band bound (default false)")
+
+    @model_validator(mode="after")
+    def _band(self):
+        b, v = self.dz_no_obs_band_cm, self.dz_no_obs_cm
+        if b is not None and b[0] > b[1]:
+            raise ValueError("dz_no_obs_band_cm must be [low, high]")
+        if b is not None and isinstance(v, (int, float)) and not b[0] <= v <= b[1]:
+            raise ValueError("dz_no_obs_cm lies outside dz_no_obs_band_cm")
+        return self
+
+
+class Gwm(_M):
+    """How the deficit step runs repeat-neraca's groundwater model (`python -m repeat_neraca.run`)."""
+    tiers: list[Literal[1, 2]] = F([1], en="Tiers", id="Tingkat model", min_length=1,
+                                   desc="1: one KHG-level curve (lumped); 2: the 2D groundwater solver, summarised per sub-KHG")
+    res_m: Optional[float] = F(None, en="Tier 2 grid", id="Grid tingkat 2", unit="m", gt=0,
+                               desc="Cell size of tier 2 (empty: registry neraca_grid_res_m, 500 m); keep it below the drain spacing")
+    drawdown_m: Optional[list[Annotated[float, Field(gt=0)]]] = F(None, en="Canal drawdown", id="Penurunan muka air kanal", unit="m",
+                                                                  desc="Canal level below the surface; tier 1 runs each, tier 2 the first "
+                                                                       "(empty: registry canal_drawdown, 1.2 m)")
+    classes: list[Literal["primary", "secondary", "tertiary"]] = F(["primary", "secondary", "tertiary"], en="Canal classes",
+                                                                   id="Kelas kanal", min_length=1,
+                                                                   desc="Canal classes that hold the canal level")
+    k_multiplier: list[Annotated[float, Field(gt=0)]] = F([1.0], en="Transmissivity multiplier", id="Pengali transmisivitas",
+                                                          min_length=1, desc="Scale of the peat transmissivity; tier 1 runs each, tier 2 the first")
+    peat_table: Literal["urzainki2020", "tropical-small", "tropical-large"] = F(
+        "urzainki2020", en="Peat hydraulic table", id="Tabel hidraulik gambut",
+        desc="Storage and transmissivity of the peat: the repository table or the tropical sets of Urzainki et al. 2023")
+    et_stress: Literal["none", "drained", "natural"] = F("none", en="Evaporation stress", id="Cekaman evaporasi",
+                                                         desc="Evaporation falls as the water table deepens: off, drained or natural thresholds")
+    registry: Optional[str] = F(None, en="Parameter registry", id="Registri parameter",
+                                desc="Your copy of repeat_neraca/parameters.yaml (empty: the one in the package)")
+
+
 class Neraca(_M):
     rain: RainProduct = F(en="Rainfall product", id="Produk curah hujan", desc="Rainfall source of the water balance")
     et: list[EtProduct] = F(en="Evapotranspiration products", id="Produk evapotranspirasi",
@@ -114,6 +171,10 @@ class Neraca(_M):
     end: dt.date = F(en="End date (exclusive)", id="Tanggal akhir (eksklusif)", desc="First day after the last complete dekad")
     workers: int = F(en="Parallel requests", id="Permintaan paralel", ge=1, le=32, desc="Parallel Earth Engine requests")
     window: tuple[dt.date, dt.date] = F(en="Deficit window", id="Jendela defisit", desc="SiTMAT window of the KHG deficit")
+    deficit: NeracaDeficit = F(default_factory=NeracaDeficit, en="KHG deficit", id="Defisit KHG",
+                               desc="repeat-neraca's deficit section, written to the deficit step's neraca.yaml")
+    gwm: Gwm = F(default_factory=Gwm, en="Groundwater model", id="Model airtanah",
+                 desc="Tiers and options of the groundwater model the deficit step runs")
 
     @model_validator(mode="after")
     def _order(self):

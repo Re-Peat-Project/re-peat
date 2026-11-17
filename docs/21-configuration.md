@@ -42,6 +42,24 @@ Check a KHG before running: `config validate --khg <code>`; see what applies and
 | `neraca.end` | End date (exclusive) | Tanggal akhir (eksklusif) |  |  | "2026-10-01" | First day after the last complete dekad |
 | `neraca.workers` | Parallel requests | Permintaan paralel |  | ≥ 1; ≤ 32 | 8 | Parallel Earth Engine requests |
 | `neraca.window` | Deficit window | Jendela defisit |  |  | ["2026-04-01", "2026-10-15"] | SiTMAT window of the KHG deficit |
+| `neraca.deficit.dz_no_obs_cm` | Assumed water-table drop without stations | Asumsi penurunan TMA tanpa stasiun | cm | observed; or ≥ 0 | null | For a KHG without SiTMAT readings: empty skips the deficit (as before); a number is the assumed drop over the window; `observed` takes the median (and range) of the drops at the KHG with stations under the KHG root |
+| `neraca.deficit.dz_no_obs_band_cm` | Band of the assumed drop | Rentang asumsi penurunan TMA | cm |  | null | [low, high] for deficit_mm_low / _high; must hold dz_no_obs_cm |
+| `neraca.deficit.dz_observed_root` | Folder of the observed drops | Folder penurunan teramati |  |  | null | Where `observed` looks for */03_neraca/runs/deficit/neraca_khg.csv (default: the KHG root) |
+| `neraca.deficit.start` | Deficit period start | Awal periode defisit |  |  | null | MM-DD (module default 06-01) |
+| `neraca.deficit.end` | Deficit period end | Akhir periode defisit |  |  | null | MM-DD (module default 10-31) |
+| `neraca.deficit.sy` | Specific yield | Specific yield |  | > 0 | null | Central Sy (module default 0.15) |
+| `neraca.deficit.sy_band` | Specific yield band | Rentang specific yield |  |  | null | [low, high] (module default [0.10, 0.20]) |
+| `neraca.deficit.edge_days` | Edge days | Hari tepi |  | ≥ 1 | null | Days averaged at each end of the period (default 7) |
+| `neraca.deficit.min_station_coverage` | Minimum station coverage | Cakupan stasiun minimum |  | > 0; ≤ 1 | null | Share of days with readings a KHG needs (default 0.5) |
+| `neraca.deficit.wapor_bound` | WaPOR in the band | WaPOR dalam rentang |  |  | null | Use WaPOR ET as a band bound (default false) |
+| `neraca.gwm.tiers` | Tiers | Tingkat model |  | 1, 2 | [1] | 1: one KHG-level curve (lumped); 2: the 2D groundwater solver, summarised per sub-KHG |
+| `neraca.gwm.res_m` | Tier 2 grid | Grid tingkat 2 | m | > 0 | null | Cell size of tier 2 (empty: registry neraca_grid_res_m, 500 m); keep it below the drain spacing |
+| `neraca.gwm.drawdown_m` | Canal drawdown | Penurunan muka air kanal | m |  | null | Canal level below the surface; tier 1 runs each, tier 2 the first (empty: registry canal_drawdown, 1.2 m) |
+| `neraca.gwm.classes` | Canal classes | Kelas kanal |  | primary, secondary, tertiary | ["primary", "secondary", "tertiary"] | Canal classes that hold the canal level |
+| `neraca.gwm.k_multiplier` | Transmissivity multiplier | Pengali transmisivitas |  |  | [1] | Scale of the peat transmissivity; tier 1 runs each, tier 2 the first |
+| `neraca.gwm.peat_table` | Peat hydraulic table | Tabel hidraulik gambut |  | urzainki2020, tropical-small, tropical-large | "urzainki2020" | Storage and transmissivity of the peat: the repository table or the tropical sets of Urzainki et al. 2023 |
+| `neraca.gwm.et_stress` | Evaporation stress | Cekaman evaporasi |  | none, drained, natural | "none" | Evaporation falls as the water table deepens: off, drained or natural thresholds |
+| `neraca.gwm.registry` | Parameter registry | Registri parameter |  |  | null | Your copy of repeat_neraca/parameters.yaml (empty: the one in the package) |
 | `prioritisation.years` | Years | Tahun |  |  | {"baseline": [2015, 2022], "validation": [2023], "elnino": [2015, 2019]} | Baseline, validation and El Niño years |
 | `prioritisation.ndmi_res_m` | NDMI resolution | Resolusi NDMI | m | > 0 | 20 | Grid of the Sentinel-2 moisture index |
 | `prioritisation.ipg_canal_classes` | Canal classes for the IPG | Kelas kanal untuk IPG |  |  | ["Kanal Primer", "Kanal Sekunder"] | Canals counted in the drainage indicator |

@@ -64,6 +64,46 @@
   # workers: 8
   # Deficit window (Jendela defisit) SiTMAT window of the KHG deficit
   # window: ['2026-04-01', '2026-10-15']
+  # KHG deficit (Defisit KHG) repeat-neraca's deficit section, written to the deficit step's neraca.yaml
+  # deficit:
+    # Assumed water-table drop without stations (Asumsi penurunan TMA tanpa stasiun) For a KHG without SiTMAT readings: empty skips the deficit (as before); a number is the assumed drop over the window; `observed` takes the median (and range) of the drops at the KHG with stations under the KHG root Unit: cm. Allowed: observed; or ≥ 0.
+    # dz_no_obs_cm: null
+    # Band of the assumed drop (Rentang asumsi penurunan TMA) [low, high] for deficit_mm_low / _high; must hold dz_no_obs_cm Unit: cm.
+    # dz_no_obs_band_cm: null
+    # Folder of the observed drops (Folder penurunan teramati) Where `observed` looks for */03_neraca/runs/deficit/neraca_khg.csv (default: the KHG root)
+    # dz_observed_root: null
+    # Deficit period start (Awal periode defisit) MM-DD (module default 06-01)
+    # start: null
+    # Deficit period end (Akhir periode defisit) MM-DD (module default 10-31)
+    # end: null
+    # Specific yield (Specific yield) Central Sy (module default 0.15) Allowed: > 0.
+    # sy: null
+    # Specific yield band (Rentang specific yield) [low, high] (module default [0.10, 0.20])
+    # sy_band: null
+    # Edge days (Hari tepi) Days averaged at each end of the period (default 7) Allowed: ≥ 1.
+    # edge_days: null
+    # Minimum station coverage (Cakupan stasiun minimum) Share of days with readings a KHG needs (default 0.5) Allowed: > 0; ≤ 1.
+    # min_station_coverage: null
+    # WaPOR in the band (WaPOR dalam rentang) Use WaPOR ET as a band bound (default false)
+    # wapor_bound: null
+  # Groundwater model (Model airtanah) Tiers and options of the groundwater model the deficit step runs
+  # gwm:
+    # Tiers (Tingkat model) 1: one KHG-level curve (lumped); 2: the 2D groundwater solver, summarised per sub-KHG Allowed: 1, 2.
+    # tiers: [1]
+    # Tier 2 grid (Grid tingkat 2) Cell size of tier 2 (empty: registry neraca_grid_res_m, 500 m); keep it below the drain spacing Unit: m. Allowed: > 0.
+    # res_m: null
+    # Canal drawdown (Penurunan muka air kanal) Canal level below the surface; tier 1 runs each, tier 2 the first (empty: registry canal_drawdown, 1.2 m) Unit: m.
+    # drawdown_m: null
+    # Canal classes (Kelas kanal) Canal classes that hold the canal level Allowed: primary, secondary, tertiary.
+    # classes: [primary, secondary, tertiary]
+    # Transmissivity multiplier (Pengali transmisivitas) Scale of the peat transmissivity; tier 1 runs each, tier 2 the first
+    # k_multiplier: [1]
+    # Peat hydraulic table (Tabel hidraulik gambut) Storage and transmissivity of the peat: the repository table or the tropical sets of Urzainki et al. 2023 Allowed: urzainki2020, tropical-small, tropical-large.
+    # peat_table: urzainki2020
+    # Evaporation stress (Cekaman evaporasi) Evaporation falls as the water table deepens: off, drained or natural thresholds Allowed: none, drained, natural.
+    # et_stress: none
+    # Parameter registry (Registri parameter) Your copy of repeat_neraca/parameters.yaml (empty: the one in the package)
+    # registry: null
 # prioritisation:
   # Years (Tahun) Baseline, validation and El Niño years
   # years: {baseline: [2015, 2022], elnino: [2015, 2019], validation: [2023]}
