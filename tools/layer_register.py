@@ -19,7 +19,9 @@ Writes docs/24-layer-register.md (the register, readable) on fill and check.
 
 pack writes $REPEAT_DATA/derived/prioritisation_layers.gpkg (--out to change; not tracked: it holds KLH data):
   khg_summary      the 865 KHG polygons with every per-KHG attribute: KLH priority (337, 362), data availability and run class
-                   (av_*), PPEG sums (ppeg_*), tenure areas (tenure_*), tenure complexity (c_*, tenure_complexity)
+                   (av_*), PPEG sums (ppeg_*), tenure areas (tenure_*), tenure complexity (c_*, tenure_complexity), and the
+                   prioritisation (pr_*: indicators, the five scores, type, intervention, ranks)
+  ppeg_integrated  KLH's PPEG analysis whole, plus one view per field group (v_ppeg_damage = SKEG 2024, v_ppeg_canal, ...)
   <id>             every registered vector layer, copied whole with its CRS and fields; CSV rows as attribute tables; rows that
                    share one file and layer (the PPEG field groups) share one pack layer named after the file
   layer_register   the register, with the pack layer of each row and the pack date
@@ -131,6 +133,8 @@ def pack_name(d):
     for (path, layer), g in d.groupby(["path", "layer"], sort=False):
         if len(g) == 1:
             nm = g.id.iloc[0]
+        elif g.id.str.startswith("ppeg_").all():
+            nm = "ppeg_integrated"            # KLH's PPEG integrated analysis; one view per field group (v_<id>)
         else:
             nm = re.sub(r"[^a-z0-9]+", "_", Path(path).stem.lower()).strip("_")[:50]
         for i in g.index:
@@ -159,7 +163,37 @@ def khg_summary():
     g = g.merge(tw.round(3), left_on="khg_code", right_index=True, how="left")
     tc = pd.read_csv(rep / "national_profile" / "tenure_complexity" / "tenure_complexity.csv").drop(columns=["khg"])
     g = g.merge(tc.rename(columns={"khg_id": "khg_code", "peat_km2": "tc_peat_km2", "points": "tc_points"}), on="khg_code", how="left")
+    fk = rep / "national_profile" / "final" / "final_khg.csv"      # the prioritisation: indicators, five scores, type, intervention, ranks
+    if fk.exists():
+        f = pd.read_csv(fk).drop(columns=["khg_name", "island", "provinces"], errors="ignore")
+        f = f.drop(columns=[c for c in f.columns if c != "khg_code" and c in g.columns])
+        g = g.merge(f.add_prefix("pr_").rename(columns={"pr_khg_code": "khg_code"}), on="khg_code", how="left")
     return g
+
+
+def ppeg_views(gpkg, d):
+    """One SQL view per field group of the PPEG analysis (v_<id>: the group's fields, the KHG and the geometry), so a theme such
+    as SKEG 2024 damage opens as its own layer without copying the 989,398 polygons again. Registered in gpkg_contents."""
+    import sqlite3
+    con = sqlite3.connect(gpkg)
+    cols = {r[1] for r in con.execute("PRAGMA table_info(ppeg_integrated)")}
+    if not cols:
+        return 0
+    geo = con.execute("SELECT column_name, geometry_type_name, srs_id FROM gpkg_geometry_columns WHERE table_name='ppeg_integrated'").fetchone()
+    ext = con.execute("SELECT min_x, min_y, max_x, max_y FROM gpkg_contents WHERE table_name='ppeg_integrated'").fetchone()
+    n = 0
+    for r in d[d.pack_layer == "ppeg_integrated"].itertuples():
+        f = [c for c in str(r.fields_used).split(";") if c in cols and c not in ("NAMA_KHG",)]
+        v = f"v_{r.id}"
+        con.execute(f"DROP VIEW IF EXISTS {v}")
+        con.execute(f"CREATE VIEW {v} AS SELECT fid, {geo[0]}, NAMA_KHG{''.join(', ' + c for c in f)} FROM ppeg_integrated")
+        con.execute("DELETE FROM gpkg_contents WHERE table_name=?", (v,)); con.execute("DELETE FROM gpkg_geometry_columns WHERE table_name=?", (v,))
+        con.execute("INSERT INTO gpkg_contents (table_name, data_type, identifier, description, min_x, min_y, max_x, max_y, srs_id) VALUES (?,?,?,?,?,?,?,?,?)",
+                    (v, "features", v, f"{r.description} (view of ppeg_integrated)", *ext, geo[2]))
+        con.execute("INSERT INTO gpkg_geometry_columns (table_name, column_name, geometry_type_name, srs_id, z, m) VALUES (?,?,?,?,0,0)", (v, geo[0], geo[1], geo[2]))
+        n += 1
+    con.commit(); con.close()
+    return n
 
 
 def copy_layer(src, layer, dst, name, chunk=100_000):
@@ -216,6 +250,10 @@ def pack(d, out, replace, resume=False):
             print(f"{r.id}: {src.suffix} not packed")
             continue
         print(f"{r.pack_layer}: {n:,} ({(datetime.now() - t0).seconds} s)", flush=True)
+    nv = ppeg_views(tmp, d)
+    if nv:
+        print(f"ppeg_integrated: {nv} theme views (v_ppeg_*)")
+        d.loc[d.pack_layer == "ppeg_integrated", "pack_layer"] = "ppeg_integrated (view v_" + d.id + ")"
     reg = d.assign(packed=str(date.today()))
     pyogrio.write_dataframe(reg, tmp, layer="layer_register", driver="GPKG", layer_options={"OVERWRITE": "YES"})
     tmp.rename(out)

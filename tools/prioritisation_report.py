@@ -43,8 +43,8 @@ NP = WS / "re-peat" / "reports" / "national_profile"
 DATA = Path(os.environ.get("REPEAT_DATA", WS / "_data"))
 HUB = WS / "re-peat"
 TY = ["A", "B", "C", "D", "E"]
-TYN = {"A": "Quick action", "B": "Multi-party coordination", "C": "Staged restoration", "D": "Protect and monitor", "E": "Monitor"}
-TYN_ID = {"A": "Aksi cepat", "B": "Koordinasi multipihak", "C": "Pemulihan bertahap", "D": "Lindungi dan pantau", "E": "Pantau"}
+TYN = {"A": "Quick action", "B": "Multi-party coordination", "C": "Medium urgency", "D": "Protect and monitor", "E": "Monitor"}
+TYN_ID = {"A": "Aksi cepat", "B": "Koordinasi multipihak", "C": "Urgensi sedang", "D": "Lindungi dan pantau", "E": "Pantau"}
 IVO = ["rewetting and revegetation", "rewetting", "revegetation", "protect"]
 IVN = {"rewetting and revegetation": "Rewet and revegetate", "rewetting": "Rewet", "revegetation": "Revegetate", "protect": "Protect"}
 IVN_ID = {"rewetting and revegetation": "pembasahan dan revegetasi", "rewetting": "pembasahan", "revegetation": "revegetasi", "protect": "perlindungan"}
@@ -324,7 +324,7 @@ Setiap KHG dinilai pada lima dimensi yang terpisah, bukan satu skor gabungan, ka
 - {n0(len(scored))} KHG dinilai, termasuk {n337_sc} dari {n337} KHG daftar kerja KLH {f"; {nwk} di antaranya tidak memiliki gambut dalam peta gambut KLH dan dinilai dengan seluruh KHG sebagai sebaran gambut, ditandai kurang andal" if nwk else ""}).
 - **Tipe A, aksi cepat:** {int(T.loc['A','khg'])} KHG ({int(T.loc['A','in_337'])} dalam 337), urgensi tinggi dan kompleksitas rendah atau sedang. Di sini dana dapat paling cepat digunakan. Contoh: {lst('A', 4)}.
 - **Tipe B, koordinasi multipihak:** {int(T.loc['B','khg'])} KHG, semuanya dalam 337, memuat **{pc(dmgB / dmg_scored)}** gambut rusak SKEG pada KHG yang dinilai ({n1(dmgB / 1e6)} juta ha). Di sini urgensi tinggi bertemu klaim lahan yang tumpang tindih antara perusahaan, Kementerian Kehutanan, KLH dan desa, sehingga pekerjaan membutuhkan kesepakatan antarpihak sebelum dapat dimulai.
-- **Tipe C, pemulihan bertahap:** {int(T.loc['C','khg'])} KHG; **tipe D, lindungi dan pantau:** {int(T.loc['D','khg'])} KHG bergambut dalam atau berkubah dengan sedikit kebakaran; **tipe E, pantau:** {int(T.loc['E','khg'])} KHG.
+- **Tipe C, urgensi sedang:** {int(T.loc['C','khg'])} KHG; **tipe D, lindungi dan pantau:** {int(T.loc['D','khg'])} KHG bergambut dalam atau berkubah dengan sedikit kebakaran; **tipe E, pantau:** {int(T.loc['E','khg'])} KHG.
 - **Intervensi pada 337 KHG yang dinilai:** pembasahan {ivt('rewetting')}, pembasahan dan revegetasi {ivt('rewetting and revegetation')}, revegetasi {ivt('revegetation')}, perlindungan {ivt('protect')}.
 - **Validasi:** dengan data sampai 2025, 20% KHG teratas menurut urgensi memuat **{pc(V['urgency']['capture_top20pct'])}** gambut yang terbakar pada 2026 (riwayat kebakaran saja: {pc(V['fire_history_only']['capture_top20pct'])}); AUC {V['urgency']['auc']:.2f}.
 - **Kestabilan:** {pc(S['share_khg_type_stable_80pct'])} KHG mempertahankan tipenya pada sedikitnya 80% dari {S['runs']} uji dengan setiap bobot diubah ±50%.
@@ -343,7 +343,7 @@ Each KHG is scored on five separate dimensions rather than one blended score, be
 
 - **A, quick action:** {int(T.loc['A','khg'])} KHG ({int(T.loc['A','in_337'])} in KLH's 337 work list): high urgency, low or medium complexity. Leading examples: {lst('A', 5)}.
 - **B, multi-party coordination:** {int(T.loc['B','khg'])} KHG, all in the 337, holding **{pc(dmgB / dmg_scored)} of the SKEG-damaged peat of the scored KHG** ({n1(dmgB / 1e6)} million ha). High urgency meets overlapping claims of companies, the Ministry of Forestry, KLH and villages. Leading examples: {lst('B', 5)}.
-- **C, staged restoration:** {int(T.loc['C','khg'])} KHG of medium urgency.
+- **C, medium urgency:** {int(T.loc['C','khg'])} KHG of medium urgency.
 - **D, protect and monitor:** {int(T.loc['D','khg'])} KHG with deep or domed peat and little fire, mostly outside the 337.
 - **E, monitor:** {int(T.loc['E','khg'])} KHG with low urgency and low or medium stake.
 
@@ -464,7 +464,7 @@ Urgency, complexity and stake are cut into terciles of the scoring pool (urgency
 
 - **A, quick action:** urgency high, complexity low or medium.
 - **B, multi-party coordination:** urgency high, complexity high.
-- **C, staged restoration:** urgency medium.
+- **C, medium urgency:** urgency medium.
 - **D, protect and monitor:** urgency low, stake high.
 - **E, monitor:** urgency low, stake low or medium.
 
@@ -619,7 +619,7 @@ The register documents every data layer used in the prioritisation. The table gi
 {md_table(r, "Registered layers")}"""
     C["91_annex_b"] = f"""# Annex B KHG profiles
 
-The profiles of the {n337_sc} scored KHG of KLH's 337 work list are in a separate volume, one page per KHG in the order of the KLH work list. Each page shows the KHG's scores, type and intervention, its main indicators against the median of the scoring pool, and the licence holders on its peat. Because they name licence holders, the profiles are shared with KLH and the World Bank only. A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage.
+The profiles of the {n337_sc} scored KHG of KLH's 337 work list are in a separate volume, one page per KHG in the order of the KLH work list. Each page shows the KHG's scores, type and intervention, six thematic maps (peat depth and dome, damage, drainage, land cover, land status, fire and villages), its main indicators against the median of the scoring pool, and the licence holders on its peat. Because they name licence holders, the profiles are shared with KLH and the World Bank only. A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage.
 """
     return C
 
@@ -671,10 +671,6 @@ def annex(D, outdir):
     kp = D["kp"].set_index("khg_code")
     s = s.assign(klh_no=s.khg_code.map(kp.klh_337_no)).sort_values("klh_no")
     khg = gpd.read_file(DATA / "derived" / "khg_klh_priority.gpkg", layer="khg").set_index("khg_code")
-    skeg = gpd.read_file(NP / "ppeg" / "ppeg_layers.gpkg", layer="skeg", where="peat = 1")
-    lic_all = gpd.read_file(DATA / "landstatus" / "ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg", columns=["IZIN_USAHA"])
-    lic_all = lic_all[lic_all.IZIN_USAHA != "PPHKM"]
-    sidx = lic_all.sindex
     pool = f[f.in_pool]
     med = {c: pool[c].median() for c in ("u_fire_freq", "u_hotspot", "damage_share", "canal_share", "thick3m_share", "dome_share", "protected_share",
                                          "c_licence_community", "c_contested", "share_pptpkh", "share_community",
@@ -686,13 +682,15 @@ def annex(D, outdir):
     b = PR.Builder()
     b.front()
     b.heading("B KHG profiles", 1)
-    PR.runs(b.doc.add_paragraph(), "This annex has one page for each KHG of KLH's 337 work list that contains KLH peat, in work-list order. The map shows KLH peat by SKEG 2024 damage class, with licence boundaries (2025). Scores are percentile ranks among the scoring pool (0 to 1), and the medians given for comparison are those of the pool. Licence holders and their areas come from KLH's PPEG analysis (April 2026). A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage. Draft for discussion: the weights are provisional.", Pt(9.5))
+    PR.runs(b.doc.add_paragraph(), "This annex has one page for each KHG of KLH's 337 work list that contains KLH peat, in work-list order. Six maps show the KHG's peat depth and dome, SKEG 2024 damage, drainage (canal-influence zones, canals, large rivers, BRGM structures), land cover 2022, land status (forest-area function, business licences, social forestry, PPTPKH) and fire (times burned 2015 to 2026, this year's hotspots) with DMPG villages and roads. Scores are percentile ranks among the scoring pool (0 to 1), and the medians given for comparison are those of the pool. Licence holders and their areas come from KLH's PPEG analysis (April 2026). A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage. Draft for discussion: the weights are provisional.", Pt(9.5))
     pdir = outdir / "profiles"
+    sys.path.insert(0, str(Path(__file__).parent))
+    import khg_profile_maps as KM          # six thematic maps per KHG, rendered in parallel (cached by file)
+    errs = KM.render_all(list(s.khg_code), pdir, workers=int(os.environ.get("MAP_WORKERS", "3")))
+    if errs:
+        raise SystemExit(f"maps failed: {errs[:5]}")
     for i, r in enumerate(s.itertuples()):
-        geom = shapely.make_valid(khg.loc[r.khg_code, "geometry"])
-        cand = lic_all.iloc[list(sidx.intersection(geom.bounds))]
-        lic = gpd.clip(cand, geom) if len(cand) else None
-        png = profile_png(r, geom, skeg, lic, pdir / f"{r.khg_code}.png")
+        png = pdir / f"{r.khg_code}_maps.png"
         d = b.doc
         h = d.add_heading(f"{int(r.klh_no)}. {re.sub(r'^KHG\s+', '', r.khg_name)}", 2)
         h.paragraph_format.page_break_before = True
@@ -704,8 +702,11 @@ def annex(D, outdir):
                    else " · small peat area: less reliable" if not r.in_pool else "") + (" · low feasibility" if r.flag_low_feasibility else "")
                 + (" · high exposure" if getattr(r, "flag_high_exposure", False) is True else "")
                 + (f" · intervention: {IVN.get(r.intervention, 'n/a').lower()}" if isinstance(getattr(r, "intervention", None), str) else ""), Pt(8.5), PR.MUTED)
+        sc = d.add_paragraph()
+        PR.runs(sc, f"Type {r.type}, {TYN.get(r.type, '').lower()}. Scores (0 to 1): " + " · ".join(f"{lab.lower()} {getattr(r, c):.2f}" for c, lab in DIM if hasattr(r, c) and not pd.isna(getattr(r, c))), Pt(9))
+        sc.paragraph_format.space_after = Pt(2)
         p.paragraph_format.space_after = Pt(2)
-        pic = d.add_paragraph(); pic.add_run().add_picture(str(png), width=Cm(16))
+        pic = d.add_paragraph(); pic.add_run().add_picture(str(png), width=Cm(15.0))
         rows = [
             ["Burned share of peat per year, 2015-2025", pc(r.u_fire_freq, 2) if not pd.isna(r.u_fire_freq) else "n/a", pc(med["u_fire_freq"], 2)],
             ["Hotspots per km² of peat per year", f"{r.u_hotspot:.2f}" if not pd.isna(r.u_hotspot) else "n/a", f"{med['u_hotspot']:.2f}"],
@@ -729,17 +730,17 @@ def annex(D, outdir):
         tbl(b, ["Indicator", "This KHG", "Pool median"], rows, [9.2, 3.6, 3.2])
         hh = hold[hold.khg_code == r.khg_code].sort_values(["damaged_ha", "peat_ha"], ascending=False)
         if len(hh):
-            more = len(hh) - 6
-            hrows = [[x.holder, x.licence, n0(x.peat_ha), n0(x.damaged_ha)] for x in hh.head(6).itertuples()]
+            more = len(hh) - 5
+            hrows = [[x.holder, x.licence, n0(x.peat_ha), n0(x.damaged_ha)] for x in hh.head(5).itertuples()]
             if more > 0:
-                hrows.append([f"{more} more holders", "", n0(hh.peat_ha.iloc[6:].sum()), n0(hh.damaged_ha.iloc[6:].sum())])
+                hrows.append([f"{more} more holders", "", n0(hh.peat_ha.iloc[5:].sum()), n0(hh.damaged_ha.iloc[5:].sum())])
             tbl(b, ["Licence holder", "Licence", "Peat (ha)", "Damaged peat (ha)"], hrows, [7.2, 4.0, 2.4, 2.4])
         else:
             PR.runs(b.doc.add_paragraph(), "No business licence on this KHG in the PPEG analysis.", Pt(8.5), PR.MUTED)
         dc = (("Peat extent: no peat in KLH's peat map; the whole KHG is used as peat, so the indicators are less reliable. " if getattr(r, "whole_khg", False) is True else "")
               + (f"Data for detailed design: elevation model (DeltaDTM) covers {pc(a.deltadtm_share)} of the KHG; peat depth from {a.peat_depth_source}; "
                  f"water-table loggers (SiTMAT): {int(a.stations_community + a.stations_concession)}." if a is not None else ""))
-        PR.runs(b.doc.add_paragraph(), dc, Pt(8), PR.MUTED)
+        np_ = b.doc.add_paragraph(); PR.runs(np_, dc, Pt(7.5), PR.MUTED); np_.paragraph_format.space_before = Pt(0); np_.paragraph_format.space_after = Pt(0)
         if i % 25 == 0:
             print(f"  profile {i + 1}/{len(s)}", flush=True)
     for q in b.doc.paragraphs:
