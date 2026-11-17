@@ -1,0 +1,11 @@
+khg_id,khg,peat_km2,points,c_licence_community,c_contested,c_claims_mean,c_holders,c_multi_licence,c_licence_protected,c_holders_density,share_licence,share_pphkm,share_hutan_desa,share_htr,share_community,share_forest_estate,share_dmpg,share_pptpkh,share_released,share_no_claim,share_3plus_claims,tenure_complexity,tenure_complexity_rank
+KHG.11.12.01,KHG Alue Getah - Krueng Le Mirah,79.88,7988,0.0,0.0,1.20956,1,0.0,0.0,1.25188,0.60466,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.60491,0.39509,0.0,0.525,3
+KHG.16.07.08,KHG Delta Talang,15.69,1569,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,,
+KHG.11.15.01,KHG Krueng Matee - Krueng Teumiyee,42.24,4224,0.0,0.0,0.51278,2,0.0,0.0,4.73485,0.51278,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.48722,0.0,0.525,4
+KHG.11.01.07,KHG Krueng Trumon,8.41,841,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,,
+KHG.11.23.04,KHG Lae Tarap - Lae Kumbi,20.09,2009,0.0,0.0,0.13688,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.13688,0.86312,0.0,,
+KHG.11.10-23.01,KHG Lae Tarap - Lae Sulampi,47.05,4705,0.0,0.0,0.37024,1,0.0,0.0,2.1254,0.15558,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.21467,0.77513,0.0,0.375,5
+KHG.61.08.02,KHG Sungai Mandor - Sungai Landak,83.01,8301,0.0,0.0,0.9429,2,0.0,0.0,2.40935,0.94242,0.0,0.0,0.0,0.0,0.0,0.00048,0.0,0.0,0.0571,0.0,0.575,2
+KHG.61.11-04.02,KHG Sungai Matan -Sungai Semandang,193.69,19369,0.01647,0.09634,1.94109,4,0.0,0.0,2.06516,0.82988,0.0,5e-05,0.0,5e-05,0.09753,0.01776,0.09644,0.89943,0.00274,0.11276,1.0,1
+KHG.61.03.09,KHG Sungai Rambai - Sungai Meliau,6.96,696,0.0,0.0,0.70259,1,0.0,0.0,14.36782,0.70259,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.29741,0.0,,
+KHG.14.04.13,KHG Sungai Tumu,9.43,943,0.0,0.0,0.99046,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.99046,0.0,0.0,0.0,0.00954,0.0,,

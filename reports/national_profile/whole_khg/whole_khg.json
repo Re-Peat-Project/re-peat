@@ -1,0 +1,28 @@
+{
+ "khg": [
+  "KHG.11.01.07",
+  "KHG.11.10-23.01",
+  "KHG.11.12.01",
+  "KHG.11.15.01",
+  "KHG.11.23.04",
+  "KHG.14.04.13",
+  "KHG.16.07.08",
+  "KHG.61.03.09",
+  "KHG.61.08.02",
+  "KHG.61.11-04.02"
+ ],
+ "peat_cells_30m": {
+  "KHG.11.12.01": 89004,
+  "KHG.16.07.08": 17467,
+  "KHG.11.15.01": 47087,
+  "KHG.11.01.07": 9434,
+  "KHG.11.23.04": 22491,
+  "KHG.11.10-23.01": 52411,
+  "KHG.61.08.02": 92460,
+  "KHG.61.11-04.02": 215725,
+  "KHG.61.03.09": 7838,
+  "KHG.14.04.13": 10519
+ },
+ "vrt": "C:/Users/danyl/Documents/Github/_repeat-project/re-peat/reports/national_profile/whole_khg/peat_whole_khg.vrt",
+ "rule": "amendment 2026-11-17: whole KHG as peat for the 337 without KLH peat"
+}

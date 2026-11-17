@@ -19,8 +19,8 @@
  },
  "sensitivity": {
   "runs": 500,
-  "share_keeping_type_mean": 0.925,
-  "share_khg_type_stable_80pct": 0.85,
-  "median_rank_sd": 5.4
+  "share_keeping_type_mean": 0.919,
+  "share_khg_type_stable_80pct": 0.826,
+  "median_rank_sd": 5.1
  }
 }

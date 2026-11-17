@@ -73,6 +73,22 @@ The layers the prioritisation rests on, with provenance and evidence. Source: `s
 |---|---|---|---|---|---|---|---|
 | canals | `kanal_osgm_khg_existing_Indonesia.gpkg`<br>existing canal network in KHG by class | KET_KANAL | OSM-derived (inferred, unconfirmed) | 2025 | not stated | source layer — re-peat/reports/investigations/ppeg_verification.md (the PPEG canal zones are buffers of this network) | canal-affected zones; blocking; pumps |
 | brgm_infrastructure | `infrastruktur_hidrologis_existing_BRGM_Indonesia.gpkg`<br>existing canal blocks and other hydrological infrastructure |  | BRGM Bluebook 2026 | 2026 | points | source layer | existing interventions |
+| rivers_rbi | `RBI_sungai.gpkg`<br>Large rivers of Rupa Bumi Indonesia, drawn with two banks (Sungai Dua Garis), 2,707 lines | NAMA_UNSUR | BIG, Rupa Bumi Indonesia |  | national RBI |  | final prioritisation v2, feasibility: water_dist_km |
+| lakes_rbi | `RBI_wadukdanau.gpkg`<br>Lakes and reservoirs, Rupa Bumi Indonesia, 220 polygons | NAMA | BIG, Rupa Bumi Indonesia |  | national RBI |  | final prioritisation v2, feasibility: water_dist_km |
+
+## People
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| population_worldpop | `population/idn_ppp_2020_1km_Aggregated_UNadj.tif`<br>WorldPop 2020 population counts, 1 km (30 arc-seconds), UN-adjusted, Indonesia | band 1 (people per cell) | WorldPop, University of Southampton (repeat_common.fetch_population) | 2020, Global 2000-2020 1 km UNadj | 1 km | grid total 273.5 million people (UN-adjusted 2020) — population/source.json | superseded 2026-11-17 by population_populace_2025q3 (kept for comparison) |
+| population_populace_2025q3 | `population/populace/IDN_2025q3.tif`<br>IHME Populace population estimate, Indonesia, 2025 third quarter, residents per 40 m cell (from satellite building volume and census) | band 1 (people per 40 m cell) | IHME (Institute for Health Metrics and Evaluation) with Planet and Microsoft AI for Good Lab | 2025q3 | 40 m, equal-area (ESRI:54034) | grid total 295.5 million people; no negative cells — population/populace/source.json | final prioritisation, people dimension: pop_on_peat, pop_10km |
+| population_populace_2025q2 | `population/populace/IDN_2025q2.tif`<br>IHME Populace population estimate, Indonesia, 2025 second quarter, residents per 40 m cell | band 1 (people per 40 m cell) | IHME (Institute for Health Metrics and Evaluation) with Planet and Microsoft AI for Good Lab | 2025q2 | 40 m, equal-area (ESRI:54034) | grid total 294.6 million people; no negative cells — population/populace/source.json | comparison with 2025q3 |
+
+## Access
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| roads_rbi | `Transportasi_Jalan_Detil.gpkg`<br>Detailed transport network, Rupa Bumi Indonesia: roads by class, railways, runways (196,670 lines) | NAMA_UNSUR | BIG, Rupa Bumi Indonesia |  | RBI detailed |  | final prioritisation v2, feasibility: road_dist_km (Jalan Tol, Arteri, Kolektor, Lokal, Lain; footpaths, railways and runways left out) |
 
 ## Provenance details
 
@@ -113,3 +129,9 @@ The layers the prioritisation rests on, with provenance and evidence. Source: `s
 - **tora_pptpkh**: legal basis: Permen LHK 7/2021 (UUCK); revision on the mirror not stated; received: 2026-11-16, public service; rights: public government service (BIG Satu Peta); features 2725; sha256 `b60288b7e5c9aad7…`; SIGAP has newer revisions (pptpkh_ar_250k_rev_iv) as WMS only
 - **forest_release**: legal basis: PP 60/2012 (change of forest-area designation); received: 2026-11-16, public service; rights: public government service (BIG Satu Peta); features 2396; sha256 `79d03cbaa4d61e99…`
 - **brwa_register**: legal basis: not stated; received: 2026-11-16, public service; rights: BRWA public listing; polygons on request from BRWA; features 2283; sha256 `a967066fc5b3438c…`; polygons served as vector tiles only
+- **population_worldpop**: legal basis: not stated; received: fetched 2026-11-17, public; rights: CC BY 4.0; cite doi:10.5258/SOTON/WP00671; features -; sha256 `ebd99c83abb8ea8e…`
+- **rivers_rbi**: legal basis: UU 4/2011 Informasi Geospasial; received: 2026-10-15; rights: BIG RBI terms; features 2707; sha256 `786a6d3d06c5eb71…`; only rivers wide enough to draw with two banks; small rivers and canals not included
+- **lakes_rbi**: legal basis: UU 4/2011 Informasi Geospasial; received: not recorded; rights: BIG RBI terms; features 220; sha256 `dbcad462aba933dd…`
+- **roads_rbi**: legal basis: UU 4/2011 Informasi Geospasial; received: 2026-10-23; rights: BIG RBI terms; features 196670; sha256 `92f7a22451b4c50e…`
+- **population_populace_2025q3**: legal basis: not stated; received: 2026-11-17, downloaded by the team (registered account); rights: IHME terms; non-commercial use; cite IHME Populace (2026); features -; sha256 `3297c7fff6c63fca…`
+- **population_populace_2025q2**: legal basis: not stated; received: 2026-11-17, downloaded by the team (registered account); rights: IHME terms; non-commercial use; cite IHME Populace (2026); features -; sha256 `c705a9363126ef30…`

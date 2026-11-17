@@ -1,8 +1,10 @@
 {
  "rule": {
+  "version": 2,
   "written": "2026-11-17",
   "min_peat_km2": 25,
   "score_all_337_with_peat": true,
+  "score_337_without_klh_peat": true,
   "dimensions": {
    "urgency": {
     "u_fire_freq": {
@@ -22,6 +24,15 @@
     },
     "canal_share": {
      "weight": 1
+    },
+    "u_canal_primary": {
+     "weight": 0
+    },
+    "u_canal_secondary": {
+     "weight": 0
+    },
+    "u_canal_tertiary": {
+     "weight": 0
     }
    },
    "stake": {
@@ -35,6 +46,9 @@
      "weight": 1
     },
     "peat_km2": {
+     "weight": 1
+    },
+    "conservation_share": {
      "weight": 1
     }
    },
@@ -50,13 +64,50 @@
     }
    },
    "feasibility": {
+    "water_dist_km": {
+     "weight": 1,
+     "direction": "-"
+    },
+    "road_dist_km": {
+     "weight": 1,
+     "direction": "-"
+    },
     "dry_balance_mm": {
      "weight": 1
+    }
+   },
+   "people": {
+    "pop_on_peat": {
+     "weight": 1
     },
-    "brgm_blocks_per_km2": {
+    "pop_10km": {
+     "weight": 1
+    },
+    "villages_peat": {
      "weight": 1
     }
    }
+  },
+  "reported": [
+   "brgm_blocks_per_km2",
+   "peat_volume_mm3",
+   "tma_deep_share",
+   "open_share",
+   "forest_share"
+  ],
+  "intervention": {
+   "rewetting": {
+    "indicator": "canal_share",
+    "min": 0.2
+   },
+   "revegetation": {
+    "indicator": "open_share",
+    "min": 0.2
+   }
+  },
+  "flags": {
+   "low_feasibility": "feasibility",
+   "high_exposure": "people"
   },
   "validation": {
    "target": "u_burned_now",
@@ -67,6 +118,21 @@
   "sensitivity": {
    "runs": 500,
    "seed": 20261117
+  },
+  "inputs_layers": {
+   "rivers": "RBI_sungai.gpkg",
+   "lakes": "RBI_wadukdanau.gpkg",
+   "roads": "Transportasi_Jalan_Detil.gpkg",
+   "road_classes": [
+    "Jalan Tol",
+    "Jalan Arteri",
+    "Jalan Kolektor",
+    "Jalan Lokal",
+    "Jalan Lain"
+   ],
+   "population": "population/populace/IDN_2025q3.tif",
+   "villages": "batas_desa_indonesia_2023_KLH.gpkg",
+   "exposure_buffer_km": 10
   }
  },
  "run": "2026-11-17",
@@ -80,11 +146,12 @@
    0.6179
   ],
   "stake": [
-   0.424,
-   0.5558
+   0.4251,
+   0.559
   ]
  },
- "feasibility_low_cut": 0.3473,
+ "feasibility_low_cut": 0.4301,
+ "people_high_cut": 0.6432,
  "pool": 334,
- "scored": 423
+ "scored": 433
 }

@@ -1,0 +1,90 @@
+{
+ "rule": {
+  "written": "2026-11-17",
+  "min_peat_km2": 25,
+  "score_all_337_with_peat": true,
+  "dimensions": {
+   "urgency": {
+    "u_fire_freq": {
+     "weight": 2
+    },
+    "u_burn_repeat": {
+     "weight": 1
+    },
+    "u_hotspot": {
+     "weight": 1
+    },
+    "u_hotspot_now": {
+     "weight": 1
+    },
+    "damage_share": {
+     "weight": 1
+    },
+    "canal_share": {
+     "weight": 1
+    }
+   },
+   "stake": {
+    "thick3m_share": {
+     "weight": 1
+    },
+    "dome_share": {
+     "weight": 1
+    },
+    "protected_share": {
+     "weight": 1
+    },
+    "peat_km2": {
+     "weight": 1
+    }
+   },
+   "complexity": {
+    "tenure_complexity": {
+     "weight": 2
+    },
+    "actor_types": {
+     "weight": 1
+    },
+    "villages": {
+     "weight": 1
+    }
+   },
+   "feasibility": {
+    "dry_balance_mm": {
+     "weight": 1
+    },
+    "brgm_blocks_per_km2": {
+     "weight": 1
+    }
+   }
+  },
+  "validation": {
+   "target": "u_burned_now",
+   "exclude": [
+    "u_hotspot_now"
+   ]
+  },
+  "sensitivity": {
+   "runs": 500,
+   "seed": 20261117
+  }
+ },
+ "run": "2026-11-17",
+ "tercile_cuts": {
+  "urgency": [
+   0.3673,
+   0.6084
+  ],
+  "complexity": [
+   0.3649,
+   0.6179
+  ],
+  "stake": [
+   0.424,
+   0.5558
+  ]
+ },
+ "feasibility_low_cut": 0.3473,
+ "pool": 334,
+ "scored": 423
+}

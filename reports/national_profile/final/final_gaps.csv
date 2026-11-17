@@ -11,7 +11,7 @@ PPEG priority (362) outside the 337,KHG.61.01.07,KHG Sungai Teberau - Sungai Sam
 PPEG priority (362) outside the 337,KHG.61.04.03,KHG Sungai Labai - Sungai Kualan,Pulau Kalimantan,358.1454,0.3968,C,target villages + SKEG 2024 damage
 PPEG priority (362) outside the 337,KHG.61.04.12,KHG Sungai Berantai - Sungai Penyengat Besar,Pulau Kalimantan,12.9572,,,SKEG 2024 damage
 PPEG priority (362) outside the 337,KHG.61.06.07,KHG Sungai Embau - Sungai Kapuas,Pulau Kalimantan,301.1581,0.2537,D,target villages
-PPEG priority (362) outside the 337,KHG.61.12.08,KHG Sungai Jenu - Sungai Labai,Pulau Kalimantan,71.9347,0.1472,D,target villages
+PPEG priority (362) outside the 337,KHG.61.12.08,KHG Sungai Jenu - Sungai Labai,Pulau Kalimantan,71.9347,0.1472,E,target villages
 PPEG priority (362) outside the 337,KHG.62.01-09.01,KHG Sungai Lamandau - Sungai Sematu,Pulau Kalimantan,16.9765,,,SKEG 2024 damage
 PPEG priority (362) outside the 337,KHG.91.01.12,KHG Sungai Ifuleki Kumbe - Sungai Lekiagi,Pulau Papua,156.0198,0.5298,C,target villages + SKEG 2024 damage
 PPEG priority (362) outside the 337,KHG.91.09.16,KHG Sungai Kauga - Sungai Wania,Pulau Papua,37.4919,0.3159,E,SKEG 2024 damage
@@ -24,19 +24,24 @@ PPEG priority (362) outside the 337,KHG.92.01.51,KHG Sungai Wai Tunun I,Pulau Pa
 PPEG priority (362) outside the 337,KHG.92.04-06.01,KHG Sungai Udugaga - Sungai Kamundan,Pulau Papua,221.0716,0.5099,C,SKEG 2024 damage
 PPEG priority (362) outside the 337,KHG.92.04.12,KHG Sungai Kla Sepa - Sungai Kla Kaibus,Pulau Papua,10.5099,,,target villages
 PPEG priority (362) outside the 337,KHG.92.04.18,KHG Sungai Waigo,Pulau Papua,3.9099,,,SKEG 2024 damage
-in the 337 without KLH peat (not scored),KHG.11.01.07,KHG Krueng Trumon,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.11.10-23.01,KHG Lae Tarap - Lae Sulampi,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.11.12.01,KHG Alue Getah - Krueng Le Mirah,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.11.15.01,KHG Krueng Matee - Krueng Teumiyee,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.11.23.04,KHG Lae Tarap - Lae Kumbi,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.14.04.13,KHG Sungai Tumu,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.16.07.08,KHG Delta Talang,Pulau Sumatera,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.61.03.09,KHG Sungai Rambai - Sungai Meliau,Pulau Kalimantan,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.61.08.02,KHG Sungai Mandor - Sungai Landak,Pulau Kalimantan,0.0,,,target villages
-in the 337 without KLH peat (not scored),KHG.61.11-04.02,KHG Sungai Matan -Sungai Semandang,Pulau Kalimantan,0.0,,,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.11.01.07,KHG Krueng Trumon,Pulau Sumatera,8.5087,0.2847,E,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.11.10-23.01,KHG Lae Tarap - Lae Sulampi,Pulau Sumatera,47.2609,0.5157,C,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.11.12.01,KHG Alue Getah - Krueng Le Mirah,Pulau Sumatera,80.4556,0.6703,A,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.11.15.01,KHG Krueng Matee - Krueng Teumiyee,Pulau Sumatera,42.5893,0.36,E,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.11.23.04,KHG Lae Tarap - Lae Kumbi,Pulau Sumatera,20.2943,0.8518,A,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.14.04.13,KHG Sungai Tumu,Pulau Sumatera,9.4607,0.1472,E,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.16.07.08,KHG Delta Talang,Pulau Sumatera,15.7639,0.4711,C,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.61.03.09,KHG Sungai Rambai - Sungai Meliau,Pulau Kalimantan,7.0519,0.3222,E,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.61.08.02,KHG Sungai Mandor - Sungai Landak,Pulau Kalimantan,83.2044,0.4571,C,target villages
+"in the 337 without KLH peat (scored with the whole KHG as peat, less reliable)",KHG.61.11-04.02,KHG Sungai Matan -Sungai Semandang,Pulau Kalimantan,194.1857,0.5919,C,target villages
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.01.07,KHG Krueng Trumon,Pulau Sumatera,8.5087,0.2847,E,target villages
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.10-23.01,KHG Lae Tarap - Lae Sulampi,Pulau Sumatera,47.2609,0.5157,C,target villages
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.12.01,KHG Alue Getah - Krueng Le Mirah,Pulau Sumatera,80.4556,0.6703,A,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.12.02,KHG Krueng Surin - Krueng Batee,Pulau Sumatera,24.2979,0.3519,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.14.04,KHG Krueng Pango - Krueng On,Pulau Sumatera,14.9873,0.4605,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.14.05,KHG Krueng On - Krueng Pneunom,Pulau Sumatera,5.8647,0.3683,C,target villages
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.15.01,KHG Krueng Matee - Krueng Teumiyee,Pulau Sumatera,42.5893,0.36,E,target villages
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.11.23.04,KHG Lae Tarap - Lae Kumbi,Pulau Sumatera,20.2943,0.8518,A,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.12.01.02,KHG Lae Sibungkuang - Aek Tarutungol,Pulau Sumatera,11.3368,0.3892,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.12.01.03,KHG Lae Rapus - Aek Pardomuan,Pulau Sumatera,9.3623,0.3431,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.12.01.04,KHG Aek Sordang - Aek Kalang,Pulau Sumatera,6.9113,0.6406,A,target villages + SKEG 2024 damage
@@ -56,6 +61,7 @@ in the 337 without KLH peat (not scored),KHG.61.11-04.02,KHG Sungai Matan -Sunga
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.01.02,KHG Sungai Lipai - Sungai Bunut,Pulau Sumatera,14.3417,0.4284,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.02.02,KHG Sungai Indragiri - Sungai Ekok,Pulau Sumatera,2.4156,0.428,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.04.03,KHG Sungai Merusi - Sungai Belanak,Pulau Sumatera,17.2829,0.2725,E,target villages + SKEG 2024 damage
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.04.13,KHG Sungai Tumu,Pulau Sumatera,9.4607,0.1472,E,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.05.02,KHG Pulau Serapung,Pulau Sumatera,24.7155,0.4062,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.05.03,KHG Pulau Labu,Pulau Sumatera,5.0696,0.1472,E,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.14.05.04,KHG Pulau Muda,Pulau Sumatera,13.8579,0.1869,E,target villages
@@ -65,6 +71,7 @@ in the 337 without KLH peat (not scored),KHG.61.11-04.02,KHG Sungai Matan -Sunga
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.16.07.01,KHG Sungai Penimpahan - Sungai Air Hitam,Pulau Sumatera,3.708,0.6731,A,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.16.07.04,KHG Aek Sebatik - Aek Musi,Pulau Sumatera,8.2431,0.4297,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.16.07.05,KHG Aek Musi - Sungai Upang,Pulau Sumatera,9.4133,0.4759,C,target villages + SKEG 2024 damage
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.16.07.08,KHG Delta Talang,Pulau Sumatera,15.7639,0.4711,C,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.21.02.04,KHG Pulau Kundur,Pulau Sumatera,21.0619,0.5174,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.01.03,KHG Sungai Sijang - Sungai Bantanan,Pulau Kalimantan,5.46,0.3196,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.01.06,KHG Sungai Samabas Kecil - Sungai Teberau,Pulau Kalimantan,3.396,0.2917,E,target villages + SKEG 2024 damage
@@ -74,6 +81,7 @@ in the 337 without KLH peat (not scored),KHG.61.11-04.02,KHG Sungai Matan -Sunga
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.03-09.02,KHG Sungai Inggis - Sungai Kapuas,Pulau Kalimantan,14.719,0.4772,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.03.01,KHG Sungai Kapuas - Sungai Campedik,Pulau Kalimantan,11.395,0.443,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.03.08,KHG Sungai Kapuas - Sungai Muna,Pulau Kalimantan,9.6745,0.4177,C,target villages + SKEG 2024 damage
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.03.09,KHG Sungai Rambai - Sungai Meliau,Pulau Kalimantan,7.0519,0.3222,E,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.03.14,KHG Sungai Labai - Sungai Ambawang Besar,Pulau Kalimantan,11.7751,0.4601,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.04.02,KHG Sungai Labai - Sungai Bantilkecil,Pulau Kalimantan,5.3254,0.3386,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.04.15,KHG Sungai Mading - Sungai Jelai,Pulau Kalimantan,5.4785,0.6654,A,target villages + SKEG 2024 damage
@@ -90,6 +98,7 @@ in the 337 without KLH peat (not scored),KHG.61.11-04.02,KHG Sungai Matan -Sunga
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.06.12,KHG Sungai Kapuas - Sungai Muntik,Pulau Kalimantan,1.8578,0.2003,E,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.06.13,KHG Sungai Kapuas - Sungai Beran,Pulau Kalimantan,13.2415,0.3048,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.07.03,KHG Sungai Sabuak - Sungai Landak,Pulau Kalimantan,21.4874,0.5478,C,target villages + SKEG 2024 damage
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.08.02,KHG Sungai Mandor - Sungai Landak,Pulau Kalimantan,83.2044,0.4571,C,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.08.03,KHG Sungai Sambih,Pulau Kalimantan,10.7754,0.3523,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.08.05,KHG Sungai Sengah - Sungai Landak,Pulau Kalimantan,13.3714,0.3647,E,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.08.06,KHG Sungai Nahaya - Sungai Landak,Pulau Kalimantan,15.5358,0.1955,E,target villages
@@ -101,6 +110,7 @@ in the 337 without KLH peat (not scored),KHG.61.11-04.02,KHG Sungai Matan -Sunga
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.09.07,KHG Sungai Sekadau - Sungai Menterap,Pulau Kalimantan,10.8588,0.4665,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.09.08,KHG Sungai Menterap - Sungai Kerabat,Pulau Kalimantan,8.9137,0.4614,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.10.03,KHG Sungai Belimbing - Sungai Menunuh,Pulau Kalimantan,3.3598,0.372,C,target villages + SKEG 2024 damage
+"in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.11-04.02,KHG Sungai Matan -Sungai Semandang,Pulau Kalimantan,194.1857,0.5919,C,target villages
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.12.04,KHG Sungai Kapuas - Sungai Separoh,Pulau Kalimantan,23.862,0.3718,C,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.61.12.05,KHG Sungai Kapuas - Sungai Dawak,Pulau Kalimantan,12.5897,0.7015,A,target villages + SKEG 2024 damage
 "in the 337 with less than min_peat_km2 of peat (scored against the pool, less reliable)",KHG.62.01.05,KHG Sungai Kumai - Sungai Sekonyer,Pulau Kalimantan,11.6978,0.4289,C,target villages + SKEG 2024 damage
