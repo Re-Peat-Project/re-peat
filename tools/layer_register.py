@@ -4,6 +4,7 @@
     python re-peat/tools/layer_register.py fill             # compute the automatic columns of rows that have none (new rows)
     python re-peat/tools/layer_register.py fill --refresh   # recompute them for every row (after a deliberate data update)
     python re-peat/tools/layer_register.py show [THEME]     # print the register, optionally one theme
+    python re-peat/tools/layer_register.py pack [--replace] # one GeoPackage with every registered layer (after a passing check)
 
 The register is sites/layer_register.csv, one row per layer (or per group of fields of a multi-theme file such as the PPEG
 analysis). Redundant layers are welcome: list each one, with what it is used for. Hand-written columns:
@@ -15,15 +16,26 @@ To add a layer: append a row with the hand-written columns, run `fill`, then `ch
 `check` exits 1 when a file is missing, changed, or lacks a listed field; the hashes are cached by size and modification time in
 $REPEAT_DATA/derived/layer_register_sha256.json, so a check of unchanged files takes seconds.
 Writes docs/24-layer-register.md (the register, readable) on fill and check.
+
+pack writes $REPEAT_DATA/derived/prioritisation_layers.gpkg (--out to change; not tracked: it holds KLH data):
+  khg_summary      the 865 KHG polygons with every per-KHG attribute: KLH priority (337, 362), data availability and run class
+                   (av_*), PPEG sums (ppeg_*), tenure areas (tenure_*), tenure complexity (c_*, tenure_complexity)
+  <id>             every registered vector layer, copied whole with its CRS and fields; CSV rows as attribute tables; rows that
+                   share one file and layer (the PPEG field groups) share one pack layer named after the file
+  layer_register   the register, with the pack layer of each row and the pack date
+An existing pack is renamed with its date, never overwritten; the pack is built under a temporary name and renamed when complete;
+--resume continues an interrupted build (layers whose feature count matches the source are kept, khg_summary is rewritten).
 """
 import argparse
 import hashlib
 import json
 import os
+import re
 import sys
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
+import geopandas as gpd
 import pandas as pd
 import pyogrio
 
@@ -113,13 +125,120 @@ def write_md(d):
     MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def pack_name(d):
+    """Layer name in the pack for each row: the row id, or for a file/layer shared by several rows (the PPEG analysis) one name."""
+    names = {}
+    for (path, layer), g in d.groupby(["path", "layer"], sort=False):
+        if len(g) == 1:
+            nm = g.id.iloc[0]
+        else:
+            nm = re.sub(r"[^a-z0-9]+", "_", Path(path).stem.lower()).strip("_")[:50]
+        for i in g.index:
+            names[i] = nm
+    return pd.Series(names).reindex(d.index)
+
+
+def khg_summary():
+    """The 865 KHG polygons with every per-KHG attribute the project holds (one row per KHG)."""
+    rep = HUB / "reports"
+    g = gpd.read_file(DATA / "derived" / "khg_klh_priority.gpkg", layer="khg")
+    av = pd.read_csv(HUB / "sites" / "khg_availability.csv")
+    keep = ["code", "run_class", "peat_depth_source", "deltadtm_share", "lidar_share", "bbsdlp_share", "feg50k_share",
+            "licence_share_any", "blocks_brgm", "canal_km_total", "canal_density_km_per_km2", "stations_community",
+            "stations_concession", "p_annual_mm", "e_annual_mm", "dry_shortfall_mm"]
+    g = g.merge(av[[c for c in keep if c in av]].rename(columns={"code": "khg_code"}).add_prefix("av_").rename(columns={"av_khg_code": "khg_code"}),
+                on="khg_code", how="left")
+    pp = pd.read_csv(rep / "national_profile" / "ppeg" / "ppeg_khg.csv")
+    pp = pp[pp.khg_code.astype(str).str.startswith("KHG.")]
+    pp = pp.drop(columns=[c for c in ("khg_name", "island", "provinces", "priority", "priority_rank", "in_target_villages",
+                                        "has_skeg_damage", "target_village_ha", "priority_ha", "priority_in_target_villages_ha") if c in pp])
+    g = g.merge(pp.add_prefix("ppeg_").rename(columns={"ppeg_khg_code": "khg_code"}), on="khg_code", how="left")
+    ta = pd.read_csv(rep / "national_profile" / "tenure" / "tenure_area.csv")
+    tw = ta.pivot_table(index="khg_id", columns="tenure", values=["peat_km2", "burned_peat_km2"], aggfunc="sum").fillna(0)
+    tw.columns = [f"tenure_{t}_{v}" for v, t in tw.columns]
+    g = g.merge(tw.round(3), left_on="khg_code", right_index=True, how="left")
+    tc = pd.read_csv(rep / "national_profile" / "tenure_complexity" / "tenure_complexity.csv").drop(columns=["khg"])
+    g = g.merge(tc.rename(columns={"khg_id": "khg_code", "peat_km2": "tc_peat_km2", "points": "tc_points"}), on="khg_code", how="left")
+    return g
+
+
+def copy_layer(src, layer, dst, name, chunk=100_000):
+    """Copy a vector layer into the pack in chunks (the PPEG file is 989,398 polygons), keeping its CRS and fields."""
+    info = pyogrio.read_info(src, layer=layer or None)
+    n = info["features"]
+    for off in range(0, max(n, 1), chunk):
+        part = pyogrio.read_dataframe(src, layer=layer or None, skip_features=off, max_features=chunk)
+        pyogrio.write_dataframe(part, dst, layer=name, driver="GPKG", append=off > 0)
+    return n
+
+
+def pack(d, out, replace, resume=False):
+    tmp = out.with_suffix(".building.gpkg")
+    have = {}
+    if resume and tmp.exists():
+        have = {l: pyogrio.read_info(tmp, layer=l)["features"] for l, _ in pyogrio.list_layers(tmp)}
+        print(f"resuming {tmp.name}: {len(have)} layers there")
+    elif tmp.exists():
+        tmp.unlink()
+    if out.exists():
+        if not replace:
+            sys.exit(f"{out} exists: pass --replace to rename it (date suffix) and build a new one")
+        old = out.with_name(f"{out.stem}_{datetime.fromtimestamp(out.stat().st_mtime):%Y%m%d_%H%M}{out.suffix}")
+        out.rename(old)
+        print(f"renamed the previous pack to {old.name}")
+    d = d.copy()
+    d["pack_layer"] = pack_name(d)
+    t0 = datetime.now()
+    s = khg_summary()
+    pyogrio.write_dataframe(s, tmp, layer="khg_summary", driver="GPKG", layer_options={"OVERWRITE": "YES"})
+    print(f"khg_summary: {len(s)} KHG, {s.shape[1] - 1} attributes")
+    done = set()
+    for _, r in d.iterrows():
+        if r.pack_layer in done:
+            continue
+        done.add(r.pack_layer)
+        src = resolve(r.path)
+        if r.pack_layer in have:
+            want = (pyogrio.read_info(src, layer=r.layer or None)["features"] if src.suffix.lower() != ".csv"
+                    else len(pd.read_csv(src, dtype=str, keep_default_na=False)))
+            if have[r.pack_layer] == want:
+                print(f"{r.pack_layer}: already packed ({want:,})")
+                continue
+            sys.exit(f"{r.pack_layer} is incomplete in {tmp.name} ({have[r.pack_layer]:,} of {want:,}): rebuild without --resume")
+        if src.suffix.lower() in (".gpkg", ".shp", ".geojson", ".fgb"):
+            n = copy_layer(src, r.layer, tmp, r.pack_layer)
+        elif src.suffix.lower() == ".csv":
+            t = pd.read_csv(src, dtype=str, keep_default_na=False)
+            pyogrio.write_dataframe(t, tmp, layer=r.pack_layer, driver="GPKG")
+            n = len(t)
+        else:
+            d.loc[d.pack_layer == r.pack_layer, "pack_layer"] = "(not packed: " + src.suffix + ")"
+            print(f"{r.id}: {src.suffix} not packed")
+            continue
+        print(f"{r.pack_layer}: {n:,} ({(datetime.now() - t0).seconds} s)", flush=True)
+    reg = d.assign(packed=str(date.today()))
+    pyogrio.write_dataframe(reg, tmp, layer="layer_register", driver="GPKG", layer_options={"OVERWRITE": "YES"})
+    tmp.rename(out)
+    print(f"wrote {out} ({out.stat().st_size / 1e9:.2f} GB, {len(done) + 2} layers, {(datetime.now() - t0).seconds} s)")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("action", choices=["check", "fill", "show"])
+    ap.add_argument("action", choices=["check", "fill", "show", "pack"])
     ap.add_argument("theme", nargs="?")
     ap.add_argument("--refresh", action="store_true")
+    ap.add_argument("--out", type=Path, default=DATA / "derived" / "prioritisation_layers.gpkg")
+    ap.add_argument("--replace", action="store_true", help="pack: rename an existing pack (date suffix) and build a new one")
+    ap.add_argument("--resume", action="store_true", help="pack: continue an interrupted build, keeping the complete layers already copied")
     a = ap.parse_args()
     d = load()
+    if a.action == "pack":
+        cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+        bad = [r.id for _, r in d.iterrows() if inspect(r, cache)[1] or inspect(r, cache)[0].get("sha256") != r.sha256]
+        if bad:
+            sys.exit(f"not packing: rows fail the check ({bad}); run `check` and fix them first")
+        pack(d, a.out, a.replace, a.resume)
+        return
     if a.action == "show":
         g = d[d.theme.str.casefold() == a.theme.casefold()] if a.theme else d
         print(g[["id", "theme", "path", "layer", "verification"]].to_string(index=False))

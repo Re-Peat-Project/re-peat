@@ -1,0 +1,37 @@
+{
+ "rule": {
+  "version": 2,
+  "indicators": [
+   "c_licence_community",
+   "c_contested",
+   "c_claims_mean",
+   "c_holders"
+  ],
+  "weights": "equal",
+  "min_peat_km2": 25,
+  "written": "2026-11-16",
+  "layers": {
+   "hutan_desa": "tenure/hutan_desa.gpkg",
+   "htr": "tenure/htr.gpkg",
+   "pptpkh": "tenure/pptpkh.gpkg",
+   "pelepasan": "tenure/pelepasan.gpkg"
+  }
+ },
+ "run": "2026-11-17",
+ "peat": "C:/Users/danyl/Documents/Github/_repeat-project/_data/peat/ppeg_lahan_gambut_2026_30m.tif",
+ "layers": {
+  "licences": "landstatus/ALL_Updade__IZIN_USAHA__PBPH_Perkebunan_HTRKM_Tambang__2025.gpkg",
+  "forest_area": "landstatus/KWSHUTAN_AR_250K_2023_Transcripted.gpkg",
+  "dmpg": "dpg/dmpg_villages_sitmat.gpkg",
+  "hutan_desa": "tenure/hutan_desa.gpkg",
+  "htr": "tenure/htr.gpkg",
+  "pptpkh": "tenure/pptpkh.gpkg",
+  "pelepasan": "tenure/pelepasan.gpkg"
+ },
+ "missing_claims": [
+  "hutan adat (mirror empty)",
+  "BRWA customary territory polygons",
+  "PIAPS and newer SIGAP permit releases",
+  "BPN land rights (HGU, certificates)"
+ ]
+}
