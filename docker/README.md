@@ -14,8 +14,7 @@ every module repository, otherwise the image checks out older commits:
 
     python tools/khg_pipeline.py setup --lock
 
-`env/repos.lock.txt` was last written on 2026-10-28; the DEM checks, the national availability scan and the per-KHG
-config layers came later.
+`env/repos.lock.txt` was last written on 2026-11-18.
 
 ## Build
 
