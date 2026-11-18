@@ -270,7 +270,8 @@ class Neraca(Step):
 
 class Deficit(Step):
     name = "deficit"
-    optional = True             # needs SiTMAT stations inside the KHG (concessions only); without them the chain runs without a deficit
+    optional = True             # needs SiTMAT stations inside the KHG (concessions only), or neraca.deficit.dz_no_obs_cm (an assumed
+                                # drop); without either the chain runs without a deficit. neraca.gwm sets the groundwater model's options
 
     def applies(self, c):
         return "" if c.first_dem() else "no DEM variant"
@@ -281,9 +282,16 @@ class Deficit(Step):
     def done(self, c):
         return (c.kf / "03_neraca" / "runs" / "deficit" / "neraca_khg.csv").is_file() or self.note(c).is_file()
 
+    @staticmethod
+    def deficit_keys(c) -> dict:
+        """neraca.deficit without the empty keys: the module keeps its own defaults for those."""
+        return {k: v for k, v in (c.st["neraca"].get("deficit") or {}).items() if v is not None}
+
     def config(self, c) -> Path:
-        if c.sitmat() is None:
-            raise SystemExit("no SiTMAT on this machine (sitmat/ empty or SITMAT_PROCESSED missing); the chain goes on without a deficit")
+        dfc = self.deficit_keys(c)
+        if c.sitmat() is None and dfc.get("dz_no_obs_cm") is None:
+            raise SystemExit("no SiTMAT on this machine (sitmat/ empty or SITMAT_PROCESSED missing) and neraca.deficit.dz_no_obs_cm "
+                             "is not set; the chain goes on without a deficit")
         d0 = c.first_dem()
         c0 = Ctx(c.s, c.kc, d0)
         surf = c0.surface()
@@ -299,14 +307,34 @@ class Deficit(Step):
                 "forcing_window": "calibration", "evaporation": "E_era5_mm",
                 "forcing_direct": {"cache_dir": f"${{REPEAT_KHG}}/{f}/cache/{c.code}/neraca", "start": n["window"][0], "end": n["window"][1],
                                    "tz_hours": c.kc["khg"].get("tz_hours") or TZ.get(c.kc["khg"].get("province"), 7)},
-                "stations": {"tma": {"path": c.sitmat()}, "start": n["window"][0], "end": n["window"][1]}}
-        return _write(c.site / "neraca.yaml", GEN.format(f=f) + f"# {c.name}: KHG deficit (SiTMAT stations, ERA5); set up on the {d0} variant's units.\n", body)
+                **({"stations": {"tma": {"path": c.sitmat()}, "start": n["window"][0], "end": n["window"][1]}} if c.sitmat() else {}),
+                **({"deficit": dfc} if dfc else {})}
+        what = "SiTMAT stations" if c.sitmat() else f"no SiTMAT, water-table drop assumed: {dfc['dz_no_obs_cm']}"
+        return _write(c.site / "neraca.yaml", GEN.format(f=f) + f"# {c.name}: KHG deficit ({what}, ERA5); set up on the {d0} variant's units.\n", body)
+
+    @staticmethod
+    def gwm_args(c) -> list[str]:
+        """repeat_neraca.run options from neraca.gwm (empty values keep the registry's)."""
+        g = c.st["neraca"].get("gwm") or {}
+        a = [x for t in (g.get("tiers") or [1]) for x in ("--tier", str(t))]
+        a += ["--classes", ",".join(g.get("classes") or ["primary", "secondary", "tertiary"])]
+        num = lambda v: ",".join(f"{float(x):g}" for x in (v if isinstance(v, list) else [v]))   # noqa: E731
+        if g.get("res_m"):
+            a += ["--res", f"{float(g['res_m']):g}"]
+        if g.get("drawdown_m"):
+            a += ["--drawdown", num(g["drawdown_m"])]
+        if g.get("k_multiplier"):
+            a += ["--k-multiplier", num(g["k_multiplier"])]
+        for key, opt in (("peat_table", "--peat-table"), ("et_stress", "--et-stress"), ("registry", "--registry")):
+            if g.get(key):
+                a += [opt, str(g[key])]
+        return a
 
     def commands(self, c):
         cfg = str(self.config(c))
         out = c.kf / "03_neraca" / "runs" / "deficit"
-        return [("main", ["-m", "repeat_neraca.stations", "--config", cfg], HUB),
-                ("main", ["-m", "repeat_neraca.run", "--config", cfg, "--tier", "1", "--classes", "primary,secondary,tertiary", "--out", str(out)], HUB)]
+        stations = [("main", ["-m", "repeat_neraca.stations", "--config", cfg], HUB)] if c.sitmat() else []
+        return stations + [("main", ["-m", "repeat_neraca.run", "--config", cfg, *self.gwm_args(c), "--out", str(out)], HUB)]
 
 
 class Prioritisation(Step):

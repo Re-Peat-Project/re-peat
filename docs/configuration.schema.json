@@ -134,6 +134,138 @@
     "title": "Dems",
     "type": "object"
    },
+   "Gwm": {
+    "additionalProperties": false,
+    "description": "How the deficit step runs repeat-neraca's groundwater model (`python -m repeat_neraca.run`).",
+    "properties": {
+     "tiers": {
+      "default": [
+       1
+      ],
+      "description": "1: one KHG-level curve (lumped); 2: the 2D groundwater solver, summarised per sub-KHG",
+      "items": {
+       "enum": [
+        1,
+        2
+       ],
+       "type": "integer"
+      },
+      "label_id": "Tingkat model",
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+     },
+     "res_m": {
+      "anyOf": [
+       {
+        "exclusiveMinimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Cell size of tier 2 (empty: registry neraca_grid_res_m, 500 m); keep it below the drain spacing",
+      "label_id": "Grid tingkat 2",
+      "title": "Tier 2 grid",
+      "unit": "m"
+     },
+     "drawdown_m": {
+      "anyOf": [
+       {
+        "items": {
+         "exclusiveMinimum": 0,
+         "type": "number"
+        },
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Canal level below the surface; tier 1 runs each, tier 2 the first (empty: registry canal_drawdown, 1.2 m)",
+      "label_id": "Penurunan muka air kanal",
+      "title": "Canal drawdown",
+      "unit": "m"
+     },
+     "classes": {
+      "default": [
+       "primary",
+       "secondary",
+       "tertiary"
+      ],
+      "description": "Canal classes that hold the canal level",
+      "items": {
+       "enum": [
+        "primary",
+        "secondary",
+        "tertiary"
+       ],
+       "type": "string"
+      },
+      "label_id": "Kelas kanal",
+      "minItems": 1,
+      "title": "Canal classes",
+      "type": "array"
+     },
+     "k_multiplier": {
+      "default": [
+       1.0
+      ],
+      "description": "Scale of the peat transmissivity; tier 1 runs each, tier 2 the first",
+      "items": {
+       "exclusiveMinimum": 0,
+       "type": "number"
+      },
+      "label_id": "Pengali transmisivitas",
+      "minItems": 1,
+      "title": "Transmissivity multiplier",
+      "type": "array"
+     },
+     "peat_table": {
+      "default": "urzainki2020",
+      "description": "Storage and transmissivity of the peat: the repository table or the tropical sets of Urzainki et al. 2023",
+      "enum": [
+       "urzainki2020",
+       "tropical-small",
+       "tropical-large"
+      ],
+      "label_id": "Tabel hidraulik gambut",
+      "title": "Peat hydraulic table",
+      "type": "string"
+     },
+     "et_stress": {
+      "default": "none",
+      "description": "Evaporation falls as the water table deepens: off, drained or natural thresholds",
+      "enum": [
+       "none",
+       "drained",
+       "natural"
+      ],
+      "label_id": "Cekaman evaporasi",
+      "title": "Evaporation stress",
+      "type": "string"
+     },
+     "registry": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Your copy of repeat_neraca/parameters.yaml (empty: the one in the package)",
+      "label_id": "Registri parameter",
+      "title": "Parameter registry"
+     }
+    },
+    "title": "Gwm",
+    "type": "object"
+   },
    "Layouts": {
     "additionalProperties": false,
     "properties": {
@@ -395,6 +527,18 @@
       ],
       "title": "Deficit window",
       "type": "array"
+     },
+     "deficit": {
+      "$ref": "#/$defs/NeracaDeficit",
+      "description": "repeat-neraca's deficit section, written to the deficit step's neraca.yaml",
+      "label_id": "Defisit KHG",
+      "title": "KHG deficit"
+     },
+     "gwm": {
+      "$ref": "#/$defs/Gwm",
+      "description": "Tiers and options of the groundwater model the deficit step runs",
+      "label_id": "Model airtanah",
+      "title": "Groundwater model"
      }
     },
     "required": [
@@ -406,6 +550,190 @@
      "window"
     ],
     "title": "Neraca",
+    "type": "object"
+   },
+   "NeracaDeficit": {
+    "additionalProperties": false,
+    "description": "repeat-neraca's `deficit:` section (repeat_neraca.deficit.DEFAULTS). Keys left empty keep the module's default.",
+    "properties": {
+     "dz_no_obs_cm": {
+      "anyOf": [
+       {
+        "const": "observed",
+        "type": "string"
+       },
+       {
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "For a KHG without SiTMAT readings: empty skips the deficit (as before); a number is the assumed drop over the window; `observed` takes the median (and range) of the drops at the KHG with stations under the KHG root",
+      "label_id": "Asumsi penurunan TMA tanpa stasiun",
+      "title": "Assumed water-table drop without stations",
+      "unit": "cm"
+     },
+     "dz_no_obs_band_cm": {
+      "anyOf": [
+       {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+         {
+          "minimum": 0,
+          "type": "number"
+         },
+         {
+          "minimum": 0,
+          "type": "number"
+         }
+        ],
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "[low, high] for deficit_mm_low / _high; must hold dz_no_obs_cm",
+      "label_id": "Rentang asumsi penurunan TMA",
+      "title": "Band of the assumed drop",
+      "unit": "cm"
+     },
+     "dz_observed_root": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Where `observed` looks for */03_neraca/runs/deficit/neraca_khg.csv (default: the KHG root)",
+      "label_id": "Folder penurunan teramati",
+      "title": "Folder of the observed drops"
+     },
+     "start": {
+      "anyOf": [
+       {
+        "pattern": "^(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "MM-DD (module default 06-01)",
+      "label_id": "Awal periode defisit",
+      "title": "Deficit period start"
+     },
+     "end": {
+      "anyOf": [
+       {
+        "pattern": "^(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "MM-DD (module default 10-31)",
+      "label_id": "Akhir periode defisit",
+      "title": "Deficit period end"
+     },
+     "sy": {
+      "anyOf": [
+       {
+        "exclusiveMaximum": 1,
+        "exclusiveMinimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Central Sy (module default 0.15)",
+      "label_id": "Specific yield",
+      "title": "Specific yield"
+     },
+     "sy_band": {
+      "anyOf": [
+       {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+         {
+          "type": "number"
+         },
+         {
+          "type": "number"
+         }
+        ],
+        "type": "array"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "[low, high] (module default [0.10, 0.20])",
+      "label_id": "Rentang specific yield",
+      "title": "Specific yield band"
+     },
+     "edge_days": {
+      "anyOf": [
+       {
+        "minimum": 1,
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Days averaged at each end of the period (default 7)",
+      "label_id": "Hari tepi",
+      "title": "Edge days"
+     },
+     "min_station_coverage": {
+      "anyOf": [
+       {
+        "exclusiveMinimum": 0,
+        "maximum": 1,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Share of days with readings a KHG needs (default 0.5)",
+      "label_id": "Cakupan stasiun minimum",
+      "title": "Minimum station coverage"
+     },
+     "wapor_bound": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Use WaPOR ET as a band bound (default false)",
+      "label_id": "WaPOR dalam rentang",
+      "title": "WaPOR in the band"
+     }
+    },
+    "title": "NeracaDeficit",
     "type": "object"
    },
    "Prioritisation": {
@@ -935,6 +1263,20 @@
       "description": "low for PEATGRIDS",
       "label_id": "Tingkat keyakinan",
       "title": "Confidence"
+     },
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Why the source differs from khg.yaml (e.g. a fallback)",
+      "label_id": "Catatan",
+      "title": "Note"
      }
     },
     "title": "PeatDepth",

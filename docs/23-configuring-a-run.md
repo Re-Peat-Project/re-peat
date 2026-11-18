@@ -38,6 +38,11 @@ dems:
 neraca:
   rain: imerg                         # chirps (default), imerg, terraclimate_pr
   et: [mod16]                         # wapor, mod16, mod16nrt, terraclimate_aet
+  deficit:                            # repeat-neraca's deficit section
+    dz_no_obs_cm: observed            # KHG without SiTMAT: a number (cm) or observed (median of the KHG with stations); null skips
+  gwm:                                # the groundwater model of the deficit step
+    tiers: [1, 2]                     # 2 adds the 2D solver per sub-KHG
+    res_m: 100                        # tier 2 cell; keep it below the drain spacing (500 m by default)
 pump:
   set:
     run.subkhg_selection.n: 8         # plan 8 sub-KHG (national choice: 5)
@@ -82,6 +87,7 @@ affects, and everything after it:
 | DEM correction (`dem_correction`) | `dem_correction` |
 | delineation | `delineation` |
 | rain, ET, periods (`neraca`) | `deficit` |
+| deficit without stations, groundwater model (`neraca.deficit`, `neraca.gwm`) | `deficit` (also when it was "not available" before) |
 | prioritisation | `prioritisation` |
 | pump settings (`pump`) | `pump` |
 

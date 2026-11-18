@@ -79,6 +79,18 @@ neraca:                             # repeat-neraca batch per variant
   end: "2026-10-01"                 # exclusive; the first day after the last complete dekad of every product (as the 2026-10 runs)
   workers: 8                        # parallel Earth Engine requests (years); output identical to 4
   window: ["2026-04-01", "2026-10-15"]   # the KHG deficit: SiTMAT window
+  deficit:                          # repeat-neraca's deficit section (repeat_neraca.deficit); empty keys keep the module defaults
+    dz_no_obs_cm: null              # KHG without SiTMAT: null skips the deficit; a number (cm) or `observed` assumes the drop
+    dz_no_obs_band_cm: null         # [low, high] cm around dz_no_obs_cm
+  gwm:                              # the groundwater model the deficit step runs (repeat_neraca.run)
+    tiers: [1]                      # 1 lumped KHG curve; add 2 for the 2D solver per sub-KHG
+    res_m: null                     # tier 2 cell (null: registry neraca_grid_res_m, 500 m); keep it below the drain spacing
+    drawdown_m: null                # canal level below the surface (null: registry canal_drawdown, 1.2 m)
+    classes: [primary, secondary, tertiary]
+    k_multiplier: [1]
+    peat_table: urzainki2020
+    et_stress: none
+    registry: null                  # your copy of repeat_neraca/parameters.yaml (null: the package's)
 
 prioritisation:                     # repeat-prioritisation subkhg; as re-peat/sites/14.02-04-05.01_kampar_gaung/subkhg.yaml
   years: {baseline: [2015, 2022], validation: [2023], elnino: [2015, 2019]}
