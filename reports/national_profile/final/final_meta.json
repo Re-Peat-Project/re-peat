@@ -33,6 +33,13 @@
     },
     "u_canal_tertiary": {
      "weight": 0
+    },
+    "forest_loss_2015": {
+     "weight": 0
+    },
+    "sm_root_dry": {
+     "weight": 0,
+     "direction": "-"
     }
    },
    "stake": {
@@ -93,7 +100,19 @@
    "peat_volume_mm3",
    "tma_deep_share",
    "open_share",
-   "forest_share"
+   "forest_share",
+   "reveg_share",
+   "burn_recovered_share",
+   "burn_unrecovered_share",
+   "tmf_forest_2024",
+   "tmf_degraded_2024",
+   "tmf_deforested_2024",
+   "tmf_regrowth_2024",
+   "hansen_loss_2015",
+   "ndvi_dry",
+   "ndmi_dry",
+   "ndvi_low_share",
+   "sm_root_anom"
   ],
   "intervention": {
    "rewetting": {
@@ -101,7 +120,7 @@
     "min": 0.2
    },
    "revegetation": {
-    "indicator": "open_share",
+    "indicator": "reveg_share",
     "min": 0.2
    }
   },
@@ -133,9 +152,27 @@
    "population": "population/populace/IDN_2025q3.tif",
    "villages": "batas_desa_indonesia_2023_KLH.gpkg",
    "exposure_buffer_km": 10
+  },
+  "cover": {
+   "tmf": "forest/tmf_v1_2024",
+   "burned_years": [
+    2015,
+    2023
+   ],
+   "ee_project": "ee-danylaksono",
+   "dry_months": [
+    7,
+    10
+   ],
+   "dry_year": 2025,
+   "baseline_years": [
+    2016,
+    2024
+   ],
+   "ndvi_low": 0.5
   }
  },
- "run": "2026-11-17",
+ "run": "2026-11-18",
  "tercile_cuts": {
   "urgency": [
    0.3673,
@@ -150,7 +187,7 @@
    0.559
   ]
  },
- "feasibility_low_cut": 0.4301,
+ "feasibility_low_cut": 0.4356,
  "people_high_cut": 0.6432,
  "pool": 334,
  "scored": 433
