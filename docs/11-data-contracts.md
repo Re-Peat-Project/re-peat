@@ -96,7 +96,7 @@ Not produced by any module here: canals with `canal_class` (and optional `depth_
 
 ## C8. Pump inputs as they are on the project KHG (checked 2026-10-25/26)
 
-Checked read-only on five KHG (Kahayan-Sebangau, Mendahara-Batanghari, Air Hitam Laut-Buntu Kecil, Pungurbesar-Kapuas with BRGM DTM and with DEMNAS) against the national sources and the pump runs of 24-25 Oct. Changes proposed in `repeat-pump` are named by their pull request there (#2 to #7, open on 2026-10-26).
+Checked read-only on five KHG (Kahayan-Sebangau, Mendahara-Batanghari, Air Hitam Laut-Buntu Kecil, Pungurbesar-Kapuas with BRGM DTM and with DEMNAS) against the national sources and the pump runs of 24-25 Oct. Changes made in `repeat-pump` are named by their pull request there (#2 to #7, merged 26-27 Oct 2026).
 
 | Layer | What the modules get | Status |
 |---|---|---|
@@ -107,7 +107,7 @@ Checked read-only on five KHG (Kahayan-Sebangau, Mendahara-Batanghari, Air Hitam
 | Rivers (pump) | RBI `SUNGAI_AR_50K` polygons. Every river gets `perennial = 1` and one `dry_season_wl_m` per site | **D9** |
 | DTM | BRGM DTM (Kahayan-Sebangau, Pungurbesar), LiDAR KLHK 25 m (Jambi), DEMNAS (Pungurbesar). No file carries a vertical datum; RMSE 2.46 m measured for DEMNAS, 0.3 m assumed elsewhere | see D4 |
 | CRS | Mixed inside one site: EPSG:4326 hand-over vectors, UTM rasters and pump layers (32748/32749), RBI polygons in WGS 84 + EGM2008 (EPSG:9518). `run.auto_reproject` is `false` by default, so the vectors are reprojected before the pump runs | |
-| Attribute `fid` | Shapefiles saved from a GeoPackage, and merged layers, carry an attribute `fid` that clashes with the GeoPackage row id. The pump keeps it as `src_fid` (PR #3) | done in PR |
+| Attribute `fid` | Shapefiles saved from a GeoPackage, and merged layers, carry an attribute `fid` that clashes with the GeoPackage row id. The pump keeps it as `src_fid` (PR #3) | done (`repeat-pump` #3) |
 
 ### What "IPG" means in each module
 
@@ -135,7 +135,7 @@ Each study KHG has a folder in the hub, `sites/<khg_slug>/`: a README (runbook, 
 | D4 | `dtm_smooth.json` sidecar | add it in `repeat-dem`; consumers warn when RMSE is missing |
 | D5 | Where the contract checks live | `repeat-common.contracts`: one `validate_<file>()` per section above, called by the reader of that file |
 | D6 | Which canal classes take part, and how the source values are read | `primer` and `sekunder` (Panduan 1.2), already in the project pump configs (`topology.canal_classes`). Open: read the source values (`Kanal Primer` …) directly in the plugin, so a KLH user does not have to recode them |
-| D7 | One peat depth input for all modules | **Settled 2026-10-26, proposed in `repeat-pump` PR #5:** the pump takes polygons or a raster (units stated; median for the score, minimum for the KLH rule). Open: which raster (class midpoints or the BRGM model) a reported run uses |
+| D7 | One peat depth input for all modules | **Settled 2026-10-26, done in `repeat-pump` #5:** the pump takes polygons or a raster (units stated; median for the score, minimum for the KLH rule). Open: which raster (class midpoints or the BRGM model) a reported run uses |
 | D8 | Existing blocks in the pump | Pass the filtered BRGM points as `sekat_existing` (`sekat_id` = row id, `has_gate` false, `crest_elev_m` empty), or state in every report that the pump runs without existing blocks |
 | D9 | River water level | Keep `perennial = 1` and one dry-season level per site as a stated assumption until a river level source exists |
-| D10 | Sekat on every canal or on the chosen area | **Settled 2026-10-26, proposed in `repeat-pump` PR #4:** `pumping.sekat_scope: selected` keeps the sekat on the selected canals and on the pump routes. The route sekat stay in the plan with either setting, as gates holding the pumped water; a selected area without sekat is a report warning |
+| D10 | Sekat on every canal or on the chosen area | **Settled 2026-10-26, done in `repeat-pump` #4:** `pumping.sekat_scope: selected` keeps the sekat on the selected canals and on the pump routes. The route sekat stay in the plan with either setting, as gates holding the pumped water; a selected area without sekat is a report warning |
