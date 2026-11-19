@@ -1,0 +1,25 @@
+# Mendahara - Batanghari (KHG.15.05-07-10.01), LiDAR: second spacing check.
+#   python scripts/sekat_variants.py --config ../re-peat/sites/15.05-07-10.01_mendahara_batanghari/sekat_variants_spacing.yaml   (from repeat-pump)
+title: Mendahara-Batanghari (LiDAR), spacing of new sekat
+base: ../../../_khg/15.05-07-10.01_mendahara_batanghari/05_pump/lidar/run_config.yaml
+out: ../../../_khg/15.05-07-10.01_mendahara_batanghari/05_pump/variants_spacing
+rule: |
+  Written on 2026-11-19, after the Kahayan-Sebangau check and before any run here. At Kahayan-Sebangau the land is so flat that
+  the head rule alone puts new sekat about 1.4 km apart (median), so the 500 m minimum never bound and all spacings gave the same
+  layout. The minimum binds only where the canal falls faster than dA / 500 m = 0.08 %. This KHG is the test case where it binds:
+  its 1 Nov 2026 LiDAR run has new sekat exactly 500 m apart on several canals (LiDAR: the best terrain data of the project).
+  Same variants, scoring, prices and decision rule as re-peat/sites/62.11-14.02_kahayan_sebangau/sekat_variants_spacing.yaml:
+  a closer spacing is defensible when its extra water per extra rupiah against s500 is at least half the s500 layout's average.
+reference: s500
+variants:
+  s500: {sekat.min_new_spacing_m: 500}
+  s400: {sekat.min_new_spacing_m: 400}
+  s300: {sekat.min_new_spacing_m: 300}
+  s200: {sekat.min_new_spacing_m: 200}
+  h06_s300: {sekat.min_new_spacing_m: 300, sekat.dA_m: 0.6}
+scoring:
+  snap_m: 30
+  balance_shares: [0.8, 0.9]
+  specific_yield: 0.15
+  lateral_reach_m: [600, 300]
+  drawdown_m: [1.0, 0.8, 1.2]

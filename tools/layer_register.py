@@ -70,9 +70,16 @@ def sha256(path, cache):
 
 def inspect(row, cache):
     """Automatic values and problems of one row."""
+    if row.path.startswith("Google Earth Engine:"):         # read in Earth Engine, not downloaded: nothing to hash
+        return {"size_bytes": "", "sha256": "", "file_modified": "", "features": ""}, []
     path = resolve(row.path)
     if not path.exists():
         return {}, [f"missing: {row.path}"]
+    if path.is_dir():                                        # a folder of tiles (one file per KHG): hash of the sorted name/size list
+        fs = sorted(p for p in path.iterdir() if p.is_file())
+        man = "\n".join(f"{p.name}\t{p.stat().st_size}" for p in fs).encode()
+        return {"size_bytes": str(sum(p.stat().st_size for p in fs)), "sha256": hashlib.sha256(man).hexdigest(), "features": f"{len(fs)} files",
+                "file_modified": datetime.fromtimestamp(max(p.stat().st_mtime for p in fs)).strftime("%Y-%m-%d") if fs else ""}, ([] if fs else ["empty folder"])
     auto = {"size_bytes": str(path.stat().st_size), "sha256": sha256(path, cache),
             "file_modified": datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d"), "features": ""}
     problems = []

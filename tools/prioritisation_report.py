@@ -110,6 +110,10 @@ def load():
                                           "priority_class01_ha", "priority_class02_ha", "priority_class03_ha", "peat_ha",
                                           "peat_burned_ha", "peat_canal_ha", "peat_dome_ha", "peat_thick3m_ha", "peat_protected_feg_ha"]]
     D["F"] = f.merge(act, left_on="khg_code", right_index=True, how="left")
+    tdir = NP / "technical_example"
+    if (tdir / f"{EXAMPLE}_points.csv").exists():       # tools/technical_example.py: the worked example of Annex C
+        D["tex_pts"] = pd.read_csv(tdir / f"{EXAMPLE}_points.csv")
+        D["tex_meta"] = json.loads((tdir / f"{EXAMPLE}_meta.json").read_text(encoding="utf-8"))
     return D
 
 
@@ -160,14 +164,14 @@ def fig_matrix(D, out):
         ax.axvline(v, color="#" + STYLE.MUTED, lw=.6, ls="--")
     ax.set_xlabel("Complexity (0 to 1)"); ax.set_ylabel("Urgency (0 to 1)")
     ax.legend(frameon=False, fontsize=8, loc="lower right")
-    ax.text(0.01, 0.99, "Dashed: tercile cuts of the scoring pool. Dot area: peat area.", transform=ax.transAxes, va="top", fontsize=7.5, color="#" + STYLE.MUTED)
+    ax.text(0.01, 0.99, "Dashed lines: borders between low, medium and high thirds. Larger dots: more peat.", transform=ax.transAxes, va="top", fontsize=7.5, color="#" + STYLE.MUTED)
     return save(fig, out / "matrix.png")
 
 
 def fig_types(D, out):
     t = D["types"].set_index("type").reindex(TY)
     fig, axs = plt.subplots(1, 3, figsize=(10, 2.6), sharey=True)
-    for ax, col, lab, k in zip(axs, ["khg", "peat_km2", "priority_ha"], ["KHG", "Peat (km²)", "SKEG-damaged peat (ha)"], [1, 1, 1]):
+    for ax, col, lab, k in zip(axs, ["khg", "peat_km2", "priority_ha"], ["KHG", "Peat (km²)", "Damaged peat (ha)"], [1, 1, 1]):
         ax.barh([f"{i} {TYN[i]}" for i in TY][::-1], t[col].values[::-1], color=[TYC[i] for i in TY][::-1])
         ax.set_title(lab, loc="left")
         for y, v in enumerate(t[col].values[::-1]):
@@ -205,7 +209,7 @@ def fig_validation(D, out):
     ok = tgt.notna()
     k20 = int(round(.2 * ok.sum()))
     D["capture_check"] = float(tgt[uval[ok].nlargest(k20).index].sum() / tgt[ok].sum())
-    ranks = {"Urgency (without 2026 hotspots)": uval[ok], "Fire history alone": f.loc[ok, "u_fire_freq"]}
+    ranks = {"Urgency (without 2026 fire detections)": uval[ok], "Past fires alone": f.loc[ok, "u_fire_freq"]}
     tgt = tgt[ok]
     for (lab, s), col in zip(ranks.items(), ["#" + STYLE.ACCENT, "#" + STYLE.MUTED]):
         o = s.sort_values(ascending=False).index
@@ -228,7 +232,7 @@ def fig_stability(D, out):
         h, _ = np.histogram(f[f.type == t].type_stability, bins)
         ax.bar(bins[:-1] + .05, h, width=.09, bottom=bottom, color=TYC[t], label=t)
         bottom += h
-    ax.set_xlabel("Share of 500 weight draws in which the KHG keeps its type"); ax.set_ylabel("KHG")
+    ax.set_xlabel("Share of 500 reruns with changed weights in which the KHG keeps its type"); ax.set_ylabel("KHG")
     ax.legend(frameon=False, ncol=5, fontsize=8)
     return save(fig, out / "stability.png")
 
@@ -244,7 +248,7 @@ def fig_actors(D, out):
     for (c, lab), col in zip(cols, pal):
         ax.barh([f"{t} {TYN[t]}" for t in TY][::-1], g[c].values[::-1], left=left[::-1], color=col, label=lab)
         left += g[c].values
-    ax.set_xlabel("SKEG-damaged peat (thousand ha)")
+    ax.set_xlabel("Damaged peat (thousand ha)")
     ax.legend(frameon=False, fontsize=7.5, loc="lower right")
     return save(fig, out / "actors.png")
 
@@ -313,67 +317,151 @@ def chapters(D, figs):
     gpm = D["prof"].set_index("khg_id").peat_frac_gpm1km.reindex(f[f.get("whole_khg", False) == True].khg_code) if nwk else pd.Series(dtype=float)
     note("whole_khg", nwk, "final_khg.csv whole_khg")
     C = {}
+    g337 = s337
+    sat = {k: g337[k].median() for k in ("forest_loss_2015", "hansen_loss_2015", "burn_recovered_share", "burn_unrecovered_share", "reveg_share", "open_share", "ndvi_dry", "sm_root_dry") if k in g337}
+    rho_fl = g337.forest_loss_2015.corr(g337.hansen_loss_2015, method="spearman") if "hansen_loss_2015" in g337 else float("nan")
+    rho_nd = g337.ndvi_low_share.corr(g337.open_share, method="spearman") if "ndvi_low_share" in g337 else float("nan")
+    n_sm = int(g337.sm_root_dry.notna().sum()) if "sm_root_dry" in g337 else 0
+    note("sat_medians_337", {k: round(float(v), 4) for k, v in sat.items()}, "final_khg.csv, scored 337")
 
     # --- 00 Indonesian executive summary
     C["00_ringkasan"] = f"""# Ringkasan eksekutif
 
-Laporan ini menyajikan urutan prioritas nasional Kesatuan Hidrologis Gambut (KHG) untuk pembasahan dan revegetasi, sebagai dasar perencanaan dan pembiayaan pemulihan gambut. Laporan disusun oleh tim GIS RE-PEAT (Departemen Teknik Geodesi, Universitas Gadjah Mada) untuk Bank Dunia dan KLH/BPLH. **Status: draf untuk diskusi. Bobot masih sementara sampai disepakati bersama KLH.**
+Indonesia memiliki 865 Kesatuan Hidrologis Gambut (KHG), yaitu hamparan gambut yang dibatasi sungai atau laut dan berfungsi sebagai satu sistem air. Gambut yang dikeringkan oleh kanal akan mengering, ambles dan mudah terbakar. Dua langkah utama pemulihannya adalah pembasahan (menyekat kanal agar air tertahan di gambut) dan revegetasi (menanami kembali gambut yang terbuka). Laporan ini mengurutkan KHG untuk membantu memutuskan di mana dana dan tenaga pemulihan sebaiknya dipakai lebih dulu. Laporan disusun oleh tim GIS RE-PEAT (Departemen Teknik Geodesi, Universitas Gadjah Mada) untuk Bank Dunia dan KLH/BPLH. **Status: draf untuk diskusi. Bobot setiap faktor masih sementara sampai disepakati bersama KLH.**
 
-Setiap KHG dinilai pada lima dimensi yang terpisah, bukan satu skor gabungan, karena masing-masing menjawab pertanyaan yang berbeda: **urgensi** (riwayat kebakaran, titik panas, kerusakan SKEG 2024, gambut terdampak kanal), **nilai yang dipertaruhkan** (gambut ≥ 3 m, kubah, fungsi lindung, kawasan konservasi, luas gambut), **kompleksitas** (kompleksitas penguasaan lahan, jenis aktor, jumlah desa), **kelayakan** (jarak ke sungai besar atau danau, jarak ke jalan, neraca air musim kemarau) dan **penduduk** (penduduk di gambut dan dalam radius 10 km, desa di gambut). Urgensi, kompleksitas dan nilai menentukan tipe tindakan setiap KHG (lima tipe); kelayakan dan penduduk menjadi penanda tambahan. Terpisah dari tipe, setiap KHG diberi **jenis intervensi** yang dibutuhkan gambutnya: pembasahan (≥ {rw_min}% gambut terdampak kanal), revegetasi (≥ {rv_min}% gambut bertutupan terbuka atau rusak menurut peta tutupan lahan KLH 2022), keduanya, atau perlindungan. Tipe menunjukkan seberapa mendesak dan seberapa rumit penanganan sebuah KHG; jenis intervensi menunjukkan apa yang perlu dikerjakan.
+Setiap KHG dilihat dari lima sisi yang dinilai terpisah, tidak dijumlahkan menjadi satu angka:
 
-- {n0(len(scored))} KHG dinilai, termasuk {n337_sc} dari {n337} KHG daftar kerja KLH {f"; {nwk} di antaranya tidak memiliki gambut dalam peta gambut KLH dan dinilai dengan seluruh KHG sebagai sebaran gambut, ditandai kurang andal" if nwk else ""}).
-- **Tipe A, aksi cepat:** {int(T.loc['A','khg'])} KHG ({int(T.loc['A','in_337'])} dalam 337), urgensi tinggi dan kompleksitas rendah atau sedang. Di sini dana dapat paling cepat digunakan. Contoh: {lst('A', 4)}.
-- **Tipe B, koordinasi multipihak:** {int(T.loc['B','khg'])} KHG, semuanya dalam 337, memuat **{pc(dmgB / dmg_scored)}** gambut rusak SKEG pada KHG yang dinilai ({n1(dmgB / 1e6)} juta ha). Di sini urgensi tinggi bertemu klaim lahan yang tumpang tindih antara perusahaan, Kementerian Kehutanan, KLH dan desa, sehingga pekerjaan membutuhkan kesepakatan antarpihak sebelum dapat dimulai.
-- **Tipe C, urgensi sedang:** {int(T.loc['C','khg'])} KHG; **tipe D, lindungi dan pantau:** {int(T.loc['D','khg'])} KHG bergambut dalam atau berkubah dengan sedikit kebakaran; **tipe E, pantau:** {int(T.loc['E','khg'])} KHG.
-- **Intervensi pada 337 KHG yang dinilai:** pembasahan {ivt('rewetting')}, pembasahan dan revegetasi {ivt('rewetting and revegetation')}, revegetasi {ivt('revegetation')}, perlindungan {ivt('protect')}.
-- **Validasi:** dengan data sampai 2025, 20% KHG teratas menurut urgensi memuat **{pc(V['urgency']['capture_top20pct'])}** gambut yang terbakar pada 2026 (riwayat kebakaran saja: {pc(V['fire_history_only']['capture_top20pct'])}); AUC {V['urgency']['auc']:.2f}.
-- **Kestabilan:** {pc(S['share_khg_type_stable_80pct'])} KHG mempertahankan tipenya pada sedikitnya 80% dari {S['runs']} uji dengan setiap bobot diubah ±50%.
-- Tidak ada KHG berurgensi tinggi di luar 362 KHG prioritas PPEG.
+- **Urgensi:** seberapa besar kemungkinan gambut terbakar atau makin rusak (riwayat kebakaran, titik panas, kerusakan, kanal).
+- **Nilai yang dipertaruhkan:** apa yang akan hilang (gambut dalam, kubah gambut, kawasan lindung dan konservasi, luas gambut).
+- **Kompleksitas:** berapa banyak pihak yang memiliki klaim atas lahan (perusahaan, kehutanan, desa, masyarakat), sehingga seberapa banyak kesepakatan yang dibutuhkan sebelum pekerjaan dapat dimulai.
+- **Kelayakan:** seberapa mudah pembasahan dilakukan di lapangan (jarak ke sungai dan jalan, seberapa kering musim kemaraunya).
+- **Penduduk:** berapa banyak orang yang tinggal di atau dekat gambut dan terpapar asap ketika gambut terbakar.
 
-Langkah berikut yang diusulkan: lokakarya pembobotan bersama KLH; pelengkapan data klaim lahan yang belum tersedia (hutan adat, batas wilayah adat dari BRWA, PIAPS, rilis izin terbaru dari SIGAP, hak atas tanah dari BPN); dan analisis rinci di dalam KHG tipe A dan B (defisit air, pompa, sekat kanal) sebagai dasar desain.
+Setiap sisi diberi skor 0 sampai 1. Skor 0,8 berarti KHG itu lebih tinggi daripada sekitar 80% KHG pembandingnya. Urgensi, kompleksitas dan nilai yang dipertaruhkan menempatkan setiap KHG pada satu dari lima tipe tindakan. Kelayakan dan penduduk tidak mengubah tipe, tetapi menambahkan penanda peringatan.
+
+- {n0(len(scored))} KHG dinilai, termasuk {n337_sc} dari {n337} KHG daftar kerja KLH{f". {nwk} di antaranya tidak memiliki gambut pada peta gambut KLH, sehingga seluruh KHG dipakai sebagai sebaran gambut; hasilnya ditandai kurang andal" if nwk else ""}.
+- **Tipe A, aksi cepat:** {int(T.loc['A','khg'])} KHG ({int(T.loc['A','in_337'])} dalam 337). Urgensi tinggi, klaim lahan tidak terlalu rumit. Di sini dana dapat paling cepat digunakan. Contoh: {lst('A', 4)}.
+- **Tipe B, koordinasi multipihak:** {int(T.loc['B','khg'])} KHG, semuanya dalam 337. Tipe ini memuat **{pc(dmgB / dmg_scored)}** gambut rusak (penilaian kerusakan KLH 2024) pada KHG yang dinilai, yaitu {n1(dmgB / 1e6)} juta ha. Urgensi tinggi, tetapi lahan diklaim bersamaan oleh perusahaan, Kementerian Kehutanan, KLH dan desa, sehingga pekerjaan membutuhkan kesepakatan antarpihak lebih dulu.
+- **Tipe C, urgensi sedang:** {int(T.loc['C','khg'])} KHG. **Tipe D, lindungi dan pantau:** {int(T.loc['D','khg'])} KHG bergambut dalam atau berkubah yang jarang terbakar. **Tipe E, pantau:** {int(T.loc['E','khg'])} KHG.
+- **Yang dibutuhkan gambutnya,** pada 337 KHG yang dinilai: pembasahan {ivt('rewetting')} KHG, pembasahan dan revegetasi {ivt('rewetting and revegetation')}, revegetasi {ivt('revegetation')}, perlindungan {ivt('protect')}. Pembasahan berarti sedikitnya {rw_min}% gambut berada di sekitar kanal. Revegetasi berarti sedikitnya {rv_min}% gambut perlu ditanami kembali: terbuka menurut peta tutupan lahan KLH 2022, terbakar pada 2015-2023 dan belum tumbuh kembali menurut peta hutan satelit 2024, atau hutannya hilang sejak 2015.
+- **Uji terhadap kebakaran 2026:** urutan ini disusun dari data sampai 2025, lalu dibandingkan dengan kebakaran 2026. Seperlima KHG yang paling mendesak memuat **{pc(V['urgency']['capture_top20pct'])}** gambut yang terbakar pada 2026. Bila hanya memakai riwayat kebakaran, angkanya {pc(V['fire_history_only']['capture_top20pct'])}.
+- **Seberapa mantap tipenya:** perhitungan diulang {S['runs']} kali dengan setiap bobot diubah secara acak hingga setengahnya, naik atau turun. {pc(S['share_khg_type_stable_80pct'])} KHG tetap pada tipe yang sama dalam sedikitnya 4 dari 5 ulangan.
+- Tidak ada KHG berurgensi tinggi di luar 362 KHG prioritas PPEG KLH.
+
+Langkah berikut yang diusulkan: lokakarya pembobotan bersama KLH; permintaan data klaim lahan yang belum tersedia (hutan adat, batas wilayah adat dari BRWA, PIAPS, rilis izin terbaru dari SIGAP, hak atas tanah dari BPN); dan analisis rinci di dalam KHG tipe A dan B (kebutuhan air, pompa, sekat kanal) sebagai dasar desain.
 """
-    C["00_ringkasan"] = id_num(C["00_ringkasan"].replace("SK.129/2017", "SK.129/2017"))
+    C["00_ringkasan"] = id_num(C["00_ringkasan"])
 
     # --- 01 summary
     C["01_summary"] = f"""# 1 Summary
 
-This report sets out a national prioritisation of Indonesia's peat hydrological units (KHG) for rewetting and revegetation, to support the planning and financing of peat restoration. It was prepared by the RE-PEAT GIS team (Departemen Teknik Geodesi, Universitas Gadjah Mada) for the World Bank and KLH/BPLH. **It is a draft for discussion: the weights are provisional until agreed with KLH.**
+Indonesia has 865 peat hydrological units, known by their Indonesian abbreviation KHG. Each is an area of peat bounded by rivers or the sea that works as one water system. When canals drain peat, it dries out, sinks and burns. The two main ways to restore it are rewetting (blocking canals so the water stays in the peat) and revegetation (replanting peat that has lost its forest). This report ranks the KHG to help decide where restoration money and effort should go first.
 
-Each KHG is scored on five separate dimensions rather than one blended score, because they answer different questions. **Urgency** asks how likely the peat is to burn and degrade further; **stake** asks what would be lost; **complexity** asks how hard it is to act, given the claims on the land; **feasibility** asks how easy rewetting would be on the ground; **people** asks who is exposed to fire and haze. Urgency, complexity and stake place each KHG in one of five types of action; feasibility and people are flags:
+The RE-PEAT GIS team at Universitas Gadjah Mada prepared it for the World Bank and for KLH/BPLH, Indonesia's environment ministry. **It is a draft for discussion. The weight given to each factor is provisional until KLH agrees it.**
 
-- **A, quick action:** {int(T.loc['A','khg'])} KHG ({int(T.loc['A','in_337'])} in KLH's 337 work list): high urgency, low or medium complexity. Leading examples: {lst('A', 5)}.
-- **B, multi-party coordination:** {int(T.loc['B','khg'])} KHG, all in the 337, holding **{pc(dmgB / dmg_scored)} of the SKEG-damaged peat of the scored KHG** ({n1(dmgB / 1e6)} million ha). High urgency meets overlapping claims of companies, the Ministry of Forestry, KLH and villages. Leading examples: {lst('B', 5)}.
-- **C, medium urgency:** {int(T.loc['C','khg'])} KHG of medium urgency.
-- **D, protect and monitor:** {int(T.loc['D','khg'])} KHG with deep or domed peat and little fire, mostly outside the 337.
-- **E, monitor:** {int(T.loc['E','khg'])} KHG with low urgency and low or medium stake.
+## {{n}} How the ranking works
 
-For planning and financing, type A KHG are where funds can be put to work soonest. Type B KHG hold most of the damaged peat, but work there depends on agreement among licence holders, the Ministry of Forestry, KLH and villages.
+We look at every KHG from five angles and keep them separate, rather than adding them up into one number:
 
-Separately from the type, each KHG gets the **intervention its peat needs**: rewetting where at least {rw_min}% of the peat is affected by canals, revegetation where at least {rv_min}% has open or degraded cover in KLH's 2022 land cover map, both, or protection where neither applies. Of the scored 337, {ivt('rewetting')} need rewetting, {ivt('rewetting and revegetation')} rewetting and revegetation, {ivt('revegetation')} revegetation and {ivt('protect')} protection. The type says how urgent and how complex the work is; the intervention says what to do.
+- **Urgency:** how likely the peat is to burn or degrade further. It draws on past fires, fire hotspots seen by satellite, KLH's damage assessment and canals.
+- **Stake:** what would be lost: deep peat, peat domes, protected and conservation areas, and the size of the peat.
+- **Complexity:** how many parties claim the same land (companies, the forestry ministry, villages, community forestry groups), and so how much negotiation is needed before work can start.
+- **Feasibility:** how easy rewetting would be on the ground: distance to rivers and roads, and how dry the dry season gets.
+- **People:** how many people live on or near the peat and breathe the smoke when it burns.
 
-{n0(len(scored))} KHG are scored: {meta['pool']} with at least {rule['min_peat_km2']} km² of KLH peat; {nsmall} KHG of the 337 with less peat, scored against the same distribution and flagged as less reliable; and {nwk} KHG of the 337 that hold no peat in KLH's peat map although they are peat hydrological units (the Global Peatland Map shows peat over {pc(gpm.min()) if nwk else ''} to {pc(gpm.max()) if nwk else ''} of each), scored with the whole KHG as the peat extent and flagged. {n337_sc} of the 337 are scored.
+Each angle gets a score from 0 to 1 that says where the KHG stands among the others. A score of 0.8 means the KHG is higher than about 80% of the KHG it is compared with.
 
-**Does it work?** Built only from data up to 2025, the top 20% of KHG by urgency hold **{pc(V['urgency']['capture_top20pct'])} of the peat that burned in 2026** (fire history alone: {pc(V['fire_history_only']['capture_top20pct'])}); AUC {V['urgency']['auc']:.2f} against burned or not ({V['fire_history_only']['auc']:.2f} for fire history alone). With every weight varied by ±50% in {S['runs']} draws, {pc(S['share_khg_type_stable_80pct'])} of KHG keep their type in at least 80% of draws. No KHG outside KLH's 362 PPEG priority KHG has high urgency.
+Urgency, complexity and stake place each KHG in one of five types of action:
 
-**What it rests on.** {len(D['reg'])} data layers, each documented with its producer, version, usage rights and verification status (Annex A). KLH's integrated PPEG analysis was checked against independent copies of its sources: its peat, burned-area, KHG and licence attributes agree at 98 to 100%, forest function at 93% (Chapter 3).
+- **A, quick action:** {int(T.loc['A','khg'])} KHG ({int(T.loc['A','in_337'])} of them in KLH's work list of 337 KHG). Urgency is high and land claims are manageable, so money can be put to work here soonest. The most urgent are {lst('A', 5)}.
+- **B, multi-party coordination:** {int(T.loc['B','khg'])} KHG, all in the 337. They hold **{pc(dmgB / dmg_scored)} of the damaged peat** in the scored KHG ({n1(dmgB / 1e6)} million ha). Urgency is high, but companies, the forestry ministry, KLH and villages all hold claims, so work depends on agreement among them first. The most urgent are {lst('B', 5)}.
+- **C, medium urgency:** {int(T.loc['C','khg'])} KHG.
+- **D, protect and monitor:** {int(T.loc['D','khg'])} KHG with deep or domed peat that rarely burns, mostly outside the 337.
+- **E, monitor:** {int(T.loc['E','khg'])} KHG with low urgency and less at stake.
 
-**What it cannot yet see.** Customary forest and customary territory boundaries, the indicative social-forestry map (PIAPS), the newest permit releases and BPN land rights are not available to the project, so tenure complexity is a lower bound. KLH's 2022 land cover map, on which the revegetation label rests, could not be verified against an independent copy.
+Feasibility and people do not change the type. They add a warning flag instead, for example "low feasibility".
 
-**Proposed next steps:** a weighting session with KLH; requests for the missing claim layers (to the Ministry of Forestry's SIGAP service and to BRWA); and detailed analysis within the type A and B KHG (water deficit, pumps, canal blocks) to turn the priorities into designs.
+## {{n}} What the peat needs
+
+Separately from the type, each KHG gets a label for the work its peat needs:
+
+- **Rewet** if at least {rw_min}% of the peat lies close enough to a canal to be drained by it.
+- **Revegetate** if at least {rv_min}% of the peat needs replanting: it is open land or scrub on KLH's 2022 land cover map, or it burned in 2015 to 2023 and the 2024 satellite forest map shows no regrowth, or its forest was cleared after 2014.
+- **Both**, or **protect** if neither applies.
+
+Of the scored KHG in the 337, {ivt('rewetting')} need rewetting, {ivt('rewetting and revegetation')} need both, {ivt('revegetation')} need revegetation and {ivt('protect')} need protection. The type says how urgent and how complicated the work is; the label says what the work is.
+
+## {{n}} Coverage
+
+We scored {n0(len(scored))} KHG, including {n337_sc} of the {n337} in KLH's work list. Most of them ({meta['pool']}) have at least {rule['min_peat_km2']} km² of peat on KLH's peat map; these form the comparison group against which every score is set. Another {nsmall} KHG in the 337 have less peat; they are scored against the same group and flagged as less reliable. {nwk} more KHG in the 337 show no peat at all on KLH's peat map, although they are peat units by definition and an independent global peat map shows peat on {pc(gpm.min()) if nwk else ''} to {pc(gpm.max()) if nwk else ''} of each. For these we treated the whole KHG as peat, and flagged them too.
+
+## {{n}} Can the ranking be trusted?
+
+We built the ranking from data up to 2025 and then checked it against the 2026 fire season, which it had not seen. The fifth of KHG ranked most urgent held **{pc(V['urgency']['capture_top20pct'])} of all the peat that burned in 2026**. Ranking by past fires alone would have caught {pc(V['fire_history_only']['capture_top20pct'])}.
+
+We also tested how much the types depend on the exact weights. We reran the ranking {S['runs']} times, each time moving every weight at random by up to half, up or down. {pc(S['share_khg_type_stable_80pct'])} of the KHG kept the same type in at least 4 runs out of 5. No KHG with high urgency lies outside the 362 KHG that KLH has already marked as priorities.
+
+## {{n}} What it rests on, and what it cannot see
+
+The ranking uses {len(D['reg'])} data layers, each documented with who made it, which version, the terms of use and whether we could check it (Annex A). KLH's main peat analysis was checked against independent copies of its sources and agrees with them on 93 to 100% of the area (Chapter 4).
+
+Some information is not yet available to us: customary forest and customary territory boundaries, the indicative map of areas for community forestry, the newest permit releases and private land titles. Land claims are therefore probably more complicated than shown, especially in KHG with customary land. KLH's 2022 land cover map, one of the inputs to the revegetation label, could not be checked against an independent copy; the satellite forest map used alongside it is independent of KLH.
+
+## {{n}} Next steps
+
+We propose a short weighting session with KLH; data requests for the missing land claims (to the forestry ministry's SIGAP service and to BRWA, the customary territory registry); and detailed design work inside the type A and B KHG (water needs, pumps, canal blocks).
 """
 
-    # --- 02 purpose and approach
-    C["02_scope"] = f"""# 2 Purpose and scope
+    # --- 02 terms
+    C["02_terms"] = f"""# 2 Terms used in this report
 
-KLH's integrated thematic analysis for peat ecosystem restoration (PPEG, April 2026) identifies where peat is damaged (SKEG 2024) and who is responsible for it, and the project's 337-KHG work list sets out where rewetting designs are being prepared (the KHG holding the 2,004 Bluebook target villages). This prioritisation complements both. For every KHG it asks **how urgent action is, what is at stake, how hard it will be and how feasible rewetting is**, and turns the answers into types of action that match KLH's instruments.
+## {{n}} Peat and restoration
 
-- **Units.** The 865 KHG of the national registry (SK.129/2017). The scoring pool is the {meta['pool']} KHG with at least {rule['min_peat_km2']} km² of peat in KLH's peat map, as used in the PPEG analysis; KLH's 337 are scored even when smaller.
-- **KLH priorities.** The 337 work-list KHG and the 362 PPEG priority KHG (in a target village, or holding SKEG-damaged peat) are recorded for every KHG; all 337 are among the 362.
-- **Outputs.** For each KHG: five dimension scores, the type, the intervention, ranks (national, within the 337, within the type), type stability and flags. They are available in the national dashboard, in the accompanying data tables and GIS layers, and in Annex B (one page per KHG of the 337).
-- **Limits of use.** The prioritisation ranks KHG for attention and funding. It does not locate canal blocks or pumps; those come from detailed analysis within each KHG.
+- **Peat (gambut):** soil made of plant material that never fully rotted because it stayed waterlogged. Tropical peat can be many metres deep and holds a great deal of carbon. When it dries it shrinks and burns easily, often underground and for weeks.
+- **KHG (Kesatuan Hidrologis Gambut), peat hydrological unit:** a stretch of peat between rivers, or between a river and the sea, that behaves as one water system. Indonesia's registry lists 865. Draining one part affects the rest, which is why restoration is planned per KHG.
+- **Peat dome (kubah gambut):** the raised centre of a KHG, where the peat is deepest. It stores the water that feeds the rest of the unit.
+- **Canal-affected zone:** land close enough to a canal for the canal to drain it. KLH's maps use about 1 km from primary canals, 500 m from secondary and 250 m from tertiary canals.
+- **Rewetting:** raising the water level in drained peat, mainly by blocking canals, so the peat stays wet and does not burn.
+- **Revegetation:** replanting peat that has lost its forest cover.
+- **Hotspot:** a spot where a satellite sensor detected heat, usually a fire. We use NASA's VIIRS and MODIS sensors.
+- **Burned area:** land mapped by KLH as burned in a given year, usually from satellite images after the fire season.
+
+## {{n}} KLH lists and data
+
+- **KLH/BPLH:** Indonesia's environment ministry and environmental agency.
+- **KLH's 337 work list:** the KHG where KLH is preparing rewetting designs, chosen because they contain the 2,004 target villages of the 2026 peat restoration plan (the "Bluebook").
+- **PPEG analysis:** KLH's integrated map of peat restoration (April 2026). It combines peat, land use, licences, damage, fire and canals in one layer and marks priority areas. 362 KHG contain such priority areas; all of the 337 are among them.
+- **SKEG damage:** KLH's 2024 assessment of peat damage, in classes from light to very heavy.
+- **Licence (concession):** a permit to use land, mostly for oil palm or pulpwood plantations, logging or mining. A licence on a KHG is a fact about who holds the land, not a statement about who caused fire or damage.
+- **Forest estate (Kawasan Hutan):** state forest land managed by the forestry ministry.
+- **Social forestry:** permits that give communities the right to manage state forest land (community forest, village forest, community plantation).
+- **PPTPKH:** the programme that settles land occupied by people inside the forest estate, part of agrarian reform.
+- **DMPG villages:** villages in KLH's peat-care village programme.
+
+## {{n}} Reading the numbers
+
+- **Comparison group (scoring pool):** the {meta['pool']} KHG with at least {rule['min_peat_km2']} km² of peat. Every score says where a KHG stands within this group.
+- **Score from 0 to 1 (percentile rank):** the share of the comparison group that a KHG beats on a measure. A fire score of 0.9 means the KHG burned more than 90% of the others. This lets us combine measures with different units, such as hectares burned and kilometres to the nearest road.
+- **Weight:** how much a measure counts within its angle. A measure with weight 2 counts twice as much as one with weight 1. Weight 0 means the measure is shown but does not count.
+- **Thirds (terciles):** we split each score into low, medium and high, so that each third holds a third of the comparison group.
+- **Median:** the middle value: half of the KHG are above it and half below. The annex compares each KHG with the median of the comparison group.
+- **Correlation:** a number from −1 to 1 that says how closely two rankings follow each other. 1 means the same order, 0 means no relation.
+- **km² and ha:** 1 km² is 100 ha.
 """
 
-    # --- 03 data
+    # --- 03 purpose and scope
+    C["03_scope"] = f"""# 3 Purpose and scope
+
+KLH's PPEG analysis shows where peat is damaged and who holds the land. KLH's work list of 337 KHG shows where rewetting designs are being prepared. This prioritisation adds a comparison across all KHG. For each one it asks four questions: how urgent is action, what is at stake, how hard will the work be, and how practical is rewetting on the ground. The answers are turned into types of action that match the tools KLH has.
+
+- **What is ranked.** All 865 KHG of the national registry. Scores are set against the {meta['pool']} KHG with at least {rule['min_peat_km2']} km² of peat on KLH's peat map. KHG in KLH's 337 are scored even when they are smaller.
+- **KLH's priorities.** For every KHG we record whether it is in the 337 work list and whether it is one of the 362 PPEG priority KHG.
+- **What comes out.** For each KHG: the five scores, the type, the work its peat needs, its rank (nationally, within the 337 and within its type), how firm its type is, and any warning flags. The results are in the national dashboard, in data tables and map layers, and in Annex B (one page per KHG of the 337).
+- **Technical details.** Annex C explains each calculation with a worked example, lists the open data sources, and describes how to reproduce the analysis.
+- **What it does not do.** It ranks KHG for attention and funding. It does not say where to put canal blocks or pumps; that needs detailed design work inside each KHG.
+"""
+
+    # --- 04 data
     reg = D["reg"]
     ver = D["ver"]
     vt = ver[~ver.field.str.startswith("BA_")].copy()
@@ -381,133 +469,164 @@ KLH's integrated thematic analysis for peat ecosystem restoration (PPEG, April 2
     vt = pd.concat([vt, pd.DataFrame([{"field": "BA_2015 … BA_2024", "source": "burnt_area_2015_2026_Indonesia.gpkg", "agree_share": ba.agree_share.min(), "note": f"lowest of the {len(ba)} years"}])])
     vt["Agrees"] = (vt.agree_share * 100).round(1).astype(str) + "%"
     SRCN = {"batas_khg": "KHG boundaries (2017)", "batas_desa": "Village boundaries 2023 (KLH)", "ALL_Updade__IZIN": "Business licences 2025",
-            "KWSHUTAN": "Kawasan Hutan 1:250k (2023)", "FEG__Indonesia": "FEG 2017 (revised typology)", "klhk_khg_feg_50k": "KLHK FEG 1:50k (BIG Satu Peta)",
-            "lahan_gambut_indonesia_2025": "SiTMAT peat map 2025", "burnt_area": "Burnt area 2015-2026 (KLHK)"}
+            "KWSHUTAN": "Forest estate map 1:250,000 (2023)", "FEG__Indonesia": "Peat function map 2017", "klhk_khg_feg_50k": "Peat function map 1:50,000",
+            "lahan_gambut_indonesia_2025": "Peat map 2025 (SiTMAT)", "burnt_area": "Burned area 2015-2026 (KLHK)"}
     FLDN = {"NAMA_KHG": "KHG name", "PULAU": "Island", "PROV_2023": "Province", "KABKO_2023": "District or city", "KEC_2023": "Sub-district",
-            "DESA_2023": "Village", "IZIN_USAHA": "Licence type", "PERUSAHAAN": "Licence holder", "Fungsi_KWS": "Forest area function",
-            "FEG_250K": "Peat ecosystem function (1:250k)", "PEAT_THICK": "Peat thickness class", "TNH_GAMBUT": "Peat or mineral soil",
-            "FEG_PEAT_1": "Peat ecosystem function (1:50k)", "LAHAN_GAMB": "Peat land", "BA_2015 … BA_2024": "Burned area, each year 2015 to 2024"}
+            "DESA_2023": "Village", "IZIN_USAHA": "Licence type", "PERUSAHAAN": "Licence holder", "Fungsi_KWS": "Forest estate function",
+            "FEG_250K": "Peat function (1:250,000)", "PEAT_THICK": "Peat thickness class", "TNH_GAMBUT": "Peat or mineral soil",
+            "FEG_PEAT_1": "Peat function (1:50,000)", "LAHAN_GAMB": "Peat land", "BA_2015 … BA_2024": "Burned area, each year 2015 to 2024"}
     vt["Independent copy of the source"] = vt.source.map(lambda x: next((v for k, v in SRCN.items() if k in str(x)), str(x).split(":")[0]))
-    vt["Note"] = vt.note.fillna("").map(lambda x: "on the 17% of points the 1:50k copy covers; compared by meaning" if "covers" in x else x)
+    vt["Note"] = vt.note.fillna("").map(lambda x: "only where the 1:50,000 map exists (17% of the points); classes compared by meaning" if "covers" in x else x)
     vt["field"] = vt.field.map(lambda x: FLDN.get(x, x.replace("_", " ")))
-    vt = vt[["field", "Independent copy of the source", "Agrees", "Note"]].rename(columns={"field": "PPEG attribute"})
+    vt = vt[["field", "Independent copy of the source", "Agrees", "Note"]].rename(columns={"field": "Information in KLH's PPEG map"})
     themes = reg.groupby("theme").id.count().reset_index().rename(columns={"theme": "Theme", "id": "Layers"})
-    C["03_data"] = f"""# 3 Data
+    C["04_data"] = f"""# 4 Data
 
-## {{n}} Data layers and their documentation
+## {{n}} Data layers and how they are documented
 
-The prioritisation uses {len(reg)} data layers, listed in the project's layer register (Annex A). For each layer the register records the producer, legal basis, version, scale, usage rights, date received, how the layer is used and whether it has been verified against an independent source. This shows which results rest on verified data and which on layers still to be confirmed. All layers, with a summary layer per KHG, are shared with KLH and the World Bank as one GIS package. Where two sources cover the same information both are kept: the 2023 village boundaries, for example, are used alongside the administrative names in KLH's PPEG analysis, which made it possible to correct the error described below.
+The ranking uses {len(reg)} map layers, listed in Annex A. For each one we record who made it, under what authority, which version, its level of detail, when we received it, the terms of use, how we use it, and whether we could check it against an independent source. Readers can therefore see which results rest on checked data and which on layers still to be confirmed. All layers, plus a summary layer with one row per KHG, are shared with KLH and the World Bank as one GIS package. Where two sources hold the same information we keep both. This is how we found and corrected the naming error described below.
 
 {md_table(themes, "Data layers by theme")}
-## {{n}} KLH's integrated PPEG analysis and its verification
+## {{n}} KLH's PPEG analysis and how we checked it
 
-KLH's PPEG analysis (April 2026, 989,398 polygons) overlays KHG, villages, licences, forest area, peat function, peat (BBSDLP), land cover, damage, burned area and canal zones. KLH uses it as the reference for its restoration targets, so its attributes were checked before use: 20,000 polygons were sampled at random in proportion to area, and at one point in each, every attribute was compared with an independent copy of its source held by the project.
+KLH's PPEG analysis (April 2026) cuts Indonesia's peat into 989,398 pieces. Each piece carries KHG, village, licence, forest status, peat depth and function, land cover, damage, burned area and canal information. KLH uses it as the basis for its restoration targets, so we checked it before using it. We picked 20,000 pieces at random (larger pieces had a higher chance of being picked) and compared each piece's information with an independent copy of the original map.
 
-{md_table(vt, "Agreement of PPEG attributes with independent copies of their sources (share of sampled area)")}
-- **Matches.** Peat land, burned area, KHG and licences agree at 98 to 100%. KLH's derived classes (concession, APL, canal-affected, burned, burn count) are fully consistent with the attributes they are derived from.
-- **Rules clarified.** The "Buffer 5 Kilometer" class covers land within 5 km of a licence. The canal-affected zones reach about 1,000 m from primary, 500 m from secondary and 250 m from tertiary canals of the project's canal map.
-- **Points to confirm with KLH.** About 6.6% of the area is APL (land outside the forest estate) in PPEG but forest estate in Kawasan Hutan 2023, which suggests PPEG used a different Kawasan Hutan release. About 1.9% is non-concession in PPEG but licensed in the 2025 licence layer, which may reflect the licence date used.
-- **One correction.** Parts of the Papua KHG outside the 2017 maps carry placeholder administrative names (Jayapura / Ebungfao / Atabar); administrative names are therefore taken from the 2023 village boundaries.
-- **Not yet verified.** Land cover 2022, SKEG damage 2024, the BBSDLP landform, depth and maturity attributes (which include the dome classes) and KLH's actor and intervention classes: the project has no independent copy of these.
+{md_table(vt, "How often KLH's PPEG map agrees with an independent copy of its source (share of the sampled area)")}
+- **What matches.** Peat, burned area, KHG and licences agree on 98 to 100% of the area. KLH's summary classes (licensed or not, canal-affected, burned, number of fires) follow correctly from the information they are built on.
+- **What we clarified.** The "Buffer 5 Kilometer" class means land within 5 km of a licence. The canal-affected zones reach about 1 km from primary canals, 500 m from secondary and 250 m from tertiary canals.
+- **What to confirm with KLH.** About 6.6% of the area is outside the forest estate in PPEG but inside it on the 2023 forest estate map. PPEG probably used a different release of that map. About 1.9% is unlicensed in PPEG but licensed in the 2025 licence map, perhaps because of the date of the licence data.
+- **One correction.** Parts of the Papua KHG that fall outside the 2017 administrative maps carry placeholder place names in PPEG. We take place names from the 2023 village boundaries instead.
+- **Not yet checked.** Land cover 2022, the 2024 damage assessment, the peat landform and depth information (which includes the peat domes) and KLH's own actor and intervention classes. We have no independent copy of these.
 
-## {{n}} Tenure claims
+## {{n}} Forest change, plant cover and soil moisture from satellites
 
-Tenure complexity counts the claims that overlap on the same peat: business licences (2025), social forestry (community forest PPHKM, village forest Hutan Desa and community plantation HTR permits), the forest estate, DMPG villages, land held inside the forest estate that is being settled (PPTPKH, the forest-area part of agrarian reform) and forest released for other uses. The social-forestry, PPTPKH and forest-release layers were obtained from the Ministry of Forestry's public map services, through BIG's Satu Peta portal, on 2026-11-16. On KHG peat ({n0(peat_tot)} km²), licences cover {pc(wsh('share_licence'), 1)}, the forest estate {pc(wsh('share_forest_estate'), 1)}, DMPG villages {pc(wsh('share_dmpg'), 1)}, released forest {pc(wsh('share_released'), 1)}, PPTPKH {pc(wsh('share_pptpkh'), 1)} and social forestry {pc(wsh('share_community'), 1)}; {pc(wsh('share_3plus_claims'), 1)} of the peat carries three or more claims and {pc(wsh('share_no_claim'), 1)} none.
+Four open satellite products add what the 2022 land cover map cannot show: whether burned peat has grown back, and how wet the peat is now. They are processed the same way for every KHG.
 
-Not available to the project: customary forest (the public map service holds no data), customary territory boundaries (BRWA publishes its register of 2,283 territories but shows the boundaries only as map images), PIAPS and the Ministry of Forestry's newest permit releases (SIGAP, available on request), and BPN land rights. In the licence layer no two licences overlap, so overlapping licences cannot be measured from it. Tenure complexity is therefore a lower bound: KHG with customary or private claims may be more complex than shown here.
+- **Forest change.** The European Commission's Joint Research Centre publishes a yearly map of tropical moist forest at 30 m detail, from Landsat images. Each pixel is marked as untouched forest, degraded forest, cleared, regrowing, water or other land. Comparing December 2014 with December 2024 shows where forest was lost after 2014. Combined with KLH's burned area maps for 2015 to 2023, it also shows which burned peat has grown back and which has not. The University of Maryland's global forest change map (often called the Hansen map) is kept as a cross-check. The two maps disagree a lot: for the middle KHG of the 337, forest lost after 2014 is {pc(sat.get('forest_loss_2015', float('nan')))} of the peat on the Joint Research Centre map and {pc(sat.get('hansen_loss_2015', float('nan')))} on the Hansen map, and the two put the KHG in quite different orders (correlation {rho_fl:.2f}). The Hansen map counts every harvest of plantation trees as forest loss, while the other map follows natural forest only. We therefore use the Joint Research Centre map.
+- **Plant cover now.** Two indices from the European Sentinel-2 satellites for the 2025 dry season (July to October), with clouds removed. NDVI measures how green and dense the plants are; NDMI measures how much water the leaves hold. Both run from −1 to 1, and higher means greener or wetter. Low NDVI matches the open land of the 2022 map only weakly (correlation {rho_nd:.2f}), probably because few cloud-free images reach peat in the dry season. We report these values but do not score them.
+- **Soil moisture.** NASA's SMAP satellite estimates the water in the top metre of soil, in cubic metres of water per cubic metre of soil. We use the July to October 2025 average and its difference from the 2016-2024 average for the same months. Its pixels are about 9 km wide, so a small KHG is described by only one or two values. {n_sm} of the 337 have a value.
+
+## {{n}} Land claims
+
+To measure how complicated land claims are, we count the claims that overlap on the same piece of peat. These are business licences (2025), social forestry permits, the forest estate, DMPG villages, land being settled under the PPTPKH programme, and forest released for other uses. We obtained the social forestry, PPTPKH and released-forest maps from the forestry ministry's public map services, through the national Satu Peta portal, on 16 November 2026.
+
+Of the {n0(peat_tot)} km² of peat in all KHG, licences cover {pc(wsh('share_licence'), 1)}, the forest estate {pc(wsh('share_forest_estate'), 1)}, DMPG villages {pc(wsh('share_dmpg'), 1)}, released forest {pc(wsh('share_released'), 1)}, PPTPKH {pc(wsh('share_pptpkh'), 1)} and social forestry {pc(wsh('share_community'), 1)}. {pc(wsh('share_3plus_claims'), 1)} of the peat carries three or more claims at once, and {pc(wsh('share_no_claim'), 1)} carries none.
+
+Some claims are missing. The public map service holds no customary forest data. BRWA, the customary territory registry, lists 2,283 territories but shows their boundaries only as pictures. The indicative map of areas for social forestry and the newest permit releases are available only on request from the forestry ministry, and we have no data on private land titles. In the licence map no two licences overlap, so overlapping licences cannot be measured. The complexity scores are therefore a minimum: KHG with customary or private claims may be more complicated than shown.
 """
 
-    # --- 04 method
+    # --- 05 method
     dims = rule["dimensions"]
-    DESC = {"u_fire_freq": "Mean annual burned share of peat, 2015 to 2025", "u_burn_repeat": "Share of peat burned twice or more, 2015 to 2025",
-            "u_hotspot": "VIIRS hotspots per km² of peat per year, 2012 to 2025", "u_hotspot_now": "Hotspots of the current year per km² of peat",
-            "damage_share": "SKEG 2024 damaged share of peat (PPEG)", "canal_share": "Canal-affected share of peat (PPEG canal zones)",
-            "thick3m_share": "Share of peat 3 m or deeper", "dome_share": "Share of peat on dome landform (BBSDLP)",
-            "protected_share": "Share of peat with protected peat ecosystem function", "peat_km2": "Peat area (KLH)",
-            "tenure_complexity": "Tenure complexity index (v2), itself from four indicators", "actor_types": "Actor types holding SKEG-damaged peat (of 4)",
-            "villages": "Bluebook target villages plus DMPG villages", "dry_balance_mm": "Dry-season P − E (higher = smaller shortfall)",
-            "brgm_blocks_per_km2": "Existing BRGM structures per km² of peat",
-            "conservation_share": "Share of peat in conservation areas (national parks, reserves; Kawasan Hutan 2023)",
-            "water_dist_km": "Median distance from the peat to a large river (two-bank RBI rivers) or lake (lower = more feasible)",
-            "road_dist_km": "Median distance from the peat to a road, RBI detailed roads without footpaths (lower = more feasible)",
-            "pop_on_peat": "People living on the peat (IHME Populace, third quarter of 2025, 40 m)", "pop_10km": "People within 10 km of the KHG (haze exposure)",
-            "villages_peat": "2023 villages with land on the peat"}
-    INDN = {"u_fire_freq": "Fire frequency", "u_burn_repeat": "Repeated burning", "u_hotspot": "Hotspot density", "u_hotspot_now": "Current-year hotspots",
-            "damage_share": "Damaged peat", "canal_share": "Canal-affected peat", "thick3m_share": "Deep peat", "dome_share": "Peat dome",
-            "protected_share": "Protected function", "peat_km2": "Peat area", "conservation_share": "Conservation areas",
-            "tenure_complexity": "Tenure complexity", "actor_types": "Actor types", "villages": "Villages", "dry_balance_mm": "Dry-season water balance",
-            "brgm_blocks_per_km2": "Existing BRGM structures", "water_dist_km": "Distance to water", "road_dist_km": "Distance to roads",
-            "pop_on_peat": "People on the peat", "pop_10km": "People within 10 km", "villages_peat": "Villages on the peat"}
+    DESC = {"u_fire_freq": "Average share of the peat burned each year, 2015 to 2025",
+            "u_burn_repeat": "Share of the peat that burned twice or more, 2015 to 2025",
+            "u_hotspot": "Satellite fire detections per km² of peat per year, 2012 to 2025",
+            "u_hotspot_now": "Satellite fire detections this year per km² of peat",
+            "damage_share": "Share of the peat that KLH's 2024 assessment rates as damaged",
+            "canal_share": "Share of the peat close enough to a canal to be drained by it",
+            "thick3m_share": "Share of the peat that is 3 m deep or more",
+            "dome_share": "Share of the peat on a peat dome",
+            "protected_share": "Share of the peat that the government has set aside for protection",
+            "peat_km2": "Area of peat on KLH's map",
+            "conservation_share": "Share of the peat in national parks and nature reserves",
+            "tenure_complexity": "How many claims overlap on the peat (see below)",
+            "actor_types": "How many kinds of land holder hold damaged peat (out of 4)",
+            "villages": "Target villages of the restoration plan plus DMPG villages",
+            "dry_balance_mm": "Rain minus the water lost to evaporation over the driest 4-5 months, 2018-2025 average (higher is easier)",
+            "brgm_blocks_per_km2": "Canal blocks and wells already built, per km² of peat",
+            "water_dist_km": "Typical distance from the peat to a large river or lake (shorter is easier)",
+            "road_dist_km": "Typical distance from the peat to a road (shorter is easier)",
+            "pop_on_peat": "People living on the peat (2025 population map, 40 m detail)",
+            "pop_10km": "People living within 10 km of the KHG, who breathe its smoke",
+            "villages_peat": "Villages with land on the peat",
+            "forest_loss_2015": "Share of the peat that was forest in 2014 and cleared by 2024 (satellite forest map)",
+            "sm_root_dry": "Soil moisture in the 2025 dry season (satellite); drier counts as more urgent",
+            "u_canal_primary": "Length of primary canal per km² of KHG", "u_canal_secondary": "Length of secondary canal per km² of KHG",
+            "u_canal_tertiary": "Length of tertiary canal per km² of KHG"}
+    INDN = {"u_fire_freq": "Burned each year", "u_burn_repeat": "Burned repeatedly", "u_hotspot": "Fire detections", "u_hotspot_now": "Fire detections this year",
+            "damage_share": "Damaged peat", "canal_share": "Peat near canals", "thick3m_share": "Deep peat", "dome_share": "Peat dome",
+            "protected_share": "Protected peat", "peat_km2": "Peat area", "conservation_share": "Conservation areas",
+            "tenure_complexity": "Overlapping claims", "actor_types": "Kinds of land holder", "villages": "Villages", "dry_balance_mm": "Dry-season water balance",
+            "brgm_blocks_per_km2": "Existing canal blocks", "water_dist_km": "Distance to water", "road_dist_km": "Distance to roads",
+            "pop_on_peat": "People on the peat", "pop_10km": "People within 10 km", "villages_peat": "Villages on the peat",
+            "forest_loss_2015": "Forest lost since 2015", "sm_root_dry": "Dry-season soil moisture", "u_canal_primary": "Primary canal density",
+            "u_canal_secondary": "Secondary canal density", "u_canal_tertiary": "Tertiary canal density"}
     rows = []
     for dname, spec in dims.items():
         for ind, s in spec.items():
             rows.append([dname.capitalize(), INDN.get(ind, ind.replace("_", " ").capitalize()), DESC.get(ind, ""), s["weight"]])
-    ind_tab = pd.DataFrame(rows, columns=["Dimension", "Indicator", "Definition", "Weight"])
-    C["04_method"] = f"""# 4 Method and rationale
+    ind_tab = pd.DataFrame(rows, columns=["Angle", "Measure", "What it measures", "Weight"])
+    C["05_method"] = f"""# 5 Method
 
-## {{n}} Why separate dimensions
+## {{n}} Why five separate angles
 
-A single score would trade urgency against complexity and stake, and hide what KLH needs to see. A KHG that burns every year but is crowded with claims needs a different response from one that burns as often on unclaimed land, and a deep, undisturbed dome needs protection rather than restoration. The five dimensions are therefore scored separately and combined only through a typology that keeps them visible.
+One combined score would let a high fire risk cancel out difficult land claims, and hide exactly what KLH needs to see. A KHG that burns every year and is crowded with competing claims needs a different response from one that burns as often on unclaimed land. A deep, untouched peat dome needs protection, not restoration. So we score the five angles separately and combine them only through the five types, which keep them visible.
 
-## {{n}} Indicators and scoring
+## {{n}} From measures to scores
 
-Each dimension is the weighted mean of its indicators' **percentile ranks** among the scoring pool (0 to 1, higher = more urgent, more at stake, more complex, more feasible). Percentile ranks make indicators with different units and skewed distributions comparable, and a KHG missing an indicator is scored on the indicators it has.
+Each angle is built from a few measures, listed in the table below. For each measure, a KHG gets a score from 0 to 1: the share of the comparison group it beats. A KHG that burned more than 70% of the others gets 0.7 for that measure. This puts measures with different units, such as hectares burned and kilometres to the nearest road, on the same footing, and stops one extreme KHG from squeezing all the others together. The score of an angle is the average of its measures, counting each by its weight. A KHG missing a measure is scored on the ones it has. High always means more: more urgent, more at stake, more complex, more feasible, more people.
 
-{md_table(ind_tab, "Indicators, definitions and weights (rules dated " + str(rule['written']) + ")")}
-Fire frequency counts double, as in the earlier fire-based ranking. Tenure complexity counts double within complexity because it already summarises four claims. Some indicators are reported but not scored: existing BRGM structures per km² (scored in the first version, then dropped because canal blocks were built where fires had been, so the indicator repeated urgency), peat volume (the depth class is blank for part of the peat) and SiTMAT water-table depth (only {int(D['prof'].tma_deep_share.notna().sum())} KHG have stations).
+{md_table(ind_tab, "Measures, what they measure, and their weights (rules dated " + str(rule['written']) + ")")}
+"Burned each year" counts double, as it did in the earlier fire-based ranking. "Overlapping claims" counts double within complexity because it already sums up four separate measures.
 
-**Tenure complexity (v2)** is computed on a regular grid of points over each KHG's peat. At each point it records which of six claim types are present (licence, social forestry, forest estate, DMPG village, PPTPKH, released forest). Four indicators per KHG make up the index: the share of peat under a licence that is also social-forestry or DMPG village land; the share that is **contested** (a licence on PPTPKH or social-forestry land, or forest estate on PPTPKH); the mean number of claim types; and the number of licence holders.
+Some measures have weight 0. They are calculated and shown, and anyone can give them a weight in the dashboard, but they do not affect the result as it stands. The canal densities repeat what "peat near canals" already measures. Forest loss and soil moisture are new and are left for the weighting session with KLH. Other figures are reported only, as background in the dashboard and the profiles: burned peat that has or has not grown back, the satellite forest classes, the Hansen forest loss, plant greenness (NDVI) and leaf moisture (NDMI), and how much drier than usual the soil is. Canal blocks already built are also reported only. The first version scored them, but blocks were built where fires had been, so the measure mostly repeated urgency. The dashboard's Method page explains how every figure is calculated.
 
-## {{n}} Typology
+**Overlapping claims.** We lay a regular grid of points over each KHG's peat. At each point we note which of six claims are present: a business licence, social forestry, forest estate, a DMPG village, PPTPKH land, or released forest. Four measures per KHG make up the score: the share of the peat where a licence sits on social forestry or village land; the share where claims openly conflict (a licence on PPTPKH or social forestry land, or forest estate on PPTPKH land); the average number of claims per point; and the number of licence holders.
 
-Urgency, complexity and stake are cut into terciles of the scoring pool (urgency {meta['tercile_cuts']['urgency'][0]:.2f} and {meta['tercile_cuts']['urgency'][1]:.2f}; complexity {meta['tercile_cuts']['complexity'][0]:.2f} and {meta['tercile_cuts']['complexity'][1]:.2f}; stake {meta['tercile_cuts']['stake'][0]:.2f} and {meta['tercile_cuts']['stake'][1]:.2f}):
+## {{n}} Five types of action
 
-- **A, quick action:** urgency high, complexity low or medium.
-- **B, multi-party coordination:** urgency high, complexity high.
-- **C, medium urgency:** urgency medium.
-- **D, protect and monitor:** urgency low, stake high.
-- **E, monitor:** urgency low, stake low or medium.
+Urgency, complexity and stake are each split into thirds (low, medium, high) within the comparison group. The types follow from those thirds:
 
-Feasibility and people do not change the type: a KHG in the lowest tercile of feasibility is flagged "low feasibility" ({nf} KHG), and one in the highest tercile of people "high exposure" ({nx} KHG). Within each type KHG are ranked by urgency (then stake), and an overall urgency rank is given among all scored KHG and among the 337.
+- **A, quick action:** high urgency, low or medium complexity.
+- **B, multi-party coordination:** high urgency, high complexity.
+- **C, medium urgency:** medium urgency.
+- **D, protect and monitor:** low urgency, high stake.
+- **E, monitor:** low urgency, low or medium stake.
 
-## {{n}} Intervention
+Feasibility and people do not change the type. A KHG in the lowest third of feasibility is flagged "low feasibility" ({nf} KHG), and one in the highest third for people "high exposure" ({nx} KHG). Within each type, KHG are ranked by urgency, then by stake. Each KHG also has an overall urgency rank, among all scored KHG and among the 337.
 
-The type says how urgent and how complex a KHG is; it does not say what the peat needs. A second, independent label does, from two shares of the KHG's KLH peat and fixed thresholds (not terciles, so a label means the same in every year):
+## {{n}} What the peat needs
 
-- **Rewet:** at least {rw_min}% of the peat lies in KLH's canal-affected zones (PPEG). The peat is drained, and the canals need blocking.
-- **Revegetate:** at least {rv_min}% has open or degraded cover in KLH's land cover map 2022, as used in PPEG (swamp shrub, shrub, open land, open swamp, savanna). Plantations, crops and settlements are not counted: they call for livelihood revitalisation, not replanting.
-- **Rewet and revegetate:** both.
-- **Protect:** neither. The peat is largely forested and undrained; the task is to keep it wet and prevent fire.
+The type says how urgent and how complicated a KHG is, but not what its peat needs. A second label does, using two shares of the KHG's peat and fixed thresholds. The thresholds stay the same from year to year, so a label always means the same thing.
 
-## {{n}} Rules written before results, and their amendments
+- **Rewet:** at least {rw_min}% of the peat lies in KLH's canal-affected zones. The peat is being drained and the canals need blocking.
+- **Revegetate:** at least {rv_min}% of the peat needs replanting. We check every 30 m square of peat. It counts if it is open land or scrub on KLH's 2022 land cover map; or if it burned in 2015 to 2023 and the 2024 satellite forest map still shows it cleared or bare; or if it was forest in 2014 and cleared by 2024. Plantations, farmland and settlements never count: they call for help with livelihoods, not replanting.
+- **Rewet and revegetate:** both apply.
+- **Protect:** neither applies. The peat is mostly forested and undrained, and the task is to keep it wet and free of fire.
 
-Each rule was written down and dated before its result was computed. Changes made after seeing a result are recorded below as dated amendments, and earlier results are kept, so that readers can see what was decided in advance and what was adjusted.
+## {{n}} Rules written down before the results
 
-Table: Rules and amendments
+We wrote down and dated each rule before computing its result. When a rule changed after that, the change is listed below with its date and reason, and the earlier result is kept. Readers can see what was decided in advance and what was adjusted later.
+
+Table: Rules and later changes
 
 | Date | Rule | Change | Reason |
 |---|---|---|---|
-| 2026-11-16 | Tenure complexity v1 | Written before any result | Overlapping claims per KHG |
-| 2026-11-16 | Tenure complexity v1, amendment | Overlapping licences reported, not scored | The licence layer has no overlaps (0 ha shared), so the indicator is 0 by construction |
-| 2026-11-16 | Tenure complexity v2 | Six claim types; contested land; holder count | v1 missed social forestry and occupied forest land; two v1 indicators did not discriminate. v1 result kept |
-| {rule['written']} | Final prioritisation | Written before any result | Four dimensions and typology |
-| {rule['written']} | Final prioritisation v2 | Written before any v2 result; v1 kept | Feasibility from distance to large rivers and roads instead of BRGM blocks (which echoed urgency); conservation areas added to stake; a fifth dimension, people; an intervention label (rewet, revegetate, both, protect) |
-| {rule['written']} | Final prioritisation, amendment | KHG of the 337 with no peat in KLH's peat map scored with the whole KHG as peat, against the pool, and flagged; population from IHME Populace (2025, 40 m) instead of WorldPop (2020, 1 km) | A KHG is delineated as a peat unit, and the Global Peatland Map shows peat in each of them; the finer population grid counts people on the peat more precisely |
-| {rule['written']} | Final prioritisation, amendment | KHG of the 337 below {rule['min_peat_km2']} km² of peat scored against the pool and flagged | 99 of the 337 fell out of the pool, contrary to the aim of covering the 337; they hold 0.09% of its damaged peat |
+| 2026-11-16 | Overlapping claims, version 1 | Written before any result | Measure overlapping claims per KHG |
+| 2026-11-16 | Overlapping claims, version 1, change | Overlapping licences reported, not scored | No two licences overlap in the licence map, so the measure is always 0 |
+| 2026-11-16 | Overlapping claims, version 2 | Six kinds of claim, openly conflicting claims, number of licence holders | Version 1 missed social forestry and settled forest land, and two of its measures barely varied. Version 1 result kept |
+| {rule['written']} | Ranking | Written before any result | Four angles and the types |
+| {rule['written']} | Ranking, version 2 | Written before any version 2 result; version 1 kept | Feasibility from distance to large rivers and roads instead of canal blocks built (which repeated urgency); conservation areas added to stake; a fifth angle, people; the label for what the peat needs |
+| {rule['written']} | Ranking, change | KHG of the 337 with less than {rule['min_peat_km2']} km² of peat scored against the comparison group and flagged | 99 of the 337 had dropped out, against the aim of covering all 337; they hold 0.09% of its damaged peat |
+| {rule['written']} | Ranking, change | KHG of the 337 with no peat on KLH's map scored with the whole KHG as peat, and flagged; population from the 2025 map at 40 m instead of the 2020 map at 1 km | A KHG is a peat unit by definition, and an independent global peat map shows peat in each; the finer population map counts people on the peat more accurately |
+| 2026-11-17 | Ranking, change | Primary, secondary and tertiary canal densities added to urgency with weight 0 | Kept visible and adjustable; "peat near canals" already measures drainage |
+| 2026-11-18 | Ranking, change | Forest lost since 2015 and dry-season soil moisture added to urgency with weight 0. Revegetation now also counts burned peat that has not grown back and forest lost since 2015 | The 2022 land cover map alone missed old burn scars and recent clearing. Six labels in the 337 changed; types and ranks did not |
+| 2026-11-18 | Correction | Dry-season water balance used as rain minus evaporation, as the rule states | The data had held evaporation minus rain, which turned the measure upside down in feasibility. The low-feasibility flags were recalculated |
 
-## {{n}} Validation and sensitivity
+## {{n}} How we tested the ranking
 
-**Validation.** Urgency is tested on a year it has not seen. Built from data up to 2025, without the current year's hotspots, it is compared with the share of each KHG's peat that burned in 2026 (KLHK burned area), alongside fire history alone. **Sensitivity.** In {S['runs']} draws every weight is multiplied by a random factor between 0.5 and 1.5; the share of draws in which each KHG keeps its type and the spread of its urgency rank are reported.
+**Against a year it had not seen.** We rebuilt urgency from data up to 2025, leaving out this year's fire detections, and compared it with the share of each KHG's peat that burned in 2026 according to KLH. We also compared a ranking by past fires alone.
+
+**Against changes in the weights.** We reran the ranking {S['runs']} times. Each time, every weight was multiplied by a random number between 0.5 and 1.5. For each KHG we report how often it kept its type, and how far its urgency rank moved.
 """
 
-    # --- 05 results
+    # --- 06 results
     isl = scored.groupby(["type"]).island.value_counts().unstack(fill_value=0).reindex(TY).fillna(0).astype(int)
     isl.columns = [c.replace("Pulau ", "") for c in isl.columns]
     isl.insert(0, "Type", [f"{t} {TYN[t]}" for t in TY])
     tsum = types.copy()
     tsum.insert(0, "Type", [f"{t} {TYN[t]}" for t in tsum.type])
     tsum = tsum[["Type", "khg", "in_337", "peat_km2", "priority_ha", "low_feasibility"]]
-    tsum.columns = ["Type", "KHG", "In the 337", "Peat (km²)", "SKEG-damaged peat (ha)", "Low feasibility"]
+    tsum.columns = ["Type", "KHG", "In the 337", "Peat (km²)", "Damaged peat (ha)", "Flagged low feasibility"]
     for c in tsum.columns[1:]:
         tsum[c] = tsum[c].map(n0)
 
@@ -515,93 +634,107 @@ Table: Rules and amendments
         x = (src[src.type == t].sort_values("rank_in_type").head(k)) if src is not None else top(t, k)
         return pd.DataFrame({"Rank in type": x.rank_in_type.astype(int), "KHG": x.khg_name.map(nm), "Province": x.provinces,
                              "Peat (km²)": x.peat_km2.map(n0), "Urgency": x.urgency.map("{:.2f}".format), "Stake": x.stake.map("{:.2f}".format),
-                             "Complexity": x.complexity.map("{:.2f}".format), "Stable": x.type_stability.map(lambda v: "small KHG" if pd.isna(v) else pc(v))})
+                             "Complexity": x.complexity.map("{:.2f}".format),
+                             "Type kept under weight changes": x.type_stability.map(lambda v: "not tested (small KHG)" if pd.isna(v) else pc(v))})
     gaps = D["gaps"]
-    C["05_results"] = f"""# 5 Results
+    toptab_note = ("Urgency, stake and complexity are scores from 0 to 1 (the share of the comparison group the KHG beats). "
+                   f"\"Type kept under weight changes\" is the share of {S['runs']} reruns, each with every weight changed at random by up to half, in which the KHG kept the same type. "
+                   "A value near 100% means the type does not depend on the exact weights; a value near 50% means the KHG sits close to the border with another type. "
+                   f"KHG with less than {rule['min_peat_km2']} km² of peat were not part of this test.")
+    C["06_results"] = f"""# 6 Results
 
 ## {{n}} The national picture
 
 ![Scored KHG by type. Grey: not scored (less than {rule['min_peat_km2']} km² of KLH peat and outside the 337, or no KLH peat).]({figs['map']})
 
-{md_table(tsum, "KHG, peat and SKEG-damaged peat by type (all scored KHG)")}
-![KHG, peat area and SKEG-damaged peat by type.]({figs['types']})
+{md_table(tsum, "Number of KHG, peat area and damaged peat by type (all scored KHG; damage from KLH's 2024 assessment)")}
+![Number of KHG, peat area and damaged peat by type.]({figs['types']})
 
-Type B holds {pc(dmgB / dmg_scored)} of the SKEG-damaged peat of the scored KHG: {int(T.loc['B','khg'])} KHG where high urgency meets high complexity, {isl.loc['B', 'Sumatera'] if 'Sumatera' in isl else ''} in Sumatera and {isl.loc['B', 'Kalimantan'] if 'Kalimantan' in isl else ''} in Kalimantan. Type A gathers {int(T.loc['A','khg'])} smaller KHG with high urgency and moderate complexity. Type D, protect and monitor, is mostly in Papua and outside the 337.
+Type B holds {pc(dmgB / dmg_scored)} of the damaged peat in the scored KHG. These are {int(T.loc['B','khg'])} KHG where high urgency meets complicated land claims: {isl.loc['B', 'Sumatera'] if 'Sumatera' in isl else ''} in Sumatera and {isl.loc['B', 'Kalimantan'] if 'Kalimantan' in isl else ''} in Kalimantan. Type A gathers {int(T.loc['A','khg'])} mostly smaller KHG with high urgency and simpler claims. Type D, protect and monitor, is mostly in Papua and outside the 337.
 
 {md_table(isl, "Scored KHG by type and island")}
 ## {{n}} What the peat needs
 
-{md_table(D['iv'].assign(Type=lambda x: x.type + " " + x.type.map(TYN), Intervention=lambda x: x.intervention.map(IVN)).sort_values(['type', 'intervention'], key=lambda c: c.map({v: i for i, v in enumerate(IVO)}) if c.name == 'intervention' else c)[['Type', 'Intervention', 'khg', 'in_337', 'peat_km2', 'priority_ha']].rename(columns={'khg': 'KHG', 'in_337': 'In the 337', 'peat_km2': 'Peat (km²)', 'priority_ha': 'SKEG-damaged peat (ha)'}).assign(**{'Peat (km²)': lambda x: x['Peat (km²)'].map(n0), 'SKEG-damaged peat (ha)': lambda x: x['SKEG-damaged peat (ha)'].map(n0)}), "Scored KHG by type and intervention")}
-![Scored KHG by type and by the intervention their peat needs.]({figs['iv']})
+{md_table(D['iv'].assign(Type=lambda x: x.type + " " + x.type.map(TYN), Intervention=lambda x: x.intervention.map(IVN)).sort_values(['type', 'intervention'], key=lambda c: c.map({v: i for i, v in enumerate(IVO)}) if c.name == 'intervention' else c)[['Type', 'Intervention', 'khg', 'in_337', 'peat_km2', 'priority_ha']].rename(columns={'Intervention': 'What the peat needs', 'khg': 'KHG', 'in_337': 'In the 337', 'peat_km2': 'Peat (km²)', 'priority_ha': 'Damaged peat (ha)'}).assign(**{'Peat (km²)': lambda x: x['Peat (km²)'].map(n0), 'Damaged peat (ha)': lambda x: x['Damaged peat (ha)'].map(n0)}), "Scored KHG by type and by what their peat needs")}
+![Scored KHG by type and by what their peat needs.]({figs['iv']})
 
-Rewetting dominates: of the {int(T.loc['B','khg'])} type B KHG, {ivt('rewetting', ivB)} need rewetting and {ivt('rewetting and revegetation', ivB)} rewetting and revegetation. Revegetation alone matters more in types C and E, where the peat is open but less drained.
+Rewetting dominates. Of the {int(T.loc['B','khg'])} type B KHG, {ivt('rewetting', ivB)} need rewetting and {ivt('rewetting and revegetation', ivB)} need both rewetting and revegetation. Revegetation alone is more common in types C and E, where the peat is open but less drained.
 
-## {{n}} Urgency against complexity
+## {{n}} Urgency and complexity go together
 
-![Urgency against complexity of every scored KHG, coloured by type.]({figs['matrix']})
+![Urgency against complexity for every scored KHG, coloured by type. Each dot is a KHG; larger dots have more peat.]({figs['matrix']})
 
-Urgency and complexity are strongly related (Spearman {corr.loc['urgency','complexity']:.2f} in the pool): the KHG that burn most are also the most contested, which is why type B is large. This is a property of the landscape, not of the method, and it is the main message for planning: most of the damaged peat cannot be rewetted by one agency alone. Stake is more independent of urgency ({corr.loc['urgency','stake']:.2f}).
+The KHG that burn most also tend to have the most complicated land claims (correlation {corr.loc['urgency','complexity']:.2f} within the comparison group). This is why type B is large. It comes from the landscape, not from the method: fires are worst where peat was opened up for plantations, and those are the places with the most claims. The message for planning is that most of the damaged peat cannot be rewetted by one agency alone. What is at stake relates much less to urgency (correlation {corr.loc['urgency','stake']:.2f}).
 
-![Distribution of the five dimensions by type.]({figs['dims']})
+![How the five scores spread within each type. Each box holds the middle half of the KHG of that type; the white line is the median.]({figs['dims']})
 
 ## {{n}} Who holds the damaged peat
 
-KLH's PPEG analysis assigns each area of damaged peat to one of four actors: a licence holder, a licence holder together with communities (within 5 km of a licence), the Ministry of Forestry, or KLH. The figure shows how the damaged peat of each type divides among them.
+KLH's PPEG analysis assigns every area of damaged peat to one of four kinds of holder: a licence holder; a licence holder together with nearby communities (land within 5 km of a licence); the forestry ministry; or KLH. The figure shows how the damaged peat in each type is split among them.
 
-![SKEG-damaged peat by the actor assigned in KLH's PPEG analysis, by type.]({figs['actors']})
+![Damaged peat by the holder KLH assigns to it, by type.]({figs['actors']})
 
-## {{n}} Leading KHG of the 337
+## {{n}} Most urgent KHG in the 337
 
-{md_table(toptab('A'), "Type A, quick action: the first 10 KHG of the 337 by urgency")}
-{md_table(toptab('B'), "Type B, multi-party coordination: the first 10 KHG of the 337 by urgency")}
+{md_table(toptab('A'), "Type A, quick action: the 10 most urgent KHG in the 337")}
+{toptab_note}
+
+{md_table(toptab('B'), "Type B, multi-party coordination: the 10 most urgent KHG in the 337")}
 {md_table(toptab("D", 20, scored), "Type D, protect and monitor: all scored KHG (one is in the 337)")}
-Results for every scored KHG are in the accompanying data tables and dashboard; Annex B has a profile of each KHG of the 337.
+Results for every scored KHG are in the data tables and the dashboard. Annex B has a one-page profile of each KHG in the 337.
 
-## {{n}} Gaps between the lists
+## {{n}} How the lists compare
 
-- **PPEG priority KHG outside the 337:** {int((gaps.gap == 'PPEG priority (362) outside the 337').sum())} KHG (in a target village by a sliver, or holding SKEG damage only).
-- **High-urgency KHG outside the 362:** {int(gaps.gap.str.startswith('high urgency').sum())}. Every KHG in the top tercile of urgency is already a PPEG priority KHG.
-- **KHG of the 337 without KLH peat:** {nwk}, scored with the whole KHG as peat and flagged; {int(gaps.gap.str.contains('not scored').sum())} remain unscored; **with less than {rule['min_peat_km2']} km² of peat:** {int(gaps.gap.str.contains('less than').sum())}, scored against the pool and flagged.
+- **PPEG priority KHG outside the 337:** {int((gaps.gap == 'PPEG priority (362) outside the 337').sum())} KHG. They touch a target village only at the edge, or hold damaged peat but no target village.
+- **High-urgency KHG outside the 362 PPEG priorities:** {int(gaps.gap.str.startswith('high urgency').sum())}. Every KHG in the top third for urgency is already a PPEG priority.
+- **KHG in the 337 with no peat on KLH's map:** {nwk}, scored with the whole KHG as peat and flagged. {int(gaps.gap.str.contains('not scored').sum())} remain unscored. **KHG in the 337 with less than {rule['min_peat_km2']} km² of peat:** {int(gaps.gap.str.contains('less than').sum())}, scored against the comparison group and flagged.
 """
 
-    # --- 06 validation and robustness
-    C["06_validation"] = f"""# 6 Validation and robustness
+    # --- 07 validation and robustness
+    C["07_validation"] = f"""# 7 How reliable the results are
 
-![Share of 2026 burned peat held by the most urgent KHG, built from data up to 2025. Dashed: the top 20% of KHG.]({figs['validation']})
+## {{n}} Test against the 2026 fires
 
-Table: Validation against 2026 burned peat ({V['n_pool']} KHG in the pool, {V['n_burned']} of them burned in 2026)
+![Share of the peat that burned in 2026 that falls in the most urgent KHG, using data up to 2025. Read from left to right: the further up the line, the more of the burned peat the top KHG hold. The dashed line marks the top fifth of KHG.]({figs['validation']})
 
-| Ranking | Spearman | AUC (burned or not) | 2026 burned peat in the top 20% |
-|---|---|---|---|
-| Urgency (without 2026 hotspots) | {V['urgency']['spearman']:.2f} | {V['urgency']['auc']:.2f} | {pc(V['urgency']['capture_top20pct'])} |
-| Fire history alone | {V['fire_history_only']['spearman']:.2f} | {V['fire_history_only']['auc']:.2f} | {pc(V['fire_history_only']['capture_top20pct'])} |
+Table: Test of the ranking against the peat that burned in 2026 ({V['n_pool']} KHG in the comparison group, {V['n_burned']} of which burned in 2026)
 
-Urgency adds most where it matters for planning: among the KHG ranked highest, it holds {pc(V['urgency']['capture_top20pct'] - V['fire_history_only']['capture_top20pct'])} points more of the 2026 burned peat than fire history alone, because damage and canal drainage flag KHG that had not yet burned much. 2026 is one season; the test should be repeated each year.
+| Ranking | Share of 2026 burned peat in the top fifth of KHG | Chance that a KHG that burned ranks above one that did not |
+|---|---|---|
+| Urgency (without this year's fire detections) | {pc(V['urgency']['capture_top20pct'])} | {pc(V['urgency']['auc'])} |
+| Past fires alone | {pc(V['fire_history_only']['capture_top20pct'])} | {pc(V['fire_history_only']['auc'])} |
 
-![Type stability: share of {S['runs']} weight draws (every weight ±50%) in which each KHG keeps its type.]({figs['stability']})
+The second column shows how well each ranking finds the KHG where most peat burned. The third shows how well it separates KHG that burned from KHG that did not: 50% would be no better than a coin toss, 100% perfect.
 
-{pc(S['share_khg_type_stable_80pct'])} of the KHG in the pool keep their type in at least 80% of the draws (mean {pc(S['share_keeping_type_mean'])}); the median urgency rank moves by {S['median_rank_sd']:.0f} places. The unstable KHG are those near a tercile cut. The dashboard and Annex B show each KHG's stability, so readers can see where the type is a close call.
+Urgency does best where it matters for planning. Its top fifth holds {pc(V['urgency']['capture_top20pct'] - V['fire_history_only']['capture_top20pct'])} points more of the 2026 burned peat than a ranking by past fires alone. The extra comes from damage and canal drainage, which flag KHG that had not burned much before. 2026 is a single fire season, so the test should be repeated each year.
 
-**Known weaknesses.**
+## {{n}} Test against changes in the weights
 
-- **Feasibility is coarse.** It uses distance to large rivers and roads and the dry-season water balance, and now relates only weakly to urgency (Spearman {corr.loc['urgency','feasibility']:.2f}, against 0.60 in the first version, which used BRGM blocks). The RBI maps hold only rivers wide enough to be drawn with two banks, and dry-season river levels are not included. Results of the detailed water-deficit and pump analysis within each KHG would refine it. It is a flag only.
-- **The intervention label rests on KLH's land cover 2022 and canal zones**, which could not be checked against independent copies. The {rw_min}% and {rv_min}% thresholds are a judgement, to be confirmed with KLH.
-- **People overlaps with complexity** (Spearman {corr.loc['complexity','people']:.2f}): crowded KHG are also contested ones. It is a flag only.
-- **Tenure complexity is a lower bound**: customary claims, PIAPS, the newest permits and BPN rights are missing (Chapter 3).
-- **Stake leans on BBSDLP landform and FEG thickness**, which could not be verified independently, and on peat area, which favours large KHG.
-- **Small KHG** (less than {rule['min_peat_km2']} km² of peat) have noisy shares; they are flagged.
+![How often each KHG kept its type over {S['runs']} reruns in which every weight was changed at random by up to half.]({figs['stability']})
+
+{pc(S['share_khg_type_stable_80pct'])} of the KHG in the comparison group kept their type in at least 4 out of 5 reruns (on average, a KHG kept its type in {pc(S['share_keeping_type_mean'])} of reruns). The typical KHG moved about {S['median_rank_sd']:.0f} places in the urgency ranking. The KHG that changed type are those close to a border between thirds. The dashboard and Annex B show this figure for each KHG, so readers can see where a type is a close call.
+
+## {{n}} Known weaknesses
+
+- **Feasibility is rough.** It uses distance to large rivers and roads and the dry-season water balance. The river maps hold only rivers wide enough to be drawn with two banks, and river levels in the dry season are not included. Detailed water and pump studies inside each KHG would improve it. For now it only adds a flag.
+- **The label for what the peat needs rests partly on KLH layers we could not check:** the 2022 land cover map and the canal zones. The forest-change part comes from an independent satellite map, but that map cannot always tell natural regrowth from young plantation. The {rw_min}% and {rv_min}% thresholds are a judgement, to be confirmed with KLH.
+- **Soil moisture is coarse** (pixels about 9 km wide), and few cloud-free Sentinel-2 images reach peat in the dry season. Both therefore have weight 0 or are reported only.
+- **People and complexity overlap** (correlation {corr.loc['complexity','people']:.2f}): crowded KHG also tend to be contested. People only adds a flag.
+- **Complexity is a minimum,** because customary claims, the indicative social forestry map, the newest permits and private land titles are missing (Chapter 4).
+- **Stake relies on KLH's peat landform and thickness data,** which we could not check, and on peat area, which favours large KHG.
+- **Small KHG** (less than {rule['min_peat_km2']} km² of peat) have unsteady shares: a few hectares can swing them. They are flagged.
 """
 
-    # --- 07 next steps
-    C["07_next"] = f"""# 7 Limitations and next steps
+    # --- 08 next steps
+    C["08_next"] = f"""# 8 Limitations and next steps
 
-- **Weights.** The weights are provisional. A short weighting session with KLH and the World Bank, for example by pairwise comparison, would settle them; the report, dashboard and annex can then be updated with the agreed weights.
-- **Missing claims.** A data request to the Ministry of Forestry's SIGAP service (customary forest 1:50k, PIAPS revision X, the December 2025 permit releases, Kawasan Hutan June 2026) and a request to BRWA for customary territory boundaries would complete tenure complexity; BPN land rights would add private claims.
-- **KLH layers to confirm.** The Kawasan Hutan release and licence date used in PPEG, and the source layers of land cover 2022, SKEG 2024 and the BBSDLP attributes, so that they can be verified like the others.
-- **From KHG to sites.** For type A and B KHG, detailed analysis within each KHG (water deficit, canal blocks, pumps, layouts) turns the priority into designs. Its results can then replace the KHG-level feasibility flag.
-- **Yearly update.** Rerun after each fire season and repeat the validation on the new year.
+- **Agree the weights.** The weights are provisional. A short session with KLH and the World Bank, for example comparing the measures two at a time, would settle them. The report, dashboard and annex can then be updated with the agreed weights.
+- **Fill the gaps in land claims.** A data request to the forestry ministry's SIGAP service (customary forest at 1:50,000, the indicative social forestry map, the December 2025 permit releases, the June 2026 forest estate map) and a request to BRWA for customary territory boundaries would complete the claims picture. Land title data from the national land agency (BPN) would add private claims.
+- **Confirm KLH's layers.** Which forest estate release and licence date PPEG used, and the source maps of the 2022 land cover, the 2024 damage assessment and the peat landform and depth data, so that they can be checked like the others.
+- **Move from KHG to sites.** For type A and B KHG, detailed work inside each KHG (water needs, canal blocks, pumps, layouts) turns the priority into designs. Its results can then replace the rough feasibility flag.
+- **Update every year.** Rerun the ranking after each fire season and repeat the test on the new year's fires.
 
-**Reproducibility.** All figures in this report are computed from the project's data and from rules that were written down and dated in advance. The analysis can be rerun for any KHG as data are updated or weights are agreed.
+**Reproducibility.** Every figure in this report is calculated from the project's data and from rules that were written down and dated in advance. The analysis can be rerun for any KHG when data are updated or the weights are agreed.
 """
 
     # --- Annex A: layer register
@@ -614,14 +747,240 @@ Urgency adds most where it matters for planning: among the KHG ranked highest, i
     r.columns = ["Layer", "Theme", "Producer", "Version", "Scale", "Verification"]
     C["90_annex_a"] = f"""# Annex A Layer register
 
-The register documents every data layer used in the prioritisation. The table gives, for each layer, its theme, producer, version, scale and verification status. "Verified" means the layer was checked against an independent copy of its source; "partly verified" that only some of its attributes could be checked; "not verified" that no independent copy is available; "source layer" that it is used as delivered; and "derived" that the project computed it from other layers. The full register also records each layer's legal basis, date received, usage rights, use in the analysis and the evidence for its verification status.
+This annex lists every map layer used in the ranking, with its theme, who made it, its version, its level of detail and whether we could check it. "Verified" means we checked it against an independent copy of its source. "Partly verified" means only some of its information could be checked. "Not verified" means no independent copy is available. "Source layer" means it is used as delivered, and "derived" means we calculated it from other layers. The full register, shared with the GIS package, also records each layer's legal basis, date received, terms of use, how it is used and the evidence for its check.
 
 {md_table(r, "Registered layers")}"""
     C["91_annex_b"] = f"""# Annex B KHG profiles
 
-The profiles of the {n337_sc} scored KHG of KLH's 337 work list are in a separate volume, one page per KHG in the order of the KLH work list. Each page shows the KHG's scores, type and intervention, six thematic maps (peat depth and dome, damage, drainage, land cover, land status, fire and villages), its main indicators against the median of the scoring pool, and the licence holders on its peat. Because they name licence holders, the profiles are shared with KLH and the World Bank only. A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage.
+The profiles of the {n337_sc} scored KHG in KLH's 337 work list are in a separate volume, one page per KHG, in the order of KLH's list. Each page shows the KHG's scores, its type and what its peat needs, six maps (peat depth and dome, damage, drainage, land cover, land claims, and fire and villages), its main measures next to the median of the comparison group, and the licence holders on its peat. Because they name licence holders, the profiles are shared with KLH and the World Bank only. A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage.
 """
+    C["92_annex_c"] = annex_c(D, figs)
     return C
+
+
+# ------------------------------------------------------------------------------------------------------------- annex C
+EXAMPLE = "KHG.61.12-71.01"
+LINKS = [
+    ("CHIRPS daily rainfall (Climate Hazards Center, UC Santa Barbara)", "https://www.chc.ucsb.edu/data/chirps",
+     "https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY"),
+    ("MODIS MOD16A2GF evapotranspiration, 500 m (NASA LP DAAC)", "https://lpdaac.usgs.gov/products/mod16a2gfv061/",
+     "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD16A2GF"),
+    ("JRC Tropical Moist Forest, annual change 1990-2024, 30 m (European Commission)", "https://forobs.jrc.ec.europa.eu/TMF",
+     "https://developers.google.com/earth-engine/datasets/catalog/projects_JRC_TMF_v1_2024_AnnualChanges"),
+    ("Hansen Global Forest Change v1.12, 30 m (University of Maryland)", "https://glad.earthengine.app/view/global-forest-change",
+     "https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2024_v1_12"),
+    ("Sentinel-2 surface reflectance, harmonized, 10-20 m (Copernicus)", "https://dataspace.copernicus.eu",
+     "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED"),
+    ("Cloud Score+ cloud mask for Sentinel-2 (Google)", "https://doi.org/10.1109/CVPR52729.2023.00136",
+     "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_CLOUD_SCORE_PLUS_V1_S2_HARMONIZED"),
+    ("SMAP L4 root-zone soil moisture, version 8, 9 km (NASA)", "https://nsidc.org/data/spl4smgp",
+     "https://developers.google.com/earth-engine/datasets/catalog/NASA_SMAP_SPL4SMGP_008"),
+    ("VIIRS and MODIS active fire detections (NASA FIRMS)", "https://firms.modaps.eosdis.nasa.gov",
+     "https://developers.google.com/earth-engine/datasets/catalog/NASA_LANCE_NOAA20_VIIRS_C2"),
+    ("TheTreeMap annual burned area of Indonesia 2019-2024, Sentinel-2, 20 m (CC BY 4.0)", "https://zenodo.org/records/19104282",
+     "https://doi.org/10.1371/journal.pone.0331831"),
+    ("IHME Populace population estimates 2025, 40 m (non-commercial licence)", "https://populace.healthdata.org", ""),
+]
+
+
+def fig_tc_example(D, out):
+    import geopandas as gpd
+    from matplotlib.colors import ListedColormap
+    p = D["tex_pts"]
+    g = gpd.read_file(DATA / "derived" / "khg_klh_priority.gpkg", layer="khg")
+    g = g[g.khg_code == EXAMPLE]
+    fig, axs = plt.subplots(1, 2, figsize=(10, 4.6))
+    cols = ["#e9e7df", "#cfe0c3", "#f2c57c", "#e0803a", "#a8321f"]
+    cmap = ListedColormap(cols)
+    k = np.clip(p.claims.to_numpy(), 0, 4)
+    for ax in axs:
+        g.boundary.plot(ax=ax, color="#" + STYLE.INK, linewidth=.7)
+        ax.set_axis_off(); ax.set_aspect(1 / np.cos(np.radians(p.lat.mean())))
+    axs[0].scatter(p.lon, p.lat, c=k, cmap=cmap, vmin=-.5, vmax=4.5, s=.35, marker="s", linewidths=0)
+    axs[0].legend([plt.Rectangle((0, 0), 1, 1, color=c) for c in cols], ["0 claims", "1", "2", "3", "4 or more"],
+                  loc="lower left", fontsize=7, frameon=False, ncol=5, bbox_to_anchor=(0, -.08))
+    axs[0].set_title("(a) Number of claims at each peat point", loc="left", fontsize=9)
+    lc = p.licence_community.to_numpy()
+    axs[1].scatter(p.lon[~lc], p.lat[~lc], color="#e9e7df", s=.35, marker="s", linewidths=0)
+    axs[1].scatter(p.lon[p.licence & ~lc], p.lat[p.licence & ~lc], color="#9fb6c9", s=.35, marker="s", linewidths=0)
+    axs[1].scatter(p.lon[lc], p.lat[lc], color="#c0392b", s=.35, marker="s", linewidths=0)
+    axs[1].legend([plt.Rectangle((0, 0), 1, 1, color=c) for c in ("#c0392b", "#9fb6c9", "#e9e7df")],
+                  ["licence on community or DMPG land", "licence only", "no licence"], loc="lower left", fontsize=7, frameon=False, ncol=3,
+                  bbox_to_anchor=(0, -.08))
+    axs[1].set_title("(b) Points counted in 'licence on community land'", loc="left", fontsize=9)
+    return save(fig, out / "tc_example.png")
+
+
+def fig_dist_example(D, out):
+    p = D["tex_pts"]
+    fig, axs = plt.subplots(1, 2, figsize=(10, 2.6))
+    for ax, c, lab in zip(axs, ["water_km", "road_km"], ["Distance to the nearest large river or lake (km)", "Distance to the nearest road (km)"]):
+        v = p[c].to_numpy()
+        ax.hist(v, bins=40, color="#" + STYLE.ACCENT, alpha=.8)
+        m = float(np.median(v))
+        ax.axvline(m, color="#" + STYLE.WARM, lw=1.4, ls="--")
+        ax.text(m, ax.get_ylim()[1] * .92, f"  median {m:.2f} km", color="#" + STYLE.WARM, fontsize=8)
+        ax.set_xlabel(lab); ax.set_ylabel("Peat points")
+    return save(fig, out / "dist_example.png")
+
+
+def field_table():
+    """Source and calculation of every field, as on the dashboard's Method page (one definition for both)."""
+    js = (WS / "repeat-prioritisation" / "src" / "repeat_prioritisation" / "national" / "assets" / "defs.js").read_text(encoding="utf-8")
+    block = js[js.index("const FIELD_SRC={"):]
+    block = block[:block.index("};") + 1]
+    rows = re.findall(r'\n\s*(\w+):\["((?:[^"\\]|\\.)*)","((?:[^"\\]|\\.)*)"\]', block)
+    names = dict(re.findall(r'\n\s*(\w+):\["((?:[^"\\]|\\.)*)",', js[js.index("const IND="):js.index("const FIELD_SRC")])) if "const IND=" in js else {}
+    return pd.DataFrame([[k, names.get(k, ""), s, c] for k, s, c in rows], columns=["Field", "Name", "Source", "How it is calculated"])
+
+
+def md_txt(v):
+    """'04-01' -> '1 April'; 'end' and other values unchanged."""
+    import calendar
+    m = re.match(r"^(\d{2})-(\d{2})$", str(v))
+    return f"{int(m.group(2))} {calendar.month_name[int(m.group(1))]}" if m else str(v)
+
+
+def annex_c(D, figs):
+    f, meta = D["f"], D["meta"]
+    rule = meta["rule"]
+    pool = f[f.in_pool]
+    ex = f[f.khg_code == EXAMPLE].iloc[0]
+    nm_ex = re.sub(r"^KHG\s+", "", re.sub(r"\s+", " ", ex.khg_name))
+
+    def pct(x, ref):
+        r = np.sort(pd.Series(ref).dropna().to_numpy())
+        return (np.searchsorted(r, x, "left") + np.searchsorted(r, x, "right")) / 2 / len(r)
+
+    def dim_example(dim):
+        rows, num, den = [], 0.0, 0.0
+        for k, s in rule["dimensions"][dim].items():
+            w = s["weight"]
+            v = ex.get(k, np.nan)
+            sign = -1 if s.get("direction", "+") == "-" else 1
+            if not w or pd.isna(v):
+                rows.append([k, "n/a" if pd.isna(v) else f"{v:.4g}", "", fmt_w(w), "not counted" if not w else "missing: left out"])
+                continue
+            p = pct(sign * v, sign * pool[k])
+            num += w * p; den += w
+            rows.append([k, f"{v:.4g}", f"{p:.3f}", fmt_w(w), f"{w * p:.3f}"])
+        return pd.DataFrame(rows, columns=["Field", "Value", "Percentile rank", "Weight", "Weight x rank"]), num, den
+
+    fmt_w = lambda w: f"{w:g}"
+    ut, un, ud = dim_example("urgency")
+    ct, cn, cd = dim_example("complexity")
+    cuts = meta["tercile_cuts"]
+    note("annexc_urgency_check", (un / ud, float(ex.urgency)), "recomputed vs final_khg.csv")
+    tc = D["tc"]
+    tpool = tc[tc.peat_km2 >= 25]
+    TCI = ["c_licence_community", "c_contested", "c_claims_mean", "c_holders"]
+    tr = tpool[TCI].rank(pct=True, method="average")
+    exr = tc[tc.khg_id == EXAMPLE].iloc[0]
+    tci = tr.loc[tpool.khg_id == EXAMPLE].iloc[0]
+    TCN = {"c_licence_community": "Share of peat under a licence that is also social-forestry or DMPG village land",
+           "c_contested": "Share of peat where claims conflict", "c_claims_mean": "Mean number of claim types per point (0-6)",
+           "c_holders": "Number of distinct licence holders on the peat"}
+    tct = pd.DataFrame([[k, TCN[k], f"{exr[k]:.4g}", f"{tci[k]:.3f}"] for k in TCI], columns=["Field", "Indicator", "Value", "Percentile rank"])
+    tex = D.get("tex_meta")
+    av = D["av"].set_index("khg_code")
+    a_ex = av.loc[EXAMPLE] if EXAMPLE in av.index else None
+    bs = (NP / "final_inputs" / "burned_s2" / "calibration.json")
+    burned_txt = ""
+    if bs.exists():
+        cal = json.loads(bs.read_text(encoding="utf-8"))
+        g = pd.DataFrame(cal["grid"])[["dnbr_min", "post_max", "spearman_vs_klhk", "ha_jan_sep", "ha_year_to_date", "klhk_ha_to_15oct"]].round(3)
+        g.columns = ["dNBR minimum", "Post-fire NBR maximum", "Spearman with KLHK 2026", "Burned peat Jan-Sep (ha)", "Burned peat to date (ha)", "KLHK to 15 Oct (ha)"]
+        burned_txt = (md_table(g, f"Calibration of the burned-area thresholds against KLHK's 2026 burned area ({cal['n_khg']} scored KHG)")
+                      + f"\nChosen: dNBR above {cal['chosen']['dnbr_min']} and post-fire NBR below {cal['chosen']['post_max']}.\n")
+    else:
+        burned_txt = "\nThe 2026 run was in progress when this edition was produced; its calibration table and totals will be added here.\n"
+    links = pd.DataFrame([[a, b, c] for a, b, c in LINKS], columns=["Data", "Producer or download page", "Earth Engine catalogue or paper"])
+    pts = D.get("tex_pts")
+    tc_fig = f"![Worked example, {nm_ex}: the peat grid points and their land claims.]({figs['tc_example']})\n" if "tc_example" in figs else ""
+    dist_fig = f"![Worked example, {nm_ex}: distance from every peat point to the nearest large river or lake and road. The dashed line is the median used as the KHG's value.]({figs['dist_example']})\n" if "dist_example" in figs else ""
+    return f"""# Annex C Technical details
+
+This annex is for readers who want to check or reproduce the analysis. It names the fields and settings used in the data tables, the GIS package and the configuration file, and works through one KHG, {nm_ex} ({EXAMPLE}), step by step. The numbers in the examples are computed from the same data as the results, by the same functions.
+
+## {{n}} How the scores are calculated
+
+**Percentile rank.** For an indicator x, a KHG's percentile rank is the share of the comparison group (the {meta['pool']} KHG with at least {rule['min_peat_km2']} km² of KLH peat) with a lower value, counting ties as half: rank = (L + R) / (2N), where L is the number of pool KHG with a lower value, R the number with a lower or equal value, and N the pool size. Where a lower value means more urgency or feasibility (direction "−": distances, soil moisture), the value is negated first. KHG outside the pool (the small KHG and the whole-KHG cases in the 337) are ranked against the pool's values without being added to it.
+
+**Dimension score.** Each of the five dimensions is a weighted linear average of its indicators' percentile ranks: score = Σ(wᵢ × rankᵢ) / Σwᵢ, over the indicators the KHG has. An indicator with weight 0 is skipped; a missing indicator is left out of both sums, so the score is the average of the rest. The dimensions are not added together.
+
+**Type.** Urgency, complexity and stake are cut at their terciles in the pool (the values below which one third and two thirds of the pool lie): urgency {cuts['urgency'][0]:.4f} and {cuts['urgency'][1]:.4f}, complexity {cuts['complexity'][0]:.4f} and {cuts['complexity'][1]:.4f}, stake {cuts['stake'][0]:.4f} and {cuts['stake'][1]:.4f}. High means at or above the upper cut, low below the lower cut. Then: A = high urgency and complexity below its upper cut; B = high urgency and complexity at or above it; C = medium urgency; D = low urgency and stake at or above its upper cut; E = low urgency and stake below it. Urgency is therefore not combined with complexity into one number: complexity only splits the high-urgency KHG into A and B, and stake splits the low-urgency KHG into D and E.
+
+**Flags and ranks.** Low feasibility: feasibility below its lower tercile in the pool. High exposure: people at or above its upper tercile. Ranks are by urgency, highest first (ties share the best rank), among all scored KHG, among the 337 and within each type.
+
+**Worked example: urgency of {nm_ex}.**
+
+{md_table(ut, f"Urgency of {nm_ex}: values, percentile ranks in the pool and weights (rule as run on {meta.get('run', '')})")}
+Urgency = {un:.3f} / {ud:g} = **{un / ud:.3f}** (reported: {ex.urgency:.3f}). This is {'at or above the upper cut' if ex.urgency >= cuts['urgency'][1] else 'between the cuts' if ex.urgency >= cuts['urgency'][0] else 'below the lower cut'}, so urgency is {'high' if ex.urgency >= cuts['urgency'][1] else 'medium' if ex.urgency >= cuts['urgency'][0] else 'low'}.
+
+{md_table(ct, f"Complexity of {nm_ex}")}
+Complexity = {cn:.3f} / {cd:g} = **{cn / cd:.3f}** (reported: {ex.complexity:.3f}), against the upper cut {cuts['complexity'][1]:.4f}. The KHG is type **{ex.type}**.
+
+**Validation and sensitivity.** Validation: urgency is recomputed without this year's inputs and compared with KLHK's 2026 burned share of peat; reported are the share of 2026 burned peat in the top 20% of KHG, and the AUC (the probability that a KHG that burned is ranked above one that did not, from the rank-sum formula). Sensitivity: {D['val']['sensitivity']['runs']} runs, each multiplying every weight by an independent random factor between 0.5 and 1.5 (seed fixed in the configuration); for each KHG the share of runs keeping its type and the spread of its urgency rank.
+
+## {{n}} Tenure complexity
+
+**Grid.** Each KHG is covered by a regular grid of points in an Albers equal-area projection centred on Indonesia (standard parallels 8° S and 4° N, central meridian 118° E). The spacing is chosen per KHG so that a KHG has about 60,000 points: spacing = √(KHG area / 60,000), rounded to 50 m, at least 100 m. Only points on KLH peat are used. Each point stands for one grid cell, so shares are point counts divided by the number of peat points.
+
+**Claims.** At each point six claim types are recorded as present or absent: (1) business licence (2025 licence map: oil palm plantations, forest utilisation licences PBPH and PPHTR, mining), (2) social forestry (community forest permits in the licence map, village forest, community plantation forest), (3) forest estate (Kawasan Hutan 2023, any function except APL), (4) DMPG village, (5) PPTPKH land (land held inside the forest estate that is being settled), (6) forest estate released for other uses.
+
+**Indicators** (all on the KHG's peat points):
+- c_licence_community: share of points with a licence and also social forestry or a DMPG village.
+- c_contested: share of points with a licence on PPTPKH or social-forestry land, or forest estate on PPTPKH land.
+- c_claims_mean: mean number of claim types per point (0 to 6).
+- c_holders: number of distinct licence holders (company names in the licence map) with a licence on the peat.
+
+**Index.** tenure_complexity = the average of the four indicators' percentile ranks among the KHG with at least 25 km² of peat (equal weights). It enters the complexity dimension with weight 2, next to the kinds of actor holding damaged peat and the number of villages.
+
+**Worked example: {nm_ex}.** The KHG has {int(exr.points):,} peat points{f" at {tex['cell_m']:.0f} m spacing" if tex else ""} ({exr.peat_km2:,.1f} km² of peat). Licences cover {exr.share_licence:.1%} of the points, the forest estate {exr.share_forest_estate:.1%}, DMPG villages {exr.share_dmpg:.1%}, PPTPKH {exr.share_pptpkh:.1%} and social forestry {exr.share_community:.1%}; {exr.share_no_claim:.1%} of the points carry no claim and {exr.share_3plus_claims:.1%} three or more.
+
+{tc_fig}
+{md_table(tct, f"Tenure complexity indicators of {nm_ex}")}
+Index = ({' + '.join(f'{tci[k]:.3f}' for k in TCI)}) / 4 = **{tci.mean():.3f}** (reported: {exr.tenure_complexity:.3f}). The indicator ranking highest is {TCN[tci.idxmax()].lower()} ({tci.max():.3f}); the lowest is {TCN[tci.idxmin()].lower()} ({tci.min():.3f}). A value of 0 still has a percentile rank above 0 when many KHG share it, because ties count as half.
+
+## {{n}} Access, water balance and population
+
+**Distances.** On the same peat points, the distance to the nearest feature is measured in World Mercator (EPSG:3395; scale error below 1.3% within 9° of the equator). Large rivers are those the national topographic map (RBI) draws with two banks, plus lakes and reservoirs; roads are the RBI classes toll road, arterial, collector, local and other roads (footpaths, railways and runways excluded). The KHG's value is the median over its peat points, so half the peat is closer than this. Where no feature lies within one degree (rivers) or half a degree (roads), 110 km or 55 km is used.
+
+{dist_fig}
+**Dry-season water balance (P − ET).** In Google Earth Engine, for every KHG (whole KHG, 500 m): rain is the sum of CHIRPS daily rainfall per dekad (10-day period; 36 per year), averaged over 2018-2025; evapotranspiration is MOD16A2GF (8-day sums × 0.1 mm), scaled to each dekad's length and averaged over the same years. The dry window is the 14 consecutive dekads (about 140 days, wrapping over the new year) with the largest total of ET minus rain. dry_balance_mm = rain minus ET summed over that window: negative means the dry season loses more water than it receives.{f" For {nm_ex} the window runs from {md_txt(a_ex.dry_first)} to {md_txt(a_ex.dry_last)} and the balance is {-a_ex.dry_shortfall_mm:.0f} mm." if a_ex is not None and not pd.isna(a_ex.dry_shortfall_mm) else ""}
+
+**Population.** The IHME Populace 2025 (third quarter) grid gives people per 40 m cell in an equal-area projection. pop_on_peat is the sum of the cells whose centre lies inside the KHG's KLH peat polygons; pop_10km the sum over the KHG plus a 10 km buffer. For {nm_ex}: {ex.pop_on_peat:,.0f} people on the peat and {ex.pop_10km:,.0f} within 10 km.
+
+## {{n}} Satellite products
+
+The Earth Engine indicators are reduced over the KHG's KLH peat as drawn on the dashboard (simplified to about 120 m); the forest-change indicators use KLH's peat polygons on the 30 m forest-map grid. Where KLH shows no peat, the whole KHG is used.
+- **Forest change (JRC TMF).** The December 2014 and December 2024 classes of the annual change collection are downloaded per KHG on their native 30 m grid. Other layers (KLH peat, PPEG land cover 2022, KLHK burned area) are burned onto the same grid (cell centres). forest_loss_2015 = peat cells forest or degraded in 2014 and deforested in 2024; burn recovery and reveg_share as defined in the field table below.
+- **Hansen forest loss.** Tree cover ≥ 30% in 2000 and a loss year of 2015 to 2024, mean over the peat at 30 m.
+- **Sentinel-2 NDVI and NDMI.** Median of the July-October 2025 images after the Cloud Score+ mask (cs_cdf ≥ 0.6); NDVI = (B8 − B4)/(B8 + B4), NDMI = (B8 − B11)/(B8 + B11); mean over the peat at 30 m; ndvi_low_share = share below 0.5.
+- **SMAP soil moisture.** Mean root-zone soil moisture of July-October 2025, and its difference from the July-October mean of 2016-2024; at the product's 9 km cells (summarised at 11 km).
+
+**Open data sources and where to obtain them:**
+
+{chr(10).join(f"- {a}: {b}" + (f"; {c}" if c else "") for a, b, c in LINKS)}
+
+## {{n}} Burned area 2026 from Sentinel-2
+
+Method (rule written before any 2026 result; after Gaveau, Descals and Salim 2026 and KLHK's dNBR protocol), in Google Earth Engine, at 20 m, on peat only:
+1. Sentinel-2 images with the Cloud Score+ mask; NBR = (B8 − B12)/(B8 + B12).
+2. One composite per month: the median NBR and the 20th percentile NBR of the month's images.
+3. For month m: before = median of the three previous monthly medians; after = the 20th percentile of month m; drop = before − after.
+4. Burned in month m: drop above the threshold, after-NBR below its maximum, and a fire detection near the pixel in month m or the three months before (VIIRS S-NPP or NOAA-20, nominal or high confidence, within 500 m; MODIS, confidence ≥ 30, within 1 km).
+5. The year's burned area is the union of the months; patches smaller than 6.25 ha (KLHK's minimum mapping unit) are removed.
+6. Thresholds: ten pairs (drop 0.10 to 0.30, after-NBR below −0.10 or 0.10) are computed; the pair whose January-September burned share ranks the KHG most like KLHK's 2026 burned area (Spearman) is used. Totals are reported, not matched, because KLHK's map may miss burns.
+7. u_burned_2026 = burned peat / peat; burned_2026_obs_share = share of the peat seen clear at least once (cloud and smoke gaps).
+{burned_txt}
+## {{n}} Every field
+
+{md_table(field_table(), "Source and calculation of every field (the same definitions as the dashboard's Method page)")}
+## {{n}} Reproducing the analysis
+
+The code is in three public repositories of the RE-PEAT project (github.com/Re-Peat-Project): repeat-common (data fetchers), repeat-prioritisation (the national analysis) and re-peat (reports, layer register, tools); a Docker image (ghcr.io/re-peat-project/repeat-chain) contains the environment. Every setting (indicators, weights, thresholds, years, data paths relative to the data folder) is in one configuration file, national_profile.yaml, with each change dated. The data layers are listed with their sources in Annex A; KLH's own layers are shared with KLH directly. The national steps run in this order: profile (fire, damage, canals), PPEG summaries, tenure complexity, final inputs (access, people), forest cover, Earth Engine indicators, burned area 2026, then the final scoring, which writes the tables used in this report and the dashboard. Each step caches its results per KHG and can be rerun for a single KHG.
+"""
 
 
 # ------------------------------------------------------------------------------------------------------------- annex
@@ -674,7 +1033,8 @@ def annex(D, outdir):
     pool = f[f.in_pool]
     med = {c: pool[c].median() for c in ("u_fire_freq", "u_hotspot", "damage_share", "canal_share", "thick3m_share", "dome_share", "protected_share",
                                          "c_licence_community", "c_contested", "share_pptpkh", "share_community",
-                                         "water_dist_km", "road_dist_km", "pop_on_peat", "pop_10km", "open_share", "forest_share") if c in pool}
+                                         "water_dist_km", "road_dist_km", "pop_on_peat", "pop_10km", "open_share", "forest_share",
+                                         "reveg_share", "burn_unrecovered_share", "forest_loss_2015", "ndvi_dry", "sm_root_dry") if c in pool}
     hold = D["hold"]
     av = D["av"].set_index("khg_code")
     PR.TITLE = "KHG profiles: KLH's 337 work list"
@@ -682,7 +1042,10 @@ def annex(D, outdir):
     b = PR.Builder()
     b.front()
     b.heading("B KHG profiles", 1)
-    PR.runs(b.doc.add_paragraph(), "This annex has one page for each KHG of KLH's 337 work list that contains KLH peat, in work-list order. Six maps show the KHG's peat depth and dome, SKEG 2024 damage, drainage (canal-influence zones, canals, large rivers, BRGM structures), land cover 2022, land status (forest-area function, business licences, social forestry, PPTPKH) and fire (times burned 2015 to 2026, this year's hotspots) with DMPG villages and roads. Scores are percentile ranks among the scoring pool (0 to 1), and the medians given for comparison are those of the pool. Licence holders and their areas come from KLH's PPEG analysis (April 2026). A licence on a KHG is a land-status fact, not a statement about responsibility for fire or damage. Draft for discussion: the weights are provisional.", Pt(9.5))
+    PR.runs(b.doc.add_paragraph(), "This annex has one page for each scored KHG in KLH's 337 work list, in the order of KLH's list. Six maps show peat depth and the peat dome; damage (KLH's 2024 assessment); drainage (land close enough to a canal to be drained, canals, large rivers, canal blocks already built); land cover in 2022; land claims (forest estate, business licences, social forestry, PPTPKH); and fire (how many times each place burned in 2015 to 2026, and this year's fire detections), with DMPG villages and roads. "
+     "The five scores run from 0 to 1 and give the share of the comparison group (the KHG with enough peat to compare fairly) that the KHG beats: 0.8 means higher than 80% of them. The table gives each measure as a share of the KHG's peat unless a unit is shown, next to the median (the middle KHG of the comparison group). Greenness (NDVI) runs from −1 to 1; soil moisture is in m³ of water per m³ of soil. "
+     "\"Type kept under weight changes\" is the share of 500 reruns, each with every weight changed at random by up to half, in which the KHG kept the same type. "
+     "Licence holders and their areas come from KLH's PPEG analysis (April 2026). A licence on a KHG is a fact about who holds the land, not a statement about who caused fire or damage. Draft for discussion: the weights are provisional.", Pt(9.5))
     pdir = outdir / "profiles"
     sys.path.insert(0, str(Path(__file__).parent))
     import khg_profile_maps as KM          # six thematic maps per KHG, rendered in parallel (cached by file)
@@ -697,7 +1060,7 @@ def annex(D, outdir):
         p = d.add_paragraph()
         a = av.loc[r.khg_code] if r.khg_code in av.index else None
         ranks = f"rank {int(r.rank_urgency_337)} of the 337 by urgency, {int(r.rank_in_type)} in type {r.type}"
-        PR.runs(p, f"{r.khg_code} · {r.provinces} · {r.island.replace('Pulau ', '')} · KLH team: {kp.loc[r.khg_code, 'klh_337_team']} · peat {n0(r.peat_km2)} km² · {ranks} · type kept in {pc(r.type_stability) if not pd.isna(r.type_stability) else 'n/a'} of weight draws"
+        PR.runs(p, f"{r.khg_code} · {r.provinces} · {r.island.replace('Pulau ', '')} · KLH team: {kp.loc[r.khg_code, 'klh_337_team']} · peat {n0(r.peat_km2)} km² · {ranks} · type kept under weight changes: {pc(r.type_stability) if not pd.isna(r.type_stability) else 'not tested (small KHG)'}"
                 + (" · no peat in KLH's peat map: whole KHG used, less reliable" if getattr(r, "whole_khg", False) is True
                    else " · small peat area: less reliable" if not r.in_pool else "") + (" · low feasibility" if r.flag_low_feasibility else "")
                 + (" · high exposure" if getattr(r, "flag_high_exposure", False) is True else "")
@@ -706,28 +1069,29 @@ def annex(D, outdir):
         PR.runs(sc, f"Type {r.type}, {TYN.get(r.type, '').lower()}. Scores (0 to 1): " + " · ".join(f"{lab.lower()} {getattr(r, c):.2f}" for c, lab in DIM if hasattr(r, c) and not pd.isna(getattr(r, c))), Pt(9))
         sc.paragraph_format.space_after = Pt(2)
         p.paragraph_format.space_after = Pt(2)
-        pic = d.add_paragraph(); pic.add_run().add_picture(str(png), width=Cm(15.0))
+        pic = d.add_paragraph(); pic.add_run().add_picture(str(png), width=Cm(14.0))
         rows = [
-            ["Burned share of peat per year, 2015-2025", pc(r.u_fire_freq, 2) if not pd.isna(r.u_fire_freq) else "n/a", pc(med["u_fire_freq"], 2)],
-            ["Hotspots per km² of peat per year", f"{r.u_hotspot:.2f}" if not pd.isna(r.u_hotspot) else "n/a", f"{med['u_hotspot']:.2f}"],
-            ["SKEG 2024 damaged share of peat", pc(r.damage_share), pc(med["damage_share"])],
-            ["Canal-affected share of peat (rewetting if ≥ 20%)", pc(r.canal_share), pc(med["canal_share"])],
-            *([["Open or degraded cover / forest, land cover 2022 (revegetation if open ≥ 20%)", f"{pc(r.open_share)} / {pc(r.forest_share)}" if not pd.isna(r.open_share) else "n/a",
-                f"{pc(med['open_share'])} / {pc(med['forest_share'])}"]] if "open_share" in f else []),
-            ["Peat 3 m or deeper / dome / protected function", f"{pc(r.thick3m_share)} / {pc(r.dome_share)} / {pc(r.protected_share)}",
+            ["Peat burned per year (average 2015-2025)", pc(r.u_fire_freq, 2) if not pd.isna(r.u_fire_freq) else "n/a", pc(med["u_fire_freq"], 2)],
+            ["Fire detections per km² of peat per year", f"{r.u_hotspot:.2f}" if not pd.isna(r.u_hotspot) else "n/a", f"{med['u_hotspot']:.2f}"],
+            ["Peat rated damaged (KLH 2024)", pc(r.damage_share), pc(med["damage_share"])],
+            ["Peat near canals (rewet if 20% or more)", pc(r.canal_share), pc(med["canal_share"])],
+            *([["Needs replanting (revegetate if 20% or more) / burned, not regrown / forest lost since 2015", " / ".join(pc(getattr(r, c)) if not pd.isna(getattr(r, c)) else "n/a" for c in ("reveg_share", "burn_unrecovered_share", "forest_loss_2015")),
+                " / ".join(pc(med[c]) for c in ("reveg_share", "burn_unrecovered_share", "forest_loss_2015"))]] if "reveg_share" in f else []),
+            *([["Dry season 2025: greenness, NDVI / soil moisture (m³/m³)", f"{r.ndvi_dry:.2f} / " + (f"{r.sm_root_dry:.2f}" if not pd.isna(r.sm_root_dry) else "n/a") if not pd.isna(r.ndvi_dry) else "n/a",
+                f"{med['ndvi_dry']:.2f} / {med['sm_root_dry']:.2f}"]] if "ndvi_dry" in f else []),
+            ["Peat 3 m or deeper / on the dome / set aside for protection", f"{pc(r.thick3m_share)} / {pc(r.dome_share)} / {pc(r.protected_share)}",
              f"{pc(med['thick3m_share'])} / {pc(med['dome_share'])} / {pc(med['protected_share'])}"],
-            ["Licence on social-forestry or DMPG land / contested", f"{pc(r.c_licence_community)} / {pc(r.c_contested)}" if not pd.isna(r.c_licence_community) else "n/a",
-             f"{pc(med['c_licence_community'])} / {pc(med['c_contested'])}"],
-            ["Social forestry / PPTPKH share of peat", f"{pc(r.share_community)} / {pc(r.share_pptpkh)}" if not pd.isna(r.share_community) else "n/a",
-             f"{pc(med['share_community'])} / {pc(med['share_pptpkh'])}"],
+            ["Licence on community land / conflicting claims / social forestry / PPTPKH",
+             (f"{pc(r.c_licence_community)} / {pc(r.c_contested)}" if not pd.isna(r.c_licence_community) else "n/a / n/a") + " / " + (f"{pc(r.share_community)} / {pc(r.share_pptpkh)}" if not pd.isna(r.share_community) else "n/a / n/a"),
+             f"{pc(med['c_licence_community'])} / {pc(med['c_contested'])} / {pc(med['share_community'])} / {pc(med['share_pptpkh'])}"],
             *([["Distance to a large river or lake / to a road (km)", f"{r.water_dist_km:.1f} / {r.road_dist_km:.1f}" if not pd.isna(r.water_dist_km) else "n/a",
                 f"{med['water_dist_km']:.1f} / {med['road_dist_km']:.1f}"],
                ["People on the peat / within 10 km", f"{n0(r.pop_on_peat)} / {n0(r.pop_10km)}" if not pd.isna(r.pop_on_peat) else "n/a",
                 f"{n0(med['pop_on_peat'])} / {n0(med['pop_10km'])}"]] if "water_dist_km" in f else []),
-            ["Damaged peat: licence holder / with communities / MoF / KLH (ha)",
+            ["Damaged peat by holder: licence / licence and communities / forestry ministry / KLH (ha)",
              " / ".join(n0(x) for x in (r.priority_company_ha, r.priority_company_buffer_ha, r.priority_mofor_ha, r.priority_klh_ha)), ""],
         ]
-        tbl(b, ["Indicator", "This KHG", "Pool median"], rows, [9.2, 3.6, 3.2])
+        tbl(b, ["Measure", "This KHG", "Median KHG"], rows, [9.2, 3.6, 3.2])
         hh = hold[hold.khg_code == r.khg_code].sort_values(["damaged_ha", "peat_ha"], ascending=False)
         if len(hh):
             more = len(hh) - 5
@@ -739,7 +1103,7 @@ def annex(D, outdir):
             PR.runs(b.doc.add_paragraph(), "No business licence on this KHG in the PPEG analysis.", Pt(8.5), PR.MUTED)
         dc = (("Peat extent: no peat in KLH's peat map; the whole KHG is used as peat, so the indicators are less reliable. " if getattr(r, "whole_khg", False) is True else "")
               + (f"Data for detailed design: elevation model (DeltaDTM) covers {pc(a.deltadtm_share)} of the KHG; peat depth from {a.peat_depth_source}; "
-                 f"water-table loggers (SiTMAT): {int(a.stations_community + a.stations_concession)}." if a is not None else ""))
+                 f"water-level loggers (SiTMAT): {int(a.stations_community + a.stations_concession)}." if a is not None else ""))
         np_ = b.doc.add_paragraph(); PR.runs(np_, dc, Pt(7.5), PR.MUTED); np_.paragraph_format.space_before = Pt(0); np_.paragraph_format.space_after = Pt(0)
         if i % 25 == 0:
             print(f"  profile {i + 1}/{len(s)}", flush=True)
@@ -809,6 +1173,8 @@ def main(argv=None):
         figs = {"map": fig_map(D, out / "figures"), "matrix": fig_matrix(D, out / "figures"), "types": fig_types(D, out / "figures"),
                 "validation": fig_validation(D, out / "figures"), "stability": fig_stability(D, out / "figures"),
                 "actors": fig_actors(D, out / "figures"), "dims": fig_dims(D, out / "figures"), "iv": fig_intervention(D, out / "figures")}
+        if "tex_pts" in D:
+            figs.update({"tc_example": fig_tc_example(D, out / "figures"), "dist_example": fig_dist_example(D, out / "figures")})
         figs = {k: v.as_posix() for k, v in figs.items()}
         C = chapters(D, figs)
         cdir = out / "chapters"

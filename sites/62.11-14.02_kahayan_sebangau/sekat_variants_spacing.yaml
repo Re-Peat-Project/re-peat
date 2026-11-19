@@ -1,0 +1,34 @@
+# Kahayan - Sebangau (KHG.62.11-14.02), DeltaDTM: does the 500 m minimum between new sekat lose much water, and what does closer
+# spacing cost? Planned 2026-11-19 after the team review "Canal Blocking for Peatland Restoration" (13 Nov 2026, slide 22: FREEWAT/
+# MODFLOW modelling of this KHG tested heights 0.2-0.6 m and spacing 200-400 m; 0.6 m performed satisfactorily).
+#   python scripts/sekat_variants.py --config ../re-peat/sites/62.11-14.02_kahayan_sebangau/sekat_variants_spacing.yaml   (from repeat-pump)
+# Then price each layout with the 19 Nov 2026 budget (concrete on primary canals) - see the rule, point 4.
+title: Kahayan-Sebangau (DeltaDTM), spacing of new sekat
+base: ../../../_khg/62.11-14.02_kahayan_sebangau/05_pump/deltadtm/run_config.yaml
+out: ../../../_khg/62.11-14.02_kahayan_sebangau/05_pump/variants_spacing
+rule: |
+  Written on 2026-11-19, before any variant was run (RE-PEAT lead: "KLH's concern is the blow up of budgets, but as long as it's
+  defensible and clearly documented, I think it's fine"). All variants use the run's network (primary and secondary canals) and the
+  head rule (one block per 0.4 m drop, sekat.dA_m), changing only the minimum gap between new sekat along a canal.
+  1. Water: retained water (canal rise x specific yield 0.15 x 600 m lateral reach, and 300 m as a check) and the share of the
+     neraca deficit of the selected sub-KHG it closes, all scored on the s500 network.
+  2. Cost: blocks by canal class x the 19 Nov 2026 prices (primary: concrete KSE-PK-P-2, Rp 133.0 juta central; secondary: wooden
+     KSE-3L-P2, Rp 81.6 juta), low/central/high.
+  3. Decision: a closer spacing is defensible when its extra water per extra rupiah (marginal m3 per Rp juta against s500) is at
+     least half the s500 layout's average m3 per Rp juta. Otherwise 500 m stays. Reported with the counts and the budget for KLH.
+  4. h06_s300 (0.6 m head, the modelled height) is reported for comparison only: 0.6 m exceeds the 40 cm head the review gives for
+     wooden box dams, so it implies concrete blocks throughout and is priced that way.
+  5. Item 6 of the review note (block life and replacement) is not part of this comparison.
+reference: s500
+variants:
+  s500: {sekat.min_new_spacing_m: 500}
+  s400: {sekat.min_new_spacing_m: 400}
+  s300: {sekat.min_new_spacing_m: 300}
+  s200: {sekat.min_new_spacing_m: 200}
+  h06_s300: {sekat.min_new_spacing_m: 300, sekat.dA_m: 0.6}
+scoring:
+  snap_m: 30
+  balance_shares: [0.8, 0.9]
+  specific_yield: 0.15
+  lateral_reach_m: [600, 300]
+  drawdown_m: [1.0, 0.8, 1.2]

@@ -99,6 +99,20 @@ The layers the prioritisation rests on, with provenance and evidence. Source: `s
 |---|---|---|---|---|---|---|---|
 | roads_rbi | `Transportasi_Jalan_Detil.gpkg`<br>Detailed transport network, Rupa Bumi Indonesia: roads by class, railways, runways (196,670 lines) | NAMA_UNSUR | BIG, Rupa Bumi Indonesia |  | RBI detailed |  | final prioritisation v2, feasibility: road_dist_km (Jalan Tol, Arteri, Kolektor, Lokal, Lain; footpaths, railways and runways left out) |
 
+## Land cover
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| forest_tmf_2024 | `forest/tmf_v1_2024` (<khg_code>.tif)<br>JRC Tropical Moist Forest annual change, December 2014 and December 2024, clipped per KHG on the native grid | bands Dec2014, Dec2024 (1 undisturbed, 2 degraded, 3 deforested, 4 regrowth, 5 water, 6 other land) | European Commission Joint Research Centre (repeat_common.fetch_tmf_khg, via Google Earth Engine) | v1_2024 (projects/JRC/TMF/v1_2024/AnnualChanges) | 30 m (Landsat) | 865 files, every KHG; cross-checked against Hansen GFC: the two rank the 337 differently (correlation 0.23), because Hansen counts plantation harvest as forest loss — final_inputs/cover.csv | final prioritisation: forest_loss_2015 (urgency, weight 0), burn recovery, reveg_share (revegetation label), tmf_* shares (reported) |
+| forest_hansen_gfc | `Google Earth Engine: UMD/hansen/global_forest_change_2024_v1_12`<br>Global Forest Change: tree cover 2000 and year of loss; summarised per KHG peat in Earth Engine (not downloaded) | treecover2000, lossyear | University of Maryland (Hansen et al.) | v1.12 (2024) | 30 m |  — final_inputs/gee.csv | final prioritisation: hansen_loss_2015 (reported, cross-check of TMF) |
+| sentinel2_dry_2025 | `Google Earth Engine: COPERNICUS/S2_SR_HARMONIZED, GOOGLE/CLOUD_SCORE_PLUS/V1/S2_HARMONIZED`<br>Sentinel-2 surface reflectance, median of July to October 2025 with Cloud Score+ mask (cs >= 0.6); NDVI and NDMI summarised per KHG peat (not downloaded) | B4, B8, B11,  cs | European Space Agency, Copernicus; Cloud Score+ by Google | Level-2A harmonized | 10-20 m, summarised at 30 m |  — final_inputs/gee.csv | final prioritisation: ndvi_dry, ndmi_dry, ndvi_low_share (reported) |
+
+## Climate
+
+| id | layer | fields used | producer | version | scale | verification | used for |
+|---|---|---|---|---|---|---|---|
+| smap_l4_soil_moisture | `Google Earth Engine: NASA/SMAP/SPL4SMGP/008`<br>SMAP level-4 root-zone soil moisture; mean of July to October 2025 and of the same months 2016-2024, summarised per KHG peat (not downloaded) | sm_rootzone | NASA (SMAP mission, GMAO) | SPL4SMGP version 8 | 9 km (summarised at 11 km) |  — final_inputs/gee.csv | final prioritisation: sm_root_dry (urgency, weight 0), sm_root_anom (reported) |
+
 ## Provenance details
 
 - **khg_boundary**: legal basis: KHG registry SK.129/2017 (codes matched in sites/khg_registry.csv); received: not recorded; rights: KLH, team use only; features 865; sha256 `243a7003b5c511fd…`
@@ -153,3 +167,7 @@ The layers the prioritisation rests on, with provenance and evidence. Source: `s
 - **hotspots_modis_2026**: legal basis: not stated; received: derived by repeat_prioritisation investigations.hotspot_splice; rights: KLH data; FIRMS open; features 238425; sha256 `dd21e57ce428ecac…`; Replaces hotspots_klh_2026 in the scoring; both are kept.
 - **khg_registry**: legal basis: Kepmen LHK on the national KHG map; received: not recorded; rights: public; features 865; sha256 `b290604b1a645378…`
 - **sitmat_stations**: legal basis: not stated; received: 2026-10-30 from the SiTMAT portal; rights: KLH data; features 1284; sha256 `9a70594711508e1c…`; Copied from repeat-sitmat/sitmat_out/processed on 2026-11-17.
+- **forest_tmf_2024**: legal basis: not stated; received: fetched 2026-11-18, public; rights: free and open; cite Vancutsem et al. 2021, Science Advances 7: eabe1603; features 865 files; sha256 `01f897ee39d128ad…`
+- **forest_hansen_gfc**: legal basis: not stated; received: read 2026-11-18 in Earth Engine, public; rights: CC BY 4.0; cite Hansen et al. 2013, Science 342: 850-853; features -; sha256 `…`
+- **sentinel2_dry_2025**: legal basis: not stated; received: read 2026-11-18 in Earth Engine, public; rights: Copernicus open licence; features -; sha256 `…`
+- **smap_l4_soil_moisture**: legal basis: not stated; received: read 2026-11-18 in Earth Engine, public; rights: NASA open data; features -; sha256 `…`

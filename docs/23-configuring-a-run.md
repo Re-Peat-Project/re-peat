@@ -47,7 +47,15 @@ pump:
   set:
     run.subkhg_selection.n: 8         # plan 8 sub-KHG (national choice: 5)
     optimise.n_blocks: 15             # choose 15 blocks (proposed default: 10)
+    # budget (stage 12 of the pump): prices [low, central, high] in rupiah; any key here wins over the proposed defaults
+    budget.primary_block: wooden      # price primary-canal blocks as wooden (the 1 Nov 2026 runs); default concrete since 19 Nov 2026
+    budget.sekat_standard_idr: [76495000, 81604500, 86714000]
+    budget.sekat_primary_idr: [119464000, 133042000, 146620000]
+    budget.canal_closure_spacing_m: 1000   # one 50 m infill every 1 km of canal to close (default 500)
 ```
+
+A budget change only needs the pump step again (`run --khg <code> --from pump`). The pump's stage cache reruns only what the
+change affects, so a price change reruns the last stage (interventions and budget) in seconds.
 
 ```yaml
 # layer 4, e.g. config/overrides/14.08.04.yaml
