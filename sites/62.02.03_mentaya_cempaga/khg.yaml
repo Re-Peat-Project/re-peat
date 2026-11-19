@@ -1,5 +1,5 @@
 # KHG Sungai Mentaya - Sungai Cempaga (KHG.62.02.03): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
-# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Written by `python tools/khg_pipeline.py init` on 2026-11-19 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
 # Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
 #   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
 #   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
@@ -17,15 +17,15 @@ khg:
   utm_epsg: 32749
 dems:
   lidar:
-    planned: true
-    cover_pct: 0.0
     skip: no LiDAR in the data folder covers the KHG
   deltadtm:
-    planned: true
-    cover_pct: 99.7
+    product: deltadtm
+    clip: ${REPEAT_KHG}/62.02.03_mentaya_cempaga/01_dem/inputs/deltadtm.tif
+    cover_pct: 99.8
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Mentaya_Cempaga.tif
   demnas:
-    planned: true
-    cover_pct: 100.0
+    skip: no demnas clip (see 01_dem/inputs/manifest.csv)
 peat_depth:
   source: PEATGRIDS (low confidence)
   scale: 0.01

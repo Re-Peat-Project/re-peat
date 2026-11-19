@@ -38,3 +38,17 @@ reports/**/fire_landstatus/layers/status.vrt
 # PPEG verification evidence: lists licence holders, kept locally for reports, not published
 reports/investigations/ppeg_verification.md
 reports/investigations/ppeg_verification_disagreements.csv
+
+# national prioritisation: Earth Engine request cache, per-KHG overlay parts, saved copy of the final tables
+reports/**/final_inputs/gee_cache/
+reports/**/overlay_all/parts/
+reports/**/final_v2_pre_whole/
+
+# national prioritisation working files, kept local: overlay tables (list licence holders), Earth Engine job state of the
+# 2026 Sentinel-2 burned area, the whole-KHG peat patches, and the example tables of tools/technical_example.py (all regenerable)
+reports/**/overlay_all/
+reports/**/final_inputs/burned_s2/
+reports/**/whole_khg/patches/
+reports/**/whole_khg/*.vrt
+reports/**/whole_khg/config.yaml
+reports/**/technical_example/

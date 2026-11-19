@@ -1,5 +1,5 @@
 # KHG Sungai Rokan Kiri - Sungai Mandau (KHG.14.01-03-06-08.01): generated facts of the full RE-PEAT chain for this KHG; shared settings in re-peat/pipeline.yaml.
-# Written by `python tools/khg_pipeline.py init` on 2026-11-08 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
+# Written by `python tools/khg_pipeline.py init` on 2026-11-19 from the data found then (sites/khg_availability.csv, 01_dem/inputs/manifest.csv).
 # Do not edit: init rewrites it. Exceptions go in overrides.yaml next to this file (with a reason and a date).
 #   dems.<dem>.skip      the variant does not run, with the reason; planned: true until the dem_inputs step has clipped the DEM
 #   peat_depth.source    modelled raster, FEG 50k classes, BBSDLP classes or PEATGRIDS (low confidence); the local_inputs step writes
@@ -17,15 +17,20 @@ khg:
   utm_epsg: 32647
 dems:
   lidar:
-    planned: true
+    product: lidar_riau25m
+    clip: ${REPEAT_KHG}/14.01-03-06-08.01_rokan_kiri_mandau/01_dem/inputs/lidar_riau25m.tif
     cover_pct: 100.0
+    sources:
+    - ${REPEAT_DATA}/lidar_klhk/dem_25m/DEM25M/RIAU25m.tif
   deltadtm:
-    planned: true
+    product: deltadtm
+    clip: ${REPEAT_KHG}/14.01-03-06-08.01_rokan_kiri_mandau/01_dem/inputs/deltadtm.tif
     cover_pct: 76.7
-    skip: covers 76.7 % of the KHG (< 90 %, sites/khg_availability.csv)
+    sources:
+    - ${REPEAT_DATA}/dem/open/deltadtm/deltadtm_v1-1_Rokan_Kiri_Mandau.tif
+    skip: covers 76.7 % of the KHG (< 90 %)
   demnas:
-    planned: true
-    cover_pct: 100.0
+    skip: no demnas clip (see 01_dem/inputs/manifest.csv)
 peat_depth:
   source: BBSDLP classes
   scale: 0.01

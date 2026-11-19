@@ -275,12 +275,29 @@ def log_run(row: dict) -> None:
                 w = csv.DictWriter(fh, fieldnames=RUN_FIELDS, extrasaction="ignore")
                 w.writeheader()
                 w.writerows(old)
-    new = not runlog.exists()
-    with open(runlog, "a", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=RUN_FIELDS)
-        if new:
-            w.writeheader()
-        w.writerow(row)
+    # runs of several KHG at once append to the same file: take a lock file first (an append is not atomic on Windows)
+    lock = runlog.with_suffix(".lock")
+    for _ in range(600):
+        try:
+            fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            break
+        except FileExistsError:
+            if time.time() - lock.stat().st_mtime > 60:      # left by a killed run
+                lock.unlink(missing_ok=True)
+            time.sleep(0.1)
+    else:
+        fd = None
+    try:
+        new = not runlog.exists()
+        with open(runlog, "a", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=RUN_FIELDS)
+            if new:
+                w.writeheader()
+            w.writerow(row)
+    finally:
+        if fd is not None:
+            os.close(fd)
+            lock.unlink(missing_ok=True)
 
 
 def cmd_compare(a) -> Path:

@@ -152,15 +152,15 @@ class DemInputs(Step):
         return (c.kf / "01_dem" / "inputs" / "manifest.csv").is_file()
 
     def commands(self, c):
-        """DeltaDTM fetched from Earth Engine when the data folder has no window for the KHG; DEMNAS sheets fetched only when the
+        """DeltaDTM fetched from 4TU when the data folder has no window for the KHG; DEMNAS sheets fetched only when the
         DEMNAS variant is asked for and TANAHAIR_LINK holds the user's own Tanahair link (never stored); then the clips."""
         run = c.s["dems"].get("run") or c.s["dems"].get("default") or c.s["dems"]["variants"]
         cmds = []
         if "deltadtm" in run:
             slug = "_".join(w.capitalize() for w in c.K.slug(c.name).split("_"))     # as prepare_khg_dem.py looks it up
             rel = f"dem/open/deltadtm/deltadtm_v1-1_{slug}.tif"
-            if not (c.s.data / rel).is_file():
-                cmds.append(("main", ["-m", "repeat_common.gee", "--asset", DELTADTM, "--khg", c.name, "--out", rel, str(c.s.data)], HUB))
+            if not (c.s.data / rel).is_file():        # from the publisher (4TU), equal to the Earth Engine copy DELTADTM
+                cmds.append(("main", ["-m", "repeat_common.fetch_deltadtm", "--khg", c.name, "--out", rel, str(c.s.data)], HUB))
         if "demnas" in run and os.environ.get("TANAHAIR_LINK"):
             cmds.append(("main", ["-m", "repeat_common.fetch_demnas", "--khg", c.name, str(c.s.data)], HUB))
         cmds.append(("dem", ["script/prepare_khg_dem.py", "--khg", c.name, *([] if "demnas" in run else ["--no-demnas"])],

@@ -44,8 +44,8 @@ files work on any machine.
    `REPEAT_DATA` (environment variable) or `data:` in `pipeline.local.yaml`. The work folders default to `<workspace>/_khg`
    (`REPEAT_KHG` or `khg_root:` to change).
 4. **Accounts.**
-   - Google Earth Engine (neraca air, DeltaDTM): `earthengine authenticate`, and your cloud project in `environment.EE_PROJECT`
-     (in `pipeline.local.yaml`).
+   - Google Earth Engine (neraca air): `earthengine authenticate`, and your cloud project in `environment.EE_PROJECT`
+     (in `pipeline.local.yaml`). DeltaDTM comes from its publisher (4TU, `repeat_common.fetch_deltadtm`) and needs no account.
    - SiTMAT water tables: `environment.SITMAT_PROCESSED` → the processed SiTMAT folder (repeat-sitmat).
    - ICESat-2 comes from SlideRule and Sentinel-2 from Microsoft Planetary Computer; neither needs an account.
 5. **Same package versions.** `env/<env>.lock.txt` holds the exact packages of each environment of the reference machine
