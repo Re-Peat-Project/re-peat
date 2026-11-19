@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 import pyogrio
 
-W = Path("C:/Users/danyl/Documents/Github/_repeat-project")
+W = Path(__file__).resolve().parents[2]          # the workspace (re-peat/tools/ -> _repeat-project)
 P = W / "_data/ALL_Analysis_Integrasi_Tematik__PPEG_Indonesia__April_2026.gpkg"
 OUT = W / "_exports/prioritisation_report/data"
 OUT.mkdir(parents=True, exist_ok=True)
