@@ -52,3 +52,7 @@ reports/**/whole_khg/patches/
 reports/**/whole_khg/*.vrt
 reports/**/whole_khg/config.yaml
 reports/**/technical_example/
+
+# team deck reviewed on 13 Nov 2026 and its review note: internal team material, kept local
+docs/reference/Canal Blocking for Peatland Restoration 131126.pdf
+docs/reference/canal_blocking_review_20261113.md
