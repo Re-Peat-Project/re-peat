@@ -396,6 +396,17 @@ def _yaml_value(v) -> str:
     return yaml.safe_dump(v, default_flow_style=True, allow_unicode=True).strip().removesuffix("...").strip()
 
 
+def _peat_units(c) -> str | None:
+    """Units of the KHG's peat depth raster for repeat-pump, from the merged peat_depth.scale (khg.yaml, then overrides): 0.01 is cm,
+    1 is m. repeat-pump cannot tell on its own: it sees only 00_inputs/peat_depth.tif, a window of the source in the source's units,
+    and took it as cm, so a raster in metres (scale 1) reached the pump 100 times too shallow. None (no peat raster, or another
+    scale): nothing is set and repeat-pump keeps its own choice."""
+    if not c.peat_depth():
+        return None
+    scale = float((c.kc.get("peat_depth") or {}).get("scale", 0.01))
+    return "cm" if abs(scale - 0.01) < 1e-9 else ("m" if abs(scale - 1.0) < 1e-9 else None)
+
+
 class Pump(Step):
     name, per_dem, env = "pump", True, "pump"
 
@@ -408,6 +419,7 @@ class Pump(Step):
         # come from the current settings; a kept config would rerun with the defaults of its first run
         gen = ["scripts/khg_run_config.py", str(c.kf), "--dem", c.dem, "--dtm", str(c.surface()), "--overwrite"] + \
               (["--tertiary"] if c.st["pump"].get("tertiary") else []) + \
+              [a for u in [_peat_units(c)] if u for a in ("--set", f"inputs.peat_depth.units={u}")] + \
               [a for k, v in sorted((c.st["pump"].get("set") or {}).items()) for a in ("--set", f"{k}={_yaml_value(v)}")]
         run = ["-m", "repeat_pump.cli", "run", "--config", str(cfg), "--accept", "2", "--accept", "6", "--accept", "9"]
         return [("pump", gen, c.s.ws / "repeat-pump"), ("pump", run, c.s.ws / "repeat-pump"),

@@ -90,7 +90,7 @@ Check a KHG before running: `config validate --khg <code>`; see what applies and
 | `dems.<dem>.skip` | Skip (reason) | Lewati (alasan) |  |  | null | The variant does not run, for this reason |
 | `peat_depth.source` | Source | Sumber |  | modelled raster, FEG 50k classes, BBSDLP classes, PEATGRIDS (low confidence) | null | Where the KHG's peat depth comes from |
 | `peat_depth.path` | Raster | Raster |  |  | null | Peat-depth raster (modelled raster, or your own file) |
-| `peat_depth.scale` | Scale to metres | Faktor ke meter |  | > 0 | 0.01 | Raster value x scale = depth in m (0.01 for cm) |
+| `peat_depth.scale` | Scale to metres | Faktor ke meter |  | > 0 | 0.01 | Raster value x scale = depth in m (0.01 for cm); the pump step passes it to repeat-pump as `inputs.peat_depth.units` (cm or m) |
 | `peat_depth.valid_share` | Valid share | Porsi valid |  | ≥ 0; ≤ 1 | null | Share of the KHG with depth > 0 |
 | `peat_depth.cover_share` | Class coverage | Cakupan kelas |  | ≥ 0; ≤ 1 | null | Share covered by the class map |
 | `peat_depth.confidence` | Confidence | Tingkat keyakinan |  | low | null | low for PEATGRIDS |
